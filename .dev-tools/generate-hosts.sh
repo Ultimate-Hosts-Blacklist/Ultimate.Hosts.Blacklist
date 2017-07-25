@@ -66,13 +66,12 @@ _endmarker="##### Version Information ##"
 
 # PRINT DATE AND TIME OF LAST UPDATE
 # **********************************
-LASTUPDATEIFS=$IFS
-IFS=$'\n'
-now="$(date)"
-echo $_startmarker >> $_tmphostsA
-printf "###################################################\n### Version: "$MY_GIT_TAG"\n### Updated: "$now"\n### Bad Host Count: "$BAD_REFERRERS"\n###################################################\n" >> $_tmphostsA
-echo $_endmarker  >> $_tmphostsA
-IFS=$LASTUPDATEIFS
+#printf '%s\n' "$_start2" >> "$_tmphostsA"
+#while IFS= read -r LINE
+#do
+printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$BAD_REFERRERS" "$_end2" >> "$_tmphostsA"
+#done
+#printf '%s\n' "$_end1"  >> "$_tmphostsA"
 mv $_tmphostsA $_inputdbA
 ed -s $_inputdbA<<\IN
 1,/##### Version Information #/d
@@ -91,14 +90,12 @@ rm $_inputdbA
 # Insert hosts into hosts file
 # ****************************
 
-HOSTS=$IFS
-IFS=$'\n'
-echo $_start1 >> $_tmphostsB
-for line in $(cat $_input1); do
-printf "0.0.0.0 ${line}\n" >> $_tmphostsB
-done
-echo $_end1  >> $_tmphostsB
-IFS=$HOSTS
+printf '%s\n' "$_start1" >> "$_tmphostsB"
+while IFS= read -r LINE
+do
+printf '%s\t%s\n' "0.0.0.0 " "${LINE}" >> "$_tmphostsB"
+done < $_input1
+printf '%s\n' "$_end1"  >> "$_tmphostsB"
 mv $_tmphostsB $_inputdb1
 ed -s $_inputdb1<<\IN
 1,/# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/d
