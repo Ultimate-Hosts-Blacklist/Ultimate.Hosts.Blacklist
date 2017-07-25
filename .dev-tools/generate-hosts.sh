@@ -27,6 +27,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# *****************************************
+# Join all lists together into one big list
+# *****************************************
+
+cat $TRAVIS_BUILD_DIR/.input_sources/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+
 # ******************
 # Set Some Variables
 # ******************
@@ -34,17 +40,11 @@
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
 MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
-#BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/PULL_REQUESTS/domains.txt)
+BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
 
-# *****************************************
-# Join all lists together into one big list
-# *****************************************
-
-cat $TRAVIS_BUILD_DIR/.input_sources/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # Setup input bots and referer lists
-#_input1=$TRAVIS_BUILD_DIR/PULL_REQUESTS/domains.txt
-_input2=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+_input1=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # Temporary database files we create
 _inputdbA=/tmp/lastupdated.db
@@ -56,70 +56,69 @@ _tmphostsA=tmphostsA
 _tmphostsB=tmphostsB
 
 # Sort lists alphabetically and remove duplicates
-#sort -u $_input1 -o $_input1
-sort -u $_input2 -o $_input2
+sort -u $_input1 -o $_input1
 
 # Start and End Strings to Search for to do inserts into template
-#_start1="# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
-#_end1="# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
-#_startmarker="##### Version Information #"
-#_endmarker="##### Version Information ##"
+_start1="# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
+_end1="# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
+_startmarker="##### Version Information #"
+_endmarker="##### Version Information ##"
 
 # PRINT DATE AND TIME OF LAST UPDATE
 # **********************************
-#LASTUPDATEIFS=$IFS
-#IFS=$'\n'
-#now="$(date)"
-#echo $_startmarker >> $_tmphostsA
-#printf "###################################################\n### Version: "$MY_GIT_TAG"\n### Updated: "$now"\n### Bad Host Count: "$BAD_REFERRERS"\n###################################################\n" >> $_tmphostsA
-#echo $_endmarker  >> $_tmphostsA
-#IFS=$LASTUPDATEIFS
-#mv $_tmphostsA $_inputdbA
-#ed -s $_inputdbA<<\IN
-#1,/##### Version Information #/d
-#/##### Version Information ##/,$d
-#,d
-#.r /home/travis/build/mitchellkrogza/Badd-Boyz-Hosts/travisCI/hosts.template
-#/##### Version Information #/x
-#.t.
-#.,/##### Version Information ##/-d
-#w /home/travis/build/mitchellkrogza/Badd-Boyz-Hosts/travisCI/hosts.template
-#q
-#IN
-#rm $_inputdbA
+LASTUPDATEIFS=$IFS
+IFS=$'\n'
+now="$(date)"
+echo $_startmarker >> $_tmphostsA
+printf "###################################################\n### Version: "$MY_GIT_TAG"\n### Updated: "$now"\n### Bad Host Count: "$BAD_REFERRERS"\n###################################################\n" >> $_tmphostsA
+echo $_endmarker  >> $_tmphostsA
+IFS=$LASTUPDATEIFS
+mv $_tmphostsA $_inputdbA
+ed -s $_inputdbA<<\IN
+1,/##### Version Information #/d
+/##### Version Information ##/,$d
+,d
+.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
+/##### Version Information #/x
+.t.
+.,/##### Version Information ##/-d
+w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
+q
+IN
+rm $_inputdbA
 
 # ****************************
 # Insert hosts into hosts file
 # ****************************
 
-#HOSTS=$IFS
-#IFS=$'\n'
-#echo $_start1 >> $_tmphostsB
-#for line in $(cat $_input1); do
-#printf "0.0.0.0 ${line}\n" >> $_tmphostsB
-#done
-#echo $_end1  >> $_tmphostsB
-#IFS=$HOSTS
-#mv $_tmphostsB $_inputdb1
-#ed -s $_inputdb1<<\IN
-#1,/# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/d
-#/# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/,$d
-#,d
-#.r /home/travis/build/mitchellkrogza/Badd-Boyz-Hosts/travisCI/hosts.template
-#/# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/x
-#.t.
-#.,/# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/-d
-#w /home/travis/build/mitchellkrogza/Badd-Boyz-Hosts/travisCI/hosts.template
-#q
-#IN
-#rm $_inputdb1
+HOSTS=$IFS
+IFS=$'\n'
+echo $_start1 >> $_tmphostsB
+for line in $(cat $_input1); do
+printf "0.0.0.0 ${line}\n" >> $_tmphostsB
+done
+echo $_end1  >> $_tmphostsB
+IFS=$HOSTS
+mv $_tmphostsB $_inputdb1
+ed -s $_inputdb1<<\IN
+1,/# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/d
+/# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/,$d
+,d
+.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
+/# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/x
+.t.
+.,/# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/-d
+w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
+q
+IN
+rm $_inputdb1
 
 # ************************************
 # Copy Files into place before testing
 # ************************************
-#sudo mv /etc/hosts /etc/hosts.bak2
-#sudo cp $_hosts /etc/hosts
-#sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts
+sudo mv /etc/hosts /etc/hosts.bak2
+sudo cp $_hosts /etc/hosts
+sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts
 exit 0
 
 # MIT License
