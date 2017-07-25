@@ -34,7 +34,7 @@
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
 MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
-BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/PULL_REQUESTS/domains.txt)
+#BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/PULL_REQUESTS/domains.txt)
 
 # *****************************************
 # Join all lists together into one big list
@@ -43,7 +43,7 @@ BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/PULL_REQUESTS/domains.txt)
 cat $TRAVIS_BUILD_DIR/.input_sources/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # Setup input bots and referer lists
-_input1=$TRAVIS_BUILD_DIR/PULL_REQUESTS/domains.txt
+#_input1=$TRAVIS_BUILD_DIR/PULL_REQUESTS/domains.txt
 _input2=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # Temporary database files we create
@@ -56,7 +56,7 @@ _tmphostsA=tmphostsA
 _tmphostsB=tmphostsB
 
 # Sort lists alphabetically and remove duplicates
-sort -u $_input1 -o $_input1
+#sort -u $_input1 -o $_input1
 sort -u $_input2 -o $_input2
 
 # Start and End Strings to Search for to do inserts into template
