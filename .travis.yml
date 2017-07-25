@@ -23,8 +23,8 @@ before_install:
   - export TZ=Africa/Johannesburg
 
 script:
-  - .dev-tools/generate-hosts.sh
-  - .dev-tools/modify-files-and-commit.sh
+  - bash -x .dev-tools/generate-hosts.sh
+  - bash -x .dev-tools/modify-files-and-commit.sh
   #- travisCI/ping-test.sh
 
 before_deploy:

@@ -70,9 +70,9 @@ git checkout master
 # Modify our files with build and version information
 # ***************************************************
 
-sudo chmod +x $TRAVIS_BUILD_DIR/travisCI/deploy-package.sh
-sudo chmod +x $TRAVIS_BUILD_DIR/travisCI/modify-readme.sh
-sudo chmod +x $TRAVIS_BUILD_DIR/travisCI/ping-test.sh
+sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/deploy-package.sh
+sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/modify-readme.sh
+sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/ping-test.sh
 
 # ***********************************************
 # Update Our Readme File with Version Information

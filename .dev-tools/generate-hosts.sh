@@ -51,7 +51,7 @@ _inputdbA=/tmp/lastupdated.db
 _inputdb1=/tmp/hosts.db
 
 # Declare template and temp variables
-_hosts=$TRAVIS_BUILD_DIR/travisCI/hosts.template
+_hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
 _tmphostsA=tmphostsA
 _tmphostsB=tmphostsB
 
