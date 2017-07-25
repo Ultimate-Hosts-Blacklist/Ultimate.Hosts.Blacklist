@@ -46,6 +46,9 @@ BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
 # Setup input bots and referer lists
 _input1=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
+# Sort lists alphabetically and remove duplicates
+sort -u $_input1 -o $_input1
+
 # Temporary database files we create
 _inputdbA=/tmp/lastupdated.db
 _inputdb1=/tmp/hosts.db
@@ -55,8 +58,6 @@ _hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
 _tmphostsA=tmphostsA
 _tmphostsB=tmphostsB
 
-# Sort lists alphabetically and remove duplicates
-sort -u $_input1 -o $_input1
 
 # Start and End Strings to Search for to do inserts into template
 _start1="# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
@@ -69,22 +70,22 @@ _endmarker="##### Version Information ##"
 #printf '%s\n' "$_start2" >> "$_tmphostsA"
 #while IFS= read -r LINE
 #do
-printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$BAD_REFERRERS" "$_end2" >> "$_tmphostsA"
+#printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$BAD_REFERRERS" "$_end2" >> "$_tmphostsA"
 #done
 #printf '%s\n' "$_end1"  >> "$_tmphostsA"
-mv $_tmphostsA $_inputdbA
-ed -s $_inputdbA<<\IN
-1,/##### Version Information #/d
-/##### Version Information ##/,$d
-,d
-.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
-/##### Version Information #/x
-.t.
-.,/##### Version Information ##/-d
-w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
-q
-IN
-rm $_inputdbA
+#mv $_tmphostsA $_inputdbA
+#ed -s $_inputdbA<<\IN
+#1,/##### Version Information #/d
+#/##### Version Information ##/,$d
+#,d
+#.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
+#/##### Version Information #/x
+#.t.
+#.,/##### Version Information ##/-d
+#w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
+#q
+#IN
+#rm $_inputdbA
 
 # ****************************
 # Insert hosts into hosts file
@@ -93,7 +94,7 @@ rm $_inputdbA
 printf '%s\n' "$_start1" >> "$_tmphostsB"
 while IFS= read -r LINE
 do
-printf '%s\t%s\n' "0.0.0.0 " "${LINE}" >> "$_tmphostsB"
+printf '%s%s\n' "0.0.0.0 " "${LINE}" >> "$_tmphostsB"
 done < $_input1
 printf '%s\n' "$_end1"  >> "$_tmphostsB"
 mv $_tmphostsB $_inputdb1
