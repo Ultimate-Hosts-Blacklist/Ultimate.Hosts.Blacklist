@@ -1,0 +1,51 @@
+language: php
+sudo: required
+dist: trusty
+env:
+  global:
+    - secure: RK90rQ2zqYxGlG7vxb4XyknUfrIGeG4s/ZLLlm9n990cczg1opJdmS+O+RM+Wxn0vOffSHYuXf2EmcTjBbqwWOUe8Fynv9pOjLjLVlpcUD6xWqmottjwuROZN6FVQjicBQeXdLzf/WehgDQ7EDVxfp6YRB6esZcbpvVi3AgQZ7h3IEKi6rHhda7H6oQugO4tMbrYK8lNzvJFfG5J/isy4XMJDkM7tD2wbqu2EIGCwoM474wNKJmXSx9+54u95oi5Lx08aMDbKDRK9AjK8A5KfEbIoBonMnfjYcWfYJfUlzZwgiAtxixC9dYyObOW8RT18YXdDsn3WANUYw3caZS7sv544wUTWROGj+fwgxs+N+fcPjaitswwX8cSJBBjA13wAiCQVSUXsjOofvhDtKFv3gflkLYae4pryGsP1lNLFkrkYMOhoRbP572eOEUisfSrOLuTvV3C4Z3ae8nghfYNXGiCoxYX/ska2NegYPnYUkmLmEeOSExd+fc+8n7Q1t+ER9mRfp/kAxChyoioaLWiq4GgmzKgURg6pmpWRmOIJ+sGx/AJ39tRZAMDNOqdedmYmRsBRuy/HF38wXysxSOh9ukV243wi+szEF5XR/zg6fJJYfPzTKcXFvYGJCPE0ccHgH/wG/RVWKT1dWs7iWrY8IudupkF8dN/DpvoH2l2KmM=
+    - GIT_NAME: Travis CI
+    - GIT_EMAIL: mitchellkrog@gmail.com
+    - TRAVIS_REPO_SLUG: mitchellkrogza/Ultimate.Hosts.Blacklist
+    - GIT_BRANCH: master
+  matrix:
+    - USE_NETWORK=true
+php:
+  - '5.6'
+cache:
+  - apt
+addons:
+  apt:
+    packages:
+      - realpath
+
+before_install:
+  - export TZ=Africa/Johannesburg
+
+script:
+  - .dev-tools/generate-hosts.sh
+  #- .dev-tools/modify-files-and-commit.sh
+  #- travisCI/ping-test.sh
+
+before_deploy:
+  #- .dev-tools/deploy-package.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: ${GH_TOKEN}
+  file:
+  - "hosts"
+  skip_cleanup: true
+  on:
+    repo: mitchellkrogza/Ultimate.Hosts.Blacklist
+    tags: false
+    branches:
+      except:
+        - "/^v[0-9]/"
+        - "/^V.*$/"
+    branches:
+       only:
+         - "master"
+notifications:
+  email: false
