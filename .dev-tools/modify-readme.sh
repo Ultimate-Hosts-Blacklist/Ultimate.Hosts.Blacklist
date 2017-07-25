@@ -34,7 +34,7 @@
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
 MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
-BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/PULL_REQUESTS/domains.txt)
+BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
 
 # **********************************
 # Temporary database files we create
@@ -65,13 +65,13 @@ ed -s $_inputdbA<<\IN
 1,/##### VERSION INFORMATION #/d
 /##### VERSION INFORMATION ##/,$d
 ,d
-.r /home/travis/build/mitchellkrogza/Badd-Boyz-Hosts/README.md
+.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/README.md
 /##### VERSION INFORMATION #/x
 .t.
 .,/##### VERSION INFORMATION ##/-d
 #,p
 #,p used to print output replaced with w below to write
-w /home/travis/build/mitchellkrogza/Badd-Boyz-Hosts/README.md
+w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/README.md
 q
 IN
 rm $_inputdbA
