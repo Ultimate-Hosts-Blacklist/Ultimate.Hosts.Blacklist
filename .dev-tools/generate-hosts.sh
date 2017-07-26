@@ -41,7 +41,8 @@ YEAR=$(date +%Y)
 MONTH=$(date +%m)
 MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
 BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
-
+BAD_REFERRERS2=$(printf "%'.2f" $_BAD_REFERRERS)
+echo BAD_REFERRERS2
 
 # Setup input bots and referer lists
 _input1=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
@@ -67,7 +68,7 @@ _endmarker="##### Version Information ##"
 
 # PRINT DATE AND TIME OF LAST UPDATE
 # **********************************
-#printf '%s\n' "$_start2" >> "$_tmphostsA"
+#printf '%s\n' "$_start2" >> "$_tmphostsA"%'d
 #while IFS= read -r LINE
 #do
 printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$BAD_REFERRERS" "$_endmarker" >> "$_tmphostsA"
