@@ -27,6 +27,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# ********************************************
+# Truncate our input list before rebuilding it
+# ********************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+
 # *****************************************
 # Join all lists together into one big list
 # *****************************************
