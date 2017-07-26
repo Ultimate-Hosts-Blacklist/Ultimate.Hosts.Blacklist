@@ -5,8 +5,8 @@
 The Ultimate hosts file for protecting your computer or device against over a million bad web sites. Protect your children and family from gaining access to bad web sites and protect your devices and pc from being infected with Malware or Ransomware.
 
 _______________
-#### Version: V1.2017.07.24
-#### Total Hosts: 2,154,279
+#### Version: V1.2017.07.25
+#### Total Hosts: 2,154,280
 ____________________
 
 Information gathered from multiple sources and merged into one massive hosts file.
