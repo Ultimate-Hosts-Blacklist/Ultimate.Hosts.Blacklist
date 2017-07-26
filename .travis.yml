@@ -26,7 +26,6 @@ before_install:
 script:
   - bash .dev-tools/generate-hosts.sh
   - bash .dev-tools/modify-files-and-commit.sh
-  #- bash -x .dev-tools/ping-test.sh
 
 before_deploy:
   - bash .dev-tools/deploy-package.sh
