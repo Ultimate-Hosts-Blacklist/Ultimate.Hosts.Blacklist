@@ -56,7 +56,7 @@ _endmarker="____________________"
 # ****************************************
 
 
-printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS2" "$_endmarker" >> "$_tmpA"
+printf '%s\n%s%s\n%s%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS2" "  Yeah you read that right :exclamation: " "$_endmarker" >> "$_tmpA"
 mv $_tmpA $_inputdbA
 ed -s $_inputdbA<<\IN
 1,/_______________/d
