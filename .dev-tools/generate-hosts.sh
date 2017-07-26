@@ -33,6 +33,7 @@
 
 cat $TRAVIS_BUILD_DIR/.input_sources/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/_ShallaList/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+cat $TRAVIS_BUILD_DIR/.input_sources/_urlblacklist.com/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # ******************
 # Set Some Variables
