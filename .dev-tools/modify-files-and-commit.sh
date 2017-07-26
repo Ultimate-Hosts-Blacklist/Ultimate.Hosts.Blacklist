@@ -38,12 +38,12 @@ cd $TRAVIS_BUILD_DIR
 BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
 BAD_REFERRERS2=$(echo $_BAD_REFERRERS | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
 BAD_REFERRERS3=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_REFERRERS)
+BAD_REFERRERS4=$(LC_NUMERIC=en_US printf "%'.f\n" "$_BAD_REFERRERS")
 
 echo "Hello"
 echo $_BAD_REFERRERS2
 echo $_BAD_REFERRERS3
-echo "$_BAD_REFERRERS2"
-echo "$_BAD_REFERRERS3"
+echo $_BAD_REFERRERS4
 
 # *******************************
 # Remove Remote Added by TravisCI
