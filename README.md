@@ -3,7 +3,7 @@ The Ultimate hosts file for protecting your computer or device against over a mi
 
 ##### VERSION INFORMATION #
 ********************************************
-#### Version: V1.2017.07.16
+#### Version: V1.2017.07.17
 #### Bad Host Count: 1693021
 ********************************************
 ##### VERSION INFORMATION ##
