@@ -34,7 +34,7 @@
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
 MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
-BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
+_BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
 
 # **********************************
 # Temporary database files we create
@@ -57,7 +57,7 @@ _end="##### VERSION INFORMATION ##"
 LASTUPDATEIFS=$IFS
 IFS=$'\n'
 echo $_start >> $_tmpnginxA
-printf "********************************************\n#### Version: "$MY_GIT_TAG"\n#### Bad Host Count: "$BAD_REFERRERS"\n********************************************\n" >> $_tmpnginxA
+printf "********************************************\n#### Version: "$MY_GIT_TAG"\n#### Bad Host Count: "$_BAD_REFERRERS"\n********************************************\n" >> $_tmpnginxA
 echo $_end  >> $_tmpnginxA
 IFS=$LASTUPDATEIFS
 mv $_tmpnginxA $_inputdbA
