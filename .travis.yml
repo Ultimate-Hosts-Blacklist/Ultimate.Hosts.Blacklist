@@ -21,6 +21,7 @@ addons:
 
 before_install:
   - export TZ=Africa/Johannesburg
+  - export LC_NUMERIC=en_US
 
 script:
   - bash .dev-tools/generate-hosts.sh
