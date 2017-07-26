@@ -48,8 +48,8 @@ _tmpA=tmpA
 # Start and End Strings to Search for to do inserts into template
 # ***************************************************************
 
-_startmarker="##### VERSION INFORMATION #"
-_endmarker="##### VERSION INFORMATION ##"
+_startmarker="_______________"
+_endmarker="____________________"
 
 # ****************************************
 # PRINT VERSION INFORMATION INTO README.md
@@ -59,13 +59,13 @@ _endmarker="##### VERSION INFORMATION ##"
 printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS2" "$_endmarker" >> "$_tmpA"
 mv $_tmpA $_inputdbA
 ed -s $_inputdbA<<\IN
-1,/##### VERSION INFORMATION #/d
-/##### VERSION INFORMATION ##/,$d
+1,/_______________/d
+/____________________/,$d
 ,d
 .r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/README.md
-/##### VERSION INFORMATION #/x
+/_______________/x
 .t.
-.,/##### VERSION INFORMATION ##/-d
+.,/____________________/-d
 w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/README.md
 q
 IN
