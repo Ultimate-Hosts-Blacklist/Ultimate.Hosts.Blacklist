@@ -70,22 +70,22 @@ _endmarker="##### Version Information ##"
 #printf '%s\n' "$_start2" >> "$_tmphostsA"
 #while IFS= read -r LINE
 #do
-#printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$BAD_REFERRERS" "$_end2" >> "$_tmphostsA"
+printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$BAD_REFERRERS" "$_endmarker" >> "$_tmphostsA"
 #done
 #printf '%s\n' "$_end1"  >> "$_tmphostsA"
-#mv $_tmphostsA $_inputdbA
-#ed -s $_inputdbA<<\IN
-#1,/##### Version Information #/d
-#/##### Version Information ##/,$d
-#,d
-#.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
-#/##### Version Information #/x
-#.t.
-#.,/##### Version Information ##/-d
-#w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
-#q
-#IN
-#rm $_inputdbA
+mv $_tmphostsA $_inputdbA
+ed -s $_inputdbA<<\IN
+1,/##### Version Information #/d
+/##### Version Information ##/,$d
+,d
+.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
+/##### Version Information #/x
+.t.
+.,/##### Version Information ##/-d
+w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
+q
+IN
+rm $_inputdbA
 
 # ****************************
 # Insert hosts into hosts file
