@@ -41,8 +41,9 @@ YEAR=$(date +%Y)
 MONTH=$(date +%m)
 MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
 BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
-BAD_REFERRERS2=$(printf "%'.2f" $_BAD_REFERRERS)
+BAD_REFERRERS2=$(echo $_BAD_REFERRERS | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
 echo BAD_REFERRERS2
+
 
 # Setup input bots and referer lists
 _input1=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
