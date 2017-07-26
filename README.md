@@ -4,6 +4,8 @@
 
 The Ultimate hosts file for protecting your computer or device against over a million bad web sites. Protect your children and family from gaining access to bad web sites and protect your devices and pc from being infected with Malware or Ransomware.
 
+A hosts file for use on any operating system to block bad domains out of your servers or devices.
+
 _______________
 #### Version: V1.2017.07.26
 #### Total Hosts: 2,177,659
@@ -12,14 +14,37 @@ ____________________
 Information gathered from multiple sources and merged into one massive hosts file.
 
 ************************************************
-## Additions / Removals / Corrections !!
+## WHAT IS A HOSTS FILE?
+
+A hosts file, named `hosts` (with no file extension), is a plain-text file
+used by all operating systems to map hostnames to IP addresses.
+
+In most operating systems, the `hosts` file is preferential to `DNS`.
+Therefore if a domain name is resolved by the `hosts` file, the request never
+leaves your computer.
+
+Having a smart `hosts` file goes a long way towards blocking malware, adware, ransomware, porn and other nuisance web sites.
+
+A hosts file like this causes any lookups to any of the listed domains to resolve back to your localhost so it prevents any outgoing connections to the listed domains.
+
+************************************************
+## WHERE DO I PUT THIS ON MY COMPUTER?
+To modify your current `hosts` file, look for it in the following places and modify it with a text
+editor.
+
+**Linux, Mac OS X, iOS, Android**: `/etc/hosts` folder.
+
+**Windows Systems**: `%SystemRoot%\system32\drivers\etc\hosts` folder.
+
+************************************************
+## ADDITIONS / REMOVALS / CORRECTIONS !!
 
 [![Log an Issue](https://img.shields.io/badge/LOG%20-%20an%20issue%20%F0%9F%9A%A6-blue.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues) if you disagree with anything on this list or want to add any other bad web sites to the list.
 
 You can also fork a copy of this repo, create a new unique folder in .input_sources, call your file domains (not domains.txt) and simply send a Pull Request to the repository.
 
 ************************************************
-## Support this Project
+## Please Help Support this Project
 
 [![Help me out with a mug of beer](https://img.shields.io/badge/Help%20-%20me%20out%20with%20a%20mug%20of%20%F0%9F%8D%BA-blue.svg)](https://paypal.me/mitchellkrog/) or [![Help me feed my cat](https://img.shields.io/badge/Help%20-%20me%20feed%20my%20hungry%20cat%20%F0%9F%98%B8-blue.svg)](https://paypal.me/mitchellkrog/)
 
@@ -36,6 +61,7 @@ You can also fork a copy of this repo, create a new unique folder in .input_sour
 - https://github.com/mitchellkrogza/Travis-CI-for-Apache-For-Testing-Apache-and-PHP-Configurations
 - https://github.com/mitchellkrogza/Fail2Ban-Blacklist-JAIL-for-Repeat-Offenders-with-Perma-Extended-Banning
 - https://github.com/funilrys/funceble
+- https://github.com/funilrys/dead-hosts
 ************************************************
 ## Support this Project
 
@@ -47,3 +73,26 @@ You can also fork a copy of this repo, create a new unique folder in .input_sour
 ### Into Photography?
 
 Come drop by and visit me at https://mitchellkrog.com
+
+************************************************
+# MIT License
+
+## Copyright (c) 2017 Mitchell Krog - mitchellkrog@gmail.com
+## https://github.com/mitchellkrogza
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
