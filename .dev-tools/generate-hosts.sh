@@ -40,34 +40,61 @@ cat $TRAVIS_BUILD_DIR/.input_sources/*/domains >> $TRAVIS_BUILD_DIR/.input_sourc
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
 MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
-_BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
-_BAD_REFERRERS2=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_REFERRERS)
 
+# **********************************
 # Setup input bots and referer lists
+# **********************************
+
 _input1=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
+# ***********************************************
 # Sort lists alphabetically and remove duplicates
+# ***********************************************
+
 sort -u $_input1 -o $_input1
 
+# **********************************************
+# Set some more variables after sorting our list
+# **********************************************
+
+_BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
+_BAD_REFERRERS_TOTAL=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_REFERRERS)
+
+# **********************************
 # Temporary database files we create
+# **********************************
+
 _inputdbA=/tmp/lastupdated.db
 _inputdb1=/tmp/hosts.db
 
+# ***********************************
 # Declare template and temp variables
+# ***********************************
+
 _hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
 _tmphostsA=tmphostsA
 _tmphostsB=tmphostsB
 
+# ********************************************************
+# Truncate our existing hosts file before re-generating it
+# ********************************************************
 
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts
+
+# ***************************************************************
 # Start and End Strings to Search for to do inserts into template
+# ***************************************************************
+
 _start1="# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
 _end1="# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
 _startmarker="##### Version Information #"
 _endmarker="##### Version Information ##"
 
+# **********************************
 # PRINT DATE AND TIME OF LAST UPDATE
 # **********************************
-printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS2" "$_endmarker" >> "$_tmphostsA"
+
+printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS_TOTAL" "$_endmarker" >> "$_tmphostsA"
 mv $_tmphostsA $_inputdbA
 ed -s $_inputdbA<<\IN
 1,/##### Version Information #/d
@@ -109,6 +136,7 @@ rm $_inputdb1
 # ************************************
 # Copy Files into place before testing
 # ************************************
+
 sudo mv /etc/hosts /etc/hosts.bak2
 sudo cp $_hosts /etc/hosts
 sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts
