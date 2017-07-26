@@ -35,15 +35,6 @@ YEAR=$(date +"%Y")
 MONTH=$(date +"%m")
 cd $TRAVIS_BUILD_DIR
 
-_BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
-_BAD_REFERRERS2=$(echo $_BAD_REFERRERS | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
-_BAD_REFERRERS3=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_REFERRERS)
-_BAD_REFERRERS4=$(LC_NUMERIC=en_US printf "%'.f\n" "$_BAD_REFERRERS")
-
-echo $_BAD_REFERRERS2
-echo $_BAD_REFERRERS3
-echo $_BAD_REFERRERS4
-
 # *******************************
 # Remove Remote Added by TravisCI
 # *******************************
