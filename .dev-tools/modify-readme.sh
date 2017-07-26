@@ -35,32 +35,29 @@ YEAR=$(date +%Y)
 MONTH=$(date +%m)
 MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
 _BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
+_BAD_REFERRERS2=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_REFERRERS)
 
 # **********************************
 # Temporary database files we create
 # **********************************
 
 _inputdbA=/tmp/lastupdated.db
-_tmpnginxA=tmpnginxA
+_tmpA=tmpA
 
 # ***************************************************************
 # Start and End Strings to Search for to do inserts into template
 # ***************************************************************
 
-_start="##### VERSION INFORMATION #"
-_end="##### VERSION INFORMATION ##"
+_startmarker="##### VERSION INFORMATION #"
+_endmarker="##### VERSION INFORMATION ##"
 
 # ****************************************
 # PRINT VERSION INFORMATION INTO README.md
 # ****************************************
 
-LASTUPDATEIFS=$IFS
-IFS=$'\n'
-echo $_start >> $_tmpnginxA
-printf "********************************************\n#### Version: "$MY_GIT_TAG"\n#### Bad Host Count: "$_BAD_REFERRERS"\n********************************************\n" >> $_tmpnginxA
-echo $_end  >> $_tmpnginxA
-IFS=$LASTUPDATEIFS
-mv $_tmpnginxA $_inputdbA
+
+printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS2" "$_endmarker" >> "$_tmpA"
+mv $_tmpA $_inputdbA
 ed -s $_inputdbA<<\IN
 1,/##### VERSION INFORMATION #/d
 /##### VERSION INFORMATION ##/,$d
@@ -69,8 +66,6 @@ ed -s $_inputdbA<<\IN
 /##### VERSION INFORMATION #/x
 .t.
 .,/##### VERSION INFORMATION ##/-d
-#,p
-#,p used to print output replaced with w below to write
 w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/README.md
 q
 IN
