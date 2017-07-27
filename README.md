@@ -7,7 +7,7 @@ The Ultimate hosts file for protecting your computer or device against over a mi
 A hosts file for use on any operating system to block bad domains out of your servers or devices.
 
 _______________
-#### Version: V1.2017.07.39
+#### Version: V1.2017.07.40
 #### Total Hosts: 2,206,914        Yeah you read that right :exclamation: 
 ____________________
 
