@@ -28,13 +28,19 @@ Having a smart `hosts` file goes a long way towards blocking malware, adware, ra
 A hosts file like this causes any lookups to any of the listed domains to resolve back to your localhost so it prevents any outgoing connections to the listed domains.
 
 ************************************************
+## WHAT IS A HOSTS.DENY FILE?
+
+A hosts file, named `hosts.deny` is a plain-text file for unix based operating systems which blocks a list of IP addresses on the outside of your network from gaining access to your computer. A `hosts.deny` file will not work on a Windows operating system.
+
+************************************************
 ## WHERE DO I PUT THIS ON MY COMPUTER?
 To modify your current `hosts` file, look for it in the following places and modify it with a text
 editor.
 
-**Linux, Mac OS X, iOS, Android**: `/etc/hosts` folder.
+**Linux, Mac OS X, iOS, Android**: `/etc/hosts`
+**Linux, Mac OS X, iOS, Android**: `/etc/hosts.deny`
 
-**Windows Systems**: `%SystemRoot%\system32\drivers\etc\hosts` folder.
+**Windows Systems**: `%SystemRoot%\system32\drivers\etc\hosts`
 
 ************************************************
 ## ADDITIONS / REMOVALS / CORRECTIONS !!
