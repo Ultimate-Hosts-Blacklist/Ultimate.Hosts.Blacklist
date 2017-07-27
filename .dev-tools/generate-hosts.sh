@@ -27,11 +27,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# ********************************************
-# Truncate our input list before rebuilding it
-# ********************************************
+# ***********************************************
+# Truncate our input lists before rebuilding them
+# ***********************************************
 
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 
 # *****************************************
 # Join all lists together into one big list
@@ -40,6 +41,18 @@ sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/_ShallaList/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/_urlblacklist.com/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+
+# ******************************
+# Get Fresh Data from Badips.com
+# ******************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_3/domains
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_4/domains
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_5/domains
+
+sudo wget -qO- http://www.badips.com/get/list/any/3?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_3/domains
+sudo wget -qO- http://www.badips.com/get/list/any/4?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_4/domains
+sudo wget -qO- http://www.badips.com/get/list/any/5?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_5/domains
 
 # *****************************************
 # Create a Bad IP list from Badips.com
