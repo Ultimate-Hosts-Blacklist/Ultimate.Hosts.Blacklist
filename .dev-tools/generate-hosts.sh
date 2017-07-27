@@ -88,6 +88,8 @@ sort -u $_input2 -o $_input2
 
 _BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
 _BAD_REFERRERS_TOTAL=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_REFERRERS)
+_BAD_IPS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt)
+_BAD_IPS_TOTAL=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_IPS)
 
 # **********************************
 # Temporary database files we create
@@ -171,7 +173,7 @@ rm $_inputdb1
 # PRINT DATE AND TIME OF LAST UPDATE into hosts.deny
 # **************************************************
 
-printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS_TOTAL" "$_endmarker" >> "$_tmphostsA"
+printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_IPS_TOTAL" "$_endmarker" >> "$_tmphostsA"
 mv $_tmphostsA $_inputdbA
 ed -s $_inputdbA<<\IN
 1,/##### Version Information #/d
