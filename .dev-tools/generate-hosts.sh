@@ -41,6 +41,12 @@ cat $TRAVIS_BUILD_DIR/.input_sources/*/domains >> $TRAVIS_BUILD_DIR/.input_sourc
 cat $TRAVIS_BUILD_DIR/.input_sources/_ShallaList/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/_urlblacklist.com/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
+# *****************************************
+# Create a Bad IP list from Badips.com
+# *****************************************
+
+cat $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+
 # ******************
 # Set Some Variables
 # ******************
@@ -54,12 +60,14 @@ MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
 # **********************************
 
 _input1=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+_input2=$TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 
 # ***********************************************
 # Sort lists alphabetically and remove duplicates
 # ***********************************************
 
 sort -u $_input1 -o $_input1
+sort -u $_input2 -o $_input2
 
 # **********************************************
 # Set some more variables after sorting our list
@@ -74,14 +82,17 @@ _BAD_REFERRERS_TOTAL=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_REFERRERS)
 
 _inputdbA=/tmp/lastupdated.db
 _inputdb1=/tmp/hosts.db
+_inputdb2=/tmp/hostsdeny.db
 
 # ***********************************
 # Declare template and temp variables
 # ***********************************
 
 _hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
+_hostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
 _tmphostsA=tmphostsA
 _tmphostsB=tmphostsB
+_tmphostsC=tmphostsC
 
 # ********************************************************
 # Truncate our existing hosts file before re-generating it
@@ -95,12 +106,14 @@ sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts
 
 _start1="# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
 _end1="# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
+_start2="# ##### START badips.com Block List — DO NOT EDIT #####"
+_end2="# ##### END badips.com Block List - DO NOT EDIT #####"
 _startmarker="##### Version Information #"
 _endmarker="##### Version Information ##"
 
-# **********************************
-# PRINT DATE AND TIME OF LAST UPDATE
-# **********************************
+# **************************************************
+# PRINT DATE AND TIME OF LAST UPDATE into hosts file
+# **************************************************
 
 printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS_TOTAL" "$_endmarker" >> "$_tmphostsA"
 mv $_tmphostsA $_inputdbA
@@ -141,13 +154,59 @@ q
 IN
 rm $_inputdb1
 
+# **************************************************
+# PRINT DATE AND TIME OF LAST UPDATE into hosts.deny
+# **************************************************
+
+printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS_TOTAL" "$_endmarker" >> "$_tmphostsA"
+mv $_tmphostsA $_inputdbA
+ed -s $_inputdbA<<\IN
+1,/##### Version Information #/d
+/##### Version Information ##/,$d
+,d
+.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template
+/##### Version Information #/x
+.t.
+.,/##### Version Information ##/-d
+w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template
+q
+IN
+rm $_inputdbA
+
+# *********************************
+# Insert hosts into hosts.deny file
+# *********************************
+
+printf '%s\n' "$_start2" >> "$_tmphostsC"
+while IFS= read -r LINE
+do
+printf '%s%s\n' "ALL: " "${LINE}" >> "$_tmphostsC"
+done < $_input2
+printf '%s\n' "$_end2"  >> "$_tmphostsC"
+mv $_tmphostsC $_inputdb2
+ed -s $_inputdb2<<\IN
+1,/# ##### START badips.com Block List — DO NOT EDIT #####/d
+/# ##### END badips.com Block List - DO NOT EDIT #####/,$d
+,d
+.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template
+/# ##### START badips.com Block List — DO NOT EDIT #####/x
+.t.
+.,/# ##### END badips.com Block List - DO NOT EDIT #####/-d
+w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template
+q
+IN
+rm $_inputdb2
+
 # ************************************
 # Copy Files into place before testing
 # ************************************
 
 sudo mv /etc/hosts /etc/hosts.bak2
 sudo cp $_hosts /etc/hosts
+sudo cp $_hostsdeny /etc/hosts.deny
 sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts
+sudo cp $_hostsdeny $TRAVIS_BUILD_DIR/hosts.deny
+
 exit 0
 
 # MIT License
