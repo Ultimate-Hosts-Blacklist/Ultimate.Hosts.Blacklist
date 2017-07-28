@@ -30,6 +30,8 @@
 7search.com
 980media.com
 99count.com
+Adsatt.ABCNews.starwave.com
+Adsatt.go.starwave.com
 a-ads.com
 a-counter.kiev.ua
 a.0day.kiev.ua
@@ -723,10 +725,8 @@ ads6.gamecity.net
 ads7.gamecity.net
 ads8.com
 adsatt.abc.starwave.com
-Adsatt.ABCNews.starwave.com
 adsatt.espn.go.com
 adsatt.espn.starwave.com
-Adsatt.go.starwave.com
 adsby.bidtheatre.com
 adscale.de
 adscholar.com

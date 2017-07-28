@@ -34,11 +34,58 @@
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 
-# *****************************************
-# Join all lists together into one big list
-# *****************************************
+# ********************************
+# ********************************
+# Get Fresh Data From Some Sources
+# ********************************
+# ********************************
 
-cat $TRAVIS_BUILD_DIR/.input_sources/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+# ***********************************
+# Get Fresh Data from Badd-Boyz-Hosts
+# ***********************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BaddBoyzHosts/domains.txt
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/PULL_REQUESTS/domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/_BaddBoyzHosts/domains.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_BaddBoyzHosts/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_BaddBoyzHosts/domains.txt
+
+# ********************************************
+# Get Fresh Data from Hacked Malware Web Sites
+# ********************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_HackedMalwareWebsites/domains.txt
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/.dev-tools/_strip_domains/domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/_HackedMalwareWebsites/domains.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_HackedMalwareWebsites/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_HackedMalwareWebsites/domains.txt
+
+# **********************************************************
+# Get Fresh Data from justdomains@mirror1.malwaredomains.com
+# **********************************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains/domains.txt
+sudo wget http://mirror1.malwaredomains.com/files/justdomains -O $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains/domains.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains/domains.txt
+
+# **********************************************************
+# Get Fresh Domains from yoyo.org
+# **********************************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
+sudo wget https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&startdate%5Bday%5D=01&startdate%5Bmonth%5D=01&startdate%5Byear%5D=2000&mimetype=plaintext -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
+
+# **********************************************************
+# Get Fresh IP data from yoyo.org
+# **********************************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
+sudo wget https://pgl.yoyo.org/adservers/iplist.php?ipformat=plainwithhosts&showintro=0&mimetype=plaintext -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
+
+
+# ***************************************************
+# Join all lists together into one big list for hosts
+# ***************************************************
+
+cat $TRAVIS_BUILD_DIR/.input_sources/*/domains.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/_ShallaList/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/_urlblacklist.com/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
@@ -46,19 +93,21 @@ cat $TRAVIS_BUILD_DIR/.input_sources/_urlblacklist.com/*/domains >> $TRAVIS_BUIL
 # Get Fresh Data from Badips.com
 # ******************************
 
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_3/domains
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_4/domains
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_5/domains
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_3/ips.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_4/ips.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_5/ips.txt
 
-sudo wget -qO- http://www.badips.com/get/list/any/3?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_3/domains
-sudo wget -qO- http://www.badips.com/get/list/any/4?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_4/domains
-sudo wget -qO- http://www.badips.com/get/list/any/5?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_5/domains
+sudo wget -qO- http://www.badips.com/get/list/any/3?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_3/ips.txt
+sudo wget -qO- http://www.badips.com/get/list/any/4?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_4/ips.txt
+sudo wget -qO- http://www.badips.com/get/list/any/5?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_5/ips.txt
 
-# *****************************************
-# Create a Bad IP list from Badips.com
-# *****************************************
+# ********************************************************
+# Join all lists together into one big list for hosts.deny
+# ********************************************************
 
-cat $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+cat $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com*/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+cat $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+
 
 # ******************
 # Set Some Variables
