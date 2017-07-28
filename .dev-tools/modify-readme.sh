@@ -34,8 +34,19 @@
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
 MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
+
+# **********************************************
+# Get total counts from all lists
+# **********************************************
+
 _BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
-_BAD_REFERRERS2=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_REFERRERS)
+_BAD_REFERRERS_TOTAL=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_REFERRERS)
+
+_BAD_IPS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt)
+_BAD_IPS_TOTAL=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_IPS)
+
+_SUPERHOSTS_IPS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt)
+_SUPERHOSTS_IPS_TOTAL=$(LC_NUMERIC=en_US printf "%'.f\n" $_SUPERHOSTS_IPS)
 
 # **********************************
 # Temporary database files we create
@@ -56,7 +67,7 @@ _endmarker="____________________"
 # ****************************************
 
 
-printf '%s\n%s%s\n%s%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS2" "        Yeah you read that right :exclamation: " "$_endmarker" >> "$_tmpA"
+printf '%s\n%s%s\n%s%s\n%s%s\n%s%s\n%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Bad Hosts in hosts file: " "$_BAD_REFERRERS_TOTAL" "#### Total Bad Hosts in hosts.deny file: " "$_BAD_IPS_TOTAL" "#### Total Bad Hosts and IP's in superhosts.deny file: " "$_SUPERHOSTS_IPS_TOTAL" " :exclamation: Yeah you read those number right :exclamation: " "$_endmarker" >> "$_tmpA"
 mv $_tmpA $_inputdbA
 ed -s $_inputdbA<<\IN
 1,/_______________/d
