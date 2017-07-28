@@ -67,7 +67,7 @@ _endmarker="____________________"
 # ****************************************
 
 
-printf '%s\n%s%s\n%s%s\n%s%s\n%s%s\n%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Bad Hosts in hosts file: " "$_BAD_REFERRERS_TOTAL" "#### Total Bad Hosts in hosts.deny file: " "$_BAD_IPS_TOTAL" "#### Total Bad Hosts and IP's in superhosts.deny file: " "$_SUPERHOSTS_IPS_TOTAL" " :exclamation: Yeah you read those number right :exclamation: " "$_endmarker" >> "$_tmpA"
+printf '%s\n%s%s\n%s%s\n%s%s\n%s%s\n%s\n%s' "$_startmarker" "- Version: " "$MY_GIT_TAG" "- Total Bad Hosts in hosts file: " "$_BAD_REFERRERS_TOTAL" "- Total Bad Hosts in hosts.deny file: " "$_BAD_IPS_TOTAL" "- Total Bad Hosts and IP's in superhosts.deny file: " "$_SUPERHOSTS_IPS_TOTAL" " :exclamation: Yeah you read those number right :exclamation: " "$_endmarker" >> "$_tmpA"
 mv $_tmpA $_inputdbA
 ed -s $_inputdbA<<\IN
 1,/_______________/d

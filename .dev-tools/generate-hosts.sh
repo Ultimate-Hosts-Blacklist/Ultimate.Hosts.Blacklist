@@ -61,9 +61,9 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_HackedMalwareWebsites/domains.txt -o $
 # Get Fresh Data from justdomains@mirror1.malwaredomains.com
 # **********************************************************
 
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains/domains.txt
-sudo wget http://mirror1.malwaredomains.com/files/justdomains -O $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains/domains.txt
-sort -u $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains/domains.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains.com/domains.txt
+sudo wget http://mirror1.malwaredomains.com/files/justdomains -O $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains.com/domains.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains.com/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains.com/domains.txt
 
 # **********************************************************
 # Get Fresh Domains from yoyo.org
