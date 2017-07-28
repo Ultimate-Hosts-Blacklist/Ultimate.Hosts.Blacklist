@@ -99,7 +99,9 @@ sudo wget -qO- http://www.badips.com/get/list/any/5?age=12 >> $TRAVIS_BUILD_DIR/
 # **********************************************************
 
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
-sudo wget 'https://pgl.yoyo.org/adservers/iplist.php?ipformat=plainwithhosts&showintro=0&mimetype=plaintext' -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt
+sudo wget 'https://pgl.yoyo.org/adservers/iplist.php?ipformat=plainwithhosts&showintro=0&mimetype=plaintext' -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt
+sed 's/   #//g' $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt > $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
 
 # ********************************************************
