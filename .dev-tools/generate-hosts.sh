@@ -191,8 +191,8 @@ sudo truncate -s 0 $TRAVIS_BUILD_DIR/superhosts.deny
 
 _start1="# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
 _end1="# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
-_start2="# ##### START badips.com Block List # DO NOT EDIT #####"
-_end2="# ##### END badips.com Block List # DO NOT EDIT #####"
+_start2="# ##### START hosts.deny Block List # DO NOT EDIT #####"
+_end2="# ##### END hosts.deny Block List # DO NOT EDIT #####"
 _start3="# ##### START Super hosts.deny Block List # DO NOT EDIT #####"
 _end3="# ##### END Super hosts.deny Block List # DO NOT EDIT #####"
 _startmarker="##### Version Information #"
@@ -272,13 +272,13 @@ done < $_input2
 printf '%s\n' "$_end2"  >> "$_tmphostsC"
 mv $_tmphostsC $_inputdb2
 ed -s $_inputdb2<<\IN
-1,/# ##### START badips.com Block List # DO NOT EDIT #####/d
-/# ##### END badips.com Block List # DO NOT EDIT #####/,$d
+1,/# ##### START hosts.deny Block List # DO NOT EDIT #####/d
+/# ##### END hosts.deny Block List # DO NOT EDIT #####/,$d
 ,d
 .r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template
-/# ##### START badips.com Block List # DO NOT EDIT #####/x
+/# ##### START hosts.deny Block List # DO NOT EDIT #####/x
 .t.
-.,/# ##### END badips.com Block List # DO NOT EDIT #####/-d
+.,/# ##### END hosts.deny Block List # DO NOT EDIT #####/-d
 w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template
 q
 IN
