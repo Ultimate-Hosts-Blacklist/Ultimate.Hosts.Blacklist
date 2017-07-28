@@ -3,7 +3,7 @@
 #### Total Hosts: 51,603
 ##### Version Information ##
 
-# ##### START badips.com Block List — DO NOT EDIT #####
+# ##### START Super hosts.deny Block List — DO NOT EDIT #####
 ALL: 100.12.89.79
 ALL: 100.14.202.242
 ALL: 100.2.245.16
@@ -51607,4 +51607,4 @@ ALL: 99.59.103.92
 ALL: 99.59.76.180
 ALL: 99.63.238.108
 ALL: 99.70.57.114
-# ##### END badips.com Block List - DO NOT EDIT #####
+# ##### END Super hosts.deny Block List — DO NOT EDIT #####

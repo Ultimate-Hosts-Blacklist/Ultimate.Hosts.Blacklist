@@ -30,7 +30,12 @@ A hosts file like this causes any lookups to any of the listed domains to resolv
 ************************************************
 ## WHAT IS A HOSTS.DENY FILE?
 
-A hosts file, named `hosts.deny` is a plain-text file for unix based operating systems which blocks a list of IP addresses on the outside of your network from gaining access to your computer. A `hosts.deny` file will not work on a Windows operating system.
+A hosts file, named `hosts.deny` is a plain-text file for Linux/Unix based operating systems only which blocks a list of IP addresses on the outside of your network from gaining any access to your computer. A `hosts.deny` file will not work on a Windows operating system.
+
+************************************************
+## WHAT IS A SUPERHOSTS.DENY FILE? **I've never heard of that ??**
+
+The superhosts.deny file is simply named `superhosts.deny` but is actually just a normal `hosts.deny` file which is a plain-text file for Linux/Unix based operating systems which blocks a list of IP addresses or hosts (domains) on the outside of your network from gaining any access to your computer. If you want to user this `superhosts.deny` file simply rename it to `hosts.deny` and place it in your `/etc/` folder on your Linux/Unix operating system. A `hosts.deny` file will not work on a Windows operating system.
 
 ************************************************
 ## WHERE DO I PUT THIS ON MY COMPUTER?
@@ -38,6 +43,7 @@ To modify your current `hosts` file, look for it in the following places and mod
 editor.
 
 **Linux, Mac OS X, iOS, Android**: `/etc/hosts`
+
 **Linux, Mac OS X, iOS, Android**: `/etc/hosts.deny`
 
 **Windows Systems**: `%SystemRoot%\system32\drivers\etc\hosts`
