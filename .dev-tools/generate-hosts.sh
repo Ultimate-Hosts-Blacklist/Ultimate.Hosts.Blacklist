@@ -177,9 +177,9 @@ _tmphostsB=tmphostsB
 _tmphostsC=tmphostsC
 _tmphostsD=tmphostsD
 
-# ***********************************************************
-# Truncate our existing hosts files before re-generating them
-# ***********************************************************
+# *****************************************************************
+# Truncate our existing hosts files before re-generating them again
+# *****************************************************************
 
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts.deny
