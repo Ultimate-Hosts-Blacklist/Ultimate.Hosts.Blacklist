@@ -33,6 +33,7 @@
 
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 
 # ********************************
 # ********************************
@@ -69,16 +70,8 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains/dom
 # **********************************************************
 
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
-sudo wget https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&startdate%5Bday%5D=01&startdate%5Bmonth%5D=01&startdate%5Byear%5D=2000&mimetype=plaintext -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
+sudo wget 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&startdate%5Bday%5D=01&startdate%5Bmonth%5D=01&startdate%5Byear%5D=2000&mimetype=plaintext' -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
-
-# **********************************************************
-# Get Fresh IP data from yoyo.org
-# **********************************************************
-
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
-sudo wget https://pgl.yoyo.org/adservers/iplist.php?ipformat=plainwithhosts&showintro=0&mimetype=plaintext -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
-sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
 
 
 # ***************************************************
@@ -101,6 +94,14 @@ sudo wget -qO- http://www.badips.com/get/list/any/3?age=12 >> $TRAVIS_BUILD_DIR/
 sudo wget -qO- http://www.badips.com/get/list/any/4?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_4/ips.txt
 sudo wget -qO- http://www.badips.com/get/list/any/5?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_5/ips.txt
 
+# **********************************************************
+# Get Fresh IP data from yoyo.org
+# **********************************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
+sudo wget 'https://pgl.yoyo.org/adservers/iplist.php?ipformat=plainwithhosts&showintro=0&mimetype=plaintext' -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
+
 # ********************************************************
 # Join all lists together into one big list for hosts.deny
 # ********************************************************
@@ -108,6 +109,12 @@ sudo wget -qO- http://www.badips.com/get/list/any/5?age=12 >> $TRAVIS_BUILD_DIR/
 cat $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com*/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 
+# *************************************************************
+# Join all lists together into one big list for superhosts.deny
+# *************************************************************
+
+cat $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
+cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 
 # ******************
 # Set Some Variables
@@ -123,6 +130,7 @@ MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
 
 _input1=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 _input2=$TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+_input3=$TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 
 # ***********************************************
 # Sort lists alphabetically and remove duplicates
@@ -130,15 +138,20 @@ _input2=$TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 
 sort -u $_input1 -o $_input1
 sort -u $_input2 -o $_input2
+sort -u $_input3 -o $_input3
 
 # **********************************************
-# Set some more variables after sorting our list
+# Get total counts from all lists
 # **********************************************
 
 _BAD_REFERRERS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt)
 _BAD_REFERRERS_TOTAL=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_REFERRERS)
+
 _BAD_IPS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt)
 _BAD_IPS_TOTAL=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_IPS)
+
+_SUPERHOSTS_IPS=$(wc -l < $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt)
+_SUPERHOSTS_IPS_TOTAL=$(LC_NUMERIC=en_US printf "%'.f\n" $_SUPERHOSTS_IPS)
 
 # **********************************
 # Temporary database files we create
@@ -147,6 +160,7 @@ _BAD_IPS_TOTAL=$(LC_NUMERIC=en_US printf "%'.f\n" $_BAD_IPS)
 _inputdbA=/tmp/lastupdated.db
 _inputdb1=/tmp/hosts.db
 _inputdb2=/tmp/hostsdeny.db
+_inputdb3=/tmp/superhostsdeny.db
 
 # ***********************************
 # Declare template and temp variables
@@ -154,15 +168,20 @@ _inputdb2=/tmp/hostsdeny.db
 
 _hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
 _hostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
+_superhostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
+
 _tmphostsA=tmphostsA
 _tmphostsB=tmphostsB
 _tmphostsC=tmphostsC
+_tmphostsD=tmphostsD
 
-# ********************************************************
-# Truncate our existing hosts file before re-generating it
-# ********************************************************
+# ***********************************************************
+# Truncate our existing hosts files before re-generating them
+# ***********************************************************
 
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts.deny
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/superhosts.deny
 
 # ***************************************************************
 # Start and End Strings to Search for to do inserts into template
@@ -172,6 +191,8 @@ _start1="# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
 _end1="# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###"
 _start2="# ##### START badips.com Block List — DO NOT EDIT #####"
 _end2="# ##### END badips.com Block List - DO NOT EDIT #####"
+_start3="# ##### START Super hosts.deny Block List — DO NOT EDIT #####"
+_end3="# ##### END Super hosts.deny Block List — DO NOT EDIT #####"
 _startmarker="##### Version Information #"
 _endmarker="##### Version Information ##"
 
@@ -222,7 +243,7 @@ rm $_inputdb1
 # PRINT DATE AND TIME OF LAST UPDATE into hosts.deny
 # **************************************************
 
-printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_IPS_TOTAL" "$_endmarker" >> "$_tmphostsA"
+printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total IP's: " "$_BAD_IPS_TOTAL" "$_endmarker" >> "$_tmphostsA"
 mv $_tmphostsA $_inputdbA
 ed -s $_inputdbA<<\IN
 1,/##### Version Information #/d
@@ -261,15 +282,61 @@ q
 IN
 rm $_inputdb2
 
+
+# *******************************************************
+# PRINT DATE AND TIME OF LAST UPDATE into superhosts.deny
+# *******************************************************
+
+printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts and IP's: " "$_SUPERHOSTS_IPS_TOTAL" "$_endmarker" >> "$_tmphostsA"
+mv $_tmphostsA $_inputdbA
+ed -s $_inputdbA<<\IN
+1,/##### Version Information #/d
+/##### Version Information ##/,$d
+,d
+.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/superhostsdeny.template
+/##### Version Information #/x
+.t.
+.,/##### Version Information ##/-d
+w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/superhostsdeny.template
+q
+IN
+rm $_inputdbA
+
+# **************************************
+# Insert hosts into superhosts.deny file
+# **************************************
+
+printf '%s\n' "$_start3" >> "$_tmphostsD"
+while IFS= read -r LINE
+do
+printf '%s%s\n' "ALL: " "${LINE}" >> "$_tmphostsD"
+done < $_input3
+printf '%s\n' "$_end3"  >> "$_tmphostsD"
+mv $_tmphostsD $_inputdb3
+ed -s $_inputdb3<<\IN
+1,/# ##### START Super hosts.deny Block List — DO NOT EDIT #####/d
+/# ##### END Super hosts.deny Block List — DO NOT EDIT #####/,$d
+,d
+.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/superhostsdeny.template
+/# ##### START Super hosts.deny Block List — DO NOT EDIT #####/x
+.t.
+.,/# ##### END Super hosts.deny Block List — DO NOT EDIT #####/-d
+w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/superhostsdeny.template
+q
+IN
+rm $_inputdb3
+
+
 # ************************************
 # Copy Files into place before testing
 # ************************************
 
-sudo mv /etc/hosts /etc/hosts.bak2
-sudo cp $_hosts /etc/hosts
-sudo cp $_hostsdeny /etc/hosts.deny
+#sudo mv /etc/hosts /etc/hosts.bak2
+#sudo cp $_hosts /etc/hosts
+#sudo cp $_hostsdeny /etc/hosts.deny
 sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts
 sudo cp $_hostsdeny $TRAVIS_BUILD_DIR/hosts.deny
+sudo cp $_superhostsdeny $TRAVIS_BUILD_DIR/superhosts.deny
 
 exit 0
 
