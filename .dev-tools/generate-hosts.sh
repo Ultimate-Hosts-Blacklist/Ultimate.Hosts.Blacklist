@@ -35,6 +35,10 @@ sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 
+sudo touch $TRAVIS_BUILD_DIR/hosts
+sudo touch $TRAVIS_BUILD_DIR/hosts.deny
+sudo touch $TRAVIS_BUILD_DIR/superhosts.deny
+
 # ********************************
 # ********************************
 # Get Fresh Data From Some Sources
