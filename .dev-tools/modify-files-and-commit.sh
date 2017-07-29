@@ -94,9 +94,9 @@ zip -r superhosts.deny.zip superhosts.deny
 # Remove our unzipped hosts files
 # *******************************
 
-sudo rm $TRAVIS_BUILD_DIR/hosts
-sudo rm $TRAVIS_BUILD_DIR/hosts.deny
-sudo rm $TRAVIS_BUILD_DIR/superhosts.deny
+#sudo rm $TRAVIS_BUILD_DIR/hosts
+#sudo rm $TRAVIS_BUILD_DIR/hosts.deny
+#sudo rm $TRAVIS_BUILD_DIR/superhosts.deny
 
 # **************************************************
 # Truncate our input lists before committing to repo
