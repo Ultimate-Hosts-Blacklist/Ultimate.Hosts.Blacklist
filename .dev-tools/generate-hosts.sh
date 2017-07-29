@@ -31,9 +31,9 @@
 # Truncate our input lists before rebuilding them
 # ***********************************************
 
-#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
-#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
-#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 
 # ********************************************
 # Re-create our previously deleted hosts files
@@ -42,7 +42,7 @@
 sudo touch $TRAVIS_BUILD_DIR/hosts
 sudo touch $TRAVIS_BUILD_DIR/hosts.deny
 sudo touch $TRAVIS_BUILD_DIR/superhosts.deny
-ls -la $TRAVIS_BUILD_DIR
+ls -la $TRAVIS_BUILD_DIR/
 
 # ********************************
 # ********************************
@@ -201,6 +201,9 @@ sudo cp /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/su
 _hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
 _hostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
 _superhostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
+
+ls -la $TRAVIS_BUILD_DIR/.dev-tools/
+
 
 # *****************************************************************
 # Truncate our existing hosts files before re-generating them again
