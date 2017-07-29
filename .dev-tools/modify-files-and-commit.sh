@@ -87,6 +87,12 @@ sudo $TRAVIS_BUILD_DIR/.dev-tools/modify-readme.sh
 git add -A
 git commit -am "V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER [ci skip]"
 
+# *********************
+# Push back to the repo
+# *********************
+
+sudo git push origin master
+
 # *************************************************************
 # Travis now moves to the before_deploy: section of .travis.yml
 # *************************************************************
