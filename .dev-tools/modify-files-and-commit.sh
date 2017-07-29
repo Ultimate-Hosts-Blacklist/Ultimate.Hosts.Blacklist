@@ -90,6 +90,10 @@ zip -r hosts.zip hosts
 zip -r hosts.deny.zip hosts.deny
 zip -r superhosts.deny.zip superhosts.deny
 
+sudo mv hosts.zip $TRAVIS_BUILD_DIR/.zipped_releases/hosts.zip
+sudo mv hosts.deny.zip $TRAVIS_BUILD_DIR/.zipped_releases/hosts.deny.zip
+sudo mv superhosts.deny.zip $TRAVIS_BUILD_DIR/.zipped_releases/superhosts.deny.zip
+
 # *******************************
 # Remove our unzipped hosts files
 # *******************************
