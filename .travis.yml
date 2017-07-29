@@ -8,6 +8,7 @@ env:
     - GIT_EMAIL: mitchellkrog@gmail.com
     - TRAVIS_REPO_SLUG: mitchellkrogza/Ultimate.Hosts.Blacklist
     - GIT_BRANCH: master
+    - secure: ${GH_TOKEN}
   matrix:
     - USE_NETWORK=true
 php:
@@ -27,27 +28,27 @@ script:
   - bash .dev-tools/generate-hosts.sh
   - bash .dev-tools/modify-files-and-commit.sh
 
-before_deploy:
-  - bash .dev-tools/deploy-package.sh
+#before_deploy:
+  #- bash .dev-tools/deploy-package.sh
 
-deploy:
+#deploy:
   #provider: releases
-  api_key:
-    secure: ${GH_TOKEN}
+  #api_key:
+    #secure: ${GH_TOKEN}
   #file:
   #- "hosts"
   #- "hosts.deny"
   #- "superhosts.deny"
-  skip_cleanup: true
-  on:
-    repo: mitchellkrogza/Ultimate.Hosts.Blacklist
-    tags: false
-    branches:
-      except:
-        - "/^v[0-9]/"
-        - "/^V.*$/"
-    branches:
-       only:
-         - "master"
-notifications:
-  email: false
+  #skip_cleanup: true
+  #on:
+    #repo: mitchellkrogza/Ultimate.Hosts.Blacklist
+    #tags: false
+    #branches:
+      #except:
+        #- "/^v[0-9]/"
+        #- "/^V.*$/"
+    #branches:
+       #only:
+         #- "master"
+#notifications:
+  #email: false
