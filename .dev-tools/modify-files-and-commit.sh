@@ -85,9 +85,12 @@ sudo $TRAVIS_BUILD_DIR/.dev-tools/modify-readme.sh
 # ***************************************************************
 
 cd $TRAVIS_BUILD_DIR/
-tar -czf hosts.tar.gz -C $TRAVIS_BUILD_DIR/hosts .
-tar -czf hosts.deny.tar.gz -C $TRAVIS_BUILD_DIR/hosts.deny .
-tar -czf superhosts.deny.tar.gz -C $TRAVIS_BUILD_DIR/superhosts.deny .
+#tar -czf hosts.tar.gz -C $TRAVIS_BUILD_DIR/hosts .
+#tar -czf hosts.deny.tar.gz -C $TRAVIS_BUILD_DIR/hosts.deny .
+#tar -czf superhosts.deny.tar.gz -C $TRAVIS_BUILD_DIR/superhosts.deny .
+zip -r hosts.zip hosts
+zip -r hosts.deny.zip hosts.deny
+zip -r superhosts.deny.zip superhosts.deny
 
 # *******************************
 # Remove our unzipped hosts files
