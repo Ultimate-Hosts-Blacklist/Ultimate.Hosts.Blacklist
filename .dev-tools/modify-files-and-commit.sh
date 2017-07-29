@@ -85,6 +85,7 @@ sudo $TRAVIS_BUILD_DIR/.dev-tools/modify-readme.sh
 # **************************************
 
 cd $TRAVIS_BUILD_DIR/
+
 zip -r hosts.zip hosts
 zip -r hosts.deny.zip hosts.deny
 zip -r superhosts.deny.zip superhosts.deny
@@ -96,14 +97,6 @@ zip -r superhosts.deny.zip superhosts.deny
 sudo rm $TRAVIS_BUILD_DIR/hosts
 sudo rm $TRAVIS_BUILD_DIR/hosts.deny
 sudo rm $TRAVIS_BUILD_DIR/superhosts.deny
-
-# ***********************************
-# Remove our temporary template files
-# ***********************************
-
-#sudo rm $TRAVIS_BUILD_DIR/.dev-tools/hosts.template
-#sudo rm $TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
-#sudo rm $TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
 
 # **************************************************
 # Truncate our input lists before committing to repo

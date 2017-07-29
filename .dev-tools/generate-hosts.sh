@@ -27,14 +27,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# ***********************************************
-# Truncate our input lists before rebuilding them
-# ***********************************************
-
-#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
-#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
-#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
-
 # ********************************************
 # Re-create our previously deleted hosts files
 # ********************************************
@@ -190,12 +182,6 @@ _hostsbare=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template.bare
 _hostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template.bare
 _superhostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template.bare
 
-
-#sudo cp /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template.bare /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
-#sudo cp /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template.bare /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template
-#sudo cp /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/superhostsdeny.template.bare /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/superhostsdeny.template
-
-
 _hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
 _hostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
 _superhostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
@@ -204,19 +190,12 @@ sudo cp $_hostsbare $_hosts
 sudo cp $_hostsdenybare $_hostsdeny
 sudo cp $_superhostsdenybare $_superhostsdeny
 
+# ***************************************
 # Make sure Travis owns the files created
+# ***************************************
+
 sudo chown -R travis:travis $TRAVIS_BUILD_DIR
-
 ls -la $TRAVIS_BUILD_DIR/.dev-tools/
-
-
-# *****************************************************************
-# Truncate our existing hosts files before re-generating them again
-# *****************************************************************
-
-#sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts
-#sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts.deny
-#sudo truncate -s 0 $TRAVIS_BUILD_DIR/superhosts.deny
 
 # ***************************************************************
 # Start and End Strings to Search for to do inserts into template
