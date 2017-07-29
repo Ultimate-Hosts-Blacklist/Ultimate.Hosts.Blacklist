@@ -28,3 +28,5 @@ script:
   - bash .dev-tools/generate-hosts.sh
   - bash -x .dev-tools/modify-files-and-commit.sh
 
+notifications:
+  email: false
