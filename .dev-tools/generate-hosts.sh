@@ -189,13 +189,13 @@ _hostsbare=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template.bare
 _hostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template.bare
 _superhostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template.bare
 
+sudo cp $_hostsbare $TRAVIS_BUILD_DIR/.dev-tools/hosts.template
+sudo cp $_hostsdenybare $TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
+sudo cp $_superhostsdenybare $TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
+
 _hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
 _hostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
 _superhostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
-
-sudo cp $_hostsbare $_hosts
-sudo cp $_hostsdenybare $_hostsdeny
-sudo cp $_superhostsdenybare $_superhostsdeny
 
 # *****************************************************************
 # Truncate our existing hosts files before re-generating them again
