@@ -26,29 +26,5 @@ before_install:
 
 script:
   - bash .dev-tools/generate-hosts.sh
-  - bash .dev-tools/modify-files-and-commit.sh
+  - bash -x .dev-tools/modify-files-and-commit.sh
 
-#before_deploy:
-  #- bash .dev-tools/deploy-package.sh
-
-#deploy:
-  #provider: releases
-  #api_key:
-    #secure: ${GH_TOKEN}
-  #file:
-  #- "hosts"
-  #- "hosts.deny"
-  #- "superhosts.deny"
-  #skip_cleanup: true
-  #on:
-    #repo: mitchellkrogza/Ultimate.Hosts.Blacklist
-    #tags: false
-    #branches:
-      #except:
-        #- "/^v[0-9]/"
-        #- "/^V.*$/"
-    #branches:
-       #only:
-         #- "master"
-#notifications:
-  #email: false

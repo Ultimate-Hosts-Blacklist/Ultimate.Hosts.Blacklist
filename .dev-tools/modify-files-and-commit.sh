@@ -84,8 +84,8 @@ sudo $TRAVIS_BUILD_DIR/.dev-tools/modify-readme.sh
 # Add all the modified files and commit
 # *************************************
 
-git add -A
-git commit -am "V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER [ci skip]"
+sudo git add -A
+sudo git commit -am "V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER [ci skip]"
 
 # *********************
 # Push back to the repo
