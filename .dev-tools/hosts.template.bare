@@ -1,0 +1,40 @@
+# This hosts file is brought to you by Mitchell Krog
+# Copyright: https://github.com/mitchellkrogza
+# Source: https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist
+
+# You are free to copy and distribute this file for non-commercial uses,
+# as long the original URL and attribution is included. 
+
+# Please forward any additions, corrections or comments by logging an issue at
+# https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues
+
+
+##### Version Information #
+#### Version: V1.2017.07.60
+#### Total Hosts: 2,241,011
+##### Version Information ##
+
+# Use this file to prevent your computer or server from connecting to selected
+# internet hosts. This is an easy and effective way to protect you from 
+# many types of spyware, adware, malware, click-jacking and porn sites and reduces 
+# bandwidth use. 
+
+# The file should be named "hosts" NOT "hosts.txt"
+
+# For Linux based Operating systems place this file at "/etc/hosts"
+
+# For Windows based systems this is placed either at
+# C:\windows\system32\drivers\etc\hosts
+# or C:\Windows\System32\drivers\etc\hosts
+
+127.0.0.1 localhost
+127.0.0.1 localhost.localdomain
+127.0.0.1 local
+255.255.255.255 broadcasthost
+::1 localhost
+fe80::1%lo0 localhost
+0.0.0.0 0.0.0.0
+
+# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###
+
+# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###
