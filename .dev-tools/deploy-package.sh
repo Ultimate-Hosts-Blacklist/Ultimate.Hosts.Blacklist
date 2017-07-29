@@ -40,23 +40,10 @@ MONTH=$(date +"%m")
 
 cd $TRAVIS_BUILD_DIR
 
-# *************************
-# Create our Version Number
-# *************************
-
-#export GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
-
-# ***************
-# Tag our release
-# ***************
-
-#git tag $GIT_TAG -a -m "V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER"
-
 # *****************************************
 # Push our commit and tags back to the repo
 # *****************************************
 
-#sudo git push origin master && git push origin master --tags
 sudo git push origin master
 
 # *************************************************************************
