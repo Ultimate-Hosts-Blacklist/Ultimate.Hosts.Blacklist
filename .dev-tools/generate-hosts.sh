@@ -333,9 +333,6 @@ rm $_inputdb3
 # Copy Files into place before testing
 # ************************************
 
-#sudo mv /etc/hosts /etc/hosts.bak2
-#sudo cp $_hosts /etc/hosts
-#sudo cp $_hostsdeny /etc/hosts.deny
 sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts
 sudo cp $_hostsdeny $TRAVIS_BUILD_DIR/hosts.deny
 sudo cp $_superhostsdeny $TRAVIS_BUILD_DIR/superhosts.deny

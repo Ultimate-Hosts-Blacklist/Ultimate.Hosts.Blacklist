@@ -80,6 +80,23 @@ sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/ping-test.sh
 
 sudo $TRAVIS_BUILD_DIR/.dev-tools/modify-readme.sh
 
+# ***************************************************************
+# Gzip Our Release to Keep the Repo Small
+# ***************************************************************
+
+cd $TRAVIS_BUILD_DIR/
+tar -czf hosts.tar.gz -C $TRAVIS_BUILD_DIR/hosts
+tar -czf hosts.deny.tar.gz -C $TRAVIS_BUILD_DIR/hosts.deny
+tar -czf superhosts.deny.tar.gz -C $TRAVIS_BUILD_DIR/superhosts.deny
+
+# *******************************
+# Remove our unzipped hosts files
+# *******************************
+
+sudo rm $TRAVIS_BUILD_DIR/hosts
+sudo rm $TRAVIS_BUILD_DIR/hosts.deny
+sudo rm $TRAVIS_BUILD_DIR/superhosts.deny
+
 # *************************************
 # Add all the modified files and commit
 # *************************************
