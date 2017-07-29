@@ -42,6 +42,7 @@
 sudo touch $TRAVIS_BUILD_DIR/hosts
 sudo touch $TRAVIS_BUILD_DIR/hosts.deny
 sudo touch $TRAVIS_BUILD_DIR/superhosts.deny
+ls -la $TRAVIS_BUILD_DIR
 
 # ********************************
 # ********************************
@@ -185,13 +186,17 @@ _tmphostsD=tmphostsD
 # Get our template files prepared
 # *******************************
 
-_hostsbare=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template.bare
-_hostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template.bare
-_superhostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template.bare
+#_hostsbare=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template.bare
+#_hostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template.bare
+#_superhostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template.bare
 
-sudo cp $_hostsbare $TRAVIS_BUILD_DIR/.dev-tools/hosts.template
-sudo cp $_hostsdenybare $TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
-sudo cp $_superhostsdenybare $TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
+#sudo cp $_hostsbare $TRAVIS_BUILD_DIR/.dev-tools/hosts.template
+#sudo cp $_hostsdenybare $TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
+#sudo cp $_superhostsdenybare $TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
+
+sudo cp /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template.bare /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.template
+sudo cp /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template.bare /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template
+sudo cp /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/superhostsdeny.template.bare /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/superhostsdeny.template
 
 _hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
 _hostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
