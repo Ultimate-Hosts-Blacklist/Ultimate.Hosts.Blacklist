@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt
