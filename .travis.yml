@@ -31,11 +31,13 @@ before_deploy:
   - bash .dev-tools/deploy-package.sh
 
 deploy:
-  provider: releases
+  #provider: releases
   api_key:
     secure: ${GH_TOKEN}
-  file:
-  - "hosts"
+  #file:
+  #- "hosts"
+  #- "hosts.deny"
+  #- "superhosts.deny"
   skip_cleanup: true
   on:
     repo: mitchellkrogza/Ultimate.Hosts.Blacklist
