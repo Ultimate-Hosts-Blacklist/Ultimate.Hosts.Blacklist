@@ -35,6 +35,15 @@ sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 
+# *************************
+# Un-Zip Our Template Files 
+# *************************
+
+cd $TRAVIS_BUILD_DIR/.dev-tools/
+zip -o hoststemplate.zip
+zip -o hostsdenytemplate.zip
+zip -o superhostsdenytemplate.zip
+
 # ********************************************
 # Re-create our previously deleted hosts files
 # ********************************************

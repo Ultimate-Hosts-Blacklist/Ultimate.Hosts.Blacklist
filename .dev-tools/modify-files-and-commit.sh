@@ -97,6 +97,31 @@ sudo rm $TRAVIS_BUILD_DIR/hosts
 sudo rm $TRAVIS_BUILD_DIR/hosts.deny
 sudo rm $TRAVIS_BUILD_DIR/superhosts.deny
 
+# *********************************************
+# Zip Our Template Files to Keep the Repo Small
+# *********************************************
+
+cd $TRAVIS_BUILD_DIR/.dev-tools/
+zip -r hoststemplate.zip hosts.template
+zip -r hostsdenytemplate.zip hostsdeny.template
+zip -r superhostsdenytemplate.zip superhostsdeny.template
+
+# **********************************
+# Remove our unzipped template files
+# **********************************
+
+sudo rm $TRAVIS_BUILD_DIR/.dev-tools/hosts.template
+sudo rm $TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
+sudo rm $TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
+
+# **************************************************
+# Truncate our input lists before committing to repo
+# **************************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
+
 # *************************************
 # Add all the modified files and commit
 # *************************************
