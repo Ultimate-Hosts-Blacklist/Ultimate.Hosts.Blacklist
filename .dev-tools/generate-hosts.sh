@@ -31,18 +31,9 @@
 # Truncate our input lists before rebuilding them
 # ***********************************************
 
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
-
-# *************************
-# Un-Zip Our Template Files 
-# *************************
-
-cd $TRAVIS_BUILD_DIR/.dev-tools/
-zip -o hoststemplate.zip
-zip -o hostsdenytemplate.zip
-zip -o superhostsdenytemplate.zip
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 
 # ********************************************
 # Re-create our previously deleted hosts files
@@ -185,22 +176,34 @@ _inputdb3=/tmp/superhostsdeny.db
 # Declare template and temp variables
 # ***********************************
 
-_hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
-_hostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
-_superhostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
-
 _tmphostsA=tmphostsA
 _tmphostsB=tmphostsB
 _tmphostsC=tmphostsC
 _tmphostsD=tmphostsD
 
+# *******************************
+# Get our template files prepared
+# *******************************
+
+_hostsbare=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template.bare
+_hostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template.bare
+_superhostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template.bare
+
+_hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
+_hostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
+_superhostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
+
+sudo cp $_hostsbare $_hosts
+sudo cp $_hostsdenybare $_hostsdeny
+sudo cp $_superhostsdenybare $_superhostsdeny
+
 # *****************************************************************
 # Truncate our existing hosts files before re-generating them again
 # *****************************************************************
 
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts.deny
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/superhosts.deny
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/hosts.deny
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/superhosts.deny
 
 # ***************************************************************
 # Start and End Strings to Search for to do inserts into template
@@ -353,6 +356,10 @@ rm $_inputdb3
 sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts
 sudo cp $_hostsdeny $TRAVIS_BUILD_DIR/hosts.deny
 sudo cp $_superhostsdeny $TRAVIS_BUILD_DIR/superhosts.deny
+
+sudo rm $_hosts
+sudo rm $_hostsdeny
+sudo rm $_superhostsdeny
 
 exit 0
 
