@@ -198,6 +198,9 @@ sudo cp /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/ho
 sudo cp /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template.bare /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hostsdeny.template
 sudo cp /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/superhostsdeny.template.bare /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/superhostsdeny.template
 
+# Make sure Travis owns the files created
+sudo chown -R travis:travis $TRAVIS_BUILD_DIR
+
 _hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
 _hostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
 _superhostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
