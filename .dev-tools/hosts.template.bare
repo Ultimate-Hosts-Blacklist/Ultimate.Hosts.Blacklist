@@ -1,12 +1,17 @@
-# This hosts file is brought to you by Mitchell Krog
-# Copyright: https://github.com/mitchellkrogza
-# Source: https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist
+### The Ultimate hosts file for Linux / Unix / Windows / Android based operating Systems
+### Copyright Mitchell Krog - mitchellkrog@gmail.com
+### https://github.com/mitchellkrogza
+### Repo Url: https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist
 
-# You are free to copy and distribute this file for non-commercial uses,
-# as long the original URL and attribution is included. 
+### ***********
+### MIT LICENSE
+### *************
 
-# Please forward any additions, corrections or comments by logging an issue at
-# https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues
+### You are free to copy and distribute this file for non-commercial uses,
+### as long the original URL and attribution is included. 
+
+### Please forward any additions, corrections or comments by logging an issue at
+### https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues
 
 
 ##### Version Information #
