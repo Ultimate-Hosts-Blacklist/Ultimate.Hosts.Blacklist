@@ -53,6 +53,17 @@ editor.
 **Windows Systems**: `%SystemRoot%\system32\drivers\etc\hosts`
 
 ************************************************
+## WHERE CAN I DOWNLOAD THE RAW UNZIPPED FILES FROM?
+
+To keep this Github repo small, all files are provided in a zip only format. Some people however require their Pi-Holes or other systems to automatically download a raw file once a week or so as an update. For your convenience you can download these raw files at the following links. These links below will always contain tha latest updated version of these files.
+
+<a href="https://hosts.ubuntu101.co.za/hosts">Download Raw hosts file</a> 
+
+<a href="https://hosts.ubuntu101.co.za/hosts.deny">Download Raw hosts.deny file</a> 
+
+<a href="https://hosts.ubuntu101.co.za/superhosts.deny">Download Raw superhosts.deny file</a> 
+
+************************************************
 ## ADDITIONS / REMOVALS / CORRECTIONS !!
 
 [![Log an Issue](https://img.shields.io/badge/LOG%20-%20an%20issue%20%F0%9F%9A%A6-blue.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues) if you disagree with anything on this list or want to add any other bad web sites to the list.
