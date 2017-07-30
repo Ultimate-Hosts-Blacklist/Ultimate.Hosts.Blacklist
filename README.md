@@ -68,7 +68,7 @@ To keep this Github repo small, all files are provided in a zip only format. Som
 
 [![Log an Issue](https://img.shields.io/badge/LOG%20-%20an%20issue%20%F0%9F%9A%A6-blue.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues) if you disagree with anything on this list or want to add any other bad web sites to the list.
 
-You can also fork a copy of this repo, create a new unique folder in .input_sources, call your file domains (not domains.txt) and simply send a Pull Request to the repository.
+You can also fork a copy of this repo, create a new unique folder in .input_sources, call your file domains.txt and simply send a Pull Request to the repository and it will be added.
 
 ************************************************
 ## Please Help Support this Project
