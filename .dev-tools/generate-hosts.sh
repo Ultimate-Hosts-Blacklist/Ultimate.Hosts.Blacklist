@@ -95,6 +95,14 @@ sudo wget -qO- http://www.badips.com/get/list/any/3?age=12 >> $TRAVIS_BUILD_DIR/
 sudo wget -qO- http://www.badips.com/get/list/any/4?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_4/ips.txt
 sudo wget -qO- http://www.badips.com/get/list/any/5?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_5/ips.txt
 
+# **********************************************************************
+# Get Fresh Data from Top-Attacking-IP-Addresses-Against-Wordpress-Sites
+# **********************************************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_Top-Attacking-IP-Addresses-Against-Wordpress-Sites/ips.txt
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/master/wordpress-attacking-ips.txt -O $TRAVIS_BUILD_DIR/.input_sources/_Top-Attacking-IP-Addresses-Against-Wordpress-Sites/ips.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_Top-Attacking-IP-Addresses-Against-Wordpress-Sites/ips.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Top-Attacking-IP-Addresses-Against-Wordpress-Sites/ips.txt
+
 # **********************************************************
 # Get Fresh IP data from yoyo.org
 # **********************************************************
@@ -109,8 +117,7 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt -o $TRAVIS_BUILD_DIR/
 # Join all lists together into one big list for hosts.deny
 # ********************************************************
 
-cat $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com*/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
-cat $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+cat $TRAVIS_BUILD_DIR/.input_sources/*/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 
 # *************************************************************
 # Join all lists together into one big list for superhosts.deny
