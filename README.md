@@ -43,8 +43,11 @@ The superhosts.deny file is simply named `superhosts.deny` but is actually just 
 
 ************************************************
 ## WHERE DO I PUT THIS ON MY COMPUTER?
+
 To modify your current `hosts` file, look for it in the following places and modify it with a text
-editor.
+editor. 
+
+**PLEASE NOTE:** On all operating systems you need administrative access to modify the hosts file. You can Google on how to do this for your particular operating system.
 
 **Linux, Mac OS X, iOS, Android**: `/etc/hosts`
 
