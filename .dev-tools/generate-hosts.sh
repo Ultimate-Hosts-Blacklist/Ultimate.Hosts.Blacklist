@@ -82,6 +82,7 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt -o $TRAVIS_BUILD_
 cat $TRAVIS_BUILD_DIR/.input_sources/*/domains.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/_ShallaList/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/_urlblacklist.com/*/domains >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+cat $TRAVIS_BUILD_DIR/.input_sources/_hosts-file.net/*/domains.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # ******************************
 # Get Fresh Data from Badips.com
@@ -112,6 +113,14 @@ sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt
 sudo wget 'https://pgl.yoyo.org/adservers/iplist.php?ipformat=plainwithhosts&showintro=0&mimetype=plaintext' -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt
 sed 's/   #//g' $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt > $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
+
+# **********************************************************************
+# Get Fresh Data from https://lists.blocklist.de/lists/all.txt
+# **********************************************************************
+
+sudo wget https://lists.blocklist.de/lists/all.txt -O $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/all.txt
+cat $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/all.txt >> $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt -o $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt
 
 # ********************************************************
 # Join all lists together into one big list for hosts.deny
