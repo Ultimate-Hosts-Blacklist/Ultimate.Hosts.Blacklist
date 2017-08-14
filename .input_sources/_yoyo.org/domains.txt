@@ -131,6 +131,7 @@ ademails.com
 adengage.com
 ad.eurosport.com
 adexchangeprediction.com
+adexcite.com
 adexpose.com
 adext.inkclub.com
 ad.f1cd.ru
@@ -1437,7 +1438,7 @@ geo.digitalpoint.com
 geovisite.com
 getclicky.com
 giddycoat.com
-gigya.com
+gigya.com.invalid
 globalismedia.com
 globaltakeoff.net
 globaltrack.com.invalid
