@@ -91,10 +91,12 @@ cat $TRAVIS_BUILD_DIR/.input_sources/_hosts-file.net/*/domains.txt >> $TRAVIS_BU
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_3/ips.txt
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_4/ips.txt
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_5/ips.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_KEY/ips.txt
 
 sudo wget -qO- http://www.badips.com/get/list/any/3?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_3/ips.txt
 sudo wget -qO- http://www.badips.com/get/list/any/4?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_4/ips.txt
 sudo wget -qO- http://www.badips.com/get/list/any/5?age=12 >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_Level_5/ips.txt
+sudo wget -qO- https://hosts.ubuntu101.co.za/badips.txt >> $TRAVIS_BUILD_DIR/.input_sources/_BadIPs.com_KEY/ips.txt
 
 # **********************************************************************
 # Get Fresh Data from Top-Attacking-IP-Addresses-Against-Wordpress-Sites
