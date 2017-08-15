@@ -15,7 +15,7 @@ _______________
  :exclamation: **Yes you did indeed read those numbers correctly** :exclamation: 
 ____________________
 
-Information gathered from multiple sources and merged into one massive hosts file.
+Information gathered from multiple sources and merged into one massive hosts file | <a href="https://hosts.ubuntu101.co.za/hosts">hosts.raw</a> | <a href="https://hosts.ubuntu101.co.za/hosts.deny">hostsdeny.raw</a> | <a href="https://hosts.ubuntu101.co.za/superhosts.deny">superhostsdeny.raw</a>
 
 ************************************************
 ## WHAT IS A HOSTS FILE?
