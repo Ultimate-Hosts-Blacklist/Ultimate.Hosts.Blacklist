@@ -75,9 +75,9 @@ sudo wget 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showi
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
 
 
-# ***************************************************
-# Join all lists together into one big list for hosts
-# ***************************************************
+# **********************************************************************
+# Join all lists together into one big list for hosts including bad IP's
+# **********************************************************************
 
 cat $TRAVIS_BUILD_DIR/.input_sources/*/domains.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/*/*/domains.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
