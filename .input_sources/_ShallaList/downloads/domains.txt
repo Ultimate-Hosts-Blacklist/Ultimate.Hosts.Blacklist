@@ -793,7 +793,6 @@ dl-ssl.google.com
 dl-vip.browser.baidu.com
 dl.baofeng.com
 dl.cdn.chip.de
-dl.dropboxusercontent.com
 dl.free.fr
 dl.google.com
 dl.mat.subagames.com
@@ -971,8 +970,6 @@ driveridentifier.com
 driverupdate.net
 dromeda.net
 drop.io
-dropbox.com
-dropbox.nl
 dropload.com
 dropsend.com
 dt-updates.com
@@ -4310,8 +4307,6 @@ weedy.1.vg
 weekhost.com
 welcometothescene.com
 westline.it.cx
-wetransfer.com
-wetransfer.info
 wget.lt
 wgrane.com
 wgrane.pl
