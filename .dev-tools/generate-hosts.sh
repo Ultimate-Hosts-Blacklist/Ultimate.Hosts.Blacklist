@@ -81,7 +81,6 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt -o $TRAVIS_BUILD_
 
 cat $TRAVIS_BUILD_DIR/.input_sources/*/domains.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/*/*/domains.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
-cat $TRAVIS_BUILD_DIR/.input_sources/*/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # ******************************
 # Get Fresh Data from Badips.com
@@ -128,6 +127,7 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt -o $TRAVIS_BU
 # ********************************************************
 
 cat $TRAVIS_BUILD_DIR/.input_sources/*/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+cat $TRAVIS_BUILD_DIR/.input_sources/*/*/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 
 # *************************************************************
 # Join all lists together into one big list for superhosts.deny
