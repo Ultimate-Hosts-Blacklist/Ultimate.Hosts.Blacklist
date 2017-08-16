@@ -9,15 +9,9 @@
 123games.dk
 123spill.no
 1888freeonlinegames.com
-192.168.1.1
 1colony.com
 1papacaio.com.br
 202.fm
-207.58.160.148
-209.208.92.74
-213.239.212.176
-217.79.182.84
-24.79.144.247
 247webgames.com
 270rr.hostxtremplus.info
 2darcade.com
@@ -33,8 +27,6 @@
 555games.net
 555games.nl
 66-197-210-231.hostnoc.net
-66.227.49.87
-66.98.213.178
 7-sultans-casino.com
 8thd.net
 925cafe.com

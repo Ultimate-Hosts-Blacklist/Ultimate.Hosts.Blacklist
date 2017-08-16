@@ -1,8 +1,6 @@
 adware-remove.net
 adware-remover.net
 ca.com
-eset.ca
-eset.com
 giantcompany.com
 it.trendmicro-europe.com
 javacoolsoftware.com
@@ -21,7 +19,6 @@ pestpatrol.com
 safer-networking.org
 scanforfree.com
 security.kolla.de
-spamcop.net
 spy-reviews.com
 spybot.info
 spybot.safer-networking.de

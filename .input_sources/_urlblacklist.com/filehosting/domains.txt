@@ -14,7 +14,6 @@
 4megaupload.com
 4shared.com
 64k.it
-88.191.122.25
 9divx.com
 9down.com
 9giga.sfr.fr
@@ -30,7 +29,6 @@ alloseven.com
 allourls.com
 allunblocker.nz.gs
 alojarfotos.com
-amazonaws.com
 anyhub.net
 anzwers.org
 arcadeupload.com
@@ -556,10 +554,6 @@ qfile.de
 qshare.com
 quickdump.com
 quickshareit.com
-r25725.ovh.net
-r26538.ovh.net
-r27369.ovh.net
-r28052.ovh.net
 radikal.ru
 rapid-photo.com
 rapid4free.com

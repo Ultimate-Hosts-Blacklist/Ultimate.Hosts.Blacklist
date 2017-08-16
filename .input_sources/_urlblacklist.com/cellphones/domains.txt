@@ -23,7 +23,6 @@ mobiles.co.uk
 mobileshop.com
 movilnet.com.ve
 nextel.com
-o2.co.uk
 oiloja.com.br
 onlinemobilephoneshop.co.uk
 orange.co.uk
@@ -43,4 +42,3 @@ tim.com.br
 tmobilesale.co.uk
 verizonwireless.com
 vivo.com.br
-vodafone.co.uk
