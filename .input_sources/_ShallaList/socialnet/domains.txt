@@ -1,7 +1,4 @@
 10percentpersonals.com
-173.252.110.27
-217.188.35.145
-31.13.72.65
 360.yahoo.com
 4crazy-files.de
 4more.at
@@ -353,6 +350,7 @@ leslibertins.net
 libimseti.cz
 lifestream.aol.com
 likes.com
+limao.com.br
 limpa.ru
 linkedin.com
 linkto.com.br
@@ -451,6 +449,7 @@ mv-spion.de
 my.day.az
 my.mail.ru
 my.ya.ru
+myany.jp
 mybloglog.com
 mybookface.net
 mycantos.com
@@ -781,8 +780,6 @@ wolke10.de
 workkingdom.com
 wouldyouhitthis.com
 writing.com
-www.limao.com.br
-www.myany.jp
 xanga.com
 xchat.centrum.cz
 xed.nl

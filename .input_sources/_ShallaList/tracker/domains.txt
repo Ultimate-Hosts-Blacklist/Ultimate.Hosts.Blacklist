@@ -4,8 +4,6 @@
 160tracker.com
 1trx1.com
 207.net
-212.150.34.116
-213.239.214.240
 21sme.com
 22find.com
 2cnt.net
@@ -14,17 +12,8 @@
 3b9cc85dcf732d5.se
 4q.iperceptions.com
 4stats.de
-63.214.247.19
-66.226.74.5
 6counter.de
 777seo.com
-81.19.88.106
-81.95.145.240
-91.215.100.37
-91.215.100.38
-91.215.101.35
-91.215.101.36
-91.215.103.65
 a.nonstoppartner.net
 a2dfp.net
 a4dtracker.com
@@ -475,6 +464,7 @@ gm-link.com
 gnspf.com
 go.trafficshop.com
 goclick.com
+gold.smbusinessbiz.com
 goldhdporn.com
 google-analitycs.ru
 google-analytics.com
@@ -486,6 +476,7 @@ gostats.de
 greatdealmachine.com
 greenleavegroup.com
 greenlighttracking.com
+group-metrics.com
 gvisit.com
 hastrk3.com
 havingtrack.com
@@ -512,6 +503,7 @@ hotclick.app.linezing.com
 hotlog.ru
 hubtraffic.com
 hustl.net
+hypertracker.com
 id.google.com
 id.google.de
 idev.bookingline.bucksnet.co.uk
@@ -769,6 +761,7 @@ roia.biz
 rp.com
 rranking14.ziyu.net
 rs.adapf.com
+rsmtrack.com
 rtbstream.com
 ruiframe.ru
 rum-collector.pingdom.net
@@ -1162,10 +1155,6 @@ woopra-ns.com
 woopra.com
 wt-eu02.net
 wwa.wipe.de
-www.gold.smbusinessbiz.com
-www.group-metrics.com
-www.hypertracker.com
-www.rsmtrack.com
 www1.mpnrs.com
 www2.a-counter.kiev.ua
 www2.mpnrs.com

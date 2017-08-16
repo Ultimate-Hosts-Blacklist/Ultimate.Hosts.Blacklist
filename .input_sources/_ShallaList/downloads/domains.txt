@@ -311,6 +311,7 @@ bestpokertorrents.com
 bestshare.ro
 bestshareware.net
 bestsharing.com
+bestsoftware4download.com
 besttracker.cz
 bestupload.ro
 bestusefuldownloads.com
@@ -1743,6 +1744,7 @@ gks.gs
 glarysoft.com
 globalloader.com
 globus-tracker.com
+gm-realm.net
 gna.org
 go4dwl.net
 goaruna.com
@@ -1979,6 +1981,7 @@ ipodtvnova.com
 ipspdownload.com
 iptorrents.com
 iput.it
+iqcrew.net
 iraqup.com
 irc-live.site90.net
 ircfast.com
@@ -2028,6 +2031,7 @@ jumbofile.net
 jumbofiles.com
 jungleland.dnsalias.com
 junocloud.me
+justinwb.com
 justupit.com
 justupload.it
 k-litegold.com
@@ -2137,6 +2141,7 @@ lilane5.free.fr
 limelinx.com
 limevvire.org
 limewire-comp.com
+linderlane.nl
 link.ge
 linkagratis.net
 linkbampow.com
@@ -3263,6 +3268,7 @@ slideme.org
 slil.ru
 slingfile.com
 slobytes.net
+slunecnice.cz
 smartdrive.web.de
 smartorrent.com
 smartphone-freeware.com
@@ -4035,6 +4041,7 @@ upload.manyfile.com
 upload.mskvn.by
 upload.musfile.com
 upload.my-con.org
+upload.name
 upload.packetlove.com
 upload.pinkyorange.net
 upload.plunder.com
@@ -4275,6 +4282,7 @@ warezrein.com
 warpcore.org
 wdivx.com
 wdzshare.com
+we4you2.com
 web-share.net
 web.magyar.es
 webbablo.ru
@@ -4334,16 +4342,6 @@ wupload.com
 wupload.com.br
 wupload.de
 wupload.ps
-www.bestsoftware4download.com
-www.filemp3.org
-www.gm-realm.net
-www.iqcrew.net
-www.justinwb.com
-www.linderlane.nl
-www.slunecnice.cz
-www.th3-studio.net
-www.upload.name
-www.we4you2.com
 www2.digitaldistractions.org
 www2.torrelay.com
 wyslijplik.pl
