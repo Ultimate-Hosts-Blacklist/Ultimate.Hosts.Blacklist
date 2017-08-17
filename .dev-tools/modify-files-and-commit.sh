@@ -67,7 +67,7 @@ git config --global push.default simple
 git checkout master
 
 # ***************************************************
-# Modify our files with build and version information
+# Make all script files executable
 # ***************************************************
 
 sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/deploy-package.sh
@@ -89,10 +89,9 @@ cd $TRAVIS_BUILD_DIR/
 zip -r hosts.zip hosts
 zip -r hosts.deny.zip hosts.deny
 zip -r superhosts.deny.zip superhosts.deny
+zip -r domains.list.zip domains.list
+zip -r ips.list.zip ips.list
 
-#sudo mv hosts.zip $TRAVIS_BUILD_DIR/.zipped_releases/hosts.zip
-#sudo mv hosts.deny.zip $TRAVIS_BUILD_DIR/.zipped_releases/hosts.deny.zip
-#sudo mv superhosts.deny.zip $TRAVIS_BUILD_DIR/.zipped_releases/superhosts.deny.zip
 
 # *******************************
 # Remove our unzipped hosts files
@@ -101,6 +100,8 @@ zip -r superhosts.deny.zip superhosts.deny
 sudo rm $TRAVIS_BUILD_DIR/hosts
 sudo rm $TRAVIS_BUILD_DIR/hosts.deny
 sudo rm $TRAVIS_BUILD_DIR/superhosts.deny
+sudo rm $TRAVIS_BUILD_DIR/domains.list
+sudo rm $TRAVIS_BUILD_DIR/ips.list
 
 # **************************************************
 # Truncate our input lists before committing to repo
