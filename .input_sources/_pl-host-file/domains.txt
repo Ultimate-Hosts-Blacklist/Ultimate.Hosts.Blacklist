@@ -308,6 +308,7 @@ mobi.yanosik.pl
 mreg.hit.gemius.pl
 my.adocean.pl
 myao.adocean.pl
+mystat.pl
 negadbg.hit.gemius.pl
 neogenadro.hit.gemius.pl
 netsprint.hit.gemius.pl
@@ -339,13 +340,12 @@ pracuj.adocean.pl
 pracuj.hit.gemius.pl
 prefix.hit.gemius.pl
 pro.hit.gemius.pl
-pro.hit.gemius.pl
 rbcgaru.hit.gemius.pl
 realitateadro.hit.gemius.pl
 realitatero.adocean.pl
 rec.quartic.pl
 rek.adtotal.pl
-rek.www.wp.pl
+rek.wp.pl
 reklama.onet.pl
 reklamy.sfd.pl
 republika.onet.pl
@@ -426,8 +426,6 @@ webgroundadbg.hit.gemius.pl
 webgroundbg.adocean.pl
 webhosting-ads.home.pl
 wp.hit.gemius.pl
-www.adserver.home.pl
-www.mystat.pl
 wykop.hit.gemius.pl
 x.interia.pl
 xed.pl

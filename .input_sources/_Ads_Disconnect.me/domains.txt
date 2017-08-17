@@ -30,8 +30,6 @@
 7search.com
 980media.com
 99count.com
-Adsatt.ABCNews.starwave.com
-Adsatt.go.starwave.com
 a-ads.com
 a-counter.kiev.ua
 a.0day.kiev.ua
@@ -725,8 +723,10 @@ ads6.gamecity.net
 ads7.gamecity.net
 ads8.com
 adsatt.abc.starwave.com
+Adsatt.ABCNews.starwave.com
 adsatt.espn.go.com
 adsatt.espn.starwave.com
+Adsatt.go.starwave.com
 adsby.bidtheatre.com
 adscale.de
 adscholar.com
@@ -1039,6 +1039,7 @@ babs.tv2.dk
 backbeatmedia.com
 banik.redigy.cz
 banner-exchange-24.de
+banner-link.com.br
 banner.ad.nu
 banner.alphacool.de
 banner.ambercoastcasino.com
@@ -1407,6 +1408,7 @@ dmtracker.com
 dmtracking.alibaba.com
 dmtracking2.alibaba.com
 dnads.directnic.com
+dnps.com
 domaining.in
 domainsponsor.com
 domainsteam.de
@@ -1726,6 +1728,7 @@ justrelevant.com
 justwebads.com
 k.iinfo.cz
 kanoodle.com
+kaplanindex.com
 kargo.com
 keymedia.hu
 keynotedeviceanywhere.com
@@ -1907,6 +1910,7 @@ moceanmobile.com
 mogreet.com
 mojiva.com
 monetizemore.com
+money4exit.de
 moneyexpert.com
 monsterpops.com
 moolahmedia.com
@@ -2080,6 +2084,7 @@ phizzle.com
 phluant.com
 phoenix-adrunner.mycomputer.com
 phonearena.com
+photo-ads.co.uk
 phpadsnew.new.natuurpark.nl
 phpmyvisites.net
 phunware.com
@@ -2638,11 +2643,6 @@ woopra.com
 worldwide-cash.net
 wtlive.com
 www-banner.chat.ru
-www.banner-link.com.br
-www.dnps.com
-www.kaplanindex.com
-www.money4exit.de
-www.photo-ads.co.uk
 www1.gto-media.com
 www8.glam.com
 x-traceur.com
