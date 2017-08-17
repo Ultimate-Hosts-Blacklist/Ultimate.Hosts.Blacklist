@@ -396,6 +396,8 @@ rm $_inputdb3
 sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts
 sudo cp $_hostsdeny $TRAVIS_BUILD_DIR/hosts.deny
 sudo cp $_superhostsdeny $TRAVIS_BUILD_DIR/superhosts.deny
+sudo cp $_input1 $TRAVIS_BUILD_DIR/domains.list
+sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 
 sudo rm $_hosts
 sudo rm $_hostsdeny
