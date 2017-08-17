@@ -74,6 +74,12 @@ sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
 sudo wget 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&startdate%5Bday%5D=01&startdate%5Bmonth%5D=01&startdate%5Byear%5D=2000&mimetype=plaintext' -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
 
+# *****************
+# Activate Dos2Unix
+# *****************
+
+dos2unix $TRAVIS_BUILD_DIR/.input_sources/*/domains.txt
+dos2unix $TRAVIS_BUILD_DIR/.input_sources/*/*/domains.txt
 
 # **********************************************************************
 # Join all lists together into one big list for hosts including bad IP's
@@ -81,6 +87,12 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt -o $TRAVIS_BUILD_
 
 cat $TRAVIS_BUILD_DIR/.input_sources/*/domains.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/*/*/domains.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+
+# *****************
+# Activate Dos2Unix
+# *****************
+
+dos2unix $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # ******************************
 # Get Fresh Data from Badips.com
@@ -122,6 +134,13 @@ sudo wget https://lists.blocklist.de/lists/all.txt -O $TRAVIS_BUILD_DIR/.input_s
 cat $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/all.txt >> $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt -o $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt
 
+# *****************
+# Activate Dos2Unix
+# *****************
+
+dos2unix $TRAVIS_BUILD_DIR/.input_sources/*/ips.txt
+dos2unix $TRAVIS_BUILD_DIR/.input_sources/*/*/ips.txt
+
 # ********************************************************
 # Join all lists together into one big list for hosts.deny
 # ********************************************************
@@ -129,12 +148,24 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt -o $TRAVIS_BU
 cat $TRAVIS_BUILD_DIR/.input_sources/*/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/*/*/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 
+# *****************
+# Activate Dos2Unix
+# *****************
+
+dos2unix $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+
 # *************************************************************
 # Join all lists together into one big list for superhosts.deny
 # *************************************************************
 
 cat $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
+
+# *****************
+# Activate Dos2Unix
+# *****************
+
+dos2unix $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 
 # ******************
 # Set Some Variables
