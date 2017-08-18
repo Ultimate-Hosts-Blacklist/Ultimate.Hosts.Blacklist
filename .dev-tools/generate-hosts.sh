@@ -93,6 +93,17 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt -o $TRAVIS_BUIL
 #mv $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt
 #sort -u $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt
 
+# ***************************************************************************************************************************
+# Get Fresh Data from _Michael_Trimms_Hosts - https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt
+# ***************************************************************************************************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/*.txt
+curl -sL https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt
+sed '/^\#/ d' $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
+cut -d ' ' -f2 $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt
+mv $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
+
 # *************************************************************************************************************
 # Get Fresh Domains from ransomwaretracker.abuse.ch - https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt
 # *************************************************************************************************************
