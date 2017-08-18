@@ -102,6 +102,7 @@ curl -sL https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_h
 sed '/^\#/ d' $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 cut -d ' ' -f2 $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt
 mv $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
+sed '/./,$!d' $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 
 # ********************************************************************************************************************************
@@ -115,6 +116,7 @@ sed '/^\[/ d' $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt > $TRAVIS_BU
 sed 's/^||//' $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt 
 sed '/^\#/ d' $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt
 cut -d'^' -f-1 $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt 
+ed -s $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt <<< w
 sudo rm $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt
 
