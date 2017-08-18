@@ -98,7 +98,7 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt -o $TRAVIS_BUIL
 # ***************************************************************************************************************************
 
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/*.txt
-sudo wget https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt -O $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt
+curl -sL https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt
 sed '/^\#/ d' $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 cut -d ' ' -f2 $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt
 mv $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
@@ -109,7 +109,7 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt -o $T
 # ********************************************************************************************************************************
 
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_Spam404/*.txt
-sudo wget https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt -O $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt
+curl -sL https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt
 sed '/^\!/ d' $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt
 sed '/^\[/ d' $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt
 sed 's/^||//' $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt 
