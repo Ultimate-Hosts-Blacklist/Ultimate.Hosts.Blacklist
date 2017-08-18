@@ -66,6 +66,20 @@ sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malware
 sudo wget http://mirror1.malwaredomains.com/files/justdomains -O $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains.com/domains.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains.com/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains.com/domains.txt
 
+
+# *********************************************************************************************************
+# Get Fresh Domains from antipopads - https://raw.githubusercontent.com/Yhonay/antipopads/master/popads.txt
+# *********************************************************************************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_antipopads/*.txt
+curl -sL https://raw.githubusercontent.com/Yhonay/antipopads/master/popads.txt -o $TRAVIS_BUILD_DIR/.input_sources/_antipopads/temp.txt
+sed '/^\!/ d' $TRAVIS_BUILD_DIR/.input_sources/_antipopads/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt
+sed '/^\[/ d' $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_antipopads/temp.txt
+sed 's/^||//' $TRAVIS_BUILD_DIR/.input_sources/_antipopads/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt 
+cut -d'^' -f-1 $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_antipopads/temp.txt 
+mv $TRAVIS_BUILD_DIR/.input_sources/_antipopads/temp.txt $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt
+
 # **********************************************************
 # Get Fresh Domains from yoyo.org
 # **********************************************************
