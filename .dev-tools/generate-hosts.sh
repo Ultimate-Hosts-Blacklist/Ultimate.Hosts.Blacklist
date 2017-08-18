@@ -86,13 +86,21 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt -o $TRAVIS_BUIL
 
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/*.txt
 curl -sL https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt -o $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt
-sed '/^\!/ d' $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt
 sed '/^\[/ d' $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt
 sed 's/^||//' $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt 
 cut -d'^' -f-1 $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt 
 mv $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt
 
+# *************************************************************************************************************
+# Get Fresh Domains from ransomwaretracker.abuse.ch - https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt
+# *************************************************************************************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/*.txt
+curl -sL https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt -o $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/temp.txt
+sed '/^\#/ d' $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/domains.txt
+sudo rm temp.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/domains.txt
 
 # **********************************************************
 # Get Fresh Domains from yoyo.org
