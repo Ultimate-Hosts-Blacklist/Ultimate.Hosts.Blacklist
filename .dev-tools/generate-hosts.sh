@@ -82,15 +82,16 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt -o $TRAVIS_BUIL
 
 # ***************************************************************************************************************************************
 # Get Fresh Domains from HOSTS AdBlock - https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt
+# This Data Source Allows you one download per day !!! Reverting to static list for now.
 # ***************************************************************************************************************************************
 
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/*.txt
-curl -sL https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt -o $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt
-sed '/^\[/ d' $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt
-sed 's/^||//' $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt 
-cut -d'^' -f-1 $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt 
-mv $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt
-sort -u $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/*.txt
+#curl -sL https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt -o $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt
+#sed '/^\[/ d' $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt
+#sed 's/^||//' $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt 
+#cut -d'^' -f-1 $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt 
+#mv $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/temp.txt $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt
+#sort -u $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/domains.txt
 
 # *************************************************************************************************************
 # Get Fresh Domains from ransomwaretracker.abuse.ch - https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt
