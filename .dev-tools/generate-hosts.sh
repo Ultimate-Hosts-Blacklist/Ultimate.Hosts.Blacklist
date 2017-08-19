@@ -167,7 +167,8 @@ dos2unix $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 #ed -s $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt <<< w
 #sed -i -e '/./,$!d' $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
-sed -e :a -e '/./,$!d;/^\n*$/{$d;N;};/\n$/ba' $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt > $TRAVIS_BUILD_DIR/.input_sources/combined-list-tmp.txt
+#sed -e :a -e '/./,$!d;/^\n*$/{$d;N;};/\n$/ba' $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt > $TRAVIS_BUILD_DIR/.input_sources/combined-list-tmp.txt
+grep '[^[:blank:]]' < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt > $TRAVIS_BUILD_DIR/.input_sources/combined-list-tmp.txt
 sudo mv $TRAVIS_BUILD_DIR/.input_sources/combined-list-tmp.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # ******************************
