@@ -165,7 +165,8 @@ dos2unix $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 # Trim Empty Line at Beginning of Input File
 # ******************************************
 
-ed -s $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt <<< w
+#ed -s $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt <<< w
+sed -i -e '/./,$!d' $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # ******************************
 # Get Fresh Data from Badips.com
