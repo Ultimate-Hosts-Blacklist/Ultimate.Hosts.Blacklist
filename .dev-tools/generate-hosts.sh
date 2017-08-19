@@ -455,6 +455,12 @@ q
 IN
 rm $_inputdb3
 
+# ******************************************************
+# Convert hosts file into Dos format for Windows Systems
+# ******************************************************
+
+sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts.windows
+unix2dos $TRAVIS_BUILD_DIR/hosts.windows
 
 # ************************************
 # Copy Files into place before testing
