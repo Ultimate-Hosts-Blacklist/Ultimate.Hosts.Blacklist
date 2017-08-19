@@ -161,6 +161,12 @@ cat $TRAVIS_BUILD_DIR/.input_sources/*/*/domains.txt >> $TRAVIS_BUILD_DIR/.input
 
 dos2unix $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
+# ******************************************
+# Trim Empty Line at Beginning of Input File
+# ******************************************
+
+ed -s $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt <<< w
+
 # ******************************
 # Get Fresh Data from Badips.com
 # ******************************
