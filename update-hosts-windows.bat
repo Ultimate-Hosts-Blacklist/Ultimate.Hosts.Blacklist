@@ -11,7 +11,7 @@
 :: @ECHO OFF
 TITLE Update Hosts
 
-cd /
+cd \
 mkdir tmp
 
 :: Check if we are administrator. If not, exit immediately.
