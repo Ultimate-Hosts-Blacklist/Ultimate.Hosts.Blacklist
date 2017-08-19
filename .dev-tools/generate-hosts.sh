@@ -34,6 +34,7 @@
 sudo touch $TRAVIS_BUILD_DIR/hosts
 sudo touch $TRAVIS_BUILD_DIR/hosts.deny
 sudo touch $TRAVIS_BUILD_DIR/superhosts.deny
+sudo touch $TRAVIS_BUILD_DIR/hosts.windows
 ls -la $TRAVIS_BUILD_DIR/
 
 # ********************************
@@ -293,6 +294,7 @@ _inputdbA=/tmp/lastupdated.db
 _inputdb1=/tmp/hosts.db
 _inputdb2=/tmp/hostsdeny.db
 _inputdb3=/tmp/superhostsdeny.db
+_inputdb4=/tmp/hostswindows.db
 
 # ***********************************
 # Declare template and temp variables
@@ -302,20 +304,24 @@ _tmphostsA=tmphostsA
 _tmphostsB=tmphostsB
 _tmphostsC=tmphostsC
 _tmphostsD=tmphostsD
+_tmphostsE=tmphostsE
 
 # *******************************
 # Get our template files prepared
 # *******************************
 
 _hostsbare=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template.bare
+_hostswindowsbare=$TRAVIS_BUILD_DIR/.dev-tools/hosts.windows.template.bare
 _hostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template.bare
 _superhostsdenybare=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template.bare
 
 _hosts=$TRAVIS_BUILD_DIR/.dev-tools/hosts.template
+_hostswindows=$TRAVIS_BUILD_DIR/.dev-tools/hosts.windows.template
 _hostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/hostsdeny.template
 _superhostsdeny=$TRAVIS_BUILD_DIR/.dev-tools/superhostsdeny.template
 
 sudo cp $_hostsbare $_hosts
+sudo cp $_hostswindowsbare $_hostswindows
 sudo cp $_hostsdenybare $_hostsdeny
 sudo cp $_superhostsdenybare $_superhostsdeny
 
@@ -339,9 +345,9 @@ _end3="# ##### END Super hosts.deny Block List # DO NOT EDIT #####"
 _startmarker="##### Version Information #"
 _endmarker="##### Version Information ##"
 
-# **************************************************
-# PRINT DATE AND TIME OF LAST UPDATE into hosts file
-# **************************************************
+# ***********************************************************
+# PRINT DATE AND TIME OF LAST UPDATE into hosts file for Unix
+# ***********************************************************
 
 printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS_TOTAL" "$_endmarker" >> "$_tmphostsA"
 mv $_tmphostsA $_inputdbA
@@ -358,9 +364,9 @@ q
 IN
 rm $_inputdbA
 
-# ****************************
-# Insert hosts into hosts file
-# ****************************
+# *************************************
+# Insert hosts into hosts file for Unix
+# *************************************
 
 printf '%s\n' "$_start1" >> "$_tmphostsB"
 while IFS= read -r LINE
@@ -381,6 +387,50 @@ w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.te
 q
 IN
 rm $_inputdb1
+
+# **************************************************************
+# PRINT DATE AND TIME OF LAST UPDATE into hosts file for Windows
+# **************************************************************
+
+printf '%s\n%s%s\n%s%s\n%s' "$_startmarker" "#### Version: " "$MY_GIT_TAG" "#### Total Hosts: " "$_BAD_REFERRERS_TOTAL" "$_endmarker" >> "$_tmphostsA"
+mv $_tmphostsA $_inputdbA
+ed -s $_inputdbA<<\IN
+1,/##### Version Information #/d
+/##### Version Information ##/,$d
+,d
+.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.windows.template
+/##### Version Information #/x
+.t.
+.,/##### Version Information ##/-d
+w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.windows.template
+q
+IN
+rm $_inputdbA
+
+# ****************************************
+# Insert hosts into hosts file for Windows
+# ****************************************
+
+printf '%s\n' "$_start1" >> "$_tmphostsB"
+while IFS= read -r LINE
+do
+printf '%s%s\n' "127.0.0.1 " "${LINE}" >> "$_tmphostsB"
+done < $_input1
+printf '%s\n' "$_end1"  >> "$_tmphostsB"
+mv $_tmphostsB $_inputdb1
+ed -s $_inputdb1<<\IN
+1,/# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/d
+/# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/,$d
+,d
+.r /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.windows.template
+/# START HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/x
+.t.
+.,/# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###/-d
+w /home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/hosts.windows.template
+q
+IN
+rm $_inputdb1
+
 
 # **************************************************
 # PRINT DATE AND TIME OF LAST UPDATE into hosts.deny
@@ -473,7 +523,7 @@ rm $_inputdb3
 # Convert hosts file into Dos format for Windows Systems
 # ******************************************************
 
-sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts.windows
+sudo cp $_hostswindows $TRAVIS_BUILD_DIR/hosts.windows
 sudo unix2dos $TRAVIS_BUILD_DIR/hosts.windows
 
 # ************************************
@@ -489,6 +539,7 @@ sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 sudo rm $_hosts
 sudo rm $_hostsdeny
 sudo rm $_superhostsdeny
+sudo rm $_hostswindows
 
 exit 0
 
