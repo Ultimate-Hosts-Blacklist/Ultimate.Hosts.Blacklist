@@ -460,7 +460,7 @@ rm $_inputdb3
 # ******************************************************
 
 sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts.windows
-unix2dos $TRAVIS_BUILD_DIR/hosts.windows
+sudo unix2dos $TRAVIS_BUILD_DIR/hosts.windows
 
 # ************************************
 # Copy Files into place before testing
