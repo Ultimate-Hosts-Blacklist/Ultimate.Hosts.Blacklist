@@ -87,6 +87,7 @@ sudo $TRAVIS_BUILD_DIR/.dev-tools/modify-readme.sh
 cd $TRAVIS_BUILD_DIR/
 
 zip -r hosts.zip hosts
+zip -r hosts.windows.zip hosts.windows
 zip -r hosts.deny.zip hosts.deny
 zip -r superhosts.deny.zip superhosts.deny
 zip -r domains.list.zip domains.list
@@ -98,6 +99,7 @@ zip -r ips.list.zip ips.list
 # *******************************
 
 sudo rm $TRAVIS_BUILD_DIR/hosts
+sudo rm $TRAVIS_BUILD_DIR/hosts.windows
 sudo rm $TRAVIS_BUILD_DIR/hosts.deny
 sudo rm $TRAVIS_BUILD_DIR/superhosts.deny
 sudo rm $TRAVIS_BUILD_DIR/domains.list
