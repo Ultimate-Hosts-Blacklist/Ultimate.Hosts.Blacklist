@@ -20,7 +20,7 @@ Information gathered from multiple sources and merged into one massive hosts fil
 - RAW FILE SOURCES
 
 <a href="https://hosts.ubuntu101.co.za/hosts">hosts for Unix systems (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/hosts.windows">hosts for Windows systems (CRLF) (RAW)</a><br/>
+<a href="https://hosts.ubuntu101.co.za/hosts.windows">hosts for Windows systems (CRLF) (RAW)</a> | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/update-hosts-windows.bat">Try the Windows Installer / Updater</a><br/>
 <a href="https://hosts.ubuntu101.co.za/hosts.deny">hosts.deny (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/superhosts.deny">superhosts.deny (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/domains.list">domains-list (RAW)</a><br/>
@@ -70,7 +70,7 @@ editor.
 To keep this Github repo small, all files are provided in a zip only format. Some people however require their Pi-Holes or other systems to automatically download a raw file once a week or so as an update. For your convenience you can download these raw files at the following links. These links below will always contain tha latest updated version of these files.
 
 <a href="https://hosts.ubuntu101.co.za/hosts">hosts for Unix systems (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/hosts.windows">hosts for Windows systems (CRLF) (RAW)</a><br/>
+<a href="https://hosts.ubuntu101.co.za/hosts.windows">hosts for Windows systems (CRLF) (RAW)</a> | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/update-hosts-windows.bat">Try the Windows Installer / Updater</a><br/>
 <a href="https://hosts.ubuntu101.co.za/hosts.deny">hosts.deny (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/superhosts.deny">superhosts.deny (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/domains.list">domains-list (RAW)</a><br/>
