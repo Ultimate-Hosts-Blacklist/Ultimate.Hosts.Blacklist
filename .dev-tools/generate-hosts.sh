@@ -130,9 +130,9 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/domains.txt
 # Get Fresh Domains from yoyo.org
 # **********************************************************
 
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
-sudo wget 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&startdate%5Bday%5D=01&startdate%5Bmonth%5D=01&startdate%5Byear%5D=2000&mimetype=plaintext' -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
-sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
+#sudo wget 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&startdate%5Bday%5D=01&startdate%5Bmonth%5D=01&startdate%5Byear%5D=2000&mimetype=plaintext' -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
+#sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/domains.txt
 
 # *****************
 # Activate Dos2Unix
