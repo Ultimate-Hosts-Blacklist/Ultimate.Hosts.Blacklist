@@ -4,6 +4,20 @@
 # Copyright: Mitchell Krog - https://github.com/mitchellkrogza
 # Repo Url: https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist
 
+###########################################################################
+#            _ _   _                 _                                    #
+#      /\ /\| | |_(_)_ __ ___   __ _| |_ ___                              #
+#     / / \ \ | __| | '_ ` _ \ / _` | __/ _ \                             #
+#     \ \_/ / | |_| | | | | | | (_| | ||  __/                             #
+#      \___/|_|\__|_|_| |_| |_|\__,_|\__\___|                             #
+#                      _           ___ _            _    _ _     _        #
+#       /\  /\___  ___| |_ ___    / __\ | __ _  ___| | _| (_)___| |_      #
+#      / /_/ / _ \/ __| __/ __|  /__\// |/ _` |/ __| |/ / | / __| __|     #
+#     / __  / (_) \__ \ |_\__ \ / \/  \ | (_| | (__|   <| | \__ \ |_      #
+#     \/ /_/ \___/|___/\__|___/ \_____/_|\__,_|\___|_|\_\_|_|___/\__|     #
+#                                                                         #
+###########################################################################
+
 # MIT License
 
 # Copyright (c) 2017 Mitchell Krog - mitchellkrog@gmail.com
@@ -187,11 +201,11 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_Top-Attacking-IP-Addresses-Against-Wor
 # Get Fresh IP data from yoyo.org
 # **********************************************************
 
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt
-sudo wget 'https://pgl.yoyo.org/adservers/iplist.php?ipformat=plainwithhosts&showintro=0&mimetype=plaintext' -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt
-sed 's/   #//g' $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt > $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
-sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt
+#sudo wget 'https://pgl.yoyo.org/adservers/iplist.php?ipformat=plainwithhosts&showintro=0&mimetype=plaintext' -O $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt
+#sed 's/   #//g' $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips-unclean.txt > $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
+#sort -u $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt -o $TRAVIS_BUILD_DIR/.input_sources/_yoyo.org/ips.txt
 
 # **********************************************************************
 # Get Fresh Data from https://lists.blocklist.de/lists/all.txt
