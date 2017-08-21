@@ -2039,7 +2039,6 @@ oxado.com
 oxcash.com
 oxen.hillcountrytexas.com
 p.adpdx.com
-pagead.l.google.com
 pagefair.com
 pagerank-ranking.com
 pagerank-ranking.de
@@ -2056,7 +2055,6 @@ partage-facile.com
 partner-ads.com
 partner.pelikan.cz
 partner.topcities.com
-partnerad.l.google.com
 partnercash.de
 partners.priceline.com
 passion-4.net
@@ -2573,7 +2571,6 @@ veruta.com
 vervemobile.com
 vervewireless.com
 vibrantmedia.com
-video-stats.video.google.com
 videoegg.com
 view4cash.de
 viewpoint.com
