@@ -51,14 +51,6 @@ sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_BaddBoyzHosts/domains.txt
 sudo wget https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/PULL_REQUESTS/domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/_BaddBoyzHosts/domains.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_BaddBoyzHosts/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_BaddBoyzHosts/domains.txt
 
-# ********************************************
-# Get Fresh Data from Hacked Malware Web Sites
-# ********************************************
-
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_HackedMalwareWebsites/domains.txt
-sudo wget https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/.dev-tools/_strip_domains/domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/_HackedMalwareWebsites/domains.txt
-sort -u $TRAVIS_BUILD_DIR/.input_sources/_HackedMalwareWebsites/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_HackedMalwareWebsites/domains.txt
-
 # **********************************************************
 # Get Fresh Data from justdomains@mirror1.malwaredomains.com
 # **********************************************************
