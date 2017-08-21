@@ -29,7 +29,7 @@ before_install:
   - sudo apt-get -y install tofrodos
 script:
   - bash .dev-tools/generate-hosts.sh
-  - bash .dev-tools/modify-files-and-commit.sh
+  - bash -x .dev-tools/modify-files-and-commit.sh
 
 notifications:
   email: false
