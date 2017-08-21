@@ -735,6 +735,7 @@ ads.whoishostingthis.com
 ads.wiezoekje.nl
 ads.wikia.nocookie.net
 ads.wineenthusiast.com
+adswizz.com
 ads.wwe.biz
 ads.xhamster.com
 ads.xtra.co.nz
