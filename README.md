@@ -7,10 +7,10 @@ The Ultimate hosts file for protecting your computer or device against over a mi
 A hosts file for use on any operating system to block bad domains out of your servers or devices.
 
 _______________
-- Version: **V1.2017.08.144**
-- Total Bad Hosts in hosts file: **1,911,032**
-- Total Bad Hosts in hosts.deny file: **278,106**
-- Total Bad Hosts and IP's in superhosts.deny file: **2,189,128**
+- Version: **V1.2017.08.145**
+- Total Bad Hosts in hosts file: **1,459,649**
+- Total Bad Hosts in hosts.deny file: **278,390**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,738,029**
 
  :exclamation: **Yes you did indeed read those numbers correctly** :exclamation: 
 ____________________
