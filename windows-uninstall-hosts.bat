@@ -9,7 +9,7 @@
 :: Copyright Mitchell Krog - https://github.com/mitchellkrogza
 
 :: @ECHO OFF
-TITLE Update Hosts
+TITLE Uninstall Hosts
 
 :: Check if we are administrator. If not, exit immediately.
 
