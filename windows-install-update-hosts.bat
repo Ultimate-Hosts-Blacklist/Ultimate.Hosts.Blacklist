@@ -28,7 +28,7 @@ if not exist "%WINDIR%\System32\drivers\etc\hosts.bak" (
 )
 
 if not exist "%WINDIR%\System32\drivers\etc\hosts.original” (
-        COPY %WINDIR%\System32\drivers\etc\hosts %WINDIR%\System32\drivers\etc\hosts.original
+	COPY %WINDIR%\System32\drivers\etc\hosts %WINDIR%\System32\drivers\etc\hosts.original
 )
 
 :: Download Latest Updated Hosts File
