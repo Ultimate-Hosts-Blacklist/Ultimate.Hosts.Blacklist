@@ -112,6 +112,8 @@ sed '/./,$!d' $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt > 
 cut -d'^' -f-1 $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt 
 mv $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 ed -s $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt <<< w
+grep '[^[:blank:]]' < $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
+echo "" >> $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 
 # ********************************************************************************************************************************
