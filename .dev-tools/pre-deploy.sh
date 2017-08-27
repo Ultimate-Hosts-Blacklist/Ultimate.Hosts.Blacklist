@@ -84,6 +84,7 @@ ls -la $TRAVIS_BUILD_DIR/.input_sources/
 # Run funceble to check for dead domains
 # ***************************************************
 
+sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/install-run-funceble.sh
 sudo bash $TRAVIS_BUILD_DIR/.dev-tools/install-run-funceble.sh
 
 # MIT License
