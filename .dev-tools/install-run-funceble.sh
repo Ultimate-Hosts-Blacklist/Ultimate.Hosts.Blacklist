@@ -42,7 +42,7 @@ sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/_funceble/funceble
 
 cd $TRAVIS_BUILD_DIR/.dev-tools/_funceble/
 
-sudo bash $TRAVIS_BUILD_DIR/.dev-tools/_funceble/tool --autosave-minutes 20 --commit-autosave-message "V1.${YEAR}.${MONTH}.${TRAVIS_BUILD_NUMBER} [funceble]" --commit-results-message "V1.${YEAR}.${MONTH}.${TRAVIS_BUILD_NUMBER}" -i
+sudo bash $TRAVIS_BUILD_DIR/.dev-tools/_funceble/tool --autosave-minutes 40 --commit-autosave-message "V1.${YEAR}.${MONTH}.${TRAVIS_BUILD_NUMBER} [funceble]" --commit-results-message "V1.${YEAR}.${MONTH}.${TRAVIS_BUILD_NUMBER}" -i
 
 # ************************************
 #  Run Funceble and Check Domains List
