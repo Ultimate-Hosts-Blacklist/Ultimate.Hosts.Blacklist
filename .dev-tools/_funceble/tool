@@ -89,7 +89,7 @@ travisAutoSaveCommitMessage='Funceble Test - Autosave'
 travisAutoSaveMinutes=35
 
 # Version number
-versionNumber='dev-1.4.0+21'
+versionNumber='dev-1.4.0+22'
 ################################################################################
 # We log the date
 date > ${logOutput}
@@ -587,10 +587,12 @@ getListOfDirectoryToCreate(){
         # We set the file to exclude
         regex='.*install.log'
         
+        sha512OfFile=($(sha512sum ${filename}))
+        
         if [[ ! ${filename} =~ ${regex} ]]
         then
             # We save the file path + it's content in oneline format.
-            echo "${filename} @@ $(cat ${filename} | tr '\n' '$')" >> ${directoriesStructure}
+            echo "${filename} @@ $(cat ${filename} | tr '\n' '$') @@ ${sha512OfFile[0]}" >> ${directoriesStructure}
         else
             # We continue to the next item
             continue
@@ -647,7 +649,7 @@ createDirectoriesAndFile(){
             ;;
             *@@*)
                 # We set the regex to match in order to get all needed informations
-                regex='(.*[a-z]\/{1,5}.*)\s(@@\s(.*))'
+                regex='(.*[a-z]\/{1,5}.*)\s(@@\s(.*))\s(@@\s(.*))'
                 
                 if [[ ${toCreate} =~ ${regex} ]]
                 then
@@ -674,6 +676,16 @@ createDirectoriesAndFile(){
                             printf ${BASH_REMATCH[3]//$/\\n} > ${currentDir}${BASH_REMATCH[1]/gitignore/${replaceWith}}
                         fi
                     else
+                        # We get the sha512sum of the current file
+                        local sha512OfCurrentFile=($(sha512sum ${currentDir}${BASH_REMATCH[1]}))
+                        
+                        if [[ ${sha512OfCurrentFile[1]} != ${BASH_REMATCH[5]} ]]
+                        then
+                            # If sha512sum are not the same we replace the content of the file
+                            rm -f ${currentDir}${BASH_REMATCH[1]}
+                            printf ${BASH_REMATCH[3]//$/\\n} > ${currentDir}${BASH_REMATCH[1]}
+                        fi
+                        
                         continue
                     fi
                 fi
