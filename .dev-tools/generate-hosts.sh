@@ -106,13 +106,7 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt -o $TRAVIS_BUIL
 
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/*.txt
 sudo wget https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt -O $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
-sed '/^\#/ d' < $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
-cut -d ' ' -f2 < $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
-#sed '/./,$!d' $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
-#cut -d'^' -f-1 $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt 
-#mv $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp.txt $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
-#ed -s $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt <<< w
-grep '[^[:blank:]]' < $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
+cat $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt | grep -v '#' | cut -d ' ' -f2 > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp_domain.txt && mv $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp_domain.txt $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 echo "" >> $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 
