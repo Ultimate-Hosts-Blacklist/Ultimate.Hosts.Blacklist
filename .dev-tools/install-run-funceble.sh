@@ -9,9 +9,17 @@
 # Find funceble at: https://github.com/funilrys/funceble
 # ****************************************************************
 
+# ************************************
+# Set Some Variables for our Build Tag
+# ************************************
+
+YEAR=$(date +%Y)
+MONTH=$(date +%m)
+
 # ******************
 # Set our Input File
 # ******************
+
 _input1=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # *****************************************
@@ -24,19 +32,17 @@ _input1=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 # *********************************
 # Make scripts executable by Travis
 # *********************************
+
 sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/_funceble/tool
 sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/_funceble/funceble
-
-cd $TRAVIS_BUILD_DIR/.dev-tools/_funceble/
 
 # *************************
 # Run Funceble Install Tool
 # *************************
 
+cd $TRAVIS_BUILD_DIR/.dev-tools/_funceble/
 
-YEAR=$(date +%Y)
-MONTH=$(date +%m)
-sudo bash $TRAVIS_BUILD_DIR/.dev-tools/_funceble/tool --autosave-minutes 35 --commit-autosave-message "V1.${YEAR}.${MONTH}.${TRAVIS_BUILD_NUMBER} [funceble]" --commit-results-message "V1.${YEAR}.${MONTH}.${TRAVIS_BUILD_NUMBER}" -i
+sudo bash $TRAVIS_BUILD_DIR/.dev-tools/_funceble/tool --autosave-minutes 20 --commit-autosave-message "V1.${YEAR}.${MONTH}.${TRAVIS_BUILD_NUMBER} [funceble]" --commit-results-message "V1.${YEAR}.${MONTH}.${TRAVIS_BUILD_NUMBER}" -i
 
 # ************************************
 #  Run Funceble and Check Domains List
