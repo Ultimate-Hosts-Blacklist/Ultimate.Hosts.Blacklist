@@ -72,6 +72,7 @@ git checkout master
 
 sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/generate-domain-testing-file.sh
 sudo bash $TRAVIS_BUILD_DIR/.dev-tools/generate-domain-testing-file.sh
+sudo chown -R travis:travis $TRAVIS_BUILD_DIR/
 
 # ***********************************************
 # Check if we properly generated the file to test
