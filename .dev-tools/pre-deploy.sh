@@ -85,7 +85,7 @@ ls -la $TRAVIS_BUILD_DIR/.input_sources/
 # ***************************************************
 
 sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/install-run-funceble.sh
-sudo bash $TRAVIS_BUILD_DIR/.dev-tools/install-run-funceble.sh
+sudo sh -x $TRAVIS_BUILD_DIR/.dev-tools/install-run-funceble.sh
 
 # MIT License
 
