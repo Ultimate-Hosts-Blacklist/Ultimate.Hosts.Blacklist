@@ -1,0 +1,43 @@
+Directories
+
+output/
+output/logs
+output/logs/dateFormat
+output/logs/whois
+output/logs/noReferer
+output/logs/percentage
+output/splited
+output/HTTP_Analytic
+output/HTTP_Analytic/POTENTIALLY_INACTIVE
+output/HTTP_Analytic/ACTIVE
+output/HTTP_Analytic/POTENTIALLY_ACTIVE
+output/hosts
+output/hosts/ACTIVE
+output/hosts/INVALID
+output/hosts/INACTIVE
+output/domains
+output/domains/ACTIVE
+output/domains/INVALID
+output/domains/INACTIVE
+
+Files
+
+output/logs/dateFormat/.gitignore @@ *$!.gitignore$
+output/logs/whois/.gitignore @@ *$!.gitignore$
+output/logs/noReferer/.gitignore @@ *$!.gitignore$
+output/logs/percentage/.gitignore @@ *$!.gitignore$
+output/logs/.gitignore @@ *$!.gitignore$!/whois/$!/dateFormat/$!/percentage/$!/noReferer/$
+output/splited/.gitignore @@ *$!.gitignore$
+output/HTTP_Analytic/POTENTIALLY_INACTIVE/.gitignore @@ *$!.gitignore$
+output/HTTP_Analytic/ACTIVE/.gitignore @@ *$!.gitignore$
+output/HTTP_Analytic/POTENTIALLY_ACTIVE/.gitignore @@ *$!.gitignore$
+output/HTTP_Analytic/.gitignore @@ *$!.gitignore$!/ACTIVE/$!/POTENTIALLY_ACTIVE/$!/POTENTIALLY_INACTIVE/$
+output/hosts/ACTIVE/.gitignore @@ *$!.gitignore$
+output/hosts/INVALID/.gitignore @@ *$!.gitignore$
+output/hosts/INACTIVE/.gitignore @@ *$!.gitignore$
+output/hosts/.gitignore @@ *$!.gitignore$!/ACTIVE/$!/INACTIVE/$!/INVALID/$
+output/domains/ACTIVE/.gitignore @@ *$!.gitignore$
+output/domains/INVALID/.gitignore @@ *$!.gitignore$
+output/domains/INACTIVE/.gitignore @@ *$!.gitignore$
+output/domains/.gitignore @@ *$!.gitignore$!/ACTIVE/$!/INACTIVE/$!/INVALID/$
+output/.gitignore @@ *$!.gitignore$!/logs/$!/hosts/$!/splited/$!/HTTP_Analytic/$!/domains/$
