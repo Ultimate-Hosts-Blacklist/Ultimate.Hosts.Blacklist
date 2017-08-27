@@ -1,0 +1,2492 @@
+#!/bin/bash
+
+# _______           _        _______  _______  ______   _        _______
+# (  ____ \|\     /|( (    /|(  ____ \(  ____ \(  ___ \ ( \      (  ____ \
+# | (    \/| )   ( ||  \  ( || (    \/| (    \/| (   ) )| (      | (    \/
+# | (__    | |   | ||   \ | || |      | (__    | (__/ / | |      | (__
+# |  __)   | |   | || (\ \) || |      |  __)   |  __ (  | |      |  __)
+# | (      | |   | || | \   || |      | (      | (  \ \ | |      | (
+# | )      | (___) || )  \  || (____/\| (____/\| )___) )| (____/\| (____/\
+# |/       (_______)|/    )_)(_______/(_______/|/ \___/ (_______/(_______/
+
+# Written by: @Funilrys, Nissar Chababy <contact at funilrys dot com>
+# GitHub : https://github.com/funilrys/funceble
+
+################################ Contributors ##################################
+# - @mitchellkrogza, Mitchell Krog <mitchellkrog@gmail.com>
+#     - badreferslist: used along the construction of this script :)
+#           @Source: https://git.io/vQPz8
+#     - Idea of implementation of a timeout for whois
+#           @Source: https://git.io/vQPz0
+#     - Idea of implementation of HTTP Code analyze
+#           @Source: https://git.io/v7Ci6
+# - @PromoFaux, Adam Warner <adamw@rner.email> with Pi-Hole <https://pi-hole.net>
+#     - Their blocking list is just awesome to test this script :)
+# - @WaLLy3K <github@firebog.net>
+#     - Idea of implementation of execution time
+#           @Source: https://git.io/vQPzg
+################################################################################
+
+
+################################# Temporary ####################################
+# Path to temporary file
+whoIs="/var/tmp/whois.$$"
+################################################################################
+################################### Files ######################################
+# IANA Root Zone Database file.
+# The file is a dump of the extensions this script can accept.
+# For update use: `tool --iana`
+# Source: https://www.iana.org/domains/root/db
+ianaDB="iana-domains-db"
+################################################################################
+###############################  Text Format ###################################
+# Bold
+bold=$(tput bold)
+
+# Cyan Color
+cyan=$(tput setaf 6)
+
+# Magenta Color
+magenta=$(tput setaf 5)
+
+# Disable formating
+normal=$(tput sgr0)
+
+# Red Color
+red=$(tput setaf 1)
+
+# White Color
+white=$(tput setaf 7)
+
+################################################################################
+################################## Status ######################################
+# Down domain status
+downStatus="INACTIVE"
+
+# Invalid domain status
+invalidStatus="INVALID"
+
+# Valid domain status
+upStatus="ACTIVE"
+################################################################################
+############################## Default Values ##################################
+# Activation of the auto-continue mode
+autoContinue=true
+
+# We use this variable in order to pass some command before the final commit
+# into travisAutoSave()
+commandBeforeEnd=''
+
+# Used to check if we already cleaned hosts file
+cleanedDone=false
+
+# Current Date
+currentDate=$(date)
+
+# IP for host file
+customIP='0.0.0.0'
+
+# Generate debug file under log
+# DO NOT USE THIS IF YOU DON'T KNOW HOW TO DEBUG FROM OUTPUTTED FILE
+debugUnknown=false
+
+# File already treated
+fileAlreadyTreated=false
+
+# Activate/Desactivate the generation of hosts file
+generateHosts=false
+
+# Activate/Deactive the usage of httpPCode()
+httpCodeStatus=true
+
+# Link to script
+linkScript="https://github.com/funilrys/funceble"
+
+# If noFiles=true, We don't any results files ==> Not applied to hosts file
+noFiles=false
+
+# Number of domain which returns inactive
+numberOfDown=0
+
+# Number of domain which returns invalid
+numberOfInvalid=0
+
+# Number of domain tested
+numberOfTested=0
+
+# Number of active
+numberOfUp=0
+
+# Output less data
+outputLess=false
+
+# Output logs
+outputLogs=true
+
+# Output unified file
+outputUnified=true
+
+# Activate / Deactivate the generation of plain list domain
+plainListDomain=false
+
+# If set to true, we don't print anything
+quiet=false
+
+# Regex to match
+regexCurrentDir='%%currentDir%%'
+
+# IPv4 match
+regexIPv4='(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'
+
+# HTTP Status code timeout
+secondsBeforeHTTPTimeout=1
+
+# Default seconds before timeout
+secondsBeforeTimeout=1
+
+# Show/hide execution time
+showExecutionTime=false
+
+# Show/hide percentage
+showPercentage=true
+
+# Activation/deactivation of travis mode
+travisMode=false
+
+# Minimum of minutes before we start commiting to upstream under travis
+travisAutoSaveMinutes=35
+
+# Default travis final commit message
+travisResultsCommitMessage='Funceble Test - Results'
+
+# Default travis autosave commit message
+travisAutoSaveCommitMessage='Funceble Test - Autosave'
+
+# If set to false, we generate only one file with the results
+splitFiles=false
+
+# Version number
+versionNumber='dev-1.4.0+93'
+
+# IANA whois server. The following is there to give use the whois
+# host we have to call to get a (valid) response.
+# Note: Whois Server are different for each extension.
+whoisServer="whois.iana.org"
+################################################################################
+################################## Outputs #####################################
+# Defaut name for hosts file
+hostsDefault='hosts'
+
+# Defaut name for domain list
+domainsDefault='list'
+
+# Output directory.
+# Auto updated with `tool -i`
+# DO NOT FORGET '/' AT THE END
+outputDir='%%currentDir%%/output/'
+
+# Autocontinue log file
+continueLog=${outputDir}continue.txt
+
+# domains directory
+domainsDir=${outputDir}domains/
+
+# INACTIVE domains directory
+downDomainsDir=${domainsDir}INACTIVE/
+
+# ACTIVE domains directory
+upDomainsDir=${domainsDir}ACTIVE/
+
+# INVALID hosts directory
+invalidDomainsDir=${domainsDir}INVALID/
+
+# hosts directory
+hostsDir=${outputDir}hosts/
+
+# INACTIVE hosts directory
+downHostsDir=${hostsDir}INACTIVE/
+
+# ACTIVE hosts directory
+upHostsDir=${hostsDir}ACTIVE/
+
+# INVALID hosts directory
+invalidHostsDir=${hostsDir}INVALID/
+
+# Output of log
+logOutput=${outputDir}'logs/'
+
+# Whois output
+whoisLogOutput=${logOutput}whois/
+
+# Date output
+dateLogOutput=${logOutput}dateFormat/
+
+# Percentages output
+percentageLogOutput=${logOutput}percentage/
+
+# Output of execution Time log
+executionLog=${logOutput}execution.log
+
+# Ouput of no referer log
+noRefererLogOutput=${logOutput}noReferer/
+
+# Output of inactive domains
+outputDownDomain=${downDomainsDir}${domainsDefault}
+
+# Output of active domains
+outputUpDomain=${upDomainsDir}${domainsDefault}
+
+# Output of invalid domains
+outputInvalidDomain=${invalidDomainsDir}${domainsDefault}
+
+# Output of inactive domain
+outputDownHost=${downHostsDir}${hostsDefault}
+
+# Output of active domain
+outputUpHost=${upHostsDir}${hostsDefault}
+
+# Output of invalid domain
+outputInvalidHost=${invalidHostsDir}${hostsDefault}
+
+# Output of unified results
+outputUnifiedResult=${outputDir}result.txt
+
+# Output of valid results
+outputUpResult=${outputDir}splited/active.txt
+
+# Output of invalid results
+outputInvalidResult=${outputDir}splited/invalid.txt
+
+# Output of error results
+outputDownResult=${outputDir}splited/inactive.txt
+
+# Output of persentage log
+outputPercentageLog=${percentageLogOutput}percentage.txt
+
+# Output of HTTP codes
+outputHTTPCodes=${outputDir}HTTP_Analytic/
+
+# Output of active codes if different from "funceble" result
+outputHTTPActive=${outputHTTPCodes}ACTIVE/
+
+# Lof of output active
+logOutputHTTPActive=${outputHTTPActive}active.txt
+
+# Ouput of potentially active codes
+outputHTTPPotentiallyActive=${outputHTTPCodes}POTENTIALLY_ACTIVE/
+
+# Log of output of potentially active codes
+logOutputHTTPPotentiallyActive=${outputHTTPPotentiallyActive}potentially_active.txt
+
+# Output of inactive and potentially inactive codes
+outputHTTPInactiveOrPotentially=${outputHTTPCodes}POTENTIALLY_INACTIVE/
+
+# Log of output of inactive or potentially inactive codes
+logOutputHTTPInactiveOrPotentially=${outputHTTPInactiveOrPotentially}inactive_or_potentially.txt
+################################################################################
+############################# HTTP Code validation #############################
+# Active codes
+activeCodes=('100' '101' '200' '201' '202' '203' '204' '205' '206')
+
+# Potentially active codes
+potentiallyActiveCodes=('000' '300' '301' '302' '303' '304' '305' '307' '403' '405' '406' '407' '408' '411' '413' '417' '500' '501' '502' '503' '504' '505')
+
+# Inactive or pothentially inactive codes
+inactiveOrPotentiallyCodes=('400' '403' '402' '404' '409' '410' '412' '414' '415' '416')
+################################################################################
+
+# _______           _        _______ __________________ _______  _        _______
+# (  ____ \|\     /|( (    /|(  ____ \\__   __/\__   __/(  ___  )( (    /|(  ____ \
+# | (    \/| )   ( ||  \  ( || (    \/   ) (      ) (   | (   ) ||  \  ( || (    \/
+# | (__    | |   | ||   \ | || |         | |      | |   | |   | ||   \ | || (_____
+# |  __)   | |   | || (\ \) || |         | |      | |   | |   | || (\ \) |(_____  )
+# | (      | |   | || | \   || |         | |      | |   | |   | || | \   |      ) |
+# | )      | (___) || )  \  || (____/\   | |   ___) (___| (___) || )  \  |/\____) |
+# |/       (_______)|/    )_)(_______/   )_(   \_______/(_______)|/    )_)\_______)
+
+############################### Before Header ##################################
+# Used to print some infomations before the header dataoutputDownResult comes.
+#
+# @CalledBy getReferer
+################################################################################
+beforeHeader(){
+    # We get the file we're gonna print into
+    # file <string>
+    local fileToCreate="${1}"
+    
+    if [[ ! -f ${fileToCreate} ]]
+    then
+        # If does not exist we add informations about funceble and the Date
+        # of the generation of the file.
+        printf "# File generated with %s\n" "${linkScript}" > ${fileToCreate}
+        printf "# Date of generation: %s\n" "${currentDate}" >> ${fileToCreate}
+        printf "\n" >> ${fileToCreate}
+    fi
+}
+
+############################### Print Header ###################################
+# Used to print header
+# if quiet=false it's printing in file
+#
+# @CalledBy getReferer
+################################################################################
+printHeader()
+{
+    # type <string>
+    local type=${1}
+    
+    if [[ ${type} == 'Invalid' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Generation of header for invalid.txt
+                printf "\n%-100s %-17s %-10s %-10s %-20s\n" "Domain" "Status" "Source" "HTTP Code" "Analyse Date"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ---------- ---------- ----------------------------"
+            ;;
+            false)
+                # Generation of header for invalid.txt
+                printf "\n%-100s %-17s %-10s %-20s\n" "Domain" "Status" "Source" "Analyse Date"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ---------- ----------------------------"
+            ;;
+        esac
+    elif [[ ${type} == 'Down' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Generation of header for inactive.txt
+                printf "\n%-100s %-35s %-17s %10s %-10s %-20s\n" "Domain" "WHOIS Server" "Status" "Source" "HTTP Code" "Analyse Date"
+                echo "---------------------------------------------------------------------------------------------------- ----------------------------------- ----------- ---------- ---------- ----------------------------"
+            ;;
+            false)
+                # Generation of header for inactive.txt
+                printf "\n%-100s %-35s %-17s %10s %-20s\n" "Domain" "WHOIS Server" "Status" "Source" "Analyse Date"
+                echo "---------------------------------------------------------------------------------------------------- ----------------------------------- ----------- ---------- ----------------------------"
+            ;;
+        esac
+    elif [[ ${type} == 'Up' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Generation of header for valid.txt
+                printf "\n%-100s %-17s %-17s %-10s %-10s %-20s\n" "Domain" "Status" "Expiration Date" "Source" "HTTP Code" "Analyse Date"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ----------------- ---------- ---------- -------------------------------"
+            ;;
+            false)
+                # Generation of header for valid.txt
+                printf "\n%-100s %-17s %-17s %-10s %-20s\n" "Domain" "Status" "Expiration Date" "Source" "Analyse Date"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ----------------- ---------- -------------------------------"
+            ;;
+        esac
+    elif [[ ${type} == 'Generic' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Generation of header (On screen)
+                printf "\n%-100s %-11s %-17s %-10s %-10s\n" "Domain" "Status" "Expiration Date" "Source" "HTTP Code"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ----------------- ---------- ----------"
+            ;;
+            false)
+                # Generation of header (On screen)
+                printf "\n%-100s %-11s %-17s %-10s %-20s\n" "Domain" "Status" "Expiration Date" "Source" "Analyse Date"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ----------------- ---------- -------------------------------"
+            ;;
+        esac
+    elif [[ ${type} == 'Generic_File' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Generation of header (On file)
+                printf "\n%-100s %-11s %-17s %-10s %-10s %-20s\n" "Domain" "Status" "Expiration Date" "Source" "HTTP Code" "Analyse Date"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ----------------- ---------- ---------- -------------------------------"
+            ;;
+            false)
+                # Generation of header (On file)
+                printf "\n%-100s %-11s %-17s %-10s %-20s\n" "Domain" "Status" "Expiration Date" "Source" "Analyse Date"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ----------------- ---------- -------------------------------"
+            ;;
+        esac
+    elif [[ ${type} == 'Less' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Generation of header (On screen)
+                printf "\n%-100s %-11s %-10s %-10s\n" "Domain" "Status" "Source" "HTTP Code"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ---------- ----------"
+            ;;
+            false)
+                # Generation of header (On screen)
+                printf "\n%-100s %-11s %-10s\n" "Domain" "Status" "Source"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ----------"
+            ;;
+        esac
+    elif [[ ${type} == 'Less_File' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Generation of header (On screen)
+                printf "\n%-100s %-11s %-10s %-10s\n" "Domain" "Status" "Source" "HTTP Code"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ---------- ----------"
+            ;;
+            false)
+                # Generation of header (On screen)
+                printf "\n%-100s %-11s %-10s\n" "Domain" "Status" "Source"
+                echo "---------------------------------------------------------------------------------------------------- ----------- ----------"
+            ;;
+        esac
+    elif [[ ${type} == 'Percentage' ]]
+    then
+        # Generation of header
+        printf "\n%-11s %-12s %-12s\n" "Status" "Percentage" "Numbers"
+        echo "----------- ------------ -------------"
+    elif [[ ${type} == 'HTTP' ]]
+    then
+        # Generation of header
+        printf "\n%-100s %-11s %-10s %-20s\n" "Domain" "Status" "HTTP Code" "Analyse Date"
+        echo "---------------------------------------------------------------------------------------------------- ----------- ---------- -------------------------------"
+    fi
+}
+
+################################# Prints #######################################
+# Come with printHeader(). In charge to print/input generated data.
+#
+# @CalledBy getReferer
+################################################################################
+prints()
+{
+    # type <string>
+    local type=${1}
+    
+    # We use the current full date as Analyse Date
+    local dateAn=$(date)
+    
+    if [[ ${type} == 'Invalid' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Print data for invalid.txt
+                printf "%-100s %-17s %-8s %-10s %-20s\n" "${2}" "${invalidStatus}" "${3}" "${httpCode}" "${dateAn}"
+            ;;
+            false)
+                # Print data for invalid.txt
+                printf "%-100s %-17s %-8s %-20s\n" "${2}" "${invalidStatus}" "${3}" "${dateAn}"
+            ;;
+        esac
+    elif [[ ${type} == 'Down' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Print data for inactive.txt
+                printf "%-100s %-35s %-17s %8s %-10s %-20s\n" "${2}" "${3}" "${downStatus}" "${4}" "${httpCode}" "${dateAn}"
+            ;;
+            false)
+                # Print data for inactive.txt
+                printf "%-100s %-35s %-17s %8s %-20s\n" "${2}" "${3}" "${downStatus}" "${4}" "${dateAn}"
+            ;;
+        esac
+    elif [[ ${type} == 'Up' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Print data for valid.txt
+                printf "%-100s %-17s %-17s %-8s %-10s %-20s\n" "${2}" "${upStatus}" "${3}" "${4}" "${httpCode}" "${dateAn}"
+            ;;
+            false)
+                # Print data for valid.txt
+                printf "%-100s %-17s %-17s %-8s %-20s\n" "${2}" "${upStatus}" "${3}" "${4}" "${dateAn}"
+            ;;
+        esac
+    elif [[ ${type} == 'Generic' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Print data
+                printf "%-100s %-11s %-17s %-10s %-10s\n" "${2}" "${3}" "${4}" "${5}" "${httpCode}"
+            ;;
+            false)
+                # Print data
+                printf "%-100s %-11s %-17s %-10s %-20s\n" "${2}" "${3}" "${4}" "${5}" "${dateAn}"
+            ;;
+        esac
+    elif [[ ${type} == 'Generic_File' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Print data
+                printf "%-100s %-11s %-17s %-10s %-10s %-20s\n" "${2}" "${3}" "${4}" "${5}" "${httpCode}" "${dateAn}"
+            ;;
+            false)
+                # Print data
+                printf "%-100s %-11s %-17s %-10s %-20s\n" "${2}" "${3}" "${4}" "${5}" "${dateAn}"
+            ;;
+        esac
+    elif [[ ${type} == 'FullHosts' ]]
+    then
+        # Print host file
+        printf "%s %s\n" "${customIP}" "${2}"
+    elif [[ ${type} == 'Less' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Print data
+                printf "%-100s %-11s %-10s %-10s\n" "${2}" "${3}" "${4}" "${httpCode}"
+            ;;
+            false)
+                # Print data
+                printf "%-100s %-11s %-10s\n" "${2}" "${3}" "${4}"
+            ;;
+        esac
+    elif [[ ${type} == 'Less_File' ]]
+    then
+        case ${httpCodeStatus} in
+            true)
+                # Print data
+                printf "%-100s %-11s %-10s %-10s\n" "${2}" "${3}" "${4}" "${httpCode}"
+            ;;
+            false)
+                # Print data
+                printf "%-100s %-11s %-10s\n" "${2}" "${3}" "${4}"
+            ;;
+        esac
+    elif [[ ${type} == 'Percentage' ]]
+    then
+        # Please consider the following as a hack because I had some headache
+        # when trying to fix some sort of scope issue when calling
+        # $(percentage 'result' '{active,inactive,invalid}')
+        # This should may be fixed in the future once I figure out how to fix my
+        # HEADACHE !!!
+        
+        # We set the regex we're going to use in order to catch the numbers we need
+        local regexNumberToMatch="${escapedFile}\s(.*)\s([[:digit:]]+)\s([[:digit:]]+)\s+([[:digit:]]+)\s+([[:digit:]]+)"
+        
+        # If the content match the previously assigned regex variable
+        if [[ -f ${continueLog} && "$(cat ${continueLog})" =~ ${regexNumberToMatch} ]]
+        then
+            # We get the last number of tested
+            local numberOfTested=${BASH_REMATCH[2]}
+            
+            # We get the last number of UP
+            local numberOfUp=${BASH_REMATCH[3]}
+            
+            # We get the last number of down
+            local numberOfDown=${BASH_REMATCH[4]}
+            
+            # We get the last number of invalid
+            local numberOfInvalid=${BASH_REMATCH[5]}
+        fi
+        
+        # We calculate the percentage
+        ((percentageOfActive=${numberOfUp}*100/${numberOfTested}))
+        ((percentageOfInactive=${numberOfDown}*100/${numberOfTested}))
+        ((percentageOfInvalid=${numberOfInvalid}*100/${numberOfTested}))
+        
+        printf "%-11s %-12s %-12s\n"  "ACTIVE" "${percentageOfActive}%" "${numberOfUp}"
+        printf "%-11s %-12s %-12s\n"  "INACTIVE" "${percentageOfInactive}%" "${numberOfDown}"
+        printf "%-11s %-12s %-12s\n"  "INVALID" "${percentageOfInvalid}%" "${numberOfInvalid}"
+    elif [[ ${type} == 'HTTP' ]]
+    then
+        printf "%-100s %-11s %-10s %-20s\n" "${domain}" "${2}" "${3}" "${dateAn}"
+    fi
+}
+
+
+################################### Timeout ####################################
+# In charge to initiate a timeout for commands
+#
+# @CalledBy timeout, getExpirationDate
+################################################################################
+timeout (){
+    # type <int|string>
+    time=${1}
+    
+    # Create the temporary file
+    touch ${whoIs}
+    
+    # start the command in a subshell in order to avoid problem with pipes
+    command="/bin/bash -c \"${2}\""
+    
+    expect -c "set echo \"-noecho\"; set  timeout ${time}; spawn -noecho ${command}; expect timeout { exit 1 } eof { exit 0 }"
+}
+
+############################# Generate Hosts File ##############################
+# In charge to print data into hosts file
+#
+# @CalledBy generateStatusFile
+################################################################################
+generateHostsFile()
+{
+    # type <string>
+    local type="${1}"
+    
+    # We preassign the variable
+    local domainOutput=''
+    
+    if [[ ${generateHosts} == true ]]
+    then
+        # We clean the files in case we need to start from begining
+        if [[ ${fileAlreadyTreated} == false || ${startFromBegining} == true ]]
+        then
+            if [[ ${cleanedDone} == false ]]
+            then
+                toClean=("${outputUpHost}" "${outputUpDomain}" "${outputDownHost}" "${outputDownDomain}" "${outputInvalidHost}" "${outputInvalidDomain}" "${outputUnifiedResult}" "${outputUpResult}" "${outputDownResult}" "${outputInvalidResult}")
+                
+                # We delete the result.txt file here because generateHostsFile() is
+                # always called before generateUnifiedFile()
+                for toDelete in ${toClean[*]}
+                do
+                    if [[ -f ${toDelete} ]]
+                    then
+                        rm -f ${toDelete}
+                    fi
+                done
+                cleanedDone=true
+            fi
+        fi
+        
+        case ${type} in
+            'up'|'Up'|'UP'|'active'|'Active'|'ACTIVE'|'valid'|'Valid'|'VALID')
+                local outputDestination="${outputUpHost}"
+                local domainOutput="${outputUpDomain}"
+            ;;
+            'down'|'Down'|'DOWN'|'inactive'|'Inactive'|'INACTIVE'|'error'|'Error'|'ERROR')
+                local outputDestination="${outputDownHost}"
+                local domainOutput="${outputDownDomain}"
+            ;;
+            'invalid'|'Invalid'|'INVALID')
+                local outputDestination="${outputInvalidHost}"
+                local domainOutput="${outputInvalidDomain}"
+            ;;
+            'potentially_up'|'potentially_active')
+                local outputDestination="${outputHTTPPotentiallyActive}${hostsDefault}"
+            ;;
+            'potentially_down'|'potentially_inacative')
+                local outputDestination="${outputHTTPInactiveOrPotentially}${hostsDefault}"
+            ;;
+            'http_active'|'HTTP_ACTIVE'|'HTTP_active'|'HTTP_Active')
+                local outputDestination="${outputHTTPActive}${hostsDefault}"
+            ;;
+        esac
+        
+        # We print / create the inactive file
+        beforeHeader "${outputDestination}"
+        prints 'FullHosts' "${domain}" >> ${outputDestination}
+        
+        if [[ ${plainListDomain} == true && ${domainOutput} != '' ]]
+        then
+            beforeHeader "${domainOutput}"
+            printf "%s\n" "${domain}" >> ${domainOutput}
+        fi
+        
+    fi
+}
+
+########################### Generate Unified File ##############################
+# In charge to print data into result.txt
+#
+# @CalledBy generateInvalidFile,generateErrorFile,generateValidFile
+################################################################################
+generateUnifiedFile()
+{
+    # type <string>
+    local type=${1}
+    # status <string>
+    local status=${2}
+    # expdate <string>
+    local expdate=${3}
+    
+    if [[ ${outputUnified} == true ]]
+    then
+        if [[ -f ${outputUnifiedResult} ]]
+        then
+            if [[ ${outputLess} == true ]]
+            then
+                # We save the domain and his data to the unified file
+                prints "Less_File" "${domain}" "${status}" "${type}" >> ${outputUnifiedResult}
+            else
+                # We save the domain and his data to the unified file
+                prints "Generic_File" "${domain}" "${status}" "${expdate}" "${type}" >> ${outputUnifiedResult}
+            fi
+        else
+            if [[ ${outputLess} == true ]]
+            then
+                # We create header into and in between, create the file
+                beforeHeader ${outputUnifiedResult}
+                printHeader "Less_File" >> ${outputUnifiedResult}
+                # We save the domain and his data to the unified file
+                prints "Less_File" "${domain}" "${status}" "${type}" >> ${outputUnifiedResult}
+            else
+                # We create header into and in between, create the file
+                beforeHeader ${outputUnifiedResult}
+                printHeader "Generic_File" >> ${outputUnifiedResult}
+                # We save the domain and his data to the unified file
+                prints "Generic_File" "${domain}" "${status}" "${expdate}" "${type}" >> ${outputUnifiedResult}
+            fi
+        fi
+    fi
+}
+
+############################## Generate Status File ############################
+# In charge to print print files according to their status
+#
+# @CalledBy errorHandle
+################################################################################
+generateStatusFile(){
+    # We get the type of the request
+    # type <string>
+    local type="${1}"
+    
+    # Where does the source come from
+    # source <string>
+    local source="${2}"
+    
+    # The expiration date
+    # expiredDate <string>
+    local expiredDate="${3}"
+    
+    # We use this variable in order to know if we changes the status with th results
+    # of httpCode()
+    local notActive=true
+    
+    case ${type} in
+        'up'|'Up'|'UP'|'active'|'Active'|'ACTIVE'|'valid'|'Valid'|'VALID')
+            # If empty, we change the expiration date to `Unknown`
+            if [[ ${expiredDate} == '' ]]
+            then
+                expiredDate='Unknown'
+            fi
+            
+            # We do some analytic
+            if [[ ${httpCodeStatus} == true && ${inactiveOrPotentiallyCodes[*]} =~ ${httpCode} ]]
+            then
+                generateAnalyticFile 'Down' "${upStatus}"
+            fi
+            
+            # We assign the official status name
+            local readStatus=${upStatus}
+            
+            # We assign the location of the splited file
+            local putDataIntoMe=${outputUpResult}
+            
+            # we generate the host file
+            generateHostsFile 'active'
+            
+            # We increment the percentage
+            percentage 'counter' 'active'
+        ;;
+        'down'|'Down'|'DOWN'|'inactive'|'Inactive'|'INACTIVE'|'error'|'Error'|'ERROR')
+            # We assign "Not Found" to prevent empty column in splited file
+            local giveMeMyRefererStatus='Not Found'
+            
+            # We assign the official status name
+            local readStatus=${downStatus}
+            
+            # We assign the location of the splited file
+            local putDataIntoMe=${outputDownResult}
+            
+            # We change the expiration date to `Unknown`
+            local expiredDate='Unknown'
+            
+            if [[ ${httpCodeStatus} == true ]]
+            then
+                # We do some analytic
+                if [[ ${activeCodes[*]} =~ ${httpCode} ]]
+                then
+                    generateAnalyticFile 'Up' "${status}"
+                    
+                    # We generate the host file
+                    generateHostsFile 'active'
+                    
+                    # We update the status
+                    local type='ACTIVE'
+                    
+                    # We update notActive
+                    local notActive=false
+                elif [[ ${potentiallyActiveCodes[*]} =~ ${httpCode} ]]
+                then
+                    generateAnalyticFile 'Pup' "${status}"
+                fi
+                
+                if [[ ${notActive} == true ]]
+                then
+                    # We generate the host file
+                    generateHostsFile 'inactive'
+                fi
+            fi
+            # We increment the percentage
+            percentage 'counter' 'inactive'
+        ;;
+        
+        'invalid'|'Invalid'|'INVALID')
+            # We assign the official status name
+            local readStatus=${invalidStatus}
+            
+            # We assign the location of the splited file
+            local putDataIntoMe=${outputInvalidResult}
+            
+            # We change the expiration date to `Unknown`
+            local expiredDate='Unknown'
+            
+            if [[ ${httpCodeStatus} == true ]]
+            then
+                # We do some analytic
+                if [[ ${activeCodes[*]} =~ ${httpCode} ]]
+                then
+                    generateAnalyticFile 'Up' "${status}"
+                    
+                    # We generate the host file
+                    generateHostsFile 'active'
+                    
+                    # We update the status
+                    local type='ACTIVE'
+                    
+                    # We update notActive
+                    local notActive=false
+                elif [[ ${potentiallyActiveCodes[*]} =~ ${httpCode} ]]
+                then
+                    generateAnalyticFile 'Pup' "${status}"
+                elif [[ ${inactiveOrPotentiallyCodes[*]} =~ ${httpCode} ]]
+                then
+                    generateAnalyticFile 'Down' "${upStatus}"
+                fi
+            fi
+            
+            if [[ ${notActive} == true ]]
+            then
+                # We generate the host file
+                generateHostsFile 'invalid'
+            fi
+            
+            # We increment the percentage
+            percentage 'counter' 'invalid'
+        ;;
+    esac
+    
+    # If ${quiet} != false, we don't print anything
+    if [[ ${quiet} == false ]]
+    then
+        if [[ ${outputLess} == true ]]
+        then
+            # We save domain and its data
+            prints "Less" "${domain}" "${readStatus}" "${source}"
+        else
+            # We print domain and its data
+            prints "Generic" "${domain}" "${readStatus}" "${expiredDate}" "${source}"
+        fi
+    fi
+    
+    # We execute this only if ${noFiles} == false
+    if [[ ${noFiles} == false && ${splitFiles} == true ]]
+    then
+        if [[ -f  ${putDataIntoMe} ]]
+        then
+            if [[ ${outputLess} == true ]]
+            then
+                # We save domain and its data
+                prints "Less_File" "${domain}" "${readStatus}" "${source}"  >> ${putDataIntoMe}
+            else
+                case ${type} in
+                    'up'|'Up'|'UP'|'active'|'Active'|'ACTIVE'|'valid'|'Valid'|'VALID')
+                        # We save domain and its data
+                        prints "Up" "${domain}" "${expiredDate}" "${source}" >> ${putDataIntoMe}
+                    ;;
+                    'down'|'Down'|'DOWN'|'inactive'|'Inactive'|'INACTIVE'|'error'|'Error'|'ERROR')
+                        # We save domain and its data
+                        prints "Down" "${domain}" "${giveMeMyRefererStatus}" "${source}" >> ${putDataIntoMe}
+                    ;;
+                    'invalid'|'Invalid'|'INVALID')
+                        # We save the domain and his data
+                        prints "Invalid" "${domain}" "${source}" >> ${putDataIntoMe}
+                    ;;
+                esac
+            fi
+        else
+            if [[ ${outputLess} == true ]]
+            then
+                # We create a file and add header
+                beforeHeader ${putDataIntoMe}
+                printHeader "Less_File"  >> ${putDataIntoMe}
+                # We add domain and its data to file
+                prints "Less_File" "${domain}" "${readStatus}" "${source}"  >> ${putDataIntoMe}
+            else
+                # We create a file
+                beforeHeader ${putDataIntoMe}
+                
+                case ${type} in
+                    'up'|'Up'|'UP'|'active'|'Active'|'ACTIVE'|'valid'|'Valid'|'VALID')
+                        # We add the header
+                        printHeader 'Up' >> ${putDataIntoMe}
+                        
+                        # We add domain and its data to file
+                        prints "Up" "${domain}" "${expiredDate}" "${source}" >> ${putDataIntoMe}
+                    ;;
+                    'down'|'Down'|'DOWN'|'inactive'|'Inactive'|'INACTIVE'|'error'|'Error'|'ERROR')
+                        # We add the header
+                        printHeader 'Down' >> ${putDataIntoMe}
+                        
+                        # We add domain and its data to file
+                        prints "Down" "${domain}" "${giveMeMyRefererStatus}" "${source}" >> ${putDataIntoMe}
+                    ;;
+                    'invalid'|'Invalid'|'INVALID')
+                        # We add the header
+                        printHeader 'Invalid' >> ${putDataIntoMe}
+                        
+                        # We add domain and its data to file
+                        prints "Invalid" "${domain}" "${source}" >> ${putDataIntoMe}
+                    ;;
+                    
+                esac
+                
+            fi
+        fi
+    elif [[ ${noFiles} == false ]]
+    then
+        # We generate the unified file
+        generateUnifiedFile "${source}" "${readStatus}" "${expiredDate}"
+    fi
+}
+
+########################### Generate HTTP Analytic File ########################
+# In charge to print analytic data
+#
+# @CalledBy errorHandle
+################################################################################
+generateAnalyticFile()
+{
+    # type <string>
+    local type="${1}"
+    
+    # The status discovered by nslookup or whois
+    # funStatus <string>
+    local funStatus="${2}"
+    
+    case ${type} in
+        'up'|'Up'|'UP'|'active'|'Active'|'ACTIVE'|'valid'|'Valid'|'VALID')
+            local outputFile=${logOutputHTTPActive}
+            generateHostsFile 'HTTP_active'
+        ;;
+        'pup'|'Pup'|'PUP')
+            local outputFile=${logOutputHTTPPotentiallyActive}
+            generateHostsFile 'potentially_down'
+        ;;
+        'down'|'Down'|'DOWN'|'inactive'|'Inactive'|'INACTIVE'|'error'|'Error'|'ERROR')
+            local outputFile=${logOutputHTTPInactiveOrPotentially}
+            generateHostsFile 'potentially_inacative'
+        ;;
+    esac
+    
+    if [[ ! -f ${outputFile} ]]
+    then
+        beforeHeader "${outputFile}"
+        printHeader 'HTTP' >> ${outputFile}
+        
+        if [[ ${httpCodeStatus} == true ]]
+        then
+            prints 'HTTP' "${funStatus}" "${httpCode}" >> ${outputFile}
+        fi
+    elif [[ ${httpCodeStatus} == true ]]
+    then
+        #statements
+        prints 'HTTP' "${funStatus}" "${httpCode}" >> ${outputFile}
+    fi
+}
+
+############################## Error Handle ####################################
+# Used to return issue status and issue url
+#
+# @CalledBy getReferer
+################################################################################
+errorHandle()
+{
+    # We get/save the type
+    # type <string>
+    local type=${1}
+    # We create a variable to catch the case that domain don't pass lslookup
+    local issueStatus=''
+    
+    # We set the current type
+    sourceType="NSLOOKUP"
+    
+    # We save output of nslookup
+    local lookup=$(nslookup ${domain})
+    regexNxDomain='NXDOMAIN'
+    regexServfail='SERVFAIL'
+    
+    if [[ ${lookup} =~ ${regexNxDomain} || ${lookup} =~ ${regexServfail} ]]
+    then
+        # If domain is down
+        issueStatus='Unknown'
+    elif [[ ${issueStatus} == '' ]]
+    then
+        # If domain is up, We generate the valid/unified file
+        generateStatusFile 'valid' "${sourceType}" ''
+        return 1
+    fi
+    
+    if [[ ${issueStatus} == 'Unknown' ]]
+    then
+        
+        case ${type} in
+            'down'|'Down'|'DOWN'|'inactive'|'Inactive'|'INACTIVE'|'error'|'Error'|'ERROR')
+                # We assign the status
+                local status="${downStatus}"
+                
+                # We generate the error/unified file
+                generateStatusFile 'error' "${sourceType}" ''
+            ;;
+            'invalid'|'Invalid'|'INVALID')
+                # We assign the status
+                local status="${invalidStatus}"
+                
+                # We generate the error/unified file
+                generateStatusFile 'invalid' "IANA" ''
+            ;;
+        esac
+    fi
+}
+
+############################## No Referers Log #################################
+# Used to generate the logs
+#
+# @CalledBy getReferer
+################################################################################
+noRefererLog(){
+    if [[ ${outputLogs} == true ]]
+    then
+        # We save the output of the captured date into log directory
+        printf "=%.0s" {1..100} >> ${noRefererLogOutput}.${domainExtension}
+        printf "\nNo referer found for: %s domains\n" "${domainExtension}" >> ${noRefererLogOutput}.${domainExtension}
+        printf "Tested domain: %s\n" "${initialDomain}" >> ${noRefererLogOutput}.${domainExtension}
+        printf "=%.0s" {1..100} >> ${noRefererLogOutput}.${domainExtension}
+        printf "\n" >> ${noRefererLogOutput}.${domainExtension}
+    fi
+}
+
+############################### Get Referer ####################################
+# Used to generate the report issue url
+#
+# @CalledBy getExpirationDate
+################################################################################
+getReferer(){
+    # initialDomain <string>
+    local initialDomain="${1}"
+    
+    if [[ ! "${initialDomain}" =~ ${regexIPv4} ]]
+    then
+        # We get the extension of the given domain
+        domainExtension=${initialDomain##*.}
+        # We get the list of allowed extensions
+        
+        # We check if the given domain extension is in our database file
+        if [[ $(cat ${ianaDB}) =~ ${domainExtension} ]]
+        then
+            
+            case ${domainExtension} in
+                # We handle here the list of extension which are known as
+                # [Not Found] Please report to https://git.io/v5tgo for more
+                # informations
+                ad|al|ao|az|bd|eg|fm|ge|gr|mil|mt|np|ph|pn|pk|py|vn|zw)
+                    # We empty the referer variable
+                    referer=''
+                    
+                    # We handle error & check if server is up
+                    errorHandle 'Down'
+                    
+                    return 1
+                ;;
+            esac
+            
+            # We initiate this variable in order to know if ${domainExtension} pass
+            # The cases
+            notSupported=true
+            
+            # Special cases domains which don't have their whois server
+            # registered to IANA.
+            # cf. https://github.com/funilrys/funceble/issues?q=is%3Aissue+Not+Found+is%3Aclosed
+            case ${domainExtension} in
+                bm)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.afilias-srs.net"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                bz)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.afilias-grs.info"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                cd)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.nic.cd"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                ga)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.my.ga"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                lk)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.nic.lk"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                pe)
+                    # We assign the domain WHOIS referer server
+                    referer="kero.yachay.pe"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                tokyo)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.nic.tokyo"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                vu)
+                    # We assign the domain WHOIS referer server
+                    referer="vunic.vu"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                za)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.registry.net.za"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+            esac
+            
+            if [[ ${notSupported} == true ]]
+            then
+                # We get the host to call.
+                # If extension have a host assigned, it's written if format
+                # refer: whois.hello.world for example
+                referer=$(whois -h "${whoisServer}" "${initialDomain}" | awk '/refer/{print $NF}')
+                
+                # regex to pass to have a valid referer
+                regexWhois='(.*)whois(.*)'
+                
+                # We check if the format is valid
+                if [[ ${referer} =~ ${regexWhois} ]]
+                then
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                else
+                    # We empty the referer variable
+                    referer=''
+                    
+                    # We log the issue
+                    noRefererLog
+                    
+                    # We handle error & check if server is up
+                    errorHandle 'Down'
+                fi
+            fi
+        else
+            # We handle error & check if server is up
+            notSupported=true
+            errorHandle 'Invalid'
+        fi
+    else
+        # We handle error & check if server is up
+        notSupported=true
+        errorHandle 'Down'
+    fi
+}
+
+################################## Whois Log ###################################
+# Used to generate the logs
+#
+# @CalledBy getExpirationDate
+################################################################################
+whoisLog(){
+    if [[ ${outputLogs} == true ]]
+    then
+        # We save the output of whois into log directory
+        printf "=%.0s" {1..100} >> ${whoisLogOutput}${referer}
+        printf "\n" >> ${whoisLogOutput}${referer}
+        cat ${whoIs} >> ${whoisLogOutput}${referer}
+        printf "\n" >> ${whoisLogOutput}${referer}
+        printf "=%.0s" {1..100} >> ${whoisLogOutput}${referer}
+        printf "\n" >> ${whoisLogOutput}${referer}
+    fi
+}
+
+############################## Date Format Log #################################
+# Used to generate the logs
+#
+# @CalledBy formatDate
+################################################################################
+dateFormatlog(){
+    if [[ ${outputLogs} == true ]]
+    then
+        # We save the output of the captured date into log directory
+        printf "=%.0s" {1..100} >> ${dateLogOutput}${referer}
+        printf "\nExpiration Date:%s\n" "${expirationDate}" >> ${dateLogOutput}${referer}
+        printf "=%.0s" {1..100} >> ${dateLogOutput}${referer}
+        printf "\n" >> ${dateLogOutput}${referer}
+    fi
+}
+
+############################### Get HTTP Code ##################################
+# Used to get the HTTP code of the requested domain or IP
+#
+# @CalledBy getExpirationDate
+################################################################################
+getHTTPCode(){
+    if [[ ${httpCodeStatus} == true ]]
+    then
+        # We get the HTTP header
+        httpCode=$(timeout ${secondsBeforeHTTPTimeout} "curl --write-out %{http_code} --silent --output /dev/null ${domain}:80")
+        
+        # In case of timeout we print Unknown
+        if [[ ${httpCode} == '' ]]
+        then
+            httpCode='Unknown'
+        fi
+    fi
+}
+
+####################### Get (Domain) Expiration Date ###########################
+# Used to get the expiration date of a given domain.
+#
+# @CalledBy None
+################################################################################
+getExpirationDate(){
+    # domain <string>
+    # Domain given by user
+    domain="$(echo ${1} |awk '{print tolower($0)}')"
+    
+    # We get the HTTP code
+    getHTTPCode
+    
+    # We get the whois server referenced for the given domain
+    getReferer ${domain}
+    
+    # Ensure that it's supported and not empty
+    if [[ ! "${domain}" =~ ${regexIPv4} && ${notSupported} == false && ${domain} != "" && ${referer} != "" ]]
+    then
+        # We call the whois server and save the result into ${whoIs}
+        # cf. Default Values Section
+        timeout ${secondsBeforeTimeout} "whois -h ${referer} ${domain} > ${whoIs}"
+        
+        # Here's a list of words the ${content} have to match to get the
+        # expiration date from the whois record of domain
+        local toMatch=('expire:' 'expire on:' 'Expiry Date:' 'free-date' 'expires:' 'Expiration date:' 'Expiry date:' 'Expire Date:' 'renewal date:' 'Expires:' 'validity:' 'Expiration Date             :' 'Expiry :' 'expires at:' 'domain_datebilleduntil:' 'Data de expiração \/ Expiration Date \(dd\/mm\/yyyy\):' 'Fecha de expiración \(Expiration date\):' '\[Expires on\]' 'Record expires on' 'status:      OK-UNTIL' 'renewal:' 'expires............:' 'expire-date:' 'Exp date:' 'Valid-date' 'Expires On:' 'Fecha de vencimiento:' 'Expiration:.........' 'Fecha de Vencimiento:' 'Registry Expiry Date:' 'Expires on..............:' 'Expiration Time:' 'Expiration Date:' 'Expired:' "Date d'expiration:")
+        
+        for i in ${!toMatch[*]}
+        do
+            # We create a regex group with the expiration date
+            expirationDate=$(cat ${whoIs} | sed -n -e "/${toMatch[${i}]}/p")
+            
+            if [[ ${expirationDate} != '' ]]
+            then
+                # We get the expiration date
+                if [[ ${toMatch[${i}]} == '\[Expires on\]' ]]
+                then
+                    expirationDate=$(echo ${expirationDate} | sed "s/\] /]:/")
+                elif [[ ${toMatch[${i}]} == 'Record expires on' ]]
+                then
+                    expirationDate=$(echo ${expirationDate} | sed "s/on/on:/" | sed "s/\s(YYYY-MM-DD)//")
+                fi
+                
+                expirationDate=${expirationDate#*:}
+                
+                # We delete space before the date
+                expirationDate=$(echo -e "${expirationDate}" | sed -e 's/^[[:space:]]*//')
+                
+                # Regex to pass in order to be reconized as a date
+                regexNumber='[0-9]'
+                if [[ ${expirationDate} =~ ${regexNumber} ]]
+                then
+                    # If it contain numbers, we format it
+                    formatDate
+                    
+                    # We set the current type
+                    sourceType="WHOIS"
+                    
+                    # We generate valid/unified file
+                    generateStatusFile "valid" "${sourceType}" "${expirationDate}"
+                    return 1
+                elif [[ ${expirationDate} == '' && ${debugUnknown} == true ]]
+                then
+                    # In case expiration Date is empty we save the record so we
+                    # can debug it.
+                    # In case this happen please report issue to
+                    # https://github.com/funilrys/funceble/issues/new
+                    # So it can be fixed for everyone who use this script
+                    #
+                    # You can find the logs under output/logs/whois/
+                    # or with the command `ls output/logs/whois/*`
+                    whoisLog
+                fi
+            elif [[ ${i} == $(( ${#toMatch[@]} - 1)) ]]
+            then
+                if [[ ${debugUnknown} == true ]]
+                then
+                    # generate whois log file
+                    whoisLog
+                fi
+                # We handle error & check if server is up
+                errorHandle 'Down'
+            fi
+        done
+    fi
+}
+
+################################ Date to Lower #################################
+# Used to convert date to lower case
+#
+# @CalledBy formatDate
+################################################################################
+dateToLower(){
+    expirationDate=$(echo "${expirationDate}" | awk '{print tolower($0)}')
+}
+
+############################# Get Month In English #############################
+# Used to convert month from numeric to alphabetic
+#
+# @CalledBy formatDate
+################################################################################
+convertOrShortenMonth(){
+    # numericMonth <int>
+    local numericMonth=${1}
+    
+    case ${numericMonth} in
+        1|01|January)
+            month='jan'
+        ;;
+        2|02|February)
+            month='feb'
+        ;;
+        3|03|March)
+            month='mar'
+        ;;
+        4|04|April)
+            month='apr'
+        ;;
+        5|05|May)
+            month='may'
+        ;;
+        6|06|June)
+            month='jun'
+        ;;
+        7|07|July)
+            month='jul'
+        ;;
+        8|08|August)
+            month='aug'
+        ;;
+        9|09|September)
+            month='sep'
+        ;;
+        10|October)
+            month='oct'
+        ;;
+        11|November)
+            month='nov'
+        ;;
+        12|December)
+            month='dec'
+        ;;
+        *)
+            month='0'
+        ;;
+    esac
+}
+
+############################# Convert 1 to 2 Digits ##########################
+# Used to convert one digit to two Digits numbers
+# e.g -> 1 ==> 01
+#
+# @CalledBy formatDate
+################################################################################
+convert1To2digits(){
+    # number <int>
+    local number="${1}"
+    # monthOrDay <strin>
+    local monthOrDay="${2}"
+    
+    # We set the valid 1 digit number
+    local validNumber=('1' '2' '3' '4' '5' '6' '7' '8' '9')
+    
+    # The difig we append to those 1 digit number
+    local null='0'
+    
+    for i in ${!validNumber[*]}
+    do
+        # If the number is in ${validNumber}
+        if [[ ${number} == ${validNumber[${i}]} ]]
+        then
+            case "${monthOrDay}" in
+                month)
+                    # If we need the month, we save the 2 digit into mouth
+                    month=${null}${number}
+                    break
+                ;;
+                day)
+                    # If we need the day, we save the 2 digit into day
+                    day=${null}${number}
+                    break
+                ;;
+            esac
+        fi
+    done
+}
+
+################################ Format Date ###################################
+# Used to format date. We have to work with multiple date format from WHOIS
+# records so this function is in charge to create an unified format.
+#
+# @CalledBy getExpirationDate
+################################################################################
+formatDate()
+{
+    # Date in format: 02-jan-2017
+    local regex1='[0-9]{2}-[a-z]{3}-[0-9]{4}'
+    # Date in format: 02.01.2017 // Month: jan
+    local regex2='[0-9]{2}\.[0-9]{2}\.[0-9]{4}$'
+    # Date in format: 02/01/2017 // Month: jan
+    local regex3='[0-9]{2}\/[0-9]{2}\/[0-9]{4}'
+    # Date in format: 2017-01-02 // Month: jan
+    local regex4='[0-9]{4}-[0-9]{2}-[0-9]{2}$'
+    # Date in format: 2017.01.02 // Month: jan
+    local regex5='[0-9]{4}\.[0-9]{2}\.[0-9]{2}$'
+    # Date in format: 2017/01/02 // Month: jan
+    local regex6='[0-9]{4}\/[0-9]{2}\/[0-9]{2}$'
+    # Date in format: 2017.01.02 15:00:00
+    local regex7='[0-9]{4}\.[0-9]{2}\.[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}'
+    # Date in format: 20170102 15:00:00 // Month: jan
+    local regex8='[0-9]{8}\s[0-9]{2}:[0-9]{2}:[0-9]{2}'
+    # Date in format: 2017-01-02 15:00:00 // Month: jan
+    local regex9='[0-9]{4}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}'
+    # Date in format: 02.01.2017 15:00:00 // Month: jan
+    local regex10='[0-9]{2}\.[0-9]{2}\.[0-9]{4}\s[0-9]{2}:[0-9]{2}:[0-9]{2}'
+    # Date in format: 02-Jan-2017 15:00:00 UTC
+    local regex11='[0-9]{2}-[A-Z]{1}[a-z]{2}-[0-9]{4}\s[0-9]{2}:[0-9]{2}:[0-9]{2}\s[A-Z]{1}.*'
+    # Date in format: 2017/01/02 01:00:00 (+0900) // Month: jan
+    local regex12='[0-9]{4}\/[0-9]{2}\/[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}\s\(.*\)'
+    # Date in format: 2017/01/02 01:00:00 // Month: jan
+    local regex13='[0-9]{4}\/[0-9]{2}\/[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}$'
+    # Date in format: Mon Jan 02 15:00:00 GMT 2017
+    local regex14='[a-zA-Z]{3}\s[a-zA-Z]{3}\s[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}\s[A-Z]{3}\s[0-9]{4}'
+    # Date in format: Mon Jan 02 2017
+    local regex15='[a-zA-Z]{3}\s[a-zA-Z]{3}\s[0-9]{2}\s[0-9]{4}'
+    # Date in format: 2017-01-02T15:00:00 // Month: jan
+    local regex16='[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}$'
+    # Date in format: 2017-01-02T15:00:00Z // Month: jan
+    local regex17='[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[A-Z].*'
+    # Date in format: 2017-01-02T15:00:00+0200 // Month: jan
+    local regex18='[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[+-][0-9]{4}'
+    # Date in format: 2017-01-02T15:00:00+0200.622265+03:00 // Month: jan
+    local regex19='[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9].*[+-][0-9]{2}:[0-9]{2}'
+    # Date in format: 2017-01-02T15:00:00+0200.622265 // Month: jan
+    local regex20='[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{6}$'
+    # Date in format: 2017-01-02T23:59:59.0Z // Month: jan
+    local regex21='[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9].*[A-Z]'
+    # Date in format: 02-01-2017 // Month: jan
+    local regex22='[0-9]{2}-[0-9]{2}-[0-9]{4}'
+    # Date in format: 2017. 01. 02. // Month: jan
+    local regex23='[0-9]{4}\.\s[0-9]{2}\.\s[0-9]{2}\.'
+    # Date in format: 2017-01-02T00:00:00+13:00 // Month: jan
+    local regex24='[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[+-][0-9]{2}:[0-9]{2}'
+    # Date in format: 20170102 // Month: jan
+    local regex25='[0-9]{8}$'
+    # Date in format: 02-Jan-2017
+    local regex26='[0-9]{2}-[A-Z]{1}[a-z]{2}-[0-9]{4}$'
+    # Date in format: 02.1.2017 // Month: jan
+    local regex27='[0-9]{2}\.[0-9]{1}\.[0-9]{4}'
+    # Date in format: 02 Jan 2017
+    local regex28='[0-9]\s[A-Z]{1}[a-z]{2}\s[0-9]{4}'
+    # Date in format: 02-January-2017
+    local regex29='[0-9]{2}-[A-Z]{1}[a-z]*-[0-9]{4}'
+    # Date in format: 2017-Jan-02.
+    local regex30='[0-9]{4}-[A-Z]{1}[a-z]{2}-[0-9]{2}\.'
+    # Date in format: Mon Jan 02 15:00:00 2017
+    local regex31='[a-zA-Z]{3}\s[a-zA-Z]{3}\s[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}\s[0-9]{4}'
+    # Date in format: Mon Jan 2017 15:00:00
+    local regex32='[a-zA-Z]{3}\s[a-zA-Z]{3}\s[0-9]{4}\s[0-9]{2}:[0-9]{2}:[0-9]{2}'
+    # Date in format: January 02 2017-Jan-02
+    local regex33='[A-Z]{1}[a-z]*\s[0-9]{1,2}\s[0-9]{4}'
+    # Date in format: 2.1.2019 // Month: jan
+    local regex34='([0-9]{1,2})\.([0-9]{1,2})\.([0-9]{4})'
+    
+    if [[ "${expirationDate}" =~ ${regex1} || "${expirationDate}" =~ ${regex26} ]]
+    then
+        # We split the date
+        local day=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c2)
+        local year=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | tail -c4)
+        local month=$(echo "${expirationDate}" | tr -cd '[[:alpha:]]' | head -c3)
+        
+        # We assign the expiration date
+        expirationDate=${day}'-'${month}'-'${year}
+        
+        # We convert it to lower case
+        dateToLower
+    elif [[ "${expirationDate}" =~ ${regex30} ]]
+    then
+        # We split the date
+        local day=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | tail -c2)
+        local year=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c4)
+        local month=$(echo "${expirationDate}" | tr -cd '[[:alpha:]]')
+        
+        # We assign the expiration date
+        expirationDate=${day}'-'${month}'-'${year}
+        
+        # We convert it to lower case
+        dateToLower
+    elif [[ "${expirationDate}" =~ ${regex32} ]]
+    then
+        # We split the date
+        # We set the day to 01 because we dont' hava any day
+        local day='01'
+        local year=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c4)*
+        local month=$(echo "${expirationDate}" | tr -cd '[[:alpha:]]' | tail -c3)
+        
+        # We assign the expiration date
+        expirationDate=${day}'-'${month}'-'${year}
+        
+        # We convert it to lower case
+        dateToLower
+    elif [[ "${expirationDate}" =~ ${regex29} || "${expirationDate}" =~ ${regex33} ]]
+    then
+        # We split the date
+        local day=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c2)
+        local year=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | tail -c4)
+        local month=$(echo "${expirationDate}" | tr -cd '[[:alpha:]]')
+        
+        # We convert the month
+        convertOrShortenMonth "${month}"
+        
+        # We assign the expiration date
+        expirationDate=${day}'-'${month}'-'${year}
+        
+        # We convert it to lower case
+        dateToLower
+    elif [[ "${expirationDate}" =~ ${regex34} ]]
+    then
+        # We split the date
+        local day=${BASH_REMATCH[1]}
+        local month=${BASH_REMATCH[2]}
+        local year=${BASH_REMATCH[3]}
+        
+        # We convert the month
+        convertOrShortenMonth "${month}"
+        
+        # We convert the day to 2 digit
+        convert1To2digits "${day}" 'day'
+        
+        # We assign the expiration date
+        expirationDate=${day}'-'${month}'-'${year}
+        
+        # We convert it to lower case
+        dateToLower
+    elif [[ "${expirationDate}" =~ ${regex11} ]]
+    then
+        # We split the date
+        local day=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c2)
+        local year=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c6 | tail -c4)
+        local month=$(echo "${expirationDate}" | tr -cd '[[:alpha:]]' | head -c3)
+        
+        # We assign the expiration date
+        expirationDate=${day}'-'${month}'-'${year}
+        
+        # We convert it to lower case
+        dateToLower
+    elif [[ "${expirationDate}" =~ ${regex2} || "${expirationDate}" =~ ${regex3} || "${expirationDate}" =~ ${regex10} || "${expirationDate}" =~ ${regex22} ]]
+    then
+        # We split the date
+        local day=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c2)
+        local month=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c4 | tail -c2)
+        local year=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c8 | tail -c4)
+        
+        # We convert the month
+        convertOrShortenMonth "${month}"
+        
+        # We assign the expiration date
+        expirationDate=${day}'-'${month}'-'${year}
+    elif [[ "${expirationDate}" =~ ${regex4} || "${expirationDate}" =~ ${regex5} || "${expirationDate}" =~ ${regex6} || "${expirationDate}" =~ ${regex7} || "${expirationDate}" =~ ${regex8} || "${expirationDate}" =~ ${regex9} || "${expirationDate}" =~ ${regex12} || "${expirationDate}" =~ ${regex13} || "${expirationDate}" =~ ${regex16} || "${expirationDate}" =~ ${regex17} || "${expirationDate}" =~ ${regex18} || "${expirationDate}" =~ ${regex19} || "${expirationDate}" =~ ${regex20} || "${expirationDate}" =~ ${regex21} || "${expirationDate}" =~ ${regex23} || "${expirationDate}" =~ ${regex24} || "${expirationDate}" =~ ${regex25} ]]
+    then
+        # We split the date
+        local year=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c4)
+        local month=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c6 |tail -c2)
+        local day=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c8 | tail -c2)
+        
+        # We convert the month
+        convertOrShortenMonth "${month}"
+        
+        # We assign the expiration date
+        expirationDate=${day}'-'${month}'-'${year}
+    elif [[ "${expirationDate}" =~ ${regex14} || "${expirationDate}" =~ ${regex15} || "${expirationDate}" =~ ${regex31} ]]
+    then
+        # We split the date
+        local day=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c2)
+        local month=$(echo "${expirationDate}" | tr -cd '[[:alpha:]]' | head -c6 | tail -c3)
+        local year=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | tail -c4)
+        
+        # We assign the expiration date
+        expirationDate=${day}'-'${month}'-'${year}
+        
+        # We convert it to lower case
+        dateToLower
+    elif [[ "${expirationDate}" =~ ${regex27} ]]
+    then
+        # We split the date
+        local day=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c2)
+        local month=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c3 | tail -c1)
+        local year=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | tail -c4)
+        
+        # We convert the month
+        convert1To2digits "${month}" "month"
+        
+        # We convert the month to alpha format
+        convertOrShortenMonth "${month}"
+        
+        # We assign the expiration date
+        expirationDate=${day}'-'${month}'-'${year}
+        
+        # We convert it to lower case
+        dateToLower
+    elif [[ "${expirationDate}" =~ ${regex28} ]]
+    then
+        # We split the date
+        local month=$(echo "${expirationDate}" | tr -cd '[[:alpha:]]' | head -c3)
+        local year=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | tail -c4)
+        local day=$(echo "${expirationDate}" | tr -cd '[[:digit:]]' | head -c4)
+        
+        # We get the last 2 digits of the day
+        local dayEnd=$(echo "${day}" | tr -cd '[[:digit:]]' | tail -c2)
+        
+        # We use 20 to check if it's a 1 or 2 digts day
+        # Case:
+        #    2 Jan 2017
+        #        Result: 2201
+        #    02 Jan 2017-01
+        #        Result: 0220
+        # So if the last 2 digts are not 20, it's a 1 digit day
+        # Hope that I don't have to update this in 100 years ! :)
+        if [[ ${dayEnd} == '20' ]]
+        then
+            local day=$(echo "${day}" | tr -cd '[[:digit:]]' | head -c2)
+        else
+            local day=$(echo "${day}" | tr -cd '[[:digit:]]' | head -c1)
+            
+            # We convert the day
+            convert1To2digits "${day}" "day"
+        fi
+        
+        # We assign the expiration date
+        expirationDate=${day}'-'${month}'-'${year}
+        
+        # We convert it to lower case
+        dateToLower
+    else
+        # We log that we did'nt match the date
+        dateFormatlog
+    fi
+}
+
+########################### Start Execution Time ###############################
+# Used to catch the execution time
+#
+# @CalledBy main
+################################################################################
+startExecutionTime()
+{
+    if [[ ${showExecutionTime} == true || ${autoContinue} == true ]]
+    then
+        # We get execution start time
+        executionStart=$(date +%s)
+        
+        if [[ ${outputLogs} == true ]]
+        then
+            #We log the execution
+            echo "Execution Time log of" $(date) >> ${executionLog}
+            echo "----------------------------------------------------------------" >> ${executionLog}
+            # We log the start time
+            printf "Start: %s\n" "${executionStart}" >> ${executionLog}
+        fi
+    fi
+}
+
+############################# End Execution Time ###############################
+# Used to catch the execution time
+#
+# @CalledBy main
+################################################################################
+endExecutionTime()
+{
+    if [[ ${showExecutionTime} == true ]]
+    then
+        # We get execution end time
+        executionEnd=$(date +%s)
+        
+        # We get the difference between end and start
+        ((timeDifference=${executionEnd}-${executionStart}))
+        
+        # We get the hours
+        ((hours=${timeDifference}/3600))
+        # We get the minutes
+        ((minutes=(${timeDifference}%3600)/60))
+        # We get the seconds
+        ((seconds=${timeDifference}%60))
+        
+        
+        
+        if [[ ${outputLogs} == true ]]
+        then
+            # We log end time
+            printf "End: %s\n" "${executionEnd}" >> ${executionLog}
+            # We display + log message
+            printf "\n${magenta}Execution Time:${normal}\n" && printf "Execution Time:" >> ${executionLog}
+            printf "%02d:%02d:%02d\n \n" ${hours} ${minutes} ${seconds} && printf "%02d:%02d:%02d\n \n" ${hours} ${minutes} ${seconds} >> ${executionLog}
+        fi
+    fi
+}
+
+################################ Travis autosave ###############################
+# Used to commit to upstream after a given time
+#
+# @CalledBy main
+################################################################################
+travisAutoSave()
+{
+    if [[ ${travisMode} == true ]]
+    then
+        # We get the current date
+        local currentTimes=$(date +%s)
+        
+        # We calculate the time before commit is possible
+        local timeOfStart=$(((${executionStart}+${travisAutoSaveMinutes}*60)))
+        
+        if [[ ${currentTimes} -ge ${timeOfStart} || $(tail -1 ${file}) =~ ${domain} ]]
+        then
+            # We print the percentage into percentage.txt
+            percentageLog
+            
+            # We make sure we are under master
+            git checkout master
+            
+            # We set the permissions to avoid some errors
+            chown -R travis:travis ${TRAVIS_BUILD_DIR}
+            chgrp -R travis ${TRAVIS_BUILD_DIR}
+            chmod -R g+rwX ${TRAVIS_BUILD_DIR}
+            chmod 777 -Rf ${TRAVIS_BUILD_DIR}/.git
+            find ${TRAVIS_BUILD_DIR} -type d -exec chmod g+s '{}' +
+            
+            
+            if [[ $(git config core.sharedRepository) == '' ]]
+            then
+                # We make sure that it's right configured
+                git config core.sharedRepository group
+            fi
+            
+            # We commit and push every changes
+            git add -A
+            
+            if [[ $(tail -1 ${file}) =~ "${domain}" ]]
+            then
+                if [[ ${commandBeforeEnd} != '' ]]
+                then
+                    $(${commandBeforeEnd})
+                fi
+                
+                git commit -a -m "${travisResultsCommitMessage} [ci skip]"
+            else
+                git commit -a -m "${travisAutoSaveCommitMessage}"
+            fi
+            
+            git push origin master
+            exit 0
+        fi
+    fi
+}
+
+################################# Percentage ###################################
+# Used to increment the number of tested and number of inactive/invalid
+# In between it's calculate the percentage
+#
+# @CalledBy main
+################################################################################
+percentage()
+{
+    # We get type of the operation to do
+    # type <string>
+    local type="${1}"
+    
+    # And the information to calculate (up,down,invalid)
+    # status <string>
+    local status="${2}"
+    
+    if [[ ${showPercentage} == true ]]
+    then
+        # We increment the number of tested or gt result
+        case ${type} in
+            'count'|'Count'|'COUNT'|'counter'|'Counter'|'COUNTER')
+                ((numberOfTested=${numberOfTested}+1))
+                case ${status} in
+                    'up'|'Up'|'UP'|'active'|'Active'|'ACTIVE'|'valid'|'Valid'|'VALID')
+                        ((numberOfUp=${numberOfUp}+1))
+                    ;;
+                    'down'|'Down'|'DOWN'|'inactive'|'Inactive'|'INACTIVE'|'error'|'Error'|'ERROR')
+                        ((numberOfDown=${numberOfDown}+1))
+                    ;;
+                    'invalid'|'Invalid'|'INVALID')
+                        ((numberOfInvalid=${numberOfInvalid}+1))
+                    ;;
+                esac
+            ;;
+            
+        esac
+    fi
+}
+
+############################## Clean Percentage Log ############################
+# We use this to clean the percentage logs
+#
+# @CalledBy main
+################################################################################
+cleanPercentageLog(){
+    if [[ -f ${outputPercentageLog} ]]
+    then
+        rm ${outputPercentageLog} 2&> /dev/null
+    fi
+}
+
+############################# Print Header on Screen ###########################
+# In charge of printing on screen the table header before we start
+#
+# @CalledBy main
+################################################################################
+printHeaderOnScreen(){
+    # We only print message if ${quiet} == false
+    if [[ ${quiet} == false ]]
+    then
+        if [[ ${outputLess} == true ]]
+        then
+            printHeader "Less"
+        else
+            printHeader "Generic"
+        fi
+    fi
+}
+
+################################# Escape String ################################
+# In charge to escape string for regex usage
+#
+# @CalledBy main
+################################################################################
+escapeString(){
+    # stringToEscape <string>
+    local stringToEscape="${1}"
+    
+    # type <string>
+    local type="${2}"
+    
+    case "${type}" in
+        'file'|'FILE')
+            echo $(echo ${stringToEscape} | sed 's/\//\\\//g' | sed 's/\./\\\./g')
+        ;;
+        'domain'|'DOMAIN')
+            echo $(echo ${stringToEscape} | sed 's/\./\\\./g')
+        ;;
+    esac
+}
+
+################################ Update Auto Continue ##########################
+# Used to update the auto continue log file
+#
+# @CalledBy main
+################################################################################
+updateAutoContinueLog(){
+    # regexEscapedFile <string>
+    local regexEscapedFile="${1}"
+    
+    # domainOrIP <string>
+    local domainOrIP="${2}"
+    
+    # We update the value of the domain name
+    sed -i "s/.*${regexEscapedFile}.*/${regexEscapedFile} ${domainOrIP} ${numberOfTested} ${numberOfUp} ${numberOfDown} ${numberOfInvalid}/" ${continueLog}
+}
+
+################################ Percentage Log ################################
+# Used to generate the percentage.txt and to show percentage on screen
+#
+# @CalledBy main
+################################################################################
+percentageLog(){
+    if [[ ${showPercentage} == true && ${numberOfTested} > 0 ]]
+    then
+        # We clean it before generating
+        cleanPercentageLog
+        # We print on screen the percentage and its header
+        beforeHeader "${outputPercentageLog}"
+        printHeader 'Percentage' && printHeader 'Percentage' >> ${outputPercentageLog}
+        prints 'Percentage' && prints 'Percentage' >> ${outputPercentageLog}
+    fi
+}
+
+################################## Main ########################################
+# Main function used to call other function
+#
+# @CalledBy Arguments Handle Section
+################################################################################
+main()
+{
+    # We save the starting time
+    startExecutionTime
+    
+    # We get the domain
+    # domain <string>
+    domain=${1}
+    # We get the file
+    # file <string>
+    file=${2}
+    
+    # We catch the case that only a domain is given
+    if [[ "${domain}" != "" ]]
+    then
+        # We print the header
+        printHeaderOnScreen
+        
+        # We execute the getExpirationDate function
+        getExpirationDate "${domain}"
+        # We catch the case that only a file path is given
+    elif [[ ${file} != "" ]]
+    then
+        # We check if the file exist and is readable
+        if [[ -f "${file}" &&  -r "${file}" ]]
+        then
+            # We disable the start from begining
+            startFromBegining=false
+            
+            # We catch if we need to continue a previous "session"
+            if [[ ${autoContinue} == true && -f ${continueLog} ]]
+            then
+                # We escape the file name in oder to be usable as a regex variable
+                local escapedFile=$(escapeString "${file}" "file")
+                # We assign the way we read the domain
+                local regexDomainToMatch="${escapedFile}\s(.*)\s([[:digit:]]+)\s([[:digit:]]+)\s+([[:digit:]]+)\s+([[:digit:]]+)"
+                # We get the content of ${continueLog}
+                local continueLogContent=$(cat ${continueLog})
+                
+                # If the content match the previously assigned regex variable
+                if [[ "${continueLogContent}" =~ ${regexDomainToMatch} ]]
+                then
+                    fileAlreadyTreated=true
+                    
+                    # Then we extract the domain name of the original file
+                    local matchedDomain=${BASH_REMATCH[1]}
+                    
+                    # We get the last number of tested
+                    numberOfTested=${BASH_REMATCH[2]}
+                    
+                    # We get the last number of UP
+                    numberOfUp=${BASH_REMATCH[3]}
+                    
+                    # We get the last number of down
+                    numberOfDown=${BASH_REMATCH[4]}
+                    
+                    # We get the last number of invalid
+                    numberOfInvalid=${BASH_REMATCH[5]}
+                    
+                    # We escape it in order to be usable as regex variable
+                    local escapedDomain=$(escapeString "${matchedDomain}" "domain")
+                    
+                    # We use this variable in order to check if we already
+                    # printed the header. This is used to avoid repeating
+                    # header impression
+                    local headerPrinted=false
+                    
+                    if [[ $(tail -1 ${file}) != ${matchedDomain} ]]
+                    then
+                        # We get the list of domain from last tested until the end
+                        # and pass it to the loop where we're gonna filter and
+                        # test the domain/IP.
+                        sed -ne '/^'${escapedDomain}'/{s///; :a' -e 'n;p;ba' -e '}' ${file} | while read domain
+                        do
+                            # In case the file contain comment or empty line we continue to
+                            # the next line
+                            case "${domain}" in
+                                ''|\#*|*localhost*|local|broadcasthost)
+                                    continue
+                                ;;
+                                '127.0.0.1'*|'0.0.0.0'*)
+                                    domain=$(echo "${domain}"|cut -d ' ' -f2)
+                                ;;
+                            esac
+                            
+                            # If we didn't already print the header
+                            if [[ ${headerPrinted} == false ]]
+                            then
+                                # We print the header
+                                printHeaderOnScreen
+                                
+                                # We set the variable to true in order to indicate
+                                # that we already printed it
+                                local headerPrinted=true
+                            fi
+                            
+                            # We get the expiration date and check status in between
+                            getExpirationDate "${domain}"
+                            
+                            # We update the value of the domain name
+                            updateAutoContinueLog "${escapedFile}" "${domain}"
+                            
+                            # We commit if time += ${travisAutoSaveMinutes}
+                            travisAutoSave
+                        done
+                        
+                        # If we the loop is not bypassed, we deactivate the
+                        # checking from begining
+                        if [[ ${headerPrinted} == true ]]
+                        then
+                            startFromBegining=false
+                        fi
+                    else
+                        # We start from the begining of the file
+                        startFromBegining=true
+                    fi
+                else
+                    # We start from the begining of the file
+                    startFromBegining=true
+                fi
+            else
+                # We start from the begining of the file
+                startFromBegining=true
+            fi
+            
+            # If we need to start from begining
+            if [[ ${startFromBegining} == true ]]
+            then
+                # We print the header
+                printHeaderOnScreen
+                
+                # We reset the number of tested
+                numberOfTested=0
+                
+                # We reset the number of up
+                numberOfUp=0
+                
+                # We reset the number of down
+                numberOfDown=0
+                
+                # We reset the number of invalid
+                numberOfInvalid=0
+                
+                # We read the list of the file and pass the domain (1 line = 1 domain)
+                # to getExpirationDate
+                while read domain
+                do
+                    # In case the file contain comment or empty line we continue to
+                    # the next line
+                    case "${domain}" in
+                        ''|\#*|*localhost*|local|broadcasthost)
+                            continue
+                        ;;
+                        '127.0.0.1'*|'0.0.0.0'*)
+                            domain=$(echo "${domain}"|cut -d ' ' -f2)
+                        ;;
+                    esac
+                    
+                    # We get the expiration date and check status in between
+                    getExpirationDate "${domain}"
+                    
+                    # We save/append the current domain into ${continueLog}
+                    if [[ ${autoContinue} == true && -f ${continueLog} ]]
+                    then
+                        # We match the currently read filename in order to know
+                        # if we have to update or append the domain name
+                        # according to its file.
+                        if [[ "$(cat ${continueLog})" =~ ${file} ]]
+                        then
+                            # We escape the file name is order to be used as
+                            # regex variable
+                            local escapedFile=$(escapeString "${file}" "file")
+                            # We escaoe the domain name in order to be used as
+                            # regex variable
+                            local escapedDomain=$(escapeString "${domain}" "domain")
+                            
+                            # We update the value of the domain name
+                            updateAutoContinueLog "${escapedFile}" "${escapedDomain}"
+                        else
+                            # We append the new informations
+                            echo "${file} ${domain} ${numberOfTested} ${numberOfUp} ${numberOfDown} ${numberOfInvalid}" >> ${continueLog}
+                        fi
+                    else
+                        # We create the file with the known informations
+                        echo "${file} ${domain} ${numberOfTested} ${numberOfUp} ${numberOfDown} ${numberOfInvalid}" > ${continueLog}
+                    fi
+                    
+                    # We commit if time += ${travisAutoSaveMinutes}
+                    travisAutoSave
+                done < ${file}
+            fi
+        else
+            # We exit in case file don't exit or is not readable
+            echo "File not found or unreadable"
+            exit 1
+        fi
+    else
+        # If domain is empty & file don't exist we print usage
+        usage
+    fi
+    endExecutionTime
+    
+    percentageLog
+}
+
+################################## Switch Debug ################################
+# Switch ${debugUnknown}
+#
+# @CalledBy Arguments Handle Section
+################################################################################
+switchDebug(){
+    case ${debugUnknown} in
+        true)
+            debugUnknown=false
+        ;;
+        false)
+            debugUnknown=true
+        ;;
+        *)
+            printf "${red}${bold}Your configuration is not valid.${normal}\n"
+            printf "${cyan}${bold}Please use the auto updater or post an issue to https://git.io/v7xmD${normal}\n"
+            exit 1
+        ;;
+    esac
+}
+
+############################# Switch Auto Continue #############################
+# Switch ${autoContinue}
+#
+# @CalledBy Arguments Handle Section
+################################################################################
+switchAutoContinue(){
+    case ${autoContinue} in
+        true)
+            autoContinue=false
+        ;;
+        false)
+            autoContinue=true
+        ;;
+        *)
+            printf "${red}${bold}Your configuration is not valid.${normal}\n"
+            printf "${cyan}${bold}Please use the auto updater or post an issue to https://git.io/v7xma${normal}\n"
+            exit 1
+        ;;
+    esac
+}
+
+############################### Switch Percentage ##############################
+# Switch ${showPercentage}
+#
+# @CalledBy Arguments Handle Section
+################################################################################
+switchPercentage(){
+    case ${showPercentage} in
+        true)
+            showPercentage=false
+        ;;
+        false)
+            showPercentage=true
+        ;;
+        *)
+            printf "${red}${bold}Your configuration is not valid.${normal}\n"
+            printf "${cyan}${bold}Please use the auto updater or post an issue to https://git.io/v7xtP${normal}\n"
+            exit 1
+        ;;
+    esac
+}
+
+################################ Switch HTTP Code ##############################
+# Switch ${httpCodeStatus}
+#
+# @CalledBy Arguments Handle Section
+################################################################################
+switchHttpCodeStatus(){
+    case ${httpCodeStatus} in
+        true)
+            httpCodeStatus=false
+        ;;
+        false)
+            httpCodeStatus=true
+        ;;
+        *)
+            printf "${red}${bold}Your configuration is not valid.${normal}\n"
+            printf "${cyan}${bold}Please use the auto updater or post an issue to https://git.io/v5vHm${normal}\n"
+            exit 1
+        ;;
+    esac
+}
+
+############################# Switch Plain list Domain #########################
+# Switch ${plainListDomain}
+#
+# @CalledBy Arguments Handle Section
+################################################################################
+switchPlainListDomain(){
+    case ${plainListDomain} in
+        true)
+            plainListDomain=false
+        ;;
+        false)
+            plainListDomain=true
+        ;;
+        *)
+            printf "${red}${bold}Your configuration is not valid.${normal}\n"
+            printf "${cyan}${bold}Please use the auto updater or post an issue to https://git.io/v5vh8${normal}\n"
+            exit 1
+        ;;
+    esac
+}
+
+################################## Usage #######################################
+# Help function
+#
+# @CalledBy main, Arguments Handle Section
+################################################################################
+usage()
+{
+    echo "Usage: ${0} [ -OPTION1 | --OPTION1 ] [ -OPTION2 | --OPTION2 ] [...]"
+    echo ""
+    echo "       {[ -d domain-name.me ]} || {[ -f listOfDomainInAFile ]}"
+    echo ""
+    echo "  --all                      -a              Output all information on screen (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --cmd-before-end                           Pass a command before the results (final) commit of travis mode (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --continue                 -c              Switch the default value of the auto continue mode to its opposite. Current value: ${magenta}${autoContinue}${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --domain                   -d              Domain to analyze"
+    echo "  --debug                                    Switch the default value of the debug mode to its opposite. Current value: ${magenta}${debugUnknown}${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --file                     -f              File with a list of domains"
+    echo "  --execution                -ex             Show the execution time (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --help                                     Print this screen"
+    echo "  --host                     -h              Activate the generation of hosts file (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --http                                     Switch the default value of the usage of HTTP code. Current value: ${magenta}${httpCodeStatus}${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "                             -ip             Change the ip to print in host file. Current value: ${magenta}${customIP}${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --noFiles                  -n              Deactivate the production of output files (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --noLogs                   -nl             Deactivate the production of logs files in case we encounter some errors (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --noUnified                -nu             Deactivate the production of result.txt as unified result under the output directory (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --percentage               -p              Switch the default value of the percentage output mode to its opposite. Current value: ${magenta}${showPercentage}${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --plain                                    Switch the default value of the generation of the plain list of domain to its opposite. Current value: ${magenta}${plainListDomain}${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --quiet                    -q              Activate quiet mode (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --split                                    Split output files (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --timeout                  -t              Seconds before timeout. Current value: ${magenta}${secondsBeforeTimeout}s${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --travis                                   Activate the travis mode (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --version                  -v              Show the current version of Funceble"
+    echo ""
+    echo "Examples:"
+    echo ""
+    echo "  ${0} -d helloworld.com ${bold}OR${normal} ${0} --domain=helloworld.com"
+    echo "           Search if ${cyan}helloworld.com${normal} is ${bold}ACTIVE${normal} or ${bold}not${normal}"
+    echo "           Print the output in screen and under the ${cyan}output${normal} directory"
+    echo ""
+    echo "  ${0} -f /home/helloworld/lists/badrefers.list ${bold}OR${normal} --file=/home/helloworld/lists/badrefers.list"
+    echo "           Search if ${cyan}all domains${normal} under the file ${cyan}/home/helloworld/lists/badrefers.list${normal} are ${bold}ACTIVE${normal} or ${bold}not${normal}"
+    echo "           Print the output in screen and under the ${cyan}output${normal} directory"
+    echo ""
+    echo " ${0} -h -f /home/helloworld/lists/badrefers.list ${bold}OR${normal} --file=/home/helloworld/lists/badrefers.list"
+    echo "           Same as ${bold}${0} -f${normal}"
+    echo "           Generate the ${cyan}hosts file${normal} under the ${cyan}output${normal} directory"
+    echo ""
+    echo " ${0} -q -f /home/helloworld/lists/badrefers.list ${bold}OR${normal} --file=/home/helloworld/lists/badrefers.list"
+    echo "           Same as ${bold}${0} -f${normal}"
+    echo "           Instead, it does not generate output on screen"
+    echo ""
+}
+
+
+############################### Arguments Handle ###############################
+# We use this part to get arguments from command line.
+#
+# @Requiredby All
+################################################################################
+if [[  ${outputDir} =~ ${regexCurrentDir} ]]
+then
+    # We print the following to avoid the use of this script without
+    # dependencies check
+    printf "${bold}${red}Please run the installation script first. \nYou can run it with: %s\n" "${cyan}${PWD}/tool -i${normal}"
+    exit 1
+else
+    while [ "$#" -gt 0 ]; do
+        case "$1" in
+            # We catch if we have to print all infos on screen
+            -a|-all)
+                outputLess=false
+                shift 1
+            ;;
+            
+            # We catch if we need to switch the auto continue mode
+            -c|--continue)
+                switchAutoContinue
+                shift 1
+            ;;
+            
+            # We catch if we need to pass a command before the final commit
+            --cmd-before-end)
+                commandBeforeEnd="${2}"
+                shift 2
+            ;;
+            
+            # We catch domain
+            -d)
+                main "${2}" ''
+                shift 2
+            ;;
+            
+            # We catch if we need to deactivate or deactive debug mode
+            --debug)
+                switchDebug
+                shift 1
+            ;;
+            
+            # We catch if we show the execution time
+            -ex|--execution)
+                showExecutionTime=true
+                quiet=false
+                shift 1
+            ;;
+            
+            # We catch file path
+            -f)
+                main '' "${2}"
+                shift 2
+            ;;
+            
+            # we catch if the user want to activate the creation of hosts file
+            -h|--host)
+                generateHosts=true
+                shift 1
+            ;;
+            
+            # We catch if we have to show usage()
+            --help)
+                usage
+                shift 1
+            ;;
+            
+            # We catch if we have to use getHTTPCode()
+            --http)
+                switchHttpCodeStatus
+                shift 1
+            ;;
+            
+            # We change the IP to print into the hosts file
+            -ip)
+                customIP="${2}"
+                shift 2
+            ;;
+            
+            # We catch if we can produce file or not
+            -n|--noFiles)
+                noFiles=true
+                quiet=false
+                shift 1
+            ;;
+            
+            # We catch if we need to deactivate the generation of
+            # output/logs/*
+            -nl|--noLogs)
+                outputLogs=false
+                shift 1
+            ;;
+            
+            # We catch if we need to active or deactivate the generation of
+            # output/result.txt
+            -nu|--noUnified)
+                outputUnified=false
+                shift 1
+            ;;
+            
+            # We catch if have to show or hide the percentages
+            -p|--percentage)
+                switchPercentage
+                shift 1
+            ;;
+            
+            # We catch if we have to generate a plain list of domain
+            --plain)
+                switchPlainListDomain
+                shift 1
+            ;;
+            
+            # Activation of quiet system
+            -q|--quiet)
+                quiet=true
+                noFiles=false
+                shift 1
+            ;;
+            
+            # We split the result into different file
+            --split)
+                splitFiles=true
+                noFiles=false
+                shift 1
+            ;;
+            
+            # We set the seconds before timeout
+            -t|--timeout)
+                secondsBeforeTimeout="${2}"
+                shift 2
+            ;;
+            
+            # We activate the "travis mode"
+            --travis)
+                travisMode=true
+                shift 1
+            ;;
+            
+            # We catch if we have to show the version number
+            -v|--version)
+                echo "Current Version: ${versionNumber}"
+                exit 0
+            ;;
+            
+            # catch the domain after --domain= for example: --domain=helloworld.com
+            # Will result only helloworld.com
+            --domain=*)
+                domainToCheck=${1#*=}
+                main "${domainToCheck}" ''
+                shift 1
+            ;;
+            
+            # catch the domain after --domain= for example: --file=lustUsedInDev/badreferers.list
+            # Will get the file lustUsedInDev/badreferers.list
+            --file=*)
+                fileToCheck=${1#*=}
+                main "" "${fileToCheck}"
+                shift 1
+            ;;
+            
+            # cath de timeout after --timeout= for example: --timeout=5
+            # Will get the file 5
+            --timeout=*)
+                secondsBeforeTimeout=${1#*=}
+                shift 1
+            ;;
+            
+            # Output if option is unknown
+            -*)
+                echo "Unknown option: $1" >&2
+                exit 1
+            ;;
+            
+            # Output if no option is definied
+            *)
+                usage
+                exit 1
+            ;;
+        esac
+    done
+fi
