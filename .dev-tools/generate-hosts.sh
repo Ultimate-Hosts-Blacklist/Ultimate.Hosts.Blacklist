@@ -183,7 +183,7 @@ cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt | sed '/\./!d' > $TRAVIS_
 # First Run our Cleaner to remove all Domains with HTTP Error Code 404 and 410
 # ****************************************************************************
 
-awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
 
 # *******************************
 # Activate Dos2Unix One Last Time
