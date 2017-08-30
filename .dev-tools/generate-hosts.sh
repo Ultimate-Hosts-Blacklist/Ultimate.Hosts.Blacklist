@@ -184,14 +184,16 @@ cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt | sed '/\./!d' > $TRAVIS_
 # ****************************************************************************
 
 #awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
-comm -23 $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
+#comm -23 $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
+awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt > $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt && mv $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # ********************************************************************************
 # Now Run our Cleaner to remove all Domains returned as INACTIVE HTTP Error Code 0
 # ********************************************************************************
 
 #awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-inactive-0.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
-comm -23 $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-inactive-0.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
+#comm -23 $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-inactive-0.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
+awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-inactive-0.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt > $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt && mv $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # *******************************
 # Activate Dos2Unix One Last Time
