@@ -169,6 +169,28 @@ dos2unix $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 grep '[^[:blank:]]' < $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt > $TRAVIS_BUILD_DIR/.input_sources/combined-list-tmp.txt
 sudo mv $TRAVIS_BUILD_DIR/.input_sources/combined-list-tmp.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
+# ********************************************************
+# Clean the list of any lines not containing a . character
+# ********************************************************
+
+cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt | sed '/\./!d' > $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt && mv $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+
+# *******************************
+# Strip out our Dead Domains List
+# *******************************
+
+# ****************************************************************************
+# First Run our Cleaner to remove all Domains with HTTP Error Code 404 and 410
+# ****************************************************************************
+
+awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+
+# *******************************
+# Activate Dos2Unix One Last Time
+# *******************************
+
+dos2unix $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+
 # ******************************
 # Get Fresh Data from Badips.com
 # ******************************
