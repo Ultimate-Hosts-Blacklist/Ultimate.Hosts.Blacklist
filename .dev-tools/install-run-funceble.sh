@@ -41,6 +41,6 @@ sudo bash $TRAVIS_BUILD_DIR/.dev-tools/_funceble/tool -u dev --autosave-minutes 
 #  Run Funceble and Check Domains List
 # ************************************
 
-sudo bash $TRAVIS_BUILD_DIR/.dev-tools/_funceble/funceble --cmd-before-end "bash $TRAVIS_BUILD_DIR/.dev-tools/generate-hosts.sh && bash $TRAVIS_BUILD_DIR/.dev-tools/modify-readme-file.sh" --travis -a -ex -h -f $_input1
+sudo bash $TRAVIS_BUILD_DIR/.dev-tools/_funceble/funceble --cmd-before-end "bash $TRAVIS_BUILD_DIR/.dev-tools/generate-hosts.sh && bash $TRAVIS_BUILD_DIR/.dev-tools/modify-readme-file.sh" --travis -a -ex --plain --split -h -f $_input1
 
 exit 0
