@@ -7,12 +7,13 @@ The Ultimate hosts file for protecting your computer or device against over a mi
 A hosts file for use on any operating system to block bad domains out of your servers or devices.
 
 _______________
-- Version: **V1.2017.08.260**
+- Version: **V1.2017.08.261**
 - Total Bad Hosts in hosts file: **1,031,447**
-- Total Bad Hosts in hosts.deny file: **360,103**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,391,648**
+- Total Bad Hosts in hosts.deny file: **360,378**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,391,816**
 
- :exclamation: **Yes you did indeed read those numbers correctly** :exclamation: ```
+ :exclamation: **Yes you did indeed read those numbers correctly** :exclamation: 
+```
 # File generated with https://github.com/funilrys/funceble
 # Date of generation: Tue Aug 29 19:28:40 SAST 2017
 
