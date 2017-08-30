@@ -121,7 +121,7 @@ sed 's/^||//' $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt > $TRAVIS_BUILD
 sed '/^\#/ d' $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt
 cut -d'^' -f-1 $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt 
 ed -s $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt <<< w
-sudo rm $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt
+#sudo rm $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt
 
 # *************************************************************************************************************
@@ -183,13 +183,15 @@ cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt | sed '/\./!d' > $TRAVIS_
 # First Run our Cleaner to remove all Domains with HTTP Error Code 404 and 410
 # ****************************************************************************
 
-awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
+#awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
+comm -23 $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
 
 # ********************************************************************************
 # Now Run our Cleaner to remove all Domains returned as INACTIVE HTTP Error Code 0
 # ********************************************************************************
 
-awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-inactive-0.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
+#awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-inactive-0.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
+comm -23 $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-inactive-0.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
 
 # *******************************
 # Activate Dos2Unix One Last Time
