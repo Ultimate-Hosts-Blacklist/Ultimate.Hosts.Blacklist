@@ -157,16 +157,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.331'
+travisResultsCommitMessage='V1.2017.09.332'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.331 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.332 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+100'
+versionNumber='dev-1.4.0+101'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -2297,6 +2297,7 @@ usage()
     echo "  --host                     -h              Activate the generation of hosts file (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
     echo "  --http                                     Switch the default value of the usage of HTTP code. Current value: ${magenta}${httpCodeStatus}${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
     echo "                             -ip             Change the ip to print in host file. Current value: ${magenta}${customIP}${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --less                                     Output less information on screen (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
     echo "  --noFiles                  -n              Deactivate the production of output files (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
     echo "  --noLogs                   -nl             Deactivate the production of logs files in case we encounter some errors (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
     echo "  --noUnified                -nu             Deactivate the production of result.txt as unified result under the output directory (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
