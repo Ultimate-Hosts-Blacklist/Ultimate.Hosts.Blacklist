@@ -157,16 +157,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.344'
+travisResultsCommitMessage='V1.2017.09.345'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.344 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.345 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+108'
+versionNumber='dev-1.4.0+109'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -1167,6 +1167,13 @@ getReferer(){
                 cd)
                     # We assign the domain WHOIS referer server
                     referer="whois.nic.cd"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                cf)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.dot.cf"
                     # The Following is used to stop the execution of getExpirationDate
                     # in case the domain is not valid.
                     notSupported=false
