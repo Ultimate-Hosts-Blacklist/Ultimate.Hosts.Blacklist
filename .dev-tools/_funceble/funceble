@@ -157,16 +157,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.409'
+travisResultsCommitMessage='V1.2017.09.410'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.409 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.410 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+112'
+versionNumber='dev-1.4.0+114'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -1122,30 +1122,9 @@ getReferer(){
             # registered to IANA.
             # cf. https://github.com/funilrys/funceble/issues?q=is%3Aissue+Not+Found+is%3Aclosed
             case ${domainExtension} in
-                ar)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.nic.ar"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                biz)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.biz"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
                 bm)
                     # We assign the domain WHOIS referer server
                     referer="whois.afilias-srs.net"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                br)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.registro.br"
                     # The Following is used to stop the execution of getExpirationDate
                     # in case the domain is not valid.
                     notSupported=false
@@ -1157,30 +1136,9 @@ getReferer(){
                     # in case the domain is not valid.
                     notSupported=false
                 ;;
-                ca)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.cira.ca"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
                 cd)
                     # We assign the domain WHOIS referer server
                     referer="whois.nic.cd"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                cf)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.dot.cf"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                ch)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.nic.ch"
                     # The Following is used to stop the execution of getExpirationDate
                     # in case the domain is not valid.
                     notSupported=false
@@ -1206,23 +1164,9 @@ getReferer(){
                     # in case the domain is not valid.
                     notSupported=false
                 ;;
-                pe)
-                    # We assign the domain WHOIS referer server
-                    referer="kero.yachay.pe"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
                 tokyo)
                     # We assign the domain WHOIS referer server
                     referer="whois.nic.tokyo"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                vu)
-                    # We assign the domain WHOIS referer server
-                    referer="vunic.vu"
                     # The Following is used to stop the execution of getExpirationDate
                     # in case the domain is not valid.
                     notSupported=false
@@ -1763,8 +1707,8 @@ formatDate()
         dateToLower
     fi
     
-    local regexValidFormat='[0-9]{2}-[a-z]{3}-2[0-9]{3}'
-    if [[ ! ${expiration} =~ ${regexValidFormat} ]]
+    local regexValidFormat='[0-9]{2}\-[a-z]{3}\-2[0-9]{3}'
+    if [[ ! ${expirationDate} =~ ${regexValidFormat} ]]
     then
         # We log the expiration date
         dateFormatlog
