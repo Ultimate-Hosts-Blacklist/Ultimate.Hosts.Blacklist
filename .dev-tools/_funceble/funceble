@@ -157,16 +157,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.470'
+travisResultsCommitMessage='V1.2017.09.471'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.470 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.471 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+116'
+versionNumber='dev-1.4.0+118'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -1524,7 +1524,7 @@ formatDate()
     # Date in format: 2017-01-02T00:00:00+13:00 // Month: jan
     local regex24='([0-9]{4})-([0-9]{2})-([0-9]{2})T[0-9]{2}:[0-9]{2}:[0-9]{2}[+-][0-9]{2}:[0-9]{2}'
     # Date in format: 20170102 // Month: jan
-    local regex25='([0-9]{4})([0-9]{2})([0-9]{2})$'
+    local regex25='(?=[0-9]{8})(?=([0-9]{4})([0-9]{2})([0-9]{2})$)'
     # Date in format: 02-Jan-2017
     local regex26='([0-9]{2})-([A-Z]{1}[a-z]{2})-([0-9]{4})$'
     # Date in format: 02.1.2017 // Month: jan
@@ -1541,8 +1541,10 @@ formatDate()
     local regex32='()[a-zA-Z]{3}\s([a-zA-Z]{3})\s([0-9]{4})\s[0-9]{2}:[0-9]{2}:[0-9]{2}'
     # Date in format: January 02 2017-Jan-02
     local regex33='([A-Z]{1}[a-z]*)\s([0-9]{1,2})\s([0-9]{4})'
-    # Date in format: 2.1.2019 // Month: jan
+    # Date in format: 2.1.2017 // Month: jan
     local regex34='([0-9]{1,2})\.([0-9]{1,2})\.([0-9]{4})'
+    # Date in format: 20170102000000 // Month: jan
+    local regex35='([0-9]{4})([0-9]{2})([0-9]{2})[0-9]+'
     
     if [[ "${expirationDate}" =~ ${regex1} || "${expirationDate}" =~ ${regex2} || "${expirationDate}" =~ ${regex3} || "${expirationDate}" =~ ${regex10} || "${expirationDate}" =~ ${regex11} || "${expirationDate}" =~ ${regex22} || "${expirationDate}" =~ ${regex26} || "${expirationDate}" =~ ${regex27} || "${expirationDate}" =~ ${regex28} || "${expirationDate}" =~ ${regex29} || "${expirationDate}" =~ ${regex32} || "${expirationDate}" =~ ${regex34} ]]
     then
@@ -1580,7 +1582,7 @@ formatDate()
         
         # We convert it to lower case
         dateToLower
-    elif [[ "${expirationDate}" =~ ${regex4} || "${expirationDate}" =~ ${regex5} || "${expirationDate}" =~ ${regex6} || "${expirationDate}" =~ ${regex7} || "${expirationDate}" =~ ${regex8} || "${expirationDate}" =~ ${regex9} || "${expirationDate}" =~ ${regex12} || "${expirationDate}" =~ ${regex13} || "${expirationDate}" =~ ${regex16} || "${expirationDate}" =~ ${regex17} || "${expirationDate}" =~ ${regex18} || "${expirationDate}" =~ ${regex19} || "${expirationDate}" =~ ${regex20} || "${expirationDate}" =~ ${regex21} || "${expirationDate}" =~ ${regex23} || "${expirationDate}" =~ ${regex24} || "${expirationDate}" =~ ${regex25} || "${expirationDate}" =~ ${regex30}  ]]
+    elif [[ "${expirationDate}" =~ ${regex4} || "${expirationDate}" =~ ${regex5} || "${expirationDate}" =~ ${regex6} || "${expirationDate}" =~ ${regex7} || "${expirationDate}" =~ ${regex8} || "${expirationDate}" =~ ${regex9} || "${expirationDate}" =~ ${regex12} || "${expirationDate}" =~ ${regex13} || "${expirationDate}" =~ ${regex16} || "${expirationDate}" =~ ${regex17} || "${expirationDate}" =~ ${regex18} || "${expirationDate}" =~ ${regex19} || "${expirationDate}" =~ ${regex20} || "${expirationDate}" =~ ${regex21} || "${expirationDate}" =~ ${regex23} || "${expirationDate}" =~ ${regex24} || "${expirationDate}" =~ ${regex25} || "${expirationDate}" =~ ${regex30} || "${expirationDate}" =~ ${regex35}  ]]
     then
         # We split the date
         local day=${BASH_REMATCH[3]}
@@ -1592,6 +1594,9 @@ formatDate()
         
         # We assign the expiration date
         expirationDate=${day}'-'${month}'-'${year}
+        
+        # We convert it to lower case
+        dateToLower
     fi
     
     local regexValidFormat='[0-9]{2}\-[a-z]{3}\-2[0-9]{3}'
