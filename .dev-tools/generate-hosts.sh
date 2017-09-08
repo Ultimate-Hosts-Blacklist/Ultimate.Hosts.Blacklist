@@ -179,6 +179,8 @@ cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt | sed '/\./!d' > $TRAVIS_
 # Strip out our Dead Domains List
 # *******************************
 
+_combinedlist=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+
 # *********************************************************************************************************************************************************
 # First Run our Cleaner to remove all Dead Domains from https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
 # *********************************************************************************************************************************************************
@@ -186,18 +188,39 @@ cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt | sed '/\./!d' > $TRAVIS_
 sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/dead-domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
 
 _deaddomains=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
-_combinedlist=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 _combinedtemp=$TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt
 
-#awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt > $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt && mv $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 awk 'NR==FNR{a[$0];next} !($0 in a)' $_deaddomains $_combinedlist > $_combinedtemp && mv $_combinedtemp $_combinedlist
 
+# *******************************************************************************************************************************************************************
+# Run our Cleaner to remove all False Positive Domains from https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
+# *******************************************************************************************************************************************************************
 
-# *******************************
-# Activate Dos2Unix One Last Time
-# *******************************
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/false-positives.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/false-positives.txt
+
+_falsepositives=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
+_falsepositivestemp=$TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt
+
+awk 'NR==FNR{a[$0];next} !($0 in a)' $_falsepositives $_combinedlist > $_falsepositivestemp && mv $_falsepositivestemp $_combinedlist
+
+# *******************************************************************************************************************************************************************
+# Run our Cleaner to remove all Whitelisted Domains from https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
+# *******************************************************************************************************************************************************************
+
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/whitelist-domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/whitelist-domains.txt
+
+_whitelist=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
+_whitelisttemp=$TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt
+
+awk 'NR==FNR{a[$0];next} !($0 in a)' $_whitelist $_combinedlist > $_whitelisttemp && mv $_whitelisttemp $_combinedlist
+
+
+# ************************************************
+# Activate Dos2Unix One Last Time and Re-Sort List
+# ************************************************
 
 dos2unix $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+sort -u $_combinedlist -o $_combinedlist
 
 # ******************************
 # Get Fresh Data from Badips.com
