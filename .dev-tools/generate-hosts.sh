@@ -179,21 +179,19 @@ cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt | sed '/\./!d' > $TRAVIS_
 # Strip out our Dead Domains List
 # *******************************
 
-# ****************************************************************************
-# First Run our Cleaner to remove all Domains with HTTP Error Code 404 and 410
-# ****************************************************************************
+# *********************************************************************************************************************************************************
+# First Run our Cleaner to remove all Dead Domains from https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
+# *********************************************************************************************************************************************************
 
-#awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
-#comm -23 $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
-awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt > $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt && mv $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/dead-domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains.txt
 
-# ********************************************************************************
-# Now Run our Cleaner to remove all Domains returned as INACTIVE HTTP Error Code 0
-# ********************************************************************************
+_deaddomains=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
+_combinedlist=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+_combinedtemp=$TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt
 
-#awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-inactive-0.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
-#comm -23 $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-inactive-0.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >/dev/null
-awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-inactive-0.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt > $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt && mv $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+#awk 'NR==FNR{a[$0];next} !($0 in a)' $TRAVIS_BUILD_DIR/.input_sources/.dead-domains/dead-domains-404-410.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt > $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt && mv $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+awk 'NR==FNR{a[$0];next} !($0 in a)' $_deaddomains $_combinedlist > $_combinedtemp && mv $_combinedtemp $_combinedlist
+
 
 # *******************************
 # Activate Dos2Unix One Last Time
