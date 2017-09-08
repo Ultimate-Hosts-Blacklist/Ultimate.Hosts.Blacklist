@@ -571,6 +571,39 @@ sudo rm $_hostsdeny
 sudo rm $_superhostsdeny
 sudo rm $_hostswindows
 
+# **************************************
+# Zip Our Release to Keep the Repo Small
+# **************************************
+
+cd $TRAVIS_BUILD_DIR/
+
+zip -r hosts.zip hosts
+zip -r hosts.windows.zip hosts.windows
+zip -r hosts.deny.zip hosts.deny
+zip -r superhosts.deny.zip superhosts.deny
+zip -r domains.list.zip domains.list
+zip -r ips.list.zip ips.list
+
+
+# *******************************
+# Remove our unzipped hosts files
+# *******************************
+
+sudo rm $TRAVIS_BUILD_DIR/hosts
+sudo rm $TRAVIS_BUILD_DIR/hosts.windows
+sudo rm $TRAVIS_BUILD_DIR/hosts.deny
+sudo rm $TRAVIS_BUILD_DIR/superhosts.deny
+sudo rm $TRAVIS_BUILD_DIR/domains.list
+sudo rm $TRAVIS_BUILD_DIR/ips.list
+
+# **************************************************
+# Truncate our input lists before committing to repo
+# **************************************************
+
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
+
 exit 0
 
 # MIT License
