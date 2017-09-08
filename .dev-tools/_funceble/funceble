@@ -157,16 +157,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.523'
+travisResultsCommitMessage='V1.2017.09.524'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.523 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.524 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+119'
+versionNumber='dev-1.4.0+121'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -1886,6 +1886,52 @@ updateAutoContinueLog(){
     sed -i "s/.*${regexEscapedFile}.*/${regexEscapedFile} ${domainOrIP} ${numberOfTested} ${numberOfUp} ${numberOfDown} ${numberOfInvalid}/" ${continueLog}
 }
 
+##################################### Bypass ###################################
+# Used to bypass funceble execution
+#
+# @CalledBy main
+################################################################################
+bypass(){
+    # This is use to match [funceble skip]
+    local regexBypass='\[funceble\sskip\]'
+    
+    if [[ $(git log 2> /dev/null | head -6 | tail -2 | head -1) =~ ${regexBypass} && ${travisMode} == true ]]
+    then
+        # We print the percentage into percentage.txt
+        percentageLog
+        
+        # We make sure we are under master
+        git checkout master
+        
+        # We set the permissions to avoid some errors
+        chown -R travis:travis ${TRAVIS_BUILD_DIR}
+        chgrp -R travis ${TRAVIS_BUILD_DIR}
+        chmod -R g+rwX ${TRAVIS_BUILD_DIR}
+        chmod 777 -Rf ${TRAVIS_BUILD_DIR}/.git
+        find ${TRAVIS_BUILD_DIR} -type d -exec chmod g+s '{}' +
+        
+        
+        if [[ $(git config core.sharedRepository) == '' ]]
+        then
+            # We make sure that it's right configured
+            git config core.sharedRepository group
+        fi
+        
+        # We commit and push every changes
+        git add -A
+        
+        if [[ ${commandBeforeEnd} != '' ]]
+        then
+            $(${commandBeforeEnd})
+        fi
+        
+        git commit -a -m "${travisResultsCommitMessage} [ci skip]"
+        
+        git push origin master
+        exit 0
+    fi
+}
+
 ################################ Percentage Log ################################
 # Used to generate the percentage.txt and to show percentage on screen
 #
@@ -1923,6 +1969,9 @@ main()
     # We catch the case that only a domain is given
     if [[ "${domain}" != "" ]]
     then
+        # We check if we need to bypass
+        bypass
+        
         # We print the header
         printHeaderOnScreen
         
@@ -1996,6 +2045,9 @@ main()
                             # If we didn't already print the header
                             if [[ ${headerPrinted} == false ]]
                             then
+                                # We check if we need to bypass
+                                bypass
+                                
                                 # We print the header
                                 printHeaderOnScreen
                                 
@@ -2036,6 +2088,9 @@ main()
             # If we need to start from begining
             if [[ ${startFromBegining} == true ]]
             then
+                # We check if we need to bypass
+                bypass
+                
                 # We print the header
                 printHeaderOnScreen
                 
