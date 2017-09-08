@@ -198,7 +198,7 @@ awk 'NR==FNR{a[$0];next} !($0 in a)' $_deaddomains $_combinedlist > $_combinedte
 
 sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/false-positives.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/false-positives.txt
 
-_falsepositives=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
+_falsepositives=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/false-positives.txt
 _falsepositivestemp=$TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt
 
 awk 'NR==FNR{a[$0];next} !($0 in a)' $_falsepositives $_combinedlist > $_falsepositivestemp && mv $_falsepositivestemp $_combinedlist
@@ -209,7 +209,7 @@ awk 'NR==FNR{a[$0];next} !($0 in a)' $_falsepositives $_combinedlist > $_falsepo
 
 sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/whitelist-domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/whitelist-domains.txt
 
-_whitelist=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
+_whitelist=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/whitelist-domains.txt
 _whitelisttemp=$TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt
 
 awk 'NR==FNR{a[$0];next} !($0 in a)' $_whitelist $_combinedlist > $_whitelisttemp && mv $_whitelisttemp $_combinedlist
