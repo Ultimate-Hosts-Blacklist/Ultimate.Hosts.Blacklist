@@ -645,8 +645,8 @@ sudo rm $TRAVIS_BUILD_DIR/ips.list
 # **************************************************
 
 #sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
-sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 
 exit 0
 
