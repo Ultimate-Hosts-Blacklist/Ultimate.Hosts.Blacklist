@@ -121,7 +121,6 @@ sed 's/^||//' $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt > $TRAVIS_BUILD
 sed '/^\#/ d' $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt > $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt
 cut -d'^' -f-1 $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt 
 ed -s $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt <<< w
-#sudo rm $TRAVIS_BUILD_DIR/.input_sources/_Spam404/temp.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt
 
 # *************************************************************************************************************
@@ -131,7 +130,6 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_Spam404/domains.txt -o $TRAVIS_BUILD_D
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/*.txt
 curl -sL https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt -o $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/temp.txt
 sed '/^\#/ d' $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/temp.txt > $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/domains.txt
-sudo rm temp.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_ransomwaretracker.abuse.ch/domains.txt
 
 # **********************************************************
@@ -175,9 +173,9 @@ sudo mv $TRAVIS_BUILD_DIR/.input_sources/combined-list-tmp.txt $TRAVIS_BUILD_DIR
 
 cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt | sed '/\./!d' > $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt && mv $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
-# *******************************
-# Strip out our Dead Domains List
-# *******************************
+# **************************************************************************************
+# Strip out our Dead Domains / Whitelisted Domains and False Positives from CENTRAL REPO
+# **************************************************************************************
 
 _combinedlist=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
@@ -185,42 +183,65 @@ _combinedlist=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 # First Run our Cleaner to remove all Dead Domains from https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
 # *********************************************************************************************************************************************************
 
+printf '\n%s\n%s\n%s\n\n' "##########################" "Stripping out Dead Domains" "##########################"
+
 sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/dead-domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
 
 _deaddomains=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
-_combinedtemp=$TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt
+_deadtemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/temp_dead_domains.txt
 
-awk 'NR==FNR{a[$0];next} !($0 in a)' $_deaddomains $_combinedlist > $_combinedtemp && mv $_combinedtemp $_combinedlist
+sort -u $_deaddomains -o $_deaddomains
+sort -u $_combinedlist -o $_combinedlist
+
+awk 'NR==FNR{a[$0];next} !($0 in a)' $_deaddomains $_combinedlist > $_deadtemp && mv $_deadtemp $_combinedlist
+
+sort -u $_combinedlist -o $_combinedlist
+
+printf '\n%s\n%s\n%s\n\n' "###############################" "END: Stripping out Dead Domains" "###############################"
 
 # *******************************************************************************************************************************************************************
 # Run our Cleaner to remove all False Positive Domains from https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
 # *******************************************************************************************************************************************************************
 
+printf '\n%s\n%s\n%s\n\n' "####################################" "Stripping out False Positive Domains" "####################################"
+
 sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/false-positives.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/false-positives.txt
 
 _falsepositives=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/false-positives.txt
-_falsepositivestemp=$TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt
+_falsepositivestemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/temp_false_positives.txt
+
+sort -u $_falsepositives -o $_falsepositives
 
 awk 'NR==FNR{a[$0];next} !($0 in a)' $_falsepositives $_combinedlist > $_falsepositivestemp && mv $_falsepositivestemp $_combinedlist
+
+sort -u $_combinedlist -o $_combinedlist
+
+printf '\n%s\n%s\n%s\n\n' "#########################################" "END: Stripping out False Positive Domains" "#########################################"
 
 # *******************************************************************************************************************************************************************
 # Run our Cleaner to remove all Whitelisted Domains from https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
 # *******************************************************************************************************************************************************************
 
+printf '\n%s\n%s\n%s\n\n' "#################################" "Stripping out Whitelisted Domains" "#################################"
+
 sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/whitelist-domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/whitelist-domains.txt
 
 _whitelist=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/whitelist-domains.txt
-_whitelisttemp=$TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt
+_whitelisttemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/temp_whitelisted.txt
+
+sort -u $_whitelist -o $_whitelist
 
 awk 'NR==FNR{a[$0];next} !($0 in a)' $_whitelist $_combinedlist > $_whitelisttemp && mv $_whitelisttemp $_combinedlist
 
+sort -u $_combinedlist -o $_combinedlist
+
+printf '\n%s\n%s\n%s\n\n' "######################################" "END: Stripping out Whitelisted Domains" "######################################"
 
 # ************************************************
 # Activate Dos2Unix One Last Time and Re-Sort List
 # ************************************************
 
 dos2unix $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
-sort -u $_combinedlist -o $_combinedlist
 
 # ******************************
 # Get Fresh Data from Badips.com
