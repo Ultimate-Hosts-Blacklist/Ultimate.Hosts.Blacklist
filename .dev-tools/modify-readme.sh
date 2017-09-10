@@ -101,9 +101,13 @@ rm $_inputdbA
 # Truncate our input lists before committing to repo
 # **************************************************
 
-#sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
+
+# ****************************
+# All Done we Exit and Move On
+# ****************************
 
 exit 0
 
