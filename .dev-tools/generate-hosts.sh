@@ -49,7 +49,7 @@ sudo touch $TRAVIS_BUILD_DIR/hosts
 sudo touch $TRAVIS_BUILD_DIR/hosts.deny
 sudo touch $TRAVIS_BUILD_DIR/superhosts.deny
 sudo touch $TRAVIS_BUILD_DIR/hosts.windows
-ls -la $TRAVIS_BUILD_DIR/
+#ls -la $TRAVIS_BUILD_DIR/
 
 # ********************************
 # ********************************
@@ -404,7 +404,7 @@ sudo cp $_superhostsdenybare $_superhostsdeny
 # ***************************************
 
 sudo chown -R travis:travis $TRAVIS_BUILD_DIR
-ls -la $TRAVIS_BUILD_DIR/.dev-tools/
+#ls -la $TRAVIS_BUILD_DIR/.dev-tools/
 
 # ***************************************************************
 # Start and End Strings to Search for to do inserts into template

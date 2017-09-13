@@ -78,7 +78,7 @@ git checkout master
 # Check if we properly generated the file to test
 # ***********************************************
 
-ls -la $TRAVIS_BUILD_DIR/.input_sources/
+#ls -la $TRAVIS_BUILD_DIR/.input_sources/
 
 # ***************************************************
 # Run funceble to check for dead domains
