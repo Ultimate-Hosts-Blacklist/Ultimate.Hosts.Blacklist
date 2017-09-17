@@ -49,7 +49,6 @@ sudo touch $TRAVIS_BUILD_DIR/hosts
 sudo touch $TRAVIS_BUILD_DIR/hosts.deny
 sudo touch $TRAVIS_BUILD_DIR/superhosts.deny
 sudo touch $TRAVIS_BUILD_DIR/hosts.windows
-#ls -la $TRAVIS_BUILD_DIR/
 
 # ********************************
 # ********************************
@@ -89,7 +88,7 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_antipopads/domains.txt -o $TRAVIS_BUIL
 
 # ***************************************************************************************************************************************
 # Get Fresh Domains from HOSTS AdBlock - https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt
-# This Data Source Allows you one download per day !!! Reverting to static list for now.
+# This Data Source Allows you one download per day !!! This is now done manually for now.
 # ***************************************************************************************************************************************
 
 #sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_HOSTS_AdBlock/*.txt
