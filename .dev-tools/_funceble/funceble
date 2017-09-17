@@ -157,16 +157,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.544'
+travisResultsCommitMessage='V1.2017.09.545'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.544 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.545 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+168'
+versionNumber='dev-1.4.0+170'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -1603,13 +1603,13 @@ formatDate()
     # Date in format: 02.1.2017 // Month: jan
     local regex27='([0-9]{2})\.([0-9]{1})\.([0-9]{4})'
     # Date in format: 02 Jan 2017
-    local regex28='([0-9])\s([A-Z]{1}[a-z]{2})\s([0-9]{4})'
+    local regex28='([0-9]{1,2})\s([A-Z]{1}[a-z]{2})\s([0-9]{4})'
     # Date in format: 02-January-2017
     local regex29='([0-9]{2})-([A-Z]{1}[a-z]*)-([0-9]{4})'
     # Date in format: 2017-Jan-02.
     local regex30='([0-9]{4})-([A-Z]{1}[a-z]{2})-([0-9]{2})\.'
     # Date in format: Mon Jan 02 15:00:00 2017
-    local regex31='[a-zA-Z]{3}\s([a-zA-Z]{3})\s([0-9]{2})\s[0-9]{2}:[0-9]{2}:[0-9]{2}\s([0-9]{4})'
+    local regex31='[a-zA-Z]{3}\s([a-zA-Z]{3})\s([0-9]{1,2})\s[0-9]{2}:[0-9]{2}:[0-9]{2}\s([0-9]{4})'
     # Date in format: Mon Jan 2017 15:00:00
     local regex32='()[a-zA-Z]{3}\s([a-zA-Z]{3})\s([0-9]{4})\s[0-9]{2}:[0-9]{2}:[0-9]{2}'
     # Date in format: January 02 2017-Jan-02
