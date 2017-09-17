@@ -157,16 +157,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.537'
+travisResultsCommitMessage='V1.2017.09.538'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.537 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.538 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+121'
+versionNumber='dev-1.4.0+165'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -1103,7 +1103,7 @@ getReferer(){
                 # We handle here the list of extension which are known as
                 # [Not Found] Please report to https://git.io/v5tgo for more
                 # informations
-                ad|al|an|ao|arpa|az|ba|bd|bh|eg|fm|ge|gr|mil|mt|np|ph|pn|pk|py|vn|zw)
+                ad|al|an|ao|arpa|az|ba|bd|bf|bh|bs|comm|cu|dj|eg|fm|ge|gh|gm|gp|gr|gt|jo|kh|lb|mil|mm|mt|mw|ne|np|nr|pa|ph|pn|pk|py|rr|sd|sr|sv|sz|tj|tp|tt|vi|vn|xx|z|zw)
                     # We empty the referer variable
                     referer=''
                     
@@ -1150,9 +1150,23 @@ getReferer(){
                     # in case the domain is not valid.
                     notSupported=false
                 ;;
+                fj)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.usp.ac.fj"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
                 ga)
                     # We assign the domain WHOIS referer server
                     referer="whois.my.ga"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                lc)
+                    # We assign the domain WHOIS referer server
+                    referer="whois2.afilias-grs.net"
                     # The Following is used to stop the execution of getExpirationDate
                     # in case the domain is not valid.
                     notSupported=false
@@ -1164,6 +1178,34 @@ getReferer(){
                     # in case the domain is not valid.
                     notSupported=false
                 ;;
+                nyc)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.nic.nyc"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                ps)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.pnina.ps"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                ren)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.nic.ren"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                rw)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.ricta.org.rw"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
                 shop)
                     # We assign the domain WHOIS referer server
                     referer="whois.nic.shop"
@@ -1171,9 +1213,30 @@ getReferer(){
                     # in case the domain is not valid.
                     notSupported=false
                 ;;
+                sl)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.nic.sl"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                stream)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.nic.stream"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
                 tokyo)
                     # We assign the domain WHOIS referer server
                     referer="whois.nic.tokyo"
+                    # The Following is used to stop the execution of getExpirationDate
+                    # in case the domain is not valid.
+                    notSupported=false
+                ;;
+                uno)
+                    # We assign the domain WHOIS referer server
+                    referer="whois.nic.uno"
                     # The Following is used to stop the execution of getExpirationDate
                     # in case the domain is not valid.
                     notSupported=false
@@ -1189,13 +1252,23 @@ getReferer(){
             
             if [[ ${notSupported} == true ]]
             then
-                # We get the host to call.
-                # If extension have a host assigned, it's written if format
-                # refer: whois.hello.world for example
-                referer=$(whois -h "${whoisServer}" "${initialDomain}" | awk '/refer/{print $NF}')
+                # Regex for domains with subdomains or multiple point
+                local regexMultiplePoint='.*\..*\..*'
+                
+                if [[ ${initialDomain} =~ ${regexMultiplePoint} ]]
+                then
+                    # In case the domain contain multiple point we get the referer
+                    # in another way (This should avoid false positive logs)
+                    referer=$(whois -h "${whoisServer}" "hello.${domainExtension}" | awk '/refer/{print $NF}')
+                else
+                    # We get the host to call.
+                    # If extension have a host assigned, it's written if format
+                    # refer: whois.hello.world for example
+                    referer=$(whois -h "${whoisServer}" "${initialDomain}" | awk '/refer/{print $NF}')
+                fi
                 
                 # regex to pass to have a valid referer
-                regexWhois='(.*)whois(.*)'
+                regexWhois='whois'
                 
                 # We check if the format is valid
                 if [[ ${referer} =~ ${regexWhois} ]]
@@ -1782,6 +1855,15 @@ testLogOutput(){
     # The domain to checl
     local domain="${1}"
     
+    # Regex for domains with subdomains or multiple point
+    local regexMultiplePoint='.*\..*\..*'
+    
+    if [[ ${domain} =~ ${regexMultiplePoint} ]]
+    then
+        local domainExtension=${domain##*.}
+        local domain='hello.'${domainExtension}
+    fi
+    
     # We try to get the referer from IANA
     local referer=$(whois -h "${whoisServer}" "${domain}" | awk '/refer/{print $NF}')
     
@@ -1801,6 +1883,8 @@ testLogOutput(){
         if [[ ${whois} == "" ]]
         then
             printf " ${cyan}${bold}✔\n${normal}"
+            printf "${bold}${magenta}WHOIS LOOKUP:${normal}\n"
+            whois --verbose ${domain}
         else
             local regexToMatch='(.*)\.$'
             
