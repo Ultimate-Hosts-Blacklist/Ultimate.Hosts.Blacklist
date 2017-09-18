@@ -157,16 +157,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.578'
+travisResultsCommitMessage='V1.2017.09.579'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.578 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.579 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+172'
+versionNumber='dev-1.4.0+173'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -1023,20 +1023,23 @@ errorHandle()
     # We set the current type
     sourceType="NSLOOKUP"
     
-    # We save output of nslookup
-    local lookup=$(nslookup ${domain})
-    regexNxDomain='NXDOMAIN'
-    regexServfail='SERVFAIL'
-    
-    if [[ ${lookup} =~ ${regexNxDomain} || ${lookup} =~ ${regexServfail} ]]
+    if [[ ${type} != 'Invalid' ]]
     then
-        # If domain is down
-        issueStatus='Unknown'
-    elif [[ ${issueStatus} == '' && ${type} != 'Invalid' ]]
-    then
-        # If domain is up, We generate the valid/unified file
-        generateStatusFile 'valid' "${sourceType}" ''
-        return 1
+        # We save output of nslookup
+        local lookup=$(nslookup ${domain})
+        regexNxDomain='NXDOMAIN'
+        regexServfail='SERVFAIL'
+        
+        if [[ ${lookup} =~ ${regexNxDomain} || ${lookup} =~ ${regexServfail} ]]
+        then
+            # If domain is down
+            issueStatus='Unknown'
+        elif [[ ${issueStatus} == '' ]]
+        then
+            # If domain is up, We generate the valid/unified file
+            generateStatusFile 'valid' "${sourceType}" ''
+            return 1
+        fi
     fi
     
     if [[ ${type} == 'Invalid' || ${issueStatus} == 'Unknown' ]]
@@ -1340,7 +1343,10 @@ dateFormatlog(){
 # @CalledBy getExpirationDate
 ################################################################################
 getHTTPCode(){
-    if [[ ${httpCodeStatus} == true ]]
+    # We set the regex to check for point
+    local regexCheckPoint='\.'
+    
+    if [[ ${httpCodeStatus} == true && ${domain} =~ ${regexCheckPoint} ]]
     then
         # We get the HTTP header
         httpCode=$(timeout ${secondsBeforeHTTPTimeout} "curl --write-out %{http_code} --silent --output /dev/null ${domain}:80")
@@ -1350,6 +1356,8 @@ getHTTPCode(){
         then
             httpCode='Unknown'
         fi
+    else
+        httpCode='Unknown'
     fi
 }
 
