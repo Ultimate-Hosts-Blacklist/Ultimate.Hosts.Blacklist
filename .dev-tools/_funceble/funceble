@@ -157,16 +157,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.583'
+travisResultsCommitMessage='V1.2017.09.584'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.583 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.584 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+173'
+versionNumber='dev-1.4.0+174'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -1090,16 +1090,13 @@ getReferer(){
     # initialDomain <string>
     local initialDomain="${1}"
     
-    # We set the regex to check for point
-    regexCheckPoint='\.'
-    
     if [[ ! "${initialDomain}" =~ ${regexIPv4} ]]
     then
         # We get the extension of the given domain
         domainExtension=${initialDomain##*.}
         
         # We check if the given domain extension is in our database file
-        if [[ ${initialDomain} =~ ${regexCheckPoint} && $(cat ${ianaDB}) =~ ${domainExtension} ]]
+        if [[ $(cat ${ianaDB}) =~ ${domainExtension} ]]
         then
             
             case ${domainExtension} in
@@ -1343,10 +1340,7 @@ dateFormatlog(){
 # @CalledBy getExpirationDate
 ################################################################################
 getHTTPCode(){
-    # We set the regex to check for point
-    local regexCheckPoint='\.'
-    
-    if [[ ${httpCodeStatus} == true && ${domain} =~ ${regexCheckPoint} ]]
+    if [[ ${httpCodeStatus} == true ]]
     then
         # We get the HTTP header
         httpCode=$(timeout ${secondsBeforeHTTPTimeout} "curl --write-out %{http_code} --silent --output /dev/null ${domain}:80")
@@ -1371,80 +1365,89 @@ getExpirationDate(){
     # Domain given by user
     domain="$(echo ${1} |awk '{print tolower($0)}')"
     
-    # We get the HTTP code
-    getHTTPCode
+    # We set the regex to check for point
+    regexCheckPoint='\.'
     
-    # We get the whois server referenced for the given domain
-    getReferer ${domain}
-    
-    # Ensure that it's supported and not empty
-    if [[ ! "${domain}" =~ ${regexIPv4} && ${notSupported} == false && ${domain} != "" && ${referer} != "" ]]
+    if [[ ${domain} =~ ${regexCheckPoint} ]]
     then
-        # We call the whois server and save the result into ${whoIs}
-        # cf. Default Values Section
-        timeout ${secondsBeforeTimeout} "whois -h ${referer} ${domain} > ${whoIs}"
+        # We get the HTTP code
+        getHTTPCode
         
-        # Here's a list of words the ${content} have to match to get the
-        # expiration date from the whois record of domain
-        local toMatch=('expire:' 'expire on:' 'Expiry Date:' 'free-date' 'expires:' 'Expiration date:' 'Expiry date:' 'Expire Date:' 'renewal date:' 'Expires:' 'validity:' 'Expiration Date             :' 'Expiry :' 'expires at:' 'domain_datebilleduntil:' 'Data de expiração \/ Expiration Date \(dd\/mm\/yyyy\):' 'Fecha de expiración \(Expiration date\):' '\[Expires on\]' 'Record expires on' 'status:      OK-UNTIL' 'renewal:' 'expires............:' 'expire-date:' 'Exp date:' 'Valid-date' 'Expires On:' 'Fecha de vencimiento:' 'Expiration:.........' 'Fecha de Vencimiento:' 'Registry Expiry Date:' 'Expires on..............:' 'Expiration Time:' 'Expiration Date:' 'Expired:' "Date d'expiration:")
+        # We get the whois server referenced for the given domain
+        getReferer ${domain}
         
-        for i in ${!toMatch[*]}
-        do
-            # We create a regex group with the expiration date
-            expirationDate=$(cat ${whoIs} | sed -n -e "/${toMatch[${i}]}/p")
+        # Ensure that it's supported and not empty
+        if [[ ! "${domain}" =~ ${regexIPv4} && ${notSupported} == false && ${domain} != "" && ${referer} != "" ]]
+        then
+            # We call the whois server and save the result into ${whoIs}
+            # cf. Default Values Section
+            timeout ${secondsBeforeTimeout} "whois -h ${referer} ${domain} > ${whoIs}"
             
-            if [[ ${expirationDate} != '' ]]
-            then
-                # We get the expiration date
-                if [[ ${toMatch[${i}]} == '\[Expires on\]' ]]
-                then
-                    expirationDate=$(echo ${expirationDate} | sed "s/\] /]:/")
-                elif [[ ${toMatch[${i}]} == 'Record expires on' ]]
-                then
-                    expirationDate=$(echo ${expirationDate} | sed "s/on/on:/" | sed "s/\s(YYYY-MM-DD)//")
-                fi
+            # Here's a list of words the ${content} have to match to get the
+            # expiration date from the whois record of domain
+            local toMatch=('expire:' 'expire on:' 'Expiry Date:' 'free-date' 'expires:' 'Expiration date:' 'Expiry date:' 'Expire Date:' 'renewal date:' 'Expires:' 'validity:' 'Expiration Date             :' 'Expiry :' 'expires at:' 'domain_datebilleduntil:' 'Data de expiração \/ Expiration Date \(dd\/mm\/yyyy\):' 'Fecha de expiración \(Expiration date\):' '\[Expires on\]' 'Record expires on' 'status:      OK-UNTIL' 'renewal:' 'expires............:' 'expire-date:' 'Exp date:' 'Valid-date' 'Expires On:' 'Fecha de vencimiento:' 'Expiration:.........' 'Fecha de Vencimiento:' 'Registry Expiry Date:' 'Expires on..............:' 'Expiration Time:' 'Expiration Date:' 'Expired:' "Date d'expiration:")
+            
+            for i in ${!toMatch[*]}
+            do
+                # We create a regex group with the expiration date
+                expirationDate=$(cat ${whoIs} | sed -n -e "/${toMatch[${i}]}/p")
                 
-                expirationDate=${expirationDate#*:}
-                
-                # We delete space before the date
-                expirationDate=$(echo -e "${expirationDate}" | sed -e 's/^[[:space:]]*//')
-                
-                # Regex to pass in order to be reconized as a date
-                regexNumber='[0-9]'
-                if [[ ${expirationDate} =~ ${regexNumber} ]]
+                if [[ ${expirationDate} != '' ]]
                 then
-                    # If it contain numbers, we format it
-                    formatDate
+                    # We get the expiration date
+                    if [[ ${toMatch[${i}]} == '\[Expires on\]' ]]
+                    then
+                        expirationDate=$(echo ${expirationDate} | sed "s/\] /]:/")
+                    elif [[ ${toMatch[${i}]} == 'Record expires on' ]]
+                    then
+                        expirationDate=$(echo ${expirationDate} | sed "s/on/on:/" | sed "s/\s(YYYY-MM-DD)//")
+                    fi
                     
-                    # We set the current type
-                    sourceType="WHOIS"
+                    expirationDate=${expirationDate#*:}
                     
-                    # We generate valid/unified file
-                    generateStatusFile "valid" "${sourceType}" "${expirationDate}"
-                    return 1
-                elif [[ ${expirationDate} == '' && ${debugUnknown} == true ]]
+                    # We delete space before the date
+                    expirationDate=$(echo -e "${expirationDate}" | sed -e 's/^[[:space:]]*//')
+                    
+                    # Regex to pass in order to be reconized as a date
+                    regexNumber='[0-9]'
+                    if [[ ${expirationDate} =~ ${regexNumber} ]]
+                    then
+                        # If it contain numbers, we format it
+                        formatDate
+                        
+                        # We set the current type
+                        sourceType="WHOIS"
+                        
+                        # We generate valid/unified file
+                        generateStatusFile "valid" "${sourceType}" "${expirationDate}"
+                        return 1
+                    elif [[ ${expirationDate} == '' && ${debugUnknown} == true ]]
+                    then
+                        # In case expiration Date is empty we save the record so we
+                        # can debug it.
+                        # In case this happen please report issue to
+                        # https://github.com/funilrys/funceble/issues/new
+                        # So it can be fixed for everyone who use this script
+                        #
+                        # You can find the logs under output/logs/whois/
+                        # or with the command `ls output/logs/whois/*`
+                        whoisLog
+                    fi
+                elif [[ ${i} == $(( ${#toMatch[@]} - 1)) ]]
                 then
-                    # In case expiration Date is empty we save the record so we
-                    # can debug it.
-                    # In case this happen please report issue to
-                    # https://github.com/funilrys/funceble/issues/new
-                    # So it can be fixed for everyone who use this script
-                    #
-                    # You can find the logs under output/logs/whois/
-                    # or with the command `ls output/logs/whois/*`
-                    whoisLog
+                    if [[ ${debugUnknown} == true ]]
+                    then
+                        # generate whois log file
+                        whoisLog
+                    fi
+                    # We handle error & check if server is up
+                    errorHandle 'Down'
                 fi
-            elif [[ ${i} == $(( ${#toMatch[@]} - 1)) ]]
-            then
-                if [[ ${debugUnknown} == true ]]
-                then
-                    # generate whois log file
-                    whoisLog
-                fi
-                # We handle error & check if server is up
-                errorHandle 'Down'
-            fi
-        done
+            done
+        fi
+    else
+        # We handle error & check if server is up
+        errorHandle 'Invalid'
     fi
 }
 
