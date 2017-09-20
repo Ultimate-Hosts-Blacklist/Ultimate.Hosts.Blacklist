@@ -157,16 +157,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.645'
+travisResultsCommitMessage='V1.2017.09.646'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.645 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.646 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+175'
+versionNumber='dev-1.4.0+177'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -754,10 +754,6 @@ generateStatusFile(){
     # expiredDate <string>
     local expiredDate="${3}"
     
-    # We use this variable in order to know if we changes the status with th results
-    # of httpCode()
-    local notActive=true
-    
     case ${type} in
         'up'|'Up'|'UP'|'active'|'Active'|'ACTIVE'|'valid'|'Valid'|'VALID')
             # If empty, we change the expiration date to `Unknown`
@@ -770,19 +766,42 @@ generateStatusFile(){
             if [[ ${httpCodeStatus} == true && ${inactiveOrPotentiallyCodes[*]} =~ ${httpCode} ]]
             then
                 generateAnalyticFile 'Down' "${upStatus}"
+                case ${domain} in
+                    *.doubleclick.net|*.liveadvert.com)
+                        # We update the source
+                        local source='SPECIAL'
+                        # We generate the host file
+                        generateHostsFile 'inactive'
+                        
+                        # We update the status
+                        local type='INACTIVE'
+                        
+                        # We assign the new official status name
+                        local readStatus=${downStatus}
+                        
+                        # We assign the location of the splited file
+                        local putDataIntoMe=${outputUpResult}
+                        
+                        # We increment the percentage
+                        percentage 'counter' 'inactive'
+                    ;;
+                esac
             fi
             
-            # We assign the official status name
-            local readStatus=${upStatus}
-            
-            # We assign the location of the splited file
-            local putDataIntoMe=${outputUpResult}
-            
-            # we generate the host file
-            generateHostsFile 'active'
-            
-            # We increment the percentage
-            percentage 'counter' 'active'
+            if [[ ${source} != "SPECIAL" ]]
+            then
+                # We assign the official status name
+                local readStatus=${upStatus}
+                
+                # We assign the location of the splited file
+                local putDataIntoMe=${outputUpResult}
+                
+                # we generate the host file
+                generateHostsFile 'active'
+                
+                # We increment the percentage
+                percentage 'counter' 'active'
+            fi
         ;;
         'down'|'Down'|'DOWN'|'inactive'|'Inactive'|'INACTIVE'|'error'|'Error'|'ERROR')
             # We assign "Not Found" to prevent empty column in splited file
@@ -813,21 +832,28 @@ generateStatusFile(){
                     # We update the status
                     local type='ACTIVE'
                     
-                    # We update notActive
-                    local notActive=false
+                    # We assign the official status name
+                    local readStatus=${upStatus}
+                    
+                    # We assign the location of the splited file
+                    local putDataIntoMe=${outputUpResult}
+                    
+                    # We increment the percentage
+                    percentage 'counter' 'active'
                 elif [[ ${potentiallyActiveCodes[*]} =~ ${httpCode} ]]
                 then
                     generateAnalyticFile 'Pup' "${status}"
                 fi
-                
-                if [[ ${notActive} == true ]]
-                then
-                    # We generate the host file
-                    generateHostsFile 'inactive'
-                fi
             fi
-            # We increment the percentage
-            percentage 'counter' 'inactive'
+            
+            if [[ ${source} != 'HTTP CODE' ]]
+            then
+                # We generate the host file
+                generateHostsFile 'inactive'
+                
+                # We increment the percentage
+                percentage 'counter' 'inactive'
+            fi
         ;;
         
         'invalid'|'Invalid'|'INVALID')
@@ -856,8 +882,14 @@ generateStatusFile(){
                     # We update the status
                     local type='ACTIVE'
                     
-                    # We update notActive
-                    local notActive=false
+                    # We assign the official status name
+                    local readStatus=${upStatus}
+                    
+                    # We assign the location of the splited file
+                    local putDataIntoMe=${outputUpResult}
+                    
+                    # We increment the percentage
+                    percentage 'counter' 'active'
                 elif [[ ${potentiallyActiveCodes[*]} =~ ${httpCode} ]]
                 then
                     generateAnalyticFile 'Pup' "${status}"
@@ -867,14 +899,14 @@ generateStatusFile(){
                 fi
             fi
             
-            if [[ ${notActive} == true ]]
+            if [[ ${source} != 'HTTP CODE' ]]
             then
                 # We generate the host file
                 generateHostsFile 'invalid'
+                
+                # We increment the percentage
+                percentage 'counter' 'invalid'
             fi
-            
-            # We increment the percentage
-            percentage 'counter' 'invalid'
         ;;
     esac
     
