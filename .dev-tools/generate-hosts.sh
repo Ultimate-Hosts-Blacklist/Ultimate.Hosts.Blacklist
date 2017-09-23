@@ -184,7 +184,7 @@ _combinedlist=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 printf '\n%s\n%s\n%s\n\n' "##########################" "Stripping out Dead Domains" "##########################"
 
-sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/dead-domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/dead-domains-ALL-combined.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
 
 _deaddomains=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
 _deadtemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/temp_dead_domains.txt
