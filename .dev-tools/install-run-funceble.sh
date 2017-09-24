@@ -46,4 +46,10 @@ sudo bash $TRAVIS_BUILD_DIR/.dev-tools/_funceble/tool --dev -u --autosave-minute
 
 sudo bash $TRAVIS_BUILD_DIR/.dev-tools/_funceble/funceble --cmd-before-end "bash $TRAVIS_BUILD_DIR/.dev-tools/final-commit.sh" --travis -a -ex --plain --split -h -f $_input1
 
+# ****************
+# Update Raw Links
+# ****************
+
+sudo wget https://hosts.ubuntu101.co.za/update_hosts.php
+
 exit 0
