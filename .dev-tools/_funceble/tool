@@ -51,11 +51,17 @@ outputDir="outputDir='${currentDir}output/'"
 funilrys="funilrys"
 ################################################################################
 ############################## Default Values ##################################
-# The file name of the script
+# The filename of the script
 script='funceble'
 
-# Script online versionFile
-onlineScript="https://raw.githubusercontent.com/${funilrys}/${script}/master/funceble"
+# The filename of the tool
+tool='tool'
+
+# Script online version file
+onlineScript="https://raw.githubusercontent.com/${funilrys}/${script}/master/${script}"
+
+# Tool online version file
+onlineTool="https://raw.githubusercontent.com/${funilrys}/${script}/master/${tool}"
 
 # Directory structure file name
 directoriesStructureName=dir-structure
@@ -68,9 +74,6 @@ directoriesStructureLink="https://raw.githubusercontent.com/${funilrys}/${script
 
 # Quiet mode
 quiet=false
-
-# We get the content of the script
-scriptContent=$(cat ${currentDir}${script} 2> ${logOutput})
 
 # Default type
 executionType='installation'
@@ -94,7 +97,7 @@ stableVersion=false
 devVersion=true
 
 # Version number
-versionNumber='dev-1.4.0+26'
+versionNumber='dev-1.4.0+42'
 ################################################################################
 # We log the date
 date > ${logOutput}
@@ -370,22 +373,6 @@ expectInstalled()
     commandexist 'expect'
 }
 
-############################## head Installed ##################################
-# We check if head is installed
-#
-# @CalledBy installation
-################################################################################
-headInstalled()
-{
-    if [[ ${quiet} == false ]]
-    then
-        # We log && print message
-        printf "${bold}head${normal} installed" && printf "head installed" >> ${logOutput}
-    fi
-    
-    commandexist 'head'
-}
-
 ############################### nslookup Installed ################################
 # We check if nslookup is installed
 #
@@ -554,8 +541,8 @@ cleanOutput(){
     # We log && print message
     printf "Cleaning generated files"
     
-    # Search and delete everything except .gitignore
-    find ${output} ! -name '.gitignore' -type f -exec rm {} \;
+    # Search and delete everything except .gitignore and .keep
+    find ${output} ! -name '.gitignore' ! -name '.keep' -type f -exec rm {} \;
     
     # Only for dev: We delete temporary files
     find ${currentDir} -name '*~' -type f -exec rm {} \;
@@ -640,8 +627,15 @@ createDirectoriesAndFile(){
             echo "Impossible to get ${directoriesStructure}. Please report issue." >> ${logOutput}
             exit 1
         else
-            # We save the online script into the existing one
-            curl -s ${directoriesStructureLink} -o "${directoriesStructure}"
+            if [[ ${stableVersion} == true ]]
+            then
+                # We save the online script into the existing one
+                curl -s ${directoriesStructureLink} -o "${directoriesStructure}"
+            elif [[ ${devVersion} == true ]]
+            then
+                # We save the online script into the existing one
+                curl -s ${directoriesStructureLink/master/dev} -o "${directoriesStructure}"
+            fi
             # We log && print message
             printf "  ${cyan}✔${normal}\n\n" && printf "  ✔\n" >> ${logOutput}
         fi
@@ -770,6 +764,7 @@ updateIANA()
 
 scriptsWorkDir()
 {
+    local fileToInstall="${1}"
     if [[ ${quiet} == false ]]
     then
         if [[ "${executionType}" == 'installation' ]]
@@ -785,7 +780,7 @@ scriptsWorkDir()
     fi
     
     regex="outputDir='.*\/output\/'"
-    if [[ ${scriptContent} =~ ${regex} ]]
+    if [[ $(cat ${fileToInstall}) =~ ${regex} ]]
     then
         # We replace with the current working
         # directory an we print message
@@ -823,11 +818,22 @@ scriptsWorkDir()
         then
             if [[ "${executionType}" == 'installation' ]]
             then
-                # We delete all .gitignore
-                find "${currentDir}output" -name '.gitignore' -type f -exec rm {} \;
                 
-                # We generate needed directories and files
+                if [[ $(git remote show origin | grep funceble) == '' || ! -d ${currentDir}.git  ]]
+                then
+                    # We delete all .gitignore
+                    find "${currentDir}output" -name '.gitignore' -type f -exec rm {} \;
+                fi
+                
+                local regexSkip='\[funceble\sskip\]|\[ci\sskip\]'
+                if [[ $(git log 2> /dev/null | head -12 | tail -2 | head -1) =~ ${regexSkip} ]]
+                then
+                    cleanOutput
+                fi
+                
+                updateIANA
                 createDirectoriesAndFile
+                
                 echo "${bold}${cyan}The installation was successfully completed!${normal}"
                 echo "You can now use the script with '${bold}./${script} [-OPTIONS]${normal}' or learn how to use it with '${green}${bold}./${script} --help${normal}'"
                 printf '\n'
@@ -836,6 +842,7 @@ scriptsWorkDir()
                 cleanOutput
                 updateIANA
                 getListOfDirectoryToCreate
+                
                 echo "${bold}${cyan}The production logic was successfully completed!${normal}"
                 echo "You can now distribute this repository."
                 printf '\n'
@@ -868,7 +875,6 @@ scriptsWorkDir()
 installation()
 {
     local fileToInstall="${1}"
-    quiet=${2}
     
     # We check the script
     scriptExist "${fileToInstall}"
@@ -881,7 +887,6 @@ installation()
     dateInstalled
     echoInstalled
     expectInstalled
-    headInstalled
     nslookupInstalled
     sedInstalled
     sha512sumInstalled
@@ -890,7 +895,7 @@ installation()
     whoisInstalled
     
     # We finalize installation
-    scriptsWorkDir
+    scriptsWorkDir "${fileToInstall}"
 }
 
 ################################ checkVersion ##################################
@@ -910,29 +915,53 @@ checkVersion()
         
         # We secretly execute a silent installation in the downloaded
         # script
-        installation "${funilrys}" true
+        quiet=true
+        installation "${funilrys}"
+        quiet=false
     fi
     
-    if [[ -f ${currentDir}${funilrys} ]]
-    then
-        # We get the sha512sum of the downloaded script
-        local copiedVersion=$(sha512sum ${currentDir}${funilrys}|cut -d ' ' -f1)
-    else
-        local copiedVersion=''
-    fi
-    # We get the sha512sum of the already exist script
-    local currentVersion=$(sha512sum ${currentDir}${script}|cut -d ' ' -f1)
+    local downloadedFiles="${funilrys} ${funilrys}.tool"
     
-    # We compare the versions
-    if [[ ${currentVersion} == ${copiedVersion} || ! -f ${currentDir}${funilrys} ]]
-    then
-        # If the same == no need to update
-        update=false
-    else
-        curlInstalled
-        # If they are not the same == we need to update
-        update=true
-    fi
+    for downloadedFile in $(echo ${downloadedFiles})
+    do
+        if [[ ${downloadedFile} == ${funilrys} ]]
+        then
+            if [[ -f ${currentDir}${script} ]]
+            then
+                currentVersion=$(sha512sum ${currentDir}${script}|cut -d ' ' -f1)
+            else
+                currentVersion='1'
+            fi
+        elif [[ ${downloadedFile} =~ ${tool}  ]]
+        then
+            if [[ -f ${currentDir}${tool} ]]
+            then
+                currentVersion=$(sha512sum ${currentDir}${tool}|cut -d ' ' -f1)
+            else
+                currentVersion='2'
+            fi
+        fi
+        
+        if [[ -f ${currentDir}${downloadedFile} ]]
+        then
+            # We get the sha512sum of the downloaded script
+            local copiedVersion=$(sha512sum ${currentDir}${downloadedFile}|cut -d ' ' -f1)
+        else
+            local copiedVersion=''
+        fi
+        
+        # We compare the versions
+        if [[ ${copiedVersion} == '' || ${currentVersion} == ${copiedVersion} ]]
+        then
+            # If the same == no need to update
+            update=false
+        else
+            curlInstalled
+            # If they are not the same == we need to update
+            update=true
+            return 1
+        fi
+    done
 }
 
 ################################## Download Script #############################
@@ -958,9 +987,13 @@ downloadScript()
     else
         if [[ ${stableVersion} == true ]]
         then
-            # We save the online script into the existing one
+            # We save the online script into a temporary file
             curl -s ${onlineScript} -o "${funilrys}"
-            chmod +x ${funilrys}
+            
+            # We save the online tool script into a temporary file
+            curl -s ${onlineTool/master/dev} -o "${funilrys}.tool"
+            
+            chmod +x ${funilrys}*
             
             # We log && print message
             printf "  ${cyan}✔${normal}\n\n" && printf "  ✔\n" >> ${logOutput}
@@ -970,7 +1003,11 @@ downloadScript()
         then
             # We save the online script into the existing one
             curl -s ${onlineScript/master/dev} -o "${funilrys}"
-            chmod +x ${funilrys}
+            
+            # We save the online tool script into a temporary file
+            curl -s ${onlineTool/master/dev} -o "${funilrys}.tool"
+            
+            chmod +x ${funilrys}*
             
             # We log && print message
             printf "  ${cyan}✔${normal}\n\n" && printf "  ✔\n" >> ${logOutput}
@@ -987,7 +1024,7 @@ downloadScript()
 ################################################################################
 update()
 {
-    if [[ -d ${currentDir}.git ]]
+    if [[ -d ${currentDir}.git && $(git remote show origin | grep funceble) != '' ]]
     then
         if [[ ${stableVersion} == true ]]
         then
@@ -1002,14 +1039,17 @@ update()
         # We get the online version and compare versions
         checkVersion 'get'
         
-        if [[ ${update} == true ]]
+        if [[ ${update} == true || ! -f ${currentDir}${script} ]]
         then
             # We only need to execute if the versions are not the same
             
             mv ${funilrys} ${currentDir}${script}
+            mv ${funilrys}.tool ${currentDir}${tool}
+            
             
             # We install the new script
-            installation ${currentDir}${script} true
+            ${currentDir}${tool} -q -i
+            
             # We log && print message
             printf "Checking Version" &&  printf "Checking Version" >> ${logOutput}
             
@@ -1032,6 +1072,7 @@ update()
         else
             # We log && print message
             printf "No need to update.\n" &&  printf "No need to update." >> ${logOutput}
+            rm ${funilrys}*
         fi
     fi
 }
@@ -1076,7 +1117,7 @@ while [ "$#" -gt 0 ]; do
         ;;
         # We catch if we have to install only the script
         -i|--install)
-            installation "${currentDir}${script}" false
+            installation "${currentDir}${script}"
             shift 1
         ;;
         # We catch if we need to update the `iana-domains-db` file
@@ -1091,9 +1132,10 @@ while [ "$#" -gt 0 ]; do
             shift 1
         ;;
         
+        # We catch if we have to prepare the repository for production
         -p|--production)
             executionType='production'
-            installation "${currentDir}${script}" false
+            installation "${currentDir}${script}"
             shift 1
         ;;
         
@@ -1118,6 +1160,11 @@ while [ "$#" -gt 0 ]; do
         # We catch if we have to update the script
         -u|--update)
             update
+            shift 1
+        ;;
+        # We catch if we have to quiet the script
+        -q|--quiet)
+            quiet=true
             shift 1
         ;;
         # We catch if we have to show the version number
