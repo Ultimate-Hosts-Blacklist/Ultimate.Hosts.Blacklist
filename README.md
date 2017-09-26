@@ -8,24 +8,16 @@ Protect your children and family from gaining access to bad web sites and protec
 A hosts file for use on any operating system to block bad domains out of your servers or devices.
 
 _______________
-- Version: **V1.2017.09.749**
+- Version: **V1.2017.09.750**
 - Total Bad Hosts in hosts file: **1,143,762**
-- Total Bad IP's in hosts.deny file: **432,199**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,575,961**
+- Total Bad IP's in hosts.deny file: **432,283**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,576,045**
 
  :exclamation: **Yes you did indeed read those numbers correctly** :exclamation: 
 
 **Below Are Partial Results From Tests in Progress to Find Dead Domains**
 ```
-# File generated with https://github.com/funilrys/funceble
-# Date of generation: Sat Sep 23 13:36:19 SAST 2017
 
-
-Status      Percentage   Numbers     
------------ ------------ -------------
-ACTIVE      71%          433584      
-INACTIVE    28%          171217      
-INVALID     0%           44          
 ```
 ____________________
 

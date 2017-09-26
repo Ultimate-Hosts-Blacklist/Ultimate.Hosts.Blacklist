@@ -157,13 +157,13 @@ showPercentage=true
 travisMode=false
 
 # Minimum of minutes before we start commiting to upstream under travis
-travisAutoSaveMinutes=35
+travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='Funceble Test - Results'
+travisResultsCommitMessage='V1.2017.09.750'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='Funceble Test - Autosave'
+travisAutoSaveCommitMessage='V1.2017.09.750 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
@@ -186,7 +186,7 @@ domainsDefault='list'
 # Output directory.
 # Auto updated with `tool -i`
 # DO NOT FORGET '/' AT THE END
-outputDir='%%currentDir%%/output/'
+outputDir='/home/travis/build/mitchellkrogza/Ultimate.Hosts.Blacklist/.dev-tools/_funceble/output/'
 
 # Autocontinue log file
 continueLog=${outputDir}continue.txt
