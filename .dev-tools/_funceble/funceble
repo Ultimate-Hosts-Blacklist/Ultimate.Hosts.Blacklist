@@ -160,16 +160,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.745'
+travisResultsCommitMessage='V1.2017.09.746'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.745 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.746 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+179'
+versionNumber='dev-1.4.0+183'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -624,7 +624,7 @@ generateHostsFile()
     local domainOutput=''
     local splittedDestination=''
     
-    if [[ ${generateHosts} == true ]]
+    if [[ ${generateHosts} == true || ${plainListDomain} == true ]]
     then
         # We clean the files in case we need to start from begining
         if [[ ${fileAlreadyTreated} == false || ${startFromBegining} == true ]]
@@ -648,37 +648,94 @@ generateHostsFile()
         
         case ${type} in
             'up'|'Up'|'UP'|'active'|'Active'|'ACTIVE'|'valid'|'Valid'|'VALID')
-                local outputDestination="${outputUpHost}"
-                local domainOutput="${outputUpDomain}"
+                if [[ ${generateHosts} == true ]]
+                then
+                    local outputDestination="${outputUpHost}"
+                fi
+                
+                if [[ ${plainListDomain} == true ]]
+                then
+                    local domainOutput="${outputUpDomain}"
+                fi
             ;;
             'down'|'Down'|'DOWN'|'inactive'|'Inactive'|'INACTIVE'|'error'|'Error'|'ERROR')
-                local outputDestination="${outputDownHost}"
-                local domainOutput="${outputDownDomain}"
+                if [[ ${generateHosts} == true ]]
+                then
+                    local outputDestination="${outputDownHost}"
+                fi
+                
+                if [[ ${plainListDomain} == true ]]
+                then
+                    local domainOutput="${outputDownDomain}"
+                fi
             ;;
             'invalid'|'Invalid'|'INVALID')
-                local outputDestination="${outputInvalidHost}"
-                local domainOutput="${outputInvalidDomain}"
+                if [[ ${generateHosts} == true ]]
+                then
+                    local outputDestination="${outputInvalidHost}"
+                fi
+                
+                if [[ ${plainListDomain} == true ]]
+                then
+                    local domainOutput="${outputInvalidDomain}"
+                fi
             ;;
             'potentially_up'|'potentially_active')
-                local outputDestination="${outputHTTPPotentiallyActive}${hostsDefault}"
-                local domainOutput="${outputHTTPPotentiallyActive}${domainsDefault}"
-                local splittedDestination="${outputHTTPPotentiallyActive}${httpCode}"
+                if [[ ${generateHosts} == true ]]
+                then
+                    local outputDestination="${outputHTTPPotentiallyActive}${hostsDefault}"
+                fi
+                
+                if [[ ${plainListDomain} == true ]]
+                then
+                    local domainOutput="${outputHTTPPotentiallyActive}${domainsDefault}"
+                fi
+                
+                if [[ ${splitFiles} == true ]]
+                then
+                    local splittedDestination="${outputHTTPPotentiallyActive}${httpCode}"
+                fi
             ;;
             'potentially_down'|'potentially_inactive')
-                local outputDestination="${outputHTTPInactiveOrPotentially}${hostsDefault}"
-                local domainOutput="${outputHTTPInactiveOrPotentially}${domainsDefault}"
-                local splittedDestination="${outputHTTPInactiveOrPotentially}${httpCode}"
+                if [[ ${generateHosts} == true ]]
+                then
+                    local outputDestination="${outputHTTPInactiveOrPotentially}${hostsDefault}"
+                fi
+                
+                if [[ ${plainListDomain} == true ]]
+                then
+                    local domainOutput="${outputHTTPInactiveOrPotentially}${domainsDefault}"
+                fi
+                
+                if [[ ${splitFiles} == true ]]
+                then
+                    local splittedDestination="${outputHTTPInactiveOrPotentially}${httpCode}"
+                fi
             ;;
             'http_active'|'HTTP_ACTIVE'|'HTTP_active'|'HTTP_Active')
-                local outputDestination="${outputHTTPActive}${hostsDefault}"
-                local domainOutput="${outputHTTPActive}${domainsDefault}"
-                local splittedDestination="${outputHTTPActive}${httpCode}"
+                if [[ ${generateHosts} == true ]]
+                then
+                    local outputDestination="${outputHTTPActive}${hostsDefault}"
+                fi
+                
+                if [[ ${plainListDomain} == true ]]
+                then
+                    local domainOutput="${outputHTTPActive}${domainsDefault}"
+                fi
+                
+                if [[ ${splitFiles} == true ]]
+                then
+                    local splittedDestination="${outputHTTPActive}${httpCode}"
+                fi
             ;;
         esac
         
-        # We print / create the inactive file
-        beforeHeader "${outputDestination}"
-        prints 'FullHosts' "${domain}" >> ${outputDestination}
+        if [[ ${generateHosts} == true && ${outputDestination} != '' ]]
+        then
+            # We print / create the inactive file
+            beforeHeader "${outputDestination}"
+            prints 'FullHosts' "${domain}" >> ${outputDestination}
+        fi
         
         if [[ ${plainListDomain} == true && ${domainOutput} != '' ]]
         then
@@ -770,7 +827,7 @@ generateStatusFile(){
             then
                 generateAnalyticFile 'Down' "${upStatus}"
                 case ${domain} in
-                    *.doubleclick.net|*.liveadvert.com)
+                    *.canalblog.com|*.doubleclick.net|*.liveadvert.com|*.skyrock.com|*.tumblr.com)
                         # We update the source
                         local source='SPECIAL'
                         # We generate the host file
