@@ -296,25 +296,53 @@ dos2unix $TRAVIS_BUILD_DIR/.input_sources/*/*/ips.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/*/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 cat $TRAVIS_BUILD_DIR/.input_sources/*/*/ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 
+_combinedips=$TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+_combinedips_tmp=$TRAVIS_BUILD_DIR/.input_sources/combined-ips-tmp.txt
+
 # *****************
 # Activate Dos2Unix
 # *****************
 
-dos2unix $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+dos2unix $_combinedips
 
 # ******************************************
 # Trim Empty Line at Beginning of Input File
 # ******************************************
 
-grep '[^[:blank:]]' < $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt > $TRAVIS_BUILD_DIR/.input_sources/combined-ips-tmp.txt
-sudo mv $TRAVIS_BUILD_DIR/.input_sources/combined-ips-tmp.txt $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
+grep '[^[:blank:]]' < $_combinedips > $_combinedips_tmp && mv $_combinedips_tmp $_combinedips
+
+# ***************************************************************************************************
+# Run our Cleaner to remove all Invalid IP's from 
+# https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
+# ***************************************************************************************************
+
+printf '\n%s\n%s\n%s\n\n' "#################################" "Stripping out Invalid IP Addresses" "#################################"
+
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/ips-invalid.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/ips-invalid.txt
+
+_invalidips=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/ips-invalid.txt
+_invalidipstemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/ips-invalid-temp.txt
+
+sort -u $_invalidips -o $_invalidips
+
+awk 'NR==FNR{a[$0];next} !($0 in a)' $_invalidips $_combinedips > $_invalidipstemp && mv $_invalidipstemp $_combinedips
+
+sort -u $_combinedips -o $_combinedips
+
+printf '\n%s\n%s\n%s\n\n' "######################################" "END: Stripping out Invalid IP Addresses" "######################################"
+
+# *****************
+# Activate Dos2Unix
+# *****************
+
+dos2unix $_combinedips
 
 # *************************************************************
 # Join all lists together into one big list for superhosts.deny
 # *************************************************************
 
-cat $TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
-cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt >> $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
+cat $_combinedips >> $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
+cat $_combinedlist >> $TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 
 # *****************
 # Activate Dos2Unix
@@ -403,7 +431,6 @@ sudo cp $_superhostsdenybare $_superhostsdeny
 # ***************************************
 
 sudo chown -R travis:travis $TRAVIS_BUILD_DIR
-#ls -la $TRAVIS_BUILD_DIR/.dev-tools/
 
 # ***************************************************************
 # Start and End Strings to Search for to do inserts into template
