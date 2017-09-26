@@ -50,6 +50,6 @@ sudo bash $TRAVIS_BUILD_DIR/.dev-tools/_funceble/funceble --cmd-before-end "bash
 # Update Raw Links
 # ****************
 
-curl "https://hosts.ubuntu101.co.za/update_hosts.php"
+wget -qO- https://hosts.ubuntu101.co.za/update_hosts.php &> /dev/null
 
 exit 0
