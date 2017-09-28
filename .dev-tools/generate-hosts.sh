@@ -667,19 +667,6 @@ sudo rm $TRAVIS_BUILD_DIR/superhosts.deny
 sudo rm $TRAVIS_BUILD_DIR/domains.list
 sudo rm $TRAVIS_BUILD_DIR/ips.list
 
-
-# ******************
-# Truncate All Files
-# ******************
-
-sudo truncate -s 0 $_falsepositives
-sudo truncate -s 0 $_combinedlist
-sudo truncate -s 0 $_combinedips
-sudo truncate -s 0 $_combined_superhosts
-sudo truncate -s 0 $_input1
-sudo truncate -s 0 $_input2
-sudo truncate -s 0 $_input3
-
 # ****************************
 # All Done we Exit and Move On
 # ****************************
