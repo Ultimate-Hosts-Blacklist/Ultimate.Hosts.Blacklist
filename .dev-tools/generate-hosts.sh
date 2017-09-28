@@ -336,8 +336,7 @@ sort -u $_invalidips -o $_invalidips
 
 awk 'NR==FNR{a[$0];next} !($0 in a)' $_invalidips $_combinedips > $_invalidipstemp && mv $_invalidipstemp $_combinedips
 
-#sort -u $_combinedips -o $_combinedips
-sort -o $_combinedips -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_combinedips
+sort -o $_combinedips -u -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_combinedips
 
 
 printf '\n%s\n%s\n%s\n\n' "######################################" "END: Stripping out Invalid IP Addresses" "######################################"
@@ -383,8 +382,7 @@ _input3=$TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 # ***********************************************
 
 sort -u $_input1 -o $_input1
-#sort -u $_input2 -o $_input2
-sort -o $_input2 -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2
+sort -o $_input2 -u -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2
 sort -u $_input3 -o $_input3
 
 # **********************************************
