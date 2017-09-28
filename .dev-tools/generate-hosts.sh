@@ -336,7 +336,7 @@ sort -u $_invalidips -o $_invalidips
 
 awk 'NR==FNR{a[$0];next} !($0 in a)' $_invalidips $_combinedips > $_invalidipstemp && mv $_invalidipstemp $_combinedips
 
-sort -o $_combinedips -u -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_combinedips
+#sort -o $_combinedips -u -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_combinedips
 
 
 printf '\n%s\n%s\n%s\n\n' "######################################" "END: Stripping out Invalid IP Addresses" "######################################"
@@ -376,13 +376,15 @@ MY_GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
 _input1=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 _input2=$TRAVIS_BUILD_DIR/.input_sources/combined-ips.txt
 _input3=$TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
+_input4=$TRAVIS_BUILD_DIR/.input_sources/combined-ips-uniq.txt
 
 # ***********************************************
 # Sort lists alphabetically and remove duplicates
 # ***********************************************
 
 sort -u $_input1 -o $_input1
-sort -o $_input2 -u -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2
+#sort -o $_input2 -u -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2
+sort -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2 | uniq > $_input4 && mv $_input4 $_input2
 sort -u $_input3 -o $_input3
 
 # **********************************************
