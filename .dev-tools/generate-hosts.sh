@@ -383,7 +383,8 @@ _input3=$TRAVIS_BUILD_DIR/.input_sources/combined-superhosts.txt
 # ***********************************************
 
 sort -u $_input1 -o $_input1
-sort -u $_input2 -o $_input2
+#sort -u $_input2 -o $_input2
+sort -o $_input2 -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2
 sort -u $_input3 -o $_input3
 
 # **********************************************
