@@ -108,6 +108,15 @@ sudo wget https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_
 cat $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt | grep -v '#' | cut -d ' ' -f2 | sed '/^$/d' > $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp_domains.txt && mv $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/temp_domains.txt $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_Michael_Trimms_Hosts/domains.txt
 
+# ***************************************************************************************************************************
+# Get Fresh Data from https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt
+# ***************************************************************************************************************************
+
+sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_quidsup_notrack/*.txt
+sudo wget https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt -O $TRAVIS_BUILD_DIR/.input_sources/_quidsup_notrack/test.txt
+cat $TRAVIS_BUILD_DIR/.input_sources/_quidsup_notrack/test.txt | grep -v '#' | cut -d ' ' -f1 | sed '/^$/d' > $TRAVIS_BUILD_DIR/.input_sources/_quidsup_notrack/temp_domains.txt && mv $TRAVIS_BUILD_DIR/.input_sources/_quidsup_notrack/temp_domains.txt $$TRAVIS_BUILD_DIR/.input_sources/_quidsup_notrack/test.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_quidsup_notrack/test.txt -o $TRAVIS_BUILD_DIR/.input_sources/_quidsup_notrack/test.txt
+
 # ********************************************************************************************************************************
 # Get Fresh Data from Spam404 - http://www.spam404.com/ | https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt
 # ********************************************************************************************************************************
