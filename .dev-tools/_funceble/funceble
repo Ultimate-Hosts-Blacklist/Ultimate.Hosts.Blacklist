@@ -160,10 +160,10 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.09.766'
+travisResultsCommitMessage='V1.2017.09.767'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.09.766 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.09.767 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
