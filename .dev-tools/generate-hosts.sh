@@ -193,7 +193,7 @@ _combinedlist=$TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 printf '\n%s\n%s\n%s\n\n' "##########################" "Stripping out Dead Domains" "##########################"
 
-sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/dead-domains-ALL-combined.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/DOMAINS-dead.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
 
 _deaddomains=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/dead-domains.txt
 _deadtemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/temp_dead_domains.txt
@@ -211,20 +211,20 @@ printf '\n%s\n%s\n%s\n\n' "###############################" "END: Stripping out 
 # Run our Cleaner to remove all False Positive Domains from https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
 # *******************************************************************************************************************************************************************
 
-printf '\n%s\n%s\n%s\n\n' "####################################" "Stripping out False Positive Domains" "####################################"
+#printf '\n%s\n%s\n%s\n\n' "####################################" "Stripping out False Positive Domains" "####################################"
 
-sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/false-positives.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/false-positives.txt
+#sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/false-positives.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/false-positives.txt
 
-_falsepositives=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/false-positives.txt
-_falsepositivestemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/temp_false_positives.txt
+#_falsepositives=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/false-positives.txt
+#_falsepositivestemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/temp_false_positives.txt
 
-sort -u $_falsepositives -o $_falsepositives
+#sort -u $_falsepositives -o $_falsepositives
 
-awk 'NR==FNR{a[$0];next} !($0 in a)' $_falsepositives $_combinedlist > $_falsepositivestemp && mv $_falsepositivestemp $_combinedlist
+#awk 'NR==FNR{a[$0];next} !($0 in a)' $_falsepositives $_combinedlist > $_falsepositivestemp && mv $_falsepositivestemp $_combinedlist
 
-sort -u $_combinedlist -o $_combinedlist
+#sort -u $_combinedlist -o $_combinedlist
 
-printf '\n%s\n%s\n%s\n\n' "#########################################" "END: Stripping out False Positive Domains" "#########################################"
+#printf '\n%s\n%s\n%s\n\n' "#########################################" "END: Stripping out False Positive Domains" "#########################################"
 
 # *******************************************************************************************************************************************************************
 # Run our Cleaner to remove all Whitelisted Domains from https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
@@ -232,7 +232,7 @@ printf '\n%s\n%s\n%s\n\n' "#########################################" "END: Stri
 
 printf '\n%s\n%s\n%s\n\n' "#################################" "Stripping out Whitelisted Domains" "#################################"
 
-sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/whitelist-domains.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/whitelist-domains.txt
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/DOMAINS-whitelist.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/whitelist-domains.txt
 
 _whitelist=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/whitelist-domains.txt
 _whitelisttemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/temp_whitelisted.txt
@@ -325,21 +325,21 @@ grep '[^[:blank:]]' < $_combinedips > $_combinedips_tmp && mv $_combinedips_tmp 
 # https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
 # ***************************************************************************************************
 
-printf '\n%s\n%s\n%s\n\n' "#################################" "Stripping out Invalid IP Addresses" "#################################"
+#printf '\n%s\n%s\n%s\n\n' "#################################" "Stripping out Invalid IP Addresses" "#################################"
 
-sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/ips-invalid.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/ips-invalid.txt
+#sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/ips-invalid.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/ips-invalid.txt
 
-_invalidips=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/ips-invalid.txt
-_invalidipstemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/ips-invalid-temp.txt
+#_invalidips=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/ips-invalid.txt
+#_invalidipstemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/ips-invalid-temp.txt
 
-sort -u $_invalidips -o $_invalidips
+#sort -u $_invalidips -o $_invalidips
 
-awk 'NR==FNR{a[$0];next} !($0 in a)' $_invalidips $_combinedips > $_invalidipstemp && mv $_invalidipstemp $_combinedips
+#awk 'NR==FNR{a[$0];next} !($0 in a)' $_invalidips $_combinedips > $_invalidipstemp && mv $_invalidipstemp $_combinedips
 
 #sort -o $_combinedips -u -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_combinedips
 
 
-printf '\n%s\n%s\n%s\n\n' "######################################" "END: Stripping out Invalid IP Addresses" "######################################"
+#printf '\n%s\n%s\n%s\n\n' "######################################" "END: Stripping out Invalid IP Addresses" "######################################"
 
 # *****************
 # Activate Dos2Unix
