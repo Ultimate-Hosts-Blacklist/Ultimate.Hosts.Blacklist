@@ -208,25 +208,6 @@ sort -u $_combinedlist -o $_combinedlist
 printf '\n%s\n%s\n%s\n\n' "###############################" "END: Stripping out Dead Domains" "###############################"
 
 # *******************************************************************************************************************************************************************
-# Run our Cleaner to remove all False Positive Domains from https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
-# *******************************************************************************************************************************************************************
-
-#printf '\n%s\n%s\n%s\n\n' "####################################" "Stripping out False Positive Domains" "####################################"
-
-#sudo wget https://raw.githubusercontent.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects/master/false-positives.txt -O $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/false-positives.txt
-
-#_falsepositives=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/false-positives.txt
-#_falsepositivestemp=$TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Domains/temp_false_positives.txt
-
-#sort -u $_falsepositives -o $_falsepositives
-
-#awk 'NR==FNR{a[$0];next} !($0 in a)' $_falsepositives $_combinedlist > $_falsepositivestemp && mv $_falsepositivestemp $_combinedlist
-
-#sort -u $_combinedlist -o $_combinedlist
-
-#printf '\n%s\n%s\n%s\n\n' "#########################################" "END: Stripping out False Positive Domains" "#########################################"
-
-# *******************************************************************************************************************************************************************
 # Run our Cleaner to remove all Whitelisted Domains from https://github.com/mitchellkrogza/CENTRAL-REPO.Dead.Inactive.Whitelisted.Domains.For.Hosts.Projects
 # *******************************************************************************************************************************************************************
 
