@@ -27,6 +27,9 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 <a href="https://hosts.ubuntu101.co.za/domains.list">domains-list (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/ips.list">ip-list (RAW)</a>
 
+************************************************
+Click the link below to see all the sources used as input data to create this hosts list.
+
 ## [SOURCES OF INPUT DATA USED TO CREATE THIS HOSTS FILE](#information-sources)
 
 ************************************************
