@@ -91,47 +91,48 @@ To keep this Github repo small, all files are provided in a zip only format. Som
 You can also fork a copy of this repo, create a new unique folder in .input_sources, call your file domains.txt and simply send a Pull Request to the repository and it will be added.
 
 ************************************************
-## INFORMATION SOURCES
+## INFORMATION DATA SOURCES / CREDITS & THANKS
 
 This hosts files is generated from multiple input sources, collated, sorted for duplicates and merged into one single hosts file.
-The sources of input data information are as follows.
 
-- 2o7.net [https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts]
-- Adblock No-Coin List [https://github.com/hoshsadiq/adblock-nocoin-list/blob/master/hosts.txt]
-- MoaAB adblock.makala.is [http://adblock.mahakala.is/]
-- add.Risk [https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts]
-- add.Spam [https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts]
-- lists.disconnect.me [https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt]
-- Airelle's Anti-Sex Hosts [http://rlwpx.free.fr/WPFF/hsex.7z]
-- Anti-PopAds [https://raw.githubusercontent.com/Yhonay/antipopads/master/popads.txt]
-- Bad JAV Sites [https://pastebin.com/raw/kDqbYwWr]
-- Badd Boyz Hosts [https://github.com/mitchellkrogza/Badd-Boyz-Hosts]
-- BadIPS.com [https://www.badips.com/]
-- Firehol [https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset]
-- Hosts ADBlock [https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt]
-- JustDomains [http://mirror1.malwaredomains.com/files/justdomains]
-- KADHosts [https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt]
-- malc0de [http://malc0de.com/bl/]
-- Malware Domain List [https://www.malwaredomainlist.com/hostslist/hosts.txt]
-- Michael Trimm's Hosts [https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt]
-- pl-host file [https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt]
-- Quidsup NoTrack [https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt]
-- Ransomware Tracker Domain Blocklist [https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt]
-- ShallaList [http://www.shallalist.de/]
-- somewhocares.org [http://someonewhocares.org/hosts/]
-- Spam404 [https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt]
-- Top Attacking Wordpress IP's [https://github.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites]
-- Blocklist.de [http://www.blocklist.de/en/index.html]
-- YoYo.org [https://pgl.yoyo.org/as/serverlist.php?showintro=0;hostformat=hosts]
-- ZeusTracker [https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist]
-- uBlock Filters Plus [https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt]
+The sources of the input data information are as follows.
+
+- [2o7.net](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts)
+- [Adblock No-Coin List](https://github.com/hoshsadiq/adblock-nocoin-list/blob/master/hosts.txt)
+- [MoaAB adblock.makala.is](http://adblock.mahakala.is/)
+- [add.Risk](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts)
+- [add.Spam](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts)
+- [lists.disconnect.me](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
+- [Airelle's Anti-Sex Hosts](http://rlwpx.free.fr/WPFF/hsex.7z)
+- [Anti-PopAds](https://raw.githubusercontent.com/Yhonay/antipopads/master/popads.txt)
+- [Bad JAV Sites](https://pastebin.com/raw/kDqbYwWr)
+- [Badd Boyz Hosts](https://github.com/mitchellkrogza/Badd-Boyz-Hosts)
+- [BadIPS.com](https://www.badips.com/)
+- [Firehol](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset)
+- [Hosts ADBlock](https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt)
+- [JustDomains](http://mirror1.malwaredomains.com/files/justdomains)
+- [KADHosts](https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt)
+- [malc0de](http://malc0de.com/bl/)
+- [Malware Domain List](https://www.malwaredomainlist.com/hostslist/hosts.txt)
+- [Michael Trimm's Hosts](https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt)
+- [pl-host file](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt)
+- [Quidsup NoTrack](https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt)
+- [Ransomware Tracker Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)
+- [ShallaList](http://www.shallalist.de/)
+- [somewhocares.org](http://someonewhocares.org/hosts/)
+- [Spam404](https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt)
+- [Top Attacking Wordpress IP's](https://github.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites)
+- [Blocklist.de](http://www.blocklist.de/en/index.html)
+- [YoYo.org](https://pgl.yoyo.org/as/serverlist.php?showintro=0;hostformat=hosts)
+- [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
+- [uBlock Filters Plus](https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt)
 
 ************************************************
 ## COLLABORATORS & CONTRIBUTORS
 
-- Nissar Chababy [https://github.com/funilrys]
-- Maravento [https://github.com/maravento]
-- xxcriticxx [https://github.com/xxcriticxx]
+- [Nissar Chababy](https://github.com/funilrys)
+- [Maravento](https://github.com/maravento)
+- [xxcriticxx](https://github.com/xxcriticxx)
 
 ************************************************
 ## Please Help Support this Project
