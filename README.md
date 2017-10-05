@@ -16,7 +16,7 @@ _______________
  :exclamation: **Yes you did indeed read those numbers correctly** :exclamation: 
 ____________________
 
-# [SOURCES OF INPUT DATA](##information-sources)
+# [SOURCES OF INPUT DATA](#information-sources)
 
 
 - RAW FILE SOURCES
