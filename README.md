@@ -129,6 +129,8 @@ The sources of input data information are as follows.
 ## COLLABORATORS & CONTRIBUTORS
 
 - Nissar Chababy [https://github.com/funilrys]
+- @maravento
+- @xxriticxx
 
 ************************************************
 ## Please Help Support this Project
