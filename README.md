@@ -88,7 +88,7 @@ You can also fork a copy of this repo, create a new unique folder in .input_sour
 ************************************************
 ## INFORMATION SOURCES
 
-This hosts files is generated from multiple inout sources, collated, sorted for duplicates and merged into one single hosts file.
+This hosts files is generated from multiple input sources, collated, sorted for duplicates and merged into one single hosts file.
 The sources of input data information are as follows.
 
 - 2o7.net [https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts]
