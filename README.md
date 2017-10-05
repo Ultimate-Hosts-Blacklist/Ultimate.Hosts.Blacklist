@@ -124,6 +124,7 @@ The sources of input data information are as follows.
 - Blocklist.de [http://www.blocklist.de/en/index.html]
 - YoYo.org [https://pgl.yoyo.org/as/serverlist.php?showintro=0;hostformat=hosts]
 - ZeusTracker [https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist]
+- uBlock Filters Plus [https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt]
 
 ************************************************
 ## COLLABORATORS & CONTRIBUTORS
