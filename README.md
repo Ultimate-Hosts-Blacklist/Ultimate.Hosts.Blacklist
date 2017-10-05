@@ -16,10 +16,12 @@ _______________
  :exclamation: **Yes you did indeed read those numbers correctly** :exclamation: 
 ____________________
 
-- RAW FILE SOURCES
+## RAW FILE SOURCES
+
+The links below will direct you to the raw unzipped versions of the hosts files in this repo.
 
 <a href="https://hosts.ubuntu101.co.za/hosts">hosts for Unix systems (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/hosts.windows">hosts for Windows systems (CRLF) (RAW)</a> | **<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/update-hosts-windows.bat">Try the Windows Installer / Updater</a><br/>**
+<a href="https://hosts.ubuntu101.co.za/hosts.windows">hosts for Windows systems (CRLF) (RAW)</a> | **<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat">Try the Windows Installer / Updater</a><br/>**
 <a href="https://hosts.ubuntu101.co.za/hosts.deny">hosts.deny (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/superhosts.deny">superhosts.deny (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/domains.list">domains-list (RAW)</a><br/>
@@ -64,6 +66,7 @@ editor.
 **Linux, Mac OS X, iOS, Android**: `/etc/hosts.deny`
 
 **Windows Systems**: `%SystemRoot%\system32\drivers\etc\hosts`
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat">Try the Windows Installer Batch Script</a><br/>**
 
 ************************************************
 ## WHERE CAN I DOWNLOAD THE RAW UNZIPPED FILES FROM?
