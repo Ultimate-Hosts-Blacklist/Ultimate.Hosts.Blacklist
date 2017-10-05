@@ -30,7 +30,7 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 ************************************************
 Click the link below to see all the sources used as input data to create this hosts list.
 
-## [SOURCES OF INPUT DATA USED TO CREATE THIS HOSTS FILE](#information-sources)
+## [SOURCES OF INPUT DATA USED TO CREATE THIS HOSTS FILE](#information-data-sources)
 
 ************************************************
 ## WHAT IS A HOSTS FILE?
@@ -91,7 +91,9 @@ To keep this Github repo small, all files are provided in a zip only format. Som
 You can also fork a copy of this repo, create a new unique folder in .input_sources, call your file domains.txt and simply send a Pull Request to the repository and it will be added.
 
 ************************************************
-## INFORMATION DATA SOURCES / CREDITS & THANKS
+## INFORMATION DATA SOURCES
+
+### CREDITS & THANKS
 
 This hosts files is generated from multiple input sources, collated, sorted for duplicates and merged into one single hosts file.
 
