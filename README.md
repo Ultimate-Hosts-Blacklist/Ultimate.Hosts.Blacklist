@@ -16,9 +16,6 @@ _______________
  :exclamation: **Yes you did indeed read those numbers correctly** :exclamation: 
 ____________________
 
-# [SOURCES OF INPUT DATA](#information-sources)
-
-
 - RAW FILE SOURCES
 
 <a href="https://hosts.ubuntu101.co.za/hosts">hosts for Unix systems (RAW)</a><br/>
@@ -27,6 +24,8 @@ ____________________
 <a href="https://hosts.ubuntu101.co.za/superhosts.deny">superhosts.deny (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/domains.list">domains-list (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/ips.list">ip-list (RAW)</a>
+
+## [SOURCES OF INPUT DATA USED TO CREATE THIS HOSTS FILE](#information-sources)
 
 ************************************************
 ## WHAT IS A HOSTS FILE?
