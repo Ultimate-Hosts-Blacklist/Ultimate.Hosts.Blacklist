@@ -97,7 +97,7 @@ stableVersion=false
 devVersion=true
 
 # Version number
-versionNumber='dev-1.4.0+44'
+versionNumber='dev-1.4.0+45'
 ################################################################################
 # We log the date
 date > ${logOutput}
@@ -570,8 +570,11 @@ cleanOutput(){
     # We set the directory we need to clean
     local output=${currentDir}output/
     
-    # We log && print message
-    printf "Cleaning generated files"
+    if [[ ${quiet} == false ]]
+    then
+        # We log && print message
+        printf "Cleaning generated files"
+    fi
     
     # Search and delete everything except .gitignore and .keep
     find ${output} ! -name '.gitignore' ! -name '.keep' -type f -exec rm {} \;
@@ -579,8 +582,11 @@ cleanOutput(){
     # Only for dev: We delete temporary files
     find ${currentDir} -name '*~' -type f -exec rm {} \;
     
-    # We log && print message
-    printf "  ${cyan}✔${normal}\n"
+    if [[ ${quiet} == false ]]
+    then
+        # We log && print message
+        printf "  ${cyan}✔${normal}\n"
+    fi
 }
 
 ########################## Get list of directory to create #####################

@@ -90,8 +90,8 @@ customIP='0.0.0.0'
 # DO NOT USE THIS IF YOU DON'T KNOW HOW TO DEBUG FROM OUTPUTTED FILE
 debugUnknown=false
 
-# File already treated
-fileAlreadyTreated=false
+# List of file to append comments and blank lines
+fileToAppendComments=""
 
 # Domain to filter
 toFilter=''
@@ -160,16 +160,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.10.784'
+travisResultsCommitMessage='V1.2017.10.785'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.10.784 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.10.785 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+192'
+versionNumber='dev-1.4.0+207'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -312,7 +312,8 @@ inactiveOrPotentiallyCodes=('400' '403' '402' '404' '409' '410' '412' '414' '415
 #
 # @CalledBy getReferer
 ################################################################################
-beforeHeader(){
+beforeHeader()
+{
     # We get the file we're gonna print into
     # file <string>
     local fileToCreate="${1}"
@@ -597,7 +598,8 @@ prints()
 #
 # @CalledBy timeout, getExpirationDate
 ################################################################################
-timeout (){
+timeout ()
+{
     # type <int|string>
     time=${1}
     
@@ -626,25 +628,6 @@ generateHostsFile()
     
     if [[ ${generateHosts} == true || ${plainListDomain} == true ]]
     then
-        # We clean the files in case we need to start from begining
-        if [[ ${fileAlreadyTreated} == false || ${startFromBegining} == true ]]
-        then
-            if [[ ${cleanedDone} == false ]]
-            then
-                toClean=("${outputUpHost}" "${outputUpDomain}" "${outputDownHost}" "${outputDownDomain}" "${outputInvalidHost}" "${outputInvalidDomain}" "${outputUnifiedResult}" "${outputUpResult}" "${outputDownResult}" "${outputInvalidResult}")
-                
-                # We delete the result.txt file here because generateHostsFile() is
-                # always called before generateUnifiedFile()
-                for toDelete in ${toClean[*]}
-                do
-                    if [[ -f ${toDelete} ]]
-                    then
-                        rm -f ${toDelete}
-                    fi
-                done
-                cleanedDone=true
-            fi
-        fi
         
         case ${type} in
             'up'|'Up'|'UP'|'active'|'Active'|'ACTIVE'|'valid'|'Valid'|'VALID')
@@ -801,7 +784,8 @@ generateUnifiedFile()
 #
 # @CalledBy errorHandle
 ################################################################################
-generateStatusFile(){
+generateStatusFile()
+{
     # We get the type of the request
     # type <string>
     local type="${1}"
@@ -1236,7 +1220,8 @@ errorHandle()
 #
 # @CalledBy getReferer
 ################################################################################
-noRefererLog(){
+noRefererLog()
+{
     if [[ ${outputLogs} == true ]]
     then
         # We save the output of the captured date into log directory
@@ -1253,7 +1238,8 @@ noRefererLog(){
 #
 # @CalledBy getExpirationDate
 ################################################################################
-getReferer(){
+getReferer()
+{
     # initialDomain <string>
     local initialDomain="${1}"
     
@@ -1471,7 +1457,8 @@ getReferer(){
 #
 # @CalledBy getExpirationDate
 ################################################################################
-whoisLog(){
+whoisLog()
+{
     if [[ ${outputLogs} == true ]]
     then
         # We save the output of whois into log directory
@@ -1489,7 +1476,8 @@ whoisLog(){
 #
 # @CalledBy formatDate
 ################################################################################
-dateFormatlog(){
+dateFormatlog()
+{
     if [[ ${outputLogs} == true ]]
     then
         # We save the output of the captured date into log directory
@@ -1506,7 +1494,8 @@ dateFormatlog(){
 #
 # @CalledBy getExpirationDate
 ################################################################################
-getHTTPCode(){
+getHTTPCode()
+{
     if [[ ${httpCodeStatus} == true ]]
     then
         # We get the HTTP header
@@ -1527,7 +1516,8 @@ getHTTPCode(){
 #
 # @CalledBy None
 ################################################################################
-getExpirationDate(){
+getExpirationDate()
+{
     # domain <string>
     # Domain given by user
     domain="$(echo ${1} |awk '{print tolower($0)}')"
@@ -1623,7 +1613,8 @@ getExpirationDate(){
 #
 # @CalledBy formatDate
 ################################################################################
-dateToLower(){
+dateToLower()
+{
     expirationDate=$(echo "${expirationDate}" | awk '{print tolower($0)}')
 }
 
@@ -1632,7 +1623,8 @@ dateToLower(){
 #
 # @CalledBy formatDate
 ################################################################################
-convertOrShortenMonth(){
+convertOrShortenMonth()
+{
     # numericMonth <int>
     local numericMonth=${1}
     
@@ -1685,7 +1677,8 @@ convertOrShortenMonth(){
 #
 # @CalledBy formatDate
 ################################################################################
-convert1To2digits(){
+convert1To2digits()
+{
     # number <int>
     local number="${1}"
     # monthOrDay <strin>
@@ -1984,7 +1977,9 @@ travisAutoSave()
         # We calculate the time before commit is possible
         local timeOfStart=$(((${executionStart}+${travisAutoSaveMinutes}*60)))
         
-        if [[ ${currentTimes} -ge ${timeOfStart} || $(tail -1 ${file}) =~ ${domain} ]]
+        local escapedDomain=$(escapeString "${domain}" "domain")
+        
+        if [[ ${currentTimes} -ge ${timeOfStart} || $(grep -v \# ${file} | tail -1) =~ ${escapedDomain} ]]
         then
             # We print the percentage into percentage.txt
             percentageLog
@@ -1992,12 +1987,13 @@ travisAutoSave()
             # We check/change files permissions
             travisPermissions
             
-            if [[ ${domain} =~ ${regexCheckPoint} && $(tail -1 ${file}) =~ "${domain}" ]]
+            if [[ ${domain} =~ ${regexCheckPoint} && $(grep -v \# ${file} | tail -1) =~ ${escapedDomain} ]]
             then
                 if [[ ${commandBeforeEnd} != '' ]]
                 then
                     $(${commandBeforeEnd})
                 fi
+                deletOnlyCommentedFiles ${escapedDomain}
                 
                 git add --all && git commit -a -m "${travisResultsCommitMessage} [ci skip]"
             else
@@ -2054,7 +2050,8 @@ percentage()
 #
 # @CalledBy Arguments Handle
 ################################################################################
-testLogOutput(){
+testLogOutput()
+{
     # domain <string>
     # The domain to checl
     local domain="${1}"
@@ -2111,7 +2108,8 @@ testLogOutput(){
 #
 # @CalledBy main
 ################################################################################
-cleanPercentageLog(){
+cleanPercentageLog()
+{
     if [[ -f ${outputPercentageLog} ]]
     then
         rm ${outputPercentageLog} 2&> /dev/null
@@ -2123,7 +2121,8 @@ cleanPercentageLog(){
 #
 # @CalledBy main
 ################################################################################
-printHeaderOnScreen(){
+printHeaderOnScreen()
+{
     # We only print message if ${quiet} == false
     if [[ ${quiet} == false ]]
     then
@@ -2141,7 +2140,8 @@ printHeaderOnScreen(){
 #
 # @CalledBy main
 ################################################################################
-escapeString(){
+escapeString()
+{
     # stringToEscape <string>
     local stringToEscape="${1}"
     
@@ -2163,7 +2163,8 @@ escapeString(){
 #
 # @CalledBy main
 ################################################################################
-updateAutoContinueLog(){
+updateAutoContinueLog()
+{
     # regexEscapedFile <string>
     local regexEscapedFile="${1}"
     
@@ -2179,7 +2180,8 @@ updateAutoContinueLog(){
 #
 # @CalledBy main
 ################################################################################
-bypass(){
+bypass()
+{
     # This is use to match [funceble skip]
     local regexBypass='\[funceble\sskip\]'
     
@@ -2208,7 +2210,8 @@ bypass(){
 #
 # @CalledBy main
 ################################################################################
-percentageLog(){
+percentageLog()
+{
     if [[ ${showPercentage} == true && ${numberOfTested} > 0 ]]
     then
         # We clean it before generating
@@ -2219,6 +2222,79 @@ percentageLog(){
         prints 'Percentage' && prints 'Percentage' >> ${outputPercentageLog}
     fi
 }
+
+############################# Format domain ####################################
+# This function is there to apply DRY.
+# Between it's purpose it to get a script-readable domain
+#
+# @CalledBy main
+################################################################################
+formatDomain()
+{
+    # Domain we read from file <string>
+    local readDomain="${1}"
+    
+    domain=$(echo "${readDomain}"|cut -d ' ' -f2)
+    
+    # We manage the case of a comment at the end of a line
+    domain=$(echo "${domain}" | cut -d '#' -f1)
+}
+
+############################# Keep Comments ####################################
+# This function is there to avoid copyright or other comments breaking.
+#
+# @CalledBy main
+################################################################################
+keepComments()
+{
+    local originalComment="${1}"
+    
+    if [[ ${fileToAppendComments} == "" ]]
+    then
+        if [[ ${generateHosts} == true ]]
+        then
+            fileToAppendComments="${fileToAppendComments} ${outputUpHost} ${outputDownHost} ${outputInvalidHost} ${outputHTTPPotentiallyActive}${hostsDefault} ${outputHTTPInactiveOrPotentially}${hostsDefault} ${outputHTTPActive}${hostsDefault}"
+        fi
+        
+        if [[ ${plainListDomain} == true ]]
+        then
+            fileToAppendComments="${fileToAppendComments} ${outputUpDomain} ${outputDownDomain} ${outputInvalidDomain} ${outputHTTPPotentiallyActive}${domainsDefault} ${outputHTTPInactiveOrPotentially}${domainsDefault} ${outputHTTPActive}${domainsDefault}"
+        fi
+    fi
+    
+    for data in $(echo ${fileToAppendComments})
+    do
+        beforeHeader "${data}"
+        printf "%s\n" "${originalComment}" >> ${data}
+    done
+}
+
+########################### Delete Only Commented Files ########################
+# This function delete all file (generated by keepComments())
+# which contains only comments
+#
+# @CalledBy main
+################################################################################
+deletOnlyCommentedFiles()
+{
+    # Domain in regex format <string>
+    local escapedDomain="${1}"
+    
+    if [[ ${fileToAppendComments} != "" ]]
+    then
+        if [[ $(grep -v \# ${file} | tail -1) =~ ${escapedDomain} ]]
+        then
+            for data in $(echo ${fileToAppendComments})
+            do
+                if [[ $(grep -v \# ${data}) == '' ]]
+                then
+                    rm ${data}
+                fi
+            done
+        fi
+    fi
+}
+
 
 ################################## Main ########################################
 # Main function used to call other function
@@ -2271,8 +2347,6 @@ main()
                 # If the content match the previously assigned regex variable
                 if [[ "${continueLogContent}" =~ ${regexDomainToMatch} ]]
                 then
-                    fileAlreadyTreated=true
-                    
                     # Then we extract the domain name of the original file
                     local matchedDomain=${BASH_REMATCH[1]}
                     
@@ -2296,26 +2370,32 @@ main()
                     # header impression
                     local headerPrinted=false
                     
-                    if [[ $(tail -1 ${file}) != ${matchedDomain} ]]
+                    if [[ ! $(grep -v \# ${file} | tail -1) =~ ${escapedDomain} ]]
                     then
                         # We get the list of domain from last tested until the end
                         # and pass it to the loop where we're gonna filter and
                         # test the domain/IP.
-                        sed -ne '/^'${escapedDomain}'/{s///; :a' -e 'n;p;ba' -e '}' ${file} | while read domain
+                        sed -ne '/'${escapedDomain}'/{s///; :a' -e 'n;p;ba' -e '}' ${file} | while read domain
                         do
                             # In case the file contain comment or empty line we continue to
                             # the next line
                             case "${domain}" in
-                                ''|\#*|*localhost*|local|broadcasthost)
+                                \#*|'')
+                                    keepComments "${domain}"
+                                    continue
+                                ;;
+                                *localhost*|local|broadcasthost)
+                                    keepComments "${domain}"
+                                    
+                                    formatDomain ${domain}
+                                    # We update the value of the domain name
+                                    updateAutoContinueLog "${escapedFile}" "${domain}"
                                     continue
                                 ;;
                                 '127.0.0.1'*|'0.0.0.0'*)
-                                    domain=$(echo "${domain}"|cut -d ' ' -f2)
+                                    formatDomain "${domain}"
                                 ;;
                             esac
-                            
-                            # We manage the case of a comment at the end of a line
-                            domain=$(echo "${domain}" | cut -d '#' -f1)
                             
                             # We escape our filter in order to hava a valid regex format
                             regexFilter=$(escapeString ${toFilter} 'domain')
@@ -2372,6 +2452,9 @@ main()
                 # We print the header
                 printHeaderOnScreen
                 
+                # We clean the files from last sessions
+                ./tool -q -c
+                
                 # We reset the number of tested
                 numberOfTested=0
                 
@@ -2384,6 +2467,10 @@ main()
                 # We reset the number of invalid
                 numberOfInvalid=0
                 
+                # We escape the file name is order to be used as
+                # regex variable
+                local escapedFile=$(escapeString "${file}" "file")
+                
                 # We read the list of the file and pass the domain (1 line = 1 domain)
                 # to getExpirationDate
                 while read domain
@@ -2391,16 +2478,22 @@ main()
                     # In case the file contain comment or empty line we continue to
                     # the next line
                     case "${domain}" in
-                        ''|\#*|*localhost*|local|broadcasthost)
+                        \#*|'')
+                            keepComments "${domain}"
+                            continue
+                        ;;
+                        *localhost*|local|broadcasthost)
+                            keepComments "${domain}"
+                            
+                            formatDomain ${domain}
+                            # We update the value of the domain name
+                            updateAutoContinueLog "${escapedFile}" "${domain}"
                             continue
                         ;;
                         '127.0.0.1'*|'0.0.0.0'*)
-                            domain=$(echo "${domain}" | cut -d ' ' -f2)
+                            formatDomain "${domain}"
                         ;;
                     esac
-                    
-                    # We manage the case of a comment at the end of a line
-                    domain=$(echo "${domain}" | cut -d '#' -f1)
                     
                     # We escape our filter in order to hava a valid regex format
                     regexFilter=$(escapeString ${toFilter} 'domain')
@@ -2421,9 +2514,6 @@ main()
                         # according to its file.
                         if [[ "$(cat ${continueLog})" =~ ${file} ]]
                         then
-                            # We escape the file name is order to be used as
-                            # regex variable
-                            local escapedFile=$(escapeString "${file}" "file")
                             # We escaoe the domain name in order to be used as
                             # regex variable
                             local escapedDomain=$(escapeString "${domain}" "domain")
@@ -2442,8 +2532,13 @@ main()
                     # We commit if time += ${travisAutoSaveMinutes}
                     travisAutoSave
                 done < ${file}
+                
+                # We commit if time += ${travisAutoSaveMinutes}
+                travisAutoSave
             fi
             
+            # We commit if time += ${travisAutoSaveMinutes}
+            travisAutoSave
         else
             # We exit in case file don't exit or is not readable
             echo "File not found or unreadable"
@@ -2456,6 +2551,8 @@ main()
     endExecutionTime
     
     percentageLog
+    
+    deletOnlyCommentedFiles ${escapedDomain}
 }
 
 ################################## Switch Debug ################################
@@ -2463,7 +2560,8 @@ main()
 #
 # @CalledBy Arguments Handle Section
 ################################################################################
-switchDebug(){
+switchDebug()
+{
     case ${debugUnknown} in
         true)
             debugUnknown=false
@@ -2484,7 +2582,8 @@ switchDebug(){
 #
 # @CalledBy Arguments Handle Section
 ################################################################################
-switchAutoContinue(){
+switchAutoContinue()
+{
     case ${autoContinue} in
         true)
             autoContinue=false
@@ -2505,7 +2604,8 @@ switchAutoContinue(){
 #
 # @CalledBy Arguments Handle Section
 ################################################################################
-switchPercentage(){
+switchPercentage()
+{
     case ${showPercentage} in
         true)
             showPercentage=false
@@ -2526,7 +2626,8 @@ switchPercentage(){
 #
 # @CalledBy Arguments Handle Section
 ################################################################################
-switchHttpCodeStatus(){
+switchHttpCodeStatus()
+{
     case ${httpCodeStatus} in
         true)
             httpCodeStatus=false
@@ -2547,7 +2648,8 @@ switchHttpCodeStatus(){
 #
 # @CalledBy Arguments Handle Section
 ################################################################################
-switchPlainListDomain(){
+switchPlainListDomain()
+{
     case ${plainListDomain} in
         true)
             plainListDomain=false
