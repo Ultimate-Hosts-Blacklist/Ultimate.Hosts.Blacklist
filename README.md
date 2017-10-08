@@ -128,6 +128,7 @@ The sources of the input data information are as follows.
 - [YoYo.org](https://pgl.yoyo.org/as/serverlist.php?showintro=0;hostformat=hosts)
 - [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
 - [uBlock Filters Plus](https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt)
+- [YousList - smartadserver and mirrors](https://github.com/yous/YousList)
 
 ************************************************
 ## COLLABORATORS & CONTRIBUTORS
