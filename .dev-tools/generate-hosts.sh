@@ -268,8 +268,8 @@ sort -u $TRAVIS_BUILD_DIR/.input_sources/_Top-Attacking-IP-Addresses-Against-Wor
 # Get Fresh Data from https://lists.blocklist.de/lists/all.txt
 # **********************************************************************
 
-sudo wget https://lists.blocklist.de/lists/all.txt -O $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/all.txt
-cat $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/all.txt >> $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt
+sudo wget https://lists.blocklist.de/lists/all.txt -O $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt
+#cat $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/all.txt >> $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt -o $TRAVIS_BUILD_DIR/.input_sources/_www.blocklist.de/ips.txt
 
 # *****************
