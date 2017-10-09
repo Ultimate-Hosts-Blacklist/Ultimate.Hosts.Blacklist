@@ -364,9 +364,8 @@ _input4=$TRAVIS_BUILD_DIR/.input_sources/combined-ips-uniq.txt
 # ***********************************************
 
 sort -u $_input1 -o $_input1
-#sort -o $_input2 -u -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2
-#sort -t . -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2 | uniq > $_input4 && mv $_input4 $_input2
-sort -t. -k 1.1n -k 2.2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2 | sed 's / * $ //' | sed 's/^[ \s]//;s/[ \s]$//' | sed "/:/d" | uniq > $_input4 && mv $_input4 $_input2
+#sort -t. -k 1.1n -k 2.2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2 | sed 's / * $ //' | sed 's/^[ \s]//;s/[ \s]$//' | sed "/:/d" | uniq > $_input4 && mv $_input4 $_input2
+sort -t . -k 1.1n -k 2.2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2 | sed 's/^[ \s]//;s/[ \s]$//' | sed "/:/d" | uniq > $_input4 && mv $_input4 $_input2
 sort -u $_input3 -o $_input3
 
 # **********************************************
