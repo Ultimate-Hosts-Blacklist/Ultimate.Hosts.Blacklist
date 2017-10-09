@@ -129,6 +129,7 @@ The sources of the input data information are as follows.
 - [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
 - [uBlock Filters Plus](https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt)
 - [YousList - smartadserver and mirrors](https://github.com/yous/YousList)
+- [SMed79 - Various Lists](https://github.com/SMed79)
 
 ************************************************
 ## COLLABORATORS & CONTRIBUTORS
@@ -136,6 +137,7 @@ The sources of the input data information are as follows.
 - [Nissar Chababy](https://github.com/funilrys)
 - [Maravento](https://github.com/maravento)
 - [xxcriticxx](https://github.com/xxcriticxx)
+- [SMed79](https://github.com/SMed79)
 
 ************************************************
 ## Please Help Support this Project
