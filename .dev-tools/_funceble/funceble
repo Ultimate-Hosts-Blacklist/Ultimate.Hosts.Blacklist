@@ -108,6 +108,9 @@ linkScript="https://github.com/funilrys/funceble"
 # If noFiles=true, We don't any results files ==> Not applied to hosts file
 noFiles=false
 
+# If we don't want whois
+noWhois=false
+
 # Number of domain which returns inactive
 numberOfDown=0
 
@@ -160,16 +163,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.10.794'
+travisResultsCommitMessage='V1.2017.10.795'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.10.794 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.10.795 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+208'
+versionNumber='dev-1.4.0+212'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -1243,213 +1246,221 @@ getReferer()
     # initialDomain <string>
     local initialDomain="${1}"
     
-    if [[ ! "${initialDomain}" =~ ${regexIPv4} ]]
+    if [[ ${noWhois} == false ]]
     then
-        # We get the extension of the given domain
-        domainExtension=${initialDomain##*.}
-        
-        # We check if the given domain extension is in our database file
-        if [[ $(cat ${ianaDB}) =~ ${domainExtension} ]]
+        if [[ ! "${initialDomain}" =~ ${regexIPv4} ]]
         then
+            # We get the extension of the given domain
+            domainExtension=${initialDomain##*.}
             
-            case ${domainExtension} in
-                # We handle here the list of extension which are known as
-                # [Not Found] Please report to https://git.io/v5tgo for more
-                # informations
-                ad|al|an|ao|arpa|az|ba|bd|bf|bh|bs|comm|cu|dj|eg|fm|ge|gh|gm|gp|gr|gt|jo|kh|lb|mil|mm|mt|mw|ne|np|nr|pa|ph|pn|pk|py|rr|sd|sr|sv|sz|tj|tp|tt|vi|vn|xx|z|zw)
-                    # We empty the referer variable
-                    referer=''
-                    
-                    # We handle error & check if server is up
-                    errorHandle 'Down'
-                    
-                    return 1
-                ;;
-            esac
-            
-            # We initiate this variable in order to know if ${domainExtension} pass
-            # The cases
-            notSupported=true
-            
-            # Special cases domains which don't have their whois server
-            # registered to IANA.
-            # cf. https://github.com/funilrys/funceble/issues?q=is%3Aissue+Not+Found+is%3Aclosed
-            case ${domainExtension} in
-                bm)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.afilias-srs.net"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                bz)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.afilias-grs.info"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                cd)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.nic.cd"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                cm)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.netcom.cm"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                fj)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.usp.ac.fj"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                ga)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.my.ga"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                lc)
-                    # We assign the domain WHOIS referer server
-                    referer="whois2.afilias-grs.net"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                lk)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.nic.lk"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                nyc)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.nic.nyc"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                ps)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.pnina.ps"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                ren)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.nic.ren"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                rw)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.ricta.org.rw"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                shop)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.nic.shop"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                sl)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.nic.sl"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                stream)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.nic.stream"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                tokyo)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.nic.tokyo"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                uno)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.nic.uno"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-                za)
-                    # We assign the domain WHOIS referer server
-                    referer="whois.registry.net.za"
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                ;;
-            esac
-            
-            if [[ ${notSupported} == true ]]
+            # We check if the given domain extension is in our database file
+            if [[ $(cat ${ianaDB}) =~ ${domainExtension} ]]
             then
-                # Regex for domains with subdomains or multiple point
-                local regexMultiplePoint='.*\..*\..*'
                 
-                if [[ ${initialDomain} =~ ${regexMultiplePoint} ]]
+                case ${domainExtension} in
+                    # We handle here the list of extension which are known as
+                    # [Not Found] Please report to https://git.io/v5tgo for more
+                    # informations
+                    ad|al|an|ao|arpa|az|ba|bd|bf|bh|bs|comm|cu|dj|eg|fm|ge|gh|gm|gp|gr|gt|jo|kh|lb|mil|mm|mt|mw|ne|np|nr|pa|ph|pn|pk|py|rr|sd|sr|sv|sz|tj|tp|tt|vi|vn|xx|z|zw)
+                        # We empty the referer variable
+                        referer=''
+                        
+                        # We handle error & check if server is up
+                        errorHandle 'Down'
+                        
+                        return 1
+                    ;;
+                esac
+                
+                # We initiate this variable in order to know if ${domainExtension} pass
+                # The cases
+                notSupported=true
+                
+                # Special cases domains which don't have their whois server
+                # registered to IANA.
+                # cf. https://github.com/funilrys/funceble/issues?q=is%3Aissue+Not+Found+is%3Aclosed
+                case ${domainExtension} in
+                    bm)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.afilias-srs.net"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    bz)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.afilias-grs.info"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    cd)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.nic.cd"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    cm)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.netcom.cm"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    fj)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.usp.ac.fj"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    ga)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.my.ga"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    lc)
+                        # We assign the domain WHOIS referer server
+                        referer="whois2.afilias-grs.net"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    lk)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.nic.lk"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    nyc)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.nic.nyc"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    ps)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.pnina.ps"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    ren)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.nic.ren"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    rw)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.ricta.org.rw"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    shop)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.nic.shop"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    sl)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.nic.sl"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    stream)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.nic.stream"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    tokyo)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.nic.tokyo"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    uno)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.nic.uno"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                    za)
+                        # We assign the domain WHOIS referer server
+                        referer="whois.registry.net.za"
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    ;;
+                esac
+                
+                if [[ ${notSupported} == true ]]
                 then
-                    # In case the domain contain multiple point we get the referer
-                    # in another way (This should avoid false positive logs)
-                    referer=$(whois -h "${whoisServer}" "hello.${domainExtension}" | awk '/refer/{print $NF}')
-                else
-                    # We get the host to call.
-                    # If extension have a host assigned, it's written if format
-                    # refer: whois.hello.world for example
-                    referer=$(whois -h "${whoisServer}" "${initialDomain}" | awk '/refer/{print $NF}')
-                fi
-                
-                # regex to pass to have a valid referer
-                regexWhois='whois'
-                
-                # We check if the format is valid
-                if [[ ${referer} =~ ${regexWhois} ]]
-                then
-                    # The Following is used to stop the execution of getExpirationDate
-                    # in case the domain is not valid.
-                    notSupported=false
-                else
-                    # We empty the referer variable
-                    referer=''
+                    # Regex for domains with subdomains or multiple point
+                    local regexMultiplePoint='.*\..*\..*'
                     
-                    # We log the issue
-                    noRefererLog
+                    if [[ ${initialDomain} =~ ${regexMultiplePoint} ]]
+                    then
+                        # In case the domain contain multiple point we get the referer
+                        # in another way (This should avoid false positive logs)
+                        referer=$(whois -h "${whoisServer}" "hello.${domainExtension}" | awk '/refer/{print $NF}')
+                    else
+                        # We get the host to call.
+                        # If extension have a host assigned, it's written if format
+                        # refer: whois.hello.world for example
+                        referer=$(whois -h "${whoisServer}" "${initialDomain}" | awk '/refer/{print $NF}')
+                    fi
                     
-                    # We handle error & check if server is up
-                    errorHandle 'Down'
+                    # regex to pass to have a valid referer
+                    regexWhois='whois'
+                    
+                    # We check if the format is valid
+                    if [[ ${referer} =~ ${regexWhois} ]]
+                    then
+                        # The Following is used to stop the execution of getExpirationDate
+                        # in case the domain is not valid.
+                        notSupported=false
+                    else
+                        # We empty the referer variable
+                        referer=''
+                        
+                        # We log the issue
+                        noRefererLog
+                        
+                        # We handle error & check if server is up
+                        errorHandle 'Down'
+                    fi
                 fi
+            else
+                # We handle error & check if server is up
+                notSupported=true
+                errorHandle 'Invalid'
             fi
         else
             # We handle error & check if server is up
             notSupported=true
-            errorHandle 'Invalid'
+            errorHandle 'Down'
         fi
     else
         # We handle error & check if server is up
         notSupported=true
         errorHandle 'Down'
     fi
+    
 }
 
 ################################## Whois Log ###################################
@@ -1979,7 +1990,7 @@ travisAutoSave()
         
         local escapedDomain=$(escapeString "${domain}" "domain")
         
-        if [[ ${currentTimes} -ge ${timeOfStart} || $(grep -v \# ${file} | tail -1) =~ ${escapedDomain} ]]
+        if [[ ${currentTimes} -ge ${timeOfStart} || $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1) =~ ${escapedDomain} ]]
         then
             # We print the percentage into percentage.txt
             percentageLog
@@ -1987,7 +1998,7 @@ travisAutoSave()
             # We check/change files permissions
             travisPermissions
             
-            if [[ $(grep -v \# ${file} | tail -1) =~ ${escapedDomain} ]]
+            if [[ $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1) =~ ${escapedDomain} ]]
             then
                 if [[ ${commandBeforeEnd} != '' ]]
                 then
@@ -2282,7 +2293,7 @@ deletOnlyCommentedFiles()
     
     if [[ ${fileToAppendComments} != "" ]]
     then
-        if [[ $(grep -v \# ${file} | tail -1) =~ ${escapedDomain} ]]
+        if [[ $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1) =~ ${escapedDomain} ]]
         then
             for data in $(echo ${fileToAppendComments})
             do
@@ -2370,32 +2381,41 @@ main()
                     # header impression
                     local headerPrinted=false
                     
-                    if [[ ! $(grep -v \# ${file} | tail -1) =~ ${escapedDomain} ]]
+                    if [[ ! $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1) =~ ${escapedDomain} ]]
                     then
+                        # We assign a temporary file where we save the new list to test
+                        local newFile=/var/tmp/funceble_continue.$$
+                        
+                        # We same the list of domain to test
+                        sed -ne '/'${escapedDomain}'/{s///; :a' -e 'n;p;ba' -e '}' ${file} >> ${newFile}
+                        
+                        # We read a file into an array
+                        readarray fileContentFromLastTested < ${newFile}
+                        
                         # We get the list of domain from last tested until the end
                         # and pass it to the loop where we're gonna filter and
                         # test the domain/IP.
-                        sed -ne '/'${escapedDomain}'/{s///; :a' -e 'n;p;ba' -e '}' ${file} | while read domain
+                        for i in ${!fileContentFromLastTested[*]}
                         do
+                            readLine="$(echo "${fileContentFromLastTested[${i}]}" | cut -d$'\n' -f1)"
                             # In case the file contain comment or empty line we continue to
                             # the next line
-                            case "${domain}" in
-                                \#*|'')
-                                    keepComments "${domain}"
+                            case "${readLine}" in
+                                \#*|"")
+                                    keepComments "${readLine}"
                                     continue
                                 ;;
                                 *localhost*|local|broadcasthost)
-                                    keepComments "${domain}"
+                                    keepComments "${readLine}"
                                     
-                                    formatDomain ${domain}
+                                    formatDomain "${readLine}"
                                     # We update the value of the domain name
                                     updateAutoContinueLog "${escapedFile}" "${domain}"
                                     continue
                                 ;;
-                                '127.0.0.1'*|'0.0.0.0'*)
-                                    formatDomain "${domain}"
-                                ;;
                             esac
+                            
+                            formatDomain "${readLine}"
                             
                             # We escape our filter in order to hava a valid regex format
                             regexFilter=$(escapeString ${toFilter} 'domain')
@@ -2471,29 +2491,32 @@ main()
                 # regex variable
                 local escapedFile=$(escapeString "${file}" "file")
                 
+                # We read our file to an array
+                readarray fileContent < ${file}
+                
                 # We read the list of the file and pass the domain (1 line = 1 domain)
                 # to getExpirationDate
-                while read domain
+                for i in ${!fileContent[*]}
                 do
+                    readLine="$(echo "${fileContent[${i}]}" | cut -d$'\n' -f1)"
                     # In case the file contain comment or empty line we continue to
                     # the next line
-                    case "${domain}" in
-                        \#*|'')
-                            keepComments "${domain}"
+                    case "${readLine}" in
+                        \#*|"")
+                            keepComments "${readLine}"
                             continue
                         ;;
                         *localhost*|local|broadcasthost)
-                            keepComments "${domain}"
+                            keepComments "${readLine}"
                             
-                            formatDomain ${domain}
+                            formatDomain "${readLine}"
                             # We update the value of the domain name
                             updateAutoContinueLog "${escapedFile}" "${domain}"
                             continue
                         ;;
-                        '127.0.0.1'*|'0.0.0.0'*)
-                            formatDomain "${domain}"
-                        ;;
                     esac
+                    
+                    formatDomain "${readLine}"
                     
                     # We escape our filter in order to hava a valid regex format
                     regexFilter=$(escapeString ${toFilter} 'domain')
@@ -2531,7 +2554,7 @@ main()
                     
                     # We commit if time += ${travisAutoSaveMinutes}
                     travisAutoSave
-                done < ${file}
+                done
                 
                 # We commit if time += ${travisAutoSaveMinutes}
                 travisAutoSave
@@ -2692,6 +2715,7 @@ usage()
     echo "  --noFiles                  -n              Deactivate the production of output files (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
     echo "  --noLogs                   -nl             Deactivate the production of logs files in case we encounter some errors (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
     echo "  --noUnified                -nu             Deactivate the production of result.txt as unified result under the output directory (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
+    echo "  --noWhois                  -nw             Deactivate the usage of whois to test domain's status. Current value: ${magenta}${noWhois}${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
     echo "  --percentage               -p              Switch the default value of the percentage output mode to its opposite. Current value: ${magenta}${showPercentage}${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
     echo "  --plain                                    Switch the default value of the generation of the plain list of domain to its opposite. Current value: ${magenta}${plainListDomain}${normal} (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
     echo "  --quiet                    -q              Activate quiet mode (${red}${bold}Must be before ${cyan}-d${normal} ${red}${bold}or ${cyan}-f${normal})"
@@ -2832,6 +2856,12 @@ else
             # output/result.txt
             -nu|--noUnified)
                 outputUnified=false
+                shift 1
+            ;;
+            
+            # We catch if we don't need to launch whois
+            -nw|--noWhois)
+                noWhois=true
                 shift 1
             ;;
             

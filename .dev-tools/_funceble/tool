@@ -88,7 +88,7 @@ travisResultsCommitMessage='Funceble Test - Results'
 travisAutoSaveCommitMessage='Funceble Test - Autosave'
 
 # Minimum of minutes before we start commiting to upstream under travis
-travisAutoSaveMinutes=35
+travisAutoSaveMinutes=15
 
 # Enable the usage of the stable version of Funceble
 stableVersion=false
@@ -97,7 +97,7 @@ stableVersion=false
 devVersion=true
 
 # Version number
-versionNumber='dev-1.4.0+45'
+versionNumber='dev-1.4.0+46'
 ################################################################################
 # We log the date
 date > ${logOutput}
