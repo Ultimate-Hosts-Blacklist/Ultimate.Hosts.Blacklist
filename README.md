@@ -46,6 +46,25 @@ Having a smart `hosts` file goes a long way towards blocking malware, adware, ra
 
 A hosts file like this causes any lookups to any of the listed domains to resolve back to your localhost so it prevents any outgoing connections to the listed domains.
 
+For example, to drop all requests to some doubleclick.net servers, adding these lines to your hosts file will achieve that.
+
+```# Block DoubleClick's Ad servers
+0.0.0.0 doubleclick.net
+0.0.0.0 ad.ar.doubleclick.net
+0.0.0.0 ad.ae.doubleclick.net
+# etc ... etc .... etc ...```
+
+************************************************
+
+## RECOMMENDATION FOR USING **0.0.0.0** instead of **127.0.0.1**
+
+Most host files traditionally use 127.0.0.1 as the loopback address, to establish an IP connection to the local machine.
+
+We prefer the use of 0.0.0.0, which is defined as a non-routable meta-address. Using 0.0.0.0 is faster because there's no wait for a timeout resolution. 
+It also does not interfere with any web servers that may be running on the local system.
+
+For many windows systems however 127.0.0.1 does appear to work better and which is why our Windows version of the hosts file uses 127.0.0.1 as the loopback address.
+
 ************************************************
 ## WHAT IS A HOSTS.DENY FILE?
 
@@ -91,7 +110,7 @@ To keep this Github repo small, all files are provided in a zip only format. Som
 You can also fork a copy of this repo, create a new unique folder in .input_sources, call your file domains.txt and simply send a Pull Request to the repository and it will be added.
 
 ************************************************
-## INFORMATION DATA SOURCES
+## INFORMATION DATA SOURCES, COPYRIGHTS AND CREDITS
 
 ### CREDITS & THANKS
 
