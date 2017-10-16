@@ -58,7 +58,7 @@ For example, to drop all requests to some doubleclick.net servers, adding these 
 
 ************************************************
 
-## RECOMMENDATION FOR USING **0.0.0.0** instead of **127.0.0.1**
+## RECOMMENDATION FOR USING`0.0.0.0` instead of `127.0.0.1`
 
 Most host files traditionally use 127.0.0.1 as the loopback address, to establish an IP connection to the local machine.
 
