@@ -48,11 +48,13 @@ A hosts file like this causes any lookups to any of the listed domains to resolv
 
 For example, to drop all requests to some doubleclick.net servers, adding these lines to your hosts file will achieve that.
 
-```# Block DoubleClick's Ad servers
+```
+# Block DoubleClick's Ad servers
 0.0.0.0 doubleclick.net
 0.0.0.0 ad.ar.doubleclick.net
 0.0.0.0 ad.ae.doubleclick.net
-# etc ... etc .... etc ...```
+# etc ... etc .... etc ...
+```
 
 ************************************************
 
