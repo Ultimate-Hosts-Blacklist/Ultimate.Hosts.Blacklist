@@ -62,6 +62,8 @@ For example, to drop all requests to certain domains or servers, adding lines to
 # etc ... etc .... etc ...
 ```
 
+It is important to note that a `hosts` file cannot understand wild card domains. So adding `0.0.0.0 *.doubleclick.net` will not work. You must specify each and every variation of a domains that is in use and up to no good.
+
 ************************************************
 
 ## RECOMMENDATION FOR USING`0.0.0.0` instead of `127.0.0.1`
