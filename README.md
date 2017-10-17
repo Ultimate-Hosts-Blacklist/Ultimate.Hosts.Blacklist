@@ -46,7 +46,7 @@ Having a smart `hosts` file goes a long way towards blocking malware, adware, ra
 
 A hosts file like this causes any lookups to any of the listed domains to resolve back to your localhost so it prevents any outgoing connections to the listed domains.
 
-For example, to drop all requests to certain domains or servers, adding lines to your hosts file as below will achieve this for you. You can create your own custom hosts or simply use ours which covers you for 1 million bad domains and web sites out there.
+For example, to drop all requests to certain domains or servers, adding lines to your hosts file as below will achieve this for you. You can create your own custom hosts or simply use ours which covers you for well over 1 million bad domains and web sites out there.
 
 ```
 # Block Bad Domains and Servers with Hosts File
