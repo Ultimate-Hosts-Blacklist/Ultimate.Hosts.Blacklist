@@ -46,13 +46,19 @@ Having a smart `hosts` file goes a long way towards blocking malware, adware, ra
 
 A hosts file like this causes any lookups to any of the listed domains to resolve back to your localhost so it prevents any outgoing connections to the listed domains.
 
-For example, to drop all requests to some doubleclick.net servers, adding these lines to your hosts file will achieve that.
+For example, to drop all requests to certain domains or servers, adding lines to your hosts file as below will achieve this for you. You can create your own custom hosts or simply use ours which covers you for 1 million bad domains and web sites out there.
 
 ```
-# Block DoubleClick's Ad servers
+# Block Bad Domains and Servers with Hosts File
 0.0.0.0 doubleclick.net
-0.0.0.0 ad.ar.doubleclick.net
-0.0.0.0 ad.ae.doubleclick.net
+0.0.0.0 18chinese.com
+0.0.0.0 gatekeeper.tss.net
+0.0.0.0 www.gatekeeper.tss.net
+0.0.0.0 cdn.gatekeeper.tss.net
+0.0.0.0 youporn.com
+0.0.0.0 www.youporn.com
+0.0.0.0 x-lime.net
+0.0.0.0 www.x-lime.net
 # etc ... etc .... etc ...
 ```
 
