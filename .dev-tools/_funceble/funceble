@@ -163,16 +163,16 @@ travisMode=false
 travisAutoSaveMinutes=40
 
 # Default travis final commit message
-travisResultsCommitMessage='V1.2017.10.801'
+travisResultsCommitMessage='V1.2017.10.802'
 
 # Default travis autosave commit message
-travisAutoSaveCommitMessage='V1.2017.10.801 [funceble]'
+travisAutoSaveCommitMessage='V1.2017.10.802 [funceble]'
 
 # If set to false, we generate only one file with the results
 splitFiles=false
 
 # Version number
-versionNumber='dev-1.4.0+214'
+versionNumber='dev-1.4.0+215'
 
 # IANA whois server. The following is there to give use the whois
 # host we have to call to get a (valid) response.
@@ -1988,9 +1988,11 @@ travisAutoSave()
         # We calculate the time before commit is possible
         local timeOfStart=$(((${executionStart}+${travisAutoSaveMinutes}*60)))
         
-        local escapedDomain=$(escapeString "${domain}" "domain")
+        local escapedDomain="$(escapeString "${domain}" "domain")"
         
-        if [[ ${currentTimes} -ge ${timeOfStart} || $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1) =~ ${escapedDomain} ]]
+        local regexStrictMatch="^${escapedDomain}"
+        
+        if [[ ${currentTimes} -ge ${timeOfStart} || $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1 | cut -d ' ' -f2) =~ ${regexStrictMatch} ]]
         then
             # We print the percentage into percentage.txt
             percentageLog
@@ -1998,7 +2000,8 @@ travisAutoSave()
             # We check/change files permissions
             travisPermissions
             
-            if [[ $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1) =~ ${escapedDomain} ]]
+            
+            if [[ $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1 | cut -d ' ' -f2) =~ ${regexStrictMatch} ]]
             then
                 if [[ ${commandBeforeEnd} != '' ]]
                 then
@@ -2293,7 +2296,8 @@ deletOnlyCommentedFiles()
     
     if [[ ${fileToAppendComments} != "" ]]
     then
-        if [[ $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1) =~ ${escapedDomain} ]]
+        local regexStrictMatch="^${escapedDomain}"
+        if [[ $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1 | cut -d ' ' -f2) =~ ${regexStrictMatch} ]]
         then
             for data in $(echo ${fileToAppendComments})
             do
@@ -2381,7 +2385,9 @@ main()
                     # header impression
                     local headerPrinted=false
                     
-                    if [[ ! $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1) =~ ${escapedDomain} ]]
+                    local regexStrictMatch="^${escapedDomain}"
+                    
+                    if [[ ! $(sed -r '/^(\s*#|$)/d;' ${file} | tail -1 | cut -d ' ' -f2) =~ ${regexStrictMatch} ]]
                     then
                         # We assign a temporary file where we save the new list to test
                         local newFile=/var/tmp/funceble_continue.$$
