@@ -171,7 +171,7 @@ The sources of the input data information are as follows.
 - [Maravento](https://github.com/maravento)
 - [xxcriticxx](https://github.com/xxcriticxx)
 - [SMed79](https://github.com/SMed79)
-- [ZeroDot1]((https://github.com/ZeroDot1)
+- [ZeroDot1](https://github.com/ZeroDot1)
 
 ************************************************
 ## Please Help Support this Project
