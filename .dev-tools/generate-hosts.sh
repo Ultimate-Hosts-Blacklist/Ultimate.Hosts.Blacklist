@@ -72,6 +72,12 @@ sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malware
 sudo wget http://mirror1.malwaredomains.com/files/justdomains -O $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains.com/domains.txt
 sort -u $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains.com/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_justdomains_mirror1.malwaredomains.com/domains.txt
 
+# ***********************************************
+# Get Fresh Data from ZeroDot1 No-Coin Blocklists
+# ***********************************************
+
+sudo wget https://raw.githubusercontent.com/ZeroDot1/CoinBlockerLists/master/list.txt -O $TRAVIS_BUILD_DIR/.input_sources/_ZeroDot1/CoinBlockerLists/domains.txt
+sort -u $TRAVIS_BUILD_DIR/.input_sources/_ZeroDot1/CoinBlockerLists/domains.txt -o $TRAVIS_BUILD_DIR/.input_sources/_ZeroDot1/CoinBlockerLists/domains.txt
 
 # *********************************************************************************************************
 # Get Fresh Domains from antipopads - https://raw.githubusercontent.com/Yhonay/antipopads/master/popads.txt
