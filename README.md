@@ -25,6 +25,7 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 <a href="https://hosts.ubuntu101.co.za/hosts.deny">hosts.deny (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/superhosts.deny">superhosts.deny (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/domains.list">domains-list (RAW)</a><br/>
+<a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">domains-list (dotted format) (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/ips.list">ip-list (RAW)</a>
 
 ************************************************
@@ -113,6 +114,7 @@ To keep this Github repo small, all files are provided in a zip only format. Som
 <a href="https://hosts.ubuntu101.co.za/hosts.deny">hosts.deny (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/superhosts.deny">superhosts.deny (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/domains.list">domains-list (RAW)</a><br/>
+<a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">domains-list (dotted format) (RAW)</a><br/>
 <a href="https://hosts.ubuntu101.co.za/ips.list">ip-list (RAW)</a>
 
 ************************************************
