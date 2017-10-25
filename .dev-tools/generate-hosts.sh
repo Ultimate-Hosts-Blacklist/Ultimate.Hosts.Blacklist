@@ -639,6 +639,13 @@ sudo cp $_superhostsdeny $TRAVIS_BUILD_DIR/superhosts.deny
 sudo cp $_input1 $TRAVIS_BUILD_DIR/domains.list
 sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 
+# *********************************************************************************
+# Clean Domains.list and produce a dotted format list, all domains beginning with .
+# *********************************************************************************
+
+regexdomains='([a-zA-Z0-9][a-zA-Z0-9-]{1,61}.){1,}(.?[a-zA-Z]{2,}){1,}'
+egrep -oi "$regexdomains" $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed 's:(www[[:alnum:]].|WWW[[:alnum:]].|ftp.|...|/.*)::g' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
+
 sudo rm $_hosts
 sudo rm $_hostsdeny
 sudo rm $_superhostsdeny
@@ -655,6 +662,7 @@ zip -r hosts.windows.zip hosts.windows
 zip -r hosts.deny.zip hosts.deny
 zip -r superhosts.deny.zip superhosts.deny
 zip -r domains.list.zip domains.list
+zip -r domains-dotted-format.list.zip domains-dotted-format.list
 zip -r ips.list.zip ips.list
 
 
@@ -667,6 +675,7 @@ sudo rm $TRAVIS_BUILD_DIR/hosts.windows
 sudo rm $TRAVIS_BUILD_DIR/hosts.deny
 sudo rm $TRAVIS_BUILD_DIR/superhosts.deny
 sudo rm $TRAVIS_BUILD_DIR/domains.list
+sudo rm $TRAVIS_BUILD_DIR/domains-dotted-format.list
 sudo rm $TRAVIS_BUILD_DIR/ips.list
 
 # ****************************
