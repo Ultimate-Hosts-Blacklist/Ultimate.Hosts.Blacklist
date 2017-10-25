@@ -187,8 +187,12 @@ sudo mv $TRAVIS_BUILD_DIR/.input_sources/combined-list-tmp.txt $TRAVIS_BUILD_DIR
 
 cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt | sed '/\./!d' > $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt && mv $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
-#sort -t . -k 1.1n -k 2.2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n $_input2 | sed 's/^[ \s]//;s/[ \s]$//' | sed "/:/d" | uniq > $_input4 && mv $_input4 $_input2
-#sed 's/^[ \s]//;s/[ \s]$//'
+
+# **********************************************************************************
+# Clean the list of any lines ending in a space & any lines containing a # character
+# **********************************************************************************
+
+cat $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt | grep -v '#' | sed '/^$/d' | sed 's/[[:space:]]//g' > $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt && mv $TRAVIS_BUILD_DIR/.input_sources/temp_combined-list.txt $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
 
 # **************************************************************************************
 # Strip out our Dead Domains / Whitelisted Domains and False Positives from CENTRAL REPO
