@@ -648,7 +648,8 @@ sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 # *********************************************************************************
 
 regexdomains='([a-zA-Z0-9][a-zA-Z0-9-]{1,61}.){1,}(.?[a-zA-Z]{2,}){1,}'
-egrep -oi "$regexdomains" $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed 's:(www[[:alnum:]].|WWW[[:alnum:]].|ftp.|...|/.*)::g' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
+sed 's:(www[[:alnum:]].|WWW[[:alnum:]].|ftp.|...|/.*)::g' $TRAVIS_BUILD_DIR/domains.list > $TRAVIS_BUILD_DIR/domains-dotted-format.list
+egrep -oi "$regexdomains" $TRAVIS_BUILD_DIR/domains-dotted-format.list | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 # **************************************************************************************
 # Clean domains.list of any lines ending in a space & any lines containing a # character
