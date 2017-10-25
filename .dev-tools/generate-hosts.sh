@@ -649,8 +649,8 @@ sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 
 #regexdomains='([a-zA-Z0-9][a-zA-Z0-9-]{1,61}.){1,}(.?[a-zA-Z]{2,}){1,}'
 #sed 's:(www[[:alnum:]].|WWW[[:alnum:]].|ftp.|...|/.*)::g' $TRAVIS_BUILD_DIR/domains.list > $TRAVIS_BUILD_DIR/domains-dotted-format.list
-cat $TRAVIS_BUILD_DIR/domains.list | sed 's:(www[[:alnum:]].|WWW[[:alnum:]].|ftp.|...|/.*)::g' $TRAVIS_BUILD_DIR/domains-dotted-format.tmp && mv $TRAVIS_BUILD_DIR/domains-dotted-format.tmp $TRAVIS_BUILD_DIR/domains-dotted-format.list
-cat $TRAVIS_BUILD_DIR/domains-dotted-format.list | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.tmp2 && mv $TRAVIS_BUILD_DIR/domains-dotted-format.tmp2 $TRAVIS_BUILD_DIR/domains-dotted-format.list
+cat $TRAVIS_BUILD_DIR/domains.list | sed 's:(www[[:alnum:]].|WWW[[:alnum:]].|ftp.|...|/.*)::g' | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.tmp && mv $TRAVIS_BUILD_DIR/domains-dotted-format.tmp $TRAVIS_BUILD_DIR/domains-dotted-format.list
+#cat $TRAVIS_BUILD_DIR/domains-dotted-format.list | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.tmp2 && mv $TRAVIS_BUILD_DIR/domains-dotted-format.tmp2 $TRAVIS_BUILD_DIR/domains-dotted-format.list
 #egrep -oi "$regexdomains" $TRAVIS_BUILD_DIR/domains-dotted-format.list | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 # **************************************************************************************
