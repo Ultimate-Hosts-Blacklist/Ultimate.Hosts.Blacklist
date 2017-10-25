@@ -641,7 +641,6 @@ sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts
 sudo cp $_hostsdeny $TRAVIS_BUILD_DIR/hosts.deny
 sudo cp $_superhostsdeny $TRAVIS_BUILD_DIR/superhosts.deny
 sudo cp $_input1 $TRAVIS_BUILD_DIR/domains.list
-#sudo cp $_input1 $TRAVIS_BUILD_DIR/domains-dotted-format.list
 sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 
 # *********************************************************************************
@@ -650,6 +649,16 @@ sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 
 regexdomains='([a-zA-Z0-9][a-zA-Z0-9-]{1,61}.){1,}(.?[a-zA-Z]{2,}){1,}'
 egrep -oi "$regexdomains" $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed 's:(www[[:alnum:]].|WWW[[:alnum:]].|ftp.|...|/.*)::g' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
+
+# **************************************************************************************
+# Clean domains.list of any lines ending in a space & any lines containing a # character
+# **************************************************************************************
+
+cat $TRAVIS_BUILD_DIR/domains.list | grep -v '#' | sed '/^$/d' | sed 's/[[:space:]]//g' > $TRAVIS_BUILD_DIR/domains-tmp.list && mv $TRAVIS_BUILD_DIR/domains-tmp.list $TRAVIS_BUILD_DIR/domains.list
+
+# ***********************************
+# Remove All Raw Files - Space Saving
+# ***********************************
 
 sudo rm $_hosts
 sudo rm $_hostsdeny
