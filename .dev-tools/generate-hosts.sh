@@ -656,7 +656,10 @@ sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 #cat $TRAVIS_BUILD_DIR/domains.list | sed 's:(www[[:alnum:]].|WWW[[:alnum:]].|ftp.|...|/.*)::g' | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.tmp && mv $TRAVIS_BUILD_DIR/domains-dotted-format.tmp $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 # @maravento suggested change
-cat $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed 's:(www[[:alnum:]].|WWW[[:alnum:]].|ftp.|...|/.)::g' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.tmp && mv $TRAVIS_BUILD_DIR/domains-dotted-format.tmp $TRAVIS_BUILD_DIR/domains-dotted-format.list
+#cat $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed 's:(www[[:alnum:]].|WWW[[:alnum:]].|ftp.|...|/.)::g' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.tmp && mv $TRAVIS_BUILD_DIR/domains-dotted-format.tmp $TRAVIS_BUILD_DIR/domains-dotted-format.list
+
+# @maravento new sorting suggestion 
+sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 # Need to still handle adding a dot to domains already starting with a dot ?
 
