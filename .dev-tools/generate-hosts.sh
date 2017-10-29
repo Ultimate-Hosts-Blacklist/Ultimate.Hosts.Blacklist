@@ -643,6 +643,13 @@ sudo cp $_superhostsdeny $TRAVIS_BUILD_DIR/superhosts.deny
 sudo cp $_input1 $TRAVIS_BUILD_DIR/domains.list
 sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 
+
+# **************************************************************************************
+# Clean domains.list of any lines ending in a space & any lines containing a # character
+# **************************************************************************************
+
+cat $TRAVIS_BUILD_DIR/domains.list | grep -v '#' | sed '/^$/d' | sed 's/[[:space:]]//g' > $TRAVIS_BUILD_DIR/domains-tmp.list && mv $TRAVIS_BUILD_DIR/domains-tmp.list $TRAVIS_BUILD_DIR/domains.list
+
 # *********************************************************************************
 # Clean Domains.list and produce a dotted format list, all domains beginning with .
 # *********************************************************************************
@@ -659,15 +666,13 @@ sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 #cat $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed 's:(www[[:alnum:]].|WWW[[:alnum:]].|ftp.|...|/.)::g' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.tmp && mv $TRAVIS_BUILD_DIR/domains-dotted-format.tmp $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 # @maravento new sorting suggestion 
-sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
+#sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
+
+# Cleaning domains list and also removing all underscores as underscore is illegal in DNS
+
+sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed '/_/d' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 # Need to still handle adding a dot to domains already starting with a dot ?
-
-# **************************************************************************************
-# Clean domains.list of any lines ending in a space & any lines containing a # character
-# **************************************************************************************
-
-cat $TRAVIS_BUILD_DIR/domains.list | grep -v '#' | sed '/^$/d' | sed 's/[[:space:]]//g' > $TRAVIS_BUILD_DIR/domains-tmp.list && mv $TRAVIS_BUILD_DIR/domains-tmp.list $TRAVIS_BUILD_DIR/domains.list
 
 # ***********************************
 # Remove All Raw Files - Space Saving
