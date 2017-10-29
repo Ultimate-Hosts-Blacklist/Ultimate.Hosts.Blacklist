@@ -27,7 +27,7 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 | hosts.deny      | Unix/Linux       | UNIX    | <a href="https://hosts.ubuntu101.co.za/hosts.deny">Download</a><br/> |
 | superhosts.deny | Unix/Linux       | UNIX    | <a href="https://hosts.ubuntu101.co.za/superhosts.deny">Download</a><br/> |
 | domains.list    | Any / Pi-Hole    | UNIX    | <a href="https://hosts.ubuntu101.co.za/domains.list">Download</a><br/> |
-| domains.list    | DnsMasq          | UNIX    | <a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">Download</a><br/> |
+| domains-dotted-format.list    | DnsMasq          | UNIX    | <a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">Download</a><br/> |
 | ips.list        | Any / Pi-Hole    | UNIX    | <a href="https://hosts.ubuntu101.co.za/ips.list">Download</a> |
  
 #### Windows Users
@@ -123,7 +123,7 @@ To keep this Github repo small, all files are provided in a zip only format. Som
 | hosts.deny      | Unix/Linux       | UNIX    | <a href="https://hosts.ubuntu101.co.za/hosts.deny">Download</a><br/> |
 | superhosts.deny | Unix/Linux       | UNIX    | <a href="https://hosts.ubuntu101.co.za/superhosts.deny">Download</a><br/> |
 | domains.list    | Any / Pi-Hole    | UNIX    | <a href="https://hosts.ubuntu101.co.za/domains.list">Download</a><br/> |
-| domains.list    | DnsMasq          | UNIX    | <a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">Download</a><br/> |
+| domains-dotted-format.list    | DnsMasq          | UNIX    | <a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">Download</a><br/> |
 | ips.list        | Any / Pi-Hole    | UNIX    | <a href="https://hosts.ubuntu101.co.za/ips.list">Download</a> |
  
 #### Windows Users
