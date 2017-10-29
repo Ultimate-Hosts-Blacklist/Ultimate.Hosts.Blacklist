@@ -20,13 +20,20 @@ ____________________
 
 The links below will direct you to the raw unzipped versions of the hosts files in this repo.
 
-<a href="https://hosts.ubuntu101.co.za/hosts">hosts for Unix systems (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/hosts.windows">hosts for Windows systems (CRLF) (RAW)</a> | **<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat">Try the Windows Installer / Updater</a><br/>**
-<a href="https://hosts.ubuntu101.co.za/hosts.deny">hosts.deny (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/superhosts.deny">superhosts.deny (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/domains.list">domains-list (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">domains-list (dotted format) (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/ips.list">ip-list (RAW)</a>
+| File Name       | Operating System | Format  | Download Link |
+| -------------   |:---------------: | :-----: |  :----------- |
+| hosts           | Unix/Linux       | UNIX    | <a href="https://hosts.ubuntu101.co.za/hosts">Download</a><br/> |
+| hosts           | Windows          | CRLF/DOS| <a href="https://hosts.ubuntu101.co.za/hosts.windows">Download</a> |
+| hosts.deny      | Unix/Linux       | UNIX    | <a href="https://hosts.ubuntu101.co.za/hosts.deny">Download</a><br/> |
+| superhosts.deny | Unix/Linux       | UNIX    | <a href="https://hosts.ubuntu101.co.za/superhosts.deny">Download</a><br/> |
+| domains.list    | Any / Pi-Hole    | UNIX    | <a href="https://hosts.ubuntu101.co.za/domains.list">Download</a><br/> |
+| domains.list    | DnsMasq          | UNIX    | <a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">Download</a><br/> |
+| ips.list        | Any / Pi-Hole    | UNIX    | <a href="https://hosts.ubuntu101.co.za/ips.list">Download</a> |
+ 
+#### Windows Users
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat">Try the Windows Installer</a><br/>**
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-update-hosts.bat">Try the Windows Updater</a><br/>**
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-uninstall-hosts.bat">Try the Windows UnInstaller</a><br/>**
 
 ************************************************
 Click the link below to see all the sources used as input data to create this hosts list.
@@ -119,14 +126,10 @@ To keep this Github repo small, all files are provided in a zip only format. Som
 | domains.list    | DnsMasq          | UNIX    | <a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">Download</a><br/> |
 | ips.list        | Any / Pi-Hole    | UNIX    | <a href="https://hosts.ubuntu101.co.za/ips.list">Download</a> |
  
-
-<a href="https://hosts.ubuntu101.co.za/hosts">hosts for Unix systems (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/hosts.windows">hosts for Windows systems (CRLF) (RAW)</a> | **<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/update-hosts-windows.bat">Try the Windows Installer / Updater</a><br/>**
-<a href="https://hosts.ubuntu101.co.za/hosts.deny">hosts.deny (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/superhosts.deny">superhosts.deny (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/domains.list">domains-list (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">domains-list (dotted format) (RAW)</a><br/>
-<a href="https://hosts.ubuntu101.co.za/ips.list">ip-list (RAW)</a>
+#### Windows Users
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat">Try the Windows Installer</a><br/>**
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-update-hosts.bat">Try the Windows Updater</a><br/>**
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-uninstall-hosts.bat">Try the Windows UnInstaller</a><br/>**
 
 ************************************************
 ## ADDITIONS / REMOVALS / CORRECTIONS !!
