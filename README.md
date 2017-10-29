@@ -110,13 +110,13 @@ editor.
 To keep this Github repo small, all files are provided in a zip only format. Some people however require their Pi-Holes or other systems to automatically download a raw file once a week or so as an update. For your convenience you can download these raw files at the following links. These links below will always contain tha latest updated version of these files.
 
 | File Name       | Operating System | Format  | Download Link |
-| :-------------: |:---------------: | :-----: | :-----------: |
+| -------------   |:---------------: | :-----: |  -----------: |
 | hosts           | Unix/Linux       | UNIX    |<a href="https://hosts.ubuntu101.co.za/hosts">Download</a><br/>|
 | hosts           | Windows          | CRLF/DOS|<a href="https://hosts.ubuntu101.co.za/hosts.windows">Download</a>|
 | hosts.deny      | Unix/Linux       | UNIX    |<a href="https://hosts.ubuntu101.co.za/hosts.deny">Download</a><br/>|
 | superhosts.deny | Unix/Linux       | UNIX    |<a href="https://hosts.ubuntu101.co.za/superhosts.deny">Download</a><br/>|
 | domains.list    | Any / Pi-Hole    | UNIX    |<a href="https://hosts.ubuntu101.co.za/domains.list">Download</a><br/>|
-| domains.list    | Dot Format / DnsMasq| UNIX|<a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">Download</a><br/>|
+| domains.list    | DnsMasq          | UNIX    |<a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">Download</a><br/>|
 | ips.list        | Any / Pi-Hole    | UNIX    |<a href="https://hosts.ubuntu101.co.za/ips.list">Download</a>|
  
 
