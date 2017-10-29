@@ -670,7 +670,8 @@ cat $TRAVIS_BUILD_DIR/domains.list | grep -v '#' | sed '/^$/d' | sed 's/[[:space
 
 # Cleaning domains list and also removing all underscores as underscore is illegal in DNS
 
-sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed '/_/d' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
+#sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed '/_/d' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
+sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed '/_/d' | sed 's/\.\././g' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 # Need to still handle adding a dot to domains already starting with a dot ?
 
