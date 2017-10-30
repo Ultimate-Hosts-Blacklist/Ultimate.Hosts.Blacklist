@@ -694,7 +694,7 @@ sed -r 's:(^.?(www|ftp|ww|zzz)?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | sor
 #sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed '/_/d' | sed 's/\.\././g' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 #sed -r 's:(^.?(www|ftp|ww|zzz)?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
-awk '{print "."$1}' $TRAVIS_BUILD_DIR/domains.list > $TRAVIS_BUILD_DIR/domains-dotted-format.list
+awk '{print "."$1}' < $TRAVIS_BUILD_DIR/domains.list > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 # Need to still handle adding a dot to domains already starting with a dot ?
