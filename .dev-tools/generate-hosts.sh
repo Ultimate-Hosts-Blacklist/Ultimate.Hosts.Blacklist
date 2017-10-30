@@ -658,7 +658,8 @@ sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 # Clean domains.list of any lines ending in a space & any lines containing a # character
 # **************************************************************************************
 
-printf '\n%s\n%s\n%s\n\n' "###################################" "Clean domains.list file" "###################################"
+#printf '\n%s\n%s\n%s\n\n' "###################################" "Clean domains.list file" "###################################"
+echo "################################### Clean domains.list file ###################################"
 
 cat $TRAVIS_BUILD_DIR/domains.list | grep -v '#' | sed '/^$/d' | sed 's/[[:space:]]//g' > $TRAVIS_BUILD_DIR/domains-tmp.list && mv $TRAVIS_BUILD_DIR/domains-tmp.list $TRAVIS_BUILD_DIR/domains.list
 
@@ -669,7 +670,8 @@ cat $TRAVIS_BUILD_DIR/domains.list | grep -v '#' | sed '/^$/d' | sed 's/[[:space
 #sed -r '/_/d' $TRAVIS_BUILD_DIR/domains.list | sed 's/\.\././g' | sed 's/^.//' | cut -d'/' -f3 | grep '[^[:blank:]]' | sort -u > $TRAVIS_BUILD_DIR/domains.tmp && mv $TRAVIS_BUILD_DIR/domains.tmp $TRAVIS_BUILD_DIR/domains.list
 
 
-printf '\n%s\n%s\n%s\n\n' "#####################################" "Second clean domains.list file" "#####################################"
+#printf '\n%s\n%s\n%s\n\n' "#####################################" "Second clean domains.list file" "#####################################"
+echo "################################### Clean domains.list file ###################################"
 
 
 sed -r '/_/d' $TRAVIS_BUILD_DIR/domains.list | cut -d'/' -f3 | grep '[^[:blank:]]' | sed 's/^\.//' | sort -u > $TRAVIS_BUILD_DIR/domains.tmp && mv $TRAVIS_BUILD_DIR/domains.tmp $TRAVIS_BUILD_DIR/domains.list
@@ -706,7 +708,9 @@ sed -r 's:(^.?(www|ftp|ww|zzz)?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | sor
 #sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed '/_/d' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 #sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed '/_/d' | sed 's/\.\././g' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
-printf '\n%s\n%s\n%s\n\n' "#######################################" "Create domains-dotted-format.list file" "#######################################"
+#printf '\n%s\n%s\n%s\n\n' "#######################################" "Create domains-dotted-format.list file" "#######################################"
+echo "################################### Create dotted domains.list file ###################################"
+
 
 #sed -r 's:(^.?(www|ftp|ww|zzz)?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 awk '{print "."$1}' < $TRAVIS_BUILD_DIR/domains.list > $TRAVIS_BUILD_DIR/domains-dotted-format.list
