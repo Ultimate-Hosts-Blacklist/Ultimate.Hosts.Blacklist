@@ -31,9 +31,9 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 | ips.list        | Any / Pi-Hole    | UNIX    | <a href="https://hosts.ubuntu101.co.za/ips.list">Download</a> |
  
 #### Windows Users
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat">Try the Windows Installer</a><br/>**
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-update-hosts.bat">Try the Windows Updater</a><br/>**
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-uninstall-hosts.bat">Try the Windows UnInstaller</a><br/>**
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat">Try the Windows Installer</a><br/>**
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat">Try the Windows Updater</a><br/>**
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat">Try the Windows UnInstaller</a><br/>**
 
 ************************************************
 Click the link below to see all the sources used as input data to create this hosts list.
@@ -127,9 +127,9 @@ To keep this Github repo small, all files are provided in a zip only format. Som
 | ips.list        | Any / Pi-Hole    | UNIX    | <a href="https://hosts.ubuntu101.co.za/ips.list">Download</a> |
  
 #### Windows Users
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat">Try the Windows Installer</a><br/>**
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-update-hosts.bat">Try the Windows Updater</a><br/>**
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-uninstall-hosts.bat">Try the Windows UnInstaller</a><br/>**
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat">Try the Windows Installer</a><br/>**
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat">Try the Windows Updater</a><br/>**
+**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat">Try the Windows UnInstaller</a><br/>**
 
 ************************************************
 ## ADDITIONS / REMOVALS / CORRECTIONS !!
