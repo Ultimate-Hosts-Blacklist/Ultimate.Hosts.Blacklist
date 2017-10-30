@@ -475,6 +475,8 @@ rm $_inputdbA
 # Insert hosts into hosts file for Unix
 # *************************************
 
+printf '\n%s\n%s\n%s\n\n' "###################################" "Create hosts file" "###################################"
+
 printf '%s\n' "$_start1" >> "$_tmphostsB"
 while IFS= read -r LINE
 do
@@ -517,6 +519,8 @@ rm $_inputdbA
 # ****************************************
 # Insert hosts into hosts file for Windows
 # ****************************************
+
+printf '\n%s\n%s\n%s\n\n' "###################################" "Create Windows hosts file" "###################################"
 
 printf '%s\n' "$_start1" >> "$_tmphostsB"
 while IFS= read -r LINE
@@ -562,6 +566,8 @@ rm $_inputdbA
 # Insert hosts into hosts.deny file
 # *********************************
 
+printf '\n%s\n%s\n%s\n\n' "###################################" "Create hosts.deny file" "###################################"
+
 printf '%s\n' "$_start2" >> "$_tmphostsC"
 while IFS= read -r LINE
 do
@@ -606,6 +612,8 @@ rm $_inputdbA
 # Insert hosts into superhosts.deny file
 # **************************************
 
+printf '\n%s\n%s\n%s\n\n' "###################################" "Create superhosts.deny file" "###################################"
+
 printf '%s\n' "$_start3" >> "$_tmphostsD"
 while IFS= read -r LINE
 do
@@ -637,6 +645,8 @@ sudo unix2dos $TRAVIS_BUILD_DIR/hosts.windows
 # Copy Files into place before testing
 # ************************************
 
+printf '\n%s\n%s\n%s\n\n' "###################################" "Copy files into place" "###################################"
+
 sudo cp $_hosts $TRAVIS_BUILD_DIR/hosts
 sudo cp $_hostsdeny $TRAVIS_BUILD_DIR/hosts.deny
 sudo cp $_superhostsdeny $TRAVIS_BUILD_DIR/superhosts.deny
@@ -648,6 +658,8 @@ sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 # Clean domains.list of any lines ending in a space & any lines containing a # character
 # **************************************************************************************
 
+printf '\n%s\n%s\n%s\n\n' "###################################" "Clean domains.list file" "###################################"
+
 cat $TRAVIS_BUILD_DIR/domains.list | grep -v '#' | sed '/^$/d' | sed 's/[[:space:]]//g' > $TRAVIS_BUILD_DIR/domains-tmp.list && mv $TRAVIS_BUILD_DIR/domains-tmp.list $TRAVIS_BUILD_DIR/domains.list
 
 # ***************************************************************************************************************
@@ -657,6 +669,7 @@ cat $TRAVIS_BUILD_DIR/domains.list | grep -v '#' | sed '/^$/d' | sed 's/[[:space
 #sed -r '/_/d' $TRAVIS_BUILD_DIR/domains.list | sed 's/\.\././g' | sed 's/^.//' | cut -d'/' -f3 | grep '[^[:blank:]]' | sort -u > $TRAVIS_BUILD_DIR/domains.tmp && mv $TRAVIS_BUILD_DIR/domains.tmp $TRAVIS_BUILD_DIR/domains.list
 
 
+printf '\n%s\n%s\n%s\n\n' "#####################################" "Second clean domains.list file" "#####################################"
 
 
 sed -r '/_/d' $TRAVIS_BUILD_DIR/domains.list | cut -d'/' -f3 | grep '[^[:blank:]]' | sed 's/^\.//' | sort -u > $TRAVIS_BUILD_DIR/domains.tmp && mv $TRAVIS_BUILD_DIR/domains.tmp $TRAVIS_BUILD_DIR/domains.list
@@ -693,6 +706,8 @@ sed -r 's:(^.?(www|ftp|ww|zzz)?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | sor
 #sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed '/_/d' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 #sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed '/_/d' | sed 's/\.\././g' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
+printf '\n%s\n%s\n%s\n\n' "#######################################" "Create domains-dotted-format.list file" "#######################################"
+
 #sed -r 's:(^.?(www|ftp|ww|zzz)?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 awk '{print "."$1}' < $TRAVIS_BUILD_DIR/domains.list > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
@@ -702,6 +717,8 @@ sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 # ***********************************
 # Remove All Raw Files - Space Saving
 # ***********************************
+
+printf '\n%s\n%s\n%s\n\n' "###################################" "Cleanup Raw Files" "###################################"
 
 sudo rm $_hosts
 sudo rm $_hostsdeny
@@ -713,6 +730,8 @@ sudo rm $_hostswindows
 # **************************************
 
 cd $TRAVIS_BUILD_DIR/
+
+printf '\n%s\n%s\n%s\n\n' "###################################" "Create zip files" "###################################"
 
 zip -r hosts.zip hosts
 zip -r hosts.windows.zip hosts.windows
@@ -727,6 +746,8 @@ zip -r ips.list.zip ips.list
 # Remove our unzipped hosts files
 # *******************************
 
+printf '\n%s\n%s\n%s\n\n' "###################################" "Cleanup unzipped input files" "###################################"
+
 sudo rm $TRAVIS_BUILD_DIR/hosts
 sudo rm $TRAVIS_BUILD_DIR/hosts.windows
 sudo rm $TRAVIS_BUILD_DIR/hosts.deny
@@ -738,6 +759,8 @@ sudo rm $TRAVIS_BUILD_DIR/ips.list
 # ****************************
 # All Done we Exit and Move On
 # ****************************
+
+printf '\n%s\n%s\n%s\n\n' "###################################" "Finished We Exit Now" "###################################"
 
 exit 0
 
