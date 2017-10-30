@@ -8,10 +8,10 @@ Protect your children and family from gaining access to bad web sites and protec
 A hosts file for use on any operating system to block bad domains out of your servers or devices. Information gathered from multiple sources and merged into one massive hosts file.
 
 _______________
-- Version: **V1.2017.10.822**
-- Total Bad Hosts in hosts file: **1,595,717**
-- Total Bad IP's in hosts.deny file: **107,965**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,703,681**
+- Version: **V1.2017.10.823**
+- Total Bad Hosts in hosts file: **1,595,718**
+- Total Bad IP's in hosts.deny file: **109,427**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,705,144**
 
  :exclamation: **Yes you did indeed read those numbers correctly** :exclamation: 
 ____________________
