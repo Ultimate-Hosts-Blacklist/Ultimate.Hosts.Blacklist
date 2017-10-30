@@ -39,9 +39,9 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 
 | Linux | Windows |
 | ----- | ------- |
-| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-installer.sh">hosts Installer</a> | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat">Try the Windows Installer</a> |
-| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-uninstaller.sh">hosts UnInstaller</a> | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat">Try the Windows Updater</a> |
-| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-updater.sh">hosts Updater</a> | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat">Try the Windows UnInstaller</a> |
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-installer.sh">hosts Installer</a> | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat">hosts Installer</a> |
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-uninstaller.sh">hosts UnInstaller</a> | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat">hosts Updater</a> |
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-updater.sh">hosts Updater</a> | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat">hosts UnInstaller</a> |
 | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-installer.sh">hosts.deny Installer</a> |  |
 | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-uninstaller.sh">hosts.deny UnInstaller</a> |  |
 | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-updater.sh">hosts.deny Updater</a> |  |
@@ -49,11 +49,6 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-uninstaller.sh">superhosts.deny UnInstaller</a> |  | 
 | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-updater.sh">superhosts.deny Updater</a> |   |
  
-#### Windows Users
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat">Try the Windows Installer</a><br/>**
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat">Try the Windows Updater</a><br/>**
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat">Try the Windows UnInstaller</a><br/>**
-
 ************************************************
 ## WHAT IS A HOSTS FILE?
 
@@ -140,10 +135,19 @@ To keep this Github repo small, all files are provided in a zip only format. Som
 | domains-dotted-format.list    | DnsMasq          | UNIX    | <a href="https://hosts.ubuntu101.co.za/domains-dotted-format.list">Download</a><br/> |
 | ips.list        | Any / Pi-Hole    | UNIX    | <a href="https://hosts.ubuntu101.co.za/ips.list">Download</a> |
  
-#### Windows Users
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat">Try the Windows Installer</a><br/>**
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat">Try the Windows Updater</a><br/>**
-**<a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat">Try the Windows UnInstaller</a><br/>**
+### Installers, Updaters and Uninstaller Helper Scripts
+
+| Linux | Windows |
+| ----- | ------- |
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-installer.sh">hosts Installer</a> | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat">hosts Installer</a> |
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-uninstaller.sh">hosts UnInstaller</a> | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat">hosts Updater</a> |
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-updater.sh">hosts Updater</a> | <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat">hosts UnInstaller</a> |
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-installer.sh">hosts.deny Installer</a> |  |
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-uninstaller.sh">hosts.deny UnInstaller</a> |  |
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-updater.sh">hosts.deny Updater</a> |  |
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-installer.sh">superhosts.deny Installer</a> |  | 
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-uninstaller.sh">superhosts.deny UnInstaller</a> |  | 
+| <a href="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-updater.sh">superhosts.deny Updater</a> |   |
 
 ************************************************
 ## ADDITIONS / REMOVALS / CORRECTIONS !!
