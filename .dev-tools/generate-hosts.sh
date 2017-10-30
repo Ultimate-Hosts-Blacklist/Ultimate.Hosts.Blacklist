@@ -650,11 +650,11 @@ sudo cp $_input2 $TRAVIS_BUILD_DIR/ips.list
 
 cat $TRAVIS_BUILD_DIR/domains.list | grep -v '#' | sed '/^$/d' | sed 's/[[:space:]]//g' > $TRAVIS_BUILD_DIR/domains-tmp.list && mv $TRAVIS_BUILD_DIR/domains-tmp.list $TRAVIS_BUILD_DIR/domains.list
 
-# *******************************************************************
-# Clean domains.list of any domain names beginning with a . character
-# *******************************************************************
+# ***************************************************************************************************************
+# Clean domains.list of any domain names beginning with a . character and any url strings domain.com/restofstring
+# ***************************************************************************************************************
 
-sed -r '/_/d' $TRAVIS_BUILD_DIR/domains.list | sed 's/\.\././g' | sed 's/^.//' | sort -u > $TRAVIS_BUILD_DIR/domains.tmp && mv $TRAVIS_BUILD_DIR/domains.tmp $TRAVIS_BUILD_DIR/domains.list
+sed -r '/_/d' $TRAVIS_BUILD_DIR/domains.list | sed 's/\.\././g' | sed 's/^.//' | cut -d'/' -f3 | grep '[^[:blank:]]' | sort -u > $TRAVIS_BUILD_DIR/domains.tmp && mv $TRAVIS_BUILD_DIR/domains.tmp $TRAVIS_BUILD_DIR/domains.list
 
 
 # *********************************************************************************
