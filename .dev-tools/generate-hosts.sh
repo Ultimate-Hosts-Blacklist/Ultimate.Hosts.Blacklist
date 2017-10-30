@@ -669,14 +669,28 @@ cat $TRAVIS_BUILD_DIR/domains.list | grep -v '#' | sed '/^$/d' | sed 's/[[:space
 
 #sed -r '/_/d' $TRAVIS_BUILD_DIR/domains.list | sed 's/\.\././g' | sed 's/^.//' | cut -d'/' -f3 | grep '[^[:blank:]]' | sort -u > $TRAVIS_BUILD_DIR/domains.tmp && mv $TRAVIS_BUILD_DIR/domains.tmp $TRAVIS_BUILD_DIR/domains.list
 
+sed -r '/_/d' $TRAVIS_BUILD_DIR/domains.list | cut -d'/' -f3 | grep '[^[:blank:]]' | sed 's/^\.//' | sort -u > $TRAVIS_BUILD_DIR/domains.tmp
+
+sed 's:(^.?(www|ftp|ww|zzz)?.|^..?)::g' $TRAVIS_BUILD_DIR/domains.tmp | sort -u > $TRAVIS_BUILD_DIR/domains.list
+
+#awk '{print "."$1}' < domains-out-3.txt > domains-out-4.txt
+
+#sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' domains-out-2.txt | awk '{print "."$1}' | sort -u > domains-out-3.txt
+
+#sed 's:(^.?(www|ftp)?.|^..?)::gi' domains-out-2.txt | awk '{print "."$1}' | sort -u > domains-out-3.txt
+
+#sed -r 's:(^.?(www|ftp|ww|zzz)?.|^..?)::gi' domains-out-3.txt | awk '{print "."$1}' | sort -u > domains-out-4.txt
+#awk '{print "."$1}' domains-out-3.txt | sort -u > domains-out-4.txt
+
+awk '{print "."$1}' < $TRAVIS_BUILD_DIR/domains.list > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 #printf '\n%s\n%s\n%s\n\n' "#####################################" "Second clean domains.list file" "#####################################"
-echo "################################### Clean domains.list file ###################################"
+#echo "################################### Clean domains.list file ###################################"
 
 
-sed -r 's:(^.?(www|ftp|ww|zzz)?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | sort -u > $TRAVIS_BUILD_DIR/domains1.tmp && mv $TRAVIS_BUILD_DIR/domains1.tmp $TRAVIS_BUILD_DIR/domains2.tmp
+#sed -r 's:(^.?(www|ftp|ww|zzz)?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | sort -u > $TRAVIS_BUILD_DIR/domains1.tmp && mv $TRAVIS_BUILD_DIR/domains1.tmp $TRAVIS_BUILD_DIR/domains2.tmp
 
-sed -r '/_/d' $TRAVIS_BUILD_DIR/domains2.tmp | cut -d'/' -f3 | grep '[^[:blank:]]' | sed 's/^\.//' | sort -u > $TRAVIS_BUILD_DIR/domains3.tmp && mv $TRAVIS_BUILD_DIR/domains3.tmp $TRAVIS_BUILD_DIR/domains.list && rm $TRAVIS_BUILD_DIR/domains2.tmp
+#sed -r '/_/d' $TRAVIS_BUILD_DIR/domains2.tmp | cut -d'/' -f3 | grep '[^[:blank:]]' | sed 's/^\.//' | sort -u > $TRAVIS_BUILD_DIR/domains3.tmp && mv $TRAVIS_BUILD_DIR/domains3.tmp $TRAVIS_BUILD_DIR/domains.list && rm $TRAVIS_BUILD_DIR/domains2.tmp
 
 #awk '{print "."$1}' < domains-out-3.txt > domains-out-4.txt
 
@@ -711,12 +725,12 @@ sed -r '/_/d' $TRAVIS_BUILD_DIR/domains2.tmp | cut -d'/' -f3 | grep '[^[:blank:]
 #sed -r 's:(^.?(www|ftp)[[:alnum:]]?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sed '/_/d' | sed 's/\.\././g' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 #printf '\n%s\n%s\n%s\n\n' "#######################################" "Create domains-dotted-format.list file" "#######################################"
-echo "################################### Create dotted domains.list file ###################################"
+#echo "################################### Create dotted domains.list file ###################################"
 
 
 #sed -r 's:(^.?(www|ftp|ww|zzz)?.|^..?)::gi' $TRAVIS_BUILD_DIR/domains.list | awk '{print "."$1}' | sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
-awk '{print "."$1}' < $TRAVIS_BUILD_DIR/domains.list > $TRAVIS_BUILD_DIR/domains-dotted-format.list
-sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
+#awk '{print "."$1}' < $TRAVIS_BUILD_DIR/domains.list > $TRAVIS_BUILD_DIR/domains-dotted-format.list
+#sort -u > $TRAVIS_BUILD_DIR/domains-dotted-format.list
 
 # Need to still handle adding a dot to domains already starting with a dot ?
 
