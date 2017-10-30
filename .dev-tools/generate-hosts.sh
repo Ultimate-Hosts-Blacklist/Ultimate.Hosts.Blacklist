@@ -239,6 +239,12 @@ sort -u $_combinedlist -o $_combinedlist
 
 printf '\n%s\n%s\n%s\n\n' "######################################" "END: Stripping out Whitelisted Domains" "######################################"
 
+# **********************************************
+# Clean combined.list of any unwanted characters
+# **********************************************
+
+sed -r '/_/d' $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt | cut -d'/' -f3 | grep '[^[:blank:]]' | sed 's/^\.//' | sort -u > $TRAVIS_BUILD_DIR/combined-list.tmp && mv $TRAVIS_BUILD_DIR/combined-list.tmp $TRAVIS_BUILD_DIR/.input_sources/combined-list.txt
+
 # ************************************************
 # Activate Dos2Unix One Last Time and Re-Sort List
 # ************************************************
