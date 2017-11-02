@@ -31,7 +31,6 @@ before_install:
   - sudo apt-get -y install tofrodos
 
 script:
-  #- bash .dev-tools/generate-domain-testing-file.sh
   - bash .dev-tools/pre-deploy.sh
 
 notifications:

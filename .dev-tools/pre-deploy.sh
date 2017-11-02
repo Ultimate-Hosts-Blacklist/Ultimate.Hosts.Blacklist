@@ -84,8 +84,15 @@ git checkout master
 # Run funceble to check for dead domains
 # ***************************************************
 
-sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/install-run-funceble.sh
-sudo sh -x $TRAVIS_BUILD_DIR/.dev-tools/install-run-funceble.sh
+#sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/install-run-funceble.sh
+#sudo sh -x $TRAVIS_BUILD_DIR/.dev-tools/install-run-funceble.sh
+
+# *************************************************
+# Set our Files Executable and Generate Hosts Files
+# *************************************************
+
+sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/final-commit.sh
+sudo bash $TRAVIS_BUILD_DIR/.dev-tools/final-commit.sh
 
 # MIT License
 

@@ -50,9 +50,11 @@ sudo chown -R travis:travis $TRAVIS_BUILD_DIR/
 
 sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/generate-hosts.sh
 sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/modify-readme.sh
+sudo chmod +x $TRAVIS_BUILD_DIR/.dev-tools/deploy-package.sh
 
 sudo $TRAVIS_BUILD_DIR/.dev-tools/generate-hosts.sh
 sudo $TRAVIS_BUILD_DIR/.dev-tools/modify-readme.sh
+sudo $TRAVIS_BUILD_DIR/.dev-tools/deploy-package.sh
 
 # *************************************************************
 # Travis now moves to the before_deploy: section of .travis.yml
