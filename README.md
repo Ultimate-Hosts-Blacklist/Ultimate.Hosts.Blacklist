@@ -23,7 +23,7 @@ Click the link below to see all the sources used as input data to create this ho
 ************************************************
 ## RAW FILE SOURCES
 
-The links below will direct you to the raw unzipped versions of the hosts files in this repo. (File are updated daily)
+The links below will direct you to the raw unzipped versions of the hosts files in this repo. (Files are updated daily)
 
 | File Name       | Operating System | Format  | Download Link |
 | -------------   |:---------------: | :-----: |  :----------- |
@@ -123,7 +123,7 @@ editor.
 ************************************************
 ## WHERE CAN I DOWNLOAD THE RAW UNZIPPED FILES FROM?
 
-To keep this Github repo small, all files are provided in a zip only format. Some people however require their Pi-Holes or other systems to automatically download a raw file once a week or so as an update. For your convenience you can download these raw files at the following links. These links below will always contain tha latest updated version of these files.
+To keep this Github repo small, all files are provided in a zip only format. Some people however require their Pi-Holes or other systems to automatically download a raw file once a week or so as an update. For your convenience you can download these raw files at the following links. These links below will always contain tha latest updated version of these files. (Files are updated daily)
 
 | File Name       | Operating System | Format  | Download Link |
 | -------------   |:---------------: | :-----: |  :----------- |
