@@ -110,7 +110,7 @@ sudo truncate -s 0 $TRAVIS_BUILD_DIR/.input_sources/___False-Positives-Dead-Doma
 # All Done we Exit and Move On
 # ****************************
 
-exit 0
+#exit 0
 
 # MIT License
 

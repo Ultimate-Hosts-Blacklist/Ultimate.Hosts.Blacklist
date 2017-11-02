@@ -47,12 +47,16 @@
 
 YEAR=$(date +"%Y")
 MONTH=$(date +"%m")
+GIT_TAG=V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER
 
 # ***************************************
 # Make Sure we are in the Build Directory
 # ***************************************
 
 cd $TRAVIS_BUILD_DIR
+sudo chown -R travis:travis $TRAVIS_BUILD_DIR
+git add -A
+git commit -am "V1.$YEAR.$MONTH.$TRAVIS_BUILD_NUMBER [ci skip]"
 
 # *****************************************
 # Push our commit and tags back to the repo
@@ -60,9 +64,11 @@ cd $TRAVIS_BUILD_DIR
 
 sudo git push origin master
 
-# *************************************************************************
-# Now TravisCI moves into the deploy: section of TravisCI - see .travis.yml
-# *************************************************************************
+# ****************
+# Update Raw Links
+# ****************
+
+sudo wget -qO- https://hosts.ubuntu101.co.za/update_hosts.php
 
 # MIT License
 
