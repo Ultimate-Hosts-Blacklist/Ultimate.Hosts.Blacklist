@@ -123,7 +123,7 @@ editor.
 ************************************************
 ## WHERE CAN I DOWNLOAD THE RAW UNZIPPED FILES FROM?
 
-To keep this Github repo small, all files are provided in a zip only format. Some people however require their Pi-Holes or other systems to automatically download a raw file once a week or so as an update. For your convenience you can download these raw files at the following links. These links below will always contain tha latest updated version of these files. (Files are updated daily)
+To keep this Github repo small, all files are provided in a zip only format. Some people however require their Pi-Holes or other systems to automatically download a raw file once a week or so as an update. For your convenience you can download these raw files at the following links. These links below will always contain the latest updated version of these files. (Files are updated daily)
 
 | File Name       | Operating System | Format  | Download Link |
 | -------------   |:---------------: | :-----: |  :----------- |
