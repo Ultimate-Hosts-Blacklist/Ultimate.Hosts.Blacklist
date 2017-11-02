@@ -5,7 +5,7 @@
 The Ultimate hosts file for protecting your computer or device against over several hundred thousand bad web sites. 
 Protect your children and family from gaining access to bad web sites and protect your devices and pc from being infected with Malware or Ransomware.
 
-A hosts file for use on any operating system to block bad domains out of your servers or devices. Information gathered from multiple sources and merged into one massive hosts file.
+A hosts file for use on any operating system to block bad domains out of your servers or devices. Information gathered from multiple sources and merged into one massive hosts file and updated every day.
 
 _______________
 - Version: **V1.2017.11.837**
@@ -23,7 +23,7 @@ Click the link below to see all the sources used as input data to create this ho
 ************************************************
 ## RAW FILE SOURCES
 
-The links below will direct you to the raw unzipped versions of the hosts files in this repo.
+The links below will direct you to the raw unzipped versions of the hosts files in this repo. (File are updated daily)
 
 | File Name       | Operating System | Format  | Download Link |
 | -------------   |:---------------: | :-----: |  :----------- |
