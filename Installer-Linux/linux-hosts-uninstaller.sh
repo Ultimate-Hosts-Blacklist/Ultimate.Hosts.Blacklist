@@ -6,6 +6,6 @@
 # https://github.com/mitchellkrogza
 
 # Replace our original hosts file
-sudo mv /etc/hosts.original /etc/hosts
+sudo mv /etc/hosts.bak /etc/hosts
 
 exit 0

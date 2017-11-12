@@ -6,7 +6,7 @@
 # https://github.com/mitchellkrogza
 
 # First Backup Existing hosts file
-sudo cp /etc/hosts /etc/hosts.original
+sudo mv /etc/hosts /etc/hosts.bak
 
 # Now download the new hosts file and put it into place
 sudo wget https://hosts.ubuntu101.co.za/hosts -O /etc/hosts
