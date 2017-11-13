@@ -48,7 +48,7 @@
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
 DAY=$(date +%d)
-MY_GIT_TAG=V$TRAVIS_BUILD_NUMBER.$YEAR.$MONTH.$DAY
+MY_GIT_TAG=V1.$TRAVIS_BUILD_NUMBER.$YEAR.$MONTH.$DAY
 
 # **********************************************
 # Get total counts from all lists

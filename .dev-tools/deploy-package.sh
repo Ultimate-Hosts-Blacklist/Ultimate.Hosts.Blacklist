@@ -48,7 +48,7 @@
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
 DAY=$(date +%d)
-MY_GIT_TAG=V$TRAVIS_BUILD_NUMBER.$YEAR.$MONTH.$DAY
+MY_GIT_TAG=V1.$TRAVIS_BUILD_NUMBER.$YEAR.$MONTH.$DAY
 
 # ***************************************
 # Make Sure we are in the Build Directory
@@ -57,7 +57,7 @@ MY_GIT_TAG=V$TRAVIS_BUILD_NUMBER.$YEAR.$MONTH.$DAY
 cd $TRAVIS_BUILD_DIR
 sudo chown -R travis:travis $TRAVIS_BUILD_DIR
 git add -A
-git commit -am "V$TRAVIS_BUILD_NUMBER.$YEAR.$MONTH.$DAY [ci skip]"
+git commit -am "V1.$TRAVIS_BUILD_NUMBER.$YEAR.$MONTH.$DAY [ci skip]"
 
 # *****************************************
 # Push our commit and tags back to the repo
