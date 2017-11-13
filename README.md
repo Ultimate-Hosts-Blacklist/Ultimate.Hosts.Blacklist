@@ -18,7 +18,7 @@ _______________
  :exclamation: **Yes you did indeed read those numbers correctly** :exclamation: 
 ____________________
 
-************************************************
+
 Click the link below to see all the sources used as input data to create this hosts list.
 ### [SOURCES OF INPUT DATA USED TO CREATE THIS HOSTS FILE](#information-data-sources)
 
