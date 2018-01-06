@@ -92,10 +92,10 @@ So it is as simple as downloading our `hosts` file and keeping it up to date as 
 
 Most host files traditionally use 127.0.0.1 as the loopback address, to establish an IP connection to the local machine.
 
-We prefer the use of 0.0.0.0, which is defined as a non-routable meta-address. Using 0.0.0.0 is faster because there's no wait for a timeout resolution. 
+I prefer the use of 0.0.0.0, which is defined as a non-routable meta-address. Using 0.0.0.0 is also faster because there's no wait for a timeout resolution. 
 It also does not interfere with any web servers that may be running on the local system.
 
-For many windows systems however 127.0.0.1 does appear to work better and which is why our Windows version of the hosts file uses 127.0.0.1 as the loopback address.
+For many windows operating systems however 127.0.0.1 does appear to work slightly better and which is why our Windows version of the hosts file uses 127.0.0.1 as the loopback address.
 
 ************************************************
 ## WHAT IS A HOSTS.DENY FILE?
@@ -103,7 +103,7 @@ For many windows systems however 127.0.0.1 does appear to work better and which 
 A hosts file, named `hosts.deny` is a plain-text file for Linux/Unix based operating systems only which blocks a list of IP addresses on the outside of your network from gaining any access to your computer. A `hosts.deny` file will not work on a Windows operating system.
 
 ************************************************
-## WHAT IS A SUPERHOSTS.DENY FILE? **I've never heard of that ??**
+## WHAT IS A SUPERHOSTS.DENY FILE? **I've never heard of such a thing ??**
 
 The superhosts.deny file is simply named `superhosts.deny` but is actually just a normal `hosts.deny` file which is a plain-text file for Linux/Unix based operating systems which blocks a list of IP addresses or hosts (domains) on the outside of your network from gaining any access to your computer. If you want to user this `superhosts.deny` file simply rename it to `hosts.deny` and place it in your `/etc/` folder on your Linux/Unix operating system. A `hosts.deny` file will not work on a Windows operating system.
 
