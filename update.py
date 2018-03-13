@@ -24,6 +24,7 @@ from subprocess import PIPE, Popen
 from tarfile import open as tarfile_open
 from time import strftime
 from zipfile import ZipFile
+from itertools import repeat
 
 from requests import get
 
@@ -37,6 +38,11 @@ class Settings(object):  # pylint: disable=too-few-public-methods
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     github_org_slug = 'Ultimate-Hosts-Blacklist'
+
+    # This variable set the name of the whitelist repository.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    whitelist_repo_name = 'whitelist'
 
     # This variable set the github api url.
     #
@@ -71,7 +77,7 @@ class Settings(object):  # pylint: disable=too-few-public-methods
     repositories = []
 
     # This variable set the repository to ignore.
-    repo_to_ignore = ['repository-structure']
+    repo_to_ignore = ['repository-structure', 'whitelist']
 
     # This variable save the list of repo with `clean.list` to get.
     #
@@ -102,6 +108,12 @@ class Settings(object):  # pylint: disable=too-few-public-methods
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     # Note: This variable is auto updated by Initiate()
     ips = []
+
+    # This variable save the list of all whitelisted domain.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    # Note: This variable is auto updated by Initiate()
+    whitelist = []
 
     # This variable set the version which is going to be appended to all
     # templates files
@@ -195,6 +207,7 @@ class Initiate(object):
     def __init__(self):
         self.travis()
         Helpers.travis_permissions()
+        self.get_whitelist()
         self.list_of_input_sources()
         self.info_extractor()
 
@@ -223,6 +236,32 @@ class Initiate(object):
             'git checkout %s' %
             environ['GIT_BRANCH'],
             False).execute()
+
+    def get_whitelist(self):
+        """
+        This method will get the list of whitelisted domain.
+        """
+
+        domains_url = (Settings.raw_link +
+                       'domains.list') % Settings.whitelist_repo_name
+        clean_url = (Settings.raw_link +
+                     'clean.list') % Settings.whitelist_repo_name
+
+        if not Helpers.URL(clean_url).is_404():
+            url_to_get = clean_url
+        else:
+            url_to_get = domains_url
+
+        req = get(url_to_get)
+
+        print("Getting %s" % Settings.whitelist_repo_name, end=" ")
+        if req.status_code == 200:
+            list(map(self._data_parser, req.text.split('\n'), repeat(True)))
+
+            Settings.whitelist = Helpers.List(Settings.whitelist).format()
+            print(Settings.done)
+        else:
+            print(Settings.error)
 
     @classmethod
     def list_of_input_sources(cls):
@@ -274,7 +313,7 @@ class Initiate(object):
                 'Impossible to get the numbers of page to read. Is GitHub down ?')
 
     @classmethod
-    def _data_parser(cls, line):
+    def _data_parser(cls, line, whitelist=False):
         """
         Given the extracted line, this method append the data
         to its final location.
@@ -282,6 +321,9 @@ class Initiate(object):
         Arguments:
             - line: str
                 The extracted line.
+            - whitelist: bool
+                If True we set the whitelist, otherwise we set Settings.ips and
+                Settings.domains.
         """
 
         if line and not line.startswith('#'):
@@ -289,16 +331,22 @@ class Initiate(object):
             regex_domain = r'^(?=.{0,253}$)(([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9])\.)+((?=.*[^0-9])([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9]))$'  # pylint: disable=line-too-long
 
             if Helpers.Regex(line, regex_ip4, return_data=False).match():
-                Settings.ips.append(line)
+                if whitelist:
+                    Settings.whitelist.append(line)
+                else:
+                    Settings.ips.append(line)
             elif Helpers.Regex(line, regex_domain, return_data=False).match():
-                Settings.domains.append(line)
+                if whitelist:
+                    Settings.whitelist.append(line)
+                else:
+                    Settings.domains.append(line)
 
     def data_extractor(self, url_to_get, repo):
         """
         This method will read all domains.list or clean.list and append each
         domain to Settings.domains and each IP to Settings.ips.
 
-        Argument:
+        Arguments:
             - url_to_get: str
                 The url to extract data from.
             - repo: str
@@ -309,13 +357,31 @@ class Initiate(object):
 
         print("Extracting domains and ips from %s" % repo, end=" ")
         if req.status_code == 200:
-            list(map(self._data_parser, req.text.split('\n')))
+            list(map(self._data_parser, req.text.split('\n'), repeat(False)))
 
             Settings.domains = Helpers.List(Settings.domains).format()
             Settings.ips = Helpers.List(Settings.ips).format()
             print(Settings.done)
         else:
             print(Settings.error)
+
+    @classmethod
+    def _cleaning_domain_or_ip(cls, domain_or_ip):
+        """
+        This method will check if the domain match once of our whitelisted.
+
+        Arguments:
+            - domain_or_ip: str
+                A domain or ip to check presence into the whitelist list.
+        """
+
+        for whitelisted in Settings.whitelist:
+            if Helpers.Regex(
+                    domain_or_ip,
+                    escape(whitelisted) + '$',
+                    return_data=False).match():
+                return ""
+        return domain_or_ip
 
     def info_extractor(self):
         """
@@ -355,6 +421,17 @@ class Initiate(object):
                 raise Exception(
                     'Impossible to get `info.json` for %s. Is GitHub down ?' %
                     repo)
+
+        print('\n')
+        print("Cleaning of the list of domains", end=" ")
+        Settings.domains = Helpers.List(
+            list(map(self._cleaning_domain_or_ip, Settings.domains))).format()
+        print(Settings.done)
+
+        print("Cleaning of the list of IPs", end=" ")
+        Settings.ips = Helpers.List(
+            list(map(self._cleaning_domain_or_ip, Settings.ips))).format()
+        print(Settings.done)
 
 
 class Generate(object):
