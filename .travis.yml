@@ -1,40 +1,41 @@
-git:
-  depth: 5
-language: php
-sudo: required
-
 env:
   global:
     - secure: RK90rQ2zqYxGlG7vxb4XyknUfrIGeG4s/ZLLlm9n990cczg1opJdmS+O+RM+Wxn0vOffSHYuXf2EmcTjBbqwWOUe8Fynv9pOjLjLVlpcUD6xWqmottjwuROZN6FVQjicBQeXdLzf/WehgDQ7EDVxfp6YRB6esZcbpvVi3AgQZ7h3IEKi6rHhda7H6oQugO4tMbrYK8lNzvJFfG5J/isy4XMJDkM7tD2wbqu2EIGCwoM474wNKJmXSx9+54u95oi5Lx08aMDbKDRK9AjK8A5KfEbIoBonMnfjYcWfYJfUlzZwgiAtxixC9dYyObOW8RT18YXdDsn3WANUYw3caZS7sv544wUTWROGj+fwgxs+N+fcPjaitswwX8cSJBBjA13wAiCQVSUXsjOofvhDtKFv3gflkLYae4pryGsP1lNLFkrkYMOhoRbP572eOEUisfSrOLuTvV3C4Z3ae8nghfYNXGiCoxYX/ska2NegYPnYUkmLmEeOSExd+fc+8n7Q1t+ER9mRfp/kAxChyoioaLWiq4GgmzKgURg6pmpWRmOIJ+sGx/AJ39tRZAMDNOqdedmYmRsBRuy/HF38wXysxSOh9ukV243wi+szEF5XR/zg6fJJYfPzTKcXFvYGJCPE0ccHgH/wG/RVWKT1dWs7iWrY8IudupkF8dN/DpvoH2l2KmM=
     - GIT_NAME: Travis CI
     - GIT_EMAIL: mitchellkrog@gmail.com
     - TRAVIS_REPO_SLUG: mitchellkrogza/Ultimate.Hosts.Blacklist
-    - GIT_BRANCH: master
-    - secure: ${GH_TOKEN}
+    - GIT_BRANCH: dev
   matrix:
     - USE_NETWORK=true
 
-php:
-  - '5.6'
+language: python
+
+python:
+  - "3.6"
+
+matrix:
+  fast_finish: true
 
 cache:
   - apt
+  - pip
 
-addons:
-  apt:
-    packages:
-      - realpath
+sudo: required
 
 before_install:
-  - export TZ=Africa/Johannesburg
-  - export LC_NUMERIC=en_US
-  - sudo apt-get -y install expect
-  - sudo apt-get -y install whois
+  - sudo apt-get -y install python3-pip
   - sudo apt-get -y install dos2unix
-  - sudo apt-get -y install tofrodos
+  - pip3 install colorama
 
 script:
-  - bash .dev-tools/pre-deploy.sh
+  - export TRAVIS_BUILD_DIR=${TRAVIS_BUILD_DIR}
+  - export GH_TOKEN=${GH_TOKEN}
+  - export TRAVIS_REPO_SLUG=${TRAVIS_REPO_SLUG}
+  - export GIT_BRANCH=${GIT_BRANCH}
+  - export GIT_EMAIL=${GIT_EMAIL}
+  - export GIT_NAME=${GIT_NAME}
+  - export TRAVIS_BUILD_NUMBER=${TRAVIS_BUILD_NUMBER}
+  - python3 ./update.py
 
 notifications:
   email: false
