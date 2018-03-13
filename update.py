@@ -609,7 +609,7 @@ class Deploy(object):  # pylint: disable=too-few-public-methods
         Helpers.travis_permissions()
 
         Helpers.Command(
-            'git add --all && git commit -a -m %s && git push origin %s' %
+            "git add --all && git commit -a -m '%s' && git push origin %s" %
             (commit_message, environ['GIT_BRANCH'])).execute()
 
         get(Settings.deploy_raw_url)

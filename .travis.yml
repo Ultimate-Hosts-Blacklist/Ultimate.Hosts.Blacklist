@@ -29,13 +29,6 @@ before_install:
   - pip3 install colorama
 
 script:
-  - export TRAVIS_BUILD_DIR=${TRAVIS_BUILD_DIR}
-  - export GH_TOKEN=${GH_TOKEN}
-  - export TRAVIS_REPO_SLUG=${TRAVIS_REPO_SLUG}
-  - export GIT_BRANCH=${GIT_BRANCH}
-  - export GIT_EMAIL=${GIT_EMAIL}
-  - export GIT_NAME=${GIT_NAME}
-  - export TRAVIS_BUILD_NUMBER=${TRAVIS_BUILD_NUMBER}
   - python3 ./update.py
 
 notifications:
