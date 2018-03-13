@@ -19,6 +19,7 @@ matrix:
 cache:
   - apt
   - pip
+  - pip3
 
 sudo: required
 
