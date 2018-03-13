@@ -14,6 +14,7 @@ Contributors:
     @GitHubUsername, Name, Email (optional)
 """
 
+from itertools import repeat
 from os import environ, path, remove
 from os import sep as directory_separator
 from re import compile as comp
@@ -24,7 +25,6 @@ from subprocess import PIPE, Popen
 from tarfile import open as tarfile_open
 from time import strftime
 from zipfile import ZipFile
-from itertools import repeat
 
 from requests import get
 
