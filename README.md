@@ -10,7 +10,7 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 --------------------------------------------------------------------------------
 
-- Version: **V1.1007.2018.03.14**
+- Version: **V1.1008.2018.03.15**
 - Total Bad Hosts in hosts file: **1,801,453**
 - Total Bad IP's in hosts.deny file: **208,031**
 - Total Bad Hosts and IP's in superhosts.deny file: **2,009,484**
@@ -198,7 +198,7 @@ The sources of the input data information are as follows.
 - [YoYo.org](https://pgl.yoyo.org/as/serverlist.php?showintro=0;hostformat=hosts)
 - [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
 - [uBlock Filters Plus](https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt)
-- [YousList - smartadserver and mirrors](https://github.com/yous/YousList)
+- [YousList](https://github.com/yous/YousList)
 - [SMed79 - Various Lists](https://github.com/SMed79)
 - [ZeroDot1 - CoinBlocker Lists](https://github.com/ZeroDot1/CoinBlockerLists)
 
