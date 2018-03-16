@@ -14,7 +14,8 @@ Contributors:
     @GitHubUsername, Name, Email (optional)
 """
 
-from itertools import repeat
+# pylint: disable=too-many-lines
+
 from os import environ, path, remove
 from os import sep as directory_separator
 from re import compile as comp
@@ -114,6 +115,22 @@ class Settings(object):  # pylint: disable=too-few-public-methods
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     # Note: This variable is auto updated by Initiate()
     whitelist = []
+
+    # This variable is used to set the marker that we use to say that we
+    # match all occurence of the domain or IP.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    whitelist_all_marker = 'ALL '
+
+    # This variable set the regex to use to catch IPv4.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    regex_ip4 = r'^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[0-9]{1,}\/[0-9]{1,})$'  # pylint: disable=line-too-long
+
+    # This variable set the regex to use to catch IPv4.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    regex_domain = r'^(?=.{0,253}$)(([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9])\.)+((?=.*[^0-9])([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9]))$'  # pylint: disable=line-too-long
 
     # This variable set the version which is going to be appended to all
     # templates files
@@ -237,6 +254,32 @@ class Initiate(object):
             environ['GIT_BRANCH'],
             False).execute()
 
+    @classmethod
+    def _whitelist_parser(cls, line):
+        """
+        This method will get and parse all whitelist domain into
+        Settings.whitelist.
+
+        Argument:
+            - line: str
+                The extracted line.
+        """
+
+        if line and not line.startswith('#'):
+            if line.startswith(Settings.whitelist_all_marker):
+                to_check = line.split(Settings.whitelist_all_marker)[1]
+            else:
+                to_check = line
+
+            if Helpers.Regex(
+                    to_check,
+                    Settings.regex_ip4,
+                    return_data=False).match() or Helpers.Regex(
+                        to_check,
+                        Settings.regex_domain,
+                        return_data=False).match():
+                Settings.whitelist.append(line)
+
     def get_whitelist(self):
         """
         This method will get the list of whitelisted domain.
@@ -244,19 +287,12 @@ class Initiate(object):
 
         domains_url = (Settings.raw_link +
                        'domains.list') % Settings.whitelist_repo_name
-        clean_url = (Settings.raw_link +
-                     'clean.list') % Settings.whitelist_repo_name
 
-        if not Helpers.URL(clean_url).is_404():
-            url_to_get = clean_url
-        else:
-            url_to_get = domains_url
-
-        req = get(url_to_get)
+        req = get(domains_url)
 
         print("Getting %s" % Settings.whitelist_repo_name, end=" ")
         if req.status_code == 200:
-            list(map(self._data_parser, req.text.split('\n'), repeat(True)))
+            list(map(self._whitelist_parser, req.text.split('\n')))
 
             Settings.whitelist = Helpers.List(Settings.whitelist).format()
             print(Settings.done)
@@ -313,33 +349,24 @@ class Initiate(object):
                 'Impossible to get the numbers of page to read. Is GitHub down ?')
 
     @classmethod
-    def _data_parser(cls, line, whitelist=False):
+    def _data_parser(cls, line):
         """
         Given the extracted line, this method append the data
         to its final location.
 
-        Arguments:
+        Argument:
             - line: str
                 The extracted line.
-            - whitelist: bool
-                If True we set the whitelist, otherwise we set Settings.ips and
-                Settings.domains.
         """
 
         if line and not line.startswith('#'):
-            regex_ip4 = r'^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[0-9]{1,}\/[0-9]{1,})$'  # pylint: disable=line-too-long
-            regex_domain = r'^(?=.{0,253}$)(([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9])\.)+((?=.*[^0-9])([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9]))$'  # pylint: disable=line-too-long
-
-            if Helpers.Regex(line, regex_ip4, return_data=False).match():
-                if whitelist:
-                    Settings.whitelist.append(line)
-                else:
-                    Settings.ips.append(line)
-            elif Helpers.Regex(line, regex_domain, return_data=False).match():
-                if whitelist:
-                    Settings.whitelist.append(line)
-                else:
-                    Settings.domains.append(line)
+            if Helpers.Regex(
+                    line,
+                    Settings.regex_ip4,
+                    return_data=False).match():
+                Settings.ips.append(line)
+            elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match():
+                Settings.domains.append(line)
 
     def data_extractor(self, url_to_get, repo):
         """
@@ -357,7 +384,7 @@ class Initiate(object):
 
         print("Extracting domains and ips from %s" % repo, end=" ")
         if req.status_code == 200:
-            list(map(self._data_parser, req.text.split('\n'), repeat(False)))
+            list(map(self._data_parser, req.text.split('\n')))
 
             Settings.domains = Helpers.List(Settings.domains).format()
             Settings.ips = Helpers.List(Settings.ips).format()
@@ -376,9 +403,15 @@ class Initiate(object):
         """
 
         for whitelisted in Settings.whitelist:
+            if whitelisted.startswith(Settings.whitelist_all_marker):
+                regex = escape(
+                    whitelisted.split(Settings.whitelist_all_marker)[1]) + '$'
+            else:
+                regex = '^%s$' % escape(whitelisted)
+
             if Helpers.Regex(
                     domain_or_ip,
-                    escape(whitelisted) + '$',
+                    regex,
                     return_data=False).match():
                 return ""
         return domain_or_ip
