@@ -18,6 +18,7 @@ Contributors:
 
 from os import environ, path, remove
 from os import sep as directory_separator
+from sys import stdout
 from re import compile as comp
 from re import escape
 from re import sub as substrings
@@ -748,8 +749,11 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             (build_dir)]
 
         for command in commands:
-            print("Runing %s" % repr(command))
+            print("\rFixing permissions...", end="")
             Helpers.Command(command, False).execute()
+            stdout.flush()
+
+        print("\r", end="")
 
         if Helpers.Command(
                 'git config core.sharedRepository',
