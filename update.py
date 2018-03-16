@@ -739,11 +739,11 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
 
         build_dir = environ['TRAVIS_BUILD_DIR']
         commands = [
-            'sudo chown -R travis:travis %s' %
+            "sudo find %s -not -path './.git*' -exec chown -R travis:travis '{}' \;" %
             (build_dir),
-            'sudo chgrp -R travis %s' %
+            "sudo find %s -not -path './.git*' -exec chgrp -R travis '{}' \;" %
             (build_dir),
-            'sudo chmod -R g+rwX %s' %
+            "sudo find %s -not -path './.git*' -exec chmod -R g+rwX '{}' \;" %
             (build_dir),
             r"sudo find %s -type d -exec chmod g+x '{}' \;" %
             (build_dir)]
