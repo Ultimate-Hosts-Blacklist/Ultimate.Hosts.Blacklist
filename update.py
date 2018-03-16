@@ -748,6 +748,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             (build_dir)]
 
         for command in commands:
+            print("Runing %s" % repr(command))
             Helpers.Command(command, False).execute()
 
         if Helpers.Command(
