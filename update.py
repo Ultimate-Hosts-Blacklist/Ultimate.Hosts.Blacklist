@@ -744,9 +744,6 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             (build_dir),
             'sudo chmod -R g+rwX %s' %
             (build_dir),
-            'sudo chmod 777 -Rf %s.git' %
-            (build_dir +
-             directory_separator),
             r"sudo find %s -type d -exec chmod g+x '{}' \;" %
             (build_dir)]
 
