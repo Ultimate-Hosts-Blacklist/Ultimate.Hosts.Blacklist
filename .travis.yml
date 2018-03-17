@@ -5,8 +5,6 @@ env:
     - GIT_EMAIL: mitchellkrog@gmail.com
     - TRAVIS_REPO_SLUG: mitchellkrogza/Ultimate.Hosts.Blacklist
     - GIT_BRANCH: dev
-  matrix:
-    - USE_NETWORK=true
 
 language: python
 
