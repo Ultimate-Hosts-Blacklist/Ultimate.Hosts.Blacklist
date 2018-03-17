@@ -450,30 +450,18 @@ class Initiate(object):
             req = get(url_to_get)
 
             if req.status_code == 200:
-                data = req.json()
-                if 'currently_under_test' in data:
-                    if bool(int(data['currently_under_test'])):
-                        if not Helpers.URL(clean_url).is_404():
-                            self.data_extractor(clean_url, repo)
-                        elif not Helpers.URL(domains_url).is_404():
-                            self.data_extractor(domains_url, repo)
-                        else:
-                            raise Exception(
-                                'Corrupted repository. Please check `domains.list` for %s' %
-                                repo)
-                    else:
-                        if not Helpers.URL(clean_url).is_404():
-                            self.data_extractor(clean_url, repo)
-                        else:
-                            self.data_extractor(domains_url, repo)
+                if not Helpers.URL(clean_url).is_404():
+                    self.data_extractor(clean_url, repo)
+                elif not Helpers.URL(domains_url).is_404():
+                    self.data_extractor(domains_url, repo)
                 else:
                     raise Exception(
-                        'Corrupted `info.json`. Please check `currently_under_test` for %s' %
+                        'Corrupted repository. Please check `domains.list` for %s' %
                         repo)
             else:
                 raise Exception(
-                    'Impossible to get `info.json` for %s. Is GitHub down ?' %
-                    repo)
+                    'Impossible to get `info.json` for %s. Is GitHub down ? (%s)' %
+                    (repo, req.status_code))
 
         print('\n')
         print("Cleaning of the list of domains", end=" ")

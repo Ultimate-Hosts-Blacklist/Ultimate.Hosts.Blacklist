@@ -1,6 +1,6 @@
 git:
   depth: 5
-  
+
 env:
   global:
     - secure: RK90rQ2zqYxGlG7vxb4XyknUfrIGeG4s/ZLLlm9n990cczg1opJdmS+O+RM+Wxn0vOffSHYuXf2EmcTjBbqwWOUe8Fynv9pOjLjLVlpcUD6xWqmottjwuROZN6FVQjicBQeXdLzf/WehgDQ7EDVxfp6YRB6esZcbpvVi3AgQZ7h3IEKi6rHhda7H6oQugO4tMbrYK8lNzvJFfG5J/isy4XMJDkM7tD2wbqu2EIGCwoM474wNKJmXSx9+54u95oi5Lx08aMDbKDRK9AjK8A5KfEbIoBonMnfjYcWfYJfUlzZwgiAtxixC9dYyObOW8RT18YXdDsn3WANUYw3caZS7sv544wUTWROGj+fwgxs+N+fcPjaitswwX8cSJBBjA13wAiCQVSUXsjOofvhDtKFv3gflkLYae4pryGsP1lNLFkrkYMOhoRbP572eOEUisfSrOLuTvV3C4Z3ae8nghfYNXGiCoxYX/ska2NegYPnYUkmLmEeOSExd+fc+8n7Q1t+ER9mRfp/kAxChyoioaLWiq4GgmzKgURg6pmpWRmOIJ+sGx/AJ39tRZAMDNOqdedmYmRsBRuy/HF38wXysxSOh9ukV243wi+szEF5XR/zg6fJJYfPzTKcXFvYGJCPE0ccHgH/wG/RVWKT1dWs7iWrY8IudupkF8dN/DpvoH2l2KmM=
@@ -12,7 +12,7 @@ env:
 language: python
 
 python:
-  - "3.6"
+  - "3.6.4"
 
 matrix:
   fast_finish: true
