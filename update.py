@@ -230,7 +230,7 @@ class Initiate(object):
         Helpers.travis_permissions()
         self.get_whitelist()
         self.list_of_input_sources()
-        self.data_extractor()
+        # self.data_extractor()
 
     @classmethod
     def travis(cls):
@@ -436,7 +436,7 @@ class Initiate(object):
                 elif domains_url_data.status_code == 200:
                     print("Extracting domains and ips from %s (domain.list)" % repo, end=" ")
 
-                    data = domains_url_data 
+                    data = domains_url_data
                 else:
                     print(Settings.error)
                     continue
