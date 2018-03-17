@@ -382,9 +382,9 @@ class Initiate(object):
             if Helpers.Regex(
                     line,
                     Settings.regex_ip4,
-                    return_data=False).match() and self._cleaning_domain_or_ip(line):
+                    return_data=False).match() and cls._cleaning_domain_or_ip(line):
                 Settings.ips.append(line)
-            elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match() and self._cleaning_domain_or_ip(line):
+            elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match() and cls._cleaning_domain_or_ip(line):
                 Settings.domains.append(line)
 
     @classmethod
