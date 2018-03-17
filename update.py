@@ -442,6 +442,7 @@ class Initiate(object):
         """
 
         for repo in Settings.repositories:
+            print("Connecting with %s ..." % repo)
             url_to_get = (Settings.raw_link + 'info.json') % repo
             domains_url = (Settings.raw_link + 'domains.list') % repo
             clean_url = (Settings.raw_link + 'clean.list') % repo
