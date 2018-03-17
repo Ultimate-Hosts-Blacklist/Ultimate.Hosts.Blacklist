@@ -1043,3 +1043,5 @@ if __name__ == '__main__':
     Generate()
     Compress()
     Deploy()
+
+print("Is it Funilrys or %s ?" % repr(__name__))
