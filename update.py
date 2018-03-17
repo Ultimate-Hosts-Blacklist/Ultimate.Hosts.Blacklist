@@ -426,21 +426,27 @@ class Initiate(object):
                 domains_url = (Settings.raw_link + 'domains.list') % repo
                 clean_url = (Settings.raw_link + 'clean.list') % repo
 
-                if not Helpers.URL(clean_url).is_404():
-                    url_to_get = clean_url
-                elif not Helpers.URL(domains_url).is_404():
-                    url_to_get = domains_url
-                req = get(url_to_get)
+                clean_url_data = get(clean_url)
+                domains_url_data = get(domains_url)
 
-                print("Extracting domains and ips from %s" % repo, end=" ")
-                if req.status_code == 200:
-                    list(map(self._data_parser, req.text.split('\n')))
+                if clean_url_data.status_code == 200:
+                    print("Extracting domains and ips from %s (clean.list)" % repo, end=" ")
 
-                    Settings.domains = Helpers.List(Settings.domains).format()
-                    Settings.ips = Helpers.List(Settings.ips).format()
-                    print(Settings.done)
+                    data = clean_url_data
+                elif domains_url_data.status_code == 200:
+                    print("Extracting domains and ips from %s (domain.list)" % repo, end=" ")
+
+                    data = domains_url_data 
                 else:
                     print(Settings.error)
+                    continue
+
+                list(map(self._data_parser, data.text.split('\n')))
+
+                Settings.domains = Helpers.List(Settings.domains).format()
+                Settings.ips = Helpers.List(Settings.ips).format()
+                print(Settings.done)
+
 
             print('\n')
             print("Cleaning of the list of domains", end=" ")
