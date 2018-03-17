@@ -440,14 +440,14 @@ class Initiate(object):
             Settings.domains = Helpers.List(
                 Helpers.Regex(
                     Settings.domains,
-                    Settings.whitelist).not_matching_list()).format()
+                    Settings.regex_whitelist).not_matching_list()).format()
             print(Settings.done)
 
             print("Cleaning of the list of IPs", end=" ")
             Settings.ips = Helpers.List(
                 Helpers.Regex(
                     Settings.ips,
-                    Settings.whitelist).not_matching_list()).format()
+                    Settings.regex_whitelist).not_matching_list()).format()
         else:
             domains_url = (Settings.raw_link + 'domains.list') % repo
             clean_url = (Settings.raw_link + 'clean.list') % repo
