@@ -32,6 +32,7 @@ from requests import get
 
 print("Is it Funilrys or %s ?" % repr(__name__))
 
+
 class Settings(object):  # pylint: disable=too-few-public-methods
     """
     This class will save all data that can be called from anywhere in the code.
@@ -225,7 +226,7 @@ class Initiate(object):
 
     def __init__(self):
         print("Beginning of Initiate()")
-        # self.travis()
+        self.travis()
         # # Helpers.travis_permissions()
         # self.get_whitelist()
         # self.list_of_input_sources()
@@ -738,6 +739,8 @@ class Initiate(object):
 #         get(Settings.deploy_raw_url)
 #
 #
+
+
 class Helpers(object):  # pylint: disable=too-few-public-methods
     """
     Well, thanks to those helpers :-)
