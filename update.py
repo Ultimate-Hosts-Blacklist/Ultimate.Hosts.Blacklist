@@ -422,6 +422,7 @@ class Initiate(object):
         if Settings.repositories:
 
             for repo in Settings.repositories:
+                print("Getting %s ..." % repo)
 
                 domains_url = (Settings.raw_link + 'domains.list') % repo
                 clean_url = (Settings.raw_link + 'clean.list') % repo
