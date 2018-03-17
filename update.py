@@ -361,7 +361,7 @@ class Initiate(object):
             print(Settings.done)
         else:
             raise Exception(
-                'Impossible to get the numbers of page to read. Is GitHub down ? (url_to_get - %s)' % pages_finder.status_code)
+                'Impossible to get the numbers of page to read. Is GitHub down ? (%s - %s)' % (url_to_get, pages_finder.status_code))
 
     @classmethod
     def _data_parser(cls, line):
