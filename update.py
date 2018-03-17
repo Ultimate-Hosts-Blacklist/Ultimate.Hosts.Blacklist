@@ -739,21 +739,20 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
 
         build_dir = environ['TRAVIS_BUILD_DIR']
         commands = [
-            "sudo find %s -not -path './.git*' -exec chown -R travis:travis '{}' \;" %
+            "sudo chown -R travis:travis %s" %
             (build_dir),
-            "sudo find %s -not -path './.git*' -exec chgrp -R travis '{}' \;" %
+            "sudo chgrp -R travis %s" %
             (build_dir),
-            "sudo find %s -not -path './.git*' -exec chmod -R g+rwX '{}' \;" %
+            "sudo chmod -R g+rwX %s" %
             (build_dir),
             r"sudo find %s -type d -exec chmod g+x '{}' \;" %
             (build_dir)]
 
-        for command in commands:
-            print("\rFixing permissions...", end="")
-            Helpers.Command(command, False).execute()
-            stdout.flush()
+        Helpers.Command('ls -al', True).execute()
 
-        print("\r", end="")
+        for command in commands:
+            print("Running %s" % command, end="")
+            Helpers.Command(command, False).execute()
 
         if Helpers.Command(
                 'git config core.sharedRepository',
