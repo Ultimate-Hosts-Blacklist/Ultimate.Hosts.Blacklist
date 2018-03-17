@@ -413,41 +413,14 @@ class Initiate(object):
                 return ""
         return domain_or_ip
 
-    def data_extractor(self):
+    def data_extractor(self, repo=None):
         """
         This method will read all domains.list or clean.list and append each
         domain to Settings.domains and each IP to Settings.ips.
         """
 
-        if Settings.repositories:
-
-            for repo in Settings.repositories:
-                print("Getting %s ..." % repo)
-
-                domains_url = (Settings.raw_link + 'domains.list') % repo
-                clean_url = (Settings.raw_link + 'clean.list') % repo
-
-                clean_url_data = get(clean_url)
-                domains_url_data = get(domains_url)
-
-                if clean_url_data.status_code == 200:
-                    print("Extracting domains and ips from %s (clean.list)" % repo, end=" ")
-
-                    data = clean_url_data
-                elif domains_url_data.status_code == 200:
-                    print("Extracting domains and ips from %s (domain.list)" % repo, end=" ")
-
-                    data = domains_url_data
-                else:
-                    print(Settings.error)
-                    continue
-
-                list(map(self._data_parser, data.text.split('\n')))
-
-                Settings.domains = Helpers.List(Settings.domains).format()
-                Settings.ips = Helpers.List(Settings.ips).format()
-                print(Settings.done)
-
+        if not repo:
+            list(map(self.data_extractor,Settings.repositories))
 
             print('\n')
             print("Cleaning of the list of domains", end=" ")
@@ -459,6 +432,31 @@ class Initiate(object):
             Settings.ips = Helpers.List(
                 list(map(self._cleaning_domain_or_ip, Settings.ips))).format()
             print(Settings.done)
+        else:
+            domains_url = (Settings.raw_link + 'domains.list') % repo
+            clean_url = (Settings.raw_link + 'clean.list') % repo
+
+            clean_url_data = get(clean_url)
+            domains_url_data = get(domains_url)
+
+            if clean_url_data.status_code == 200:
+                print("Extracting domains and ips from %s (clean.list)" % repo, end=" ")
+
+                data = clean_url_data
+            elif domains_url_data.status_code == 200:
+                print("Extracting domains and ips from %s (domain.list)" % repo, end=" ")
+
+                data = domains_url_data
+            else:
+                print(Settings.error)
+                data = ""
+
+            if data:
+                list(map(self._data_parser, data.text.split('\n')))
+
+                Settings.domains = Helpers.List(Settings.domains).format()
+                Settings.ips = Helpers.List(Settings.ips).format()
+                print(Settings.done)
 
 #
 #
