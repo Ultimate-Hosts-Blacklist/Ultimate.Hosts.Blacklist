@@ -32,188 +32,188 @@ from requests import get
 
 print("Is it Funilrys or %s ?" % repr(__name__))
 
-# class Settings(object):  # pylint: disable=too-few-public-methods
-#     """
-#     This class will save all data that can be called from anywhere in the code.
-#     """
-#
-#     # This variable set the GitHub repository slug.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     github_org_slug = 'Ultimate-Hosts-Blacklist'
-#
-#     # This variable set the name of the whitelist repository.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     whitelist_repo_name = 'whitelist'
-#
-#     # This variable set the github api url.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     github_api_url = 'https://api.github.com'
-#
-#     # This variable set the github raw url.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     github_raw_url = 'https://raw.githubusercontent.com/'
-#
-#     # This variable set the deploy raw url.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     deploy_raw_url = 'https://hosts.ubuntu101.co.za/update_hosts.php'
-#
-#     # This variable set the partially full url when attempting to get the
-#     # raw file.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     raw_link = github_raw_url + github_org_slug + '/%s/master/'
-#
-#     # This variable the organisation url.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     github_org_url = '%s/orgs/%s' % (github_api_url, github_org_slug)
-#
-#     # This variable save the list of repository.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     # Note: This variable is auto updated by Initiate()
-#     repositories = []
-#
-#     # This variable set the repository to ignore.
-#     repo_to_ignore = ['repository-structure', 'whitelist']
-#
-#     # This variable save the list of repo with `clean.list` to get.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     # Note: This variable is auto updated by Initiate()
-#     clean_list_repo = []
-#
-#     # This variable save the list of repo with `domains.list` to get.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     # Note: This variable is auto updated by Initiate()
-#     domains_list_repo = []
-#
-#     # This variable save the list of repo which are IP only.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     # Note: This variable is auto updated by Initiate()
-#     ip_list_repo = []
-#
-#     # This variable save the list of all domains.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     # Note: This variable is auto updated by Initiate()
-#     domains = []
-#
-#     # This variable save the list of all ips.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     # Note: This variable is auto updated by Initiate()
-#     ips = []
-#
-#     # This variable save the list of all whitelisted domain.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     # Note: This variable is auto updated by Initiate()
-#     whitelist = []
-#
-#     # This variable is used to set the marker that we use to say that we
-#     # match all occurence of the domain or IP.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     whitelist_all_marker = 'ALL '
-#
-#     # This variable set the regex to use to catch IPv4.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     regex_ip4 = r'^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[0-9]{1,}\/[0-9]{1,})$'  # pylint: disable=line-too-long
-#
-#     # This variable set the regex to use to catch IPv4.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     regex_domain = r'^(?=.{0,253}$)(([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9])\.)+((?=.*[^0-9])([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9]))$'  # pylint: disable=line-too-long
-#
-#     # This variable set the version which is going to be appended to all
-#     # templates files
-#     version = 'V1.%s.%s.%s.%s' % (environ['TRAVIS_BUILD_NUMBER'], strftime(
-#         '%Y'), strftime('%m'), strftime('%d'))
-#
-#     # This variable set the location of the templates directory.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     templates_directory = 'templates' + directory_separator
-#
-#     # This variable set the name of the dotted domains file.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     dotted_file = 'domains-dotted-format.list'
-#
-#     # This variable set the name of the plain text domains file.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     plain_text_domains_file = 'domains.list'
-#
-#     # This variable set the name of the plain text ips file.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     plain_text_ips_file = 'ips.list'
-#
-#     # This variable set the name of the hosts.deny file.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     hosts_deny_file = 'hosts.deny'
-#
-#     # This variable set the name of the hosts.deny template.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     hosts_deny_template = templates_directory + 'hostsdeny.template'
-#
-#     # This variable set the name of the superhosts.deny file.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     superhosts_deny_file = 'superhosts.deny'
-#
-#     # This variable set the name of the hosts.deny template.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     superhosts_deny_template = templates_directory + 'superhostsdeny.template'
-#
-#     # This variable set the name of the hosts.windows file.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     hosts_windows_file = 'hosts.windows'
-#
-#     # This variable set the name of the hosts.windows template.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     hosts_windows_template = templates_directory + 'hosts.windows.template'
-#
-#     # This variable set the name of the hosts file.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     hosts_unix_file = 'hosts'
-#
-#     # This variable set the name of the hosts template.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     hosts_unix_template = templates_directory + 'hosts.template'
-#
-#     # This variable set the name of the README.md file.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     readme_md_file = 'README.md'
-#
-#     # This variable set the name of the hosts.windows template.
-#     #
-#     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-#     readme_me_template = templates_directory + 'README_template.md'
-#
-#     # This variable set the char to use when something is done.
-#     done = '✔'
-#
-#     # This variable set the char to use when an error occured
-#     error = '✘'
+class Settings(object):  # pylint: disable=too-few-public-methods
+    """
+    This class will save all data that can be called from anywhere in the code.
+    """
+
+    # This variable set the GitHub repository slug.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    github_org_slug = 'Ultimate-Hosts-Blacklist'
+
+    # This variable set the name of the whitelist repository.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    whitelist_repo_name = 'whitelist'
+
+    # This variable set the github api url.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    github_api_url = 'https://api.github.com'
+
+    # This variable set the github raw url.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    github_raw_url = 'https://raw.githubusercontent.com/'
+
+    # This variable set the deploy raw url.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    deploy_raw_url = 'https://hosts.ubuntu101.co.za/update_hosts.php'
+
+    # This variable set the partially full url when attempting to get the
+    # raw file.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    raw_link = github_raw_url + github_org_slug + '/%s/master/'
+
+    # This variable the organisation url.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    github_org_url = '%s/orgs/%s' % (github_api_url, github_org_slug)
+
+    # This variable save the list of repository.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    # Note: This variable is auto updated by Initiate()
+    repositories = []
+
+    # This variable set the repository to ignore.
+    repo_to_ignore = ['repository-structure', 'whitelist']
+
+    # This variable save the list of repo with `clean.list` to get.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    # Note: This variable is auto updated by Initiate()
+    clean_list_repo = []
+
+    # This variable save the list of repo with `domains.list` to get.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    # Note: This variable is auto updated by Initiate()
+    domains_list_repo = []
+
+    # This variable save the list of repo which are IP only.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    # Note: This variable is auto updated by Initiate()
+    ip_list_repo = []
+
+    # This variable save the list of all domains.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    # Note: This variable is auto updated by Initiate()
+    domains = []
+
+    # This variable save the list of all ips.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    # Note: This variable is auto updated by Initiate()
+    ips = []
+
+    # This variable save the list of all whitelisted domain.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    # Note: This variable is auto updated by Initiate()
+    whitelist = []
+
+    # This variable is used to set the marker that we use to say that we
+    # match all occurence of the domain or IP.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    whitelist_all_marker = 'ALL '
+
+    # This variable set the regex to use to catch IPv4.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    regex_ip4 = r'^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[0-9]{1,}\/[0-9]{1,})$'  # pylint: disable=line-too-long
+
+    # This variable set the regex to use to catch IPv4.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    regex_domain = r'^(?=.{0,253}$)(([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9])\.)+((?=.*[^0-9])([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9]))$'  # pylint: disable=line-too-long
+
+    # This variable set the version which is going to be appended to all
+    # templates files
+    version = 'V1.%s.%s.%s.%s' % (environ['TRAVIS_BUILD_NUMBER'], strftime(
+        '%Y'), strftime('%m'), strftime('%d'))
+
+    # This variable set the location of the templates directory.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    templates_directory = 'templates' + directory_separator
+
+    # This variable set the name of the dotted domains file.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    dotted_file = 'domains-dotted-format.list'
+
+    # This variable set the name of the plain text domains file.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    plain_text_domains_file = 'domains.list'
+
+    # This variable set the name of the plain text ips file.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    plain_text_ips_file = 'ips.list'
+
+    # This variable set the name of the hosts.deny file.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    hosts_deny_file = 'hosts.deny'
+
+    # This variable set the name of the hosts.deny template.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    hosts_deny_template = templates_directory + 'hostsdeny.template'
+
+    # This variable set the name of the superhosts.deny file.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    superhosts_deny_file = 'superhosts.deny'
+
+    # This variable set the name of the hosts.deny template.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    superhosts_deny_template = templates_directory + 'superhostsdeny.template'
+
+    # This variable set the name of the hosts.windows file.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    hosts_windows_file = 'hosts.windows'
+
+    # This variable set the name of the hosts.windows template.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    hosts_windows_template = templates_directory + 'hosts.windows.template'
+
+    # This variable set the name of the hosts file.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    hosts_unix_file = 'hosts'
+
+    # This variable set the name of the hosts template.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    hosts_unix_template = templates_directory + 'hosts.template'
+
+    # This variable set the name of the README.md file.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    readme_md_file = 'README.md'
+
+    # This variable set the name of the hosts.windows template.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    readme_me_template = templates_directory + 'README_template.md'
+
+    # This variable set the char to use when something is done.
+    done = '✔'
+
+    # This variable set the char to use when an error occured
+    error = '✘'
 #
 #
 # class Initiate(object):
