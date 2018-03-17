@@ -214,270 +214,270 @@ class Settings(object):  # pylint: disable=too-few-public-methods
 
     # This variable set the char to use when an error occured
     error = '✘'
-#
-#
-# class Initiate(object):
-#     """
-#     This class is used as the main entry of the script.
-#     Please note that this class also initiate several actions before being
-#     used or called.
-#     """
-#
-#     def __init__(self):
-#         print("Beginning of Initiate()")
-#         self.travis()
-#         Helpers.travis_permissions()
-#         self.get_whitelist()
-#         self.list_of_input_sources()
-#         self.info_extractor()
-#
-#     @classmethod
-#     def travis(cls):
-#         """
-#         Initiate Travis CI settings.
-#         """
-#
-#         print("Beginning of Initiate().travis()")
-#
-#         print("Cleaning remote")
-#         Helpers.Command('git remote rm origin', True).execute()
-#         print("Adding remote with GH_TOKEN")
-#         Helpers.Command(
-#             "git remote add origin https://" +
-#             "%s@github.com/%s.git" %
-#             (environ['GH_TOKEN'],
-#              environ['TRAVIS_REPO_SLUG']),
-#             True).execute()
-#         print("Update of git.user.email")
-#         Helpers.Command(
-#             'git config --global user.email "%s"' %
-#             (environ['GIT_EMAIL']), True).execute()
-#         print("Update of git.user.name")
-#         Helpers.Command(
-#             'git config --global user.name "%s"' %
-#             (environ['GIT_NAME']), True).execute()
-#         print("Update of git.push.default")
-#         Helpers.Command(
-#             'git config --global push.default simple', True).execute()
-#         print("Checkout of %s" % repr(environ['GIT_BRANCH']))
-#         Helpers.Command(
-#             'git checkout %s' %
-#             environ['GIT_BRANCH'],
-#             True).execute()
-#
-#         print("End of Initiate().travis()")
-#
-#     @classmethod
-#     def _whitelist_parser(cls, line):
-#         """
-#         This method will get and parse all whitelist domain into
-#         Settings.whitelist.
-#
-#         Argument:
-#             - line: str
-#                 The extracted line.
-#         """
-#
-#         if line and not line.startswith('#'):
-#             if line.startswith(Settings.whitelist_all_marker):
-#                 to_check = line.split(Settings.whitelist_all_marker)[1]
-#             else:
-#                 to_check = line
-#
-#             if Helpers.Regex(
-#                     to_check,
-#                     Settings.regex_ip4,
-#                     return_data=False).match() or Helpers.Regex(
-#                         to_check,
-#                         Settings.regex_domain,
-#                         return_data=False).match():
-#                 Settings.whitelist.append(line)
-#
-#     def get_whitelist(self):
-#         """
-#         This method will get the list of whitelisted domain.
-#         """
-#
-#         domains_url = (Settings.raw_link +
-#                        'domains.list') % Settings.whitelist_repo_name
-#
-#         req = get(domains_url)
-#
-#         print("Getting %s" % Settings.whitelist_repo_name, end=" ")
-#         if req.status_code == 200:
-#             list(map(self._whitelist_parser, req.text.split('\n')))
-#
-#             Settings.whitelist = Helpers.List(Settings.whitelist).format()
-#             print(Settings.done)
-#         else:
-#             print(Settings.error)
-#
-#     @classmethod
-#     def list_of_input_sources(cls):
-#         """
-#         This method get the list of input sources to check.
-#         """
-#
-#         url_to_get = Settings.github_org_url + '/repos'
-#
-#         params = {
-#             'page': '1'
-#         }
-#
-#         pages_finder = get(url_to_get, params=params)
-#
-#         if pages_finder.status_code == 200:
-#             last_page = int(
-#                 Helpers.Regex(
-#                     pages_finder.headers['Link'],
-#                     r'.*page=(.*)>.*',
-#                     return_data=True,
-#                     rematch=True).match()[
-#                         -1])
-#
-#             current_page = 1
-#             while current_page <= last_page:
-#                 params = {
-#                     'page': str(current_page)
-#                 }
-#
-#                 req = get(url_to_get, params=params)
-#
-#                 if req.status_code == 200:
-#
-#                     for repo in req.json():
-#                         name = repo['name']
-#                         if name not in Settings.repo_to_ignore:
-#                             Settings.repositories.append(name)
-#                 else:
-#                     raise Exception(
-#                         'Impossible to get information about the organisation. Is GitHub down ?')
-#
-#                 current_page += 1
-#
-#             Settings.repositories = Helpers.List(
-#                 Settings.repositories).format()
-#         else:
-#             raise Exception(
-#                 'Impossible to get the numbers of page to read. Is GitHub down ?')
-#
-#     @classmethod
-#     def _data_parser(cls, line):
-#         """
-#         Given the extracted line, this method append the data
-#         to its final location.
-#
-#         Argument:
-#             - line: str
-#                 The extracted line.
-#         """
-#
-#         if line and not line.startswith('#'):
-#             if Helpers.Regex(
-#                     line,
-#                     Settings.regex_ip4,
-#                     return_data=False).match():
-#                 Settings.ips.append(line)
-#             elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match():
-#                 Settings.domains.append(line)
-#
-#     def data_extractor(self, url_to_get, repo):
-#         """
-#         This method will read all domains.list or clean.list and append each
-#         domain to Settings.domains and each IP to Settings.ips.
-#
-#         Arguments:
-#             - url_to_get: str
-#                 The url to extract data from.
-#             - repo: str
-#                 The repository name.
-#         """
-#
-#         req = get(url_to_get)
-#
-#         print("Extracting domains and ips from %s" % repo, end=" ")
-#         if req.status_code == 200:
-#             list(map(self._data_parser, req.text.split('\n')))
-#
-#             Settings.domains = Helpers.List(Settings.domains).format()
-#             Settings.ips = Helpers.List(Settings.ips).format()
-#             print(Settings.done)
-#         else:
-#             print(Settings.error)
-#
-#     @classmethod
-#     def _cleaning_domain_or_ip(cls, domain_or_ip):
-#         """
-#         This method will check if the domain match once of our whitelisted.
-#
-#         Arguments:
-#             - domain_or_ip: str
-#                 A domain or ip to check presence into the whitelist list.
-#         """
-#
-#         for whitelisted in Settings.whitelist:
-#             if whitelisted.startswith(Settings.whitelist_all_marker):
-#                 regex = escape(
-#                     whitelisted.split(Settings.whitelist_all_marker)[1]) + '$'
-#             else:
-#                 regex = '^%s$' % escape(whitelisted)
-#
-#             if Helpers.Regex(
-#                     domain_or_ip,
-#                     regex,
-#                     return_data=False).match():
-#                 return ""
-#         return domain_or_ip
-#
-#     def info_extractor(self):
-#         """
-#         This method will read the info.json of each repository and interpret
-#         their informations.
-#         """
-#
-#         for repo in Settings.repositories:
-#             url_to_get = (Settings.raw_link + 'info.json') % repo
-#             domains_url = (Settings.raw_link + 'domains.list') % repo
-#             clean_url = (Settings.raw_link + 'clean.list') % repo
-#
-#             req = get(url_to_get)
-#
-#             if req.status_code == 200:
-#                 data = req.json()
-#                 if 'currently_under_test' in data:
-#                     if bool(int(data['currently_under_test'])):
-#                         if not Helpers.URL(clean_url).is_404():
-#                             self.data_extractor(clean_url, repo)
-#                         elif not Helpers.URL(domains_url).is_404():
-#                             self.data_extractor(domains_url, repo)
-#                         else:
-#                             raise Exception(
-#                                 'Corrupted repository. Please check `domains.list` for %s' %
-#                                 repo)
-#                     else:
-#                         if not Helpers.URL(clean_url).is_404():
-#                             self.data_extractor(clean_url, repo)
-#                         else:
-#                             self.data_extractor(domains_url, repo)
-#                 else:
-#                     raise Exception(
-#                         'Corrupted `info.json`. Please check `currently_under_test` for %s' %
-#                         repo)
-#             else:
-#                 raise Exception(
-#                     'Impossible to get `info.json` for %s. Is GitHub down ?' %
-#                     repo)
-#
-#         print('\n')
-#         print("Cleaning of the list of domains", end=" ")
-#         Settings.domains = Helpers.List(
-#             list(map(self._cleaning_domain_or_ip, Settings.domains))).format()
-#         print(Settings.done)
-#
-#         print("Cleaning of the list of IPs", end=" ")
-#         Settings.ips = Helpers.List(
-#             list(map(self._cleaning_domain_or_ip, Settings.ips))).format()
-#         print(Settings.done)
+
+
+class Initiate(object):
+    """
+    This class is used as the main entry of the script.
+    Please note that this class also initiate several actions before being
+    used or called.
+    """
+
+    def __init__(self):
+        print("Beginning of Initiate()")
+        self.travis()
+        Helpers.travis_permissions()
+        self.get_whitelist()
+        self.list_of_input_sources()
+        self.info_extractor()
+
+    @classmethod
+    def travis(cls):
+        """
+        Initiate Travis CI settings.
+        """
+
+        print("Beginning of Initiate().travis()")
+
+        print("Cleaning remote")
+        Helpers.Command('git remote rm origin', True).execute()
+        print("Adding remote with GH_TOKEN")
+        Helpers.Command(
+            "git remote add origin https://" +
+            "%s@github.com/%s.git" %
+            (environ['GH_TOKEN'],
+             environ['TRAVIS_REPO_SLUG']),
+            True).execute()
+        print("Update of git.user.email")
+        Helpers.Command(
+            'git config --global user.email "%s"' %
+            (environ['GIT_EMAIL']), True).execute()
+        print("Update of git.user.name")
+        Helpers.Command(
+            'git config --global user.name "%s"' %
+            (environ['GIT_NAME']), True).execute()
+        print("Update of git.push.default")
+        Helpers.Command(
+            'git config --global push.default simple', True).execute()
+        print("Checkout of %s" % repr(environ['GIT_BRANCH']))
+        Helpers.Command(
+            'git checkout %s' %
+            environ['GIT_BRANCH'],
+            True).execute()
+
+        print("End of Initiate().travis()")
+
+    @classmethod
+    def _whitelist_parser(cls, line):
+        """
+        This method will get and parse all whitelist domain into
+        Settings.whitelist.
+
+        Argument:
+            - line: str
+                The extracted line.
+        """
+
+        if line and not line.startswith('#'):
+            if line.startswith(Settings.whitelist_all_marker):
+                to_check = line.split(Settings.whitelist_all_marker)[1]
+            else:
+                to_check = line
+
+            if Helpers.Regex(
+                    to_check,
+                    Settings.regex_ip4,
+                    return_data=False).match() or Helpers.Regex(
+                        to_check,
+                        Settings.regex_domain,
+                        return_data=False).match():
+                Settings.whitelist.append(line)
+
+    def get_whitelist(self):
+        """
+        This method will get the list of whitelisted domain.
+        """
+
+        domains_url = (Settings.raw_link +
+                       'domains.list') % Settings.whitelist_repo_name
+
+        req = get(domains_url)
+
+        print("Getting %s" % Settings.whitelist_repo_name, end=" ")
+        if req.status_code == 200:
+            list(map(self._whitelist_parser, req.text.split('\n')))
+
+            Settings.whitelist = Helpers.List(Settings.whitelist).format()
+            print(Settings.done)
+        else:
+            print(Settings.error)
+
+    @classmethod
+    def list_of_input_sources(cls):
+        """
+        This method get the list of input sources to check.
+        """
+
+        url_to_get = Settings.github_org_url + '/repos'
+
+        params = {
+            'page': '1'
+        }
+
+        pages_finder = get(url_to_get, params=params)
+
+        if pages_finder.status_code == 200:
+            last_page = int(
+                Helpers.Regex(
+                    pages_finder.headers['Link'],
+                    r'.*page=(.*)>.*',
+                    return_data=True,
+                    rematch=True).match()[
+                        -1])
+
+            current_page = 1
+            while current_page <= last_page:
+                params = {
+                    'page': str(current_page)
+                }
+
+                req = get(url_to_get, params=params)
+
+                if req.status_code == 200:
+
+                    for repo in req.json():
+                        name = repo['name']
+                        if name not in Settings.repo_to_ignore:
+                            Settings.repositories.append(name)
+                else:
+                    raise Exception(
+                        'Impossible to get information about the organisation. Is GitHub down ?')
+
+                current_page += 1
+
+            Settings.repositories = Helpers.List(
+                Settings.repositories).format()
+        else:
+            raise Exception(
+                'Impossible to get the numbers of page to read. Is GitHub down ?')
+
+    @classmethod
+    def _data_parser(cls, line):
+        """
+        Given the extracted line, this method append the data
+        to its final location.
+
+        Argument:
+            - line: str
+                The extracted line.
+        """
+
+        if line and not line.startswith('#'):
+            if Helpers.Regex(
+                    line,
+                    Settings.regex_ip4,
+                    return_data=False).match():
+                Settings.ips.append(line)
+            elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match():
+                Settings.domains.append(line)
+
+    def data_extractor(self, url_to_get, repo):
+        """
+        This method will read all domains.list or clean.list and append each
+        domain to Settings.domains and each IP to Settings.ips.
+
+        Arguments:
+            - url_to_get: str
+                The url to extract data from.
+            - repo: str
+                The repository name.
+        """
+
+        req = get(url_to_get)
+
+        print("Extracting domains and ips from %s" % repo, end=" ")
+        if req.status_code == 200:
+            list(map(self._data_parser, req.text.split('\n')))
+
+            Settings.domains = Helpers.List(Settings.domains).format()
+            Settings.ips = Helpers.List(Settings.ips).format()
+            print(Settings.done)
+        else:
+            print(Settings.error)
+
+    @classmethod
+    def _cleaning_domain_or_ip(cls, domain_or_ip):
+        """
+        This method will check if the domain match once of our whitelisted.
+
+        Arguments:
+            - domain_or_ip: str
+                A domain or ip to check presence into the whitelist list.
+        """
+
+        for whitelisted in Settings.whitelist:
+            if whitelisted.startswith(Settings.whitelist_all_marker):
+                regex = escape(
+                    whitelisted.split(Settings.whitelist_all_marker)[1]) + '$'
+            else:
+                regex = '^%s$' % escape(whitelisted)
+
+            if Helpers.Regex(
+                    domain_or_ip,
+                    regex,
+                    return_data=False).match():
+                return ""
+        return domain_or_ip
+
+    def info_extractor(self):
+        """
+        This method will read the info.json of each repository and interpret
+        their informations.
+        """
+
+        for repo in Settings.repositories:
+            url_to_get = (Settings.raw_link + 'info.json') % repo
+            domains_url = (Settings.raw_link + 'domains.list') % repo
+            clean_url = (Settings.raw_link + 'clean.list') % repo
+
+            req = get(url_to_get)
+
+            if req.status_code == 200:
+                data = req.json()
+                if 'currently_under_test' in data:
+                    if bool(int(data['currently_under_test'])):
+                        if not Helpers.URL(clean_url).is_404():
+                            self.data_extractor(clean_url, repo)
+                        elif not Helpers.URL(domains_url).is_404():
+                            self.data_extractor(domains_url, repo)
+                        else:
+                            raise Exception(
+                                'Corrupted repository. Please check `domains.list` for %s' %
+                                repo)
+                    else:
+                        if not Helpers.URL(clean_url).is_404():
+                            self.data_extractor(clean_url, repo)
+                        else:
+                            self.data_extractor(domains_url, repo)
+                else:
+                    raise Exception(
+                        'Corrupted `info.json`. Please check `currently_under_test` for %s' %
+                        repo)
+            else:
+                raise Exception(
+                    'Impossible to get `info.json` for %s. Is GitHub down ?' %
+                    repo)
+
+        print('\n')
+        print("Cleaning of the list of domains", end=" ")
+        Settings.domains = Helpers.List(
+            list(map(self._cleaning_domain_or_ip, Settings.domains))).format()
+        print(Settings.done)
+
+        print("Cleaning of the list of IPs", end=" ")
+        Settings.ips = Helpers.List(
+            list(map(self._cleaning_domain_or_ip, Settings.ips))).format()
+        print(Settings.done)
 #
 #
 # class Generate(object):
@@ -1039,9 +1039,9 @@ class Settings(object):  # pylint: disable=too-few-public-methods
 #             return False
 #
 #
-# if __name__ == '__main__':
-#     print("What's wrong with funilrys ? ")
-#     Initiate()
+if __name__ == '__main__':
+    print("What's wrong with funilrys ? ")
+    Initiate()
 #     Generate()
 #     Compress()
 #     Deploy()
