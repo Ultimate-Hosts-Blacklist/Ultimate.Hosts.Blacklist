@@ -230,7 +230,7 @@ class Initiate(object):
         Helpers.travis_permissions()
         self.get_whitelist()
         self.list_of_input_sources()
-        self.info_extractor()
+        self.data_extractor()
 
     @classmethod
     def travis(cls):
@@ -352,7 +352,9 @@ class Initiate(object):
                 else:
                     print(Settings.error)
                     raise Exception(
-                        'Impossible to get information about the organisation. Is GitHub down ? (%s)'  % req.status_code)
+                        'Impossible to get information about the organisation. \
+                         Is GitHub down ? (%s)' %
+                        req.status_code)
 
                 current_page += 1
 
@@ -361,7 +363,11 @@ class Initiate(object):
             print(Settings.done)
         else:
             raise Exception(
-                'Impossible to get the numbers of page to read. Is GitHub down ? (%s) (%s/%s %s)' % (pages_finder.status_code,pages_finder.headers['X-RateLimit-Remaining'],pages_finder.headers['X-RateLimit-Limit'],pages_finder.headers['X-RateLimit-Reset']))
+                'Impossible to get the numbers of page to read. Is GitHub down ? (%s) (%s/%s %s)' %
+                (pages_finder.status_code,
+                 pages_finder.headers['X-RateLimit-Remaining'],
+                 pages_finder.headers['X-RateLimit-Limit'],
+                 pages_finder.headers['X-RateLimit-Reset']))
 
     @classmethod
     def _data_parser(cls, line):
@@ -382,30 +388,6 @@ class Initiate(object):
                 Settings.ips.append(line)
             elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match():
                 Settings.domains.append(line)
-
-    def data_extractor(self, url_to_get, repo):
-        """
-        This method will read all domains.list or clean.list and append each
-        domain to Settings.domains and each IP to Settings.ips.
-
-        Arguments:
-            - url_to_get: str
-                The url to extract data from.
-            - repo: str
-                The repository name.
-        """
-
-        req = get(url_to_get)
-
-        print("Extracting domains and ips from %s" % repo, end=" ")
-        if req.status_code == 200:
-            list(map(self._data_parser, req.text.split('\n')))
-
-            Settings.domains = Helpers.List(Settings.domains).format()
-            Settings.ips = Helpers.List(Settings.ips).format()
-            print(Settings.done)
-        else:
-            print(Settings.error)
 
     @classmethod
     def _cleaning_domain_or_ip(cls, domain_or_ip):
@@ -431,41 +413,46 @@ class Initiate(object):
                 return ""
         return domain_or_ip
 
-    def info_extractor(self):
+    def data_extractor(self):
         """
-        This method will read the info.json of each repository and interpret
-        their informations.
+        This method will read all domains.list or clean.list and append each
+        domain to Settings.domains and each IP to Settings.ips.
         """
 
         if Settings.repositories:
+
             for repo in Settings.repositories:
-                print("Connecting with %s ..." % repo)
-                url_to_get = (Settings.raw_link + 'info.json') % repo
+
                 domains_url = (Settings.raw_link + 'domains.list') % repo
                 clean_url = (Settings.raw_link + 'clean.list') % repo
 
                 if not Helpers.URL(clean_url).is_404():
-                    self.data_extractor(clean_url, repo)
+                    url_to_get = clean_url
                 elif not Helpers.URL(domains_url).is_404():
-                    self.data_extractor(domains_url, repo)
+                    url_to_get = domains_url
+                req = get(url_to_get)
+
+                print("Extracting domains and ips from %s" % repo, end=" ")
+                if req.status_code == 200:
+                    list(map(self._data_parser, req.text.split('\n')))
+
+                    Settings.domains = Helpers.List(Settings.domains).format()
+                    Settings.ips = Helpers.List(Settings.ips).format()
+                    print(Settings.done)
                 else:
-                    raise Exception(
-                        'Corrupted repository. Please check `domains.list` for %s' %
-                        repo)
-        else:           
-            raise Exception(
-                'No input sources.')
+                    print(Settings.error)
 
-        print('\n')
-        print("Cleaning of the list of domains", end=" ")
-        Settings.domains = Helpers.List(
-            list(map(self._cleaning_domain_or_ip, Settings.domains))).format()
-        print(Settings.done)
+            print('\n')
+            print("Cleaning of the list of domains", end=" ")
+            Settings.domains = Helpers.List(
+                list(map(self._cleaning_domain_or_ip, Settings.domains))).format()
+            print(Settings.done)
 
-        print("Cleaning of the list of IPs", end=" ")
-        Settings.ips = Helpers.List(
-            list(map(self._cleaning_domain_or_ip, Settings.ips))).format()
-        print(Settings.done)
+            print("Cleaning of the list of IPs", end=" ")
+            Settings.ips = Helpers.List(
+                list(map(self._cleaning_domain_or_ip, Settings.ips))).format()
+            print(Settings.done)
+
 #
 #
 # class Generate(object):
@@ -1024,7 +1011,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
 
             req = get(self.url)
 
-            if self.is_valid and req.status_code == 404:
+            if self.is_valid() and req.status_code == 404:
                 return True
             return False
 
