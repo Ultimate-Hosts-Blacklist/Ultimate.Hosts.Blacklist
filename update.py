@@ -230,7 +230,7 @@ class Initiate(object):
         Helpers.travis_permissions()
         self.get_whitelist()
         self.list_of_input_sources()
-        # self.info_extractor()
+        self.info_extractor()
 
     @classmethod
     def travis(cls):
@@ -338,7 +338,8 @@ class Initiate(object):
 
             current_page = 1
 
-            print("Calling the list of input sources", end=" ")
+            print("Getting the list of input sources", end=" ")
+
             while current_page <= last_page:
                 params = {
                     'page': str(current_page)
