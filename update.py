@@ -295,7 +295,8 @@ class Initiate(object):
                     return_data=False).match() or Helpers.Regex(
                         to_check,
                         Settings.regex_domain,
-                        return_data=False).match():
+                        return_data=False).match() or line.startswith(
+                            Settings.whitelist_all_marker):
 
                 Settings.whitelist.append(regex_whitelist)
 
