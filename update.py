@@ -230,7 +230,7 @@ class Initiate(object):
         Helpers.travis_permissions()
         self.get_whitelist()
         self.list_of_input_sources()
-        self.data_extractor()
+        # self.data_extractor()
 
     @classmethod
     def travis(cls):
@@ -314,7 +314,7 @@ class Initiate(object):
             print(Settings.error)
 
     @classmethod
-    def list_of_input_sources(cls):
+    def list_of_input_sources(cls, return_data=False):
         """
         This method get the list of input sources to check.
         """
