@@ -1038,6 +1038,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
 
 
 if __name__ == '__main__':
+    print("What's wrong with funilrys ? ")
     Initiate()
     Generate()
     Compress()
