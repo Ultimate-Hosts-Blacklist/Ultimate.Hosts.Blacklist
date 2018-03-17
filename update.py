@@ -222,6 +222,7 @@ class Initiate(object):
     """
 
     def __init__(self):
+        print("Beginning of Initiate()")
         self.travis()
         Helpers.travis_permissions()
         self.get_whitelist()
@@ -234,25 +235,35 @@ class Initiate(object):
         Initiate Travis CI settings.
         """
 
+        print("Beginning of Initiate().travis()")
+
+        print("Cleaning remote")
         Helpers.Command('git remote rm origin', True).execute()
+        print("Adding remote with GH_TOKEN")
         Helpers.Command(
             "git remote add origin https://" +
             "%s@github.com/%s.git" %
             (environ['GH_TOKEN'],
              environ['TRAVIS_REPO_SLUG']),
             True).execute()
+        print("Update of git.user.email")
         Helpers.Command(
             'git config --global user.email "%s"' %
             (environ['GIT_EMAIL']), True).execute()
+        print("Update of git.user.name")
         Helpers.Command(
             'git config --global user.name "%s"' %
             (environ['GIT_NAME']), True).execute()
+        print("Update of git.push.default")
         Helpers.Command(
             'git config --global push.default simple', True).execute()
+        print("Checkout of %s" % repr(environ['GIT_BRANCH']))
         Helpers.Command(
             'git checkout %s' %
             environ['GIT_BRANCH'],
             True).execute()
+
+        print("End of Initiate().travis()")
 
     @classmethod
     def _whitelist_parser(cls, line):
@@ -751,6 +762,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             (build_dir)]
 
         for command in commands:
+            print("Running %s" % repr(command))
             Helpers.Command(command, True).execute()
 
         if Helpers.Command(
