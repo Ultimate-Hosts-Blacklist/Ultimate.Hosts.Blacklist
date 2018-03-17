@@ -341,10 +341,9 @@ class Initiate(object):
                     'page': str(current_page)
                 }
 
-                req = get(url_to_get, params=params)
+                req = get(url_to_get, params=params, auth=('mitchellkrogza', environ['GH_TOKEN']))
 
                 if req.status_code == 200:
-
                     for repo in req.json():
                         name = repo['name']
                         if name not in Settings.repo_to_ignore:
@@ -352,8 +351,7 @@ class Initiate(object):
                 else:
                     print(Settings.error)
                     raise Exception(
-                        'Impossible to get information about the organisation. \
-                         Is GitHub down ? (%s)' %
+                        'Impossible to get information about the organisation. Is GitHub down ? (%s)' %
                         req.status_code)
 
                 current_page += 1
