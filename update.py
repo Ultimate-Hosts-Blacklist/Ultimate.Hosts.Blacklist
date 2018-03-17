@@ -21,7 +21,6 @@ from os import sep as directory_separator
 from re import compile as comp
 from re import escape
 from re import sub as substrings
-from socket import gaierror
 from subprocess import PIPE, Popen
 from tarfile import open as tarfile_open
 from time import strftime
@@ -323,7 +322,7 @@ class Initiate(object):
             print(Settings.error)
 
     @classmethod
-    def list_of_input_sources(cls, return_data=False):
+    def list_of_input_sources(cls):
         """
         This method get the list of input sources to check.
         """
@@ -365,7 +364,7 @@ class Initiate(object):
                 else:
                     print(Settings.error)
                     raise Exception(
-                        'Impossible to get information about the organisation. Is GitHub down ? (%s)' %
+                        'Impossible to get information about the organisation. Is GitHub down ? (%s)' %  # pylint: disable=line-too-long
                         req.status_code)
 
                 current_page += 1
@@ -401,31 +400,6 @@ class Initiate(object):
             elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match():
                 Settings.domains.append(line)
 
-    # @classmethod
-    # def _cleaning_domain_or_ip(cls, domain_or_ip):
-    #     """
-    #     This method will check if the domain match once of our whitelisted.
-    #
-    #     Arguments:
-    #         - domain_or_ip: str
-    #             A domain or ip to check presence into the whitelist list.
-    #     """
-    #
-    #     for whitelisted in Settings.whitelist:
-    #         if whitelisted.startswith(Settings.whitelist_all_marker):
-    #             regex = escape(
-    #                 whitelisted.split(Settings.whitelist_all_marker)[1]) + '$'
-    #         else:
-    #             regex = '^%s$' % escape(whitelisted)
-    #
-    #         if Helpers.Regex(
-    #                 domain_or_ip,
-    #                 regex,
-    #                 return_data=False).match():
-    #             print("Removing %s ..." % domain_or_ip)
-    #             return ""
-    #     return domain_or_ip
-
     def data_extractor(self, repo=None):
         """
         This method will read all domains.list or clean.list and append each
@@ -448,6 +422,7 @@ class Initiate(object):
                 Helpers.Regex(
                     Settings.ips,
                     Settings.regex_whitelist).not_matching_list()).format()
+            print(Settings.done)
         else:
             domains_url = (Settings.raw_link + 'domains.list') % repo
             clean_url = (Settings.raw_link + 'clean.list') % repo
@@ -478,266 +453,263 @@ class Initiate(object):
                 Settings.ips = Helpers.List(Settings.ips).format()
                 print(Settings.done)
 
-#
-#
-# class Generate(object):
-#     """
-#     This class generate what we need.
-#     """
-#
-#     def __init__(self):
-#         print("\n")
-#         self.dotted_format()
-#         self.plain_text_domain_format()
-#         self.plain_text_ips_format()
-#         self.hosts_deny_format()
-#         self.super_hosts_deny_format()
-#         self.hosts_windows_format()
-#         self.hosts_unix_format()
-#         self.readme_md()
-#         print("\n")
-#
-#     @classmethod
-#     def dotted_format(cls):
-#         """
-#         This method will generate the dotted domains file.
-#         """
-#
-#         data_to_write = '.' + '\n.'.join(Settings.domains)
-#
-#         print("Generation of %s" % Settings.dotted_file, end=" ")
-#         Helpers.File(Settings.dotted_file).write(data_to_write, overwrite=True)
-#         print(Settings.done)
-#
-#     @classmethod
-#     def plain_text_domain_format(cls):
-#         """
-#         This method will generate the file with only plain domain.
-#         """
-#
-#         data_to_write = '\n'.join(Settings.domains)
-#
-#         print("Generation of %s" % Settings.plain_text_domains_file, end=" ")
-#         Helpers.File(
-#             Settings.plain_text_domains_file).write(
-#                 data_to_write, overwrite=True)
-#         print(Settings.done)
-#
-#     @classmethod
-#     def plain_text_ips_format(cls):
-#         """
-#         This method will generate the file with only plain domain.
-#         """
-#
-#         data_to_write = '\n'.join(Settings.ips)
-#
-#         print("Generation of %s" % Settings.plain_text_ips_file, end=" ")
-#         Helpers.File(
-#             Settings.plain_text_ips_file).write(
-#                 data_to_write, overwrite=True)
-#         print(Settings.done)
-#
-#     @classmethod
-#     def hosts_deny_format(cls):
-#         """
-#         This method will generate the file in hosts.deny format.
-#         """
-#
-#         template = Helpers.File(Settings.hosts_deny_template).read()
-#
-#         template = Helpers.Regex(
-#             template,
-#             r'%%version%%',
-#             replace_with=Settings.version).replace()
-#         template = Helpers.Regex(template, r'%%lenIP%%', replace_with=format(
-#             len(Settings.ips), ',d')).replace()
-#
-#         data_to_write = 'ALL: ' + '\nALL: '.join(Settings.ips)
-#
-#         template = Helpers.Regex(
-#             template,
-#             r'%%content%%',
-#             replace_with=data_to_write).replace()
-#
-#         print("Generation of %s" % Settings.hosts_deny_file, end=" ")
-#         Helpers.File(
-#             Settings.hosts_deny_file).write(
-#                 template,
-#                 overwrite=True)
-#         print(Settings.done)
-#
-#     @classmethod
-#     def super_hosts_deny_format(cls):
-#         """
-#         This method will generate the file in superhosts.deny format.
-#         """
-#
-#         template = Helpers.File(Settings.superhosts_deny_template).read()
-#
-#         template = Helpers.Regex(
-#             template,
-#             r'%%version%%',
-#             replace_with=Settings.version).replace()
-#         template = Helpers.Regex(template, r'%%lenIPHosts%%', replace_with=format(
-#             len(Settings.ips) + len(Settings.domains), ',d')).replace()
-#
-#         hosts_ip = Settings.ips + Settings.domains
-#         hosts_ip = Helpers.List(hosts_ip).format()
-#
-#         data_to_write = 'ALL: ' + '\nALL: '.join(hosts_ip)
-#
-#         template = Helpers.Regex(
-#             template,
-#             r'%%content%%',
-#             replace_with=data_to_write).replace()
-#
-#         print("Generation of %s" % Settings.superhosts_deny_file, end=" ")
-#         Helpers.File(
-#             Settings.superhosts_deny_file).write(
-#                 template,
-#                 overwrite=True)
-#         print(Settings.done)
-#
-#     @classmethod
-#     def hosts_windows_format(cls):
-#         """
-#         This method will generate the file in hosts.windows format.
-#         """
-#
-#         template = Helpers.File(Settings.hosts_windows_template).read()
-#
-#         template = Helpers.Regex(
-#             template,
-#             r'%%version%%',
-#             replace_with=Settings.version).replace()
-#         template = Helpers.Regex(template, r'%%lenHosts%%', replace_with=format(
-#             len(Settings.domains), ',d')).replace()
-#
-#         data_to_write = '127.0.0.1 ' + '\n127.0.0.1 '.join(Settings.domains)
-#
-#         template = Helpers.Regex(
-#             template,
-#             r'%%content%%',
-#             replace_with=data_to_write).replace()
-#
-#         print("Generation of %s" % Settings.hosts_windows_file, end=" ")
-#         Helpers.File(
-#             Settings.hosts_windows_file).write(
-#                 template,
-#                 overwrite=True)
-#         print(Settings.done)
-#
-#     @classmethod
-#     def hosts_unix_format(cls):
-#         """
-#         This method will generate the file in hosts format.
-#         """
-#
-#         template = Helpers.File(Settings.hosts_unix_template).read()
-#
-#         template = Helpers.Regex(
-#             template,
-#             r'%%version%%',
-#             replace_with=Settings.version).replace()
-#         template = Helpers.Regex(template, r'%%lenHosts%%', replace_with=format(
-#             len(Settings.domains), ',d')).replace()
-#
-#         data_to_write = '0.0.0.0 ' + '\n0.0.0.0 '.join(Settings.domains)
-#
-#         template = Helpers.Regex(
-#             template,
-#             r'%%content%%',
-#             replace_with=data_to_write).replace()
-#
-#         print("Generation of %s" % Settings.hosts_unix_file, end=" ")
-#         Helpers.File(
-#             Settings.hosts_unix_file).write(
-#                 template,
-#                 overwrite=True)
-#         print(Settings.done)
-#
-#     @classmethod
-#     def readme_md(cls):
-#         """
-#         This methos will generate the REAMDE.md.
-#         """
-#
-#         template = Helpers.File(Settings.readme_me_template).read()
-#
-#         template = Helpers.Regex(
-#             template,
-#             r'%%version%%',
-#             replace_with=Settings.version).replace()
-#         template = Helpers.Regex(template, r'%%lenHosts%%', replace_with=format(
-#             len(Settings.domains), ',d')).replace()
-#         template = Helpers.Regex(template, r'%%lenIPs%%', replace_with=format(
-#             len(Settings.ips), ',d')).replace()
-#         template = Helpers.Regex(template, r'%%lenHostsIPs%%', replace_with=format(
-#             len(Settings.ips) + len(Settings.domains), ',d')).replace()
-#
-#         print("Generation of %s" % Settings.readme_md_file, end=" ")
-#         Helpers.File(
-#             Settings.readme_md_file).write(
-#                 template,
-#                 overwrite=True)
-#         print(Settings.done)
-#
-#
-# class Compress(object):  # pylint: disable=too-few-public-methods
-#     """
-#     This class run and manage the compression
-#     """
-#
-#     def __init__(self):
-#         to_compresss = [
-#             Settings.dotted_file,
-#             Settings.plain_text_domains_file,
-#             Settings.plain_text_ips_file,
-#             Settings.hosts_deny_file,
-#             Settings.superhosts_deny_file,
-#             Settings.hosts_windows_file,
-#             Settings.hosts_unix_file
-#         ]
-#
-#         for file in to_compresss:
-#             compress_into_zip = '%s.zip' % file
-#             compress_into_tar_gz = '%s.tar.gz' % file
-#
-#             print("\n")
-#             print(
-#                 "Compression of %s into %s" %
-#                 (file, compress_into_zip), end=" ")
-#             Helpers.File(file).zip_compress(compress_into_zip)
-#             print(Settings.done)
-#
-#             print(
-#                 "Compression of %s into %s" %
-#                 (file, compress_into_tar_gz), end=" ")
-#             Helpers.File(file).tar_gz_compress(compress_into_tar_gz)
-#             print(Settings.done)
-#
-#             print("Deletion of %s" % file, end=" ")
-#             Helpers.File(file).delete()
-#             print(Settings.done)
-#
-#
-# class Deploy(object):  # pylint: disable=too-few-public-methods
-#     """
-#     This class will deploy our files to upstream.
-#     """
-#
-#     def __init__(self):
-#         commit_message = '%s [ci skip]' % Settings.version
-#
-#         Helpers.travis_permissions()
-#
-#         Helpers.Command(
-#             "git add --all && git commit -a -m '%s' && git push origin %s" %
-#             (commit_message, environ['GIT_BRANCH'])).execute()
-#
-#         get(Settings.deploy_raw_url)
-#
-#
+
+class Generate(object):
+    """
+    This class generate what we need.
+    """
+
+    def __init__(self):
+        print("\n")
+        self.dotted_format()
+        self.plain_text_domain_format()
+        self.plain_text_ips_format()
+        self.hosts_deny_format()
+        self.super_hosts_deny_format()
+        self.hosts_windows_format()
+        self.hosts_unix_format()
+        self.readme_md()
+        print("\n")
+
+    @classmethod
+    def dotted_format(cls):
+        """
+        This method will generate the dotted domains file.
+        """
+
+        data_to_write = '.' + '\n.'.join(Settings.domains)
+
+        print("Generation of %s" % Settings.dotted_file, end=" ")
+        Helpers.File(Settings.dotted_file).write(data_to_write, overwrite=True)
+        print(Settings.done)
+
+    @classmethod
+    def plain_text_domain_format(cls):
+        """
+        This method will generate the file with only plain domain.
+        """
+
+        data_to_write = '\n'.join(Settings.domains)
+
+        print("Generation of %s" % Settings.plain_text_domains_file, end=" ")
+        Helpers.File(
+            Settings.plain_text_domains_file).write(
+                data_to_write, overwrite=True)
+        print(Settings.done)
+
+    @classmethod
+    def plain_text_ips_format(cls):
+        """
+        This method will generate the file with only plain domain.
+        """
+
+        data_to_write = '\n'.join(Settings.ips)
+
+        print("Generation of %s" % Settings.plain_text_ips_file, end=" ")
+        Helpers.File(
+            Settings.plain_text_ips_file).write(
+                data_to_write, overwrite=True)
+        print(Settings.done)
+
+    @classmethod
+    def hosts_deny_format(cls):
+        """
+        This method will generate the file in hosts.deny format.
+        """
+
+        template = Helpers.File(Settings.hosts_deny_template).read()
+
+        template = Helpers.Regex(
+            template,
+            r'%%version%%',
+            replace_with=Settings.version).replace()
+        template = Helpers.Regex(template, r'%%lenIP%%', replace_with=format(
+            len(Settings.ips), ',d')).replace()
+
+        data_to_write = 'ALL: ' + '\nALL: '.join(Settings.ips)
+
+        template = Helpers.Regex(
+            template,
+            r'%%content%%',
+            replace_with=data_to_write).replace()
+
+        print("Generation of %s" % Settings.hosts_deny_file, end=" ")
+        Helpers.File(
+            Settings.hosts_deny_file).write(
+                template,
+                overwrite=True)
+        print(Settings.done)
+
+    @classmethod
+    def super_hosts_deny_format(cls):
+        """
+        This method will generate the file in superhosts.deny format.
+        """
+
+        template = Helpers.File(Settings.superhosts_deny_template).read()
+
+        template = Helpers.Regex(
+            template,
+            r'%%version%%',
+            replace_with=Settings.version).replace()
+        template = Helpers.Regex(template, r'%%lenIPHosts%%', replace_with=format(
+            len(Settings.ips) + len(Settings.domains), ',d')).replace()
+
+        hosts_ip = Settings.ips + Settings.domains
+        hosts_ip = Helpers.List(hosts_ip).format()
+
+        data_to_write = 'ALL: ' + '\nALL: '.join(hosts_ip)
+
+        template = Helpers.Regex(
+            template,
+            r'%%content%%',
+            replace_with=data_to_write).replace()
+
+        print("Generation of %s" % Settings.superhosts_deny_file, end=" ")
+        Helpers.File(
+            Settings.superhosts_deny_file).write(
+                template,
+                overwrite=True)
+        print(Settings.done)
+
+    @classmethod
+    def hosts_windows_format(cls):
+        """
+        This method will generate the file in hosts.windows format.
+        """
+
+        template = Helpers.File(Settings.hosts_windows_template).read()
+
+        template = Helpers.Regex(
+            template,
+            r'%%version%%',
+            replace_with=Settings.version).replace()
+        template = Helpers.Regex(template, r'%%lenHosts%%', replace_with=format(
+            len(Settings.domains), ',d')).replace()
+
+        data_to_write = '127.0.0.1 ' + '\n127.0.0.1 '.join(Settings.domains)
+
+        template = Helpers.Regex(
+            template,
+            r'%%content%%',
+            replace_with=data_to_write).replace()
+
+        print("Generation of %s" % Settings.hosts_windows_file, end=" ")
+        Helpers.File(
+            Settings.hosts_windows_file).write(
+                template,
+                overwrite=True)
+        print(Settings.done)
+
+    @classmethod
+    def hosts_unix_format(cls):
+        """
+        This method will generate the file in hosts format.
+        """
+
+        template = Helpers.File(Settings.hosts_unix_template).read()
+
+        template = Helpers.Regex(
+            template,
+            r'%%version%%',
+            replace_with=Settings.version).replace()
+        template = Helpers.Regex(template, r'%%lenHosts%%', replace_with=format(
+            len(Settings.domains), ',d')).replace()
+
+        data_to_write = '0.0.0.0 ' + '\n0.0.0.0 '.join(Settings.domains)
+
+        template = Helpers.Regex(
+            template,
+            r'%%content%%',
+            replace_with=data_to_write).replace()
+
+        print("Generation of %s" % Settings.hosts_unix_file, end=" ")
+        Helpers.File(
+            Settings.hosts_unix_file).write(
+                template,
+                overwrite=True)
+        print(Settings.done)
+
+    @classmethod
+    def readme_md(cls):
+        """
+        This methos will generate the REAMDE.md.
+        """
+
+        template = Helpers.File(Settings.readme_me_template).read()
+
+        template = Helpers.Regex(
+            template,
+            r'%%version%%',
+            replace_with=Settings.version).replace()
+        template = Helpers.Regex(template, r'%%lenHosts%%', replace_with=format(
+            len(Settings.domains), ',d')).replace()
+        template = Helpers.Regex(template, r'%%lenIPs%%', replace_with=format(
+            len(Settings.ips), ',d')).replace()
+        template = Helpers.Regex(template, r'%%lenHostsIPs%%', replace_with=format(
+            len(Settings.ips) + len(Settings.domains), ',d')).replace()
+
+        print("Generation of %s" % Settings.readme_md_file, end=" ")
+        Helpers.File(
+            Settings.readme_md_file).write(
+                template,
+                overwrite=True)
+        print(Settings.done)
+
+
+class Compress(object):  # pylint: disable=too-few-public-methods
+    """
+    This class run and manage the compression
+    """
+
+    def __init__(self):
+        to_compresss = [
+            Settings.dotted_file,
+            Settings.plain_text_domains_file,
+            Settings.plain_text_ips_file,
+            Settings.hosts_deny_file,
+            Settings.superhosts_deny_file,
+            Settings.hosts_windows_file,
+            Settings.hosts_unix_file
+        ]
+
+        for file in to_compresss:
+            compress_into_zip = '%s.zip' % file
+            compress_into_tar_gz = '%s.tar.gz' % file
+
+            print("\n")
+            print(
+                "Compression of %s into %s" %
+                (file, compress_into_zip), end=" ")
+            Helpers.File(file).zip_compress(compress_into_zip)
+            print(Settings.done)
+
+            print(
+                "Compression of %s into %s" %
+                (file, compress_into_tar_gz), end=" ")
+            Helpers.File(file).tar_gz_compress(compress_into_tar_gz)
+            print(Settings.done)
+
+            print("Deletion of %s" % file, end=" ")
+            Helpers.File(file).delete()
+            print(Settings.done)
+
+
+class Deploy(object):  # pylint: disable=too-few-public-methods
+    """
+    This class will deploy our files to upstream.
+    """
+
+    def __init__(self):
+        commit_message = '%s [ci skip]' % Settings.version
+
+        Helpers.travis_permissions()
+
+        Helpers.Command(
+            "git add --all && git commit -a -m '%s' && git push origin %s" %
+            (commit_message, environ['GIT_BRANCH'])).execute()
+
+        get(Settings.deploy_raw_url)
 
 
 class Helpers(object):  # pylint: disable=too-few-public-methods
@@ -947,6 +919,11 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             return False
 
         def not_matching_list(self):
+            """
+            This method return a list of string which don't match the
+            given regex.
+            """
+
             pre_result = comp(self.regex)
 
             return list(
@@ -1015,43 +992,10 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
                 exit(1)
             return self.decode_output(output)
 
-    class URL(object):
-        """
-        This class manage everything about url :)
-
-        Argument:
-            - url: A string, the url we are working with.
-        """
-
-        def __init__(self, url):
-            self.url = url
-
-        def is_valid(self):
-            """
-            Check if the given domain can be reached or not.
-            """
-
-            try:
-                get(self.url)
-                return True
-            except gaierror:
-                return False
-
-        def is_404(self):
-            """
-            Check if the given domain return 404.
-            """
-
-            req = get(self.url)
-
-            if self.is_valid() and req.status_code == 404:
-                return True
-            return False
-
 
 if __name__ == '__main__':
     print("What's wrong with funilrys ? ")
     Initiate()
-#     Generate()
-#     Compress()
-#     Deploy()
+    Generate()
+    Compress()
+    Deploy()
