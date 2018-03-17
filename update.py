@@ -750,9 +750,9 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
 
         Helpers.Command('ls -al', True).execute()
 
-        for command in commands:
-            print("Running %s" % command, end="")
-            Helpers.Command(command, False).execute()
+        # for command in commands:
+        #     print("Running %s" % command, end="")
+        #     Helpers.Command(command, False).execute()
 
         if Helpers.Command(
                 'git config core.sharedRepository',
