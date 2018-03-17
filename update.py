@@ -227,7 +227,7 @@ class Initiate(object):
     def __init__(self):
         print("Beginning of Initiate()")
         self.travis()
-        # # Helpers.travis_permissions()
+        Helpers.travis_permissions()
         # self.get_whitelist()
         # self.list_of_input_sources()
         # self.info_extractor()
