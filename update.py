@@ -378,6 +378,17 @@ class Initiate(object):
                 The extracted line.
         """
 
+        # print('\n')
+        # print("Cleaning of the list of domains", end=" ")
+        # Settings.domains = Helpers.List(
+        #     list(map(self._cleaning_domain_or_ip, Settings.domains))).format()
+        # print(Settings.done)
+        #
+        # print("Cleaning of the list of IPs", end=" ")
+        # Settings.ips = Helpers.List(
+        #     list(map(self._cleaning_domain_or_ip, Settings.ips))).format()
+        # print(Settings.done)
+
         if line and not line.startswith('#'):
             if Helpers.Regex(
                     line,
@@ -419,17 +430,6 @@ class Initiate(object):
 
         if not repo:
             list(map(self.data_extractor,Settings.repositories))
-
-            print('\n')
-            print("Cleaning of the list of domains", end=" ")
-            Settings.domains = Helpers.List(
-                list(map(self._cleaning_domain_or_ip, Settings.domains))).format()
-            print(Settings.done)
-
-            print("Cleaning of the list of IPs", end=" ")
-            Settings.ips = Helpers.List(
-                list(map(self._cleaning_domain_or_ip, Settings.ips))).format()
-            print(Settings.done)
         else:
             domains_url = (Settings.raw_link + 'domains.list') % repo
             clean_url = (Settings.raw_link + 'clean.list') % repo
