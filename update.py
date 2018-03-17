@@ -461,7 +461,7 @@ class Initiate(object):
                         (repo, req.status_code))
         else:
             raise Exception(
-                'No input sources.'
+                'No input sources.')
 
         print('\n')
         print("Cleaning of the list of domains", end=" ")
