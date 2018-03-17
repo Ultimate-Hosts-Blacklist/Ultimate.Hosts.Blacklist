@@ -229,7 +229,7 @@ class Initiate(object):
         self.travis()
         Helpers.travis_permissions()
         self.get_whitelist()
-        # self.list_of_input_sources()
+        self.list_of_input_sources()
         # self.info_extractor()
 
     @classmethod
