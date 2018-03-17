@@ -737,16 +737,16 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
         Set permissions in order to avoid issues before commiting.
         """
 
-        build_dir = environ['TRAVIS_BUILD_DIR']
-        commands = [
-            "sudo chown -R travis:travis %s" %
-            (build_dir),
-            "sudo chgrp -R travis %s" %
-            (build_dir),
-            "sudo chmod -R g+rwX %s" %
-            (build_dir),
-            r"sudo find %s -type d -exec chmod g+x '{}' \;" %
-            (build_dir)]
+        # build_dir = environ['TRAVIS_BUILD_DIR']
+        # commands = [
+        #     "sudo chown -R travis:travis %s" %
+        #     (build_dir),
+        #     "sudo chgrp -R travis %s" %
+        #     (build_dir),
+        #     "sudo chmod -R g+rwX %s" %
+        #     (build_dir),
+        #     r"sudo find %s -type d -exec chmod g+x '{}' \;" %
+        #     (build_dir)]
 
         Helpers.Command('ls -al', True).execute()
 
@@ -754,12 +754,12 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
         #     print("Running %s" % command, end="")
         #     Helpers.Command(command, False).execute()
 
-        if Helpers.Command(
-                'git config core.sharedRepository',
-                False).execute() == '':
-            Helpers.Command(
-                'git config core.sharedRepository group',
-                False).execute()
+        # if Helpers.Command(
+        #         'git config core.sharedRepository',
+        #         False).execute() == '':
+        #     Helpers.Command(
+        #         'git config core.sharedRepository group',
+        #         False).execute()
 
     class List(object):  # pylint: disable=too-few-public-methods
         """
