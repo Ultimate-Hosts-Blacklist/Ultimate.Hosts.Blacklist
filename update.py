@@ -18,7 +18,6 @@ Contributors:
 
 from os import environ, path, remove
 from os import sep as directory_separator
-from sys import stdout
 from re import compile as comp
 from re import escape
 from re import sub as substrings
@@ -224,7 +223,7 @@ class Initiate(object):
 
     def __init__(self):
         self.travis()
-        Helpers.travis_permissions()
+        # Helpers.travis_permissions()
         self.get_whitelist()
         self.list_of_input_sources()
         self.info_extractor()
@@ -737,29 +736,29 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
         Set permissions in order to avoid issues before commiting.
         """
 
-        # build_dir = environ['TRAVIS_BUILD_DIR']
-        # commands = [
-        #     "sudo chown -R travis:travis %s" %
-        #     (build_dir),
-        #     "sudo chgrp -R travis %s" %
-        #     (build_dir),
-        #     "sudo chmod -R g+rwX %s" %
-        #     (build_dir),
-        #     r"sudo find %s -type d -exec chmod g+x '{}' \;" %
-        #     (build_dir)]
+        build_dir = environ['TRAVIS_BUILD_DIR']
+        commands = [
+            'sudo chown -R travis:travis %s' %
+            (build_dir),
+            'sudo chgrp -R travis %s' %
+            (build_dir),
+            'sudo chmod -R g+rwX %s' %
+            (build_dir),
+            'sudo chmod 777 -Rf %s.git' %
+            (build_dir +
+             directory_separator),
+            r"sudo find %s -type d -exec chmod g+x '{}' \;" %
+            (build_dir)]
 
-        Helpers.Command('ls -al', True).execute()
+        for command in commands:
+            Helpers.Command(command, False).execute()
 
-        # for command in commands:
-        #     print("Running %s" % command, end="")
-        #     Helpers.Command(command, False).execute()
-
-        # if Helpers.Command(
-        #         'git config core.sharedRepository',
-        #         False).execute() == '':
-        #     Helpers.Command(
-        #         'git config core.sharedRepository group',
-        #         False).execute()
+        if Helpers.Command(
+                'git config core.sharedRepository',
+                False).execute() == '':
+            Helpers.Command(
+                'git config core.sharedRepository group',
+                False).execute()
 
     class List(object):  # pylint: disable=too-few-public-methods
         """
