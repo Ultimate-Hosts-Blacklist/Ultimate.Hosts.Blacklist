@@ -119,6 +119,12 @@ class Settings(object):  # pylint: disable=too-few-public-methods
     # Note: This variable is auto updated by Initiate()
     whitelist = []
 
+    # This variable save the list of all whitelisted domain in regex format.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    # Note: This variable is auto updated by Initiate()
+    regex_whitelist = ''
+
     # This variable is used to set the marker that we use to say that we
     # match all occurence of the domain or IP.
     #
@@ -282,8 +288,10 @@ class Initiate(object):
         if line and not line.startswith('#'):
             if line.startswith(Settings.whitelist_all_marker):
                 to_check = line.split(Settings.whitelist_all_marker)[1]
+                regex_whitelist = escape(to_check) + '$'
             else:
                 to_check = line
+                regex_whitelist = '^%s$' % escape(line)
 
             if Helpers.Regex(
                     to_check,
@@ -292,7 +300,8 @@ class Initiate(object):
                         to_check,
                         Settings.regex_domain,
                         return_data=False).match():
-                Settings.whitelist.append(line)
+
+                Settings.whitelist.append(regex_whitelist)
 
     def get_whitelist(self):
         """
@@ -308,7 +317,7 @@ class Initiate(object):
         if req.status_code == 200:
             list(map(self._whitelist_parser, req.text.split('\n')))
 
-            Settings.whitelist = Helpers.List(Settings.whitelist).format()
+            Settings.regex_whitelist = '|'.join(Settings.whitelist)
             print(Settings.done)
         else:
             print(Settings.error)
@@ -341,7 +350,12 @@ class Initiate(object):
                     'page': str(current_page)
                 }
 
-                req = get(url_to_get, params=params, auth=('mitchellkrogza', environ['GH_TOKEN']))
+                req = get(
+                    url_to_get,
+                    params=params,
+                    auth=(
+                        'mitchellkrogza',
+                        environ['GH_TOKEN']))
 
                 if req.status_code == 200:
                     for repo in req.json():
@@ -382,34 +396,35 @@ class Initiate(object):
             if Helpers.Regex(
                     line,
                     Settings.regex_ip4,
-                    return_data=False).match() and cls._cleaning_domain_or_ip(line):
+                    return_data=False).match():
                 Settings.ips.append(line)
-            elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match() and cls._cleaning_domain_or_ip(line):
+            elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match():
                 Settings.domains.append(line)
 
-    @classmethod
-    def _cleaning_domain_or_ip(cls, domain_or_ip):
-        """
-        This method will check if the domain match once of our whitelisted.
-
-        Arguments:
-            - domain_or_ip: str
-                A domain or ip to check presence into the whitelist list.
-        """
-
-        for whitelisted in Settings.whitelist:
-            if whitelisted.startswith(Settings.whitelist_all_marker):
-                regex = escape(
-                    whitelisted.split(Settings.whitelist_all_marker)[1]) + '$'
-            else:
-                regex = '^%s$' % escape(whitelisted)
-
-            if Helpers.Regex(
-                    domain_or_ip,
-                    regex,
-                    return_data=False).match():
-                return ""
-        return domain_or_ip
+    # @classmethod
+    # def _cleaning_domain_or_ip(cls, domain_or_ip):
+    #     """
+    #     This method will check if the domain match once of our whitelisted.
+    #
+    #     Arguments:
+    #         - domain_or_ip: str
+    #             A domain or ip to check presence into the whitelist list.
+    #     """
+    #
+    #     for whitelisted in Settings.whitelist:
+    #         if whitelisted.startswith(Settings.whitelist_all_marker):
+    #             regex = escape(
+    #                 whitelisted.split(Settings.whitelist_all_marker)[1]) + '$'
+    #         else:
+    #             regex = '^%s$' % escape(whitelisted)
+    #
+    #         if Helpers.Regex(
+    #                 domain_or_ip,
+    #                 regex,
+    #                 return_data=False).match():
+    #             print("Removing %s ..." % domain_or_ip)
+    #             return ""
+    #     return domain_or_ip
 
     def data_extractor(self, repo=None):
         """
@@ -418,7 +433,21 @@ class Initiate(object):
         """
 
         if not repo:
-            list(map(self.data_extractor,Settings.repositories))
+            list(map(self.data_extractor, Settings.repositories))
+
+            print('\n')
+            print("Cleaning of the list of domains", end=" ")
+            Settings.domains = Helpers.List(
+                Helpers.Regex(
+                    Settings.domains,
+                    Settings.whitelist).not_matching_list()).format()
+            print(Settings.done)
+
+            print("Cleaning of the list of IPs", end=" ")
+            Settings.ips = Helpers.List(
+                Helpers.Regex(
+                    Settings.ips,
+                    Settings.whitelist).not_matching_list()).format()
         else:
             domains_url = (Settings.raw_link + 'domains.list') % repo
             clean_url = (Settings.raw_link + 'clean.list') % repo
@@ -427,11 +456,15 @@ class Initiate(object):
             domains_url_data = get(domains_url)
 
             if clean_url_data.status_code == 200:
-                print("Extracting domains and ips from %s (clean.list)" % repo, end=" ")
+                print(
+                    "Extracting domains and ips from %s (clean.list)" %
+                    repo, end=" ")
 
                 data = clean_url_data
             elif domains_url_data.status_code == 200:
-                print("Extracting domains and ips from %s (domain.list)" % repo, end=" ")
+                print(
+                    "Extracting domains and ips from %s (domain.list)" %
+                    repo, end=" ")
 
                 data = domains_url_data
             else:
@@ -912,6 +945,14 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             elif not self.return_data and pre_result is not None:  # pylint: disable=no-member
                 return True
             return False
+
+        def not_matching_list(self):
+            pre_result = comp(self.regex)
+
+            return list(
+                filter(
+                    lambda element: not pre_result.search(element),
+                    self.data))
 
         def replace(self):
             """Used to replace a matched string with another."""
