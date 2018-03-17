@@ -321,11 +321,7 @@ class Initiate(object):
 
         url_to_get = Settings.github_org_url + '/repos'
 
-        params = {
-            'page': '1'
-        }
-
-        pages_finder = get(url_to_get, params=params)
+        pages_finder = get(url_to_get)
 
         if pages_finder.status_code == 200:
             last_page = int(
