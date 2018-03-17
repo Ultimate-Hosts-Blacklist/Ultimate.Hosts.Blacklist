@@ -360,7 +360,7 @@ class Initiate(object):
                 Settings.repositories).format()
         else:
             raise Exception(
-                'Impossible to get the numbers of page to read. Is GitHub down ?')
+                'Impossible to get the numbers of page to read. Is GitHub down ? (%s)' % pages_finder.status_code)
 
     @classmethod
     def _data_parser(cls, line):
