@@ -25,7 +25,8 @@ before_install:
   - sudo apt-get -y install dos2unix
 
 script:
-  - python ${TRAVIS_BUILD_DIR}/update.py
+  - ls -al
+  - python update.py
 
 notifications:
   email: false
