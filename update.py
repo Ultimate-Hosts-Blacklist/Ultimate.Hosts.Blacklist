@@ -30,6 +30,8 @@ from zipfile import ZipFile
 from requests import get
 
 
+print("Is it Funilrys or %s ?" % repr(__name__))
+
 class Settings(object):  # pylint: disable=too-few-public-methods
     """
     This class will save all data that can be called from anywhere in the code.
@@ -1043,5 +1045,3 @@ if __name__ == '__main__':
     Generate()
     Compress()
     Deploy()
-
-print("Is it Funilrys or %s ?" % repr(__name__))
