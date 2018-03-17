@@ -437,27 +437,31 @@ class Initiate(object):
         their informations.
         """
 
-        for repo in Settings.repositories:
-            print("Connecting with %s ..." % repo)
-            url_to_get = (Settings.raw_link + 'info.json') % repo
-            domains_url = (Settings.raw_link + 'domains.list') % repo
-            clean_url = (Settings.raw_link + 'clean.list') % repo
+        if Settings.repositories:
+            for repo in Settings.repositories:
+                print("Connecting with %s ..." % repo)
+                url_to_get = (Settings.raw_link + 'info.json') % repo
+                domains_url = (Settings.raw_link + 'domains.list') % repo
+                clean_url = (Settings.raw_link + 'clean.list') % repo
 
-            req = get(url_to_get)
+                req = get(url_to_get)
 
-            if req.status_code == 200:
-                if not Helpers.URL(clean_url).is_404():
-                    self.data_extractor(clean_url, repo)
-                elif not Helpers.URL(domains_url).is_404():
-                    self.data_extractor(domains_url, repo)
+                if req.status_code == 200:
+                    if not Helpers.URL(clean_url).is_404():
+                        self.data_extractor(clean_url, repo)
+                    elif not Helpers.URL(domains_url).is_404():
+                        self.data_extractor(domains_url, repo)
+                    else:
+                        raise Exception(
+                            'Corrupted repository. Please check `domains.list` for %s' %
+                            repo)
                 else:
                     raise Exception(
-                        'Corrupted repository. Please check `domains.list` for %s' %
-                        repo)
-            else:
-                raise Exception(
-                    'Impossible to get `info.json` for %s. Is GitHub down ? (%s)' %
-                    (repo, req.status_code))
+                        'Impossible to get `info.json` for %s. Is GitHub down ? (%s)' %
+                        (repo, req.status_code))
+        else:
+            raise Exception(
+                'No input sources.'
 
         print('\n')
         print("Cleaning of the list of domains", end=" ")
