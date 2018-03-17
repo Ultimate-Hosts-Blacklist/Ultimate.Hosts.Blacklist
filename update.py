@@ -337,6 +337,8 @@ class Initiate(object):
                         -1])
 
             current_page = 1
+
+            print("Calling the list of input sources " end=" ")
             while current_page <= last_page:
                 params = {
                     'page': str(current_page)
@@ -351,6 +353,7 @@ class Initiate(object):
                         if name not in Settings.repo_to_ignore:
                             Settings.repositories.append(name)
                 else:
+                    print(Settings.error)
                     raise Exception(
                         'Impossible to get information about the organisation. Is GitHub down ?')
 
@@ -358,6 +361,7 @@ class Initiate(object):
 
             Settings.repositories = Helpers.List(
                 Settings.repositories).format()
+            print(Settings.done)
         else:
             raise Exception(
                 'Impossible to get the numbers of page to read. Is GitHub down ? (%s)' % pages_finder.status_code)
