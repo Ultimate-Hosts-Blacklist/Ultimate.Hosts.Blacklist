@@ -22,14 +22,12 @@ from re import compile as comp
 from re import escape
 from re import sub as substrings
 from subprocess import PIPE, Popen
+from sys import stdout
 from tarfile import open as tarfile_open
 from time import strftime
 from zipfile import ZipFile
 
 from requests import get
-
-
-print("Is it Funilrys or %s ?" % repr(__name__))
 
 
 class Settings(object):  # pylint: disable=too-few-public-methods
@@ -230,7 +228,6 @@ class Initiate(object):
     """
 
     def __init__(self):
-        print("Beginning of Initiate()")
         self.travis()
         Helpers.travis_permissions()
         self.get_whitelist()
@@ -738,8 +735,11 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             (build_dir)]
 
         for command in commands:
-            print("Running %s" % repr(command))
+            print("\rFixing permissions...", end="")
             Helpers.Command(command, True).execute()
+            stdout.flush()
+
+        print("\r", end='')
 
         if Helpers.Command(
                 'git config core.sharedRepository',
@@ -994,7 +994,6 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
 
 
 if __name__ == '__main__':
-    print("What's wrong with funilrys ? ")
     Initiate()
     Generate()
     Compress()
