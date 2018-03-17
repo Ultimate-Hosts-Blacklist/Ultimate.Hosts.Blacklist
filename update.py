@@ -338,7 +338,7 @@ class Initiate(object):
 
             current_page = 1
 
-            print("Calling the list of input sources " end=" ")
+            print("Calling the list of input sources", end=" ")
             while current_page <= last_page:
                 params = {
                     'page': str(current_page)
@@ -355,7 +355,7 @@ class Initiate(object):
                 else:
                     print(Settings.error)
                     raise Exception(
-                        'Impossible to get information about the organisation. Is GitHub down ?')
+                        'Impossible to get information about the organisation. Is GitHub down ? (%s)'  % req.status_code)
 
                 current_page += 1
 
