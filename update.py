@@ -390,6 +390,35 @@ class Initiate(object):
         """
 
         if line and not line.startswith('#'):
+            tabs = '\t'
+            space = ' '
+
+            tabs_position, space_position = (
+                line.find(tabs), line.find(space))
+
+            if tabs_position > -1 and space_position > -1:
+                if space_position < tabs_position:
+                    separator = space
+                else:
+                    separator = tabs
+            elif tabs_position > -1:
+                separator = tabs
+            elif space_position > -1:
+                separator = space
+            else:
+                separator = ''
+
+            if separator:
+                splited_line = line.split(separator)
+
+                index = 1
+                while index < len(splited_line):
+                    if splited_line[index]:
+                        break
+                    index += 1
+
+                line = splited_line[index]
+
             if Helpers.Regex(
                     line,
                     Settings.regex_ip4,
