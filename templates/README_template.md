@@ -42,7 +42,7 @@ ips.list                   |  Any / Pi-Hole   |   UNIX   | [Download](https://ho
 ### Installers, Updaters and Uninstaller Helper Scripts
 
 Linux                                                                                                                                                      | Windows
----------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------
 [hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-installer.sh)                         | [hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat)
 [hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-uninstaller.sh)                     | [hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat)
 [hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-updater.sh)                             | [hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat)
@@ -51,7 +51,7 @@ Linux                                                                           
 [hosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-updater.sh)                   |
 [superhosts.deny Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-installer.sh)     |
 [superhosts.deny UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-uninstaller.sh) |
-| [superhosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-updater.sh)
+                                                                                                                                                           | [superhosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-updater.sh)
 
 --------------------------------------------------------------------------------
 
@@ -140,7 +140,7 @@ ips.list                   |  Any / Pi-Hole   |   UNIX   | [Download](https://ho
 ### Installers, Updaters and Uninstaller Helper Scripts
 
 Linux                                                                                                                                                      | Windows
----------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------
 [hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-installer.sh)                         | [hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat)
 [hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-uninstaller.sh)                     | [hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat)
 [hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-updater.sh)                             | [hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat)
@@ -149,15 +149,13 @@ Linux                                                                           
 [hosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-updater.sh)                   |
 [superhosts.deny Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-installer.sh)     |
 [superhosts.deny UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-uninstaller.sh) |
-| [superhosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-updater.sh)
+                                                                                                                                                           | [superhosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-updater.sh)
 
 --------------------------------------------------------------------------------
 
 ## ADDITIONS / REMOVALS / CORRECTIONS !!
 
 [![Log an Issue](https://img.shields.io/badge/LOG%20-%20an%20issue%20%F0%9F%9A%A6-blue.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues) if you disagree with anything on this list or want to add any other bad web sites to the list.
-
-You can also fork a copy of this repo, create a new unique folder in .input_sources, call your file domains.txt and simply send a Pull Request to the repository and it will be added.
 
 --------------------------------------------------------------------------------
 
@@ -171,36 +169,39 @@ The sources of the input data information are as follows.
 
 - [2o7.net](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts)
 - [Adblock No-Coin List](https://github.com/hoshsadiq/adblock-nocoin-list/blob/master/hosts.txt)
-- [MoaAB adblock.makala.is](http://adblock.mahakala.is/)
-- [add.Risk](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts)
-- [add.Spam](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts)
-- [lists.disconnect.me](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
+- [Add_Risk](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts)
+- [Add_Spam](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts)
+- [Ads_Disconnect.me](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
 - [Airelle's Anti-Sex Hosts](http://rlwpx.free.fr/WPFF/hsex.7z)
 - [Anti-PopAds](https://raw.githubusercontent.com/Yhonay/antipopads/master/popads.txt)
 - [Bad JAV Sites](https://pastebin.com/raw/kDqbYwWr)
-- [Badd Boyz Hosts](https://github.com/mitchellkrogza/Badd-Boyz-Hosts)
 - [BadIPS.com](https://www.badips.com/)
+- [Badd Boyz Hosts](https://github.com/mitchellkrogza/Badd-Boyz-Hosts)
+- [Blocklist.de](http://www.blocklist.de/en/index.html)
+- [Cameleon](http://sysctl.org/cameleon/hosts)
 - [Firehol](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset)
 - [Hosts ADBlock](https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt)
 - [JustDomains](http://mirror1.malwaredomains.com/files/justdomains)
 - [KADHosts](https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt)
-- [malc0de](http://malc0de.com/bl/)
 - [Malware Domain List](https://www.malwaredomainlist.com/hostslist/hosts.txt)
 - [Michael Trimm's Hosts](https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt)
-- [pl-host file](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt)
+- [MoaAB adblock.makala.is](http://adblock.mahakala.is/)
+- [Quidsup NoTrack Malicious Sites](https://raw.githubusercontent.com/quidsup/notrack/master/malicious-sites.txt)
 - [Quidsup NoTrack](https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt)
 - [Ransomware Tracker Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)
+- [SMed79 - Various Lists](https://github.com/SMed79)
 - [ShallaList](http://www.shallalist.de/)
-- [somewhocares.org](http://someonewhocares.org/hosts/)
 - [Spam404](https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt)
 - [Top Attacking Wordpress IP's](https://github.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites)
-- [Blocklist.de](http://www.blocklist.de/en/index.html)
+- [WaLLy3K_Blacklist](https://v.firebog.net/hosts/static/w3kbl.txt)
 - [YoYo.org](https://pgl.yoyo.org/as/serverlist.php?showintro=0;hostformat=hosts)
-- [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
-- [uBlock Filters Plus](https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt)
 - [YousList](https://github.com/yous/YousList)
-- [SMed79 - Various Lists](https://github.com/SMed79)
 - [ZeroDot1 - CoinBlocker Lists](https://github.com/ZeroDot1/CoinBlockerLists)
+- [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
+- [malc0de](http://malc0de.com/bl/)
+- [pl-host file](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt)
+- [somewhocares.org](http://someonewhocares.org/hosts/)
+- [uBlock Filters Plus](https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt)
 
 --------------------------------------------------------------------------------
 
