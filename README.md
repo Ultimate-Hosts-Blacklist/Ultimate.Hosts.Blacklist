@@ -10,10 +10,10 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 --------------------------------------------------------------------------------
 
-- Version: **V1.1088.2018.03.18**
-- Total Bad Hosts in hosts file: **1,723,449**
+- Version: **V1.1089.2018.03.18**
+- Total Bad Hosts in hosts file: **1,723,512**
 - Total Bad IP's in hosts.deny file: **202,491**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,925,940**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,926,003**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -177,6 +177,7 @@ The sources of the input data information are as follows.
 - [Bad JAV Sites](https://pastebin.com/raw/kDqbYwWr)
 - [BadIPS.com](https://www.badips.com/)
 - [Badd Boyz Hosts](https://github.com/mitchellkrogza/Badd-Boyz-Hosts)
+- [Barbock filter list](https://raw.githubusercontent.com/CHEF-KOCH/BarbBlock-filter-list/master/HOSTS.txt)
 - [Blocklist.de](http://www.blocklist.de/en/index.html)
 - [Cameleon](http://sysctl.org/cameleon/hosts)
 - [Firehol](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset)
