@@ -177,6 +177,7 @@ The sources of the input data information are as follows.
 - [Bad JAV Sites](https://pastebin.com/raw/kDqbYwWr)
 - [BadIPS.com](https://www.badips.com/)
 - [Badd Boyz Hosts](https://github.com/mitchellkrogza/Badd-Boyz-Hosts)
+- [Barbock filter list](https://raw.githubusercontent.com/CHEF-KOCH/BarbBlock-filter-list/master/HOSTS.txt)
 - [Blocklist.de](http://www.blocklist.de/en/index.html)
 - [Cameleon](http://sysctl.org/cameleon/hosts)
 - [Firehol](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset)
