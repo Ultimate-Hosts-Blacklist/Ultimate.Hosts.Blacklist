@@ -10,10 +10,10 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 --------------------------------------------------------------------------------
 
-- Version: **V1.1090.2018.03.18**
-- Total Bad Hosts in hosts file: **1,723,512**
+- Version: **V1.1091.2018.03.19**
+- Total Bad Hosts in hosts file: **1,715,972**
 - Total Bad IP's in hosts.deny file: **202,491**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,926,003**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,918,463**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -180,6 +180,7 @@ The sources of the input data information are as follows.
 - [Barbock filter list](https://raw.githubusercontent.com/CHEF-KOCH/BarbBlock-filter-list/master/HOSTS.txt)
 - [Blocklist.de](http://www.blocklist.de/en/index.html)
 - [Cameleon](http://sysctl.org/cameleon/hosts)
+- [DShield.org Suspicious Domain List](https://www.dshield.org/feeds/suspiciousdomains_Low.txt)
 - [Firehol](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset)
 - [Hosts ADBlock](https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt)
 - [JustDomains](http://mirror1.malwaredomains.com/files/justdomains)
