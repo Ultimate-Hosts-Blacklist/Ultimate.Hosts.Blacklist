@@ -379,6 +379,46 @@ class Initiate(object):
                  pages_finder.headers['X-RateLimit-Reset']))
 
     @classmethod
+    def _format_line(cls, line):
+        """
+        This method format the line before parsing it to the system.
+
+        Argument:
+            - line: str
+                The extracted line.
+        """
+
+        tabs = '\t'
+        space = ' '
+
+        tabs_position, space_position = (
+            line.find(tabs), line.find(space))
+
+        if tabs_position > -1 and space_position > -1:
+            if space_position < tabs_position:
+                separator = space
+            else:
+                separator = tabs
+        elif tabs_position > -1:
+            separator = tabs
+        elif space_position > -1:
+            separator = space
+        else:
+            separator = ''
+
+        if separator:
+            splited_line = line.split(separator)
+
+            index = 1
+            while index < len(splited_line):
+                if splited_line[index]:
+                    break
+                index += 1
+
+            return splited_line[index]
+        return line
+
+    @classmethod
     def _data_parser(cls, line):
         """
         Given the extracted line, this method append the data
@@ -390,40 +430,17 @@ class Initiate(object):
         """
 
         if line and not line.startswith('#'):
-            tabs = '\t'
-            space = ' '
-
-            tabs_position, space_position = (
-                line.find(tabs), line.find(space))
-
-            if tabs_position > -1 and space_position > -1:
-                if space_position < tabs_position:
-                    separator = space
-                else:
-                    separator = tabs
-            elif tabs_position > -1:
-                separator = tabs
-            elif space_position > -1:
-                separator = space
-            else:
-                separator = ''
-
-            if separator:
-                splited_line = line.split(separator)
-
-                index = 1
-                while index < len(splited_line):
-                    if splited_line[index]:
-                        break
-                    index += 1
-
-                line = splited_line[index]
+            line = cls._format_line(line)
 
             if Helpers.Regex(
                     line,
                     Settings.regex_ip4,
                     return_data=False).match():
-                Settings.ips.append(line)
+
+                if not line.startswith('192.') \
+                        and not line.startswith('10.') \
+                        and not line.startswith('0.'):
+                    Settings.ips.append(line)
             elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match():
                 Settings.domains.append(line)
 
