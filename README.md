@@ -10,10 +10,10 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 --------------------------------------------------------------------------------
 
-- Version: **V1.1108.2018.04.04**
-- Total Bad Hosts in hosts file: **1,714,864**
+- Version: **V1.1109.2018.04.04**
+- Total Bad Hosts in hosts file: **1,715,914**
 - Total Bad IP's in hosts.deny file: **202,945**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,917,809**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,918,859**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -194,6 +194,7 @@ The sources of the input data information are as follows.
 - [SMed79 - Various Lists](https://github.com/SMed79)
 - [ShallaList](http://www.shallalist.de/)
 - [Spam404](https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt)
+- [The Big List of Hacked Malware Web Sites](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list)
 - [Top Attacking Wordpress IP's](https://github.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites)
 - [WaLLy3K_Blacklist](https://v.firebog.net/hosts/static/w3kbl.txt)
 - [YoYo.org](https://pgl.yoyo.org/as/serverlist.php?showintro=0;hostformat=hosts)
