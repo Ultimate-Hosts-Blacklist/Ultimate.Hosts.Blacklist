@@ -35,6 +35,15 @@ class Settings(object):  # pylint: disable=too-few-public-methods
     This class will save all data that can be called from anywhere in the code.
     """
 
+    # This is the username we use to connect to the GitHub API.
+    github_api_username = 'mitchellkrogza'
+
+    try:
+        # This is the GitHub API token to use.
+        github_api_token = environ['GH_TOKEN']
+    except KeyError:
+        github_api_token = ''
+
     # This variable set the GitHub repository slug.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
@@ -80,24 +89,6 @@ class Settings(object):  # pylint: disable=too-few-public-methods
     # This variable set the repository to ignore.
     repo_to_ignore = ['repository-structure', 'whitelist']
 
-    # This variable save the list of repo with `clean.list` to get.
-    #
-    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    # Note: This variable is auto updated by Initiate()
-    clean_list_repo = []
-
-    # This variable save the list of repo with `domains.list` to get.
-    #
-    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    # Note: This variable is auto updated by Initiate()
-    domains_list_repo = []
-
-    # This variable save the list of repo which are IP only.
-    #
-    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    # Note: This variable is auto updated by Initiate()
-    ip_list_repo = []
-
     # This variable save the list of all domains.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
@@ -138,10 +129,13 @@ class Settings(object):  # pylint: disable=too-few-public-methods
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     regex_domain = r'^(?=.{0,253}$)(([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9])\.)+((?=.*[^0-9])([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9]))$'  # pylint: disable=line-too-long
 
-    # This variable set the version which is going to be appended to all
-    # templates files
-    version = 'V1.%s.%s.%s.%s' % (environ['TRAVIS_BUILD_NUMBER'], strftime(
-        '%Y'), strftime('%m'), strftime('%d'))
+    try:
+        # This variable set the version which is going to be appended to all
+        # templates files
+        version = 'V1.%s.%s.%s.%s' % (environ['TRAVIS_BUILD_NUMBER'], strftime(
+            '%Y'), strftime('%m'), strftime('%d'))
+    except KeyError:
+        version = strftime('%s')
 
     # This variable set the location of the templates directory.
     #
@@ -240,35 +234,40 @@ class Initiate(object):
         Initiate Travis CI settings.
         """
 
-        print("Beginning of Initiate().travis()")
+        try:
+            _ = environ['TRAVIS_BUILD_DIR']
 
-        print("Cleaning remote")
-        Helpers.Command('git remote rm origin', True).execute()
-        print("Adding remote with GH_TOKEN")
-        Helpers.Command(
-            "git remote add origin https://" +
-            "%s@github.com/%s.git" %
-            (environ['GH_TOKEN'],
-             environ['TRAVIS_REPO_SLUG']),
-            True).execute()
-        print("Update of git.user.email")
-        Helpers.Command(
-            'git config --global user.email "%s"' %
-            (environ['GIT_EMAIL']), True).execute()
-        print("Update of git.user.name")
-        Helpers.Command(
-            'git config --global user.name "%s"' %
-            (environ['GIT_NAME']), True).execute()
-        print("Update of git.push.default")
-        Helpers.Command(
-            'git config --global push.default simple', True).execute()
-        print("Checkout of %s" % repr(environ['GIT_BRANCH']))
-        Helpers.Command(
-            'git checkout %s' %
-            environ['GIT_BRANCH'],
-            True).execute()
+            print("Beginning of Initiate().travis()")
 
-        print("End of Initiate().travis()")
+            print("Cleaning remote")
+            Helpers.Command('git remote rm origin', True).execute()
+            print("Adding remote with GH_TOKEN")
+            Helpers.Command(
+                "git remote add origin https://" +
+                "%s@github.com/%s.git" %
+                (environ['GH_TOKEN'],
+                 environ['TRAVIS_REPO_SLUG']),
+                True).execute()
+            print("Update of git.user.email")
+            Helpers.Command(
+                'git config --global user.email "%s"' %
+                (environ['GIT_EMAIL']), True).execute()
+            print("Update of git.user.name")
+            Helpers.Command(
+                'git config --global user.name "%s"' %
+                (environ['GIT_NAME']), True).execute()
+            print("Update of git.push.default")
+            Helpers.Command(
+                'git config --global push.default simple', True).execute()
+            print("Checkout of %s" % repr(environ['GIT_BRANCH']))
+            Helpers.Command(
+                'git checkout %s' %
+                environ['GIT_BRANCH'],
+                True).execute()
+
+            print("End of Initiate().travis()")
+        except KeyError:
+            pass
 
     @classmethod
     def _whitelist_parser(cls, line):
@@ -327,7 +326,13 @@ class Initiate(object):
 
         url_to_get = Settings.github_org_url + '/repos'
 
-        pages_finder = get(url_to_get)
+        if Settings.github_api_username and Settings.github_api_token:
+            pages_finder = get(url_to_get,
+                               auth=(
+                                   Settings.github_api_username,
+                                   Settings.github_api_token))
+        else:
+            pages_finder = get(url_to_get)
 
         if pages_finder.status_code == 200:
             last_page = int(
@@ -347,12 +352,17 @@ class Initiate(object):
                     'page': str(current_page)
                 }
 
-                req = get(
-                    url_to_get,
-                    params=params,
-                    auth=(
-                        'mitchellkrogza',
-                        environ['GH_TOKEN']))
+                if Settings.github_api_username and Settings.github_api_token:
+                    req = get(
+                        url_to_get,
+                        params=params,
+                        auth=(
+                            Settings.github_api_username,
+                            Settings.github_api_token))
+                else:
+                    req = get(
+                        url_to_get,
+                        params=params)
 
                 if req.status_code == 200:
                     for repo in req.json():
@@ -381,42 +391,52 @@ class Initiate(object):
     @classmethod
     def _format_line(cls, line):
         """
-        This method format the line before parsing it to the system.
+        Format the extracted domain before passing it to the system.
 
         Argument:
-            - line: str
-                The extracted line.
+            line: str
+                The extracted domain from the file.
+
+        Returns: str
+            The domain to test.
         """
 
-        tabs = '\t'
-        space = ' '
+        if not line.startswith('#'):
 
-        tabs_position, space_position = (
-            line.find(tabs), line.find(space))
+            if '#' in line:
+                line = line[:line.find(
+                    '#')].strip()
 
-        if tabs_position > -1 and space_position > -1:
-            if space_position < tabs_position:
+            tabs = '\t'
+            space = ' '
+
+            tabs_position, space_position = (
+                line.find(tabs), line.find(space))
+
+            if tabs_position > -1 and space_position > -1:
+                if space_position < tabs_position:
+                    separator = space
+                else:
+                    separator = tabs
+            elif tabs_position > -1:
+                separator = tabs
+            elif space_position > -1:
                 separator = space
             else:
-                separator = tabs
-        elif tabs_position > -1:
-            separator = tabs
-        elif space_position > -1:
-            separator = space
-        else:
-            separator = ''
+                separator = ''
 
-        if separator:
-            splited_line = line.split(separator)
+            if separator:
+                splited_line = line.split(separator)
 
-            index = 1
-            while index < len(splited_line):
-                if splited_line[index]:
-                    break
-                index += 1
+                index = 1
+                while index < len(splited_line):
+                    if splited_line[index]:
+                        break
+                    index += 1
 
-            return splited_line[index]
-        return line
+                return splited_line[index]
+            return line
+        return ""
 
     @classmethod
     def _data_parser(cls, line):
@@ -431,16 +451,18 @@ class Initiate(object):
 
         if line and not line.startswith('#'):
             line = cls._format_line(line)
+            regex_exclude = r'((192)\.(168)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))|((10)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))|((172)\.(1[6-9]|2[0-9]|3[0-1])\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))'  # pylint: disable=line-too-long
 
             if Helpers.Regex(
                     line,
                     Settings.regex_ip4,
+                    return_data=False).match() \
+                and not Helpers.Regex(
+                    line,
+                    regex_exclude,
                     return_data=False).match():
 
-                if not line.startswith('192.') \
-                        and not line.startswith('10.') \
-                        and not line.startswith('0.'):
-                    Settings.ips.append(line)
+                Settings.ips.append(line)
             elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match():
                 Settings.domains.append(line)
 
@@ -745,15 +767,19 @@ class Deploy(object):  # pylint: disable=too-few-public-methods
     """
 
     def __init__(self):
-        commit_message = '%s [ci skip]' % Settings.version
+        try:
+            _ = environ['TRAVIS_BUILD_DIR']
+            commit_message = '%s [ci skip]' % Settings.version
 
-        Helpers.travis_permissions()
+            Helpers.travis_permissions()
 
-        Helpers.Command(
-            "git add --all && git commit -a -m '%s' && git push origin %s" %
-            (commit_message, environ['GIT_BRANCH'])).execute()
+            Helpers.Command(
+                "git add --all && git commit -a -m '%s' && git push origin %s" %
+                (commit_message, environ['GIT_BRANCH']), False).execute()
 
-        get(Settings.deploy_raw_url)
+            get(Settings.deploy_raw_url)
+        except KeyError:
+            pass
 
 
 class Helpers(object):  # pylint: disable=too-few-public-methods
@@ -767,33 +793,36 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
         Set permissions in order to avoid issues before commiting.
         """
 
-        build_dir = environ['TRAVIS_BUILD_DIR']
-        commands = [
-            'sudo chown -R travis:travis %s' %
-            (build_dir),
-            'sudo chgrp -R travis %s' %
-            (build_dir),
-            'sudo chmod -R g+rwX %s' %
-            (build_dir),
-            'sudo chmod 777 -Rf %s.git' %
-            (build_dir +
-             directory_separator),
-            r"sudo find %s -type d -exec chmod g+x '{}' \;" %
-            (build_dir)]
+        try:
+            build_dir = environ['TRAVIS_BUILD_DIR']
+            commands = [
+                'sudo chown -R travis:travis %s' %
+                (build_dir),
+                'sudo chgrp -R travis %s' %
+                (build_dir),
+                'sudo chmod -R g+rwX %s' %
+                (build_dir),
+                'sudo chmod 777 -Rf %s.git' %
+                (build_dir +
+                 directory_separator),
+                r"sudo find %s -type d -exec chmod g+x '{}' \;" %
+                (build_dir)]
 
-        for command in commands:
-            print("\rFixing permissions...", end="")
-            Helpers.Command(command, True).execute()
-            stdout.flush()
+            for command in commands:
+                print("\rFixing permissions...", end="")
+                Helpers.Command(command, True).execute()
+                stdout.flush()
 
-        print("\r", end='')
+            print("\r", end='')
 
-        if Helpers.Command(
-                'git config core.sharedRepository',
-                False).execute() == '':
-            Helpers.Command(
-                'git config core.sharedRepository group',
-                False).execute()
+            if Helpers.Command(
+                    'git config core.sharedRepository',
+                    False).execute() == '':
+                Helpers.Command(
+                    'git config core.sharedRepository group',
+                    False).execute()
+        except KeyError:
+            pass
 
     class List(object):  # pylint: disable=too-few-public-methods
         """
