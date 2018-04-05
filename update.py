@@ -294,7 +294,7 @@ class Initiate(object):
                         '^%s$' %
                         escape('www.' + to_check)]
                 else:
-                    regex_whitelist = '^%s$' % escape(to_check)
+                    regex_whitelist = ['^%s$' % escape(to_check), '^%s$' % escape('.'.join(to_check.split('.')[1:]))
 
             if Helpers.Regex(
                     to_check,
