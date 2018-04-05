@@ -282,11 +282,19 @@ class Initiate(object):
 
         if line and not line.startswith('#'):
             if line.startswith(Settings.whitelist_all_marker):
-                to_check = line.split(Settings.whitelist_all_marker)[1]
+                to_check = line.split(Settings.whitelist_all_marker)[1].strip()
                 regex_whitelist = escape(to_check) + '$'
             else:
-                to_check = line
-                regex_whitelist = '^%s$' % escape(line)
+                to_check = line.strip()
+
+                if not to_check.startswith('www.'):
+                    regex_whitelist = [
+                        '^%s$' %
+                        escape(to_check),
+                        '^%s$' %
+                        escape('www.' + to_check)]
+                else:
+                    regex_whitelist = '^%s$' % escape(to_check)
 
             if Helpers.Regex(
                     to_check,
@@ -297,7 +305,10 @@ class Initiate(object):
                         return_data=False).match() or line.startswith(
                             Settings.whitelist_all_marker):
 
-                Settings.whitelist.append(regex_whitelist)
+                if isinstance(regex_whitelist, list):
+                    Settings.whitelist.extend(regex_whitelist)
+                else:
+                    Settings.whitelist.append(regex_whitelist)
 
     def get_whitelist(self):
         """
@@ -450,7 +461,7 @@ class Initiate(object):
         """
 
         if line and not line.startswith('#'):
-            line = cls._format_line(line)
+            line = cls._format_line(line.strip())
             regex_exclude = r'((192)\.(168)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))|((10)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))|((172)\.(1[6-9]|2[0-9]|3[0-1])\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))'  # pylint: disable=line-too-long
 
             if Helpers.Regex(
