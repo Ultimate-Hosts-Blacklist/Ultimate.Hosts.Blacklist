@@ -182,6 +182,7 @@ The sources of the input data information are as follows.
 - [Cameleon](http://sysctl.org/cameleon/hosts)
 - [DShield.org Suspicious Domain List](https://www.dshield.org/feeds/suspiciousdomains_Low.txt)
 - [Firehol](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset)
+- [Global Advert Servers Blocklist - Personal Edition](https://hostsfile.mine.nu/hosts0.txt)
 - [Hosts ADBlock](https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt)
 - [JustDomains](http://mirror1.malwaredomains.com/files/justdomains)
 - [KADHosts](https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt)
