@@ -195,6 +195,7 @@ The sources of the input data information are as follows.
 - [SMed79 - Various Lists](https://github.com/SMed79)
 - [ShallaList](http://www.shallalist.de/)
 - [Spam404](https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt)
+- [Suspicious.Snooping.Sniffing.Hacking.IP.Addresses](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list)
 - [The Big List of Hacked Malware Web Sites](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list)
 - [Top Attacking Wordpress IP's](https://github.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites)
 - [WaLLy3K_Blacklist](https://v.firebog.net/hosts/static/w3kbl.txt)
@@ -206,6 +207,7 @@ The sources of the input data information are as follows.
 - [pl-host file](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt)
 - [somewhocares.org](http://someonewhocares.org/hosts/)
 - [uBlock Filters Plus](https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt)
+
 
 --------------------------------------------------------------------------------
 
