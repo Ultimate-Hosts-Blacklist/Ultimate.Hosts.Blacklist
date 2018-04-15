@@ -175,8 +175,8 @@ The sources of the input data information are as follows.
 - [Airelle's Anti-Sex Hosts](http://rlwpx.free.fr/WPFF/hsex.7z)
 - [Anti-PopAds](https://raw.githubusercontent.com/Yhonay/antipopads/master/popads.txt)
 - [Bad JAV Sites](https://pastebin.com/raw/kDqbYwWr)
-- [BadIPS.com](https://www.badips.com/)
 - [Badd Boyz Hosts](https://github.com/mitchellkrogza/Badd-Boyz-Hosts)
+- [BadIPS.com](https://www.badips.com/)
 - [Barbock filter list](https://raw.githubusercontent.com/CHEF-KOCH/BarbBlock-filter-list/master/HOSTS.txt)
 - [Blocklist.de](http://www.blocklist.de/en/index.html)
 - [Cameleon](http://sysctl.org/cameleon/hosts)
@@ -186,37 +186,37 @@ The sources of the input data information are as follows.
 - [Hosts ADBlock](https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt)
 - [JustDomains](http://mirror1.malwaredomains.com/files/justdomains)
 - [KADHosts](https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt)
+- [malc0de](http://malc0de.com/bl/)
 - [Malware Domain List](https://www.malwaredomainlist.com/hostslist/hosts.txt)
 - [Michael Trimm's Hosts](https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt)
 - [MoaAB adblock.makala.is](http://adblock.mahakala.is/)
+- [pl-host file](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt)
 - [Quidsup NoTrack Malicious Sites](https://raw.githubusercontent.com/quidsup/notrack/master/malicious-sites.txt)
 - [Quidsup NoTrack](https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt)
 - [Ransomware Tracker Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)
-- [SMed79 - Various Lists](https://github.com/SMed79)
 - [ShallaList](http://www.shallalist.de/)
+- [SMed79 - Various Lists](https://github.com/SMed79)
+- [somewhocares.org](http://someonewhocares.org/hosts/)
 - [Spam404](https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt)
 - [Suspicious.Snooping.Sniffing.Hacking.IP.Addresses](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list)
 - [The Big List of Hacked Malware Web Sites](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list)
 - [Top Attacking Wordpress IP's](https://github.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites)
+- [uBlock Filters Plus](https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt)
 - [WaLLy3K_Blacklist](https://v.firebog.net/hosts/static/w3kbl.txt)
-- [YoYo.org](https://pgl.yoyo.org/as/serverlist.php?showintro=0;hostformat=hosts)
 - [YousList](https://github.com/yous/YousList)
+- [YoYo.org](https://pgl.yoyo.org/as/serverlist.php?showintro=0;hostformat=hosts)
 - [ZeroDot1 - CoinBlocker Lists](https://github.com/ZeroDot1/CoinBlockerLists)
 - [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
-- [malc0de](http://malc0de.com/bl/)
-- [pl-host file](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt)
-- [somewhocares.org](http://someonewhocares.org/hosts/)
-- [uBlock Filters Plus](https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt)
 
 
 --------------------------------------------------------------------------------
 
 ## COLLABORATORS & CONTRIBUTORS
 
-- [Nissar Chababy](https://github.com/funilrys)
 - [Maravento](https://github.com/maravento)
-- [xxcriticxx](https://github.com/xxcriticxx)
+- [Nissar Chababy](https://github.com/funilrys)
 - [SMed79](https://github.com/SMed79)
+- [xxcriticxx](https://github.com/xxcriticxx)
 - [ZeroDot1](https://github.com/ZeroDot1)
 
 --------------------------------------------------------------------------------
@@ -229,18 +229,18 @@ The sources of the input data information are as follows.
 
 ## Some other awesome free projects
 
-- <https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker>
-- <https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker>
-- <https://github.com/mitchellkrogza/Badd-Boyz-Hosts>
-- <https://github.com/mitchellkrogza/Stop.Google.Analytics.Ghost.Spam.HOWTO>
-- <https://github.com/mitchellkrogza/fail2ban-useful-scripts>
-- <https://github.com/mitchellkrogza/linux-server-administration-scripts>
-- <https://github.com/mitchellkrogza/Travis-CI-Nginx-for-Testing-Nginx-Configuration>
-- <https://github.com/mitchellkrogza/Travis-CI-for-Apache-For-Testing-Apache-and-PHP-Configurations>
-- <https://github.com/mitchellkrogza/Fail2Ban-Blacklist-JAIL-for-Repeat-Offenders-with-Perma-Extended-Banning>
+- <https://github.com/dead-hosts>
 - <https://github.com/funilrys/funceble>
 - <https://github.com/funilrys/PyFunceble>
-- <https://github.com/dead-hosts>
+- <https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker>
+- <https://github.com/mitchellkrogza/Badd-Boyz-Hosts>
+- <https://github.com/mitchellkrogza/Fail2Ban-Blacklist-JAIL-for-Repeat-Offenders-with-Perma-Extended-Banning>
+- <https://github.com/mitchellkrogza/fail2ban-useful-scripts>
+- <https://github.com/mitchellkrogza/linux-server-administration-scripts>
+- <https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker>
+- <https://github.com/mitchellkrogza/Stop.Google.Analytics.Ghost.Spam.HOWTO>
+- <https://github.com/mitchellkrogza/Travis-CI-for-Apache-For-Testing-Apache-and-PHP-Configurations>
+- <https://github.com/mitchellkrogza/Travis-CI-Nginx-for-Testing-Nginx-Configuration>
 
 --------------------------------------------------------------------------------
 
