@@ -190,6 +190,7 @@ The sources of the input data information are as follows.
 - [Malware Domain List](https://www.malwaredomainlist.com/hostslist/hosts.txt)
 - [Michael Trimm's Hosts](https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt)
 - [MoaAB adblock.makala.is](http://adblock.mahakala.is/)
+- [Phishing.Database](https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt)
 - [pl-host file](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt)
 - [Quidsup NoTrack Malicious Sites](https://raw.githubusercontent.com/quidsup/notrack/master/malicious-sites.txt)
 - [Quidsup NoTrack](https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt)
