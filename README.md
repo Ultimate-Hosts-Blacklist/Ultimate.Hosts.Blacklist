@@ -10,10 +10,10 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 --------------------------------------------------------------------------------
 
-- Version: **V1.1130.2018.04.22**
-- Total Bad Hosts in hosts file: **1,767,781**
-- Total Bad IP's in hosts.deny file: **205,015**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,972,796**
+- Version: **V1.1135.2018.04.24**
+- Total Bad Hosts in hosts file: **1,770,688**
+- Total Bad IP's in hosts.deny file: **206,083**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,976,771**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -190,6 +190,7 @@ The sources of the input data information are as follows.
 - [Malware Domain List](https://www.malwaredomainlist.com/hostslist/hosts.txt)
 - [Michael Trimm's Hosts](https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt)
 - [MoaAB adblock.makala.is](http://adblock.mahakala.is/)
+- [Phishing.Database](https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt)
 - [pl-host file](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt)
 - [Quidsup NoTrack Malicious Sites](https://raw.githubusercontent.com/quidsup/notrack/master/malicious-sites.txt)
 - [Quidsup NoTrack](https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt)
