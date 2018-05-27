@@ -10,10 +10,10 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 --------------------------------------------------------------------------------
 
-- Version: **V1.1171.2018.05.26**
-- Total Bad Hosts in hosts file: **1,321,829**
-- Total Bad IP's in hosts.deny file: **209,159**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,530,988**
+- Version: **V1.1172.2018.05.27**
+- Total Bad Hosts in hosts file: **1,322,379**
+- Total Bad IP's in hosts.deny file: **209,144**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,531,523**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -196,7 +196,7 @@ The sources of the input data information are as follows.
 - [Quidsup NoTrack](https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt)
 - [Ransomware Tracker Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)
 - [ShallaList](http://www.shallalist.de/)
-- [SMed79 - Various Lists](https://github.com/SMed79)
+- [SMed79 - Various Lists](https://github.com/search?q=org%3AUltimate-Hosts-Blacklist+smed79&unscoped_q=smed79)
 - [somewhocares.org](http://someonewhocares.org/hosts/)
 - [Spam404](https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt)
 - [Suspicious.Snooping.Sniffing.Hacking.IP.Addresses](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list)
