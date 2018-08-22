@@ -101,24 +101,6 @@ class Settings:  # pylint: disable=too-few-public-methods
     # Note: This variable is auto updated by Initiate()
     ips = []
 
-    # This variable save the list of all whitelisted domain.
-    #
-    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    # Note: This variable is auto updated by Initiate()
-    whitelist = []
-
-    # This variable save the list of all whitelisted domain in regex format.
-    #
-    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    # Note: This variable is auto updated by Initiate()
-    regex_whitelist = ""
-
-    # This variable is used to set the marker that we use to say that we
-    # match all occurence of the domain or IP.
-    #
-    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    whitelist_all_marker = "ALL "
-
     # This variable set the regex to use to catch IPv4.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
