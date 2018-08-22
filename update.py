@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-This module has been written because we are seeking a new repository structure.
+This script is used to update and generate the files.
 
 Authors:
     - @Funilrys, Nissar Chababy <contactTAfunilrysTODcom>
