@@ -14,7 +14,7 @@ Contributors:
     @GitHubUsername, Name, Email (optional)
 """
 
-# pylint: disable=too-many-lines
+# pylint: disable=too-many-lines, bad-continuation
 
 from os import environ, path, remove
 from os import sep as directory_separator
@@ -30,55 +30,55 @@ from zipfile import ZipFile
 from requests import get
 
 
-class Settings(object):  # pylint: disable=too-few-public-methods
+class Settings:  # pylint: disable=too-few-public-methods
     """
     This class will save all data that can be called from anywhere in the code.
     """
 
     # This is the username we use to connect to the GitHub API.
-    github_api_username = 'mitchellkrogza'
+    github_api_username = "mitchellkrogza"
 
     try:
         # This is the GitHub API token to use.
-        github_api_token = environ['GH_TOKEN']
+        github_api_token = environ["GH_TOKEN"]
     except KeyError:
-        github_api_token = ''
+        github_api_token = ""
 
     # This variable set the GitHub repository slug.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    github_org_slug = 'Ultimate-Hosts-Blacklist'
+    github_org_slug = "Ultimate-Hosts-Blacklist"
 
     # This variable set the name of the whitelist repository.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    whitelist_repo_name = 'whitelist'
+    whitelist_repo_name = "whitelist"
 
     # This variable set the github api url.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    github_api_url = 'https://api.github.com'
+    github_api_url = "https://api.github.com"
 
     # This variable set the github raw url.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    github_raw_url = 'https://raw.githubusercontent.com/'
+    github_raw_url = "https://raw.githubusercontent.com/"
 
     # This variable set the deploy raw url.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    deploy_raw_url = 'https://hosts.ubuntu101.co.za/update_hosts.php'
+    deploy_raw_url = "https://hosts.ubuntu101.co.za/update_hosts.php"
 
     # This variable set the partially full url when attempting to get the
     # raw file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    raw_link = github_raw_url + github_org_slug + '/%s/master/'
+    raw_link = github_raw_url + github_org_slug + "/%s/master/"
 
     # This variable the organisation url.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    github_org_url = '%s/orgs/%s' % (github_api_url, github_org_slug)
+    github_org_url = "%s/orgs/%s" % (github_api_url, github_org_slug)
 
     # This variable save the list of repository.
     #
@@ -87,7 +87,7 @@ class Settings(object):  # pylint: disable=too-few-public-methods
     repositories = []
 
     # This variable set the repository to ignore.
-    repo_to_ignore = ['repository-structure', 'whitelist']
+    repo_to_ignore = ["repository-structure", "whitelist"]
 
     # This variable save the list of all domains.
     #
@@ -111,110 +111,114 @@ class Settings(object):  # pylint: disable=too-few-public-methods
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     # Note: This variable is auto updated by Initiate()
-    regex_whitelist = ''
+    regex_whitelist = ""
 
     # This variable is used to set the marker that we use to say that we
     # match all occurence of the domain or IP.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    whitelist_all_marker = 'ALL '
+    whitelist_all_marker = "ALL "
 
     # This variable set the regex to use to catch IPv4.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    regex_ip4 = r'^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[0-9]{1,}\/[0-9]{1,})$'  # pylint: disable=line-too-long
+    regex_ip4 = r"^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[0-9]{1,}\/[0-9]{1,})$"  # pylint: disable=line-too-long
 
     # This variable set the regex to use to catch IPv4.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    regex_domain = r'^(?=.{0,253}$)(([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9])\.)+((?=.*[^0-9])([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9]))$'  # pylint: disable=line-too-long
+    regex_domain = r"^(?=.{0,253}$)(([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9])\.)+((?=.*[^0-9])([a-z0-9][a-z0-9-]{0,61}[a-z0-9]|[a-z0-9]))$"  # pylint: disable=line-too-long
 
     try:
         # This variable set the version which is going to be appended to all
         # templates files
-        version = 'V1.%s.%s.%s.%s' % (environ['TRAVIS_BUILD_NUMBER'], strftime(
-            '%Y'), strftime('%m'), strftime('%d'))
+        version = "V1.%s.%s.%s.%s" % (
+            environ["TRAVIS_BUILD_NUMBER"],
+            strftime("%Y"),
+            strftime("%m"),
+            strftime("%d"),
+        )
     except KeyError:
-        version = strftime('%s')
+        version = strftime("%s")
 
     # This variable set the location of the templates directory.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    templates_directory = 'templates' + directory_separator
+    templates_directory = "templates" + directory_separator
 
     # This variable set the name of the dotted domains file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    dotted_file = 'domains-dotted-format.list'
+    dotted_file = "domains-dotted-format.list"
 
     # This variable set the name of the plain text domains file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    plain_text_domains_file = 'domains.list'
+    plain_text_domains_file = "domains.list"
 
     # This variable set the name of the plain text ips file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    plain_text_ips_file = 'ips.list'
+    plain_text_ips_file = "ips.list"
 
     # This variable set the name of the hosts.deny file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    hosts_deny_file = 'hosts.deny'
+    hosts_deny_file = "hosts.deny"
 
     # This variable set the name of the hosts.deny template.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    hosts_deny_template = templates_directory + 'hostsdeny.template'
+    hosts_deny_template = templates_directory + "hostsdeny.template"
 
     # This variable set the name of the superhosts.deny file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    superhosts_deny_file = 'superhosts.deny'
+    superhosts_deny_file = "superhosts.deny"
 
     # This variable set the name of the hosts.deny template.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    superhosts_deny_template = templates_directory + 'superhostsdeny.template'
+    superhosts_deny_template = templates_directory + "superhostsdeny.template"
 
     # This variable set the name of the hosts.windows file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    hosts_windows_file = 'hosts.windows'
+    hosts_windows_file = "hosts.windows"
 
     # This variable set the name of the hosts.windows template.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    hosts_windows_template = templates_directory + 'hosts.windows.template'
+    hosts_windows_template = templates_directory + "hosts.windows.template"
 
     # This variable set the name of the hosts file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    hosts_unix_file = 'hosts'
+    hosts_unix_file = "hosts"
 
     # This variable set the name of the hosts template.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    hosts_unix_template = templates_directory + 'hosts.template'
+    hosts_unix_template = templates_directory + "hosts.template"
 
     # This variable set the name of the README.md file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    readme_md_file = 'README.md'
+    readme_md_file = "README.md"
 
     # This variable set the name of the hosts.windows template.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    readme_me_template = templates_directory + 'README_template.md'
+    readme_me_template = templates_directory + "README_template.md"
 
     # This variable set the char to use when something is done.
-    done = '✔'
+    done = "✔"
 
     # This variable set the char to use when an error occured
-    error = '✘'
+    error = "✘"
 
 
-class Initiate(object):
+class Initiate:
     """
     This class is used as the main entry of the script.
     Please note that this class also initiate several actions before being
@@ -224,7 +228,6 @@ class Initiate(object):
     def __init__(self):
         self.travis()
         Helpers.travis_permissions()
-        self.get_whitelist()
         self.list_of_input_sources()
         self.data_extractor()
 
@@ -235,106 +238,35 @@ class Initiate(object):
         """
 
         try:
-            _ = environ['TRAVIS_BUILD_DIR']
+            _ = environ["TRAVIS_BUILD_DIR"]
 
             print("Beginning of Initiate().travis()")
 
             print("Cleaning remote")
-            Helpers.Command('git remote rm origin', True).execute()
+            Helpers.Command("git remote rm origin", True).execute()
             print("Adding remote with GH_TOKEN")
             Helpers.Command(
-                "git remote add origin https://" +
-                "%s@github.com/%s.git" %
-                (environ['GH_TOKEN'],
-                 environ['TRAVIS_REPO_SLUG']),
-                True).execute()
+                "git remote add origin https://"
+                + "%s@github.com/%s.git"
+                % (environ["GH_TOKEN"], environ["TRAVIS_REPO_SLUG"]),
+                True,
+            ).execute()
             print("Update of git.user.email")
             Helpers.Command(
-                'git config --global user.email "%s"' %
-                (environ['GIT_EMAIL']), True).execute()
+                'git config --global user.email "%s"' % (environ["GIT_EMAIL"]), True
+            ).execute()
             print("Update of git.user.name")
             Helpers.Command(
-                'git config --global user.name "%s"' %
-                (environ['GIT_NAME']), True).execute()
+                'git config --global user.name "%s"' % (environ["GIT_NAME"]), True
+            ).execute()
             print("Update of git.push.default")
-            Helpers.Command(
-                'git config --global push.default simple', True).execute()
-            print("Checkout of %s" % repr(environ['GIT_BRANCH']))
-            Helpers.Command(
-                'git checkout %s' %
-                environ['GIT_BRANCH'],
-                True).execute()
+            Helpers.Command("git config --global push.default simple", True).execute()
+            print("Checkout of %s" % repr(environ["GIT_BRANCH"]))
+            Helpers.Command("git checkout %s" % environ["GIT_BRANCH"], True).execute()
 
             print("End of Initiate().travis()")
         except KeyError:
             pass
-
-    @classmethod
-    def _whitelist_parser(cls, line):
-        """
-        This method will get and parse all whitelist domain into
-        Settings.whitelist.
-
-        Argument:
-            - line: str
-                The extracted line.
-        """
-
-        if line and not line.startswith('#'):
-            if line.startswith(Settings.whitelist_all_marker):
-                to_check = line.split(Settings.whitelist_all_marker)[1].strip()
-                regex_whitelist = escape(to_check) + '$'
-            else:
-                to_check = line.strip()
-
-                if not to_check.startswith('www.'):
-                    regex_whitelist = [
-                        '^%s$' %
-                        escape(to_check),
-                        '^%s$' %
-                        escape('www.' + to_check)]
-                else:
-                    regex_whitelist = [
-                        '^%s$' %
-                        escape(to_check),
-                        '^%s$' %
-                        escape(
-                            '.'.join(
-                                to_check.split('.')[
-                                    1:]))]
-
-            if Helpers.Regex(
-                    to_check,
-                    Settings.regex_ip4,
-                    return_data=False).match() or Helpers.Regex(
-                        to_check,
-                        Settings.regex_domain,
-                        return_data=False).match() or line.startswith(
-                            Settings.whitelist_all_marker):
-
-                if isinstance(regex_whitelist, list):
-                    Settings.whitelist.extend(regex_whitelist)
-                else:
-                    Settings.whitelist.append(regex_whitelist)
-
-    def get_whitelist(self):
-        """
-        This method will get the list of whitelisted domain.
-        """
-
-        domains_url = (Settings.raw_link +
-                       'domains.list') % Settings.whitelist_repo_name
-
-        req = get(domains_url)
-
-        print("Getting %s" % Settings.whitelist_repo_name, end=" ")
-        if req.status_code == 200:
-            list(map(self._whitelist_parser, req.text.split('\n')))
-
-            Settings.regex_whitelist = '|'.join(Settings.whitelist)
-            print(Settings.done)
-        else:
-            print(Settings.error)
 
     @classmethod
     def list_of_input_sources(cls):
@@ -342,69 +274,68 @@ class Initiate(object):
         This method get the list of input sources to check.
         """
 
-        url_to_get = Settings.github_org_url + '/repos'
+        url_to_get = Settings.github_org_url + "/repos"
 
         if Settings.github_api_username and Settings.github_api_token:
-            pages_finder = get(url_to_get,
-                               auth=(
-                                   Settings.github_api_username,
-                                   Settings.github_api_token))
+            pages_finder = get(
+                url_to_get,
+                auth=(Settings.github_api_username, Settings.github_api_token),
+            )
         else:
             pages_finder = get(url_to_get)
 
         if pages_finder.status_code == 200:
             last_page = int(
                 Helpers.Regex(
-                    pages_finder.headers['Link'],
-                    r'.*page=(.*)>.*',
+                    pages_finder.headers["Link"],
+                    r".*page=(.*)>.*",
                     return_data=True,
-                    rematch=True).match()[
-                        -1])
+                    rematch=True,
+                ).match()[-1]
+            )
 
             current_page = 1
 
             print("Getting the list of input sources", end=" ")
 
             while current_page <= last_page:
-                params = {
-                    'page': str(current_page)
-                }
+                params = {"page": str(current_page)}
 
                 if Settings.github_api_username and Settings.github_api_token:
                     req = get(
                         url_to_get,
                         params=params,
-                        auth=(
-                            Settings.github_api_username,
-                            Settings.github_api_token))
+                        auth=(Settings.github_api_username, Settings.github_api_token),
+                    )
                 else:
-                    req = get(
-                        url_to_get,
-                        params=params)
+                    req = get(url_to_get, params=params)
 
                 if req.status_code == 200:
                     for repo in req.json():
-                        name = repo['name']
+                        name = repo["name"]
                         if name not in Settings.repo_to_ignore:
                             Settings.repositories.append(name)
                 else:
                     print(Settings.error)
                     raise Exception(
-                        'Impossible to get information about the organisation. Is GitHub down ? (%s)' %  # pylint: disable=line-too-long
-                        req.status_code)
+                        "Impossible to get information about the organisation. Is GitHub down ? (%s)"  # pylint: disable=line-too-long
+                        % req.status_code  # pylint: disable=line-too-long
+                    )
 
                 current_page += 1
 
-            Settings.repositories = Helpers.List(
-                Settings.repositories).format()
+            Settings.repositories = Helpers.List(Settings.repositories).format()
             print(Settings.done)
         else:
             raise Exception(
-                'Impossible to get the numbers of page to read. Is GitHub down ? (%s) (%s/%s %s)' %
-                (pages_finder.status_code,
-                 pages_finder.headers['X-RateLimit-Remaining'],
-                 pages_finder.headers['X-RateLimit-Limit'],
-                 pages_finder.headers['X-RateLimit-Reset']))
+                "Impossible to get the numbers of page to read. Is GitHub down ? (%s) (%s/%s %s)"
+                % (
+                    pages_finder.status_code,
+                    pages_finder.headers["X-RateLimit-Remaining"],
+                    pages_finder.headers["X-RateLimit-Limit"],
+                    pages_finder.headers["X-RateLimit-Reset"],
+                )
+            )
 
     @classmethod
     def _format_line(cls, line):
@@ -419,32 +350,18 @@ class Initiate(object):
             The domain to test.
         """
 
-        if not line.startswith('#'):
+        if not line.startswith("#"):
 
-            if '#' in line:
-                line = line[:line.find(
-                    '#')].strip()
+            if "#" in line:
+                line = line[: line.find("#")]
 
-            tabs = '\t'
-            space = ' '
+            tabs = "\t"
+            space = " "
 
-            tabs_position, space_position = (
-                line.find(tabs), line.find(space))
+            line = line.strip()
 
-            if tabs_position > -1 and space_position > -1:
-                if space_position < tabs_position:
-                    separator = space
-                else:
-                    separator = tabs
-            elif tabs_position > -1:
-                separator = tabs
-            elif space_position > -1:
-                separator = space
-            else:
-                separator = ''
-
-            if separator:
-                splited_line = line.split(separator)
+            if tabs in line or space in line:
+                splited_line = line.split()
 
                 index = 1
                 while index < len(splited_line):
@@ -467,18 +384,14 @@ class Initiate(object):
                 The extracted line.
         """
 
-        if line and not line.startswith('#'):
+        if line and not line.startswith("#"):
             line = cls._format_line(line.strip())
-            regex_exclude = r'((192)\.(168)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))|((10)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))|((172)\.(1[6-9]|2[0-9]|3[0-1])\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))'  # pylint: disable=line-too-long
+            regex_exclude = r"((192)\.(168)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))|((10)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))|((172)\.(1[6-9]|2[0-9]|3[0-1])\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))"  # pylint: disable=line-too-long
 
-            if Helpers.Regex(
-                    line,
-                    Settings.regex_ip4,
-                    return_data=False).match() \
-                and not Helpers.Regex(
-                    line,
-                    regex_exclude,
-                    return_data=False).match():
+            if (
+                Helpers.Regex(line, Settings.regex_ip4, return_data=False).match()
+                and not Helpers.Regex(line, regex_exclude, return_data=False).match()
+            ):
 
                 Settings.ips.append(line)
             elif Helpers.Regex(line, Settings.regex_domain, return_data=False).match():
@@ -492,38 +405,27 @@ class Initiate(object):
 
         if not repo:
             list(map(self.data_extractor, Settings.repositories))
-
-            print('\n')
-            print("Cleaning of the list of domains", end=" ")
-            Settings.domains = Helpers.List(
-                Helpers.Regex(
-                    Settings.domains,
-                    Settings.regex_whitelist).not_matching_list()).format()
-            print(Settings.done)
-
-            print("Cleaning of the list of IPs", end=" ")
-            Settings.ips = Helpers.List(
-                Helpers.Regex(
-                    Settings.ips,
-                    Settings.regex_whitelist).not_matching_list()).format()
-            print(Settings.done)
         else:
-            domains_url = (Settings.raw_link + 'domains.list') % repo
-            clean_url = (Settings.raw_link + 'clean.list') % repo
+            domains_url = (Settings.raw_link + "domains.list") % repo
+            clean_url = (Settings.raw_link + "clean.list") % repo
 
             clean_url_data = get(clean_url)
             domains_url_data = get(domains_url)
 
             if clean_url_data.status_code == 200:
                 print(
-                    "Extracting domains and ips from %s (clean.list)" %
-                    repo, end=" ")
+                    "Extracting, cleaning and formating of domains and ips from %s (clean.list)"
+                    % repo,
+                    end=" ",
+                )
 
                 data = clean_url_data
             elif domains_url_data.status_code == 200:
                 print(
-                    "Extracting domains and ips from %s (domain.list)" %
-                    repo, end=" ")
+                    "Extracting, cleaning and formating of domains and ips from %s (domain.list)"
+                    % repo,
+                    end=" ",
+                )
 
                 data = domains_url_data
             else:
@@ -531,14 +433,17 @@ class Initiate(object):
                 data = ""
 
             if data:
-                list(map(self._data_parser, data.text.split('\n')))
+                formated_data = list(map(self._format_line, data.text.split("\n")))
+                whitelisted = Whitelist(string="\n".join(formated_data)).get()
+
+                list(map(self._data_parser, whitelisted.split("\n")))
 
                 Settings.domains = Helpers.List(Settings.domains).format()
                 Settings.ips = Helpers.List(Settings.ips).format()
                 print(Settings.done)
 
 
-class Generate(object):
+class Generate:
     """
     This class generate what we need.
     """
@@ -561,7 +466,7 @@ class Generate(object):
         This method will generate the dotted domains file.
         """
 
-        data_to_write = '.' + '\n.'.join(Settings.domains)
+        data_to_write = "." + "\n.".join(Settings.domains)
 
         print("Generation of %s" % Settings.dotted_file, end=" ")
         Helpers.File(Settings.dotted_file).write(data_to_write, overwrite=True)
@@ -573,12 +478,12 @@ class Generate(object):
         This method will generate the file with only plain domain.
         """
 
-        data_to_write = '\n'.join(Settings.domains)
+        data_to_write = "\n".join(Settings.domains)
 
         print("Generation of %s" % Settings.plain_text_domains_file, end=" ")
-        Helpers.File(
-            Settings.plain_text_domains_file).write(
-                data_to_write, overwrite=True)
+        Helpers.File(Settings.plain_text_domains_file).write(
+            data_to_write, overwrite=True
+        )
         print(Settings.done)
 
     @classmethod
@@ -587,12 +492,10 @@ class Generate(object):
         This method will generate the file with only plain domain.
         """
 
-        data_to_write = '\n'.join(Settings.ips)
+        data_to_write = "\n".join(Settings.ips)
 
         print("Generation of %s" % Settings.plain_text_ips_file, end=" ")
-        Helpers.File(
-            Settings.plain_text_ips_file).write(
-                data_to_write, overwrite=True)
+        Helpers.File(Settings.plain_text_ips_file).write(data_to_write, overwrite=True)
         print(Settings.done)
 
     @classmethod
@@ -604,24 +507,20 @@ class Generate(object):
         template = Helpers.File(Settings.hosts_deny_template).read()
 
         template = Helpers.Regex(
-            template,
-            r'%%version%%',
-            replace_with=Settings.version).replace()
-        template = Helpers.Regex(template, r'%%lenIP%%', replace_with=format(
-            len(Settings.ips), ',d')).replace()
+            template, r"%%version%%", replace_with=Settings.version
+        ).replace()
+        template = Helpers.Regex(
+            template, r"%%lenIP%%", replace_with=format(len(Settings.ips), ",d")
+        ).replace()
 
-        data_to_write = 'ALL: ' + '\nALL: '.join(Settings.ips)
+        data_to_write = "ALL: " + "\nALL: ".join(Settings.ips)
 
         template = Helpers.Regex(
-            template,
-            r'%%content%%',
-            replace_with=data_to_write).replace()
+            template, r"%%content%%", replace_with=data_to_write
+        ).replace()
 
         print("Generation of %s" % Settings.hosts_deny_file, end=" ")
-        Helpers.File(
-            Settings.hosts_deny_file).write(
-                template,
-                overwrite=True)
+        Helpers.File(Settings.hosts_deny_file).write(template, overwrite=True)
         print(Settings.done)
 
     @classmethod
@@ -633,27 +532,25 @@ class Generate(object):
         template = Helpers.File(Settings.superhosts_deny_template).read()
 
         template = Helpers.Regex(
+            template, r"%%version%%", replace_with=Settings.version
+        ).replace()
+        template = Helpers.Regex(
             template,
-            r'%%version%%',
-            replace_with=Settings.version).replace()
-        template = Helpers.Regex(template, r'%%lenIPHosts%%', replace_with=format(
-            len(Settings.ips) + len(Settings.domains), ',d')).replace()
+            r"%%lenIPHosts%%",
+            replace_with=format(len(Settings.ips) + len(Settings.domains), ",d"),
+        ).replace()
 
         hosts_ip = Settings.ips + Settings.domains
         hosts_ip = Helpers.List(hosts_ip).format()
 
-        data_to_write = 'ALL: ' + '\nALL: '.join(hosts_ip)
+        data_to_write = "ALL: " + "\nALL: ".join(hosts_ip)
 
         template = Helpers.Regex(
-            template,
-            r'%%content%%',
-            replace_with=data_to_write).replace()
+            template, r"%%content%%", replace_with=data_to_write
+        ).replace()
 
         print("Generation of %s" % Settings.superhosts_deny_file, end=" ")
-        Helpers.File(
-            Settings.superhosts_deny_file).write(
-                template,
-                overwrite=True)
+        Helpers.File(Settings.superhosts_deny_file).write(template, overwrite=True)
         print(Settings.done)
 
     @classmethod
@@ -665,24 +562,20 @@ class Generate(object):
         template = Helpers.File(Settings.hosts_windows_template).read()
 
         template = Helpers.Regex(
-            template,
-            r'%%version%%',
-            replace_with=Settings.version).replace()
-        template = Helpers.Regex(template, r'%%lenHosts%%', replace_with=format(
-            len(Settings.domains), ',d')).replace()
+            template, r"%%version%%", replace_with=Settings.version
+        ).replace()
+        template = Helpers.Regex(
+            template, r"%%lenHosts%%", replace_with=format(len(Settings.domains), ",d")
+        ).replace()
 
-        data_to_write = '127.0.0.1 ' + '\n127.0.0.1 '.join(Settings.domains)
+        data_to_write = "127.0.0.1 " + "\n127.0.0.1 ".join(Settings.domains)
 
         template = Helpers.Regex(
-            template,
-            r'%%content%%',
-            replace_with=data_to_write).replace()
+            template, r"%%content%%", replace_with=data_to_write
+        ).replace()
 
         print("Generation of %s" % Settings.hosts_windows_file, end=" ")
-        Helpers.File(
-            Settings.hosts_windows_file).write(
-                template,
-                overwrite=True)
+        Helpers.File(Settings.hosts_windows_file).write(template, overwrite=True)
         print(Settings.done)
 
     @classmethod
@@ -694,24 +587,20 @@ class Generate(object):
         template = Helpers.File(Settings.hosts_unix_template).read()
 
         template = Helpers.Regex(
-            template,
-            r'%%version%%',
-            replace_with=Settings.version).replace()
-        template = Helpers.Regex(template, r'%%lenHosts%%', replace_with=format(
-            len(Settings.domains), ',d')).replace()
+            template, r"%%version%%", replace_with=Settings.version
+        ).replace()
+        template = Helpers.Regex(
+            template, r"%%lenHosts%%", replace_with=format(len(Settings.domains), ",d")
+        ).replace()
 
-        data_to_write = '0.0.0.0 ' + '\n0.0.0.0 '.join(Settings.domains)
+        data_to_write = "0.0.0.0 " + "\n0.0.0.0 ".join(Settings.domains)
 
         template = Helpers.Regex(
-            template,
-            r'%%content%%',
-            replace_with=data_to_write).replace()
+            template, r"%%content%%", replace_with=data_to_write
+        ).replace()
 
         print("Generation of %s" % Settings.hosts_unix_file, end=" ")
-        Helpers.File(
-            Settings.hosts_unix_file).write(
-                template,
-                overwrite=True)
+        Helpers.File(Settings.hosts_unix_file).write(template, overwrite=True)
         print(Settings.done)
 
     @classmethod
@@ -723,25 +612,26 @@ class Generate(object):
         template = Helpers.File(Settings.readme_me_template).read()
 
         template = Helpers.Regex(
+            template, r"%%version%%", replace_with=Settings.version
+        ).replace()
+        template = Helpers.Regex(
+            template, r"%%lenHosts%%", replace_with=format(len(Settings.domains), ",d")
+        ).replace()
+        template = Helpers.Regex(
+            template, r"%%lenIPs%%", replace_with=format(len(Settings.ips), ",d")
+        ).replace()
+        template = Helpers.Regex(
             template,
-            r'%%version%%',
-            replace_with=Settings.version).replace()
-        template = Helpers.Regex(template, r'%%lenHosts%%', replace_with=format(
-            len(Settings.domains), ',d')).replace()
-        template = Helpers.Regex(template, r'%%lenIPs%%', replace_with=format(
-            len(Settings.ips), ',d')).replace()
-        template = Helpers.Regex(template, r'%%lenHostsIPs%%', replace_with=format(
-            len(Settings.ips) + len(Settings.domains), ',d')).replace()
+            r"%%lenHostsIPs%%",
+            replace_with=format(len(Settings.ips) + len(Settings.domains), ",d"),
+        ).replace()
 
         print("Generation of %s" % Settings.readme_md_file, end=" ")
-        Helpers.File(
-            Settings.readme_md_file).write(
-                template,
-                overwrite=True)
+        Helpers.File(Settings.readme_md_file).write(template, overwrite=True)
         print(Settings.done)
 
 
-class Compress(object):  # pylint: disable=too-few-public-methods
+class Compress:  # pylint: disable=too-few-public-methods
     """
     This class run and manage the compression
     """
@@ -754,23 +644,19 @@ class Compress(object):  # pylint: disable=too-few-public-methods
             Settings.hosts_deny_file,
             Settings.superhosts_deny_file,
             Settings.hosts_windows_file,
-            Settings.hosts_unix_file
+            Settings.hosts_unix_file,
         ]
 
         for file in to_compresss:
-            compress_into_zip = '%s.zip' % file
-            compress_into_tar_gz = '%s.tar.gz' % file
+            compress_into_zip = "%s.zip" % file
+            compress_into_tar_gz = "%s.tar.gz" % file
 
             print("\n")
-            print(
-                "Compression of %s into %s" %
-                (file, compress_into_zip), end=" ")
+            print("Compression of %s into %s" % (file, compress_into_zip), end=" ")
             Helpers.File(file).zip_compress(compress_into_zip)
             print(Settings.done)
 
-            print(
-                "Compression of %s into %s" %
-                (file, compress_into_tar_gz), end=" ")
+            print("Compression of %s into %s" % (file, compress_into_tar_gz), end=" ")
             Helpers.File(file).tar_gz_compress(compress_into_tar_gz)
             print(Settings.done)
 
@@ -779,28 +665,30 @@ class Compress(object):  # pylint: disable=too-few-public-methods
             print(Settings.done)
 
 
-class Deploy(object):  # pylint: disable=too-few-public-methods
+class Deploy:  # pylint: disable=too-few-public-methods
     """
     This class will deploy our files to upstream.
     """
 
     def __init__(self):
         try:
-            _ = environ['TRAVIS_BUILD_DIR']
-            commit_message = '%s [ci skip]' % Settings.version
+            _ = environ["TRAVIS_BUILD_DIR"]
+            commit_message = "%s [ci skip]" % Settings.version
 
             Helpers.travis_permissions()
 
             Helpers.Command(
-                "git add --all && git commit -a -m '%s' && git push origin %s" %
-                (commit_message, environ['GIT_BRANCH']), False).execute()
+                "git add --all && git commit -a -m '%s' && git push origin %s"
+                % (commit_message, environ["GIT_BRANCH"]),
+                False,
+            ).execute()
 
             get(Settings.deploy_raw_url)
         except KeyError:
             pass
 
 
-class Helpers(object):  # pylint: disable=too-few-public-methods
+class Helpers:  # pylint: disable=too-few-public-methods
     """
     Well, thanks to those helpers :-)
     """
@@ -812,37 +700,33 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
         """
 
         try:
-            build_dir = environ['TRAVIS_BUILD_DIR']
+            build_dir = environ["TRAVIS_BUILD_DIR"]
             commands = [
-                'sudo chown -R travis:travis %s' %
-                (build_dir),
-                'sudo chgrp -R travis %s' %
-                (build_dir),
-                'sudo chmod -R g+rwX %s' %
-                (build_dir),
-                'sudo chmod 777 -Rf %s.git' %
-                (build_dir +
-                 directory_separator),
-                r"sudo find %s -type d -exec chmod g+x '{}' \;" %
-                (build_dir)]
+                "sudo chown -R travis:travis %s" % (build_dir),
+                "sudo chgrp -R travis %s" % (build_dir),
+                "sudo chmod -R g+rwX %s" % (build_dir),
+                "sudo chmod 777 -Rf %s.git" % (build_dir + directory_separator),
+                r"sudo find %s -type d -exec chmod g+x '{}' \;" % (build_dir),
+            ]
 
             for command in commands:
                 print("\rFixing permissions...", end="")
                 Helpers.Command(command, True).execute()
                 stdout.flush()
 
-            print("\r", end='')
+            print("\r", end="")
 
-            if Helpers.Command(
-                    'git config core.sharedRepository',
-                    False).execute() == '':
+            if (
+                Helpers.Command("git config core.sharedRepository", False).execute()
+                == ""
+            ):
                 Helpers.Command(
-                    'git config core.sharedRepository group',
-                    False).execute()
+                    "git config core.sharedRepository group", False
+                ).execute()
         except KeyError:
             pass
 
-    class List(object):  # pylint: disable=too-few-public-methods
+    class List:  # pylint: disable=too-few-public-methods
         """
         List manipulation.
         """
@@ -863,7 +747,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             except TypeError:
                 return self.main_list
 
-    class File(object):  # pylint: disable=too-few-public-methods
+    class File:  # pylint: disable=too-few-public-methods
         """
         File treatment/manipulations.
 
@@ -880,7 +764,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             Read a given file path and return its content.
             """
 
-            with open(self.file, 'r', encoding="utf-8") as file:
+            with open(self.file, "r", encoding="utf-8") as file:
                 funilrys = file.read()
 
             return funilrys
@@ -892,13 +776,12 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             :param data_to_write: A string, the data to write.
             """
 
-            if data_to_write is not None and isinstance(
-                    data_to_write, str):
+            if data_to_write is not None and isinstance(data_to_write, str):
                 if overwrite or not path.isfile(self.file):
-                    with open(self.file, 'w', encoding="utf-8") as file:
+                    with open(self.file, "w", encoding="utf-8") as file:
                         file.write(data_to_write)
                 else:
-                    with open(self.file, 'a', encoding="utf-8") as file:
+                    with open(self.file, "a", encoding="utf-8") as file:
                         file.write(data_to_write)
 
         def zip_compress(self, destination):
@@ -911,7 +794,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             """
 
             if destination is not None and isinstance(destination, str):
-                with ZipFile(destination, 'w') as thezip:
+                with ZipFile(destination, "w") as thezip:
                     thezip.write(self.file)
 
         def tar_gz_compress(self, destination):
@@ -924,7 +807,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             """
 
             if destination is not None and isinstance(destination, str):
-                with tarfile_open(destination, 'w:gz') as tar:
+                with tarfile_open(destination, "w:gz") as tar:
                     tar.add(self.file)
 
         def delete(self):
@@ -937,7 +820,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             except OSError:
                 pass
 
-    class Regex(object):  # pylint: disable=too-few-public-methods
+    class Regex:  # pylint: disable=too-few-public-methods
 
         """A simple implementation ot the python.re package
 
@@ -964,7 +847,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
                 "occurences": 0,
                 "rematch": False,
                 "replace_with": None,
-                "return_data": True
+                "return_data": True,
             }
 
             # We initiate our optional_arguments in order to be usable all over the
@@ -1005,10 +888,14 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
                         return result[self.group]  # pylint: disable=no-member
                 else:
                     result = pre_result.group(
-                        self.group).strip()  # pylint: disable=no-member
+                        self.group  # pylint: disable=no-member
+                    ).strip()
 
                 return result
-            elif not self.return_data and pre_result is not None:  # pylint: disable=no-member
+            elif (
+                not self.return_data  # pylint: disable=no-member
+                and pre_result is not None
+            ):
                 return True
             return False
 
@@ -1021,9 +908,8 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             pre_result = comp(self.regex)
 
             return list(
-                filter(
-                    lambda element: not pre_result.search(element),
-                    self.data))
+                filter(lambda element: not pre_result.search(element), self.data)
+            )
 
         def replace(self):
             """Used to replace a matched string with another."""
@@ -1033,10 +919,11 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
                     self.regex,
                     self.replace_with,  # pylint: disable=no-member
                     self.data,
-                    self.occurences)  # pylint: disable=no-member
+                    self.occurences,  # pylint: disable=no-member
+                )
             return self.data
 
-    class Command(object):
+    class Command:
         """
         Shell command execution.
 
@@ -1047,7 +934,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
         """
 
         def __init__(self, command, allow_stdout=True):
-            self.decode_type = 'utf-8'
+            self.decode_type = "utf-8"
             self.command = command
             self.stdout = allow_stdout
 
@@ -1066,11 +953,7 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
             """Execute the given command."""
 
             if not self.stdout:
-                process = Popen(
-                    self.command,
-                    stdout=PIPE,
-                    stderr=PIPE,
-                    shell=True)
+                process = Popen(self.command, stdout=PIPE, stderr=PIPE, shell=True)
             else:
                 process = Popen(self.command, stderr=PIPE, shell=True)
 
@@ -1080,14 +963,28 @@ class Helpers(object):  # pylint: disable=too-few-public-methods
                 decoded = self.decode_output(error)
 
                 if not decoded:
-                    return 'Unkown error. for %s' % (self.command)
+                    return "Unkown error. for %s" % (self.command)
 
                 print(decoded)
                 exit(1)
             return self.decode_output(output)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
+    try:
+        from whitelisting import Whitelist
+    except ModuleNotFoundError:
+        WHITELISTING_URL = "https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/dev-center/whitelisting/whitelisting.py"  # pylint: disable=line-too-long
+        REQ = get(WHITELISTING_URL)
+        DESTINATION = "whitelisting.py"
+
+        if REQ.status_code == 200:
+            Helpers.File(DESTINATION).write(REQ.text, overwrite=True)
+        else:
+            raise Exception("Unable to fetch the whitelisting script. Is GiHub down?")
+
+        from whitelisting import Whitelist
+
     Initiate()
     Generate()
     Compress()
