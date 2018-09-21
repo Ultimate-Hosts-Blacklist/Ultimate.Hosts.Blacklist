@@ -197,7 +197,7 @@ The sources of the input data information are as follows.
 - [Reddestdream's Minimal Hosts](https://raw.githubusercontent.com/ReddestDream/reddestdream.github.io/master/Projects/MinimalHosts/etc/MinimalHostsBlocker/minimalhosts)
 - [Ransomware Tracker Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)
 - [ShallaList](http://www.shallalist.de/)
-- [SMed79 - Various Lists](https://github.com/search?q=org%3AUltimate-Hosts-Blacklist+smed79&unscoped_q=smed79)
+- [SMed79 - Various Lists](https://github.com/Ultimate-Hosts-Blacklist?utf8=%E2%9C%93&q=smed79&type=&language=)
 - [somewhocares.org](http://someonewhocares.org/hosts/)
 - [Spam404](https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt)
 - [Suspicious.Snooping.Sniffing.Hacking.IP.Addresses](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list)
