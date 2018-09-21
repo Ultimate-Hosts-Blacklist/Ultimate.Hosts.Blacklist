@@ -10,10 +10,10 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 --------------------------------------------------------------------------------
 
-- Version: **V1.1292.2018.09.21**
-- Total Bad Hosts in hosts file: **1,310,884**
-- Total Bad IP's in hosts.deny file: **403,247**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,714,131**
+- Version: **V1.1293.2018.09.21**
+- Total Bad Hosts in hosts file: **1,311,823**
+- Total Bad IP's in hosts.deny file: **406,705**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,718,528**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -21,7 +21,7 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 Click the link below to see all the sources used as input data to create this hosts list.
 
-### [SOURCES OF INPUT DATA USED TO CREATE THIS HOSTS FILE](#information-data-sources)
+### [SOURCES OF INPUT DATA USED TO CREATE THIS HOSTS FILE](#credits--thanks)
 
 --------------------------------------------------------------------------------
 
@@ -192,11 +192,12 @@ The sources of the input data information are as follows.
 - [MoaAB adblock.makala.is](http://adblock.mahakala.is/)
 - [Phishing.Database](https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt)
 - [pl-host file](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt)
-- [Quidsup NoTrack Malicious Sites](https://raw.githubusercontent.com/quidsup/notrack/master/malicious-sites.txt)
-- [Quidsup NoTrack](https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt)
+- [Quidsup NoTrack Malware](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt)
+- [Quidsup NoTrack](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt)
+- [Reddestdream's Minimal Hosts](https://raw.githubusercontent.com/ReddestDream/reddestdream.github.io/master/Projects/MinimalHosts/etc/MinimalHostsBlocker/minimalhosts)
 - [Ransomware Tracker Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)
 - [ShallaList](http://www.shallalist.de/)
-- [SMed79 - Various Lists](https://github.com/search?q=org%3AUltimate-Hosts-Blacklist+smed79&unscoped_q=smed79)
+- [SMed79 - Various Lists](https://github.com/Ultimate-Hosts-Blacklist?utf8=%E2%9C%93&q=smed79&type=&language=)
 - [somewhocares.org](http://someonewhocares.org/hosts/)
 - [Spam404](https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt)
 - [Suspicious.Snooping.Sniffing.Hacking.IP.Addresses](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list)
@@ -206,7 +207,9 @@ The sources of the input data information are as follows.
 - [WaLLy3K_Blacklist](https://v.firebog.net/hosts/static/w3kbl.txt)
 - [YousList](https://github.com/yous/YousList)
 - [YoYo.org](https://pgl.yoyo.org/as/serverlist.php?showintro=0;hostformat=hosts)
-- [ZeroDot1 - CoinBlocker Lists](https://github.com/ZeroDot1/CoinBlockerLists)
+- [ZeroDot1 - CoinBlocker Lists](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt)
+- [ZeroDot1 - CoinBlocker Lists (Browser)](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_browser.txt)
+- [ZeroDot1 - CoinBlocker Lists (Optional)](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt)
 - [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
 
 
