@@ -194,6 +194,7 @@ The sources of the input data information are as follows.
 - [pl-host file](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt)
 - [Quidsup NoTrack Malware](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt)
 - [Quidsup NoTrack](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt)
+- [Reddestdream's Minimal Hosts](https://raw.githubusercontent.com/ReddestDream/reddestdream.github.io/master/Projects/MinimalHosts/etc/MinimalHostsBlocker/minimalhosts)
 - [Ransomware Tracker Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)
 - [ShallaList](http://www.shallalist.de/)
 - [SMed79 - Various Lists](https://github.com/search?q=org%3AUltimate-Hosts-Blacklist+smed79&unscoped_q=smed79)
