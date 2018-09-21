@@ -206,7 +206,9 @@ The sources of the input data information are as follows.
 - [WaLLy3K_Blacklist](https://v.firebog.net/hosts/static/w3kbl.txt)
 - [YousList](https://github.com/yous/YousList)
 - [YoYo.org](https://pgl.yoyo.org/as/serverlist.php?showintro=0;hostformat=hosts)
-- [ZeroDot1 - CoinBlocker Lists](https://github.com/ZeroDot1/CoinBlockerLists)
+- [ZeroDot1 - CoinBlocker Lists](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt)
+- [ZeroDot1 - CoinBlocker Lists (Browser)](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_browser.txt)
+- [ZeroDot1 - CoinBlocker Lists (Optional)](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt)
 - [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
 
 
