@@ -174,6 +174,7 @@ The sources of the input data information are as follows.
 - [Ads_Disconnect.me](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
 - [Airelle's Anti-Sex Hosts](http://rlwpx.free.fr/WPFF/hsex.7z)
 - [Anti-PopAds](https://raw.githubusercontent.com/Yhonay/antipopads/master/popads.txt)
+- [AnudeepND's blacklist (ad servers)](https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt)
 - [Bad JAV Sites](https://pastebin.com/raw/kDqbYwWr)
 - [Badd Boyz Hosts](https://github.com/mitchellkrogza/Badd-Boyz-Hosts)
 - [BadIPS.com](https://www.badips.com/)
