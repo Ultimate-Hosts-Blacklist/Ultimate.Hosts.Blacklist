@@ -10,10 +10,10 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 --------------------------------------------------------------------------------
 
-- Version: **V1.1307.2018.10.05**
-- Total Bad Hosts in hosts file: **1,309,962**
+- Version: **V1.1308.2018.10.06**
+- Total Bad Hosts in hosts file: **1,310,420**
 - Total Bad IP's in hosts.deny file: **404,721**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,714,683**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,715,141**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -183,6 +183,7 @@ The sources of the input data information are as follows.
 - [DShield.org Suspicious Domain List](https://www.dshield.org/feeds/suspiciousdomains_Low.txt)
 - [Firehol](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset)
 - [Global Advert Servers Blocklist - Personal Edition](https://hostsfile.mine.nu/hosts0.txt)
+- [hpHosts - GRM only](https://hosts-file.net/grm.txt)
 - [Hosts ADBlock](https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt)
 - [JustDomains](http://mirror1.malwaredomains.com/files/justdomains)
 - [KADHosts](https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt)
