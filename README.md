@@ -10,10 +10,10 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 --------------------------------------------------------------------------------
 
-- Version: **V1.1308.2018.10.06**
-- Total Bad Hosts in hosts file: **1,310,420**
-- Total Bad IP's in hosts.deny file: **404,721**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,715,141**
+- Version: **V1.1309.2018.10.07**
+- Total Bad Hosts in hosts file: **1,340,763**
+- Total Bad IP's in hosts.deny file: **405,230**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,745,993**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -174,6 +174,7 @@ The sources of the input data information are as follows.
 - [Ads_Disconnect.me](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt)
 - [Airelle's Anti-Sex Hosts](http://rlwpx.free.fr/WPFF/hsex.7z)
 - [Anti-PopAds](https://raw.githubusercontent.com/Yhonay/antipopads/master/popads.txt)
+- [AnudeepND's blacklist (ad servers)](https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt)
 - [Bad JAV Sites](https://pastebin.com/raw/kDqbYwWr)
 - [Badd Boyz Hosts](https://github.com/mitchellkrogza/Badd-Boyz-Hosts)
 - [BadIPS.com](https://www.badips.com/)
