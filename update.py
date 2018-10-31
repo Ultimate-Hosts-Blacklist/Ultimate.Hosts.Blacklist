@@ -417,11 +417,12 @@ class Initiate:
             if data:
                 formated_data = list(map(self._format_line, data.text.split("\n")))
                 whitelisted = Whitelist(string="\n".join(formated_data)).get()
-
-                list(map(self._data_parser, whitelisted.split("\n")))
-
-                Settings.domains = Helpers.List(Settings.domains).format()
-                Settings.ips = Helpers.List(Settings.ips).format()
+                
+                if whitelisted:
+                    list(map(self._data_parser, whitelisted.split("\n")))
+                
+                    Settings.domains = Helpers.List(Settings.domains).format()
+                    Settings.ips = Helpers.List(Settings.ips).format()
                 print(Settings.done)
 
 
