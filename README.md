@@ -10,10 +10,10 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 --------------------------------------------------------------------------------
 
-- Version: **V1.1365.2018.12.01**
+- Version: **V1.1366.2018.12.02**
 - Total Bad Hosts in hosts file: **1,342,196**
-- Total Bad IP's in hosts.deny file: **377,575**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,719,771**
+- Total Bad IP's in hosts.deny file: **377,244**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,719,440**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -181,7 +181,9 @@ The sources of the input data information are as follows.
 - [Barbock filter list](https://raw.githubusercontent.com/CHEF-KOCH/BarbBlock-filter-list/master/HOSTS.txt)
 - [Blocklist.de](http://www.blocklist.de/en/index.html)
 - [Cameleon](http://sysctl.org/cameleon/hosts)
-- [DShield.org Suspicious Domain List](https://www.dshield.org/feeds/suspiciousdomains_Low.txt)
+- [DShield.org Suspicious Domain List (High)](https://www.dshield.org/feeds/suspiciousdomains_High.txt)
+- [DShield.org Suspicious Domain List (Low)](https://www.dshield.org/feeds/suspiciousdomains_Low.txt)
+- [DShield.org Suspicious Domain List (Medium)](https://www.dshield.org/feeds/suspiciousdomains_Medium.txt)
 - [Firehol](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset)
 - [Global Advert Servers Blocklist - Personal Edition](https://hostsfile.mine.nu/hosts0.txt)
 - [hpHosts - GRM only](https://hosts-file.net/grm.txt)
@@ -202,7 +204,6 @@ The sources of the input data information are as follows.
 - [SMed79 - Various Lists](https://github.com/Ultimate-Hosts-Blacklist?utf8=%E2%9C%93&q=smed79&type=&language=)
 - [somewhocares.org](http://someonewhocares.org/hosts/)
 - [Spam404](https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt)
-- [Spotify-Ad-free](https://raw.githubusercontent.com/CHEF-KOCH/Spotify-Ad-free/master/Spotify.txt)
 - [Suspicious.Snooping.Sniffing.Hacking.IP.Addresses](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list)
 - [The Big List of Hacked Malware Web Sites](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list)
 - [Top Attacking Wordpress IP's](https://github.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites)
@@ -261,7 +262,7 @@ Come drop by and visit me at <https://mitchellkrog.com>
 
 # MIT License
 
-## Copyright (c) 2017 Mitchell Krog - mitchellkrog@gmail.com
+## Copyright (c) 2017, 2018 Mitchell Krog - mitchellkrog@gmail.com
 
 ## <https://github.com/mitchellkrogza>
 
