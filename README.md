@@ -202,6 +202,7 @@ The sources of the input data information are as follows.
 - [SMed79 - Various Lists](https://github.com/Ultimate-Hosts-Blacklist?utf8=%E2%9C%93&q=smed79&type=&language=)
 - [somewhocares.org](http://someonewhocares.org/hosts/)
 - [Spam404](https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt)
+- [Spotify-Ad-free](https://raw.githubusercontent.com/CHEF-KOCH/Spotify-Ad-free/master/Spotify.txt)
 - [Suspicious.Snooping.Sniffing.Hacking.IP.Addresses](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list)
 - [The Big List of Hacked Malware Web Sites](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list)
 - [Top Attacking Wordpress IP's](https://github.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites)
