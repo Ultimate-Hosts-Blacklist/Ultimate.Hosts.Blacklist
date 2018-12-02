@@ -262,7 +262,7 @@ Come drop by and visit me at <https://mitchellkrog.com>
 
 # MIT License
 
-## Copyright (c) 2017 Mitchell Krog - mitchellkrog@gmail.com
+## Copyright (c) 2017, 2018 Mitchell Krog - mitchellkrog@gmail.com
 
 ## <https://github.com/mitchellkrogza>
 
