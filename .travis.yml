@@ -25,6 +25,8 @@ cache:
 sudo: required
 
 before_install:
+  - pip3 install requests
+  - pip3 install colorama
   - sudo apt-get -y install dos2unix
 
 script:
