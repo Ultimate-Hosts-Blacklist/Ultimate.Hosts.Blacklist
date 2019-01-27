@@ -190,6 +190,7 @@ The sources of the input data information are as follows.
 - [Hosts ADBlock](https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt)
 - [JustDomains](http://mirror1.malwaredomains.com/files/justdomains)
 - [KADHosts](https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt)
+- [lightswitch05 (Daniel)'s hosts](https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt)
 - [malc0de](http://malc0de.com/bl/)
 - [Malware Domain List](https://www.malwaredomainlist.com/hostslist/hosts.txt)
 - [Michael Trimm's Hosts](https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt)
