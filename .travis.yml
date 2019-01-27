@@ -10,9 +10,11 @@ env:
     - GIT_BRANCH: master
 
 language: python
+dist: xenial
+sudo: required
 
 python:
-  - "3.6.4"
+  - "3.7"
 
 matrix:
   fast_finish: true
@@ -20,11 +22,14 @@ matrix:
 cache:
   - apt
   - pip
-  - pip3
+  
+addons:
+  apt:
+    packages:
+      - dos2unix
 
-sudo: required
-
-before_install:
+install:
+  - pip3 install --upgrade pip
   - pip3 install requests
   - pip3 install colorama
   - sudo apt-get -y install dos2unix
