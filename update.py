@@ -954,19 +954,19 @@ class Helpers:  # pylint: disable=too-few-public-methods
 
 
 if __name__ == "__main__":
+    WHITELISTING_URL = "https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/dev-center/whitelisting/whitelisting.py"  # pylint: disable=line-too-long
+    REQ = get(WHITELISTING_URL)
+    DESTINATION = "whitelisting.py"
+
+    if REQ.status_code == 200:
+        Helpers.File(DESTINATION).write(REQ.text, overwrite=True)
+    else:
+        raise Exception("Unable to fetch the whitelisting script. Is GiHub down?")
+            
     try:
         from whitelisting import Whitelist
     except ModuleNotFoundError:
-        WHITELISTING_URL = "https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/dev-center/whitelisting/whitelisting.py"  # pylint: disable=line-too-long
-        REQ = get(WHITELISTING_URL)
-        DESTINATION = "whitelisting.py"
-
-        if REQ.status_code == 200:
-            Helpers.File(DESTINATION).write(REQ.text, overwrite=True)
-        else:
-            raise Exception("Unable to fetch the whitelisting script. Is GiHub down?")
-
-        from whitelisting import Whitelist
+        raise Exception("Unable to find the whitelisting script.")
 
     Initiate()
     Generate()
