@@ -16,8 +16,8 @@ sudo: required
 python:
   - "3.7"
 
-matrix:
-  fast_finish: true
+#matrix:
+#  fast_finish: true
 
 cache:
   - apt
