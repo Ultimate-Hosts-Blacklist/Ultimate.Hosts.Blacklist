@@ -15,6 +15,7 @@ Contributors:
 """
 # pylint:disable=bad-continuation
 import argparse
+from json import loads
 from os import path
 from re import compile as comp
 from re import escape
@@ -34,6 +35,16 @@ class Settings:  # pylint: disable=too-few-public-methods
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     whitelist_permanent_list = "https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list"  # pylint: disable=line-too-long
 
+    # This variable will tell us where we are looking for the Root Zone Database.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    root_zone_database = "https://raw.githubusercontent.com/funilrys/PyFunceble/master/iana-domains-db.json"  # pylint: disable=line-too-long
+
+    # This variable will tell us where we are looking for the Public Suffix Database.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    public_suffix_database = "https://raw.githubusercontent.com/funilrys/PyFunceble/master/public-suffix.json"  # pylint: disable=line-too-long
+
     # This variable will save all elements from our whitelist list.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
@@ -51,10 +62,16 @@ class Settings:  # pylint: disable=too-few-public-methods
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     whitelist_full_regex_marker = "REG "
 
+    # This variable is used to set the marker that we use to say that we match
+    # the given line + all possible Root Zone Database.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    whitelist_rzd_marker = "RZD "
+
     # This variable save the list of all whitelisted domain in regex format.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    # Note: This variable is auto updated by Initiate()
+    # Note: This variable is auto updated by Whitelist()
     regex_whitelist = ""
 
     # This variable is used to know if we are allowed to use the official
@@ -62,6 +79,12 @@ class Settings:  # pylint: disable=too-few-public-methods
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     without_core = False
+
+    # This variable save the list of all Root Zone Database.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    # Note: This variable is auto updated by Whitelist()
+    rzd_regex = ""
 
 
 class Whitelist:
@@ -83,6 +106,29 @@ class Whitelist:
     def __init__(self, file=None, string=None, output=None, secondary_whitelist=None):
         self.secondary_whitelist_file = secondary_whitelist
 
+        rzd_db = [
+            tdl
+            for tdl in loads(
+                Helpers.Download(Settings.root_zone_database, destination=None).link()
+            ).keys()
+        ]
+
+        rzd_db.extend(
+            [
+                suffix
+                for suffixes in loads(
+                    Helpers.Download(
+                        Settings.public_suffix_database, destination=None
+                    ).link()
+                ).values()
+                for suffix in suffixes
+            ]
+        )
+
+        Settings.rzd_regex = r"((?:\.(?:{})))".format(
+            "|".join(list(map(escape, rzd_db)))
+        )
+
         self.file = file
         self.output_file = output
         self.get_whitelist()
@@ -96,20 +142,19 @@ class Whitelist:
         content = []
 
         if self.file:
-            content.extend(Helpers.File(self.file).to_list())
+            content.extend(
+                list(map(self._format_line, Helpers.File(self.file).to_list()))
+            )
         elif self.string:
-            content.extend(self.string.split("\n"))
+            content.extend(list(map(self._format_line, self.string.split("\n"))))
 
         if content:
             if self.output_file:
                 Helpers.File(self.output_file).write("", overwrite=True)
 
-            to_remove = set(Settings.whitelist)
-            whitelisted = [line for line in content if line not in to_remove]
-
             printed_or_written = self._print_or_write(
                 Helpers.Regex(
-                    whitelisted, Settings.regex_whitelist, return_data=False
+                    content, Settings.regex_whitelist, return_data=False
                 ).not_matching_list()
             )
 
@@ -190,7 +235,6 @@ class Whitelist:
                 if index_comment > -1:
                     comment = splited_line[index][index_comment:]
 
-                    print(splited_line[index].split(comment))
                     element = (
                         splited_line[index]
                         .split(comment)[0]
@@ -218,42 +262,51 @@ class Whitelist:
 
         if line and not line.startswith("#"):
             if line.startswith(Settings.whitelist_all_marker):
-                to_check = line.split(Settings.whitelist_all_marker)[-1].strip()
-                whitelist_element = (
-                    Settings.whitelist_all_marker + escape(to_check) + "$"
+                whitelist_element = "{}$".format(
+                    escape(line.split(Settings.whitelist_all_marker)[-1].strip())
                 )
             elif line.startswith(Settings.whitelist_full_regex_marker):
-                whitelist_element = (
-                    Settings.whitelist_full_regex_marker
-                    + line.split(Settings.whitelist_full_regex_marker)[-1].strip()
+                whitelist_element = "{}".format(
+                    line.split(Settings.whitelist_full_regex_marker)[-1].strip()
                 )
-            else:
-                to_check = line.strip()
+            elif line.startswith(Settings.whitelist_rzd_marker):
+                to_check = line.split(Settings.whitelist_rzd_marker)[-1].strip()
+
+                if to_check.endswith("."):
+                    to_check = to_check[:-1]
+
+                to_check = escape(to_check)
 
                 if not to_check.startswith("www."):
-                    whitelist_element = [to_check, "www." + to_check]
+                    whitelist_element = [
+                        "^{}{}$".format(to_check, Settings.rzd_regex),
+                        "^www.{}{}$".format(to_check, Settings.rzd_regex),
+                    ]
                 else:
-                    whitelist_element = [to_check, ".".join(to_check.split(".")[1:])]
+                    whitelist_element = [
+                        "^{}{}$".format(to_check, Settings.rzd_regex),
+                        "^{}{}$".format(
+                            ".".join(to_check.split(".")[1:]), Settings.rzd_regex
+                        ),
+                    ]
+            else:
+                to_check = escape(line.strip())
+
+                if not to_check.startswith("www."):
+                    whitelist_element = [
+                        "^{}$".format(to_check),
+                        "^www.{}$".format(to_check),
+                    ]
+                else:
+                    whitelist_element = [
+                        "^{}$".format(to_check),
+                        "^{}$".format(".".join(to_check.split(".")[1:])),
+                    ]
 
             if isinstance(whitelist_element, list):
                 Settings.whitelist.extend(whitelist_element)
             else:
                 Settings.whitelist.append(whitelist_element)
-
-    @classmethod
-    def _remove_marker(cls, element):
-        """
-        This method will remove the marker from the given element.
-        """
-
-        if Settings.whitelist_full_regex_marker in element:
-            to_split = Settings.whitelist_full_regex_marker
-        elif Settings.whitelist_all_marker in element:
-            to_split = Settings.whitelist_all_marker
-        else:
-            return element
-
-        return element.split(to_split)[-1]
 
     def get_whitelist(self):
         """
@@ -278,27 +331,7 @@ class Whitelist:
         if data:
             list(map(self.whitelist_parser, Helpers.List(data).format()))
 
-            bare_whitelist = list(
-                filter(
-                    lambda x: Settings.whitelist_all_marker not in x
-                    and Settings.whitelist_full_regex_marker not in x,
-                    Settings.whitelist,
-                )
-            )
-
-            specials_whitelist = list(
-                filter(
-                    lambda x: Settings.whitelist_all_marker in x
-                    or Settings.whitelist_full_regex_marker in x,
-                    Settings.whitelist,
-                )
-            )
-
-            Settings.whitelist = bare_whitelist
-
-            if specials_whitelist:
-                specials_whitelist = list(map(self._remove_marker, specials_whitelist))
-                Settings.regex_whitelist = "|".join(specials_whitelist)
+            Settings.regex_whitelist = "|".join(Settings.whitelist)
 
 
 class Helpers:  # pylint: disable=too-few-public-methods
