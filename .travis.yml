@@ -10,11 +10,10 @@ env:
     - GIT_BRANCH: master
 
 language: python
-dist: xenial
 sudo: required
 
 python:
-  - "3.7"
+  - "3.6.4"
 
 #matrix:
 #  fast_finish: true
