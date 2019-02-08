@@ -34,8 +34,7 @@ install:
   - pip3 install colorama
 
 script:
-  - rm whitelisting.py
-  - python update.py
+  - travis_wait 30 python update.py
 
 notifications:
   email: false
