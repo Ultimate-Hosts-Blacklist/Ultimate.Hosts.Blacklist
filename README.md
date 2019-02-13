@@ -10,10 +10,10 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 --------------------------------------------------------------------------------
 
-- Version: **V1.1428.2019.01.26**
-- Total Bad Hosts in hosts file: **1,354,879**
-- Total Bad IP's in hosts.deny file: **253,106**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,607,985**
+- Version: **V1.1466.2019.02.13**
+- Total Bad Hosts in hosts file: **2,660,780**
+- Total Bad IP's in hosts.deny file: **255,833**
+- Total Bad Hosts and IP's in superhosts.deny file: **2,916,613**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -190,6 +190,7 @@ The sources of the input data information are as follows.
 - [Hosts ADBlock](https://raw.githubusercontent.com/eladkarako/hosts.eladkarako.com/master/build/hosts_adblock.txt)
 - [JustDomains](http://mirror1.malwaredomains.com/files/justdomains)
 - [KADHosts](https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt)
+- [lightswitch05 (Daniel)'s hosts](https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt)
 - [malc0de](http://malc0de.com/bl/)
 - [Malware Domain List](https://www.malwaredomainlist.com/hostslist/hosts.txt)
 - [Michael Trimm's Hosts](https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt)
