@@ -17,13 +17,13 @@ Contributors:
 # pylint: disable=too-many-lines, bad-continuation
 
 from json import decoder, dump, loads
+from multiprocessing import Manager, Process
 from os import environ, path, remove
 from os import sep as directory_separator
 from re import compile as comp
 from re import escape
 from re import sub as substrings
 from subprocess import PIPE, Popen
-from sys import stdout
 from tarfile import open as tarfile_open
 from time import strftime
 from zipfile import ZipFile
@@ -33,7 +33,6 @@ from PyFunceble import syntax_check as domain_syntax_check
 from requests import get
 
 from whitelisting import Whitelist
-from multiprocessing import cpu_count, Pool
 
 
 class Settings:  # pylint: disable=too-few-public-methods
@@ -203,7 +202,7 @@ class Settings:  # pylint: disable=too-few-public-methods
     error = "✘"
 
 
-class TravisCI:
+class TravisCI:  # pylint:disable=too-few-public-methods
     """
     Manage everything we need when we are under Travis CI.
     """
@@ -253,7 +252,8 @@ class TravisCI:
             except KeyError:
                 pass
 
-    def fix_permissions(self):
+    @classmethod
+    def fix_permissions(cls):
         """
         Fix the permissions of TRAVIS_BUILD_DIR.
         """
@@ -282,7 +282,7 @@ class TravisCI:
             pass
 
 
-class Repositories:
+class Repositories:  # pylint: disable=too-few-public-methods
     """
     Get and return the list of repositories of our backend.
     """
@@ -310,7 +310,7 @@ class Repositories:
 
         self.regex_next_url = r"(?:.*\<(.*?)\>\;\s?rel\=\"next\")"
 
-    def get(self, url_to_get=None):
+    def get(self, url_to_get=None):  # pylint: disable=too-many-branches
         """
         Return the data from the API or from the local file if nothing changed.
         """
@@ -374,6 +374,7 @@ class Repositories:
             raise Exception(
                 "Somethign went wrong while communicating with: '%s'." % url_to_get
             )
+
 
 class Generate:
     """
@@ -959,7 +960,8 @@ class UpdateThisRepository:
 
         self.repos = list(Repositories().get())
 
-    def __format_lines(self, lines):
+    @classmethod
+    def __format_lines(cls, lines):
         """
         Format the given lines.
         """
@@ -982,7 +984,8 @@ class UpdateThisRepository:
 
         return result
 
-    def __get_whitelisted_list(self, to_clean):
+    @classmethod
+    def __get_whitelisted_list(cls, to_clean):
         """
         Given a list or a string (1 domain per line),
         we remove the whitelisted elements and return
@@ -1004,7 +1007,7 @@ class UpdateThisRepository:
             ).format()
         raise Exception("Unknown type: `%s`" % type(to_clean))
 
-    def get_repos_lists(self, repo_information):
+    def get_repos_lists(self, repo_information, manager_list):
         """
         Read the list of available repos and get the list of domains/ip from the
         input source.
@@ -1014,30 +1017,33 @@ class UpdateThisRepository:
 
         print(
             "Extracting, cleaning and formating of domains and ips from %s"
-            %  repo_information['name'],
+            % repo_information["name"],
             end=" ",
         )
 
-        url_to_get_base = Settings.raw_link % repo_information['name']
+        url_to_get_base = Settings.raw_link % repo_information["name"]
         clean_url = "%sclean.list" % url_to_get_base
         non_clean_url = "%sdomains.list" % url_to_get_base
 
         req_clean = get(clean_url)
 
         if req_clean.status_code == 200:
+            manager_list.append(self.__get_whitelisted_list(req_clean.text))
             print(Settings.done)
-            return self.__get_whitelisted_list(req_clean.text)
+            return None
 
         req_non_clean = get(non_clean_url)
 
         if req_non_clean.status_code == 200:
+            manager_list.append(self.__get_whitelisted_list(req_non_clean.text))
             print(Settings.done)
-            return self.__get_whitelisted_list(req_non_clean.text)
-        
-        print(Settings.error)
-        raise Exception("Unable to get a list from '%s'" %  repo_information['name'])
+            return None
 
-    def __separate_domains_from_ip(self, cleaned_list):
+        print(Settings.error)
+        raise Exception("Unable to get a list from '%s'" % repo_information["name"])
+
+    @classmethod
+    def __separate_domains_from_ip(cls, cleaned_list):
         """
         Given a cleaned list, we separate domains from IP.
         """
@@ -1057,21 +1063,41 @@ class UpdateThisRepository:
         Process the logic behind the repository update.
         """
 
-        with Pool(cpu_count()) as pool:
-            for element in pool.map(self.get_repos_lists, self.repos):
-                for domains, ips in pool.map(self.__separate_domains_from_ip, element):
-                    Settings.domains.extend(domains)
-                    Settings.ips.extend(ips)
+        manager_list = []
+
+        with Manager() as manager:
+            manager_list = manager.list()
+            processes = []
+
+            for data in self.repos:
+                process = Process(
+                    target=self.get_repos_lists, args=(data, manager_list)
+                )
+                process.start()
+                processes.append(process)
+
+            for proc in processes:
+                proc.join()
+
+            manager_list = list(manager_list)
+
+            for element in manager_list:
+                domains, ips = self.__separate_domains_from_ip(element)
+                Settings.domains.extend(domains)
+                Settings.ips.extend(ips)
+
+                del domains, ips
 
         Settings.domains = Helpers.List(Settings.domains).format()
         Settings.ips = Helpers.List(Settings.ips).format()
 
-        Helpers.Dict(Settings.repositories).to_json(Settings.repositories_file)
+        Helpers.Dict(self.repos).to_json(Settings.repositories_file)
         del Settings.repositories
 
         Generate()
         Compress()
         Deploy()
+
 
 if __name__ == "__main__":
     UpdateThisRepository().process()
