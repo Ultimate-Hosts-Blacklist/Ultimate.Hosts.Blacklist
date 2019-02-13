@@ -960,6 +960,7 @@ class Clean:  # pylint: disable=too-few-public-methods
             "iana-domains-db.json",
             ".PyFunceble.yaml",
             ".PyFunceble_production.yaml",
+            'dir_structure.json'
         ]
 
         for element in to_delete:
