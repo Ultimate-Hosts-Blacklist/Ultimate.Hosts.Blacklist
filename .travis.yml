@@ -33,7 +33,7 @@ install:
   - pip3 install colorama
 
 script:
-  - python3 update.py
+  - python3 update_repository.py
 
 notifications:
   email: false
