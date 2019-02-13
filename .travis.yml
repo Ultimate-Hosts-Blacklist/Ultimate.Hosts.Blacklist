@@ -8,6 +8,7 @@ env:
     - GIT_EMAIL: mitchellkrog@gmail.com
     - TRAVIS_REPO_SLUG: mitchellkrogza/Ultimate.Hosts.Blacklist
     - GIT_BRANCH: master
+    - PYFUNCEBLE_AUTO_CONFIGURATION: PyFunceble
 
 language: python
 sudo: required
@@ -19,7 +20,6 @@ python:
 #  fast_finish: true
 
 cache:
-  - apt
   - pip
   
 addons:
@@ -33,7 +33,7 @@ install:
   - pip3 install colorama
 
 script:
-  - travis_wait 30 python update.py
+  - python3 update.py
 
 notifications:
   email: false
