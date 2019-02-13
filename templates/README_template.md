@@ -8,7 +8,7 @@ The Ultimate hosts file for protecting your computer or device against over seve
 
 A hosts file for use on any operating system to block bad domains out of your servers or devices. Information gathered from multiple sources and merged into one massive hosts file and updated every day.
 
---------------------------------------------------------------------------------
+---
 
 - Version: **%%version%%**
 - Total Bad Hosts in hosts file: **%%lenHosts%%**
@@ -17,43 +17,43 @@ A hosts file for use on any operating system to block bad domains out of your se
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
---------------------------------------------------------------------------------
+---
 
 Click the link below to see all the sources used as input data to create this hosts list.
 
 ### [SOURCES OF INPUT DATA USED TO CREATE THIS HOSTS FILE](#credits--thanks)
 
---------------------------------------------------------------------------------
+---
 
 ## RAW FILE SOURCES
 
 The links below will direct you to the raw unzipped versions of the hosts files in this repo. (Files are updated daily)
 
-File Name                  | Operating System |  Format  | Download Link
--------------------------- | :--------------: | :------: | :-----------------------------------------------------------------------
-hosts                      |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts)<br>
-hosts                      |     Windows      | CRLF/DOS | [Download](https://hosts.ubuntu101.co.za/hosts.windows)
-hosts.deny                 |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts.deny)<br>
-superhosts.deny            |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/superhosts.deny)<br>
-domains.list               |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains.list)<br>
-domains-dotted-format.list |     DnsMasq      |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains-dotted-format.list)<br>
-ips.list                   |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/ips.list)
+| File Name                  | Operating System |  Format  | Download Link                                                            |
+| -------------------------- | :--------------: | :------: | :----------------------------------------------------------------------- |
+| hosts                      |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts)<br>                      |
+| hosts                      |     Windows      | CRLF/DOS | [Download](https://hosts.ubuntu101.co.za/hosts.windows)                  |
+| hosts.deny                 |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts.deny)<br>                 |
+| superhosts.deny            |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/superhosts.deny)<br>            |
+| domains.list               |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains.list)<br>               |
+| domains-dotted-format.list |     DnsMasq      |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains-dotted-format.list)<br> |
+| ips.list                   |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/ips.list)                       |
 
 ### Installers, Updaters and Uninstaller Helper Scripts
 
-Linux                                                                                                                                                      | Windows
----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------
-[hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-installer.sh)                         | [hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat)
-[hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-uninstaller.sh)                     | [hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat)
-[hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-updater.sh)                             | [hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat)
-[hosts.deny Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-installer.sh)               |
-[hosts.deny UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-uninstaller.sh)           |
-[hosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-updater.sh)                   |
-[superhosts.deny Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-installer.sh)     |
-[superhosts.deny UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-uninstaller.sh) |
-                                                                                                                                                           | [superhosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-updater.sh)
+| Linux                                                                                                                                                      | Windows                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-installer.sh)                         | [hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat)     |
+| [hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-uninstaller.sh)                     | [hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat)        |
+| [hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-updater.sh)                             | [hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat) |
+| [hosts.deny Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-installer.sh)               |
+| [hosts.deny UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-uninstaller.sh)           |
+| [hosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-updater.sh)                   |
+| [superhosts.deny Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-installer.sh)     |
+| [superhosts.deny UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-uninstaller.sh) |
+| [superhosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-updater.sh)         |
 
---------------------------------------------------------------------------------
+---
 
 ## WHAT IS A HOSTS FILE?
 
@@ -85,7 +85,7 @@ It is important to note that a `hosts` file cannot understand wild card domains.
 
 Lucky for you our massive hosts file compiled from over 25 independent data input sources already does this for you. So it is as simple as downloading our `hosts` file and keeping it up to date as we update the hosts file several times a week as new threats emerg.
 
---------------------------------------------------------------------------------
+---
 
 ## RECOMMENDATION FOR USING`0.0.0.0` instead of `127.0.0.1`
 
@@ -95,19 +95,19 @@ I prefer the use of 0.0.0.0, which is defined as a non-routable meta-address. Us
 
 For many windows operating systems however 127.0.0.1 does appear to work slightly better and which is why our Windows version of the hosts file uses 127.0.0.1 as the loopback address.
 
---------------------------------------------------------------------------------
+---
 
 ## WHAT IS A HOSTS.DENY FILE?
 
 A hosts file, named `hosts.deny` is a plain-text file for Linux/Unix based operating systems only which blocks a list of IP addresses on the outside of your network from gaining any access to your computer. A `hosts.deny` file will not work on a Windows operating system.
 
---------------------------------------------------------------------------------
+---
 
 ## WHAT IS A SUPERHOSTS.DENY FILE? **I've never heard of such a thing ??**
 
 The superhosts.deny file is simply named `superhosts.deny` but is actually just a normal `hosts.deny` file which is a plain-text file for Linux/Unix based operating systems which blocks a list of IP addresses or hosts (domains) on the outside of your network from gaining any access to your computer. If you want to user this `superhosts.deny` file simply rename it to `hosts.deny` and place it in your `/etc/` folder on your Linux/Unix operating system. A `hosts.deny` file will not work on a Windows operating system.
 
---------------------------------------------------------------------------------
+---
 
 ## WHERE DO I PUT THIS ON MY COMPUTER?
 
@@ -121,43 +121,43 @@ To modify your current `hosts` file, look for it in the following places and mod
 
 **Windows Systems**: `%SystemRoot%\system32\drivers\etc\hosts` **[Try the Windows Installer Batch Script](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat)<br>**
 
---------------------------------------------------------------------------------
+---
 
 ## WHERE CAN I DOWNLOAD THE RAW UNZIPPED FILES FROM?
 
 To keep this Github repo small, all files are provided in a zip only format. Some people however require their Pi-Holes or other systems to automatically download a raw file once a week or so as an update. For your convenience you can download these raw files at the following links. These links below will always contain the latest updated version of these files. (Files are updated daily)
 
-File Name                  | Operating System |  Format  | Download Link
--------------------------- | :--------------: | :------: | :-----------------------------------------------------------------------
-hosts                      |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts)<br>
-hosts                      |     Windows      | CRLF/DOS | [Download](https://hosts.ubuntu101.co.za/hosts.windows)
-hosts.deny                 |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts.deny)<br>
-superhosts.deny            |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/superhosts.deny)<br>
-domains.list               |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains.list)<br>
-domains-dotted-format.list |     DnsMasq      |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains-dotted-format.list)<br>
-ips.list                   |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/ips.list)
+| File Name                  | Operating System |  Format  | Download Link                                                            |
+| -------------------------- | :--------------: | :------: | :----------------------------------------------------------------------- |
+| hosts                      |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts)<br>                      |
+| hosts                      |     Windows      | CRLF/DOS | [Download](https://hosts.ubuntu101.co.za/hosts.windows)                  |
+| hosts.deny                 |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts.deny)<br>                 |
+| superhosts.deny            |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/superhosts.deny)<br>            |
+| domains.list               |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains.list)<br>               |
+| domains-dotted-format.list |     DnsMasq      |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains-dotted-format.list)<br> |
+| ips.list                   |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/ips.list)                       |
 
 ### Installers, Updaters and Uninstaller Helper Scripts
 
-Linux                                                                                                                                                      | Windows
----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------
-[hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-installer.sh)                         | [hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat)
-[hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-uninstaller.sh)                     | [hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat)
-[hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-updater.sh)                             | [hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat)
-[hosts.deny Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-installer.sh)               |
-[hosts.deny UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-uninstaller.sh)           |
-[hosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-updater.sh)                   |
-[superhosts.deny Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-installer.sh)     |
-[superhosts.deny UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-uninstaller.sh) |
-                                                                                                                                                           | [superhosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-updater.sh)
+| Linux                                                                                                                                                      | Windows                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-installer.sh)                         | [hosts Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat)     |
+| [hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-uninstaller.sh)                     | [hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat)        |
+| [hosts Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-updater.sh)                             | [hosts UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat) |
+| [hosts.deny Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-installer.sh)               |
+| [hosts.deny UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-uninstaller.sh)           |
+| [hosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-updater.sh)                   |
+| [superhosts.deny Installer](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-installer.sh)     |
+| [superhosts.deny UnInstaller](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-uninstaller.sh) |
+| [superhosts.deny Updater](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-updater.sh)         |
 
---------------------------------------------------------------------------------
+---
 
 ## ADDITIONS / REMOVALS / CORRECTIONS !!
 
 [![Log an Issue](https://img.shields.io/badge/LOG%20-%20an%20issue%20%F0%9F%9A%A6-blue.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues) if you disagree with anything on this list or want to add any other bad web sites to the list.
 
---------------------------------------------------------------------------------
+---
 
 ## INFORMATION DATA SOURCES, COPYRIGHTS AND CREDITS
 
@@ -181,6 +181,7 @@ The sources of the input data information are as follows.
 - [Barbock filter list](https://raw.githubusercontent.com/CHEF-KOCH/BarbBlock-filter-list/master/HOSTS.txt)
 - [Blocklist.de](http://www.blocklist.de/en/index.html)
 - [Cameleon](http://sysctl.org/cameleon/hosts)
+- [CHEF-KOCH's Spotify-Ad-free](https://raw.githubusercontent.com/CHEF-KOCH/Spotify-Ad-free/master/Spotify.txt)
 - [DShield.org Suspicious Domain List (High)](https://www.dshield.org/feeds/suspiciousdomains_High.txt)
 - [DShield.org Suspicious Domain List (Low)](https://www.dshield.org/feeds/suspiciousdomains_Low.txt)
 - [DShield.org Suspicious Domain List (Medium)](https://www.dshield.org/feeds/suspiciousdomains_Medium.txt)
@@ -217,8 +218,7 @@ The sources of the input data information are as follows.
 - [ZeroDot1 - CoinBlocker Lists (Optional)](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt)
 - [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
 
-
---------------------------------------------------------------------------------
+---
 
 ## COLLABORATORS & CONTRIBUTORS
 
@@ -228,7 +228,7 @@ The sources of the input data information are as follows.
 - [xxcriticxx](https://github.com/xxcriticxx)
 - [ZeroDot1](https://github.com/ZeroDot1)
 
---------------------------------------------------------------------------------
+---
 
 ## Some other awesome free projects
 
@@ -245,7 +245,7 @@ The sources of the input data information are as follows.
 - <https://github.com/mitchellkrogza/Travis-CI-for-Apache-For-Testing-Apache-and-PHP-Configurations>
 - <https://github.com/mitchellkrogza/Travis-CI-Nginx-for-Testing-Nginx-Configuration>
 
---------------------------------------------------------------------------------
+---
 
 ## Support this Project
 
@@ -253,13 +253,13 @@ The sources of the input data information are as follows.
 
 ![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/zuko.png)
 
---------------------------------------------------------------------------------
+---
 
 ### Into Photography?
 
 Come drop by and visit me at <https://mitchellkrog.com>
 
---------------------------------------------------------------------------------
+---
 
 # MIT License
 
