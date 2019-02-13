@@ -949,6 +949,23 @@ class Helpers:  # pylint: disable=too-few-public-methods
                 return {}
 
 
+class Clean:  # pylint: disable=too-few-public-methods
+    """
+    Clean uneeded files.
+    """
+
+    def __init__(self):
+        to_delete = [
+            "public-suffix.json",
+            "iana-domains-db.json",
+            ".PyFunceble.yaml",
+            ".PyFunceble_production.yaml",
+        ]
+
+        for element in to_delete:
+            Helpers.File(element).delete()
+
+
 class UpdateThisRepository:
     """
     Update this repository and our mirror.
@@ -1097,6 +1114,7 @@ class UpdateThisRepository:
         Generate()
         Compress()
         Deploy()
+        Clean()
 
 
 if __name__ == "__main__":

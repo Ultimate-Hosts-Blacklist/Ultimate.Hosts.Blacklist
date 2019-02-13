@@ -9,6 +9,7 @@ env:
     - TRAVIS_REPO_SLUG: mitchellkrogza/Ultimate.Hosts.Blacklist
     - GIT_BRANCH: master
     - PYFUNCEBLE_AUTO_CONFIGURATION: PyFunceble
+    - PYFUNCEBLE_OUTPUT_DIR: /tmp/
 
 language: python
 sudo: required
