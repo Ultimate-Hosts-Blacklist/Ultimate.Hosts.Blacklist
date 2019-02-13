@@ -102,3 +102,11 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+# PyFunceble
+.PyFunceble_production.yaml
+.PyFunceble.yaml
+dir_structure.json
+iana-domains-db.json
+public-suffix.json
