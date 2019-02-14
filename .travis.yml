@@ -11,14 +11,15 @@ env:
     - PYFUNCEBLE_AUTO_CONFIGURATION: PyFunceble
     - PYFUNCEBLE_OUTPUT_DIR: /tmp/
 
+dist: xenial
 language: python
 sudo: required
 
 python:
-  - "3.6.4"
+  - "3.7"
 
-#matrix:
-#  fast_finish: true
+matrix:
+  fast_finish: true
 
 cache:
   - pip
