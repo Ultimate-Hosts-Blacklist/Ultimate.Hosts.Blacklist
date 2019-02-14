@@ -22,7 +22,7 @@ python:
 
 cache:
   - pip
-  
+
 addons:
   apt:
     packages:
@@ -33,6 +33,7 @@ install:
   - pip3 install requests
   - pip3 install colorama
   - pip3 install PyFunceble
+  - pip3 install ultimate_hosts_blacklist_the_whitelist
 
 script:
   - python3 update_repository.py

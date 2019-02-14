@@ -79,13 +79,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MalwareDomainList.com/pulls{/number}",
-        "pushed_at": "2019-02-12T14:12:36Z",
+        "pushed_at": "2019-02-14T13:45:59Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MalwareDomainList.com/releases{/id}",
         "size": 3703,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/MalwareDomainList.com.git",
@@ -98,7 +98,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MalwareDomainList.com/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MalwareDomainList.com/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MalwareDomainList.com/git/trees{/sha}",
-        "updated_at": "2019-02-12T14:12:38Z",
+        "updated_at": "2019-02-14T13:46:00Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MalwareDomainList.com",
         "watchers": 1,
         "watchers_count": 1
@@ -183,13 +183,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/KADhosts_azet12/pulls{/number}",
-        "pushed_at": "2019-02-12T13:54:12Z",
+        "pushed_at": "2019-02-14T13:46:19Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/KADhosts_azet12/releases{/id}",
         "size": 3815,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/KADhosts_azet12.git",
@@ -202,7 +202,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/KADhosts_azet12/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/KADhosts_azet12/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/KADhosts_azet12/git/trees{/sha}",
-        "updated_at": "2019-02-12T13:54:13Z",
+        "updated_at": "2019-02-14T13:46:21Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/KADhosts_azet12",
         "watchers": 0,
         "watchers_count": 0
@@ -287,13 +287,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Airelles_Anti_Sex_Hosts/pulls{/number}",
-        "pushed_at": "2019-02-10T16:24:28Z",
+        "pushed_at": "2019-02-14T13:49:18Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Airelles_Anti_Sex_Hosts/releases{/id}",
         "size": 1212290,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Airelles_Anti_Sex_Hosts.git",
@@ -306,7 +306,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Airelles_Anti_Sex_Hosts/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Airelles_Anti_Sex_Hosts/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Airelles_Anti_Sex_Hosts/git/trees{/sha}",
-        "updated_at": "2019-02-10T16:24:32Z",
+        "updated_at": "2019-02-14T13:49:20Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Airelles_Anti_Sex_Hosts",
         "watchers": 1,
         "watchers_count": 1
@@ -391,13 +391,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Ads_Disconnect.me/pulls{/number}",
-        "pushed_at": "2019-02-12T13:50:19Z",
+        "pushed_at": "2019-02-14T13:46:35Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Ads_Disconnect.me/releases{/id}",
         "size": 8313,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Ads_Disconnect.me.git",
@@ -410,7 +410,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Ads_Disconnect.me/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Ads_Disconnect.me/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Ads_Disconnect.me/git/trees{/sha}",
-        "updated_at": "2019-02-12T13:50:21Z",
+        "updated_at": "2019-02-14T13:46:37Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Ads_Disconnect.me",
         "watchers": 0,
         "watchers_count": 0
@@ -495,13 +495,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Spam/pulls{/number}",
-        "pushed_at": "2019-02-12T12:19:02Z",
+        "pushed_at": "2019-02-14T13:47:24Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Spam/releases{/id}",
         "size": 575,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Add_Spam.git",
@@ -514,7 +514,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Spam/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Spam/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Spam/git/trees{/sha}",
-        "updated_at": "2019-02-12T12:19:04Z",
+        "updated_at": "2019-02-14T13:47:26Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Spam",
         "watchers": 0,
         "watchers_count": 0
@@ -599,13 +599,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Risk/pulls{/number}",
-        "pushed_at": "2019-02-13T13:23:04Z",
+        "pushed_at": "2019-02-14T13:38:28Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Risk/releases{/id}",
         "size": 7852,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Add_Risk.git",
@@ -618,7 +618,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Risk/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Risk/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Risk/git/trees{/sha}",
-        "updated_at": "2019-02-13T13:23:05Z",
+        "updated_at": "2019-02-14T13:38:30Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Add_Risk",
         "watchers": 0,
         "watchers_count": 0
@@ -703,13 +703,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/2o7.net/pulls{/number}",
-        "pushed_at": "2019-02-12T12:25:10Z",
+        "pushed_at": "2019-02-14T13:47:08Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/2o7.net/releases{/id}",
         "size": 1132,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/2o7.net.git",
@@ -722,7 +722,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/2o7.net/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/2o7.net/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/2o7.net/git/trees{/sha}",
-        "updated_at": "2019-02-12T12:25:12Z",
+        "updated_at": "2019-02-14T13:47:09Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/2o7.net",
         "watchers": 0,
         "watchers_count": 0
@@ -807,13 +807,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_4/pulls{/number}",
-        "pushed_at": "2019-01-19T03:13:58Z",
+        "pushed_at": "2019-02-14T13:49:59Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_4/releases{/id}",
         "size": 50163,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/BadIPs.com_Level_4.git",
@@ -826,7 +826,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_4/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_4/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_4/git/trees{/sha}",
-        "updated_at": "2019-01-19T03:14:00Z",
+        "updated_at": "2019-02-14T13:50:01Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_4",
         "watchers": 0,
         "watchers_count": 0
@@ -911,15 +911,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_3/pulls{/number}",
-        "pushed_at": "2019-02-13T17:47:36Z",
+        "pushed_at": "2019-02-14T13:32:43Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_3/releases{/id}",
-        "size": 306254,
+        "size": 309871,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/BadIPs.com_Level_3.git",
         "stargazers_count": 2,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_3/stargazers",
@@ -930,7 +930,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_3/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_3/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_3/git/trees{/sha}",
-        "updated_at": "2019-02-13T17:47:40Z",
+        "updated_at": "2019-02-14T13:32:44Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_3",
         "watchers": 2,
         "watchers_count": 2
@@ -1015,13 +1015,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BaddBoyzHosts/pulls{/number}",
-        "pushed_at": "2019-02-12T17:43:09Z",
+        "pushed_at": "2019-02-14T13:43:07Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BaddBoyzHosts/releases{/id}",
         "size": 13056,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/BaddBoyzHosts.git",
@@ -1034,7 +1034,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BaddBoyzHosts/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BaddBoyzHosts/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BaddBoyzHosts/git/trees{/sha}",
-        "updated_at": "2019-02-12T17:43:11Z",
+        "updated_at": "2019-02-14T13:43:09Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BaddBoyzHosts",
         "watchers": 0,
         "watchers_count": 0
@@ -1119,13 +1119,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Bad_JAV_Sites/pulls{/number}",
-        "pushed_at": "2019-02-12T19:29:00Z",
+        "pushed_at": "2019-02-14T13:42:01Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Bad_JAV_Sites/releases{/id}",
         "size": 899,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Bad_JAV_Sites.git",
@@ -1138,7 +1138,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Bad_JAV_Sites/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Bad_JAV_Sites/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Bad_JAV_Sites/git/trees{/sha}",
-        "updated_at": "2019-02-12T19:29:02Z",
+        "updated_at": "2019-02-14T13:42:02Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Bad_JAV_Sites",
         "watchers": 1,
         "watchers_count": 1
@@ -1223,15 +1223,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_KEY/pulls{/number}",
-        "pushed_at": "2019-02-13T18:00:15Z",
+        "pushed_at": "2019-02-14T13:49:07Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_KEY/releases{/id}",
-        "size": 345413,
+        "size": 327921,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/BadIPs.com_KEY.git",
         "stargazers_count": 1,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_KEY/stargazers",
@@ -1242,7 +1242,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_KEY/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_KEY/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_KEY/git/trees{/sha}",
-        "updated_at": "2019-02-13T18:00:18Z",
+        "updated_at": "2019-02-14T13:49:09Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_KEY",
         "watchers": 1,
         "watchers_count": 1
@@ -1327,13 +1327,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_ips/pulls{/number}",
-        "pushed_at": "2019-02-13T14:24:23Z",
+        "pushed_at": "2019-02-14T13:37:52Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_ips/releases{/id}",
         "size": 23160,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/yoyo.org_ips.git",
@@ -1346,7 +1346,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_ips/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_ips/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_ips/git/trees{/sha}",
-        "updated_at": "2019-02-13T14:24:25Z",
+        "updated_at": "2019-02-14T13:37:54Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_ips",
         "watchers": 1,
         "watchers_count": 1
@@ -1431,13 +1431,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_domains/pulls{/number}",
-        "pushed_at": "2019-02-12T17:36:05Z",
+        "pushed_at": "2019-02-14T13:43:20Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_domains/releases{/id}",
         "size": 7871,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/yoyo.org_domains.git",
@@ -1450,7 +1450,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_domains/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_domains/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_domains/git/trees{/sha}",
-        "updated_at": "2019-02-12T17:36:07Z",
+        "updated_at": "2019-02-14T13:43:22Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/yoyo.org_domains",
         "watchers": 0,
         "watchers_count": 0
@@ -1535,13 +1535,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/uBlock_Filters_Plus/pulls{/number}",
-        "pushed_at": "2019-02-13T16:14:12Z",
+        "pushed_at": "2019-02-14T13:35:25Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/uBlock_Filters_Plus/releases{/id}",
         "size": 731,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/uBlock_Filters_Plus.git",
@@ -1554,7 +1554,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/uBlock_Filters_Plus/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/uBlock_Filters_Plus/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/uBlock_Filters_Plus/git/trees{/sha}",
-        "updated_at": "2019-02-13T16:14:13Z",
+        "updated_at": "2019-02-14T13:35:26Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/uBlock_Filters_Plus",
         "watchers": 0,
         "watchers_count": 0
@@ -1639,13 +1639,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/someonewhocares.org/pulls{/number}",
-        "pushed_at": "2019-02-11T19:14:56Z",
+        "pushed_at": "2019-02-14T13:47:55Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/someonewhocares.org/releases{/id}",
         "size": 33399,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/someonewhocares.org.git",
@@ -1658,7 +1658,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/someonewhocares.org/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/someonewhocares.org/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/someonewhocares.org/git/trees{/sha}",
-        "updated_at": "2019-02-11T19:14:58Z",
+        "updated_at": "2019-02-14T13:47:57Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/someonewhocares.org",
         "watchers": 0,
         "watchers_count": 0
@@ -1743,13 +1743,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ransomwaretracker.abuse.ch/pulls{/number}",
-        "pushed_at": "2019-02-12T15:57:45Z",
+        "pushed_at": "2019-02-14T13:43:49Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ransomwaretracker.abuse.ch/releases{/id}",
         "size": 5460,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/ransomwaretracker.abuse.ch.git",
@@ -1762,7 +1762,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ransomwaretracker.abuse.ch/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ransomwaretracker.abuse.ch/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ransomwaretracker.abuse.ch/git/trees{/sha}",
-        "updated_at": "2019-02-12T15:57:47Z",
+        "updated_at": "2019-02-14T13:43:51Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ransomwaretracker.abuse.ch",
         "watchers": 1,
         "watchers_count": 1
@@ -1847,13 +1847,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_malicious-sites/pulls{/number}",
-        "pushed_at": "2019-02-12T15:55:57Z",
+        "pushed_at": "2019-02-14T13:44:29Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_malicious-sites/releases{/id}",
         "size": 611,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/quidsup_malicious-sites.git",
@@ -1866,7 +1866,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_malicious-sites/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_malicious-sites/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_malicious-sites/git/trees{/sha}",
-        "updated_at": "2019-02-12T15:55:59Z",
+        "updated_at": "2019-02-14T13:44:30Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_malicious-sites",
         "watchers": 0,
         "watchers_count": 0
@@ -1951,13 +1951,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_notrack_trackers/pulls{/number}",
-        "pushed_at": "2019-02-12T18:18:36Z",
+        "pushed_at": "2019-02-14T13:42:20Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_notrack_trackers/releases{/id}",
         "size": 16769,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/quidsup_notrack_trackers.git",
@@ -1970,7 +1970,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_notrack_trackers/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_notrack_trackers/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_notrack_trackers/git/trees{/sha}",
-        "updated_at": "2019-02-12T18:18:37Z",
+        "updated_at": "2019-02-14T13:42:21Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/quidsup_notrack_trackers",
         "watchers": 1,
         "watchers_count": 1
@@ -2055,13 +2055,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/pl-host-file/pulls{/number}",
-        "pushed_at": "2019-02-12T15:55:22Z",
+        "pushed_at": "2019-02-14T13:44:56Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/pl-host-file/releases{/id}",
         "size": 770,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/pl-host-file.git",
@@ -2074,7 +2074,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/pl-host-file/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/pl-host-file/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/pl-host-file/git/trees{/sha}",
-        "updated_at": "2019-02-12T15:55:24Z",
+        "updated_at": "2019-02-14T13:44:59Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/pl-host-file",
         "watchers": 0,
         "watchers_count": 0
@@ -2159,13 +2159,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/malc0de.com/pulls{/number}",
-        "pushed_at": "2019-02-13T15:43:57Z",
+        "pushed_at": "2019-02-14T13:36:14Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/malc0de.com/releases{/id}",
         "size": 797,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/malc0de.com.git",
@@ -2178,7 +2178,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/malc0de.com/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/malc0de.com/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/malc0de.com/git/trees{/sha}",
-        "updated_at": "2019-02-13T15:43:59Z",
+        "updated_at": "2019-02-14T13:36:15Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/malc0de.com",
         "watchers": 0,
         "watchers_count": 0
@@ -2263,13 +2263,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/justdomains_mirror1.malwaredomains.com/pulls{/number}",
-        "pushed_at": "2019-02-12T18:02:31Z",
+        "pushed_at": "2019-02-14T13:42:52Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/justdomains_mirror1.malwaredomains.com/releases{/id}",
         "size": 90556,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/justdomains_mirror1.malwaredomains.com.git",
@@ -2282,7 +2282,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/justdomains_mirror1.malwaredomains.com/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/justdomains_mirror1.malwaredomains.com/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/justdomains_mirror1.malwaredomains.com/git/trees{/sha}",
-        "updated_at": "2019-02-12T18:02:34Z",
+        "updated_at": "2019-02-14T13:42:54Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/justdomains_mirror1.malwaredomains.com",
         "watchers": 1,
         "watchers_count": 1
@@ -2367,15 +2367,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/firehol_level1/pulls{/number}",
-        "pushed_at": "2019-02-13T17:52:37Z",
+        "pushed_at": "2019-02-14T13:34:10Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/firehol_level1/releases{/id}",
-        "size": 22430,
+        "size": 23176,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/firehol_level1.git",
         "stargazers_count": 1,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/firehol_level1/stargazers",
@@ -2386,7 +2386,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/firehol_level1/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/firehol_level1/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/firehol_level1/git/trees{/sha}",
-        "updated_at": "2019-02-13T17:52:38Z",
+        "updated_at": "2019-02-14T13:34:11Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/firehol_level1",
         "watchers": 1,
         "watchers_count": 1
@@ -2471,15 +2471,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org/pulls{/number}",
-        "pushed_at": "2019-02-13T17:47:51Z",
+        "pushed_at": "2019-02-14T13:34:33Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org/releases{/id}",
-        "size": 52342,
+        "size": 53184,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org.git",
         "stargazers_count": 1,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org/stargazers",
@@ -2490,7 +2490,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org/git/trees{/sha}",
-        "updated_at": "2019-02-13T17:47:53Z",
+        "updated_at": "2019-02-14T13:34:34Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org",
         "watchers": 1,
         "watchers_count": 1
@@ -2575,13 +2575,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/antipopads/pulls{/number}",
-        "pushed_at": "2019-02-13T15:59:56Z",
+        "pushed_at": "2019-02-14T13:35:57Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/antipopads/releases{/id}",
         "size": 12765,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/antipopads.git",
@@ -2594,7 +2594,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/antipopads/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/antipopads/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/antipopads/git/trees{/sha}",
-        "updated_at": "2019-02-13T15:59:58Z",
+        "updated_at": "2019-02-14T13:35:59Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/antipopads",
         "watchers": 1,
         "watchers_count": 1
@@ -2679,15 +2679,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock.mahakala.is/pulls{/number}",
-        "pushed_at": "2019-02-13T18:00:54Z",
+        "pushed_at": "2019-02-14T13:50:16Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock.mahakala.is/releases{/id}",
-        "size": 1081475,
+        "size": 1082775,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/adblock.mahakala.is.git",
         "stargazers_count": 1,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock.mahakala.is/stargazers",
@@ -2698,7 +2698,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock.mahakala.is/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock.mahakala.is/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock.mahakala.is/git/trees{/sha}",
-        "updated_at": "2019-02-13T18:00:57Z",
+        "updated_at": "2019-02-14T13:50:19Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock.mahakala.is",
         "watchers": 1,
         "watchers_count": 1
@@ -2783,13 +2783,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock-nocoin-list/pulls{/number}",
-        "pushed_at": "2019-02-12T15:23:48Z",
+        "pushed_at": "2019-02-14T13:45:14Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock-nocoin-list/releases{/id}",
         "size": 876,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/adblock-nocoin-list.git",
@@ -2802,7 +2802,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock-nocoin-list/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock-nocoin-list/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock-nocoin-list/git/trees{/sha}",
-        "updated_at": "2019-02-12T15:23:49Z",
+        "updated_at": "2019-02-14T13:45:15Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/adblock-nocoin-list",
         "watchers": 0,
         "watchers_count": 0
@@ -2887,13 +2887,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeusTracker_abuse.ch/pulls{/number}",
-        "pushed_at": "2019-02-13T15:05:22Z",
+        "pushed_at": "2019-02-14T13:36:33Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeusTracker_abuse.ch/releases{/id}",
         "size": 917,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/ZeusTracker_abuse.ch.git",
@@ -2906,7 +2906,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeusTracker_abuse.ch/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeusTracker_abuse.ch/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeusTracker_abuse.ch/git/trees{/sha}",
-        "updated_at": "2019-02-13T15:05:23Z",
+        "updated_at": "2019-02-14T13:36:34Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeusTracker_abuse.ch",
         "watchers": 0,
         "watchers_count": 0
@@ -2991,13 +2991,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists/pulls{/number}",
-        "pushed_at": "2019-02-11T17:56:54Z",
+        "pushed_at": "2019-02-14T13:48:13Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists/releases{/id}",
         "size": 27371,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists.git",
@@ -3010,7 +3010,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists/git/trees{/sha}",
-        "updated_at": "2019-02-11T17:56:56Z",
+        "updated_at": "2019-02-14T13:48:14Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists",
         "watchers": 1,
         "watchers_count": 1
@@ -3095,13 +3095,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/YousList/pulls{/number}",
-        "pushed_at": "2019-02-12T14:56:44Z",
+        "pushed_at": "2019-02-14T13:45:29Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/YousList/releases{/id}",
         "size": 645,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/YousList.git",
@@ -3114,7 +3114,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/YousList/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/YousList/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/YousList/git/trees{/sha}",
-        "updated_at": "2019-02-12T14:56:45Z",
+        "updated_at": "2019-02-14T13:45:30Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/YousList",
         "watchers": 0,
         "watchers_count": 0
@@ -3199,13 +3199,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spam404/pulls{/number}",
-        "pushed_at": "2019-02-12T16:48:16Z",
+        "pushed_at": "2019-02-14T13:43:36Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spam404/releases{/id}",
         "size": 29099,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Spam404.git",
@@ -3218,7 +3218,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spam404/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spam404/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spam404/git/trees{/sha}",
-        "updated_at": "2019-02-12T16:48:18Z",
+        "updated_at": "2019-02-14T13:43:37Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spam404",
         "watchers": 3,
         "watchers_count": 3
@@ -3303,13 +3303,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_uponit.com_adservers/pulls{/number}",
-        "pushed_at": "2019-02-12T14:41:24Z",
+        "pushed_at": "2019-02-14T13:45:43Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_uponit.com_adservers/releases{/id}",
         "size": 565,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/SMed79_uponit.com_adservers.git",
@@ -3322,7 +3322,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_uponit.com_adservers/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_uponit.com_adservers/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_uponit.com_adservers/git/trees{/sha}",
-        "updated_at": "2019-02-12T14:41:25Z",
+        "updated_at": "2019-02-14T13:45:44Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_uponit.com_adservers",
         "watchers": 0,
         "watchers_count": 0
@@ -3407,13 +3407,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_parkingcrew.com/pulls{/number}",
-        "pushed_at": "2019-02-12T18:07:06Z",
+        "pushed_at": "2019-02-14T13:42:35Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_parkingcrew.com/releases{/id}",
         "size": 27409,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/smed79_parkingcrew.com.git",
@@ -3426,7 +3426,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_parkingcrew.com/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_parkingcrew.com/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_parkingcrew.com/git/trees{/sha}",
-        "updated_at": "2019-02-12T18:07:08Z",
+        "updated_at": "2019-02-14T13:42:37Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_parkingcrew.com",
         "watchers": 1,
         "watchers_count": 1
@@ -3511,13 +3511,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_hilltopads_adservers/pulls{/number}",
-        "pushed_at": "2019-02-13T14:27:29Z",
+        "pushed_at": "2019-02-14T13:36:53Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_hilltopads_adservers/releases{/id}",
         "size": 749,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/SMed79_hilltopads_adservers.git",
@@ -3530,7 +3530,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_hilltopads_adservers/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_hilltopads_adservers/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_hilltopads_adservers/git/trees{/sha}",
-        "updated_at": "2019-02-13T14:27:31Z",
+        "updated_at": "2019-02-14T13:36:54Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_hilltopads_adservers",
         "watchers": 0,
         "watchers_count": 0
@@ -3615,13 +3615,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_assorted/pulls{/number}",
-        "pushed_at": "2019-02-13T14:25:11Z",
+        "pushed_at": "2019-02-14T13:37:18Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_assorted/releases{/id}",
         "size": 461,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/SMed79_assorted.git",
@@ -3634,7 +3634,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_assorted/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_assorted/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_assorted/git/trees{/sha}",
-        "updated_at": "2019-02-13T14:25:13Z",
+        "updated_at": "2019-02-14T13:37:19Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_assorted",
         "watchers": 0,
         "watchers_count": 0
@@ -3719,13 +3719,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_admeasures_adservers/pulls{/number}",
-        "pushed_at": "2019-02-13T14:08:50Z",
+        "pushed_at": "2019-02-14T13:38:10Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_admeasures_adservers/releases{/id}",
         "size": 1083,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/SMed79_admeasures_adservers.git",
@@ -3738,7 +3738,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_admeasures_adservers/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_admeasures_adservers/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_admeasures_adservers/git/trees{/sha}",
-        "updated_at": "2019-02-13T14:08:52Z",
+        "updated_at": "2019-02-14T13:38:11Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SMed79_admeasures_adservers",
         "watchers": 0,
         "watchers_count": 0
@@ -3823,15 +3823,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Michael_Trimms_Hosts/pulls{/number}",
-        "pushed_at": "2019-02-13T17:49:15Z",
+        "pushed_at": "2019-02-14T13:33:52Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Michael_Trimms_Hosts/releases{/id}",
-        "size": 79446,
+        "size": 77785,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Michael_Trimms_Hosts.git",
         "stargazers_count": 0,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Michael_Trimms_Hosts/stargazers",
@@ -3842,7 +3842,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Michael_Trimms_Hosts/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Michael_Trimms_Hosts/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Michael_Trimms_Hosts/git/trees{/sha}",
-        "updated_at": "2019-02-13T17:49:17Z",
+        "updated_at": "2019-02-14T13:33:54Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Michael_Trimms_Hosts",
         "watchers": 0,
         "watchers_count": 0
@@ -3927,13 +3927,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/lightswitch05_hosts_ads-and-tracking-extended/pulls{/number}",
-        "pushed_at": "2019-02-13T14:24:56Z",
+        "pushed_at": "2019-02-14T14:02:40Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/lightswitch05_hosts_ads-and-tracking-extended/releases{/id}",
         "size": 17803,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/lightswitch05_hosts_ads-and-tracking-extended.git",
@@ -3946,7 +3946,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/lightswitch05_hosts_ads-and-tracking-extended/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/lightswitch05_hosts_ads-and-tracking-extended/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/lightswitch05_hosts_ads-and-tracking-extended/git/trees{/sha}",
-        "updated_at": "2019-02-13T14:24:58Z",
+        "updated_at": "2019-02-14T14:02:42Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/lightswitch05_hosts_ads-and-tracking-extended",
         "watchers": 0,
         "watchers_count": 0
@@ -4031,13 +4031,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_popads_adservers/pulls{/number}",
-        "pushed_at": "2019-02-12T21:11:07Z",
+        "pushed_at": "2019-02-14T13:41:10Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_popads_adservers/releases{/id}",
         "size": 3289,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/smed79_popads_adservers.git",
@@ -4050,7 +4050,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_popads_adservers/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_popads_adservers/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_popads_adservers/git/trees{/sha}",
-        "updated_at": "2019-02-12T21:11:09Z",
+        "updated_at": "2019-02-14T13:41:12Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_popads_adservers",
         "watchers": 0,
         "watchers_count": 0
@@ -4135,15 +4135,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-High/pulls{/number}",
-        "pushed_at": "2019-02-12T01:28:52Z",
+        "pushed_at": "2019-02-14T13:33:02Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-High/releases{/id}",
-        "size": 1016,
+        "size": 1050,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-High.git",
         "stargazers_count": 0,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-High/stargazers",
@@ -4154,7 +4154,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-High/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-High/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-High/git/trees{/sha}",
-        "updated_at": "2019-02-12T01:28:54Z",
+        "updated_at": "2019-02-14T13:33:04Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-High",
         "watchers": 0,
         "watchers_count": 0
@@ -4239,13 +4239,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-Medium/pulls{/number}",
-        "pushed_at": "2019-02-13T01:09:44Z",
+        "pushed_at": "2019-02-14T14:03:20Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-Medium/releases{/id}",
         "size": 1078,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-Medium.git",
@@ -4258,7 +4258,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-Medium/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-Medium/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-Medium/git/trees{/sha}",
-        "updated_at": "2019-02-13T01:09:45Z",
+        "updated_at": "2019-02-14T14:03:22Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List-Medium",
         "watchers": 0,
         "watchers_count": 0
@@ -4343,13 +4343,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_propellerads_adservers/pulls{/number}",
-        "pushed_at": "2019-02-12T21:07:30Z",
+        "pushed_at": "2019-02-14T13:41:33Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_propellerads_adservers/releases{/id}",
         "size": 600,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/smed79_propellerads_adservers.git",
@@ -4362,7 +4362,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_propellerads_adservers/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_propellerads_adservers/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_propellerads_adservers/git/trees{/sha}",
-        "updated_at": "2019-02-12T21:07:31Z",
+        "updated_at": "2019-02-14T13:41:35Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_propellerads_adservers",
         "watchers": 0,
         "watchers_count": 0
@@ -4447,15 +4447,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_blocklist_facebook/pulls{/number}",
-        "pushed_at": "2019-02-12T19:47:59Z",
+        "pushed_at": "2019-02-14T13:34:48Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_blocklist_facebook/releases{/id}",
-        "size": 1082,
+        "size": 875,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/smed79_blocklist_facebook.git",
         "stargazers_count": 0,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_blocklist_facebook/stargazers",
@@ -4466,7 +4466,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_blocklist_facebook/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_blocklist_facebook/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_blocklist_facebook/git/trees{/sha}",
-        "updated_at": "2019-02-12T19:48:01Z",
+        "updated_at": "2019-02-14T13:34:49Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_blocklist_facebook",
         "watchers": 0,
         "watchers_count": 0
@@ -4551,13 +4551,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spotify-Ad-free/pulls{/number}",
-        "pushed_at": "2019-01-15T21:08:33Z",
+        "pushed_at": "2019-02-14T13:50:12Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spotify-Ad-free/releases{/id}",
         "size": 123,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Spotify-Ad-free.git",
@@ -4570,7 +4570,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spotify-Ad-free/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spotify-Ad-free/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spotify-Ad-free/git/trees{/sha}",
-        "updated_at": "2019-01-15T21:08:35Z",
+        "updated_at": "2019-02-14T13:50:14Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Spotify-Ad-free",
         "watchers": 0,
         "watchers_count": 0
@@ -4655,15 +4655,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/anudeepND_blacklist_ad_server/pulls{/number}",
-        "pushed_at": "2019-02-13T17:59:02Z",
+        "pushed_at": "2019-02-14T13:33:22Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/anudeepND_blacklist_ad_server/releases{/id}",
-        "size": 57186,
+        "size": 59816,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/anudeepND_blacklist_ad_server.git",
         "stargazers_count": 1,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/anudeepND_blacklist_ad_server/stargazers",
@@ -4674,7 +4674,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/anudeepND_blacklist_ad_server/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/anudeepND_blacklist_ad_server/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/anudeepND_blacklist_ad_server/git/trees{/sha}",
-        "updated_at": "2019-02-13T17:59:04Z",
+        "updated_at": "2019-02-14T13:33:24Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/anudeepND_blacklist_ad_server",
         "watchers": 1,
         "watchers_count": 1
@@ -4759,13 +4759,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/hpHosts---GRM/pulls{/number}",
-        "pushed_at": "2019-02-13T08:48:35Z",
+        "pushed_at": "2019-02-14T14:00:51Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/hpHosts---GRM/releases{/id}",
         "size": 595,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/hpHosts---GRM.git",
@@ -4778,7 +4778,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/hpHosts---GRM/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/hpHosts---GRM/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/hpHosts---GRM/git/trees{/sha}",
-        "updated_at": "2019-02-13T08:48:37Z",
+        "updated_at": "2019-02-14T14:00:53Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/hpHosts---GRM",
         "watchers": 0,
         "watchers_count": 0
@@ -4863,13 +4863,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_optional/pulls{/number}",
-        "pushed_at": "2019-02-12T22:13:24Z",
+        "pushed_at": "2019-02-14T13:40:21Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_optional/releases{/id}",
         "size": 378,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_optional.git",
@@ -4882,7 +4882,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_optional/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_optional/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_optional/git/trees{/sha}",
-        "updated_at": "2019-02-12T22:13:26Z",
+        "updated_at": "2019-02-14T13:40:22Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_optional",
         "watchers": 0,
         "watchers_count": 0
@@ -4967,13 +4967,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_browser/pulls{/number}",
-        "pushed_at": "2019-02-13T12:41:28Z",
+        "pushed_at": "2019-02-14T13:38:53Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_browser/releases{/id}",
         "size": 2903,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_browser.git",
@@ -4986,7 +4986,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_browser/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_browser/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_browser/git/trees{/sha}",
-        "updated_at": "2019-02-13T12:41:30Z",
+        "updated_at": "2019-02-14T13:38:55Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_browser",
         "watchers": 1,
         "watchers_count": 1
@@ -5071,13 +5071,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MinimalHostsBlocker/pulls{/number}",
-        "pushed_at": "2019-02-12T21:25:30Z",
+        "pushed_at": "2019-02-14T13:40:56Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MinimalHostsBlocker/releases{/id}",
         "size": 881,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/MinimalHostsBlocker.git",
@@ -5090,7 +5090,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MinimalHostsBlocker/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MinimalHostsBlocker/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MinimalHostsBlocker/git/trees{/sha}",
-        "updated_at": "2019-02-12T21:25:32Z",
+        "updated_at": "2019-02-14T13:40:57Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/MinimalHostsBlocker",
         "watchers": 0,
         "watchers_count": 0
@@ -5175,13 +5175,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_getadmiral.com/pulls{/number}",
-        "pushed_at": "2019-02-13T04:49:32Z",
+        "pushed_at": "2019-02-14T13:39:45Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_getadmiral.com/releases{/id}",
         "size": 455,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/smed79_getadmiral.com.git",
@@ -5194,7 +5194,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_getadmiral.com/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_getadmiral.com/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_getadmiral.com/git/trees{/sha}",
-        "updated_at": "2019-02-13T04:49:33Z",
+        "updated_at": "2019-02-14T13:39:47Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/smed79_getadmiral.com",
         "watchers": 0,
         "watchers_count": 0
@@ -5279,15 +5279,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Phishing.Database/pulls{/number}",
-        "pushed_at": "2019-02-12T02:45:24Z",
+        "pushed_at": "2019-02-14T13:44:38Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Phishing.Database/releases{/id}",
-        "size": 365915,
+        "size": 368113,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Phishing.Database.git",
         "stargazers_count": 0,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Phishing.Database/stargazers",
@@ -5298,7 +5298,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Phishing.Database/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Phishing.Database/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Phishing.Database/git/trees{/sha}",
-        "updated_at": "2019-02-12T02:45:27Z",
+        "updated_at": "2019-02-14T13:44:40Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Phishing.Database",
         "watchers": 0,
         "watchers_count": 0
@@ -5383,13 +5383,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/pulls{/number}",
-        "pushed_at": "2019-02-12T03:26:03Z",
+        "pushed_at": "2019-02-14T13:47:40Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/releases{/id}",
         "size": 5940,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses.git",
@@ -5402,7 +5402,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/git/trees{/sha}",
-        "updated_at": "2019-02-12T03:26:04Z",
+        "updated_at": "2019-02-14T13:47:42Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses",
         "watchers": 0,
         "watchers_count": 0
@@ -5487,13 +5487,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Global-Advert-Servers-Blocklist---Personal-Edition/pulls{/number}",
-        "pushed_at": "2019-01-15T20:32:47Z",
+        "pushed_at": "2019-02-14T13:50:29Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Global-Advert-Servers-Blocklist---Personal-Edition/releases{/id}",
         "size": 47920,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Global-Advert-Servers-Blocklist---Personal-Edition.git",
@@ -5506,7 +5506,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Global-Advert-Servers-Blocklist---Personal-Edition/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Global-Advert-Servers-Blocklist---Personal-Edition/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Global-Advert-Servers-Blocklist---Personal-Edition/git/trees{/sha}",
-        "updated_at": "2019-01-15T20:32:49Z",
+        "updated_at": "2019-02-14T13:50:32Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Global-Advert-Servers-Blocklist---Personal-Edition",
         "watchers": 0,
         "watchers_count": 0
@@ -5591,13 +5591,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites/pulls{/number}",
-        "pushed_at": "2019-02-12T19:40:08Z",
+        "pushed_at": "2019-02-14T13:41:48Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites/releases{/id}",
         "size": 9868,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites.git",
@@ -5610,7 +5610,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites/git/trees{/sha}",
-        "updated_at": "2019-02-12T19:40:09Z",
+        "updated_at": "2019-02-14T13:41:49Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites",
         "watchers": 2,
         "watchers_count": 2
@@ -5695,13 +5695,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List/pulls{/number}",
-        "pushed_at": "2019-02-12T15:56:16Z",
+        "pushed_at": "2019-02-14T13:44:09Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List/releases{/id}",
         "size": 39164,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List.git",
@@ -5714,7 +5714,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List/git/trees{/sha}",
-        "updated_at": "2019-02-12T15:56:17Z",
+        "updated_at": "2019-02-14T13:44:11Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/DShield.org-Suspicious-Domain-List",
         "watchers": 0,
         "watchers_count": 0
@@ -5799,13 +5799,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BarbBlock-filter-list/pulls{/number}",
-        "pushed_at": "2019-02-10T21:07:41Z",
+        "pushed_at": "2019-02-14T13:48:31Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BarbBlock-filter-list/releases{/id}",
         "size": 550,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/BarbBlock-filter-list.git",
@@ -5818,7 +5818,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BarbBlock-filter-list/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BarbBlock-filter-list/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BarbBlock-filter-list/git/trees{/sha}",
-        "updated_at": "2019-02-10T21:07:43Z",
+        "updated_at": "2019-02-14T13:48:32Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BarbBlock-filter-list",
         "watchers": 2,
         "watchers_count": 2
@@ -5903,13 +5903,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist/pulls{/number}",
-        "pushed_at": "2019-02-10T20:32:25Z",
+        "pushed_at": "2019-02-14T13:49:04Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist/releases{/id}",
         "size": 747,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist.git",
@@ -5922,7 +5922,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist/git/trees{/sha}",
-        "updated_at": "2019-02-10T20:32:27Z",
+        "updated_at": "2019-02-14T13:49:05Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist",
         "watchers": 1,
         "watchers_count": 1
@@ -6007,13 +6007,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.shallalist.de/pulls{/number}",
-        "pushed_at": "2019-02-10T10:59:50Z",
+        "pushed_at": "2019-02-14T13:49:38Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.shallalist.de/releases{/id}",
         "size": 2123958,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/www.shallalist.de.git",
@@ -6026,7 +6026,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.shallalist.de/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.shallalist.de/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.shallalist.de/git/trees{/sha}",
-        "updated_at": "2019-02-10T11:00:03Z",
+        "updated_at": "2019-02-14T13:49:40Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.shallalist.de",
         "watchers": 1,
         "watchers_count": 1
@@ -6111,15 +6111,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.blocklist.de/pulls{/number}",
-        "pushed_at": "2019-02-13T17:51:30Z",
+        "pushed_at": "2019-02-14T13:45:29Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.blocklist.de/releases{/id}",
-        "size": 123089,
+        "size": 120498,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/www.blocklist.de.git",
         "stargazers_count": 0,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.blocklist.de/stargazers",
@@ -6130,7 +6130,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.blocklist.de/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.blocklist.de/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.blocklist.de/git/trees{/sha}",
-        "updated_at": "2019-02-13T17:51:32Z",
+        "updated_at": "2019-02-14T13:45:31Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/www.blocklist.de",
         "watchers": 0,
         "watchers_count": 0
@@ -6215,13 +6215,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/pulls{/number}",
-        "pushed_at": "2019-02-12T21:31:30Z",
+        "pushed_at": "2019-02-14T13:40:40Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/releases{/id}",
         "size": 595,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites.git",
@@ -6234,7 +6234,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/git/trees{/sha}",
-        "updated_at": "2019-02-12T21:31:31Z",
+        "updated_at": "2019-02-14T13:40:42Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites",
         "watchers": 0,
         "watchers_count": 0
@@ -6319,13 +6319,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SSH_attackers_probers/pulls{/number}",
-        "pushed_at": "2019-02-10T20:55:51Z",
+        "pushed_at": "2019-02-14T13:48:48Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SSH_attackers_probers/releases{/id}",
         "size": 1724,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/SSH_attackers_probers.git",
@@ -6338,7 +6338,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SSH_attackers_probers/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SSH_attackers_probers/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SSH_attackers_probers/git/trees{/sha}",
-        "updated_at": "2019-02-10T20:55:53Z",
+        "updated_at": "2019-02-14T13:48:50Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/SSH_attackers_probers",
         "watchers": 0,
         "watchers_count": 0
@@ -6423,15 +6423,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Mitchell_Krog_Snooping_IPS/pulls{/number}",
-        "pushed_at": "2019-02-10T19:28:39Z",
+        "pushed_at": "2019-02-14T13:35:06Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Mitchell_Krog_Snooping_IPS/releases{/id}",
-        "size": 345,
+        "size": 350,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Mitchell_Krog_Snooping_IPS.git",
         "stargazers_count": 0,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Mitchell_Krog_Snooping_IPS/stargazers",
@@ -6442,7 +6442,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Mitchell_Krog_Snooping_IPS/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Mitchell_Krog_Snooping_IPS/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Mitchell_Krog_Snooping_IPS/git/trees{/sha}",
-        "updated_at": "2019-02-10T19:28:40Z",
+        "updated_at": "2019-02-14T13:35:08Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Mitchell_Krog_Snooping_IPS",
         "watchers": 0,
         "watchers_count": 0
@@ -6527,13 +6527,13 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Cyveillance_Blocks/pulls{/number}",
-        "pushed_at": "2019-02-13T04:59:24Z",
+        "pushed_at": "2019-02-14T13:39:23Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Cyveillance_Blocks/releases{/id}",
         "size": 236,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/Cyveillance_Blocks.git",
@@ -6546,7 +6546,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Cyveillance_Blocks/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Cyveillance_Blocks/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Cyveillance_Blocks/git/trees{/sha}",
-        "updated_at": "2019-02-13T04:59:26Z",
+        "updated_at": "2019-02-14T13:39:24Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/Cyveillance_Blocks",
         "watchers": 1,
         "watchers_count": 1
@@ -6631,15 +6631,15 @@
             "url": "https://api.github.com/users/Ultimate-Hosts-Blacklist"
         },
         "permissions": {
-            "admin": true,
+            "admin": false,
             "pull": true,
-            "push": true
+            "push": false
         },
         "private": false,
         "pulls_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5/pulls{/number}",
-        "pushed_at": "2019-02-11T18:55:22Z",
+        "pushed_at": "2019-02-14T13:43:31Z",
         "releases_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5/releases{/id}",
-        "size": 123568,
+        "size": 132123,
         "ssh_url": "git@github.com:Ultimate-Hosts-Blacklist/BadIPs.com_Level_5.git",
         "stargazers_count": 0,
         "stargazers_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5/stargazers",
@@ -6650,7 +6650,7 @@
         "tags_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5/tags",
         "teams_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5/teams",
         "trees_url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5/git/trees{/sha}",
-        "updated_at": "2019-02-11T18:55:24Z",
+        "updated_at": "2019-02-14T13:43:33Z",
         "url": "https://api.github.com/repos/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5",
         "watchers": 0,
         "watchers_count": 0

@@ -31,8 +31,7 @@ from zipfile import ZipFile
 from PyFunceble import ipv4_syntax_check
 from PyFunceble import syntax_check as domain_syntax_check
 from requests import get
-
-from whitelisting import Whitelist
+from ultimate_hosts_blacklist_the_whitelist import clean_list_with_official_whitelist
 
 
 class Settings:  # pylint: disable=too-few-public-methods
@@ -960,7 +959,7 @@ class Clean:  # pylint: disable=too-few-public-methods
             "iana-domains-db.json",
             ".PyFunceble.yaml",
             ".PyFunceble_production.yaml",
-            'dir_structure.json'
+            "dir_structure.json",
         ]
 
         for element in to_delete:
@@ -1017,12 +1016,12 @@ class UpdateThisRepository:
         """
 
         if isinstance(to_clean, str):
-            return Helpers.List(Whitelist(string=to_clean).get().split("\n")).format()
+            return Helpers.List(
+                clean_list_with_official_whitelist(to_clean.split("\n"))
+            ).format()
 
         if isinstance(to_clean, list):
-            return Helpers.List(
-                Whitelist(string="\n".join(to_clean)).get().split("\n")
-            ).format()
+            return Helpers.List(clean_list_with_official_whitelist(to_clean)).format()
         raise Exception("Unknown type: `%s`" % type(to_clean))
 
     def get_repos_lists(self, repo_information, manager_list):
