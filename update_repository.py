@@ -28,8 +28,8 @@ from tarfile import open as tarfile_open
 from time import strftime
 from zipfile import ZipFile
 
-from PyFunceble import ipv4_syntax_check
-from PyFunceble import syntax_check as domain_syntax_check
+from PyFunceble import test as domain_availability_check
+from PyFunceble.check import Check
 from requests import get
 from ultimate_hosts_blacklist_the_whitelist import clean_list_with_official_whitelist
 
@@ -580,14 +580,9 @@ class Compress:  # pylint: disable=too-few-public-methods
         ]
 
         for file in to_compresss:
-            compress_into_zip = "%s.zip" % file
             compress_into_tar_gz = "%s.tar.gz" % file
 
             print("\n")
-            print("Compression of %s into %s" % (file, compress_into_zip), end=" ")
-            Helpers.File(file).zip_compress(compress_into_zip)
-            print(Settings.done)
-
             print("Compression of %s into %s" % (file, compress_into_tar_gz), end=" ")
             Helpers.File(file).tar_gz_compress(compress_into_tar_gz)
             print(Settings.done)
@@ -1065,14 +1060,22 @@ class UpdateThisRepository:
         Given a cleaned list, we separate domains from IP.
         """
 
-        domains = [x for x in set(cleaned_list) if x and domain_syntax_check(x)]
-        domains.extend(["www.%s" % x for x in domains if not x.startswith("www.")])
+        domains = [x for x in set(cleaned_list) if x and Check(x).is_domain_valid()]
+        domains.extend(
+            [
+                "www.%s" % x
+                for x in domains
+                if not x.startswith("www.")
+                and not Check(x).is_subdomain()
+                and domain_availability_check("www.{}".format(x)).lower() == "active"
+            ]
+        )
         domains.extend([x[4:] for x in domains if x.startswith("www.")])
         temp = set(cleaned_list) - set(domains)
 
         return (
             Helpers.List(domains).format(),
-            Helpers.List([x for x in temp if x and ipv4_syntax_check(x)]).format(),
+            Helpers.List([x for x in temp if x and Check(x).is_ip_valid()]).format(),
         )
 
     def process(self):
