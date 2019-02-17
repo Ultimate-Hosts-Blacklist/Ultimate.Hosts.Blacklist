@@ -28,8 +28,8 @@ from tarfile import open as tarfile_open
 from time import strftime
 from zipfile import ZipFile
 
+from PyFunceble import ipv4_syntax_check, is_subdomain, syntax_check
 from PyFunceble import test as domain_availability_check
-from PyFunceble.check import Check
 from requests import get
 from ultimate_hosts_blacklist_the_whitelist import clean_list_with_official_whitelist
 
@@ -1060,13 +1060,13 @@ class UpdateThisRepository:
         Given a cleaned list, we separate domains from IP.
         """
 
-        domains = [x for x in set(cleaned_list) if x and Check(x).is_domain_valid()]
+        domains = [x for x in set(cleaned_list) if x and syntax_check(x)]
         domains.extend(
             [
                 "www.%s" % x
                 for x in domains
                 if not x.startswith("www.")
-                and not Check(x).is_subdomain()
+                and not is_subdomain(x)
                 and domain_availability_check("www.{}".format(x)).lower() == "active"
             ]
         )
@@ -1075,7 +1075,7 @@ class UpdateThisRepository:
 
         return (
             Helpers.List(domains).format(),
-            Helpers.List([x for x in temp if x and Check(x).is_ip_valid()]).format(),
+            Helpers.List([x for x in temp if x and ipv4_syntax_check(x)]).format(),
         )
 
     def process(self):
