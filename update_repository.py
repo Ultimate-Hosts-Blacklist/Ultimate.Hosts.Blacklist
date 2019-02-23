@@ -955,6 +955,7 @@ class Clean:  # pylint: disable=too-few-public-methods
             ".PyFunceble.yaml",
             ".PyFunceble_production.yaml",
             "dir_structure.json",
+            "whois_db"
         ]
 
         for element in to_delete:

@@ -33,7 +33,7 @@ install:
   - pip3 install --upgrade pip
   - pip3 install requests
   - pip3 install colorama
-  - pip3 install PyFunceble
+  - pip3 install PyFunceble-dev
   - pip3 install ultimate_hosts_blacklist_the_whitelist
 
 script:
