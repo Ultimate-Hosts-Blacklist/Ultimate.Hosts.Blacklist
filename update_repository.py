@@ -29,7 +29,6 @@ from time import strftime
 from zipfile import ZipFile
 
 from PyFunceble import ipv4_syntax_check, is_subdomain, syntax_check
-from PyFunceble import test as domain_availability_check
 from requests import get
 from ultimate_hosts_blacklist_the_whitelist import clean_list_with_official_whitelist
 
@@ -1066,12 +1065,13 @@ class UpdateThisRepository:
             [
                 "www.%s" % x
                 for x in domains
-                if not x.startswith("www.")
-                and not is_subdomain(x)
-                and domain_availability_check("www.{}".format(x)).lower() == "active"
+                if not x.startswith("www.") and not is_subdomain(x)
             ]
         )
-        domains.extend([x[4:] for x in domains if x.startswith("www.")])
+        domains.extend(
+            [x[4:] for x in domains if x.startswith("www.") and x[4:] not in domains]
+        )
+
         temp = set(cleaned_list) - set(domains)
 
         return (
