@@ -16,6 +16,7 @@ Contributors:
 
 # pylint: disable=too-many-lines, bad-continuation
 
+from collections import OrderedDict
 from json import decoder, dump, loads
 from multiprocessing import Manager, Process
 from os import environ, path, remove
@@ -635,10 +636,12 @@ class Helpers:  # pylint: disable=too-few-public-methods
             Return a well formated list. Basicaly, it's sort a list and remove duplicate.
             """
 
+            without_duplicate = list(OrderedDict.fromkeys(self.main_list))
+
             try:
-                return sorted(list(set(self.main_list)), key=str.lower)
+                return sorted(without_duplicate, key=str.lower)
             except TypeError:
-                return self.main_list
+                return without_duplicate
 
     class File:  # pylint: disable=too-few-public-methods
         """
@@ -1109,10 +1112,18 @@ class UpdateThisRepository:
 
                 del domains, ips
 
+        print("Deletion of duplicate domains.", end=" ")
         Settings.domains = Helpers.List(Settings.domains).format()
-        Settings.ips = Helpers.List(Settings.ips).format()
+        print(Settings.done)
 
+        print("Deletion of duplicate IPs.", end=" ")
+        Settings.ips = Helpers.List(Settings.ips).format()
+        print(Settings.done)
+
+        print("Saving the list of repositories we worked with.", end=" ")
         Helpers.Dict(self.repos).to_json(Settings.repositories_file)
+        print(Settings.done)
+
         del Settings.repositories
 
         Generate()
