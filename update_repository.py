@@ -17,10 +17,12 @@ Contributors:
 # pylint: disable=too-many-lines, bad-continuation
 
 from collections import OrderedDict
+from itertools import chain, filterfalse
 from json import decoder, dump, loads
 from multiprocessing import Manager, Process
-from os import environ, path, remove
+from os import environ, makedirs, path, remove
 from os import sep as directory_separator
+from os import walk
 from re import compile as comp
 from re import escape
 from re import sub as substrings
@@ -29,7 +31,7 @@ from tarfile import open as tarfile_open
 from time import strftime
 from zipfile import ZipFile
 
-from PyFunceble import ipv4_syntax_check, is_subdomain, syntax_check
+from PyFunceble import ipv4_syntax_check, syntax_check
 from requests import get
 from ultimate_hosts_blacklist_the_whitelist import clean_list_with_official_whitelist
 
@@ -50,7 +52,7 @@ class Settings:  # pylint: disable=too-few-public-methods
 
     # This variable set the GitHub repository slug.
     #
-    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!for
     github_org_slug = "Ultimate-Hosts-Blacklist"
 
     # This variable set the github api url.
@@ -117,25 +119,45 @@ class Settings:  # pylint: disable=too-few-public-methods
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     templates_directory = "templates" + directory_separator
 
+    # This variable set the directory which will contain the dotted formatted files.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    dotted_directory = "domains-dotted-format"
+
     # This variable set the name of the dotted domains file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    dotted_file = "domains-dotted-format.list"
+    dotted_file = "domains-dotted-format{}.list"
+
+    # This variable set the directory which will contain the plain text formatted domains files.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    plain_text_domains_directory = "domains"
 
     # This variable set the name of the plain text domains file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    plain_text_domains_file = "domains.list"
+    plain_text_domains_file = "domains{}.list"
+
+    # This variable set the directory which will contain the plain text formatted ips files.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    plain_text_ips_directory = "ips"
 
     # This variable set the name of the plain text ips file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    plain_text_ips_file = "ips.list"
+    plain_text_ips_file = "ips{}.list"
+
+    # This variable set the directory which will contain the hosts.deny formatted files.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    hosts_deny_directory = "hosts.deny"
 
     # This variable set the name of the hosts.deny file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    hosts_deny_file = "hosts.deny"
+    hosts_deny_file = "hosts{}.deny"
 
     # This variable set the name of the file we are going
     # to use to save GitHub eTags.
@@ -154,30 +176,45 @@ class Settings:  # pylint: disable=too-few-public-methods
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     hosts_deny_template = templates_directory + "hostsdeny.template"
 
+    # This variable set the directory which will contain the superhosts.deny formatted files.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    superhosts_deny_directory = "superhosts.deny"
+
     # This variable set the name of the superhosts.deny file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    superhosts_deny_file = "superhosts.deny"
+    superhosts_deny_file = "superhosts{}.deny"
 
     # This variable set the name of the hosts.deny template.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     superhosts_deny_template = templates_directory + "superhostsdeny.template"
 
+    # This variable set the directory which will contain the hosts.windows formatted files.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    hosts_windows_directory = "hosts.windows"
+
     # This variable set the name of the hosts.windows file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    hosts_windows_file = "hosts.windows"
+    hosts_windows_file = "hosts{}.windows"
 
     # This variable set the name of the hosts.windows template.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
     hosts_windows_template = templates_directory + "hosts.windows.template"
 
+    # This variable set the directory which will contain the hosts formatted files.
+    #
+    # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
+    hosts_unix_directory = "hosts"
+
     # This variable set the name of the hosts file.
     #
     # Note: DO NOT TOUCH UNLESS YOU KNOW WHAT IT MEANS!
-    hosts_unix_file = "hosts"
+    hosts_unix_file = "hosts{}"
 
     # This variable set the name of the hosts template.
     #
@@ -380,6 +417,8 @@ class Generate:
     This class generate what we need.
     """
 
+    max_size = 5_242_880
+
     def __init__(self):
         print("\n")
         self.dotted_format()
@@ -393,16 +432,64 @@ class Generate:
         print("\n")
 
     @classmethod
+    def next_file(
+        cls,
+        directory_name,
+        file_name,
+        format_to_apply,
+        subject,
+        template=None,
+        endline=None,
+    ):  # pylint:disable=too-many-arguments, too-many-locals
+        """
+        Generate the next file.
+        """
+
+        if path.isdir(directory_name):
+            for root, _, files in walk(directory_name):
+                for file in files:
+                    Helpers.File(f"{root}{directory_separator}{file}").delete()
+        else:
+            makedirs(directory_name)
+
+        i = 0
+        element_index = 0
+
+        while True:
+            broken = False
+            destination = f"{directory_name}{directory_separator}{file_name.format(i)}"
+
+            print(f"Generation of {destination}", end=" ")
+            with open(destination, "w", encoding="utf-8") as file:
+                if not i and template:
+                    file.write(template)
+
+                for element in chain(subject[element_index:]):
+                    file.write(f"{format_to_apply}\n".format(element))
+                    element_index += 1
+
+                    if file.tell() >= cls.max_size:
+                        i += 1
+                        print(Settings.done)
+                        broken = True
+                        break
+                if broken:
+                    continue
+
+                if endline:
+                    file.write(endline)
+                print(Settings.done)
+            break
+
+    @classmethod
     def dotted_format(cls):
         """
         This method will generate the dotted domains file.
         """
 
-        data_to_write = "." + "\n.".join(Settings.domains)
-
-        print("Generation of %s" % Settings.dotted_file, end=" ")
-        Helpers.File(Settings.dotted_file).write(data_to_write, overwrite=True)
-        print(Settings.done)
+        cls.next_file(
+            Settings.dotted_directory, Settings.dotted_file, ".{}", Settings.domains
+        )
 
     @classmethod
     def plain_text_domain_format(cls):
@@ -410,13 +497,12 @@ class Generate:
         This method will generate the file with only plain domain.
         """
 
-        data_to_write = "\n".join(Settings.domains)
-
-        print("Generation of %s" % Settings.plain_text_domains_file, end=" ")
-        Helpers.File(Settings.plain_text_domains_file).write(
-            data_to_write, overwrite=True
+        cls.next_file(
+            Settings.plain_text_domains_directory,
+            Settings.plain_text_domains_file,
+            "{}",
+            Settings.domains,
         )
-        print(Settings.done)
 
     @classmethod
     def plain_text_ips_format(cls):
@@ -424,11 +510,12 @@ class Generate:
         This method will generate the file with only plain domain.
         """
 
-        data_to_write = "\n".join(Settings.ips)
-
-        print("Generation of %s" % Settings.plain_text_ips_file, end=" ")
-        Helpers.File(Settings.plain_text_ips_file).write(data_to_write, overwrite=True)
-        print(Settings.done)
+        cls.next_file(
+            Settings.plain_text_ips_directory,
+            Settings.plain_text_ips_file,
+            "{}",
+            Settings.ips,
+        )
 
     @classmethod
     def hosts_deny_format(cls):
@@ -445,15 +532,14 @@ class Generate:
             template, r"%%lenIP%%", replace_with=format(len(Settings.ips), ",d")
         ).replace()
 
-        data_to_write = "ALL: " + "\nALL: ".join(Settings.ips)
-
-        template = Helpers.Regex(
-            template, r"%%content%%", replace_with=data_to_write
-        ).replace()
-
-        print("Generation of %s" % Settings.hosts_deny_file, end=" ")
-        Helpers.File(Settings.hosts_deny_file).write(template, overwrite=True)
-        print(Settings.done)
+        cls.next_file(
+            Settings.hosts_deny_directory,
+            Settings.hosts_deny_file,
+            "ALL: {}",
+            Settings.ips,
+            template=template,
+            endline="# ##### END hosts.deny Block List # DO NOT EDIT #####",
+        )
 
     @classmethod
     def super_hosts_deny_format(cls):
@@ -473,17 +559,15 @@ class Generate:
         ).replace()
 
         hosts_ip = Settings.ips + Settings.domains
-        hosts_ip = Helpers.List(hosts_ip).format()
 
-        data_to_write = "ALL: " + "\nALL: ".join(hosts_ip)
-
-        template = Helpers.Regex(
-            template, r"%%content%%", replace_with=data_to_write
-        ).replace()
-
-        print("Generation of %s" % Settings.superhosts_deny_file, end=" ")
-        Helpers.File(Settings.superhosts_deny_file).write(template, overwrite=True)
-        print(Settings.done)
+        cls.next_file(
+            Settings.superhosts_deny_directory,
+            Settings.superhosts_deny_file,
+            "ALL: {}",
+            hosts_ip,
+            template=template,
+            endline="# ##### END Super hosts.deny Block List # DO NOT EDIT #####",
+        )
 
     @classmethod
     def hosts_windows_format(cls):
@@ -500,15 +584,14 @@ class Generate:
             template, r"%%lenHosts%%", replace_with=format(len(Settings.domains), ",d")
         ).replace()
 
-        data_to_write = "127.0.0.1 " + "\n127.0.0.1 ".join(Settings.domains)
-
-        template = Helpers.Regex(
-            template, r"%%content%%", replace_with=data_to_write
-        ).replace()
-
-        print("Generation of %s" % Settings.hosts_windows_file, end=" ")
-        Helpers.File(Settings.hosts_windows_file).write(template, overwrite=True)
-        print(Settings.done)
+        cls.next_file(
+            Settings.hosts_windows_directory,
+            Settings.hosts_windows_file,
+            "127.0.0.1 {}",
+            Settings.domains,
+            template=template,
+            endline="# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###",
+        )
 
     @classmethod
     def hosts_unix_format(cls):
@@ -525,15 +608,14 @@ class Generate:
             template, r"%%lenHosts%%", replace_with=format(len(Settings.domains), ",d")
         ).replace()
 
-        data_to_write = "0.0.0.0 " + "\n0.0.0.0 ".join(Settings.domains)
-
-        template = Helpers.Regex(
-            template, r"%%content%%", replace_with=data_to_write
-        ).replace()
-
-        print("Generation of %s" % Settings.hosts_unix_file, end=" ")
-        Helpers.File(Settings.hosts_unix_file).write(template, overwrite=True)
-        print(Settings.done)
+        cls.next_file(
+            Settings.hosts_unix_directory,
+            Settings.hosts_unix_file,
+            "0.0.0.0 {}",
+            Settings.domains,
+            template=template,
+            endline="# END HOSTS LIST ### DO NOT EDIT THIS LINE AT ALL ###",
+        )
 
     @classmethod
     def readme_md(cls):
@@ -983,7 +1065,7 @@ class UpdateThisRepository:
 
         result = []
 
-        for line in [x for x in lines if x]:
+        for line in filterfalse(lambda x: not x, lines):
             if not line.startswith("#"):
                 if "#" in line:
                     line = line[: line.find("#")]
@@ -1014,12 +1096,10 @@ class UpdateThisRepository:
         """
 
         if isinstance(to_clean, str):
-            return Helpers.List(
-                clean_list_with_official_whitelist(to_clean.split("\n"))
-            ).format()
+            return clean_list_with_official_whitelist(to_clean.split("\n"))
 
         if isinstance(to_clean, list):
-            return Helpers.List(clean_list_with_official_whitelist(to_clean)).format()
+            return clean_list_with_official_whitelist(to_clean)
         raise Exception("Unknown type: `%s`" % type(to_clean))
 
     def get_repos_lists(self, repo_information, manager_list):
@@ -1064,23 +1144,9 @@ class UpdateThisRepository:
         """
 
         domains = [x for x in set(cleaned_list) if x and syntax_check(x)]
-        domains.extend(
-            [
-                "www.%s" % x
-                for x in domains
-                if not x.startswith("www.") and not is_subdomain(x)
-            ]
-        )
-        domains.extend(
-            [x[4:] for x in domains if x.startswith("www.") and x[4:] not in domains]
-        )
-
         temp = set(cleaned_list) - set(domains)
 
-        return (
-            Helpers.List(domains).format(),
-            Helpers.List([x for x in temp if x and ipv4_syntax_check(x)]).format(),
-        )
+        return (domains, [x for x in temp if x and ipv4_syntax_check(x)])
 
     def process(self):
         """
@@ -1105,12 +1171,14 @@ class UpdateThisRepository:
 
             manager_list = list(manager_list)
 
-            for element in manager_list:
+            for index, element in enumerate(manager_list):
+                print("Separating domains from IPs: part {}".format(index), end=" ")
                 domains, ips = self.__separate_domains_from_ip(element)
                 Settings.domains.extend(domains)
                 Settings.ips.extend(ips)
 
                 del domains, ips
+                print(Settings.done)
 
         print("Deletion of duplicate domains.", end=" ")
         Settings.domains = Helpers.List(Settings.domains).format()
@@ -1127,7 +1195,7 @@ class UpdateThisRepository:
         del Settings.repositories
 
         Generate()
-        Compress()
+        # Compress()
         Deploy()
         Clean()
 
