@@ -33,7 +33,7 @@ from zipfile import ZipFile
 
 from PyFunceble import ipv4_syntax_check, syntax_check
 from requests import get
-from ultimate_hosts_blacklist_the_whitelist import clean_list_with_official_whitelist
+from ultimate_hosts_blacklist.whitelist import clean_list_with_official_whitelist
 
 
 class Settings:  # pylint: disable=too-few-public-methods
