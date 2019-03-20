@@ -34,6 +34,7 @@ install:
   - pip3 install ultimate-hosts-blacklist-central-repo-updater
 
 script:
+  - ultimate-hosts-blacklist-central-repo-updater --version
   - ultimate-hosts-blacklist-central-repo-updater -m
 
 notifications:
