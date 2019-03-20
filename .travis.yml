@@ -7,7 +7,7 @@ env:
     - GIT_NAME: Travis CI
     - GIT_EMAIL: mitchellkrog@gmail.com
     - TRAVIS_REPO_SLUG: mitchellkrogza/Ultimate.Hosts.Blacklist
-    - GIT_BRANCH: master
+    - GIT_BRANCH: dev
     - PYFUNCEBLE_AUTO_CONFIGURATION: PyFunceble
     - PYFUNCEBLE_OUTPUT_DIR: /tmp/
 
@@ -31,13 +31,10 @@ addons:
 
 install:
   - pip3 install --upgrade pip
-  - pip3 install requests
-  - pip3 install colorama
-  - pip3 install PyFunceble-dev
-  - pip3 install ultimate-hosts-blacklist-whitelist
+  - pip3 install ultimate-hosts-blacklist-central-repo-updater
 
 script:
-  - python3 update_repository.py
+  - ultimate-hosts-blacklist-central-repo-updater -m
 
 notifications:
   email: false
