@@ -31,13 +31,11 @@ addons:
 
 install:
   - pip3 install --upgrade pip
-  - pip3 install requests
-  - pip3 install colorama
-  - pip3 install PyFunceble-dev
-  - pip3 install ultimate-hosts-blacklist-whitelist
+  - pip3 install ultimate-hosts-blacklist-central-repo-updater
 
 script:
-  - python3 update_repository.py
+  - ultimate-hosts-blacklist-central-repo-updater --version
+  - ultimate-hosts-blacklist-central-repo-updater -m -p 60
 
 notifications:
   email: false
