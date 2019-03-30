@@ -10,10 +10,10 @@ A hosts file for use on any operating system to block bad domains out of your se
 
 ---
 
-- Version: **V1.1543.2019.03.29**
-- Total Bad Hosts in hosts file: **1,703,682**
-- Total Bad IP's in hosts.deny file: **231,677**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,935,359**
+- Version: **V1.1544.2019.03.30**
+- Total Bad Hosts in hosts file: **1,703,981**
+- Total Bad IP's in hosts.deny file: **226,964**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,930,945**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
