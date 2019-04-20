@@ -11,9 +11,9 @@ A hosts file for use on any operating system to block bad domains out of your se
 ---
 
 - Version: **V1.1565.2019.04.20**
-- Total Bad Hosts in hosts file: **1,441,702**
+- Total Bad Hosts in hosts file: **1,441,779**
 - Total Bad IP's in hosts.deny file: **227,068**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,668,770**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,668,847**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
