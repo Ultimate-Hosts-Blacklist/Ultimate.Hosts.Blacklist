@@ -1,21 +1,19 @@
-![The Ultimate Hosts File blacklist to Protect your Children, Your Family and Yourself from accessing Bad Web Sites](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-blacklist-logo.jpg)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)<br/>[![Build Status](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist.svg?branch=master)](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/LICENSE.md)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![Follow @ubuntu101za](https://img.shields.io/twitter/follow/ubuntu101za.svg?style=social&label=Follow)](https://twitter.com/ubuntu101za)
-
-
 # The Ultimate Hosts Blacklist for all Unix, Linux and Windows Operating Systems
 
+![The Ultimate Hosts File blacklist to Protect your Children, Your Family and Yourself from accessing Bad Web Sites](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-blacklist-logo.png)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![Build Status](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist.svg?branch=master)](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/LICENSE.md)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![Follow @ubuntu101za](https://img.shields.io/twitter/follow/ubuntu101za.svg?style=social&label=Follow)](https://twitter.com/ubuntu101za)
 
 ## UPDATED DAILY :exclamation:
 
-The Ultimate and most comprehensive hosts file for protecting your computer or device against over several hundred thousand bad web sites. Protect your children and family from gaining access to bad web sites and protect your devices and pc from being infected with Malware or Ransomware.
+The Ultimate hosts file for protecting your computer or device against over several hundred thousand bad web sites. Protect your children and family from gaining access to bad web sites and protect your devices and pc from being infected with Malware or Ransomware.
 
 A hosts file for use on any operating system to block bad domains out of your servers or devices. Information gathered from multiple sources and merged into one massive hosts file and updated every day.
 
 ---
 
-- Version: **V1.1594.2019.05.19**
-- Total Bad Hosts in hosts file: **1,627,670**
+- Version: **V1.1595.2019.05.20**
+- Total Bad Hosts in hosts file: **1,627,753**
 - Total Bad IP's in hosts.deny file: **251,266**
-- Total Bad Hosts and IP's in superhosts.deny file: **1,878,936**
+- Total Bad Hosts and IP's in superhosts.deny file: **1,879,019**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -219,9 +217,6 @@ The sources of the input data information are as follows.
 - [ZeroDot1 - CoinBlocker Lists (Browser)](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_browser.txt)
 - [ZeroDot1 - CoinBlocker Lists (Optional)](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt)
 - [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
-
-### Image Credits:
-- [Barroa Artworks](https://pixabay.com/users/Barroa_Artworks-1783849/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1236760)
 
 ---
 
