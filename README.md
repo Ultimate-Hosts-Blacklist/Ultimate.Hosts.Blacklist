@@ -220,6 +220,9 @@ The sources of the input data information are as follows.
 - [ZeroDot1 - CoinBlocker Lists (Optional)](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt)
 - [ZeusTracker](https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist)
 
+### Image Credits:
+- [Barroa Artworks](https://pixabay.com/users/Barroa_Artworks-1783849/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1236760)
+
 ---
 
 ## COLLABORATORS & CONTRIBUTORS
