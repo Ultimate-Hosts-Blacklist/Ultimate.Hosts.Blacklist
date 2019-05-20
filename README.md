@@ -1,10 +1,12 @@
+![The Ultimate Hosts File blacklist to Protect your Children, Your Family and Yourself from accessing Bad Web Sites](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-blacklist-logo.jpg)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)<br/>[![Build Status](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist.svg?branch=master)](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/LICENSE.md)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![Follow @ubuntu101za](https://img.shields.io/twitter/follow/ubuntu101za.svg?style=social&label=Follow)](https://twitter.com/ubuntu101za)
+
+
 # The Ultimate Hosts Blacklist for all Unix, Linux and Windows Operating Systems
 
-![The Ultimate Hosts File blacklist to Protect your Children, Your Family and Yourself from accessing Bad Web Sites](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-blacklist-logo.png)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![Build Status](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist.svg?branch=master)](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/LICENSE.md)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![Follow @ubuntu101za](https://img.shields.io/twitter/follow/ubuntu101za.svg?style=social&label=Follow)](https://twitter.com/ubuntu101za)
 
 ## UPDATED DAILY :exclamation:
 
-The Ultimate hosts file for protecting your computer or device against over several hundred thousand bad web sites. Protect your children and family from gaining access to bad web sites and protect your devices and pc from being infected with Malware or Ransomware.
+The Ultimate and most comprehensive hosts file for protecting your computer or device against over several hundred thousand bad web sites. Protect your children and family from gaining access to bad web sites and protect your devices and pc from being infected with Malware or Ransomware.
 
 A hosts file for use on any operating system to block bad domains out of your servers or devices. Information gathered from multiple sources and merged into one massive hosts file and updated every day.
 
