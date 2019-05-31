@@ -1,12 +1,17 @@
-# The Ultimate Hosts Blacklist for all Unix, Linux and Windows Operating Systems
+# The Ultimate Hosts Blacklist for all Unix, Linux and Windows Operating Systems - Largest Unified Hosts File in the Universe
 
-![The Ultimate Hosts File blacklist to Protect your Children, Your Family and Yourself from accessing Bad Web Sites](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-blacklist-logo.png)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![Build Status](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist.svg?branch=master)](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/LICENSE.md)![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/spacer.jpg)[![Follow @ubuntu101za](https://img.shields.io/twitter/follow/ubuntu101za.svg?style=social&label=Follow)](https://twitter.com/ubuntu101za)
+![Unified Hosts File - Ultimate Hosts File blacklist consolidating hosts files from multiple well-curated and tested sources. Best Network Blocker to Protect your Children, Your Family and Yourself from accessing Bad Web Sites](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-blacklist-logo.png)
 
-## UPDATED DAILY :exclamation:
+| Updated | Fueled By |
+| :-----: | :------: |
+| Daily :heavy_check_mark: | [<img src="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-org-small.png" alt="Hosts File - Ultimate Hosts Blacklist"/>](https://github.com/Ultimate-Hosts-Blacklist) |
+| [![Build Status](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist.svg?branch=master)](https://travis-ci.org/mitchellkrogza/Ultimate.Hosts.Blacklist) | [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/LICENSE.md) |
 
-The Ultimate hosts file for protecting your computer or device against over several hundred thousand bad web sites. Protect your children and family from gaining access to bad web sites and protect your devices and pc from being infected with Malware or Ransomware.
+The Ultimate Hosts Blacklist is undoubtedly the world's largest curated Unified Hosts file for protecting your computer or device against over several hundred thousand bad web sites. Use this Hosts File to protect your network, your children and your family from gaining access to millions of bad web sites. Protect your wifi network, computers and smartphone devices from being infected with Malware or Ransomware.
 
-A hosts file for use on any operating system to block bad domains out of your servers or devices. Information gathered from multiple sources and merged into one massive hosts file and updated every day.
+Our hosts file is for use on any operating system to block bad domains out of your servers or devices. Information is gathered from multiple sources, tested regularly and merged into one massive hosts file and updated daily.
+
+[![Follow @ubuntu101za](https://img.shields.io/twitter/follow/ubuntu101za.svg?style=social&label=Follow)](https://twitter.com/ubuntu101za)
 
 ---
 
@@ -227,6 +232,7 @@ The sources of the input data information are as follows.
 - [SMed79](https://github.com/SMed79)
 - [xxcriticxx](https://github.com/xxcriticxx)
 - [ZeroDot1](https://github.com/ZeroDot1)
+- [Mitchell Krog](https://github.com/mitchellkrogza)
 
 ---
 
@@ -241,17 +247,19 @@ The sources of the input data information are as follows.
 - <https://github.com/mitchellkrogza/fail2ban-useful-scripts>
 - <https://github.com/mitchellkrogza/linux-server-administration-scripts>
 - <https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker>
+- <https://github.com/mitchellkrogza/Phishing.Database>
 - <https://github.com/mitchellkrogza/Stop.Google.Analytics.Ghost.Spam.HOWTO>
 - <https://github.com/mitchellkrogza/Travis-CI-for-Apache-For-Testing-Apache-and-PHP-Configurations>
 - <https://github.com/mitchellkrogza/Travis-CI-Nginx-for-Testing-Nginx-Configuration>
 
 ---
 
-## Support this Project
+## Help Support This Project 
 
-[![Help me out with a mug of beer](https://img.shields.io/badge/Help%20-%20me%20out%20with%20a%20mug%20of%20%F0%9F%8D%BA-blue.svg)](https://paypal.me/mitchellkrog/) or [![Help me feed my cat](https://img.shields.io/badge/Help%20-%20me%20feed%20my%20hungry%20cat%20%F0%9F%98%B8-blue.svg)](https://paypal.me/mitchellkrog/)
-
-![](https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/zuko.png)
+- Buy Mitchell a Coffee
+[<img src="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/kofi5.png" alt="Buy me Coffee"/>](https://ko-fi.com/mitchellkrog)
+- Buy Funilrys a Coffee
+[<img src="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/kofi5.png" alt="Buy me Coffee"/>](https://ko-fi.com/funilrys)
 
 ---
 
