@@ -256,10 +256,11 @@ The sources of the input data information are as follows.
 
 ## Help Support This Project 
 
-- Buy Mitchell a Coffee
-[<img src="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/kofi5.png" alt="Buy me Coffee"/>](https://ko-fi.com/mitchellkrog)
-- Buy Funilrys a Coffee
-[<img src="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/kofi5.png" alt="Buy me Coffee"/>](https://ko-fi.com/funilrys)
+#### Buy Mitchell a Coffee
+[<img src="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/kofi5.png" alt="Buy Mitchell some Coffee" width="200"/>](https://ko-fi.com/mitchellkrog)
+
+#### Buy Funilrys a Coffee
+[<img src="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/kofi5.png" alt="Buy Funilrys some Coffee" width="200"/>](https://ko-fi.com/funilrys)
 
 ---
 
