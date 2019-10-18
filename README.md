@@ -15,10 +15,10 @@ Our hosts file is for use on any operating system to block bad domains out of yo
 
 ---
 
-- Version: **V1.1747.2019.10.10**
-- Total Bad Hosts in hosts file: **464,226**
-- Total Bad IP's in hosts.deny file: **152,235**
-- Total Bad Hosts and IP's in superhosts.deny file: **616,461**
+- Version: **V1.1755.2019.10.18**
+- Total Bad Hosts in hosts file: **433,408**
+- Total Bad IP's in hosts.deny file: **151,676**
+- Total Bad Hosts and IP's in superhosts.deny file: **585,084**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -110,7 +110,7 @@ A hosts file, named `hosts.deny` is a plain-text file for Linux/Unix based opera
 
 ## WHAT IS A SUPERHOSTS.DENY FILE? **I've never heard of such a thing ??**
 
-The superhosts.deny file is simply named `superhosts.deny` but is actually just a normal `hosts.deny` file which is a plain-text file for Linux/Unix based operating systems which blocks a list of IP addresses or hosts (domains) on the outside of your network from gaining any access to your computer. If you want to user this `superhosts.deny` file simply rename it to `hosts.deny` and place it in your `/etc/` folder on your Linux/Unix operating system. A `hosts.deny` file will not work on a Windows operating system.
+The superhosts.deny file is simply named `superhosts.deny` but is actually just a normal `hosts.deny` file which is a plain-text file for Linux/Unix based operating systems which blocks a list of IP addresses or hosts (domains) on the outside of your network from gaining any access to your computer. If you want to use this `superhosts.deny` file simply rename it to `hosts.deny` and place it in your `/etc/` folder on your Linux/Unix operating system. A `hosts.deny` file will not work on a Windows operating system.
 
 ---
 
@@ -254,7 +254,7 @@ The sources of the input data information are as follows.
 
 ---
 
-## Help Support This Project 
+## Help Support This Project
 
 #### :sparkling_heart: Buy Mitchell a Coffee :point_down:
 [<img src="https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/blob/master/.assets/kofi5.png" alt="Buy Mitchell some Coffee" width="200"/>](https://ko-fi.com/mitchellkrog)
