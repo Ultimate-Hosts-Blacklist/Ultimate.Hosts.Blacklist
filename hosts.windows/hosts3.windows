@@ -1,3 +1,16 @@
+127.0.0.1 x13.eu-new.nicehash.com
+127.0.0.1 x13.eu.mine.zpool.ca
+127.0.0.1 x13.eu.nicehash.com
+127.0.0.1 x13.hk.nicehash.com
+127.0.0.1 x13.in.nicehash.com
+127.0.0.1 x13.jp-new.nicehash.com
+127.0.0.1 x13.jp.nicehash.com
+127.0.0.1 x13.mine.zergpool.com
+127.0.0.1 x13.mine.zpool.ca
+127.0.0.1 x13.na.mine.zpool.ca
+127.0.0.1 x13.sea.mine.zpool.ca
+127.0.0.1 x13.us.hashrefinery.com
+127.0.0.1 x13.usa-new.nicehash.com
 127.0.0.1 x13.usa.nicehash.com
 127.0.0.1 x14.eu.mine.zpool.ca
 127.0.0.1 x14.mine.zergpool.com
@@ -63,9 +76,9 @@
 127.0.0.1 x17online.us.intellitxt.com
 127.0.0.1 x18.xxx
 127.0.0.1 x1er.com
-127.0.0.1 x1f.btcc.com
 127.0.0.1 x1qh81ukvq.ygtsbuaqsq.madpendesign.com.au
 127.0.0.1 x1ywmfjs.micpn.com
+127.0.0.1 x2-88.btcc.com
 127.0.0.1 x2.fap.to
 127.0.0.1 x2.livetubez.com
 127.0.0.1 x2.mobileboner.com
@@ -99,6 +112,7 @@
 127.0.0.1 x2kwelmziv1xrhb.000webhostapp.com
 127.0.0.1 x2neojuly.blogspot.com
 127.0.0.1 x2pn.adj.st
+127.0.0.1 x2pool.com
 127.0.0.1 x2q36.r.mailjet.com
 127.0.0.1 x2uh4q4yxf.kameleoon.eu
 127.0.0.1 x3.cbg.163.com
@@ -134,7 +148,6 @@
 127.0.0.1 x4vq.adj.st
 127.0.0.1 x4we.adj.st
 127.0.0.1 x4you.de
-127.0.0.1 x5-56.btcc.com
 127.0.0.1 x5.xclicks.net
 127.0.0.1 x51.fap.to
 127.0.0.1 x53yl-alternate.app.link
@@ -152,8 +165,6 @@
 127.0.0.1 x6.yakiuchi.com
 127.0.0.1 x61.btcc.com
 127.0.0.1 x61.ch
-127.0.0.1 x613.btcc.com
-127.0.0.1 x6159.btcc.com
 127.0.0.1 x6883.top
 127.0.0.1 x6885.top
 127.0.0.1 x6k.de
@@ -167,9 +178,9 @@
 127.0.0.1 x7wna2gs.000webhostapp.com
 127.0.0.1 x812v.com
 127.0.0.1 x83.ru
+127.0.0.1 x88.btcc.com
 127.0.0.1 x888x.myserver.org
 127.0.0.1 x8csyuhx.micpn.com
-127.0.0.1 x8f.btcc.com
 127.0.0.1 x8f6.top
 127.0.0.1 x8k98.ads.tremorhub.com
 127.0.0.1 x8o64ufr-android-1-1-1-0-0.mobile-sdk-api.intercom.io
@@ -184,9 +195,7 @@
 127.0.0.1 x9.dnsseed.cpuchain.org
 127.0.0.1 x9.dnsseed.litecoinpool.org
 127.0.0.1 x9.seed-bhd.hpool.com
-127.0.0.1 x9.seed.bitcoin.jonasschnelli.ch
 127.0.0.1 x9.seed.bitcoin.sipa.be
-127.0.0.1 x9.testnet-seed.bitcoin.jonasschnelli.ch
 127.0.0.1 x95232s3.bget.ru
 127.0.0.1 x96q9jpmorgan.app.link
 127.0.0.1 x97.nudevista.com
@@ -376,7 +385,6 @@
 127.0.0.1 xbooru.com
 127.0.0.1 xbox-livegratuit.fr
 127.0.0.1 xbox.com.112.2o7.net
-127.0.0.1 xbox.freewifihack.com
 127.0.0.1 xbox.ign.us.intellitxt.com
 127.0.0.1 xbox1emulator.org
 127.0.0.1 xbox360.ign.us.intellitxt.com
@@ -578,6 +586,7 @@
 127.0.0.1 xdn-xmo.pool.minergate.com
 127.0.0.1 xdn-xmr.pool.minergate.com
 127.0.0.1 xdn.cpufan.club
+127.0.0.1 xdn.cryptonight.net
 127.0.0.1 xdn.miner.center
 127.0.0.1 xdn.minercountry.com
 127.0.0.1 xdn.pool.minergate.com
@@ -597,7 +606,6 @@
 127.0.0.1 xdrop.communitypool.org
 127.0.0.1 xdrop.cryptohispano.net
 127.0.0.1 xdrop.my-mining-pool.de
-127.0.0.1 xds.cryptonote.club
 127.0.0.1 xdssp.mediav.com
 127.0.0.1 xdsydkgkbvwq.com
 127.0.0.1 xdws.adj.st
@@ -706,7 +714,6 @@
 127.0.0.1 xeye.cloud.360os.com
 127.0.0.1 xf-up0.000webhostapp.com
 127.0.0.1 xf44.adj.st
-127.0.0.1 xf7.openvpn.f2pool.com
 127.0.0.1 xfantasy.tv
 127.0.0.1 xfappy.com
 127.0.0.1 xfapzap.com
@@ -1248,6 +1255,7 @@
 127.0.0.1 xmiam.com
 127.0.0.1 xmilf.tv
 127.0.0.1 xmilfporn.com
+127.0.0.1 xmining.pro
 127.0.0.1 xminingpool.com
 127.0.0.1 xminix.com
 127.0.0.1 xmiss.pl
@@ -1395,6 +1403,7 @@
 127.0.0.1 xmr-pool.semipool.com
 127.0.0.1 xmr-ru.nanopool.org
 127.0.0.1 xmr-ru1.nanopool.org
+127.0.0.1 xmr-school.cf
 127.0.0.1 xmr-stagenet-pool.ryoblocks.com
 127.0.0.1 xmr-test.crypto-pool.fr
 127.0.0.1 xmr-tw.org
@@ -1428,12 +1437,13 @@
 127.0.0.1 xmr.crypto-pool.info
 127.0.0.1 xmr.cryptoblock.uk
 127.0.0.1 xmr.cryptohispano.net
+127.0.0.1 xmr.cryptonight.net
 127.0.0.1 xmr.cryptonote.club
 127.0.0.1 xmr.cryptonote.social
 127.0.0.1 xmr.cryptopool.space
 127.0.0.1 xmr.dark-mine.su
 127.0.0.1 xmr.dev.2miners.com
-127.0.0.1 xmr.e-libra.ru
+127.0.0.1 xmr.easyhash.io
 127.0.0.1 xmr.f2pool.com
 127.0.0.1 xmr.fkpool.cn
 127.0.0.1 xmr.go-mine.it
@@ -1466,10 +1476,11 @@
 127.0.0.1 xmr.pandapool.io
 127.0.0.1 xmr.peermine.com
 127.0.0.1 xmr.pool.gntl.co.uk
-127.0.0.1 xmr.pool.golix.com
+127.0.0.1 xmr.pool.hashto.cash
 127.0.0.1 xmr.pool.minergate.com
 127.0.0.1 xmr.pool.mn
 127.0.0.1 xmr.poolmining.org
+127.0.0.1 xmr.pools.e-scavo.net.ar
 127.0.0.1 xmr.poolto.be
 127.0.0.1 xmr.prohash.net
 127.0.0.1 xmr.pt
@@ -1481,7 +1492,6 @@
 127.0.0.1 xmr.somec.cc
 127.0.0.1 xmr.sosoeazy.info
 127.0.0.1 xmr.sparkpool.com
-127.0.0.1 xmr.ss.poolin.com
 127.0.0.1 xmr.steadyhash.org
 127.0.0.1 xmr.suprnova.cc
 127.0.0.1 xmr.thecoin.pw
@@ -1522,7 +1532,7 @@
 127.0.0.1 xmrpool.net
 127.0.0.1 xmrpool.xyz
 127.0.0.1 xmrtest.poolto.be
-127.0.0.1 xmrv7-bj.ss.poolin.com
+127.0.0.1 xmrv71.gangangangangangangangangangangan.com
 127.0.0.1 xms-east1.nanopool.org
 127.0.0.1 xmsjlm.com
 127.0.0.1 xmt.nanopool.org
@@ -1534,13 +1544,16 @@
 127.0.0.1 xmv-us-east.leafpool.com
 127.0.0.1 xmv-us-west.leafpool.com
 127.0.0.1 xmv-us.minerhills.com
+127.0.0.1 xmv.baikalmine.com
 127.0.0.1 xmv.codpool.com
+127.0.0.1 xmv.easyhash.io
 127.0.0.1 xmv.leafpool.com
-127.0.0.1 xmv.magnificentpool.com
 127.0.0.1 xmv.minerhills.com
+127.0.0.1 xmv.mining.ga
 127.0.0.1 xmv.mining.garden
 127.0.0.1 xmv.pool-pay.com
 127.0.0.1 xmv.pool.codpool.com
+127.0.0.1 xmv.pool.hashto.cash
 127.0.0.1 xmv.superpools.online
 127.0.0.1 xmvu.adj.st
 127.0.0.1 xmvuh.adj.st
@@ -1938,7 +1951,6 @@
 127.0.0.1 xnylon.com
 127.0.0.1 xo2.ourtoolbar.com
 127.0.0.1 xoads.com
-127.0.0.1 xoba.btcc.com
 127.0.0.1 xobjzmhopjbboqkmc.com
 127.0.0.1 xocashflow.com
 127.0.0.1 xocecytufu.com
@@ -2291,7 +2303,6 @@
 127.0.0.1 xsg.altpool.pro
 127.0.0.1 xsg.bitpool.ro
 127.0.0.1 xsg.happyminer.eu
-127.0.0.1 xsg.magnificentpool.com
 127.0.0.1 xsg.miningfield.com
 127.0.0.1 xsg.nibirupool.com
 127.0.0.1 xsg.pool.sexy
@@ -2371,8 +2382,6 @@
 127.0.0.1 xt.lv
 127.0.0.1 xt917.yobit.net
 127.0.0.1 xta-api-4-us.btcc.com
-127.0.0.1 xta-api-4.btcc.com
-127.0.0.1 xta.bloc.llama.horse
 127.0.0.1 xta.codpool.com
 127.0.0.1 xta.faucet.llama.horse
 127.0.0.1 xta.leafpool.com
@@ -2431,6 +2440,7 @@
 127.0.0.1 xtl.proxpool.com
 127.0.0.1 xtl.steadyhash.org
 127.0.0.1 xtl.superpools.online
+127.0.0.1 xtlpool.com
 127.0.0.1 xtmjaetqtbm.com
 127.0.0.1 xtms.com
 127.0.0.1 xtmuasvldoiz.com
@@ -2441,8 +2451,10 @@
 127.0.0.1 xtncturtle.luckypool.io
 127.0.0.1 xtncwallet.llama.horse
 127.0.0.1 xtoolsoft.com
+127.0.0.1 xtopinventory.fun
 127.0.0.1 xtoplist.com
 127.0.0.1 xtoplists.com
+127.0.0.1 xtopskins.fun
 127.0.0.1 xtporntube.com
 127.0.0.1 xtqizu.com
 127.0.0.1 xtr.carambo.la
@@ -2492,10 +2504,8 @@
 127.0.0.1 xtri.cnpool.cc
 127.0.0.1 xtri.codpool.com
 127.0.0.1 xtri.hackerknowledge.de
-127.0.0.1 xtri.llama.horse
 127.0.0.1 xtri.luckypool.io
 127.0.0.1 xtri.minercountry.com
-127.0.0.1 xtri.nbx.llama.horse
 127.0.0.1 xtri.semipool.com
 127.0.0.1 xtribe.it
 127.0.0.1 xtridium.minercountry.com
@@ -2522,7 +2532,6 @@
 127.0.0.1 xtwzukfknhx.proxy.teads.tv
 127.0.0.1 xtxgsx.com
 127.0.0.1 xu.pl
-127.0.0.1 xuanqi.btcc.com
 127.0.0.1 xuatkhaulaodongbatimex.com.vn
 127.0.0.1 xuctienthuongmainta.com
 127.0.0.1 xudfxpvm.com
@@ -2574,7 +2583,6 @@
 127.0.0.1 xvg-mg.suprnova.cc
 127.0.0.1 xvg-scrypt.f2pool.com
 127.0.0.1 xvg-x17.suprnova.cc
-127.0.0.1 xvg.antminepool.com
 127.0.0.1 xvg.fairhash.org
 127.0.0.1 xvg.mastermining.net
 127.0.0.1 xvg.mine.zpool.ca
@@ -3690,7 +3698,6 @@
 127.0.0.1 xzc.2miners.com
 127.0.0.1 xzc.dev.2miners.com
 127.0.0.1 xzc.f2pool.com
-127.0.0.1 xzc.magnificentpool.com
 127.0.0.1 xzc.nanopool.org
 127.0.0.1 xzc.pool.mn
 127.0.0.1 xzc.solopool.org
@@ -3723,7 +3730,6 @@
 127.0.0.1 xzywlbgldmpi.com
 127.0.0.1 xzzr.com
 127.0.0.1 y-138.btcc.com
-127.0.0.1 y-142.btcc.com
 127.0.0.1 y-230.btcc.com
 127.0.0.1 y-ahoovalid-ationrequest.000webhostapp.com
 127.0.0.1 y-data.adsrvr.org
@@ -3763,9 +3769,7 @@
 127.0.0.1 y1jce.voluumtrk.com
 127.0.0.1 y1jxiqds7v.com
 127.0.0.1 y1xx8xq0l1.kameleoon.eu
-127.0.0.1 y2-173.btcc.com
 127.0.0.1 y2.flurry.com
-127.0.0.1 y229.btcc.com
 127.0.0.1 y24v.adj.st
 127.0.0.1 y2kjapan.com
 127.0.0.1 y2ksafesex.com
@@ -3779,7 +3783,6 @@
 127.0.0.1 y3f6.adj.st
 127.0.0.1 y3qtp.voluumtrk.com
 127.0.0.1 y3s7.adj.st
-127.0.0.1 y41-231.btcc.com
 127.0.0.1 y41i.cn
 127.0.0.1 y4681.6128786.com
 127.0.0.1 y49rcyl4dna.proxy.teads.tv
@@ -3821,11 +3824,9 @@
 127.0.0.1 y6xwr.weblium.site
 127.0.0.1 y7.news-subscribe.com
 127.0.0.1 y73shop.com
-127.0.0.1 y75.openvpn.f2pool.com
 127.0.0.1 y7amg.byethost7.com
 127.0.0.1 y7e.us
 127.0.0.1 y7zn.byethost7.com
-127.0.0.1 y8-40.btcc.com
 127.0.0.1 y8.com
 127.0.0.1 y81-231.btcc.com
 127.0.0.1 y822.com
@@ -3836,6 +3837,7 @@
 127.0.0.1 y8i46.app.link
 127.0.0.1 y8kos.app.link
 127.0.0.1 y8ui6jzp.micpn.com
+127.0.0.1 y91-108.btcc.com
 127.0.0.1 y91.btcc.com
 127.0.0.1 y912972v.beget.tech
 127.0.0.1 y96-30.btcc.com
@@ -4297,6 +4299,7 @@
 127.0.0.1 yczdebjfskegsd.com
 127.0.0.1 yd-craft.com
 127.0.0.1 yd315.com
+127.0.0.1 yd970318392.btcc.com
 127.0.0.1 yd9d6.app.link
 127.0.0.1 ydesign.demdex.net
 127.0.0.1 ydfcp9393cc-cc9393cp.vip
@@ -4628,6 +4631,7 @@
 127.0.0.1 ygqqaluei.com
 127.0.0.1 ygrg.duckdns.org
 127.0.0.1 ygto.com
+127.0.0.1 yguchuanqi.btcc.com
 127.0.0.1 ygvuinirwqnl.com
 127.0.0.1 ygxiewp.angelfire.com
 127.0.0.1 ygzkedoxwhqlzp.com
@@ -4703,7 +4707,6 @@
 127.0.0.1 yiimp.l8nit3-miners.com
 127.0.0.1 yiimp.mastermining.net
 127.0.0.1 yiimp.mine.zpool.ca
-127.0.0.1 yiimp.minepool.hu
 127.0.0.1 yiimp.mofumofu.me
 127.0.0.1 yiimp.mypool.online
 127.0.0.1 yiimp.poolofd32th.club
@@ -4728,6 +4731,7 @@
 127.0.0.1 yimp.ccminer.org
 127.0.0.1 yimsodsai.com
 127.0.0.1 yinav.com
+127.0.0.1 yinbaoboyulewang-2.btcc.com
 127.0.0.1 yinbaoboyulewang.btcc.com
 127.0.0.1 yindaihui.com
 127.0.0.1 ying.hitbox.com
@@ -5425,7 +5429,6 @@
 127.0.0.1 your-dating-future.com
 127.0.0.1 your-dating-future1.com
 127.0.0.1 your-deal.com
-127.0.0.1 your-fanpagee1.regis-dev9.tk
 127.0.0.1 your-free-hack.com
 127.0.0.1 your-free-porn.com
 127.0.0.1 your-home-theater-design.com
@@ -6221,6 +6224,7 @@
 127.0.0.1 z-1-video.fpoa10-1.fna.fbcdn.net
 127.0.0.1 z-1-video.fszb1-1.fna.fbcdn.net
 127.0.0.1 z-163.btcc.com
+127.0.0.1 z-43.btcc.com
 127.0.0.1 z-b.com.ua
 127.0.0.1 z-d-p.com
 127.0.0.1 z-deactivated-time.cust.clickability.com
@@ -6294,14 +6298,12 @@
 127.0.0.1 z0.extreme-dm.com
 127.0.0.1 z022-fma.fb.me
 127.0.0.1 z028.fma.fb.me
-127.0.0.1 z06.openvpn.f2pool.com
 127.0.0.1 z0d60.app.link
 127.0.0.1 z0dh7.weblium.site
 127.0.0.1 z0dvxqapef.daphnecm.com
 127.0.0.1 z0rder.com
 127.0.0.1 z0xskwoitab.proxy.teads.tv
 127.0.0.1 z1.adserver.com
-127.0.0.1 z1.btcc.com
 127.0.0.1 z1.cnzz.com
 127.0.0.1 z1.extreme-dm.com
 127.0.0.1 z1.news-subscribe.com
@@ -6987,7 +6989,6 @@
 127.0.0.1 zcash-cn.zhash.pro
 127.0.0.1 zcash.deltapool.net
 127.0.0.1 zcash.flypool.com
-127.0.0.1 zcash.flypool.net
 127.0.0.1 zcash.flypool.org
 127.0.0.1 zcash.mine.zpool.ca
 127.0.0.1 zcash.miningpoolhub.com
@@ -7031,7 +7032,6 @@
 127.0.0.1 zcl.dev.2miners.com
 127.0.0.1 zcl.flypool.com
 127.0.0.1 zcl.mine.zpool.ca
-127.0.0.1 zcl.minepool.hu
 127.0.0.1 zcl.mining4.co.uk
 127.0.0.1 zcl.nanopool.org
 127.0.0.1 zcl.nibirupool.com
@@ -7217,7 +7217,6 @@
 127.0.0.1 zec.flypool.com
 127.0.0.1 zec.happyminer.eu
 127.0.0.1 zec.hashcity.org
-127.0.0.1 zec.magnificentpool.com
 127.0.0.1 zec.matpool.io
 127.0.0.1 zec.mining4.co.uk
 127.0.0.1 zec.mychainpools.com
@@ -7295,12 +7294,11 @@
 127.0.0.1 zel.2miners.com
 127.0.0.1 zel.altpool.pro
 127.0.0.1 zel.bitpool.ro
+127.0.0.1 zel.cash
 127.0.0.1 zel.cloudpools.net
 127.0.0.1 zel.coinblockers.com
 127.0.0.1 zel.f2pool.com
 127.0.0.1 zel.happyminer.eu
-127.0.0.1 zel.magnificentpool.com
-127.0.0.1 zel.minepool.ch
 127.0.0.1 zel.miningfool.com
 127.0.0.1 zel.nibirupool.com
 127.0.0.1 zel.solopool.org
@@ -7368,8 +7366,6 @@
 127.0.0.1 zen.fairhash.org
 127.0.0.1 zen.gulfcoastmining.com
 127.0.0.1 zen.happyminer.eu
-127.0.0.1 zen.magnificentpool.com
-127.0.0.1 zen.minepool.hu
 127.0.0.1 zen.mining4.co.uk
 127.0.0.1 zen.miningfool.com
 127.0.0.1 zen.nanopool.org
@@ -7443,6 +7439,7 @@
 127.0.0.1 zenovia.leadpages.co
 127.0.0.1 zenpat.com
 127.0.0.1 zenplanner.getambassador.com
+127.0.0.1 zenpool.io
 127.0.0.1 zenrecruitment.co.uk
 127.0.0.1 zenrock.co.uk
 127.0.0.1 zensecure0.miningfool.com
@@ -7454,8 +7451,6 @@
 127.0.0.1 zensecure14.1ds.us
 127.0.0.1 zensecure15.1ds.us
 127.0.0.1 zensecure16.1ds.us
-127.0.0.1 zensecure17.1ds.us
-127.0.0.1 zensecure18.1ds.us
 127.0.0.1 zensecure19.1ds.us
 127.0.0.1 zensecure2.1ds.us
 127.0.0.1 zensecure20.1ds.us
@@ -7804,7 +7799,6 @@
 127.0.0.1 zhxdduzdibm.com
 127.0.0.1 zhxdiirwhtico.com
 127.0.0.1 zhzfood.com
-127.0.0.1 zi-fra.btcc.com
 127.0.0.1 ziale.org.zm
 127.0.0.1 ziamarqueehire.co.uk
 127.0.0.1 ziaservices.pk
@@ -7899,6 +7893,7 @@
 127.0.0.1 zinio-sjc.gravityrd-services.com
 127.0.0.1 zinio.worldgravity.com
 127.0.0.1 zink-d.openx.net
+127.0.0.1 zinlar.pw
 127.0.0.1 zinntikumugai-xyz.zin.mixh.jp
 127.0.0.1 zinntikumugai.xyz
 127.0.0.1 zinnywendy.cf
@@ -8130,14 +8125,12 @@
 127.0.0.1 zmievmuseum.ucoz.ua
 127.0.0.1 zmievski.org
 127.0.0.1 zmine.io
-127.0.0.1 zmine.minepool.hu
 127.0.0.1 zminer.zaloapp.com
 127.0.0.1 zmithfairwaymc.com
 127.0.0.1 zmjagawa.com
 127.0.0.1 zmjjjyy.cn
 127.0.0.1 zmkihizd.com
 127.0.0.1 zmlkjih-9.btcc.com
-127.0.0.1 zmlkjih.btcc.com
 127.0.0.1 zmnhcswlu.com
 127.0.0.1 zmo.net
 127.0.0.1 zmoawpfsz.com
@@ -8756,7 +8749,6 @@
 127.0.0.1 zoha3d.com
 127.0.0.1 zohaibsunesra.clickfunnels.com
 127.0.0.1 zohitaglit.com
-127.0.0.1 zoi.minepool.ch
 127.0.0.1 zoic-selection.000webhostapp.com
 127.0.0.1 zoieame.com
 127.0.0.1 zoig.com
@@ -9005,7 +8997,6 @@
 127.0.0.1 zourenardv.000webhostapp.com
 127.0.0.1 zourseucerincom.122.2o7.net
 127.0.0.1 zous.szm.sk
-127.0.0.1 zousd-data.btcc.com
 127.0.0.1 zouvirement.000webhostapp.com
 127.0.0.1 zovermedical.com.sa
 127.0.0.1 zowhow.silveregg.net
@@ -9036,7 +9027,6 @@
 127.0.0.1 zplayer.trk.zapps.vn
 127.0.0.1 zpolanskyinc.org
 127.0.0.1 zpolivtjrhjquo.com
-127.0.0.1 zpool.1ds.us
 127.0.0.1 zpool.803mine.com
 127.0.0.1 zpool.ca
 127.0.0.1 zpool.guru
@@ -9128,7 +9118,6 @@
 127.0.0.1 zsazsa.miva.com
 127.0.0.1 zsc.scmspain.com
 127.0.0.1 zscres.000webhostapp.com
-127.0.0.1 zsecure1.1ds.us
 127.0.0.1 zsgxbgj.com
 127.0.0.1 zshktrgi1.mirtesen.ru
 127.0.0.1 zshx5.app.link
@@ -9167,7 +9156,6 @@
 127.0.0.1 ztacs.com
 127.0.0.1 ztag-trackedevents-enterprise-1441845540.us-west-2.elb.amazonaws.com
 127.0.0.1 ztc.cryptohispano.net
-127.0.0.1 ztc.cryptonote.club
 127.0.0.1 ztdfsxgcyprwvp.com
 127.0.0.1 zte.adj.st
 127.0.0.1 ztecytddxqovwzdofsexwp.biz
@@ -9423,6 +9411,7 @@
 127.0.0.1 zytrade.cn
 127.0.0.1 zywfpkagwwpm.com
 127.0.0.1 zyworld.com
+127.0.0.1 zyxw.btcc.com
 127.0.0.1 zyxyfy.com
 127.0.0.1 zz.connextra.com
 127.0.0.1 zz.cqcounter.com
