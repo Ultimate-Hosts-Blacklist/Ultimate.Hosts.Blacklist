@@ -5,6 +5,15 @@
 # Copyright - Mitchell Krog - mitchellkrog@gmail.com 
 # https://github.com/mitchellkrogza
 
+#
+# root has to run the script
+#
+if [ `whoami` != "root" ]
+    then
+    printf "You need to be root to do this!\nIf you have SUDO installed, then run this script with sudo \$script.bash\n"
+    exit 1
+fi
+
 # First Backup Existing hosts file
 sudo mv /etc/hosts /etc/hosts.bak
 
