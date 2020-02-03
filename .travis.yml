@@ -10,19 +10,10 @@ env:
     - GIT_BRANCH: master
     - PYFUNCEBLE_AUTO_CONFIGURATION: PyFunceble
     - PYFUNCEBLE_OUTPUT_DIR: /tmp/
+    - PYTHON_VERSION: "3.8.1"
 
-dist: xenial
-language: python
-sudo: required
-
-python:
-  - "3.7"
-
-matrix:
-  fast_finish: true
-
-cache:
-  - pip
+dist: bionic
+language: generic
 
 addons:
   apt:
@@ -30,12 +21,24 @@ addons:
       - dos2unix
 
 install:
-  - pip3 install --upgrade pip
-  - pip3 install ultimate-hosts-blacklist-central-repo-updater
+  - export PATH="${HOME}/miniconda/bin:${PATH}"
+  - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O miniconda.sh; else wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh; fi
+  - bash miniconda.sh -b -p ${HOME}/miniconda
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda config --add channels conda-forge
+  - conda update -q conda
+  - conda create -q -n ultimate-environment python="${PYTHON_VERSION}"
+  - source activate ultimate-environment
+  - python --version --version
+  - pip --version
+  - conda --version
+  - pip install ultimate-hosts-blacklist-central-repo-updater
 
 script:
   - ultimate-hosts-blacklist-central-repo-updater --version
   - ultimate-hosts-blacklist-central-repo-updater -m -p 60
 
 notifications:
-  email: false
+  on_success: change
+  on_failure: always
