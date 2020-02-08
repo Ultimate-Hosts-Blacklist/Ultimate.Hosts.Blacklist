@@ -37,7 +37,7 @@ install:
 
 script:
   - ultimate-hosts-blacklist-central-repo-updater --version
-  - ultimate-hosts-blacklist-central-repo-updater -m -p 60
+  - ultimate-hosts-blacklist-central-repo-updater -m -p 2
 
 notifications:
   on_success: change
