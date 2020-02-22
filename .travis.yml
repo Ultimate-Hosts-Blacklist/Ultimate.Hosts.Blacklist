@@ -15,11 +15,6 @@ env:
 dist: bionic
 language: generic
 
-addons:
-  apt:
-    packages:
-      - dos2unix
-
 install:
   - export PATH="${HOME}/miniconda/bin:${PATH}"
   - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O miniconda.sh; else wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh; fi
@@ -37,7 +32,7 @@ install:
 
 script:
   - ultimate-hosts-blacklist-central-repo-updater --version
-  - ultimate-hosts-blacklist-central-repo-updater -m
+  - ultimate-hosts-blacklist-central-repo-updater -m -p 50
 
 notifications:
   on_success: change
