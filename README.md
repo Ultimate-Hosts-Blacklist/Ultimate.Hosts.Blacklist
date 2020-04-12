@@ -11,14 +11,11 @@ The Ultimate Hosts Blacklist is undoubtedly the world's largest curated Unified 
 
 Our hosts file is for use on any operating system to block bad domains out of your servers or devices. Information is gathered from multiple sources, tested regularly and merged into one massive hosts file and updated daily.
 
-## Contact
-If you have questions, feedback or improvements for us, you can open an issue or get in touch with us on [Keybase.io](https://keybase.io/team/ultimatehosts).
 [![Follow @ubuntu101za](https://img.shields.io/twitter/follow/ubuntu101za.svg?style=social&label=Follow)](https://twitter.com/ubuntu101za)
-
 
 ---
 
-- Version: **V1.1947.2020.04.11**
+- Version: **V1.1948.2020.04.12**
 - Total Bad Hosts in hosts file: **570,240**
 - Total Bad IP's in hosts.deny file: **132,203**
 - Total Bad Hosts and IP's in superhosts.deny file: **702,443**
