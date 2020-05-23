@@ -15,10 +15,10 @@ Our hosts file is for use on any operating system to block bad domains out of yo
 
 ---
 
-- Version: **V1.1990.2020.05.22**
-- Total Bad Hosts in hosts file: **485,786**
-- Total Bad IP's in hosts.deny file: **140,916**
-- Total Bad Hosts and IP's in superhosts.deny file: **626,702**
+- Version: **V1.1991.2020.05.23**
+- Total Bad Hosts in hosts file: **485,785**
+- Total Bad IP's in hosts.deny file: **140,913**
+- Total Bad Hosts and IP's in superhosts.deny file: **626,698**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
