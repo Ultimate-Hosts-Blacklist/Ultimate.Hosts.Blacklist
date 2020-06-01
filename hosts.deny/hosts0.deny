@@ -32,8 +32,8 @@
 ### https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues
 
 ##### Version Information #
-#### Version: V1.1999.2020.05.31
-#### Total IP's: 140,928
+#### Version: V1.2000.2020.06.01
+#### Total IP's: 140,925
 ##### Version Information ##
 
 # ##### START hosts.deny Block List # DO NOT EDIT #####
@@ -12738,7 +12738,6 @@ ALL: 117.84.31.190
 ALL: 117.84.55.236
 ALL: 117.85.112.27
 ALL: 117.85.113.89
-ALL: 117.85.116.107
 ALL: 117.85.117.58
 ALL: 117.85.118.208
 ALL: 117.85.119.118
@@ -85729,7 +85728,6 @@ ALL: 27.71.129.6
 ALL: 27.71.135.119
 ALL: 27.72.0.164
 ALL: 27.72.101.235
-ALL: 27.72.122.228
 ALL: 27.72.144.176
 ALL: 27.72.17.209
 ALL: 27.72.19.5
@@ -117174,7 +117172,6 @@ ALL: 78.186.8.194
 ALL: 78.187.108.179
 ALL: 78.187.11.168
 ALL: 78.187.120.42
-ALL: 78.187.133.26
 ALL: 78.187.14.2
 ALL: 78.187.144.31
 ALL: 78.187.145.191
