@@ -32,7 +32,7 @@
 ### https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues
 
 ##### Version Information #
-#### Version: V1.2012.2020.06.13
+#### Version: V1.2013.2020.06.14
 #### Total IP's: 140,310
 ##### Version Information ##
 
@@ -78868,7 +78868,6 @@ ALL: 217.104.124.152
 ALL: 217.104.23.12
 ALL: 217.105.149.70
 ALL: 217.105.177.102
-ALL: 217.106.238.89
 ALL: 217.106.32.195
 ALL: 217.107.199.16
 ALL: 217.107.219.12
@@ -110845,6 +110844,7 @@ ALL: 68.182.38.78
 ALL: 68.182.39.101
 ALL: 68.182.39.76
 ALL: 68.183.155.33
+ALL: 68.183.156.156
 ALL: 68.183.184.186
 ALL: 68.183.221.99
 ALL: 68.183.239.204
