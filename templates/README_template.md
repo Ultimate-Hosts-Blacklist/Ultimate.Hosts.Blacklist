@@ -128,6 +128,19 @@ To modify your current `hosts` file, look for it in the following places and mod
 
 ---
 
+## WHEN IS THE LIST UPDATED ?
+
+
+| Times are in UTC (Every day)           | Start   | End     |
+|----------------------------------------|---------|---------|
+| Central Repository (GitHub)            | ≈ 19:05 | ≈ 19:15 |
+| API / Search engine                    | 19:05   | ≈ 19:20 |
+| Central Mirror (hosts.ubuntu101.co.za) | 19:20   | ≈ 19:25 |
+| DNS Server ([#293](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues/293))                      | 19:20   | ≈ 19:30 |
+
+
+---
+
 ## ADDITIONS
 
 [![Log an Issue or a PR](https://img.shields.io/badge/LOG%20-%20an%20issue%20here%20%F0%9F%9A%A6-blue.svg)](http://github.com/Ultimate-Hosts-Blacklist/blacklist/issues) if you want to add an entry to our infrastructure.
