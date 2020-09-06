@@ -1,4 +1,4 @@
-# The Ultimate Hosts Blacklist for all Unix, Linux and Windows Operating Systems - Largest Unified Hosts File in the Universe
+# The Ultimate Hosts Blacklist - Largest Unified Hosts File in the Universe
 
 ![Unified Hosts File - Ultimate Hosts File blacklist consolidating hosts files from multiple well-curated and tested sources. Best Network Blocker to Protect your Children, Your Family and Yourself from accessing Bad Web Sites](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-blacklist-logo.png)
 
