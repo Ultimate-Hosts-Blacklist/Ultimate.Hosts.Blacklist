@@ -148,7 +148,7 @@ To modify your current `hosts` file, look for it in the following places and mod
 | Central Repository (GitHub)            | ≈ 19:05 | ≈ 19:15 |
 | API / Search engine                    | 19:05   | ≈ 19:20 |
 | Central Mirror (hosts.ubuntu101.co.za) | 19:20   | ≈ 19:25 |
-| DNS Server ([#293](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues/293))                      | 19:20   | ≈ 19:30 |
+| DNS Server ([#590](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues/590))                      | 19:20   | ≈ 19:30 |
 
 
 ---
