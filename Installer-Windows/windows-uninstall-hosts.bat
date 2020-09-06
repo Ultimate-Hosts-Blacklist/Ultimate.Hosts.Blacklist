@@ -1,12 +1,13 @@
 :: ULTIMATE HOSTS BLACKLIST
 :: REPO: https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist
-:: Copyright Mitchell Krog - https://github.com/mitchellkrogza
+:: Copyright (c) 2020 Ultimate Hosts Blacklist - @Ultimate-Hosts-Blacklist
+:: Copyright (c) 2017, 2018, 2019, 2020 Mitchell Krog - @mitchellkrogza
+:: Copyright (c) 2017, 2018, 2019, 2020 Nissar Chababy - @funilrys
 :: This script will first create a backup of the original or current hosts
 :: file and save it in a file titled "hosts.bak" 
 :: It will then download the latest updated hosts file
 :: Finally the DNS cache will also be refreshed.
 :: THIS BAT FILE MUST BE LAUNCHED WITH ADMINISTRATOR PRIVILEGES
-:: Copyright Mitchell Krog - https://github.com/mitchellkrogza
 
 :: @ECHO OFF
 TITLE Uninstall Hosts

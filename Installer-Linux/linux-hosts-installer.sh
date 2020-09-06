@@ -2,8 +2,9 @@
 
 # Linux hosts Installer for the Ultimate Hosts Blacklist
 # Repo Url: https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist
-# Copyright - Mitchell Krog - mitchellkrog@gmail.com 
-# https://github.com/mitchellkrogza
+# Copyright (c) 2020 Ultimate Hosts Blacklist - @Ultimate-Hosts-Blacklist
+# Copyright (c) 2017, 2018, 2019, 2020 Mitchell Krog - @mitchellkrogza
+# Copyright (c) 2017, 2018, 2019, 2020 Nissar Chababy - @funilrys
 
 #
 # root has to run the script
