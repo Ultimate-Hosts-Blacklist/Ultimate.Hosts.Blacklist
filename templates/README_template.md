@@ -30,6 +30,18 @@ Click the link below to see all the sources used as input data to create this ho
 
 ---
 
+## DNS Server
+
+Are our files too large for your machine or you can't touch your hosts file ? Use our DNS servers.
+
+**NOTICE: THIS IS THE RECOMMENDED METHOD FOR WINDOWS USER.**
+
+| DNS Name | safedns.allover.co.za   | safedns2.allover.co.za  |
+|----------|-------------------------|-------------------------|
+| IPv4     | `88.198.70.38`          | `88.198.70.39`          |
+| IPv6     | `2a01:4f8:140:5021::38` | `2a01:4f8:140:5021::39` |
+
+
 ## RAW FILE SOURCES
 
 The links below will direct you to the raw unzipped versions of the hosts files in this repo. (Files are updated daily)
@@ -44,7 +56,7 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 | domains-dotted-format.list |     DnsMasq      |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains-dotted-format.list)<br> |
 | ips.list                   |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/ips.list)                       |
 
-### Installers, Updaters and Uninstaller Helper Scripts
+## Installers, Updaters and Uninstaller Helper Scripts
 
 | Linux                                                                                                                                                      | Windows                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
