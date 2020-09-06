@@ -111,3 +111,4 @@ dir_structure.json
 iana-domains-db.json
 public-suffix.json
 *.zip
+output/
