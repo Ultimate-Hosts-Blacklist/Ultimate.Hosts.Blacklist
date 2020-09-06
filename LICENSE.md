@@ -1,8 +1,9 @@
 MIT License
 
-Copyright (c) 2017, 2018 Mitchell Krog - mitchellkrog@gmail.com
+Copyright (c) 2020 Ultimate Hosts Blacklist - @Ultimate-Hosts-Blacklist
+Copyright (c) 2017, 2018, 2019, 2020 Mitchell Krog - @mitchellkrogza
+Copyright (c) 2017, 2018, 2019, 2020 Nissar Chababy - @funilrys
 
-https://github.com/mitchellkrogza
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
