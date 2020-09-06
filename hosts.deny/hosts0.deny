@@ -1,7 +1,8 @@
 ### The Ultimate hosts.deny for Linux / Unix based operating Systems
-### Copyright Mitchell Krog - mitchellkrog@gmail.com
-### https://github.com/mitchellkrogza
-### Repo Url: https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist
+### Copyright (c) 2020 Ultimate Hosts Blacklist - @Ultimate-Hosts-Blacklist
+### Copyright (c) 2017, 2018, 2019, 2020 Mitchell Krog - @mitchellkrogza
+### Copyright (c) 2017, 2018, 2019, 2020 Nissar Chababy - @funilrys
+### Repo Url: https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist
 
 ##############################################################################################################################
 #                                                                                                                            #
@@ -29,11 +30,11 @@
 ### as long the original URL and attribution is included.
 
 ### Please forward any additions, corrections or comments by logging an issue at
-### https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist/issues
+### https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues
 
 ##### Version Information #
-#### Version: V1.2097.2020.09.05
-#### Total IP's: 140,032
+#### Version: V1.2098.2020.09.06
+#### Total IP's: 140,028
 ##### Version Information ##
 
 # ##### START hosts.deny Block List # DO NOT EDIT #####
@@ -946,7 +947,6 @@ ALL: 103.122.144.0/22
 ALL: 103.123.151.102
 ALL: 103.129.222.207
 ALL: 103.129.97.56
-ALL: 103.129.98.17
 ALL: 103.129.98.170
 ALL: 103.13.136.0/22
 ALL: 103.13.164.0/22
@@ -2297,7 +2297,6 @@ ALL: 103.83.162.0/23
 ALL: 103.83.236.0/22
 ALL: 103.83.28.0/22
 ALL: 103.83.36.123
-ALL: 103.83.81.144
 ALL: 103.84.100.0/22
 ALL: 103.84.104.0/22
 ALL: 103.84.168.0/22
@@ -4194,7 +4193,6 @@ ALL: 108.166.81.100
 ALL: 108.166.86.205
 ALL: 108.166.89.123
 ALL: 108.167.174.192
-ALL: 108.167.181.25
 ALL: 108.167.184.122
 ALL: 108.167.185.56
 ALL: 108.168.0.209
@@ -138790,7 +138788,6 @@ ALL: 95.80.153.49
 ALL: 95.80.65.232
 ALL: 95.80.77.225
 ALL: 95.80.98.106
-ALL: 95.81.1.43
 ALL: 95.81.195.245
 ALL: 95.81.197.184
 ALL: 95.81.202.102

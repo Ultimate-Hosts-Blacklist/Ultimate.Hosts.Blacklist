@@ -1,4 +1,4 @@
-# The Ultimate Hosts Blacklist for all Unix, Linux and Windows Operating Systems - Largest Unified Hosts File in the Universe
+# The Ultimate Hosts Blacklist - Largest Unified Hosts File in the Universe
 
 ![Unified Hosts File - Ultimate Hosts File blacklist consolidating hosts files from multiple well-curated and tested sources. Best Network Blocker to Protect your Children, Your Family and Yourself from accessing Bad Web Sites](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-blacklist-logo.png)
 
@@ -7,7 +7,7 @@
 | Daily :heavy_check_mark: | [<img src="https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/.assets/ultimate-hosts-org-small.png" alt="Hosts File - Ultimate Hosts Blacklist"/>](https://github.com/Ultimate-Hosts-Blacklist) |
 | [![Build Status](https://travis-ci.org/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist.svg?branch=master)](https://travis-ci.org/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist) | [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/LICENSE.md) |
 
-The Ultimate Hosts Blacklist is undoubtedly the world's largest curated Unified Hosts file for protecting your computer or device against over several hundred thousand bad web sites. Use this Hosts File to protect your network, your children and your family from gaining access to millions of bad web sites. Protect your wifi network, computers and smartphone devices from being infected with Malware or Ransomware.
+The Ultimate Hosts Blacklist is undoubtedly one of the world's largest curated Unified Hosts file for protecting your computer or device against over several hundred thousand bad web sites. Use this Hosts File to protect your network, your children and your family from gaining access to millions of bad web sites. Protect your wifi network, computers and smartphone devices from being infected with Malware or Ransomware.
 
 Our hosts file is for use on any operating system to block bad domains out of your servers or devices. Information is gathered from multiple sources, tested regularly and merged into one massive hosts file and updated daily.
 
@@ -15,10 +15,10 @@ Our hosts file is for use on any operating system to block bad domains out of yo
 
 ---
 
-- Version: **V1.2097.2020.09.05**
-- Total Bad Hosts in hosts file: **322,580**
-- Total Bad IP's in hosts.deny file: **140,032**
-- Total Bad Hosts and IP's in superhosts.deny file: **462,612**
+- Version: **V1.2098.2020.09.06**
+- Total Bad Hosts in hosts file: **322,547**
+- Total Bad IP's in hosts.deny file: **140,028**
+- Total Bad Hosts and IP's in superhosts.deny file: **462,575**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -29,6 +29,18 @@ Click the link below to see all the sources used as input data to create this ho
 ### [SOURCES OF INPUT DATA USED TO CREATE THIS HOSTS FILE](#credits--thanks)
 
 ---
+
+## DNS Server
+
+Are our files too large for your machine or you can't touch your hosts file ? Use our DNS servers.
+
+**NOTICE: THIS IS THE RECOMMENDED METHOD FOR WINDOWS USER.**
+
+| DNS Name | safedns.allover.co.za   | safedns2.allover.co.za  |
+|----------|-------------------------|-------------------------|
+| IPv4     | `88.198.70.38`          | `88.198.70.39`          |
+| IPv6     | `2a01:4f8:140:5021::38` | `2a01:4f8:140:5021::39` |
+
 
 ## RAW FILE SOURCES
 
@@ -44,7 +56,7 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 | domains-dotted-format.list |     DnsMasq      |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains-dotted-format.list)<br> |
 | ips.list                   |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/ips.list)                       |
 
-### Installers, Updaters and Uninstaller Helper Scripts
+## Installers, Updaters and Uninstaller Helper Scripts
 
 | Linux                                                                                                                                                      | Windows                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -92,13 +104,13 @@ Lucky for you our massive hosts file compiled from over 25 independent data inpu
 
 ---
 
-## RECOMMENDATION FOR USING`0.0.0.0` instead of `127.0.0.1`
+## RECOMMENDATION FOR USING `0.0.0.0` instead of `127.0.0.1`
 
-Most host files traditionally use 127.0.0.1 as the loopback address, to establish an IP connection to the local machine.
+Most host files traditionally use `127.0.0.1` as the loopback address, to establish an IP connection to the local machine.
 
-I prefer the use of 0.0.0.0, which is defined as a non-routable meta-address. Using 0.0.0.0 is also faster because there's no wait for a timeout resolution. It also does not interfere with any web servers that may be running on the local system.
+I prefer the use of `0.0.0.0`, which is defined as a non-routable meta-address. Using `0.0.0.0` is also faster because there's no wait for a timeout resolution. It also does not interfere with any web servers that may be running on the local system.
 
-For many windows operating systems however 127.0.0.1 does appear to work slightly better and which is why our Windows version of the hosts file uses 127.0.0.1 as the loopback address.
+For many windows operating systems however `127.0.0.1` does appear to work slightly better and which is why our Windows version of the hosts file uses `127.0.0.1` as the loopback address.
 
 ---
 
@@ -128,39 +140,30 @@ To modify your current `hosts` file, look for it in the following places and mod
 
 ---
 
-## WHERE CAN I DOWNLOAD THE RAW UNZIPPED FILES FROM?
+## WHEN IS THE LIST UPDATED ?
 
-To keep this Github repo small, all files are provided in a zip only format. Some people however require their Pi-Holes or other systems to automatically download a raw file once a week or so as an update. For your convenience you can download these raw files at the following links. These links below will always contain the latest updated version of these files. (Files are updated daily)
 
-| File Name                  | Operating System |  Format  | Download Link                                                            |
-| -------------------------- | :--------------: | :------: | :----------------------------------------------------------------------- |
-| hosts                      |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts)<br>                      |
-| hosts                      |     Windows      | CRLF/DOS | [Download](https://hosts.ubuntu101.co.za/hosts.windows)                  |
-| hosts.deny                 |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/hosts.deny)<br>                 |
-| superhosts.deny            |    Unix/Linux    |   UNIX   | [Download](https://hosts.ubuntu101.co.za/superhosts.deny)<br>            |
-| domains.list               |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains.list)<br>               |
-| domains-dotted-format.list |     DnsMasq      |   UNIX   | [Download](https://hosts.ubuntu101.co.za/domains-dotted-format.list)<br> |
-| ips.list                   |  Any / Pi-Hole   |   UNIX   | [Download](https://hosts.ubuntu101.co.za/ips.list)                       |
+| Times are in UTC (Every day)           | Start   | End     |
+|----------------------------------------|---------|---------|
+| Central Repository (GitHub)            | ≈ 19:05 | ≈ 19:15 |
+| API / Search engine                    | 19:05   | ≈ 19:20 |
+| Central Mirror (hosts.ubuntu101.co.za) | 19:20   | ≈ 19:25 |
+| DNS Server ([#590](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues/590))                      | 19:20   | ≈ 19:30 |
 
-### Installers, Updaters and Uninstaller Helper Scripts
-
-| Linux                                                                                                                                                      | Windows                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| [hosts Installer](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-installer.sh)                         | [hosts Installer](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat)     |
-| [hosts UnInstaller](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-uninstaller.sh)                     | [hosts Updater](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-update-hosts.bat)        |
-| [hosts Updater](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-updater.sh)                             | [hosts UnInstaller](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-uninstall-hosts.bat) |
-| [hosts.deny Installer](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-installer.sh)               |
-| [hosts.deny UnInstaller](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-uninstaller.sh)           |
-| [hosts.deny Updater](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts.deny-updater.sh)                   |
-| [superhosts.deny Installer](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-installer.sh)     |
-| [superhosts.deny UnInstaller](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-uninstaller.sh) |
-| [superhosts.deny Updater](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-superhosts.deny-updater.sh)         |
 
 ---
 
-## ADDITIONS / REMOVALS / CORRECTIONS !!
+## ADDITIONS
 
-[![Log an Issue](https://img.shields.io/badge/LOG%20-%20an%20issue%20%F0%9F%9A%A6-blue.svg)](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues) if you disagree with anything on this list or want to add any other bad web sites to the list.
+[![Log an Issue or a PR](https://img.shields.io/badge/LOG%20-%20an%20issue%20here%20%F0%9F%9A%A6-blue.svg)](http://github.com/Ultimate-Hosts-Blacklist/blacklist/issues) if you want to add an entry to our infrastructure.
+
+## REMOVALS 
+
+[![Log an Issue](https://img.shields.io/badge/LOG%20-%20an%20issue%20here%20%F0%9F%9A%A6-blue.svg)](http://github.com/Ultimate-Hosts-Blacklist/whitelist/issues) if you disagree with anything in our distributed content.
+
+## DISCUSSIONS
+
+[![Log an Issue](https://img.shields.io/badge/LOG%20-%20an%20issue%20here%20%F0%9F%9A%A6-blue.svg)](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues) if you want to discuss anything in our infrastructure
 
 ---
 
@@ -225,59 +228,77 @@ The sources of the input data information are as follows.
 
 ---
 
-## COLLABORATORS & CONTRIBUTORS
+## AWESOME TOOLS WE WROTE
 
-- [Maravento](https://github.com/maravento)
-- [Nissar Chababy](https://github.com/funilrys)
-- [SMed79](https://github.com/SMed79)
-- [xxcriticxx](https://github.com/xxcriticxx)
-- [ZeroDot1](https://github.com/ZeroDot1)
-- [Mitchell Krog](https://github.com/mitchellkrogza)
+- [UHBW - Ultimate Hosts Blacklist Whitelist](https://pypi.org/project/ultimate-hosts-blacklist-whitelist/)
+  - A - global - whitelisting tool (not limited to our infrastructure).
+- [UHBIRU - Ultimate Hosts Blacklist Input Repo Updater](https://pypi.org/project/ultimate-hosts-blacklist-input-repo-updater/)
+  - The tool to update/test our input source repositories.
+- [UHBCRU - Ultimate Hosts Blacklist Central Repo Updater](https://pypi.org/project/ultimate-hosts-blacklist-central-repo-updater/)
+  - The tool to update this repository.
+- [UHBC - Ultimate Hosts Blacklist Comparison](https://pypi.org/project/ultimate-hosts-blacklist-comparison/)
+  - The comparison tool of the Ultimate Hosts Blacklist project.
 
----
+## AWESOME TOOLS WE USE
 
-## Some other awesome free projects
+- [PyFunceble](https://github.com/funilrys/PyFunceble)
+  - The tool to check the availability or syntax of domain, IP or URL.
 
-- <https://github.com/dead-hosts>
-- <https://github.com/funilrys/funceble>
-- <https://github.com/funilrys/PyFunceble>
-- <https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker>
-- <https://github.com/mitchellkrogza/Badd-Boyz-Hosts>
-- <https://github.com/mitchellkrogza/Fail2Ban-Blacklist-JAIL-for-Repeat-Offenders-with-Perma-Extended-Banning>
-- <https://github.com/mitchellkrogza/fail2ban-useful-scripts>
-- <https://github.com/mitchellkrogza/linux-server-administration-scripts>
-- <https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker>
-- <https://github.com/mitchellkrogza/Phishing.Database>
-- <https://github.com/mitchellkrogza/Stop.Google.Analytics.Ghost.Spam.HOWTO>
-- <https://github.com/mitchellkrogza/Travis-CI-for-Apache-For-Testing-Apache-and-PHP-Configurations>
-- <https://github.com/mitchellkrogza/Travis-CI-Nginx-for-Testing-Nginx-Configuration>
+## SOME OTHER AWESOME TOOLS/PROJECTS
+
+- [Dead-Hosts](https://github.com/dead-hosts)
+- [NGINX Ultimate Bad Blocker](https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker)
+- [Apache Ultimate Bad Bot Blocker](https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker)
+- [Fail2Ban Blacklist JAIL for Repeat Offenders](https://github.com/mitchellkrogza/Fail2Ban-Blacklist-JAIL-for-Repeat-Offenders-with-Perma-Extended-Banning)
+- [Phishing Database](https://github.com/mitchellkrogza/Phishing.Database)
+- [Stop Google Analytics Ghost Spam HOWTO](https://github.com/mitchellkrogza/Stop.Google.Analytics.Ghost.Spam.HOWTO)
 
 ---
 
-## Help Support This Project
+## SUPPORT THIS PROJECT AND ITS INFRASTRUCTURE
 
 #### :sparkling_heart: Buy Mitchell a Coffee :point_down:
-[<img src="https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/.assets/kofi5.png" alt="Buy Mitchell some Coffee" width="200"/>](https://ko-fi.com/mitchellkrog)
+
+
+[![Buy Mitchell some Coffee](https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/master/.assets/kofi5.png)](https://ko-fi.com/mitchellkrog)
 
 #### :sparkling_heart: Buy Funilrys a Coffee :point_down:
-[<img src="https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/.assets/kofi5.png" alt="Buy Funilrys some Coffee" width="200"/>](https://ko-fi.com/funilrys)
+
+[![Buy Mitchell some Coffee](https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/master/.assets/kofi5.png)](https://ko-fi.com/funilrys)
+
 
 ---
 
 ### Into Photography?
 
-Come drop by and visit me at <https://mitchellkrog.com>
+Come drop by and visit [Mitchell's Portfolio](https://mitchellkrog.com).
 
 ---
 
-# MIT License
+# License
 
-## Copyright (c) 2017, 2018 Mitchell Krog - mitchellkrog@gmail.com
+```
+MIT License
 
-## <https://github.com/mitchellkrogza>
+Copyright (c) 2020 Ultimate Hosts Blacklist - @Ultimate-Hosts-Blacklist
+Copyright (c) 2017, 2018, 2019, 2020 Mitchell Krog - @mitchellkrogza
+Copyright (c) 2017, 2018, 2019, 2020 Nissar Chababy - @funilrys
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
