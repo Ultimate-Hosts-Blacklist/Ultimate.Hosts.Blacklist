@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Linux superhosts.deny UnInstaller for the Ultimate Hosts Blacklist
-# Repo Url: https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist
+# Repo Url: https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist
 # Copyright - Mitchell Krog - mitchellkrog@gmail.com 
 # https://github.com/mitchellkrogza
 

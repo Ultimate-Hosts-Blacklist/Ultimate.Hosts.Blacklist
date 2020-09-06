@@ -1,5 +1,5 @@
 :: ULTIMATE HOSTS BLACKLIST
-:: REPO: https://github.com/mitchellkrogza/Ultimate.Hosts.Blacklist
+:: REPO: https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist
 :: Copyright Mitchell Krog - https://github.com/mitchellkrogza
 :: This script will first create a backup of the original or current hosts
 :: file and save it in a file titled "hosts.bak" 
