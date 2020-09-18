@@ -3,7 +3,7 @@ name: Feature request
 about: Suggest an idea for this project.
 title: "[FEATURE] My Awesome Idea"
 labels: enhancement
-assignees: mitchellkrogza, funilrys
+assignees: mitchellkrogza, funilrys, dnmTX, smed79
 
 ---
 

@@ -3,7 +3,7 @@ name: False-Positive report
 about: Report a possible false-positive subject.
 title: "[FALSE-POSITIVE] example.org"
 labels: false positive
-assignees: mitchellkrogza, funilrys
+assignees: mitchellkrogza, funilrys, dnmTX, smed79
 
 ---
 
