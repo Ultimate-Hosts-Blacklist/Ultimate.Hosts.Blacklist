@@ -15,7 +15,7 @@ Our hosts file is for use on any operating system to block bad domains out of yo
 
 ---
 
-- Version: **V1.2128.2020.10.06**
+- Version: **V1.2129.2020.10.07**
 - Total Bad Hosts in hosts file: **321,089**
 - Total Bad IP's in hosts.deny file: **140,162**
 - Total Bad Hosts and IP's in superhosts.deny file: **461,251**
