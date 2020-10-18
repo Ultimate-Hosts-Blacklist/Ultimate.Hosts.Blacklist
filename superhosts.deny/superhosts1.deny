@@ -1,156 +1,3 @@
-ALL: ns5.expressdirections.com
-ALL: ns5.freeweatherapp.com
-ALL: ns5.gameschill.com
-ALL: ns5.gamezooks.com
-ALL: ns5.gofreeradio.com
-ALL: ns5.hiveon.net
-ALL: ns5.inq.com
-ALL: ns5.jumboquiz.com
-ALL: ns5.lovetestpro.com
-ALL: ns5.mapsfrontier.com
-ALL: ns5.mapspilot.com
-ALL: ns5.mapsscout.com
-ALL: ns5.mapstrek.com
-ALL: ns5.mapsvoyage.com
-ALL: ns5.node.hiveon.net
-ALL: ns5.packagetrak.com
-ALL: ns5.packtrackplus.com
-ALL: ns5.playpopgames.com
-ALL: ns5.playziz.com
-ALL: ns5.promediaconverter.com
-ALL: ns5.quicknewsplus.com
-ALL: ns5.quizflavor.com
-ALL: ns5.recipeally.com
-ALL: ns5.touchcommerce.com
-ALL: ns5.tribalfusion.com
-ALL: ns5.viglink.com
-ALL: ns5.yoyoquiz.com
-ALL: ns50.crazyegg.com
-ALL: ns501.rontar.com
-ALL: ns502.rontar.com
-ALL: ns503.rontar.com
-ALL: ns506.rontar.com
-ALL: ns507.rontar.com
-ALL: ns51.hashvault.pro
-ALL: ns51x.btcc.com
-ALL: ns57.btcc.com
-ALL: ns5c.btcc.com
-ALL: ns5ftes.net
-ALL: ns5m.btcc.com
-ALL: ns6.360safe.com
-ALL: ns6.advenuedsp.com
-ALL: ns6.arcadeyum.com
-ALL: ns6.classifiedsnearme.com
-ALL: ns6.clrstm.com
-ALL: ns6.criteo.com
-ALL: ns6.crusharcade.com
-ALL: ns6.deluxequiz.com
-ALL: ns6.easytoolonline.com
-ALL: ns6.expressdirections.com
-ALL: ns6.freeweatherapp.com
-ALL: ns6.fwmrm.net
-ALL: ns6.gameschill.com
-ALL: ns6.gamezooks.com
-ALL: ns6.gigsis.net
-ALL: ns6.gofreeradio.com
-ALL: ns6.inq.com
-ALL: ns6.jumboquiz.com
-ALL: ns6.lovetestpro.com
-ALL: ns6.mapsfrontier.com
-ALL: ns6.mapspilot.com
-ALL: ns6.mapsscout.com
-ALL: ns6.mapstrek.com
-ALL: ns6.mapsvoyage.com
-ALL: ns6.packagetrak.com
-ALL: ns6.packtrackplus.com
-ALL: ns6.playpopgames.com
-ALL: ns6.playziz.com
-ALL: ns6.promediaconverter.com
-ALL: ns6.quicknewsplus.com
-ALL: ns6.quizflavor.com
-ALL: ns6.recipeally.com
-ALL: ns6.touchcommerce.com
-ALL: ns6.viglink.com
-ALL: ns6.yoyoquiz.com
-ALL: ns60315.ovh.net
-ALL: ns60357.ovh.net
-ALL: ns60695.ovh.net
-ALL: ns61.hashvault.pro
-ALL: ns61009.ovh.net
-ALL: ns623643.ovh.net
-ALL: ns6244.ovh.net
-ALL: ns6327013.ovh.net
-ALL: ns6549.ovh.net
-ALL: ns68.btcc.com
-ALL: ns7.360safe.com
-ALL: ns7.advenuedsp.com
-ALL: ns7.arcadeyum.com
-ALL: ns7.classifiedsnearme.com
-ALL: ns7.clrstm.com
-ALL: ns7.crusharcade.com
-ALL: ns7.deluxequiz.com
-ALL: ns7.easytoolonline.com
-ALL: ns7.expressdirections.com
-ALL: ns7.freeweatherapp.com
-ALL: ns7.gameschill.com
-ALL: ns7.gamezooks.com
-ALL: ns7.gofreeradio.com
-ALL: ns7.jumboquiz.com
-ALL: ns7.lovetestpro.com
-ALL: ns7.mapsfrontier.com
-ALL: ns7.mapspilot.com
-ALL: ns7.mapsscout.com
-ALL: ns7.mapstrek.com
-ALL: ns7.mapsvoyage.com
-ALL: ns7.packagetrak.com
-ALL: ns7.packtrackplus.com
-ALL: ns7.playpopgames.com
-ALL: ns7.playziz.com
-ALL: ns7.promediaconverter.com
-ALL: ns7.quicknewsplus.com
-ALL: ns7.quizflavor.com
-ALL: ns7.recipeally.com
-ALL: ns7.yoyoquiz.com
-ALL: ns73.epom.com
-ALL: ns8.360safe.com
-ALL: ns8.advenuedsp.com
-ALL: ns8.arcadeyum.com
-ALL: ns8.classifiedsnearme.com
-ALL: ns8.clrstm.com
-ALL: ns8.criteo.com
-ALL: ns8.crusharcade.com
-ALL: ns8.deluxequiz.com
-ALL: ns8.easytoolonline.com
-ALL: ns8.expressdirections.com
-ALL: ns8.freeweatherapp.com
-ALL: ns8.gameschill.com
-ALL: ns8.gamezooks.com
-ALL: ns8.gofreeradio.com
-ALL: ns8.jumboquiz.com
-ALL: ns8.lfstmedia.com
-ALL: ns8.lovetestpro.com
-ALL: ns8.mapsfrontier.com
-ALL: ns8.mapspilot.com
-ALL: ns8.mapsscout.com
-ALL: ns8.mapstrek.com
-ALL: ns8.mapsvoyage.com
-ALL: ns8.mediav.com
-ALL: ns8.packagetrak.com
-ALL: ns8.packtrackplus.com
-ALL: ns8.playpopgames.com
-ALL: ns8.playziz.com
-ALL: ns8.promediaconverter.com
-ALL: ns8.quicknewsplus.com
-ALL: ns8.quizflavor.com
-ALL: ns8.recipeally.com
-ALL: ns8.yoyoquiz.com
-ALL: ns9.advenuedsp.com
-ALL: ns9.mediav.com
-ALL: ns901.rontar.com
-ALL: nsa.conviva.com
-ALL: nsacc.co.za
-ALL: nsads.hotwired.com
-ALL: nsads.sv.publicus.com
 ALL: nsads.us.publicus.com
 ALL: nsads4.us.publicus.com
 ALL: nsapi.admicro.vn
@@ -2350,7 +2197,6 @@ ALL: offer.fyber.com
 ALL: offer.gop1.co
 ALL: offer.mediaz.vn
 ALL: offer.slgnt.eu
-ALL: offer.sponsorpay.com
 ALL: offer100.ml
 ALL: offer1920.hop.clickbank.net
 ALL: offer4u.clickfunnels.com
@@ -2647,7 +2493,6 @@ ALL: ogs.ants.vn
 ALL: ogtutoring.com
 ALL: ogua-marre.firebaseapp.com
 ALL: ogurbz.com
-ALL: ogury.com
 ALL: ogury.eu-west-1.stinger-ad.bidr.io
 ALL: ogury.mgr.consensu.org
 ALL: ogvrdxjcgzst.com
@@ -3342,7 +3187,6 @@ ALL: omnicom-spain.facebook-ads.adtz.com
 ALL: omnicompetent-chair.000webhostapp.com
 ALL: omniconvert.com
 ALL: omnijay-inv-eu.admixer.net
-ALL: omnijay.com
 ALL: omnikai.clickfunnels.com
 ALL: omnikool.discovery.com
 ALL: omnipresent-nozzle.000webhostapp.com
@@ -5527,8 +5371,8 @@ ALL: osprmnv.com
 ALL: osprodutosmaisvendidos.com
 ALL: ospuhdy6lrtryilg5xqp.furnishenterprises.com
 ALL: ospvfsob.co.uk
-ALL: OSQA.com
 ALL: osqa.com
+ALL: OSQA.com
 ALL: osqa.net
 ALL: osr.bounceexchange.com
 ALL: osr.staging.bounceexchange.com
@@ -10730,7 +10574,6 @@ ALL: pcthk.veinteractive.com
 ALL: pctip.co.kr
 ALL: pctools.tt.omtrdc.net
 ALL: pctoolscom.112.2o7.net
-ALL: pctracking.net
 ALL: pctuk.veinteractive.com
 ALL: pctupd.info
 ALL: pctusa.veinteractive.com
@@ -14972,7 +14815,6 @@ ALL: pocketgolf.host
 ALL: pocketknifecollectibles.com
 ALL: pocketlint.uk.intellitxt.com
 ALL: pocketmath-cdn.com
-ALL: pocketmath.com
 ALL: pocketminer.co.uk
 ALL: pocketwhale.info
 ALL: pocofh.com
@@ -15141,7 +14983,6 @@ ALL: pokerrrr-alternate.app.link
 ALL: pokerstars.eu
 ALL: pokerterbesar.com
 ALL: poki-d.openx.net
-ALL: pokkt.com
 ALL: pokochajswojewlosy.pl
 ALL: pokojeutosi.com.pl
 ALL: poksonstudio.com
@@ -16552,7 +16393,6 @@ ALL: postadusa.com
 ALL: postaffiliatepro.com
 ALL: postback.dobermanmedia.com
 ALL: postback.hexcan.com
-ALL: postback.iqm.com
 ALL: postback.iwoop.com
 ALL: postback.rhclrs.novem.pl
 ALL: postback.superads.cn
@@ -16673,7 +16513,6 @@ ALL: postview.metalyzer.com
 ALL: postvirement.000webhostapp.com
 ALL: postwolf.com
 ALL: posudagold.ru
-ALL: posumeads.com
 ALL: poswieciekuchni.pl
 ALL: pot.coinium.org
 ALL: pot.mastermining.net
@@ -18515,7 +18354,6 @@ ALL: prodmon.beeswax.com
 ALL: produccion-carroya.onesignal.com
 ALL: produccionvirtual.com
 ALL: producebreed.com
-ALL: producer.getwisdom.io
 ALL: produceracademy.ru
 ALL: product-cdn.liftoff.io
 ALL: product-feed-image.bannerflow.com
@@ -18758,7 +18596,6 @@ ALL: proforexeducation.com
 ALL: proformconcrete-my.sharepoint.com
 ALL: proformics.com
 ALL: profsandhu.com
-ALL: profscribe.com
 ALL: profserv01.smaato.net
 ALL: profshen.blog.163.com
 ALL: profstone.ru
@@ -19210,7 +19047,6 @@ ALL: promotion.partnercash.de
 ALL: promotionalthermometer.com
 ALL: promotionengine.com
 ALL: promotioninc.000webhostapp.com
-ALL: promotions-884485.c.cdn77.org
 ALL: promotions-inc.com
 ALL: promotions.betfred.com
 ALL: promotions.catalina.com
@@ -19269,7 +19105,6 @@ ALL: propellerads.com
 ALL: propellerads.xml.ak-is.net
 ALL: propellerclick.com
 ALL: propellerpops.com
-ALL: proper.io
 ALL: properlyassets.com
 ALL: propermedia-d.openx.net
 ALL: properties.cbcpremierproperties.com
@@ -19425,28 +19260,28 @@ ALL: protection-membres.com
 ALL: protection-pages.000webhostapp.com
 ALL: protection.ALpolice.com
 ALL: protection.alpolice.com
-ALL: protection.aspolice.com
 ALL: protection.ASpolice.com
-ALL: protection.AUpolice.com
+ALL: protection.aspolice.com
 ALL: protection.aupolice.com
-ALL: protection.AZpolice.com
+ALL: protection.AUpolice.com
 ALL: protection.azpolice.com
+ALL: protection.AZpolice.com
 ALL: protection.BTpolice.com
 ALL: protection.btpolice.com
-ALL: protection.bypolice.com
 ALL: protection.BYpolice.com
+ALL: protection.bypolice.com
 ALL: protection.CApolice.com
 ALL: protection.capolice.com
-ALL: protection.ccpolice.com
 ALL: protection.CCpolice.com
-ALL: protection.espolice.com
+ALL: protection.ccpolice.com
 ALL: protection.ESpolice.com
-ALL: protection.FRpolice.com
+ALL: protection.espolice.com
 ALL: protection.frpolice.com
-ALL: protection.FXpolice.com
+ALL: protection.FRpolice.com
 ALL: protection.fxpolice.com
-ALL: protection.GApolice.com
+ALL: protection.FXpolice.com
 ALL: protection.gapolice.com
+ALL: protection.GApolice.com
 ALL: protection.grpolice.com
 ALL: protection.GRpolice.com
 ALL: protection.HKpolice.com
@@ -19457,36 +19292,36 @@ ALL: protection.ILpolice.com
 ALL: protection.ilpolice.com
 ALL: protection.itpolice.com
 ALL: protection.ITpolice.com
-ALL: protection.JMpolice.com
 ALL: protection.jmpolice.com
-ALL: protection.kypolice.com
+ALL: protection.JMpolice.com
 ALL: protection.KYpolice.com
-ALL: protection.LApolice.net
+ALL: protection.kypolice.com
 ALL: protection.lapolice.net
+ALL: protection.LApolice.net
 ALL: protection.lbpolice.com
 ALL: protection.LBpolice.com
-ALL: protection.lcpolice.com
 ALL: protection.LCpolice.com
-ALL: protection.lipolice.com
+ALL: protection.lcpolice.com
 ALL: protection.LIpolice.com
-ALL: protection.lrpolice.com
+ALL: protection.lipolice.com
 ALL: protection.LRpolice.com
-ALL: protection.LSpolice.com
+ALL: protection.lrpolice.com
 ALL: protection.lspolice.com
+ALL: protection.LSpolice.com
 ALL: protection.lvpolice.com
 ALL: protection.LVpolice.com
-ALL: protection.mapolice.com
 ALL: protection.MApolice.com
+ALL: protection.mapolice.com
 ALL: protection.mdpolice.com
 ALL: protection.MDpolice.com
-ALL: protection.MEpolice.com
 ALL: protection.mepolice.com
-ALL: protection.mnpolice.com
+ALL: protection.MEpolice.com
 ALL: protection.MNpolice.com
+ALL: protection.mnpolice.com
 ALL: protection.napolice.com
 ALL: protection.NApolice.com
-ALL: protection.ncpolice.com
 ALL: protection.NCpolice.com
+ALL: protection.ncpolice.com
 ALL: protection.NZpolice.com
 ALL: protection.nzpolice.com
 ALL: protection.PApolice.com
@@ -19496,14 +19331,14 @@ ALL: protection.phpolice.com
 ALL: protection.sbpolice.com
 ALL: protection.SBpolice.com
 ALL: protection.stpolice.com
-ALL: protection.TNpolice.com
 ALL: protection.tnpolice.com
-ALL: protection.TOpolice.com
+ALL: protection.TNpolice.com
 ALL: protection.topolice.com
+ALL: protection.TOpolice.com
 ALL: protection.VApolice.com
 ALL: protection.vapolice.com
-ALL: protection.vipolice.com
 ALL: protection.VIpolice.com
+ALL: protection.vipolice.com
 ALL: protection800000.000webhostapp.com
 ALL: protections888.000webhostapp.com
 ALL: protectionsmenloparkca2018.000webhostapp.com
@@ -21273,7 +21108,6 @@ ALL: pxl.adx1.com
 ALL: pxl.bitember.com
 ALL: pxl.connexity.net
 ALL: pxl.ibpxl.com
-ALL: pxl.iqm.com
 ALL: pxl.jivox.com
 ALL: pxl.starbolt.io
 ALL: pxl.tsyndicate.com
@@ -21648,7 +21482,6 @@ ALL: q14.cnzz.com
 ALL: q16.cnzz.com
 ALL: q17.cnzz.com
 ALL: q1chy1dr0.com
-ALL: q1connect.com
 ALL: q1digital.checkm8.com
 ALL: q1k.ru
 ALL: q1media-entertainment.t.domdex.com
@@ -22731,8 +22564,8 @@ ALL: questex.mktoweb.com
 ALL: questiacom.112.2o7.net
 ALL: question-us.intellitxt.com
 ALL: question.pcubelive.com
-ALL: question2answer.com
 ALL: Question2Answer.com
+ALL: question2answer.com
 ALL: questionfly.com
 ALL: questionmarket.com
 ALL: questionpro.com
@@ -24921,7 +24754,6 @@ ALL: reco.monetate.net
 ALL: reco.nakanohito.jp
 ALL: recoal.my-mining-pool.de
 ALL: recocdn.m6r.eu
-ALL: recoco.it
 ALL: recodiss.xyz
 ALL: recogazo.silveregg.net
 ALL: recognisable-town.000webhostapp.com
@@ -25736,7 +25568,6 @@ ALL: reflekart.com
 ALL: reflektor.hr
 ALL: reflex.com.tr
 ALL: reflexive-radios.000webhostapp.com
-ALL: reforge.in
 ALL: reformadetelhados.net
 ALL: reformandrevive.com
 ALL: reformasihutang.com
@@ -26122,7 +25953,6 @@ ALL: reklamalan.com
 ALL: reklamanet.net
 ALL: reklamcsere.hu
 ALL: reklamdor.com
-ALL: reklamdsp.com
 ALL: reklame.unwired-i.net
 ALL: reklamer.com.ua
 ALL: reklamfit.com
@@ -26900,7 +26730,6 @@ ALL: research.adtelligent.com
 ALL: research.btcprivate.org
 ALL: research.co1.qualtrics.com
 ALL: research.criteo.com
-ALL: research.de.com
 ALL: research.qualtrics.com
 ALL: research.urbanairship.com
 ALL: research1.co1.qualtrics.com
@@ -27113,7 +26942,6 @@ ALL: responsepoint2.actonsoftware.com
 ALL: responses.df.telemetry.microsoft.com
 ALL: responsetap.c3metrics.com
 ALL: responsetap.com
-ALL: responsiveads.com
 ALL: responsivemediallc.clickfunnels.com
 ALL: respro.softhofhosting.com
 ALL: resque-moses.ec2.heyzap.com
@@ -27524,7 +27352,6 @@ ALL: reviveservers.com
 ALL: revivestore.com
 ALL: reviviscent-fifteen.000webhostapp.com
 ALL: revjet.com
-ALL: revlift.io
 ALL: revlive.me
 ALL: revmedi.com
 ALL: revmetrix.com
@@ -27784,7 +27611,6 @@ ALL: rhodeisland.sla.org
 ALL: rhodestravel.us.com
 ALL: rhodeswatkinsltd.co.uk
 ALL: rhombohedral-quota.000webhostapp.com
-ALL: rhombusads.com
 ALL: rhondamaltd.com
 ALL: rhondanp.leadpages.co
 ALL: rhondarobinsoninc.000webhostapp.com
@@ -27812,7 +27638,6 @@ ALL: rhythmmoney.com
 ALL: rhythmnewmedia.com
 ALL: rhythmone-eu.bidagent.xad.com
 ALL: rhythmone.bidagent.xad.com
-ALL: rhythmone.com
 ALL: rhythmxchange.com
 ALL: rhzpcnueogbexb.com
 ALL: rhzte.adj.st
@@ -28019,7 +27844,6 @@ ALL: rimvoyeur.ru
 ALL: rimwebclub.com
 ALL: rin.pool.mn
 ALL: rinchoa.top
-ALL: rinconpx.net
 ALL: rincosavesecurityco.com
 ALL: rinexpo-logistics.com
 ALL: ringcentral.112.2o7.net
@@ -29616,7 +29440,6 @@ ALL: rs33t-21b3c-71.com
 ALL: rs3abn5v5zaumlflfvw7rzpjnvwvs1509512001.nuid.imrworldwide.com
 ALL: rs44t-1c92b-18.com
 ALL: rs4t-c187b-21.com
-ALL: rs6.net
 ALL: rsa.122.2o7.net
 ALL: rsa.d3.sc.omtrdc.net
 ALL: rsa.demdex.net
@@ -30127,7 +29950,6 @@ ALL: rtb8.impresionesweb.com
 ALL: rtb9.adscience.nl
 ALL: rtb9.impresionesweb.com
 ALL: rtbadh.adscience.nl
-ALL: rtbadzesto.com
 ALL: rtbatlanta.com
 ALL: rtbc-waardex.rtb.adx1.com
 ALL: rtbc.info
@@ -30157,7 +29979,6 @@ ALL: rtbe-beta.media6degrees.com
 ALL: rtbe.adsymptotic.com
 ALL: rtbe.media6degrees.com
 ALL: rtbfactory.xml.ak-is.net
-ALL: rtbflairads.com
 ALL: rtbg.admedia.com
 ALL: rtbgw-eu.adgrx.com
 ALL: rtbgw-na-east.adgrx.com
@@ -30166,12 +29987,10 @@ ALL: rtbhouse.mgr.consensu.org
 ALL: rtbid.chitika.net
 ALL: rtbid.me
 ALL: rtbidder.net
-ALL: rtbidhost.com
 ALL: rtbiq.com
 ALL: rtbnow.com
 ALL: rtbnowads.com
 ALL: rtbphp.monarchads.com
-ALL: rtbplatform.net
 ALL: rtbplatform.rtb-east.ak-is.net
 ALL: rtbpop.com
 ALL: rtbpopd.com
@@ -30180,7 +29999,6 @@ ALL: rtbr-asia-east.bebi.com
 ALL: rtbr-europe-west.bebi.com
 ALL: rtbr-us-central.bebi.com
 ALL: rtbr.bebi.com
-ALL: rtbsbengine.com
 ALL: rtbsnip-c2s-ams.creativecdn.com
 ALL: rtbsnip-c2s-ash.creativecdn.com
 ALL: rtbsnip-c2s-sin.creativecdn.com
@@ -30191,7 +30009,6 @@ ALL: rtbtest.nexage.com
 ALL: rtbtest.send.microad.jp
 ALL: rtbtrack-fr.admaxim.com
 ALL: rtbtrack-uk.admaxim.com
-ALL: rtbtradein.com
 ALL: rtbui.adelement.com
 ALL: rtbx.adgrx.com
 ALL: rtbx.biz
@@ -30352,7 +30169,6 @@ ALL: rtvirmento.000webhostapp.com
 ALL: rtvmax.pl
 ALL: rtw.monerise.com
 ALL: rtx.alcmpn.com
-ALL: rtxplatform.com
 ALL: rtxs.ad4mat.net
 ALL: rtypxhlfvmez.com
 ALL: rtyyutr.cf
@@ -30667,7 +30483,6 @@ ALL: runngineszservices.co.uk
 ALL: runningerin.top
 ALL: runningnetwork.com
 ALL: runningwithcurves.leadpages.co
-ALL: runoutsoftware.com
 ALL: runscapeclans.000webhostapp.com
 ALL: runscaps.co
 ALL: runslin.com
@@ -32445,7 +32260,6 @@ ALL: saber46.000webhostapp.com
 ALL: sabervalle.com
 ALL: sabiamedia.g2afse.com
 ALL: sabinplasticqatar.com
-ALL: sabio.us
 ALL: sabiosdelamor.co
 ALL: sabirindustrial.com
 ALL: sabkagujarat.com
@@ -34831,7 +34645,6 @@ ALL: sconsentit904.cloudapp.net
 ALL: sconsentit910.cloudapp.net
 ALL: scontent.webcollage.net
 ALL: scontrm.com
-ALL: scoobyads.com
 ALL: scooshzdpd.fgmdpwfh2r.madpendesign.com.au
 ALL: scoota.co
 ALL: scootco.t.domdex.com
@@ -36710,7 +36523,6 @@ ALL: securedmyaccd.serveirc.com
 ALL: securednssite.com
 ALL: securedocu.women.acsite.org
 ALL: securedonlineservicess.000webhostapp.com
-ALL: securedopen-bp.com
 ALL: securedpage.co.uk
 ALL: securedparty41.clickfunnels.com
 ALL: securedtrustb.com
@@ -38141,7 +37953,6 @@ ALL: serv4.vizury.com
 ALL: serv7eventos.com.br
 ALL: servad.mynet.com
 ALL: servads.fansshare.com
-ALL: servadsdisrupt.com
 ALL: servair.com
 ALL: serval-j.adtdp.com
 ALL: servbb2019pontos.com
@@ -41738,7 +41549,6 @@ ALL: silmad.ml
 ALL: silongndagtausayahe.myvnc.com
 ALL: silsil.metaps.com
 ALL: silurian.cn
-ALL: silvalliant.info
 ALL: silver-path.com
 ALL: silver.crypto.csgocpu.com
 ALL: silver.ethosdistro.com
@@ -41758,7 +41568,6 @@ ALL: silverjames.us9.list-manage1.com
 ALL: silverland.go.pl
 ALL: silverline.t.domdex.com
 ALL: silvermirrorphotobooth.com
-ALL: silvermob.com
 ALL: silvernettech.com
 ALL: silverospreyscc.000webhostapp.com
 ALL: silverpop.com
@@ -43908,7 +43717,6 @@ ALL: smartx-api.stage.sxp.smartclip.net
 ALL: smartx-ui.stage.sxp.smartclip.net
 ALL: smartxads.com
 ALL: smartxoreoo3.top
-ALL: smartyads.com
 ALL: smartyads.rtb.adx1.com
 ALL: smartyads_display_vx.rtb.adx1.com
 ALL: smartyads_vx.rtb.adx1.com
@@ -45676,11 +45484,9 @@ ALL: sommer.cx
 ALL: sommess.com
 ALL: sommons.co
 ALL: sommtalks.com
-ALL: somniture.stuff.co.nz
 ALL: somnivis.overstock.com
 ALL: somnoy.com
 ALL: somo.my
-ALL: somoaudience.com
 ALL: somobilia.com
 ALL: somokinger.blogspot.com
 ALL: somoto.g2afse.com
@@ -46068,7 +45874,6 @@ ALL: sourcemedia-d.openx.net
 ALL: sourcemedia-i.openx.net
 ALL: sourcepoint.arrivalist.com
 ALL: sourcepoint.mgr.consensu.org
-ALL: sourcepoint.vice.com
 ALL: sources.ethosdistro.com
 ALL: sourcestars.net
 ALL: soure-made.web.app
@@ -46331,7 +46136,6 @@ ALL: spacefiled.com
 ALL: spacehad.net.pl
 ALL: spaceio.xyz
 ALL: spacekey-d.openx.net
-ALL: spaceleadster.com
 ALL: spaceleg.waw.pl
 ALL: spacelight.sa
 ALL: spacematrix.com
@@ -47322,7 +47126,6 @@ ALL: spug44000nf.pubmatic.com
 ALL: spug55000.pubmatic.com
 ALL: spug55000c.pubmatic.com
 ALL: spukon.com
-ALL: spulse.net
 ALL: spumanbukan.com
 ALL: spunj.gg
 ALL: spunkfightgear.com
@@ -48395,7 +48198,6 @@ ALL: srvparis.weborama.com
 ALL: srvpub.com
 ALL: srvsynd.com
 ALL: srvtop.com
-ALL: srvtrck.com
 ALL: srwww1.com
 ALL: srxylmix.micpn.com
 ALL: sryrwf.re.kr
@@ -49122,7 +48924,6 @@ ALL: stack1.oieieio.xyz
 ALL: stack6.collect.igodigital.com
 ALL: stack7.collect.igodigital.com
 ALL: stack9.collect.igodigital.com
-ALL: stackadapt.com
 ALL: stackbit-seed-1.dynu.net
 ALL: stackbit-seed-2.dynu.net
 ALL: stackcdn.onedigitalad.com
@@ -50001,7 +49802,6 @@ ALL: staskostanislaw.pl
 ALL: staswiselka.pl
 ALL: stat-b.lianmeng.360.cn
 ALL: stat-parser02.aatkit.com
-ALL: stat-track.com
 ALL: stat.360safe.com
 ALL: stat.4u.pl
 ALL: stat.56.com
@@ -52470,7 +52270,6 @@ ALL: stream.playbuzz.com
 ALL: stream.pussyharem.com
 ALL: stream.salesloft.com
 ALL: stream.shoofle.tv
-ALL: stream.useriq.com
 ALL: stream.videocollect.macromill.com
 ALL: stream.vizu.com
 ALL: stream1.livefyre.com
@@ -53804,7 +53603,6 @@ ALL: supertop100.com
 ALL: supertoto.pushengage.com
 ALL: supertotobet0264.com
 ALL: supertracker.flashget.com
-ALL: supertracking.net
 ALL: supertraff.com
 ALL: supertramon.com
 ALL: supervaluepharma.com
@@ -54722,7 +54520,6 @@ ALL: sw01.hiveon.net
 ALL: sw01.node.hiveon.net
 ALL: sw1.nanopool.org
 ALL: sw1block.com
-ALL: sw88.espn.com
 ALL: sw88.go.com
 ALL: swa.and.co.uk
 ALL: swa.demdex.net
@@ -57560,7 +57357,6 @@ ALL: tealeaf.com
 ALL: tealine.com.tw
 ALL: tealium-app.quantummetric.com
 ALL: tealium.cbsnews.com
-ALL: tealium.com
 ALL: tealium.hs.llnwd.net
 ALL: tealiumiq.com
 ALL: team-lnfo.com
@@ -58053,7 +57849,6 @@ ALL: teladoc-private.piwik.pro
 ALL: telanganarythusangam.org
 ALL: telangiectatic-toe.000webhostapp.com
 ALL: telapi.getui.com
-ALL: telaria.com
 ALL: telariaeventsbidder-east.extend.tv
 ALL: telasia.net
 ALL: telasypapeles.com
@@ -58168,7 +57963,6 @@ ALL: telemetry.sonarsource.com
 ALL: telemetry.swe.quicinc.com
 ALL: telemetry.tradingview.com
 ALL: telemetry.urs.microsoft.com
-ALL: telemetry.v.dropbox.com
 ALL: telemetryservice.firstpartyapps.oaspapps.com
 ALL: telemetrysolutions.com.au
 ALL: telenet777.000webhostapp.com
@@ -59617,8 +59411,8 @@ ALL: thebillinginc.com
 ALL: thebillizm.pl
 ALL: thebitcoinarbitrage.com
 ALL: thebitshare.com
-ALL: thebizmeet.com
 ALL: TheBizMeet.com
+ALL: thebizmeet.com
 ALL: theblackandblue.co
 ALL: theblackbook.co.in
 ALL: theblackheartprocession.com
@@ -59697,7 +59491,6 @@ ALL: theclanofhack.com
 ALL: theclarityway.leadpages.co
 ALL: theclashroyale.com
 ALL: theclassicfeed.com
-ALL: theclickads.com
 ALL: thecliff.mangoads.vn
 ALL: theclothudp.com
 ALL: thecoachaccelerator.com
@@ -60892,7 +60685,6 @@ ALL: throattrees.com
 ALL: thrombolytic-troubl.000webhostapp.com
 ALL: throneless-courts.000webhostapp.com
 ALL: thronetheater.com
-ALL: throtle.io
 ALL: throttled.api.test.appsee.com
 ALL: through1and1.000webhostapp.com
 ALL: through1and2.000webhostapp.com
@@ -61070,7 +60862,6 @@ ALL: ticklemyivories.com
 ALL: ticklesign.com
 ALL: tickr.quintype.com
 ALL: ticksafaris.com
-ALL: ticksel.com
 ALL: ticktoc.saas.appdynamics.com
 ALL: ticktockservice.com
 ALL: ticomia.net.br
@@ -63651,8 +63442,6 @@ ALL: track.traffic.club
 ALL: track.trafficforce.com
 ALL: track.uc.cn
 ALL: track.ultragaming.biz
-ALL: track.ultravpn.com
-ALL: track.undressingpics.work
 ALL: track.unear.net
 ALL: track.untd.com
 ALL: track.upaknee.com
@@ -63949,7 +63738,6 @@ ALL: tracking.host.bannerflow.com
 ALL: tracking.hostgator.com
 ALL: tracking.hubspot.com
 ALL: tracking.ibexnetwork.com
-ALL: tracking.ibxlink.com
 ALL: tracking.icubeswire.com
 ALL: tracking.ikgastarten.nl
 ALL: tracking.imagewebdesign.fr
@@ -64136,7 +63924,6 @@ ALL: tracking.yieldlove-ad-serving.net
 ALL: tracking.yomedia.vn
 ALL: tracking.zeotap.com
 ALL: tracking001.piwik.pro
-ALL: tracking01.walmart.com
 ALL: tracking1.firstimpression.io
 ALL: tracking101.com
 ALL: tracking2.bucksense.com
@@ -64144,8 +63931,6 @@ ALL: tracking2.channeladvisor.com
 ALL: tracking2.firstimpression.io
 ALL: tracking2.hittail.com
 ALL: tracking2.vindicosuite.com
-ALL: tracking22.com
-ALL: tracking42.com
 ALL: tracking60.com
 ALL: tracking8-bnp.com
 ALL: trackingapi.cloudapp.net
@@ -64154,7 +63939,6 @@ ALL: trackingcampaign-tracking-service.placelocal.com
 ALL: trackingclick.net
 ALL: trackingcn.rayjump.com
 ALL: trackingera.com
-ALL: trackingfestival.com
 ALL: trackingindahouse.com
 ALL: trackinglibrary.prodperfect.com
 ALL: trackingmaster.co.cc
@@ -64182,7 +63966,6 @@ ALL: tracksitetraffic1.com
 ALL: tracksurf.daooda.com
 ALL: tracksy.com
 ALL: tracktrue.clicktrue.biz
-ALL: trackuhub.com
 ALL: trackverify.com
 ALL: trackvia.evergage.com
 ALL: trackviaggio.com
@@ -64267,7 +64050,6 @@ ALL: tradetracker.net
 ALL: tradewin.online
 ALL: tradex-d.openx.net
 ALL: tradeyourarcades.com
-ALL: trading-rtbg.com
 ALL: trading.dianomi.com
 ALL: trading.leadpages.co
 ALL: trading.veinteractive.com
@@ -64388,7 +64170,6 @@ ALL: trafficpage.cool
 ALL: trafficrank.de
 ALL: trafficresults.com
 ALL: trafficrevenue.net
-ALL: trafficrouter.io
 ALL: trafficsan.com
 ALL: trafficsecrets.com
 ALL: trafficsel.com
@@ -65022,8 +64803,8 @@ ALL: triangle-app.quantummetric.com
 ALL: triangle.dealsaver.com
 ALL: triangleatlantic.com
 ALL: trianglepediatricdentistry.com
-ALL: triangleservicesltd.com
 ALL: TRIANGLESERVICESLTD.COM
+ALL: triangleservicesltd.com
 ALL: triangletire.com
 ALL: triangulorosa.es
 ALL: tribal.us.intellitxt.com
@@ -65189,7 +64970,6 @@ ALL: tripphouse.com
 ALL: trips-jss.instana.io
 ALL: trips.com
 ALL: tripspins.com
-ALL: triptease.io
 ALL: triptease.us-west-2.stinger-ad.bidr.io
 ALL: tripvalet.clickfunnels.com
 ALL: triseptsolutions.122.2o7.net
@@ -65323,7 +65103,6 @@ ALL: trk365.com
 ALL: trk4.vdopia.com
 ALL: trk42-eucentral1.snt.imrworldwide.com
 ALL: trk42-useast1.snt.imrworldwide.com
-ALL: trk42.net
 ALL: trk4ppl.com
 ALL: trk89.benchurl.com
 ALL: trkcdn.atomex.net
@@ -65334,7 +65113,6 @@ ALL: trkfl.com
 ALL: trkingrp.com
 ALL: trkme.net
 ALL: trkn.us
-ALL: trknths.com
 ALL: trkpnt.ongage.net
 ALL: trkr1.com
 ALL: trkstaging.vdopia.com
@@ -68156,7 +67934,6 @@ ALL: udmedia.in
 ALL: udmercy.co1.qualtrics.com
 ALL: udmserve.net
 ALL: udn-d.openx.net
-ALL: udncoeln.com
 ALL: udockoan.net
 ALL: udome-canne.firebaseapp.com
 ALL: udotsky101.nazwa.pl
@@ -68391,7 +68168,6 @@ ALL: ui2.zanox.com
 ALL: ui2oa.app.link
 ALL: uiahsc.dnsabr.com
 ALL: uib-bank.blogspot.com.eg
-ALL: uib.ff.avast.com
 ALL: uibinmin.com
 ALL: uic.qualtrics.com
 ALL: uichaseopbanesx.000webhostapp.com
@@ -70363,7 +70139,6 @@ ALL: uptopopunder.com
 ALL: uptown-scabs.000webhostapp.com
 ALL: uptownbonifacio.com.ph
 ALL: uptownbreakdown.com
-ALL: upu.samsungelectronics.com
 ALL: upug11000.pubmatic.com
 ALL: upug22000.pubmatic.com
 ALL: upug33000.pubmatic.com
@@ -70584,7 +70359,6 @@ ALL: urlcash.net
 ALL: urlck.me
 ALL: urlcut.net
 ALL: urlcuts.cu.ma
-ALL: urldata.net
 ALL: urldefense.proofpoint.com
 ALL: urldelivery.com
 ALL: urlextension.com
@@ -71470,8 +71244,8 @@ ALL: usaonline.clickfunnels.com
 ALL: usaperkscenter.com
 ALL: usaphotocopyservice.com
 ALL: usapib.com
-ALL: usapolice.com
 ALL: USApolice.com
+ALL: usapolice.com
 ALL: usapool.live
 ALL: usapromotravel.com
 ALL: usasecureconsumer.com
@@ -73818,7 +73592,6 @@ ALL: velg.com.br
 ALL: velhoranzinza.com.br
 ALL: velingrad.info
 ALL: velis-inv-sg.admixer.net
-ALL: velismedia.com
 ALL: velmedia.net
 ALL: velo-boxx.com
 ALL: velo-moto.com
@@ -74362,7 +74135,6 @@ ALL: vertexuniversal.com
 ALL: vertiace.cu.ma
 ALL: verticalfusion.g2afse.com
 ALL: verticalizer.clickfunnels.com
-ALL: verticalmass.com
 ALL: verticalresponse.com
 ALL: verticals.marketolive.com
 ALL: verticalscope-d.openx.net
@@ -76257,7 +76029,6 @@ ALL: vivodorcia.xyz
 ALL: vivolife.refersion.com
 ALL: vivopay.ru
 ALL: vivowallet.minerall.io
-ALL: vivtracking.com
 ALL: viwinvietnam.com
 ALL: viwsqbbvfknp.com
 ALL: vix.as.criteo.net
@@ -76894,7 +76665,6 @@ ALL: volunteerwithelephants.com
 ALL: voluptas.7p.com
 ALL: volusia-petnanny.com
 ALL: voluum.adex.mobi
-ALL: voluum.com
 ALL: voluumtracker.com
 ALL: voluumtrk.com
 ALL: voluumtrk2.com
@@ -78387,7 +78157,6 @@ ALL: vrtest.valo.ai
 ALL: vrts.doublepimp.com
 ALL: vrtualviewings.com
 ALL: vrtzads.com
-ALL: vrtzcontextualads.com
 ALL: vrv-koenigskinder.de
 ALL: vrv.app.link
 ALL: vrvis6ndra5jeggj.onlinebattlefield.ch
@@ -78572,7 +78341,6 @@ ALL: vtphp.andbeyond.media
 ALL: vtrack.aniview.com
 ALL: vtrack.vht.com.vn
 ALL: vtrack.viewdeos.com
-ALL: vtracy.de
 ALL: vtrcl.co1.qualtrics.com
 ALL: vtrdn-9nvub.ads.tremorhub.com
 ALL: vtriton.com
@@ -79133,7 +78901,6 @@ ALL: waapi.netcoresmartech.com
 ALL: waapo.org
 ALL: waaraproduction.com
 ALL: waardex-reklam.rtb.reklamdsp.com.rtb.adx1.com
-ALL: waardex.com
 ALL: waardex.rtb-uswest.ak-is.net
 ALL: waardex.rtb.adx1.com
 ALL: waars.net
@@ -80653,7 +80420,6 @@ ALL: webconference.itio.com
 ALL: webconnect.net
 ALL: webconser1.acxiom.com
 ALL: webconser2.acxiom.com
-ALL: webcontentassessor.com
 ALL: webcopymagic.com
 ALL: webcoredo.aircus.com
 ALL: webcorr.com.br
@@ -81341,7 +81107,6 @@ ALL: webtools.brandreachsys.com
 ALL: webtoolsrooingdengincco.000webhostapp.com
 ALL: webtoolsx.brandreachsys.com
 ALL: webtracker.apicasystem.com
-ALL: webtracker.jp
 ALL: webtrackerplus.com
 ALL: webtracktechnologies.com
 ALL: webtracky.com
@@ -82184,7 +81949,6 @@ ALL: whenushop.com
 ALL: whenwordscountretreat.com
 ALL: where-to-next.org
 ALL: whereapps.com
-ALL: wheredoyoucomefrom.ovh
 ALL: whereismommy.gq
 ALL: wheretosellgoldinnyc.com
 ALL: wheretraveler.blueconic.net
@@ -82808,7 +82572,6 @@ ALL: win.denalitourdeals.com
 ALL: win.gamesfreakout.com
 ALL: win.hashhot.com
 ALL: win.hiveon.net
-ALL: win.iqm.com
 ALL: win.node.hiveon.net
 ALL: win.staticstuff.net
 ALL: win.w.inmobi.com
@@ -85649,7 +85412,6 @@ ALL: www.123count.com
 ALL: www.123counter.superstats.com
 ALL: www.123employee.leadpages.co
 ALL: www.123found.com
-ALL: www.123freeavatars.com
 ALL: www.123go.com
 ALL: www.123go.net
 ALL: www.123greetings.com
@@ -86026,7 +85788,6 @@ ALL: www.304c40d20085e.com
 ALL: www.305br.net
 ALL: www.308888.com
 ALL: www.309d5f826829f8c6.com
-ALL: www.30ads.com
 ALL: www.30b9e3a7d7e2b.com
 ALL: www.30dayaffiliatechallenge.com
 ALL: www.30x.org
@@ -86876,7 +86637,6 @@ ALL: www.aautotrader.com
 ALL: www.aavalue.com
 ALL: www.aavc.com
 ALL: www.aavis.com
-ALL: www.aaxdetect.com
 ALL: www.aazwugtom.com
 ALL: www.ab-sneg.ru
 ALL: www.ab913aa797e78b3.com
@@ -87015,7 +86775,6 @@ ALL: www.acbilgisayar.com.tr
 ALL: www.acbnews.com
 ALL: www.acbp0020171456.page.tl
 ALL: www.acbrupozabmdc.com
-ALL: www.acbsearch.com
 ALL: www.acc.hashhot.com
 ALL: www.acc.pool.mn
 ALL: www.accademiamoda.com
@@ -87314,7 +87073,6 @@ ALL: www.adagioduo.net
 ALL: www.adagionet.com
 ALL: www.adailymovie.com
 ALL: www.adality.com
-ALL: www.adalliance.io
 ALL: www.adalso.com
 ALL: www.adalyser.com
 ALL: www.adamauto.nl
@@ -87361,7 +87119,6 @@ ALL: www.adbiz2.co.kr
 ALL: www.adbiz3.co.kr
 ALL: www.adbkxfyq.apps.lair.io
 ALL: www.adblade.com
-ALL: www.adblade.org
 ALL: www.adblaster.com
 ALL: www.adblick.com
 ALL: www.adblock-listefr.com
@@ -87400,7 +87157,6 @@ ALL: www.adc-srv.net
 ALL: www.adcaffe.com
 ALL: www.adcalm.com
 ALL: www.adcanadian.com
-ALL: www.adcannyads.com
 ALL: www.adcarousel.pl
 ALL: www.adcash.com
 ALL: www.adcash.ga
@@ -87431,7 +87187,6 @@ ALL: www.adcomplete.com
 ALL: www.adconion.com
 ALL: www.adconity.com
 ALL: www.adconscious.com
-ALL: www.adcontrolsolutions.net
 ALL: www.adcore.ru
 ALL: www.adcpl-india.com
 ALL: www.adcrowd.com
@@ -87481,7 +87236,6 @@ ALL: www.adebisi.leadpages.co
 ALL: www.adecn.com
 ALL: www.adedy.com
 ALL: www.adeelacorporation.com
-ALL: www.adeimptrck.com
 ALL: www.adeko.mobi
 ALL: www.adelement.com
 ALL: www.adelixir.com
@@ -87492,7 +87246,6 @@ ALL: www.adenabler.com
 ALL: www.adenadataediting.com
 ALL: www.adengage.com
 ALL: www.adentify.com
-ALL: www.adetracking.com
 ALL: www.adeva.de
 ALL: www.adex.mobi
 ALL: www.adexc.net
@@ -87530,7 +87283,6 @@ ALL: www.adform.com
 ALL: www.adfox.ru
 ALL: www.adfox.vn
 ALL: www.adfreetv.ch
-ALL: www.adfries.info
 ALL: www.adfrut.cl
 ALL: www.adfun.ru
 ALL: www.adfunkyserver.com
@@ -87674,7 +87426,6 @@ ALL: www.admarvel.com
 ALL: www.admarvel.s3.amazonaws.com
 ALL: www.admaster.com.cn
 ALL: www.admaster.de
-ALL: www.admatchly.com
 ALL: www.admatic.com
 ALL: www.admatic.com.tr
 ALL: www.admax.com
@@ -87691,7 +87442,6 @@ ALL: www.admedit.net
 ALL: www.admedo.com
 ALL: www.admeld.com
 ALL: www.admeme.net
-ALL: www.admeridianads.com
 ALL: www.admerize.be
 ALL: www.admeta.com
 ALL: www.admetrics.io
@@ -87699,7 +87449,6 @@ ALL: www.admetricspro.com
 ALL: www.admex.com
 ALL: www.admez.com
 ALL: www.admicro.vn
-ALL: www.admidadsp.com
 ALL: www.admidainsight.com
 ALL: www.admigo.ru
 ALL: www.admin.codpool.com
@@ -87719,7 +87468,6 @@ ALL: www.admiraltours.com.tr
 ALL: www.admisoft.com
 ALL: www.admitad.com
 ALL: www.admitlead.ru
-ALL: www.admix.in
 ALL: www.admixdj.com
 ALL: www.admixer.net
 ALL: www.admixxer.com
@@ -87818,7 +87566,6 @@ ALL: www.adoptimize.info
 ALL: www.adoracionnocturnamexicana.com
 ALL: www.adorca.com
 ALL: www.adoreclothing.co.uk
-ALL: www.adoric-om.com
 ALL: www.adorigin.com
 ALL: www.adoring.love
 ALL: www.adoringyou.com
@@ -88053,14 +87800,12 @@ ALL: www.adshost2.com
 ALL: www.adshot.de
 ALL: www.adshttp.com
 ALL: www.adside.com
-ALL: www.adsiduous.com
 ALL: www.adsinimages.com
 ALL: www.adsino24.com
 ALL: www.adsk2.co
 ALL: www.adskape.ru
 ALL: www.adskeeper.co.uk
 ALL: www.adsklick.de
-ALL: www.adskpak.com
 ALL: www.adslash.com
 ALL: www.adslidango.com
 ALL: www.adsluna.com
@@ -88084,7 +87829,6 @@ ALL: www.adsnight.com
 ALL: www.adsniper.ru
 ALL: www.adsoftware.com
 ALL: www.adsoldier.com
-ALL: www.adsolut.in
 ALL: www.adsolution.de
 ALL: www.adsonflags.com
 ALL: www.adsonlineinc.com
@@ -88122,11 +87866,9 @@ ALL: www.adsrvr.org
 ALL: www.adsspace.net
 ALL: www.adsstat.com
 ALL: www.adssyscom.com
-ALL: www.adstacks.in
 ALL: www.adstage-analytics.herokuapp.com
 ALL: www.adstage.io
 ALL: www.adstailor.com
-ALL: www.adstanding.com
 ALL: www.adstatic.com
 ALL: www.adsterra.com
 ALL: www.adstheaa.com
@@ -88315,7 +88057,6 @@ ALL: www.advancenative.com
 ALL: www.advancesrl.eu
 ALL: www.advancetec.co.uk
 ALL: www.advancetecmate.com
-ALL: www.advangelists.com
 ALL: www.advanpromo.com
 ALL: www.advanseads.com
 ALL: www.advantage.as
@@ -88398,7 +88139,6 @@ ALL: www.advertsponsor.com
 ALL: www.advertstats.com
 ALL: www.advertstream.com
 ALL: www.advertwizard.com
-ALL: www.adverty.com
 ALL: www.advertyz.com
 ALL: www.advglobalnltrck.com
 ALL: www.advice-ads.s3.amazonaws.com
@@ -88511,7 +88251,6 @@ ALL: www.adzele.com
 ALL: www.adzerk.com
 ALL: www.adzerk.net
 ALL: www.adzerk.s3.amazonaws.com
-ALL: www.adzestocp.com
 ALL: www.adzfun.info
 ALL: www.adzhub.com
 ALL: www.adzincome.in
@@ -89130,7 +88869,6 @@ ALL: www.alenty.com
 ALL: www.aleonardrau.leadpages.co
 ALL: www.aleosport.com
 ALL: www.alephd.com
-ALL: www.alert.com.mt
 ALL: www.alertalarms.leadpages.co
 ALL: www.alerter.pl
 ALL: www.alertspy.com
@@ -89182,7 +88920,6 @@ ALL: www.algocashmaster.com
 ALL: www.algocashmaster.net
 ALL: www.algolia.com
 ALL: www.algorithmbit.com
-ALL: www.algorix.co
 ALL: www.alhamddevelopers.com
 ALL: www.alhayah-spine.com
 ALL: www.ali-ina.com
@@ -89866,7 +89603,6 @@ ALL: www.anquiro.com
 ALL: www.anrdoezrs.net
 ALL: www.ansius.com
 ALL: www.ansiway.com
-ALL: www.anstrex.com
 ALL: www.answerforlife.com
 ALL: www.answerhub.com
 ALL: www.answermedia.com
@@ -90569,7 +90305,6 @@ ALL: www.aud3g.com
 ALL: www.audacity.es
 ALL: www.audacity.fr
 ALL: www.audacitytobeyou.com
-ALL: www.audience.media
 ALL: www.audience2media.com
 ALL: www.audiencediscovery.innovation.abtasty.com
 ALL: www.audienceinsights.com
@@ -90776,7 +90511,6 @@ ALL: www.axjp.cn
 ALL: www.axletrade.com
 ALL: www.axmtrack.com
 ALL: www.axoncoho.tk
-ALL: www.axonix.com
 ALL: www.axr.hashhot.com
 ALL: www.axsczaklngkxx.com
 ALL: www.axsrv.com
@@ -90827,7 +90561,6 @@ ALL: www.azoogleads.com
 ALL: www.azsikvmhlzuhje.com
 ALL: www.aztbeszelik.com
 ALL: www.azteou.com
-ALL: www.aztracking.net
 ALL: www.azuldomar.com.br
 ALL: www.azure.omniconvert.com
 ALL: www.azureus.es
@@ -91200,7 +90933,6 @@ ALL: www.be-funk.com
 ALL: www.be-wild.pl
 ALL: www.be365globalawakening.leadpages.co
 ALL: www.be4life.ru
-ALL: www.beachfront.com
 ALL: www.beachfrontio.com
 ALL: www.beacon.tapfiliate.com
 ALL: www.beaconplanning.net
@@ -91347,7 +91079,6 @@ ALL: www.best-med-shop.com
 ALL: www.best-meds.biz
 ALL: www.best-pr.info
 ALL: www.best-rated-offers.com
-ALL: www.best-realgirl2.com
 ALL: www.best-sales.top
 ALL: www.best-skins.com
 ALL: www.best-top.hu
@@ -91677,17 +91408,14 @@ ALL: www.bidgear-syndication.com
 ALL: www.bidgear.com
 ALL: www.bidobserver.com
 ALL: www.bidserver.clickpapa.io
-ALL: www.bidsopt.com
 ALL: www.bidswitch.net
 ALL: www.bidswitch.rdb.adx1.com
-ALL: www.bidtellect.com
 ALL: www.bidtellect.com.surveywall-api.survata.com
 ALL: www.bidtheatre.com
 ALL: www.bidtraffic.com
 ALL: www.bidtrk.com
 ALL: www.bidvertiser.com
 ALL: www.biegostojazwierzat.pl
-ALL: www.big-bang-ads.com
 ALL: www.big-penis.com
 ALL: www.bigbangads.go2cloud.org
 ALL: www.bigbangempire.com
@@ -91966,7 +91694,6 @@ ALL: www.bizoninvest.com
 ALL: www.bizony.eu
 ALL: www.bizrate.com
 ALL: www.bizum-groupm.facebook-ads.adtz.com
-ALL: www.bizzclick.com
 ALL: www.bizzibeans.net
 ALL: www.bj-fengshi.com
 ALL: www.bj04.com
@@ -92070,7 +91797,6 @@ ALL: www.blockmetrics.com
 ALL: www.blockmunch.club
 ALL: www.blocks.masterpro.site
 ALL: www.blocks.notebc.space
-ALL: www.blockthrough.com
 ALL: www.blockwarepool.com
 ALL: www.blocwhite7.com
 ALL: www.bloemrijkcreatief.nl
@@ -92114,7 +91840,6 @@ ALL: www.blueadvertise.com
 ALL: www.bluebillywig.com
 ALL: www.bluecanyon.tech
 ALL: www.bluecava.com
-ALL: www.blueconic.com
 ALL: www.blueconic.net
 ALL: www.bluefx.leadpages.co
 ALL: www.bluegas.com.au
@@ -92212,7 +91937,6 @@ ALL: www.bodyscan-camera.com
 ALL: www.bodysecretrevelation.com
 ALL: www.boennsche-funkentoeter.de
 ALL: www.boersego-ads.de
-ALL: www.boffoadsapi.com
 ALL: www.bogaziciturizm.com.tr
 ALL: www.bogeyandbirdie.com
 ALL: www.boghole.tk
@@ -92288,7 +92012,6 @@ ALL: www.boombeachhacks.net
 ALL: www.boombeachtricks.com
 ALL: www.boompool.ru
 ALL: www.boomrent.pl
-ALL: www.boomtrain.com
 ALL: www.boonsolutions.com
 ALL: www.booshare.net
 ALL: www.boost-my-game.com
@@ -92453,7 +92176,6 @@ ALL: www.briefext.com
 ALL: www.brig.pool.mn
 ALL: www.brighgreen.tk
 ALL: www.brightadnetwork.com
-ALL: www.brightcom.com
 ALL: www.brightcove.biz
 ALL: www.brightcove.com
 ALL: www.brightec.pl
@@ -92462,7 +92184,6 @@ ALL: www.brighteroption.com
 ALL: www.brightfunnel.com
 ALL: www.brighthousegreencleaning.com
 ALL: www.brightinfo.com
-ALL: www.brightmountainmedia.com
 ALL: www.brightonclick.com
 ALL: www.brightroll.com
 ALL: www.brigitteheilmann.dk
@@ -92905,7 +92626,6 @@ ALL: www.callloop.com
 ALL: www.callmeasurement.com
 ALL: www.callofduty-beta.com
 ALL: www.callofdutyghostshack.net
-ALL: www.callrail.com
 ALL: www.calmfoot.com
 ALL: www.calpra.com.co
 ALL: www.calq.io
@@ -93322,7 +93042,6 @@ ALL: www.cebtecagro.com.br
 ALL: www.ceciyaafoundation.org
 ALL: www.ceda.com.tr
 ALL: www.cedarzaitoun.com
-ALL: www.cedato.com
 ALL: www.cedexis.com
 ALL: www.cedino.pl
 ALL: www.ceeglousaud.com
@@ -93788,7 +93507,6 @@ ALL: www.circulate.com
 ALL: www.cirf.go.pl
 ALL: www.cirkev.bitcoin.cz
 ALL: www.cisaqroup.net
-ALL: www.cision.com
 ALL: www.citepucevasuxuqesu.ga
 ALL: www.citionlineservice.com
 ALL: www.citraclean.co.id
@@ -94029,7 +93747,6 @@ ALL: www.clicmanager.fr
 ALL: www.clicz.com
 ALL: www.clien.net
 ALL: www.clientesvips.com
-ALL: www.clientmetrics-pa.googleapis.com
 ALL: www.clientsrewardspromotion.com
 ALL: www.clientsupport-mitglied-pp.net
 ALL: www.cliftonparksales.com
@@ -94054,10 +93771,8 @@ ALL: www.clixmetrix.com
 ALL: www.clixpy.com
 ALL: www.clixtk.com
 ALL: www.clixtrac.com
-ALL: www.clk1005.com
 ALL: www.clk1011.com
 ALL: www.clk1013.com
-ALL: www.clk1015.com
 ALL: www.clkads.com
 ALL: www.clkap.tradedoubler.com
 ALL: www.clkbid.com
@@ -94278,7 +93993,6 @@ ALL: www.coffeandcigarets.asyx.ru
 ALL: www.coffeetableminer.com
 ALL: www.coffeol.com
 ALL: www.cofitold.com
-ALL: www.cognitiv.ai
 ALL: www.cognitiveintegration.com
 ALL: www.cogocast.net
 ALL: www.cogrem.com
@@ -94534,7 +94248,6 @@ ALL: www.connexionsafe.com
 ALL: www.connexity.net
 ALL: www.connextra.com
 ALL: www.conquistatucumbre.com.ar
-ALL: www.consensad.com
 ALL: www.consensu.org
 ALL: www.consoliad.consoliads.com
 ALL: www.consoliads.com
@@ -94583,13 +94296,11 @@ ALL: www.contraclick.com
 ALL: www.contraluz.com.co
 ALL: www.control.kochava.com
 ALL: www.convectiontoasterovenreviews.biz
-ALL: www.converge-digital.com
 ALL: www.convergentcom.biz
 ALL: www.conversantmedia.com
 ALL: www.conversaoparadvd.com.br
 ALL: www.conversationalingelligence.com
 ALL: www.conversion.intentiq.com
-ALL: www.conversionbet.com
 ALL: www.conversionruler.com
 ALL: www.conversive.nl
 ALL: www.convertcart.com
@@ -94665,7 +94376,6 @@ ALL: www.coreysuiter.com
 ALL: www.corezone.pl
 ALL: www.cori.pw
 ALL: www.coricaves.pro
-ALL: www.cormast.com
 ALL: www.cormodedickson.leadpages.co
 ALL: www.cornerjob.eu
 ALL: www.corp.com
@@ -94690,10 +94400,8 @@ ALL: www.coshoctonalliance.com
 ALL: www.cosmeddicted.com
 ALL: www.cosmeticscentre.uk.com
 ALL: www.cosmeticsrc.com
-ALL: www.cosmopolitads.com
 ALL: www.cospot.com
 ALL: www.cossfood.com
-ALL: www.cost2buy.net
 ALL: www.costlessautoparts.com.au
 ALL: www.costruzioniperregrini.it
 ALL: www.costumestudy.com
@@ -94772,7 +94480,6 @@ ALL: www.coveritlive.com
 ALL: www.covid19quiz.com
 ALL: www.covingtonvending.com
 ALL: www.cowledges.com
-ALL: www.coxmt.com
 ALL: www.coye.dedicatedpool.com
 ALL: www.coye.hashfaster.com
 ALL: www.coye.xtrapool.com
@@ -95564,7 +95271,6 @@ ALL: www.dash.bubblemine.com
 ALL: www.dash.mining4.co.uk
 ALL: www.dash.pool.mn
 ALL: www.dash88.club
-ALL: www.dashbida.com
 ALL: www.dashbo15myapp.com
 ALL: www.dashminer.com
 ALL: www.dashninja.pl
@@ -95731,7 +95437,6 @@ ALL: www.debug.adx1.com
 ALL: www.deburenschiedam.nl
 ALL: www.debutech.de
 ALL: www.dec.pool.mn
-ALL: www.decenterads.com
 ALL: www.decenthat.com
 ALL: www.decibelinsight.com
 ALL: www.decision.api.canarybay.innovation.abtasty.com
@@ -95769,7 +95474,6 @@ ALL: www.deepc.cc
 ALL: www.deepcom.com
 ALL: www.deeperstateketo.com
 ALL: www.deepikarai.com
-ALL: www.deepintent.com
 ALL: www.deepmetrix.com
 ALL: www.deepshoes.pl
 ALL: www.deeq.7p.com
@@ -96060,7 +95764,6 @@ ALL: www.digink.com
 ALL: www.digipools.org
 ALL: www.digiscraphq.leadpages.co
 ALL: www.digisystemsrl.com
-ALL: www.digital-ads.s3.amazonaws.com
 ALL: www.digital-control.com.cn
 ALL: www.digital-hacks.com
 ALL: www.digital-iadb.leadpages.co
@@ -96291,7 +95994,6 @@ ALL: www.dnsseed.z.cash
 ALL: www.dntx.com
 ALL: www.dnvideos.com
 ALL: www.dnzevkqpk.com
-ALL: www.do-global.com
 ALL: www.do-not-tracker.org
 ALL: www.doatgiveaway.top
 ALL: www.dobbenetes.com
@@ -96805,7 +96507,6 @@ ALL: www.dyskretnytelefon.pl
 ALL: www.dytt8.org
 ALL: www.dz-cheat.com
 ALL: www.dz4ad.com
-ALL: www.dzairads.com
 ALL: www.dzenastrology.com
 ALL: www.dzheker.com
 ALL: www.dziadekdogramofonu.pl
@@ -97379,7 +97080,6 @@ ALL: www.emercoin.mastermining.net
 ALL: www.emergenciascomfye.com
 ALL: www.emerginguniverse.com
 ALL: www.emerse.com
-ALL: www.emetriq.de
 ALL: www.emilenjoyfitness.leadpages.co
 ALL: www.emiliacoiffeur.com.br
 ALL: www.emiliareichert.pl
@@ -97398,7 +97098,6 @@ ALL: www.emltrk.com
 ALL: www.emmadavies.leadpages.co
 ALL: www.emmahague.leadpages.co
 ALL: www.emmasdiary.in
-ALL: www.emodoinc.com
 ALL: www.emotom-nie.go.pl
 ALL: www.empire404.com
 ALL: www.empleaeuskadi.es
@@ -97839,7 +97538,6 @@ ALL: www.eue27west.com
 ALL: www.eugenebhangra.com
 ALL: www.eugxcnqw.com
 ALL: www.eukmzfq.com
-ALL: www.eulerian.net
 ALL: www.eulfa.com
 ALL: www.eum-appdynamics.com
 ALL: www.eumamae.com
@@ -97889,7 +97587,6 @@ ALL: www.eusta.de
 ALL: www.eustratum.btcguild.com
 ALL: www.eutdrjvsrmav.com
 ALL: www.euuk.btcguild.com
-ALL: www.evadav.com
 ALL: www.evaksgrup.com.tr
 ALL: www.evakuator-group163.ru
 ALL: www.evansvillesurgical.net
@@ -97926,7 +97623,6 @@ ALL: www.evergreencoin.org
 ALL: www.evergreencorato.com
 ALL: www.evergreenfacilitysolutions.com
 ALL: www.everonenergies.com
-ALL: www.eversales.space
 ALL: www.everyaction.com
 ALL: www.everyday-fun.us
 ALL: www.everydaygays.com
@@ -98004,7 +97700,6 @@ ALL: www.exebet.com
 ALL: www.exebid.ru
 ALL: www.execspeak.leadpages.co
 ALL: www.executiveimagenutrition.com
-ALL: www.exelate.com
 ALL: www.exelator.com
 ALL: www.exelio.be
 ALL: www.exeos.ws
@@ -98036,7 +97731,6 @@ ALL: www.expanse.minandoando.com
 ALL: www.expanse.tech
 ALL: www.expekt.com
 ALL: www.experclick.com
-ALL: www.experianmarketingservices.digital
 ALL: www.experiencecabo.com
 ALL: www.experiencesuite.it
 ALL: www.experiment27.leadpages.co
@@ -98841,7 +98535,6 @@ ALL: www.fix-files.com
 ALL: www.fix-my-pc.org
 ALL: www.fixbonus.com
 ALL: www.fixed-matches.co.ke
-ALL: www.fixel.ai
 ALL: www.fixxtrade.com
 ALL: www.fizjoreha.pl
 ALL: www.fizjoterapia.5v.pl
@@ -98865,7 +98558,6 @@ ALL: www.flacoin.org
 ALL: www.flafinanziaria.it
 ALL: www.flagcounter.com
 ALL: www.flagship.innovation.abtasty.com
-ALL: www.flairadscpc.com
 ALL: www.flamefile.com
 ALL: www.flamefolder.com
 ALL: www.flamefolders.com
@@ -99256,7 +98948,6 @@ ALL: www.freecontent.party
 ALL: www.freecontent.stream
 ALL: www.freecontent.trade
 ALL: www.freecounter.it
-ALL: www.freecounterstat.com
 ALL: www.freecounterstrikeserver.com
 ALL: www.freecpmemberships.com
 ALL: www.freecsgo.net
@@ -99332,7 +99023,6 @@ ALL: www.freelolhacks.com
 ALL: www.freelolskins.com
 ALL: www.freemacware.com
 ALL: www.freemaddencoins.com
-ALL: www.freemaineads.com
 ALL: www.freemao.com
 ALL: www.freemasstraffic.com
 ALL: www.freemeez.com
@@ -99434,7 +99124,6 @@ ALL: www.freewebcards.com
 ALL: www.freewebcounter.com
 ALL: www.freewebsites.com
 ALL: www.freewebtown.com
-ALL: www.freewheel.com
 ALL: www.freewheel.tv
 ALL: www.freewifihack.com
 ALL: www.freewifipasswordrecovery.com
@@ -99525,7 +99214,6 @@ ALL: www.frtfwlvwuw.com
 ALL: www.frtya.com
 ALL: www.frtyb.com
 ALL: www.frtyg.com
-ALL: www.frtyj.com
 ALL: www.fruitlauncher.com
 ALL: www.fruitypool.com
 ALL: www.fs-11.com
@@ -99758,7 +99446,6 @@ ALL: www.gadsans.com
 ALL: www.gadsanz.com
 ALL: www.gadsats.com
 ALL: www.gadsatz.com
-ALL: www.gadsbee.com
 ALL: www.gadsecs.com
 ALL: www.gadsecz.com
 ALL: www.gadsims.com
@@ -100056,7 +99743,6 @@ ALL: www.ge12o.bronto.com
 ALL: www.ge365.net
 ALL: www.geacugl.jwmyba.biz
 ALL: www.gearinformer.com
-ALL: www.gearwom.de
 ALL: www.gebr-wachs.de
 ALL: www.gec.pool.mn
 ALL: www.gecermuhendislik.com
@@ -100218,7 +99904,6 @@ ALL: www.gethc.pl
 ALL: www.getherwallet.com
 ALL: www.getimmediateedge.com
 ALL: www.getimpressed.com
-ALL: www.getintent.com
 ALL: www.getiton.com
 ALL: www.getleakedsnaps.com
 ALL: www.getlink.pw
@@ -100476,7 +100161,6 @@ ALL: www.gmcjjh.org
 ALL: www.gmial.com
 ALL: www.gmidkz5tgm.com
 ALL: www.gmil.com
-ALL: www.gml.email
 ALL: www.gmme.112.2o7.net
 ALL: www.gmod-free.com
 ALL: www.gmodfree.com
@@ -100669,7 +100353,6 @@ ALL: www.got-game.org
 ALL: www.got2goshop.com
 ALL: www.gotgamecheats.net
 ALL: www.gotgamefree.us
-ALL: www.gothamads.com
 ALL: www.gothamistllc.com
 ALL: www.gothic4u.pl
 ALL: www.gotlinks.co
@@ -100886,7 +100569,6 @@ ALL: www.groogloo.net
 ALL: www.groombinvest.com
 ALL: www.groovinads.com
 ALL: www.grosirkecantikan.com
-ALL: www.groundtruth.com
 ALL: www.groundzeroevent.com
 ALL: www.group10intl.com
 ALL: www.groupees.com
@@ -102074,9 +101756,6 @@ ALL: www.hubzoom.com
 ALL: www.hudetprosto.com
 ALL: www.hudson.adx1.com
 ALL: www.hudvrts.ga
-ALL: www.hueads.com
-ALL: www.hueadsortb.com
-ALL: www.hueadsxml.com
 ALL: www.hugedomains.com
 ALL: www.hugefileshare.com
 ALL: www.hugetraffic.com
@@ -102156,7 +101835,6 @@ ALL: www.hypno-balance.at
 ALL: www.hypnotherapeutamsterdam.com
 ALL: www.hypnotherapeute-montreal.ca
 ALL: www.hyprintsolutions.com
-ALL: www.hyprmx.com
 ALL: www.hysyqgbls.com
 ALL: www.hyundaicard.112.2o7.net
 ALL: www.hz-lf.com
@@ -102300,7 +101978,6 @@ ALL: www.identification-data-eu.gq
 ALL: www.identifying.ml
 ALL: www.ideoclick.com
 ALL: www.ideservesomeacollades.gq
-ALL: www.idevaffiliate.com
 ALL: www.idexairdrop.com
 ALL: www.idg.com
 ALL: www.idgarin.com
@@ -102494,14 +102171,12 @@ ALL: www.impresionesweb.com
 ALL: www.impresseducation.com
 ALL: www.impressiondesk.com
 ALL: www.impressionmedia.cz
-ALL: www.impressionmonster.com
 ALL: www.impressionperformance.biz
 ALL: www.impressoras-cartoes.com.pt
 ALL: www.imprev.com
 ALL: www.imprev.net
 ALL: www.imprintedcreations.com
 ALL: www.improveads.fi
-ALL: www.improvedigital.com
 ALL: www.improvides.leadpages.co
 ALL: www.impuls.statdynamic.com
 ALL: www.impulsband.pl
@@ -102551,7 +102226,6 @@ ALL: www.indas.com.au
 ALL: www.index-blog.net
 ALL: www.index01.leadpages.co
 ALL: www.indexerflash.com
-ALL: www.indexexchange.com
 ALL: www.indextrck.com
 ALL: www.indiaencense.com
 ALL: www.indianconsumerpress.com
@@ -102932,7 +102606,6 @@ ALL: www.iprospect-southafrica.facebook-ads.adtz.com
 ALL: www.iprospect2-southafrica.facebook-ads.adtz.com
 ALL: www.ips.innovation.abtasty.com
 ALL: www.ipspool.com
-ALL: www.ipstack.com
 ALL: www.iptools.su
 ALL: www.iptrack.io
 ALL: www.iptvcolombia.com
@@ -102951,7 +102624,6 @@ ALL: www.iranwebads.com
 ALL: www.iraqcrunch.com
 ALL: www.irbf.com
 ALL: www.irbitgmii.ru
-ALL: www.irchan.com
 ALL: www.ird.codpool.com
 ALL: www.irdtrit.codpool.com
 ALL: www.ireel.com
@@ -103626,7 +103298,6 @@ ALL: www.junbi-tracker.com
 ALL: www.june1st.net
 ALL: www.junetko.de
 ALL: www.jungleheart.com
-ALL: www.jungroup.com
 ALL: www.jungtaesook.com
 ALL: www.junjiezyc.com
 ALL: www.junntarapp.facebook-ads.adtz.com
@@ -104289,7 +103960,6 @@ ALL: www.kuaixia.com
 ALL: www.kuaiyan.com.cn
 ALL: www.kuaiyinren.cn
 ALL: www.kuangyuantrade.com
-ALL: www.kubient.com
 ALL: www.kucharzowanienamaxa.pl
 ALL: www.kudell.co.uk
 ALL: www.kuhdi.com
@@ -104584,7 +104254,6 @@ ALL: www.leads202.leadpages.co
 ALL: www.leadsbridge.com
 ALL: www.leadware.io
 ALL: www.leadxml.com
-ALL: www.leady.com
 ALL: www.leadzu.com
 ALL: www.leadzupc.com
 ALL: www.leadzutw.com
@@ -104629,7 +104298,6 @@ ALL: www.ledgerwallet.life
 ALL: www.ledgerwebwallet.com
 ALL: www.ledhenone.com
 ALL: www.ledinund.com
-ALL: www.leedsads.com
 ALL: www.leenlife.com.pl
 ALL: www.leesangku.com
 ALL: www.leeshadle.leadpages.co
@@ -104672,7 +104340,6 @@ ALL: www.lekarzbialoleka.pl
 ALL: www.lekturymp3.pl
 ALL: www.lem-computers.net
 ALL: www.lemina-ankaratrescortlar-com.cdn.ampproject.org
-ALL: www.lemmatechnologies.com
 ALL: www.lemnisk.co
 ALL: www.lemonmov.com
 ALL: www.lemonparty.biz
@@ -105210,7 +104877,6 @@ ALL: www.loomplay.com
 ALL: www.loopbaancoachamsterdam.eu
 ALL: www.loopfiles.com
 ALL: www.loopme.biz
-ALL: www.loopme.com
 ALL: www.loopme.me
 ALL: www.loopmeedge.net
 ALL: www.looselines.com
@@ -105326,7 +104992,6 @@ ALL: www.ltctrain.com
 ALL: www.ltcx.pool.mn
 ALL: www.ltfn.org
 ALL: www.ltfsolutions.net
-ALL: www.ltmastos.com
 ALL: www.lts.pool.mn
 ALL: www.ltzjkjxx.com
 ALL: www.luatcongtam.com
@@ -105563,7 +105228,6 @@ ALL: www.magentofa.com
 ALL: www.maggivox.com
 ALL: www.magic-cavia.go.pl
 ALL: www.magicadsroute.com
-ALL: www.magicadz.co
 ALL: www.magical-connection.com
 ALL: www.magical.coffee
 ALL: www.magicbet.com
@@ -105936,7 +105600,6 @@ ALL: www.mattmcwilliams.leadpages.co
 ALL: www.mauiexpokennel.com
 ALL: www.maungatautarilodge.com
 ALL: www.maureenkile.com
-ALL: www.mautic.com
 ALL: www.maven-aviation.com
 ALL: www.maviapartments.com
 ALL: www.mavibilisim.com.tr
@@ -105955,7 +105618,6 @@ ALL: www.maxgirlgames.com
 ALL: www.maxhash.org
 ALL: www.maxilar.ec
 ALL: www.maximhack.com
-ALL: www.maximiser.net
 ALL: www.maximumcash.com
 ALL: www.maxisoft.co.uk
 ALL: www.maxitrade.com
@@ -105998,7 +105660,6 @@ ALL: www.mcalts.store
 ALL: www.mcandrewjewellery.com.au
 ALL: www.mcbookie.com
 ALL: www.mcc.pool.mn
-ALL: www.mcdlks.com
 ALL: www.mcdonaldscoupons.info
 ALL: www.mcfreepremium.com
 ALL: www.mcgndenytmy.com
@@ -106068,7 +105729,6 @@ ALL: www.media-servers.net
 ALL: www.media-toolbar.com
 ALL: www.media-tricks.com
 ALL: www.media.net
-ALL: www.media01.eu
 ALL: www.media2.travelzoo.com
 ALL: www.media6degrees.com
 ALL: www.mediaads.eu
@@ -106112,7 +105772,6 @@ ALL: www.mediartvagd.in.net
 ALL: www.mediascale.de
 ALL: www.mediasearchdirect.com
 ALL: www.mediashakers.com
-ALL: www.mediasmart.io
 ALL: www.mediasprucetree.com
 ALL: www.mediaswitch.nl
 ALL: www.mediatext.com
@@ -106198,7 +105857,6 @@ ALL: www.megapolis-hack.com
 ALL: www.megapool.io
 ALL: www.megapopads.com
 ALL: www.megapornbucks.com
-ALL: www.megapu.sh
 ALL: www.megasportsworld.com
 ALL: www.megastats.com
 ALL: www.megawerbung.de
@@ -106299,7 +105957,6 @@ ALL: www.messardu.com
 ALL: www.messengertools.net
 ALL: www.meta-designs.com
 ALL: www.metacount.com
-ALL: www.metadsp.co.uk
 ALL: www.metaffiliation.com
 ALL: www.metalderby.pl
 ALL: www.metalroofinggiants.com
@@ -106476,7 +106133,6 @@ ALL: www.millennialmedia.com
 ALL: www.millermadebrands.com
 ALL: www.millionairemind.leadpages.co
 ALL: www.millionways.duckdns.org
-ALL: www.milotree.com
 ALL: www.milyondolar.com
 ALL: www.mimetikbcn.leadpages.co
 ALL: www.mimhospeda.com
@@ -106587,7 +106243,6 @@ ALL: www.mineshop.eu
 ALL: www.minether.co
 ALL: www.minetrtl.us
 ALL: www.minevinc.com
-ALL: www.minewhat.com
 ALL: www.minexcash.com
 ALL: www.minexdn.com
 ALL: www.minexmr.com
@@ -106661,7 +106316,6 @@ ALL: www.minpool.net
 ALL: www.minr.nullrefexcep.com
 ALL: www.minr.pw
 ALL: www.mint.btcc.com
-ALL: www.mintegral.com
 ALL: www.mintpond.com
 ALL: www.mintrace.com
 ALL: www.minzpool.ml
@@ -116086,7 +115740,6 @@ ALL: www.mobileappsdevelopment.net.au
 ALL: www.mobileaps.co
 ALL: www.mobilebouncingcastle.com
 ALL: www.mobileclientservice.com
-ALL: www.mobilefuse.com
 ALL: www.mobilefuse.nu
 ALL: www.mobilegamehackers.com
 ALL: www.mobilehacks.net
@@ -116133,7 +115786,6 @@ ALL: www.mobon.com
 ALL: www.mobpals.com
 ALL: www.mobpartner.com
 ALL: www.mobpartner.mobi
-ALL: www.mobperads.net
 ALL: www.mobpowertech.com
 ALL: www.mobpro.com
 ALL: www.mobrevflwms.com
@@ -116162,7 +115814,6 @@ ALL: www.modello.co.il
 ALL: www.modelsociety.leadpages.co
 ALL: www.modelwork.org
 ALL: www.modernbox-meble.pl
-ALL: www.modernpricing.com
 ALL: www.modernyear.com
 ALL: www.modescrips.info
 ALL: www.modestbyt.com
@@ -116245,7 +115896,6 @@ ALL: www.money4ads.com
 ALL: www.money4exit.de
 ALL: www.moneybackfinder.com
 ALL: www.moneybot.net
-ALL: www.moneyexpert.co.uk
 ALL: www.moneyexpert.com
 ALL: www.moneyhome.biz
 ALL: www.moneymakercdn.com
@@ -116331,7 +115981,6 @@ ALL: www.mot-de-passe-facebook.com
 ALL: www.motdgd.com
 ALL: www.motelmarrocos.com.br
 ALL: www.motifiles.com
-ALL: www.motionspots.com
 ALL: www.motivacionyrelajacion.com
 ALL: www.motive8u.com
 ALL: www.motmasters.co.uk
@@ -116355,7 +116004,6 @@ ALL: www.mouseflow.com
 ALL: www.mousestats.com
 ALL: www.mousheen.net
 ALL: www.movable-ink-2183.com
-ALL: www.movad.net
 ALL: www.movcpm.com
 ALL: www.moveadrenaline.com
 ALL: www.movepix.com
@@ -116736,7 +116384,6 @@ ALL: www.mykings.top
 ALL: www.mylabsrl.com
 ALL: www.mylftv.com
 ALL: www.mylifeads.info
-ALL: www.mylink-today.com
 ALL: www.mylinkbox.com
 ALL: www.mylinker.net
 ALL: www.mylottoadserv.com
@@ -116784,7 +116431,6 @@ ALL: www.myreferer.com
 ALL: www.myreff.com
 ALL: www.myrianthousllc.com
 ALL: www.myroitracking.com
-ALL: www.mysafeads.com
 ALL: www.mysafemarket.com
 ALL: www.mysagagame.com
 ALL: www.mysaltwaterhome.com
@@ -116941,7 +116587,6 @@ ALL: www.naplo-extra.com
 ALL: www.napoliteatro.it
 ALL: www.naporost.pl
 ALL: www.naposwgfbt.com
-ALL: www.naradxb.com
 ALL: www.narankaghantours.pk
 ALL: www.narcissusalfrescophysique.com
 ALL: www.narranderagolfclub.com.au
@@ -117233,7 +116878,6 @@ ALL: www.news-subscribe.com
 ALL: www.news-tap.com
 ALL: www.news.health-beauty.press
 ALL: www.news.spotmecoin.com
-ALL: www.newsadsppush.com
 ALL: www.newsatads.com
 ALL: www.newsbox12.com
 ALL: www.newsbusiness.co.uk
@@ -117842,7 +117486,6 @@ ALL: www.oglody.cf
 ALL: www.ogluyourrvv.com
 ALL: www.ognybevu.com
 ALL: www.ograsmus.com
-ALL: www.ogury.com
 ALL: www.ogury.mgr.consensu.org
 ALL: www.oh-oehringen.de
 ALL: www.ohchat.net
@@ -117940,7 +117583,6 @@ ALL: www.omnibox.bar
 ALL: www.omnicom-managed-spain.facebook-ads.adtz.com
 ALL: www.omnicom-spain.facebook-ads.adtz.com
 ALL: www.omniconvert.com
-ALL: www.omnijay.com
 ALL: www.omnistor.pl
 ALL: www.omnitagjs.com
 ALL: www.omniture.com
@@ -118757,7 +118399,6 @@ ALL: www.pcspeedup.com
 ALL: www.pctconsulting.com
 ALL: www.pctelechargerjeux.net
 ALL: www.pctip.co.kr
-ALL: www.pctracking.net
 ALL: www.pdf-platinum.info
 ALL: www.pdfebook.us
 ALL: www.pdfekitapevi.blogspot.com
@@ -119330,7 +118971,6 @@ ALL: www.poc.foxypool.cf
 ALL: www.pochucker.com
 ALL: www.pocketfullofpoems.com
 ALL: www.pocketgolf.host
-ALL: www.pocketmath.com
 ALL: www.pocketwhale.info
 ALL: www.poczta-polska.net
 ALL: www.pocztexpolska24.com
@@ -119377,7 +119017,6 @@ ALL: www.poker4spain.com
 ALL: www.pokerimaa.com
 ALL: www.pokermax.com
 ALL: www.pokerstars.eu
-ALL: www.pokkt.com
 ALL: www.pokochajswojewlosy.pl
 ALL: www.pokojeutosi.com.pl
 ALL: www.polakuleczsiesam.pl
@@ -119961,7 +119600,6 @@ ALL: www.propdfconverter.com
 ALL: www.propellerads.com
 ALL: www.propellerclick.com
 ALL: www.propellerpops.com
-ALL: www.proper.io
 ALL: www.propertybook.co.zw
 ALL: www.prophere.pl
 ALL: www.prophetdwann.leadpages.co
@@ -120264,7 +119902,6 @@ ALL: www.pyubjvvdsrja.com
 ALL: www.pyxis.iad.appboy.com
 ALL: www.pz21.pl
 ALL: www.pzr.pool.mn
-ALL: www.q1connect.com
 ALL: www.q1media.com
 ALL: www.q1mediahydraplatform.com
 ALL: www.q2melbourne.com
@@ -120821,7 +120458,6 @@ ALL: www.refferalstaff.com
 ALL: www.refinedads.com
 ALL: www.refispokane.com
 ALL: www.reflex.com.tr
-ALL: www.reforge.in
 ALL: www.reformandrevive.com
 ALL: www.refpa.top
 ALL: www.refpaccz.host
@@ -120879,7 +120515,6 @@ ALL: www.reklamalan.com
 ALL: www.reklamanet.net
 ALL: www.reklamcsere.hu
 ALL: www.reklamdor.com
-ALL: www.reklamdsp.com
 ALL: www.reklamfit.com
 ALL: www.reklamlar.xyz
 ALL: www.reklamnative.com
@@ -120980,7 +120615,6 @@ ALL: www.resanium.com
 ALL: www.rescator.la
 ALL: www.research-int.com
 ALL: www.research-int.se
-ALL: www.research.de.com
 ALL: www.researchad.com
 ALL: www.researchmethodologist.leadpages.co
 ALL: www.researchnowbusiness.co.uk
@@ -121001,7 +120635,6 @@ ALL: www.resourcesubmitter.com
 ALL: www.respector.by
 ALL: www.responsegenie.com
 ALL: www.responsetap.com
-ALL: www.responsiveads.com
 ALL: www.restauracjacarpaccio.pl
 ALL: www.restauracjah2o.pl
 ALL: www.restaurant.viewsignage.com
@@ -121064,7 +120697,6 @@ ALL: www.revive-adserver.com
 ALL: www.reviveservers.com
 ALL: www.revivestore.com
 ALL: www.revjet.com
-ALL: www.revlift.io
 ALL: www.revmetrix.com
 ALL: www.revmob-creatives.s3.amazonaws.com
 ALL: www.revotas.com
@@ -121105,11 +120737,9 @@ ALL: www.rheumatism.sa
 ALL: www.rheumatologyclinicpune.com
 ALL: www.rhfgjld.com
 ALL: www.rhgestion.cl
-ALL: www.rhombusads.com
 ALL: www.rhondanp.leadpages.co
 ALL: www.rhtag.com
 ALL: www.rhvkegv.tk
-ALL: www.rhythmone.com
 ALL: www.rhythmxchange.com
 ALL: www.rianz.cf
 ALL: www.riapangestuibu.id
@@ -121146,7 +120776,6 @@ ALL: www.rigpool.com
 ALL: www.rikoo.pl
 ALL: www.rimvoyeur.ru
 ALL: www.rin.pool.mn
-ALL: www.rinconpx.net
 ALL: www.ringringmedia.com
 ALL: www.ringtone.com
 ALL: www.ringtonepartner.com
@@ -121393,7 +121022,6 @@ ALL: www.rrtcfwmvhs.com
 ALL: www.rrvpscehvjuz.com
 ALL: www.rs-1117-a.com
 ALL: www.rs.adledge.com
-ALL: www.rs6.net
 ALL: www.rsbblrpnjxgsk.com
 ALL: www.rsc-dc.com
 ALL: www.rsc.pool.mn
@@ -121415,18 +121043,13 @@ ALL: www.rtam-collector.appspot.com
 ALL: www.rtb-sg.adelement.com
 ALL: www.rtb.adx1.com
 ALL: www.rtb123.com
-ALL: www.rtbadzesto.com
 ALL: www.rtbatlanta.com
-ALL: www.rtbflairads.com
 ALL: www.rtbid.me
 ALL: www.rtbidder.net
 ALL: www.rtbiq.com
 ALL: www.rtbnow.com
 ALL: www.rtbnowads.com
-ALL: www.rtbplatform.net
 ALL: www.rtbpopd.com
-ALL: www.rtbsbengine.com
-ALL: www.rtbtradein.com
 ALL: www.rtc.hashhot.com
 ALL: www.rtc.pool.mn
 ALL: www.rtcode.com
@@ -121439,7 +121062,6 @@ ALL: www.rtrk.com
 ALL: www.rttratores.com.br
 ALL: www.rtuertyuer.com
 ALL: www.rtvmax.pl
-ALL: www.rtxplatform.com
 ALL: www.ru-biz.com
 ALL: www.ru-tabs.ru
 ALL: www.ru-traffic.com
@@ -121572,7 +121194,6 @@ ALL: www.saas-euw-1.com
 ALL: www.saas.omniconvert.com
 ALL: www.sabatina.com
 ALL: www.sabavision.com
-ALL: www.sabio.us
 ALL: www.sabiosdelamor.co
 ALL: www.saboopiz.net
 ALL: www.sabratravel-sd.com
@@ -121867,7 +121488,6 @@ ALL: www.scientificmethodology.com
 ALL: www.scimarec.net
 ALL: www.scl-hacks.com
 ALL: www.scoalafiliasi.ro
-ALL: www.scoobyads.com
 ALL: www.scopelight.com
 ALL: www.scopriteistanbul.com
 ALL: www.scorbet12.com
@@ -122028,7 +121648,6 @@ ALL: www.secure.cryptominer.net
 ALL: www.secure.xml.adx1.com
 ALL: www.secure23.leadpages.co
 ALL: www.securecloud-smart.com
-ALL: www.securedopen-bp.com
 ALL: www.securedvisit.com
 ALL: www.securefastmall.com
 ALL: www.securefileupload.com
@@ -122599,14 +122218,12 @@ ALL: www.silimbompom.com
 ALL: www.silk.pool.mn
 ALL: www.silktide.com
 ALL: www.silurian.cn
-ALL: www.silvalliant.info
 ALL: www.silver-path.com
 ALL: www.silveragesoftware.com
 ALL: www.silvercash.com
 ALL: www.silveregg.net
 ALL: www.silvergalerie.com
 ALL: www.silverland.go.pl
-ALL: www.silvermob.com
 ALL: www.silverpop.com
 ALL: www.silverpush.co
 ALL: www.silverspurs.net
@@ -122936,7 +122553,6 @@ ALL: www.smartstream.tv
 ALL: www.smarttvlive.com
 ALL: www.smartupcities.com
 ALL: www.smartxads.com
-ALL: www.smartyads.com
 ALL: www.smashingdealz.com
 ALL: www.smashingsports.co
 ALL: www.smashsportsbetting.com
@@ -123172,7 +122788,6 @@ ALL: www.something-wrong5.agency
 ALL: www.something-wrong9.agency
 ALL: www.sommer.cx
 ALL: www.sommons.co
-ALL: www.somoaudience.com
 ALL: www.son.hashhot.com
 ALL: www.sonaliaansh.net
 ALL: www.sonarappliances.com
@@ -123230,7 +122845,6 @@ ALL: www.spa.pool.mn
 ALL: www.spacash.com
 ALL: www.spacefiled.com
 ALL: www.spaceio.xyz
-ALL: www.spaceleadster.com
 ALL: www.spaceplan.co.in
 ALL: www.spacepools.org
 ALL: www.spacesarchitects-ka.com
@@ -123441,7 +123055,6 @@ ALL: www.sps.hashhot.com
 ALL: www.spskamin.ru
 ALL: www.spt.dedicatedpool.com
 ALL: www.sptag.com
-ALL: www.spulse.net
 ALL: www.spunkycash.com
 ALL: www.spunkyhealthylife.com
 ALL: www.spunkyvids.com
@@ -123535,7 +123148,6 @@ ALL: www.stablemoneropool.com
 ALL: www.stabroom.cn
 ALL: www.stabx.net
 ALL: www.stack-sonar.com
-ALL: www.stackadapt.com
 ALL: www.stackbit-seed-1.dynu.net
 ALL: www.stackbit-seed-2.dynu.net
 ALL: www.stackoverflow.xyz
@@ -124065,7 +123677,6 @@ ALL: www.supert.ag
 ALL: www.supertop.ru
 ALL: www.supertop100.com
 ALL: www.supertotobet0264.com
-ALL: www.supertracking.net
 ALL: www.supervisor.ext-twitch.tv
 ALL: www.supinari.com
 ALL: www.supplements.today
@@ -124491,7 +124102,6 @@ ALL: www.tdxio.com
 ALL: www.teachingmadepractical.leadpages.co
 ALL: www.teads.tv
 ALL: www.tealeaf.com
-ALL: www.tealium.com
 ALL: www.tealiumiq.com
 ALL: www.team.pool.mn
 ALL: www.team4heat.net
@@ -124575,7 +124185,6 @@ ALL: www.teknomasa.com
 ALL: www.teknovia.com.tr
 ALL: www.teksend.com.tr
 ALL: www.tekstile-illusioner.dk
-ALL: www.telaria.com
 ALL: www.teleaudio.pl
 ALL: www.telecablesmart.com
 ALL: www.telechargementspremium.com
@@ -124794,7 +124403,6 @@ ALL: www.thecheesyanimation.com
 ALL: www.theclanofhack.com
 ALL: www.theclarityway.leadpages.co
 ALL: www.theclashroyale.com
-ALL: www.theclickads.com
 ALL: www.thecodeshop.co.za
 ALL: www.thecoin.pw
 ALL: www.theconroysflorist.com
@@ -124981,7 +124589,6 @@ ALL: www.thrillingos.herokuapp.com
 ALL: www.thrilok.com
 ALL: www.thrissurcalltaxi.com
 ALL: www.thronetheater.com
-ALL: www.throtle.io
 ALL: www.throwacupcake.com
 ALL: www.thruport.com
 ALL: www.ths9j89.com
@@ -125008,7 +124615,6 @@ ALL: www.ticketdoctor.net
 ALL: www.ticketszones.com
 ALL: www.tickettocruise.com
 ALL: www.ticklemyivories.com
-ALL: www.ticksel.com
 ALL: www.ticomia.net.br
 ALL: www.ticpqxnv.com
 ALL: www.tidafors.xyz
@@ -125410,10 +125016,7 @@ ALL: www.tracking.quality.awin.com
 ALL: www.tracking.rodimobi.com
 ALL: www.tracking.vindicosuite.com
 ALL: www.tracking101.com
-ALL: www.tracking22.com
-ALL: www.tracking42.com
 ALL: www.trackingclick.net
-ALL: www.trackingfestival.com
 ALL: www.trackingindahouse.com
 ALL: www.trackingmode.com
 ALL: www.trackingsoft.com
@@ -125423,7 +125026,6 @@ ALL: www.tracklead.net
 ALL: www.trackmedia101.com
 ALL: www.trackonomics.net
 ALL: www.tracksitetraffic1.com
-ALL: www.trackuhub.com
 ALL: www.trackverify.com
 ALL: www.trackvoluum.com
 ALL: www.trackyourstats.com
@@ -125445,7 +125047,6 @@ ALL: www.tradersbotgg.com
 ALL: www.tradersbrokers.com
 ALL: www.tradeskinnow.com
 ALL: www.tradeskins.cash
-ALL: www.trading-rtbg.com
 ALL: www.trading.dianomi.com
 ALL: www.trading.leadpages.co
 ALL: www.tradingtactics.win
@@ -125627,7 +125228,6 @@ ALL: www.triobet.com
 ALL: www.triplelift.com
 ALL: www.triplemining.com
 ALL: www.trips.com
-ALL: www.triptease.io
 ALL: www.trit.codpool.com
 ALL: www.tritanium.smartcoinpool.com
 ALL: www.tritaniummining.com
@@ -126268,7 +125868,6 @@ ALL: www.url-cameralist.tk
 ALL: www.urlcash.net
 ALL: www.urlck.me
 ALL: www.urlcut.net
-ALL: www.urldata.net
 ALL: www.urldelivery.com
 ALL: www.urlstart.com
 ALL: www.urlstats.com
@@ -126581,7 +126180,6 @@ ALL: www.vekaria.com
 ALL: www.vekonstroy.ru
 ALL: www.vektorelcizimindir.com
 ALL: www.velingrad.info
-ALL: www.velismedia.com
 ALL: www.velocecdn.com
 ALL: www.velocitycdn.com
 ALL: www.veloqubq.top
@@ -126639,7 +126237,6 @@ ALL: www.vertamedia.com
 ALL: www.vertco.in
 ALL: www.vertex28.com
 ALL: www.vertexuniversal.com
-ALL: www.verticalmass.com
 ALL: www.verticalscope.com
 ALL: www.verticaltechmedia.de
 ALL: www.vertmarkets.com
@@ -126905,7 +126502,6 @@ ALL: www.vivaimontina.com
 ALL: www.vivemejor.org
 ALL: www.viviendoconeii.com.ar
 ALL: www.vivo7.com
-ALL: www.vivtracking.com
 ALL: www.vizisense.net
 ALL: www.vizitkarte.ws
 ALL: www.vizu.com
@@ -126956,7 +126552,6 @@ ALL: www.volpefurniture.com
 ALL: www.voltbet.com
 ALL: www.voluntarybenefitscertification.com
 ALL: www.voluptas.7p.com
-ALL: www.voluum.com
 ALL: www.voluumtracker.com
 ALL: www.voluumtrk.com
 ALL: www.voluumtrk2.com
@@ -126998,7 +126593,6 @@ ALL: www.vrewpywootyu.com
 ALL: www.vroll.net
 ALL: www.vrs.cz
 ALL: www.vrtzads.com
-ALL: www.vrtzcontextualads.com
 ALL: www.vrvm.com
 ALL: www.vrvyearwxo.com
 ALL: www.vsbuty.com
@@ -127018,7 +126612,6 @@ ALL: www.vtc.pool.mn
 ALL: www.vthought.com
 ALL: www.vtormet-kolomna.ru
 ALL: www.vtoyshop.com
-ALL: www.vtracy.de
 ALL: www.vtriton.com
 ALL: www.vtzxaxue.com
 ALL: www.vuble.tv
@@ -127066,7 +126659,6 @@ ALL: www.w65.pl
 ALL: www.w8.pool.mn
 ALL: www.w888.eu
 ALL: www.wa4etw9l.top
-ALL: www.waardex.com
 ALL: www.wabs.pl
 ALL: www.wacc.pool.mn
 ALL: www.wacsltd.tk
@@ -127482,7 +127074,6 @@ ALL: www.whenu.com
 ALL: www.whenusearch.com
 ALL: www.whenushop.com
 ALL: www.whenwordscountretreat.com
-ALL: www.wheredoyoucomefrom.ovh
 ALL: www.whereismommy.gq
 ALL: www.whimsicalteaching.com
 ALL: www.whipcrack.org
@@ -128462,7 +128053,6 @@ ALL: www.yeniyolgumruk.com
 ALL: www.yennwmfmbnfz.com
 ALL: www.yenten-pool.info
 ALL: www.yeouakimhubraf.com
-ALL: www.yepads.com
 ALL: www.yer.facebook-ads.adtz.com
 ALL: www.yes.hashhot.com
 ALL: www.yes1899.com
@@ -131617,7 +131207,6 @@ ALL: xps.sipa.be
 ALL: xpswillz.com
 ALL: xptmma.com.md-27.webhostbox.net
 ALL: xptp.adj.st
-ALL: xpu.samsungelectronics.com
 ALL: xpvu.adj.st
 ALL: xpwppacpda.com
 ALL: xpxp74.com
@@ -132858,7 +132447,6 @@ ALL: yenten.luckypool.org
 ALL: yenten.mofumofu.me
 ALL: yeoldeblog.kissmetrics.com
 ALL: yeouakimhubraf.com
-ALL: yepads.com
 ALL: yeplavtzm.com
 ALL: yepmedia.fs.ak-is.net
 ALL: yepnim.estate
@@ -133720,7 +133308,6 @@ ALL: yprnopqzs.com
 ALL: ypschool.cn
 ALL: ypsingapore.onesignal.com
 ALL: yptwqjdgikmcqc.com
-ALL: ypu.samsungelectronics.com
 ALL: ypummbggdjex.com
 ALL: ypzhrmspnfmy.com
 ALL: ypzrannhrvhlpk.com
@@ -136705,7 +136292,6 @@ ALL: zpqejgbya.com
 ALL: zpracy.000webhostapp.com
 ALL: zprg3.ads.tremorhub.com
 ALL: zproductos.com
-ALL: zpu.samsungelectronics.com
 ALL: zpwqnicvzi.com
 ALL: zpwtylxpfeje.com
 ALL: zpxgdlqoofx.com
