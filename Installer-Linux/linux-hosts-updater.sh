@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Linux hosts Updater for the Ultimate Hosts Blacklist
 # Repo Url: https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist
