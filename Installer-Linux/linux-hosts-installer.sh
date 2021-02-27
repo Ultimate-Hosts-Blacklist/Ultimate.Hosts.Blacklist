@@ -9,7 +9,7 @@
 #
 # root has to run the script
 #
-if [[ $(id -u) != 0 ]]
+if [ $(id -u) != 0 ]
     then
     printf "You need to be root to do this!\nIf you have SUDO installed, then run this script with `sudo ${0}`"
     exit 1
