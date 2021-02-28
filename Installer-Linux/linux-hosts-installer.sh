@@ -20,11 +20,21 @@ else
     sudo $0 && exit 0
     if [ $? -eq 127 ] ; then
         echo "I can't find 'sudo', I'll try to use 'su' to become root."
-	echo "(Remember that 'su' is considerd deprecated (it needs a root password), I strongly recommend installing 'sudo'.)"
+        echo "(Remember that 'su' is considered deprecated (it needs a root password), I strongly recommend installing 'sudo'.)"
         su -c $0 && exit 0
         if [ $? -eq 127 ] ; then
-            echo "I also can't find 'su', you'll need to find another way to become root..."
-            exit 1
+            echo "I also can't find 'su', I'll try to use 'pkexec' to run this as root..."
+            pkexec $0 && exit 0
+            #Check for 126 because 127 is a possible returncode of 'pkexec' so it's not necessarily unavailable
+            #Because of the '&&' in the command above checks for returncode 0, the else-block can only be entered in case of non-authorization-related problems
+            if [ $? -eq 126 ] ; then
+                echo "I can't give you authorization to run this as root, you'll need to find another way to become root..."
+                exit 1
+            else
+                echo "Something went wrong with trying to use 'pkexec' to run this script."
+                echo "It could also be that it's not installed in which case you need to install at least 'sudo', 'pkexec' or 'su'"
+                exit 1
+            fi
         else
             echo "Something went wrong with trying to use 'su' to run this script"
             exit 1
