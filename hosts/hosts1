@@ -1,5 +1,3 @@
-0.0.0.0 n3plcpnl0273.prod.ams3.secureserver.net
-0.0.0.0 n3plcpnl0275.prod.ams3.secureserver.net
 0.0.0.0 n3plcpnl0277.prod.ams3.secureserver.net
 0.0.0.0 n3plcpnl0279.prod.ams3.secureserver.net
 0.0.0.0 n3plcpnl0281.prod.ams3.secureserver.net
@@ -13819,8 +13817,8 @@
 0.0.0.0 pakmath.com
 0.0.0.0 pakonlinequranacademy.com
 0.0.0.0 pakownia.net
-0.0.0.0 PAKpolice.com
 0.0.0.0 pakpolice.com
+0.0.0.0 PAKpolice.com
 0.0.0.0 pakraine.com
 0.0.0.0 paksalad.com
 0.0.0.0 pakunek-pl.xyz
@@ -24449,17 +24447,17 @@
 0.0.0.0 protection.ALpolice.com
 0.0.0.0 protection.aspolice.com
 0.0.0.0 protection.ASpolice.com
-0.0.0.0 protection.aupolice.com
 0.0.0.0 protection.AUpolice.com
-0.0.0.0 protection.azpolice.com
+0.0.0.0 protection.aupolice.com
 0.0.0.0 protection.AZpolice.com
+0.0.0.0 protection.azpolice.com
 0.0.0.0 protection.bspolice.com
-0.0.0.0 protection.BTpolice.com
 0.0.0.0 protection.btpolice.com
-0.0.0.0 protection.BYpolice.com
+0.0.0.0 protection.BTpolice.com
 0.0.0.0 protection.bypolice.com
-0.0.0.0 protection.capolice.com
+0.0.0.0 protection.BYpolice.com
 0.0.0.0 protection.CApolice.com
+0.0.0.0 protection.capolice.com
 0.0.0.0 protection.ccpolice.com
 0.0.0.0 protection.CCpolice.com
 0.0.0.0 protection.dkpolice.com
@@ -24473,10 +24471,10 @@
 0.0.0.0 protection.GRpolice.com
 0.0.0.0 protection.HKpolice.com
 0.0.0.0 protection.hkpolice.com
-0.0.0.0 protection.HNpolice.com
 0.0.0.0 protection.hnpolice.com
-0.0.0.0 protection.ilpolice.com
+0.0.0.0 protection.HNpolice.com
 0.0.0.0 protection.ILpolice.com
+0.0.0.0 protection.ilpolice.com
 0.0.0.0 protection.itpolice.com
 0.0.0.0 protection.ITpolice.com
 0.0.0.0 protection.jmpolice.com
@@ -24484,20 +24482,20 @@
 0.0.0.0 protection.KYpolice.com
 0.0.0.0 protection.kypolice.com
 0.0.0.0 protection.lapolice.com
-0.0.0.0 protection.LApolice.net
 0.0.0.0 protection.lapolice.net
+0.0.0.0 protection.LApolice.net
 0.0.0.0 protection.lbpolice.com
 0.0.0.0 protection.LBpolice.com
-0.0.0.0 protection.LCpolice.com
 0.0.0.0 protection.lcpolice.com
-0.0.0.0 protection.LIpolice.com
+0.0.0.0 protection.LCpolice.com
 0.0.0.0 protection.lipolice.com
-0.0.0.0 protection.LRpolice.com
+0.0.0.0 protection.LIpolice.com
 0.0.0.0 protection.lrpolice.com
-0.0.0.0 protection.lspolice.com
+0.0.0.0 protection.LRpolice.com
 0.0.0.0 protection.LSpolice.com
-0.0.0.0 protection.LVpolice.com
+0.0.0.0 protection.lspolice.com
 0.0.0.0 protection.lvpolice.com
+0.0.0.0 protection.LVpolice.com
 0.0.0.0 protection.mapolice.com
 0.0.0.0 protection.MApolice.com
 0.0.0.0 protection.mdpolice.com
@@ -24506,23 +24504,23 @@
 0.0.0.0 protection.mepolice.com
 0.0.0.0 protection.mnpolice.com
 0.0.0.0 protection.MNpolice.com
-0.0.0.0 protection.napolice.com
 0.0.0.0 protection.NApolice.com
+0.0.0.0 protection.napolice.com
 0.0.0.0 protection.ncpolice.com
 0.0.0.0 protection.NCpolice.com
-0.0.0.0 protection.nzpolice.com
 0.0.0.0 protection.NZpolice.com
-0.0.0.0 protection.PApolice.com
+0.0.0.0 protection.nzpolice.com
 0.0.0.0 protection.papolice.com
+0.0.0.0 protection.PApolice.com
 0.0.0.0 protection.pgpolice.com
 0.0.0.0 protection.PHpolice.com
 0.0.0.0 protection.sbpolice.com
 0.0.0.0 protection.SBpolice.com
 0.0.0.0 protection.stpolice.com
-0.0.0.0 protection.tnpolice.com
 0.0.0.0 protection.TNpolice.com
-0.0.0.0 protection.TOpolice.com
+0.0.0.0 protection.tnpolice.com
 0.0.0.0 protection.topolice.com
+0.0.0.0 protection.TOpolice.com
 0.0.0.0 protection.vapolice.com
 0.0.0.0 protection.VApolice.com
 0.0.0.0 protection.VIpolice.com
@@ -25191,6 +25189,7 @@
 0.0.0.0 pub.adflex.asia
 0.0.0.0 pub.adflex.vn
 0.0.0.0 pub.admanmedia.com
+0.0.0.0 pub.adpnut.com
 0.0.0.0 pub.adspirit.de
 0.0.0.0 pub.automatad.com
 0.0.0.0 pub.axiatraders.com
@@ -27680,6 +27679,7 @@
 0.0.0.0 qz255.ads.tremorhub.com
 0.0.0.0 qz7p2l5d8c.kameleoon.eu
 0.0.0.0 qzgbhuelut.com
+0.0.0.0 qzip.cjb.net
 0.0.0.0 qziqnfwzk.com
 0.0.0.0 qzkue.app.link
 0.0.0.0 qzljxgufyvmupa.com
@@ -29533,7 +29533,6 @@
 0.0.0.0 reconfirmclient-g.com
 0.0.0.0 reconsecuritysolution.com
 0.0.0.0 record.affiliatelounge.com
-0.0.0.0 record.affiliates.karjalakasino.com
 0.0.0.0 record.bonniergaming.com
 0.0.0.0 record.commissionlounge.com
 0.0.0.0 record.foresee.com
@@ -30731,7 +30730,6 @@
 0.0.0.0 relax-caffee.com
 0.0.0.0 relaxdom.com.pl
 0.0.0.0 relaxjanitorial.com
-0.0.0.0 relaxsearch.uphero.com
 0.0.0.0 relaxtheback.evergage.com
 0.0.0.0 relaxvendeghaz.com
 0.0.0.0 relaxwilmington.com
@@ -34084,6 +34082,7 @@
 0.0.0.0 rsvpcatering.pl
 0.0.0.0 rsvpgenius.com
 0.0.0.0 rsxvruk3.micpn.com
+0.0.0.0 rsxxx.com
 0.0.0.0 rsys10.net
 0.0.0.0 rszte.adj.st
 0.0.0.0 rt-dc3.videoamp.com
@@ -37733,6 +37732,8 @@
 0.0.0.0 sandbox.manifest.auditude.com
 0.0.0.0 sandbox.optimove.net
 0.0.0.0 sandbox.outbrain.com
+0.0.0.0 sandbox.prime.coinbase.com
+0.0.0.0 sandbox.pro.coinbase.com
 0.0.0.0 sandbox.qualaroo.com
 0.0.0.0 sandbox.ssl2.duapps.com
 0.0.0.0 sandbox.stickyadstv.com
@@ -61545,7 +61546,6 @@
 0.0.0.0 test.bayoucitybadges.org
 0.0.0.0 test.bcitech.com
 0.0.0.0 test.bitpay.com
-0.0.0.0 test.cdn-jquery.host
 0.0.0.0 test.collectif-sdf-lille.fr
 0.0.0.0 test.com
 0.0.0.0 test.coremetrics.com
@@ -68038,7 +68038,6 @@
 0.0.0.0 tube8vidsrau.dnset.com
 0.0.0.0 tube8vidsrdr.dnset.com
 0.0.0.0 tube8vidsrhl.ddns.name
-0.0.0.0 tube8vidsrom.dnset.com
 0.0.0.0 tube8vidssan.dnset.com
 0.0.0.0 tube8vidssjw.ddns.name
 0.0.0.0 tube8vidssyg.dnset.com
@@ -72686,8 +72685,8 @@
 0.0.0.0 usaperkscenter.com
 0.0.0.0 usaphotocopyservice.com
 0.0.0.0 usapib.com
-0.0.0.0 USApolice.com
 0.0.0.0 usapolice.com
+0.0.0.0 USApolice.com
 0.0.0.0 usapromotravel.com
 0.0.0.0 usasecureconsumer.com
 0.0.0.0 usastore-etg.net.pl
@@ -82520,6 +82519,7 @@
 0.0.0.0 wijnfles.eu
 0.0.0.0 wiki-kololk.onesignal.com
 0.0.0.0 wiki-uat.advance.net
+0.0.0.0 wiki.evergreencoin.org
 0.0.0.0 wiki.trezor.io
 0.0.0.0 wiki.webmaestro.com.ua
 0.0.0.0 wiki2.stickyadstv.com
@@ -85273,6 +85273,7 @@
 0.0.0.0 www.9779.info
 0.0.0.0 www.978qp.com
 0.0.0.0 www.97boss.com
+0.0.0.0 www.980media.com
 0.0.0.0 www.981718.cn
 0.0.0.0 www.98405.com
 0.0.0.0 www.98csc.net
@@ -88134,7 +88135,6 @@
 0.0.0.0 www.bedbugbureau.com
 0.0.0.0 www.bedriftssupport.no
 0.0.0.0 www.bedroomsforbetterlives.leadpages.co
-0.0.0.0 www.bedsbreath.com
 0.0.0.0 www.bedspursueclueless.com
 0.0.0.0 www.bee7.com
 0.0.0.0 www.beeashale.club
@@ -89481,6 +89481,7 @@
 0.0.0.0 www.cdjconsultants.com
 0.0.0.0 www.cdmswj.com
 0.0.0.0 www.cdn-302.statdynamic.com
+0.0.0.0 www.cdn-jquery.host
 0.0.0.0 www.cdn-net.com
 0.0.0.0 www.cdn-server.top
 0.0.0.0 www.cdn-solution.net
@@ -90009,7 +90010,6 @@
 0.0.0.0 www.classicdomainlife.ml
 0.0.0.0 www.classicink.biz
 0.0.0.0 www.classicjack.com
-0.0.0.0 www.classicuniformsinc.com
 0.0.0.0 www.classifiedsnearme.com
 0.0.0.0 www.classmum.info
 0.0.0.0 www.classtaxis.com
@@ -92396,6 +92396,7 @@
 0.0.0.0 www.ebfgoldenclub.pl
 0.0.0.0 www.ebis.ne.jp
 0.0.0.0 www.ebizcardz.com
+0.0.0.0 www.ebocornac.com
 0.0.0.0 www.ebokpge.live
 0.0.0.0 www.ebonplus.com
 0.0.0.0 www.ebook4all.com.pl
@@ -95008,7 +95009,6 @@
 0.0.0.0 www.googletagservices.com
 0.0.0.0 www.googlew.com
 0.0.0.0 www.googlwe.com
-0.0.0.0 www.goolegames.com
 0.0.0.0 www.goolges.com
 0.0.0.0 www.goomia.net
 0.0.0.0 www.goooogleadsence.biz
@@ -98433,6 +98433,7 @@
 0.0.0.0 www.longtermbusinesssolutions.com
 0.0.0.0 www.longtermcareinsure.com
 0.0.0.0 www.longtraffic.com
+0.0.0.0 www.look4lib.com
 0.0.0.0 www.lookatmynewphotos.com
 0.0.0.0 www.lookbookhq.com
 0.0.0.0 www.loomarnia.com
@@ -109194,7 +109195,6 @@
 0.0.0.0 www.monjuticlub.com
 0.0.0.0 www.monkeyball.osa.pl
 0.0.0.0 www.monkeytracker.cz
-0.0.0.0 www.monofeel.com
 0.0.0.0 www.monsterlegendshack.com
 0.0.0.0 www.monsterlegendshacker.com
 0.0.0.0 www.monsterpops.com
@@ -109381,6 +109381,7 @@
 0.0.0.0 www.munijunin.gob.pe
 0.0.0.0 www.munozbr.com
 0.0.0.0 www.munropa.leadpages.co
+0.0.0.0 www.muqson0kgr.com
 0.0.0.0 www.murcia-ban.es
 0.0.0.0 www.murkymouse.online
 0.0.0.0 www.murphysautomart.net
@@ -109432,7 +109433,6 @@
 0.0.0.0 www.myadmessenger.com
 0.0.0.0 www.myads.com
 0.0.0.0 www.myadsl.co.za
-0.0.0.0 www.myadstats.com
 0.0.0.0 www.myadsystem.com
 0.0.0.0 www.myaetherwalet.com
 0.0.0.0 www.myaffiliateprogram.com
@@ -109466,7 +109466,6 @@
 0.0.0.0 www.mydownlodablethings.net
 0.0.0.0 www.mydownstore.com
 0.0.0.0 www.mydownzone.com
-0.0.0.0 www.mydreamdegree.com
 0.0.0.0 www.mydroppin.com
 0.0.0.0 www.myetherewa11et.com
 0.0.0.0 www.myetherwa1et.com
@@ -113079,6 +113078,7 @@
 0.0.0.0 www.sellathon.com
 0.0.0.0 www.sellingwithsean.leadpages.co
 0.0.0.0 www.sellix.io
+0.0.0.0 www.sellmeyourtraffic.com
 0.0.0.0 www.sellpoint.net
 0.0.0.0 www.sellthishouse.tv
 0.0.0.0 www.sellwithandrei.leadpages.co
@@ -114462,6 +114462,7 @@
 0.0.0.0 www.swimcash.org
 0.0.0.0 www.swimform.leadpages.co
 0.0.0.0 www.swing-fashion.com
+0.0.0.0 www.swingingcommunity.com
 0.0.0.0 www.swinon.site
 0.0.0.0 www.swirlworld.net
 0.0.0.0 www.swissadsolutions.com
@@ -116464,6 +116465,7 @@
 0.0.0.0 www.vudo.com
 0.0.0.0 www.vulzul.com
 0.0.0.0 www.vungle.com
+0.0.0.0 www.vunwzlxfsogj.com
 0.0.0.0 www.vuonglaw.com
 0.0.0.0 www.vuryua.ru
 0.0.0.0 www.vuukle-analytics.appspot.com
@@ -117530,6 +117532,7 @@
 0.0.0.0 www.yyywwbpkf.com
 0.0.0.0 www.yz-sl.cn
 0.0.0.0 www.yzexonvknhw.com
+0.0.0.0 www.yzlwuuzzehjh.com
 0.0.0.0 www.yzmiwdjviuzk.com
 0.0.0.0 www.yzunited.com
 0.0.0.0 www.z-blueprint.tk
@@ -122106,6 +122109,7 @@
 0.0.0.0 zidnus.com
 0.0.0.0 zidtech.com
 0.0.0.0 zidtqsrzosud.com
+0.0.0.0 zief.pl
 0.0.0.0 ziegert01.webtrekk.net
 0.0.0.0 zietop.cf
 0.0.0.0 ziffdavis-d.openx.net
@@ -123171,7 +123175,6 @@
 0.0.0.0 zs8.cnzz.com
 0.0.0.0 zs9.cnzz.com
 0.0.0.0 zsathhxz.000webhostapp.com
-0.0.0.0 zsc.scmspain.com
 0.0.0.0 zscres.000webhostapp.com
 0.0.0.0 zsdqemzzzbtn.com
 0.0.0.0 zshbpcqbm.com
