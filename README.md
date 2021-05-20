@@ -15,10 +15,10 @@ Our hosts file is for use on any operating system to block bad domains out of yo
 
 ---
 
-- Version: **V1.2353.2021.05.19**
-- Total Bad Hosts in hosts file: **300,672**
+- Version: **V1.2354.2021.05.20**
+- Total Bad Hosts in hosts file: **300,675**
 - Total Bad IP's in hosts.deny file: **140,017**
-- Total Bad Hosts and IP's in superhosts.deny file: **440,689**
+- Total Bad Hosts and IP's in superhosts.deny file: **440,692**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -136,7 +136,7 @@ To modify your current `hosts` file, look for it in the following places and mod
 
 **Linux, Mac OS X, iOS, Android**: `/etc/hosts.deny`
 
-**Windows Systems**: `%SystemRoot%\system32\drivers\etc\hosts` **[Try the Windows Installer Batch Script](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat)<br>**
+**Windows Systems**: `%SystemRoot%\system32\drivers\etc\hosts` **[Try the Windows Installer Batch Script](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat)<br>**
 
 ---
 
