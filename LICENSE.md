@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2020, 2021 Ultimate Hosts Blacklist - @Ultimate-Hosts-Blacklist
+Copyright (c) 2017, 2018, 2019, 2020, 2021 Ultimate Hosts Blacklist - @Ultimate-Hosts-Blacklist
 Copyright (c) 2017, 2018, 2019, 2020, 2021 Mitchell Krog - @mitchellkrogza
 Copyright (c) 2017, 2018, 2019, 2020, 2021 Nissar Chababy - @funilrys
 
