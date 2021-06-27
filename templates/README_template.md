@@ -157,7 +157,7 @@ To modify your current `hosts` file, look for it in the following places and mod
 
 [![Log an Issue or a PR](https://img.shields.io/badge/LOG%20-%20an%20issue%20here%20%F0%9F%9A%A6-blue.svg)](http://github.com/Ultimate-Hosts-Blacklist/blacklist/issues) if you want to add an entry to our infrastructure.
 
-## REMOVALS 
+## REMOVALS
 
 [![Log an Issue](https://img.shields.io/badge/LOG%20-%20an%20issue%20here%20%F0%9F%9A%A6-blue.svg)](http://github.com/Ultimate-Hosts-Blacklist/whitelist/issues) if you disagree with anything in our distributed content.
 
@@ -280,9 +280,9 @@ Come drop by and visit [Mitchell's Portfolio](https://mitchellkrog.com).
 ```
 MIT License
 
-Copyright (c) 2020 Ultimate Hosts Blacklist - @Ultimate-Hosts-Blacklist
-Copyright (c) 2017, 2018, 2019, 2020 Mitchell Krog - @mitchellkrogza
-Copyright (c) 2017, 2018, 2019, 2020 Nissar Chababy - @funilrys
+Copyright (c) 2020, 2021 Ultimate Hosts Blacklist - @Ultimate-Hosts-Blacklist
+Copyright (c) 2017, 2018, 2019, 2020, 2021 Mitchell Krog - @mitchellkrogza
+Copyright (c) 2017, 2018, 2019, 2020, 2021 Nissar Chababy - @funilrys
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
