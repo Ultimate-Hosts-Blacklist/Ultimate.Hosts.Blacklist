@@ -20,10 +20,10 @@ hosts file.
 
 ---
 
-- Version: **V2.7.2021.06.29**
-- Total Bad domains in `hosts` file: **301,653**
-- Total Bad IP in `hosts.deny` file: **140,204**
-- Total Bad domains and IP in `superhosts.deny` file: **441,857**
+- Version: **V2.9.2021.06.30**
+- Total Bad domains in `hosts` file: **300,679**
+- Total Bad IP in `hosts.deny` file: **140,326**
+- Total Bad domains and IP in `superhosts.deny` file: **441,005**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -137,7 +137,7 @@ listed domains.
 For example, to drop all requests to certain domains or servers, adding lines
 to your `hosts` file as below will achieve this for you.
 You can create your custom hosts or simply use ours which covers you for
-well over 301,653 bad domains.
+well over 300,679 bad domains.
 
 ```
 # Block Bad Domains and Servers with Hosts File
@@ -243,7 +243,7 @@ The sources of the input data information are as follows.
 | BadIPs.com_Level_4 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_4) | [Link](http://www.badips.com/get/list/any/4?age=12) |
 | BadIPs.com_Level_5 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5) | [Link](http://www.badips.com/get/list/any/5?age=12) |
 | blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/blacklist) | [Link]() |
-| cameleon_at_sysctl.org | [Link](https://github.com/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org) | [Link](http://sysctl.org/cameleon/hosts) |
+| cameleon_at_sysctl.org | [Link](https://github.com/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org) | [Link]() |
 | Cyveillance_Blocks | [Link](https://github.com/Ultimate-Hosts-Blacklist/Cyveillance_Blocks) | [Link]() |
 | firehol_level1 | [Link](https://github.com/Ultimate-Hosts-Blacklist/firehol_level1) | [Link](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset) |
 | hostsVN | [Link](https://github.com/Ultimate-Hosts-Blacklist/hostsVN) | [Link](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts) |
@@ -272,7 +272,6 @@ The sources of the input data information are as follows.
 | yoyo.org_ips | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_ips) | [Link](https://pgl.yoyo.org/adservers/iplist.php?format=&showintro=0) |
 | ZeroDot1_CoinBlockerLists | [Link](https://github.com/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists) | [Link](https://zerodot1.gitlab.io/CoinBlockerLists/list.txt) |
 | ZeroDot1_CoinBlockerLists_browser | [Link](https://github.com/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_browser) | [Link](https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list_browser.txt) |
-| ZeroDot1_CoinBlockerLists_optional | [Link](https://github.com/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_optional) | [Link](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt) |
 
 ---
 
