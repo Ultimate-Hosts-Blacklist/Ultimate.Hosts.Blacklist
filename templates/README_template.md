@@ -104,6 +104,10 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 
 ## INSTALLERS, UPDATERS AND UNINSTALLER SCRIPTS
 
+**⚠️⚠️ WE DO NOT RECOMMEND THE USAGE OF THE HOSTS FILE INSIDE A WINDOWS MACHINE! ⚠️⚠️**
+
+**⚠️⚠️ WINDOWS USER ARE RECOMMENDED TO USE THE DNS SERVER INSTEAD ⚠️⚠️**
+
 | Linux                                                                                                                                                                | Windows                                                                                                                                             |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [hosts Installer](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Linux/linux-hosts-installer.sh)                         | [hosts Installer](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/Installer-Windows/windows-install-hosts.bat)     |
@@ -214,7 +218,7 @@ modify the `hosts` file.
 
 **Linux, Mac OS X, iOS, Android**: `/etc/hosts.deny`
 
-**Windows Systems**: `%SystemRoot%\system32\drivers\etc\hosts` **[Try the Windows Installer Batch Script](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat)<br>**
+**Windows Systems _(NOT RECOMMENDED: PREFER DNS SERVER)_**: `%SystemRoot%\system32\drivers\etc\hosts` **[Try the Windows Installer Batch Script](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat)<br>**
 
 ---
 
