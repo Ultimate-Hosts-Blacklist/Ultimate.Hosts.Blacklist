@@ -20,10 +20,10 @@ hosts file.
 
 ---
 
-- Version: **V2.78.2021.08.03**
-- Total Bad domains in `hosts` file: **562,354**
-- Total Bad IP in `hosts.deny` file: **139,894**
-- Total Bad domains and IP in `superhosts.deny` file: **702,248**
+- Version: **V2.80.2021.08.04**
+- Total Bad domains in `hosts` file: **562,278**
+- Total Bad IP in `hosts.deny` file: **140,566**
+- Total Bad domains and IP in `superhosts.deny` file: **702,844**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -141,7 +141,7 @@ listed domains.
 For example, to drop all requests to certain domains or servers, adding lines
 to your `hosts` file as below will achieve this for you.
 You can create your custom hosts or simply use ours which covers you for
-well over 562,354 bad domains.
+well over 562,278 bad domains.
 
 ```
 # Block Bad Domains and Servers with Hosts File
@@ -243,6 +243,7 @@ The sources of the input data information are as follows.
 | Bad_JAV_Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/Bad_JAV_Sites) | [Link]() |
 | BaddBoyzHosts | [Link](https://github.com/Ultimate-Hosts-Blacklist/BaddBoyzHosts) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/domains) |
 | BadIPs.com_KEY | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_KEY) | [Link](https://hosts.ubuntu101.co.za/badips.txt) |
+| BadIPs.com_Level_3 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_3) | [Link](http://www.badips.com/get/list/any/3?age=12) |
 | BadIPs.com_Level_4 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_4) | [Link](http://www.badips.com/get/list/any/4?age=12) |
 | BadIPs.com_Level_5 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5) | [Link](http://www.badips.com/get/list/any/5?age=12) |
 | blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/blacklist) | [Link]() |
