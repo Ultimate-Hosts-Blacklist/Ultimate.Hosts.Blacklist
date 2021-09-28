@@ -1,3 +1,33 @@
+srv-2017-04-30-01.config.parsely.com
+srv-2017-04-30-10.config.parsely.com
+srv-2017-04-30-20.config.parsely.com
+srv-2017-05-01-00.config.parsely.com
+srv-2017-05-01-01.config.parsely.com
+srv-2017-05-01-10.config.parsely.com
+srv-2017-05-01-20.config.parsely.com
+srv-2017-05-02-00.config.parsely.com
+srv-2017-05-02-01.config.parsely.com
+srv-2017-05-03-00.config.parsely.com
+srv-2017-05-03-10.config.parsely.com
+srv-2017-05-03-20.config.parsely.com
+srv-2017-05-04-00.config.parsely.com
+srv-2017-05-04-10.config.parsely.com
+srv-2017-05-08-00.pixel.parsely.com
+srv-2017-05-10-00.config.parsely.com
+srv-2017-05-10-01.config.parsely.com
+srv-2017-05-10-10.config.parsely.com
+srv-2017-05-11-00.config.parsely.com
+srv-2017-05-11-01.config.parsely.com
+srv-2017-05-11-10.config.parsely.com
+srv-2017-05-11-20.config.parsely.com
+srv-2017-05-12-00.config.parsely.com
+srv-2017-05-12-01.config.parsely.com
+srv-2017-05-12-10.config.parsely.com
+srv-2017-05-13-00.config.parsely.com
+srv-2017-05-13-10.config.parsely.com
+srv-2017-05-14-00.config.parsely.com
+srv-2017-05-14-10.config.parsely.com
+srv-2017-05-15-00.config.parsely.com
 srv-2017-05-15-10.config.parsely.com
 srv-2017-05-16-00.config.parsely.com
 srv-2017-09-08-10.config.parsely.com
@@ -5528,7 +5558,6 @@ stats.mediaforge.com
 stats.mediamath.com
 stats.merriam-webster.com
 stats.metacount.com
-stats.mezzobit.com
 stats.minexmr.com
 stats.mirrorfootball.co.uk
 stats.mobalo.com
@@ -6884,7 +6913,9 @@ stimulus.profitwell.com
 stinex.matomo.cloud
 sting.de17a.com
 sting.de17aserver.com
+sting-accept-cdn.de17a.com
 stingberry.gq
+sting-cdn.de17a.com
 stingerbrush.tapfiliate.com
 stingersbx.beeswax.com
 stingray.airfind.com
@@ -7696,9 +7727,12 @@ streams24.tv
 streams.richrelevance.com
 streams.web.sundaysky.com
 streams.yext.com
+streams-dev.yext.com
 streams-edge.web.sundaysky.com
 streamsend.com
 streamsfilms.com
+streams-qa.yext.com
+streams-sbx.yext.com
 streamtowatch.org
 streamunion.com
 streamvid.tv
@@ -10263,6 +10297,7 @@ surefthechannel.com
 suregod77.wixsite.com
 surejob.pushengage.com
 surekcalcados.com.br
+surekha.info
 surelli.co
 surelymine.refersion.com
 surendrawap.in
@@ -10661,6 +10696,7 @@ suss.nanorep.co
 sussexweb.com
 sussi.cressoft.com.pk
 sussstudentportal.nanorep.co
+sussvelemcom.worldgravity.com
 sussvelemcom.yusp.com
 sustainability.250analytics.com
 sustainability.yext.com
@@ -10778,6 +10814,7 @@ sv.surveywall-api.survata.com
 sv.symcd.comwf.cbarsrv.com
 sv.wp11.org
 sv.xhamser.com
+svabe.info
 svae.doma2.info
 svaljava.info
 svalleybd.com
@@ -13678,6 +13715,7 @@ tailwind.sjv.io
 tainan.adx1.com
 tainav.mirtesen.ru
 taingheiphone.info
+tainhac.org
 taino.me
 tainoved.com
 taipas.to.gov.br
@@ -16468,6 +16506,7 @@ telemetry-dce.gfe.nvidia.com
 telemetry-geo.docusign.net.akadns.net
 telemetry-in.battle.net
 telemetry-incoming.r53-2.services.mozilla.com
+telemetry-sdk-metrics.inmobi.cn
 telemetryservice.firstpartyapps.oaspapps.com
 telemetry-service.ir.prod.clicktale.net
 telemetrysolutions.com.au
@@ -17921,7 +17960,6 @@ test.shikotv.org
 test.shopbs.org
 test.showheroes.com
 test.showroompriv.com
-test.silverpush.co
 test.sirdata.com
 test.skilift.org
 test.skimlinks.com
@@ -24253,6 +24291,8 @@ tools2.hitbox.com
 tools4all.xyz
 tools4hack.com
 tools23jakarta.000webhostapp.com
+tools-86-api.k8s.test-001.d-usw-2.braze.com
+tools-86-dashboard.k8s.test-001.d-usw-2.braze.com
 tools180.clickfunnels.com
 tools.3g.qq.com
 tools.ad4mat.net
@@ -24897,6 +24937,7 @@ torryfashion.com
 torsotrack.inq.com
 torsotrack.touchcommerce.com
 tor-sponsored-posts.s3.amazonaws.com
+torstar.blueconic.net
 torstar.gscontxt.net
 torstar-ams.gscontxt.net
 torstar-ash.gscontxt.net
@@ -26224,6 +26265,7 @@ track.brmngr.com
 track.brucelead.com
 track.cannabisindustrialmarket.com
 track.canva.com
+track.cbs.com
 track.celtra.com
 track.chanret.com
 track.childrensalon.com
@@ -28252,6 +28294,7 @@ trck-v4.a8.net
 trc-latency.svtrd.com
 trclfonj.com
 trc-news-integration.taboola.com
+trc-sdk.inmobi.cn
 trctest.taboola.com
 trc-tls13.taboola.com
 trcwasdf.club
@@ -31267,6 +31310,7 @@ twctsg.122.2o7.net
 twctsg.hb-api.omtrdc.net
 twctsg.sc.omtrdc.net
 twdc5skm.micpn.com
+twdc.blueconic.net
 twdc.corp.com
 tw-drupal.info
 twdz.loan.db-ip.com
@@ -38605,6 +38649,7 @@ unidasfarma.com.br
 unidentified-syntax.000webhostapp.com
 unidrive.nl
 unietd.com
+unieuro.commander1.com
 uni-ex.ru
 unifi.tenjin.com
 unified.adsafeprotected.com
@@ -42794,6 +42839,7 @@ v1.min.js.domain.name
 v1.moatads.com
 v1.nedstatbasic.net
 v1.nend.net
+v1.openx.com
 v-01.optvdo.com
 v1.ozvdarozv.com
 v1.remerge.io
@@ -44294,6 +44340,7 @@ vault.shared-dev.apptentive.com
 vault.strands.com
 vault.us-east1.qa.chicoryapp.com
 vault.vrvm.com
+vault-dev.k8s.test-001.d-usw-2.braze.com
 vault-ec-ui.private.linksynergy.com
 vault-internal.demandbase.com
 vaultmaxlogistics.info
@@ -49690,6 +49737,7 @@ vlaamsbrabant.matomo.cloud
 vlaamseradio.tt.omtrdc.net
 vlad.250analytics.com
 vladdin-nikola.000webhostapp.com
+vlade.info
 vladivostok-ra.onesignal.com
 vladk.d1.sc.omtrdc.net
 vladkamaceka.top
@@ -53669,6 +53717,7 @@ washiest-rehabilita.000webhostapp.com
 washington.cbslocal.us.intellitxt.com
 washington.lapalabravivaint.org
 washingtonbrown.clickfunnels.com
+washingtoncollege.blueconic.net
 washingtonconnetion.org
 washingtoncountybank.com.102.112.2o7.net
 washingtondc.reachlocal.com
@@ -53840,7 +53889,6 @@ water.mandacan.org
 wateraid-admin.joystickinteractive.com
 wateraid-admin-dev.joystickinteractive.com
 water-bed.8p.org.uk
-waterboss.postaffiliatepro.com
 waterboxaquariums.clickfunnels.com
 watercapri.ezbattery.hop.clickbank.net
 watercarebangalore.com
@@ -54271,6 +54319,7 @@ w-ctracker-01.admarketplace.net
 w-ctracker-02.admarketplace.net
 wc-tracking.lavasoft.com
 wctung.clickfunnels.com
+wctzz.pcprob.adsservingtwig.xyz
 wcu.blackboad.com
 wcubands.org
 wcus-0.amcs.control.monitor.azure.com
@@ -55687,7 +55736,6 @@ webdisk.wexler-consultants.co.il
 webdisk.wifi-hacker.org
 webdisk.wonderweblink.info
 webdisk.xptheme.info
-webdisk.xrp-info.com
 webdisk.y20turkey.org
 webdisk.yanaiarfi.com
 webdisk.zabolkata.info
@@ -56952,6 +57000,7 @@ welionads.affise.com
 welionads.g2afse.com
 welkguessqata.myrating.id
 well12.000webhostapp.com
+wella.commander1.com
 wella.corp.com
 wellandgood.getambassador.com
 well-balanced-sixes.000webhostapp.com
@@ -60267,7 +60316,6 @@ woraja.com
 worbblepop.com
 worchids.net
 worcounter.net
-word.diydesign.org
 wordable.tapfiliate.com
 wordads.co
 wordart.org
@@ -62754,6 +62802,7 @@ ww1.bayanihanlabs.info
 ww1.bbbaptistchurch.org
 ww1.bbcvids.org
 ww1.bborooahcollege.org
+ww1.bbs.linuxsky.org
 ww1.bbs.unionbbs.org
 ww1.bbs.yuepoo.com
 ww1.bcacked.com
@@ -64981,6 +65030,7 @@ ww1.lookfanstastic.com
 ww1.loserz.scribblekid.org
 ww1.louboutinheelsshoeuk.com
 ww1.louisianaschools.org
+ww1.lourdesnet.com
 ww1.loveislife.info
 ww1.lovelocalgirl.com
 ww1.lovers-web.net
@@ -66225,6 +66275,7 @@ ww1.sebastionstudios.com
 ww1.secret-liaisons-uk.com
 ww1.secume.org
 ww1.secure.femdomabuse.com
+ww1.securedsearch.org
 ww1.securistechnology.net
 ww1.securitasemloyeesurvey.com
 ww1.sedg.org
@@ -66284,6 +66335,7 @@ ww1.sexycunt.info
 ww1.sexyinyourcity.com
 ww1.sexyrank.org
 ww1.seymmeetings.org
+ww1.sfer.info
 ww1.sffuncheap.com
 ww1.sfid2009.info
 ww1.sfrec.org
@@ -70310,6 +70362,7 @@ ww11.ironoakshoa.org
 ww11.islam-news.info
 ww11.islandtowers.org
 ww11.isoji.org
+ww11.i-standart.info
 ww11.istanzeonline.com
 ww11.i-subs.com
 ww11.it-backpack.careblog.info
@@ -71606,7 +71659,6 @@ ww16.biqel.com
 ww16.birdwindowcollisions.info
 ww16.bitcoinxl.org
 ww16.blackopsairsoftguns.com
-ww16.blitzdownload.com
 ww16.blog.avpt.info
 ww16.blog.livedooor.info
 ww16.blog.pirotek.info
@@ -72485,7 +72537,6 @@ ww16.mvideo.bitcoininvestmentstrategy.info
 ww16.mvideo.bosai-goods.info
 ww16.mvideo.br530.info
 ww16.mvideo.brshare.info
-ww16.mvideo.chemia-gimnazjum.info
 ww16.mvideo.dogecoinfaucets.info
 ww16.mvideo.hastalavista.info
 ww16.mvideo.haxoff.info
@@ -73685,7 +73736,6 @@ ww17.charlottestcarriagehouse.com
 ww17.chatfunnel.info
 ww17.chatynaprenajom.info
 ww17.cheapjewellery.info
-ww17.chemia-gimnazjum.info
 ww17.cherninsshoezone.com
 ww17.cherokeedas.com
 ww17.cherokeeschoolssc.org
@@ -74391,7 +74441,6 @@ ww17.joyofpee.com
 ww17.jpcooler.com
 ww17.jqery.com
 ww17.jsdc33jsod24.org
-ww17.juancpapro.info
 ww17.judgenow.org
 ww17.jumpon.info
 ww17.jupitercreekmusic.com
@@ -74961,7 +75010,6 @@ ww17.qwertyuiopasdfghjklzxcvbnm.org
 ww17.r4official.com
 ww17.rachelinux.org
 ww17.radiowymsey.org
-ww17.radyotiyatrosu.org
 ww17.raiin.org
 ww17.railroadcu.org
 ww17.rainoffice.com
@@ -75228,8 +75276,10 @@ ww17.supercore.adm-vids.com
 ww17.superdata.info
 ww17.superiorpublicautoauction.com
 ww17.suprdeal.info
+ww17.surekha.info
 ww17.surfthechanel.net
 ww17.suviet.info
+ww17.svabe.info
 ww17.svaljava.info
 ww17.svmc-meded.org
 ww17.sweetestcouture.com
@@ -76239,7 +76289,6 @@ ww25.azjobebooks.info
 ww25.azmonakan.azmonakan.org
 ww25.azmonakan.org
 ww25.azmp3lagu.info
-ww25.b2bpirelli.com
 ww25.b2knew.info
 ww25.b.switchadhub.com
 ww25.b.wowoar.info
@@ -78175,7 +78224,6 @@ ww25.ihric.org
 ww25.iihoneyjoo.com
 ww25.iklaneklusif.com
 ww25.ikyep.org
-ww25.ilcorsaroblu.info
 ww25.ilija101rbi.net
 ww25.ilios-bg.com
 ww25.illegalcartoons.org
@@ -78346,6 +78394,7 @@ ww25.isea2016.info
 ww25.islam-news.info
 ww25.isoji.org
 ww25.isoptin.kkop.info
+ww25.i-standart.info
 ww25.istanzeonline.com
 ww25.i-subs.com
 ww25.it.plus7.info
@@ -78436,7 +78485,6 @@ ww25.jr3.4hu.org
 ww25.jsc-renew.com
 ww25.jsononlineeditor.org
 ww25.juamv.com
-ww25.juancpapro.info
 ww25.judgenow.org
 ww25.juggworld.net
 ww25.jumeriahbeach.com
@@ -84012,6 +84060,7 @@ ww38.basta.info
 ww38.batik.info
 ww38.bayanihanlabs.info
 ww38.bborooahcollege.org
+ww38.bbs.linuxsky.org
 ww38.bdlove24.info
 ww38.beachbodywaxvb.com
 ww38.beaconlightmotel.com
@@ -85023,6 +85072,7 @@ ww38.funtvshow.info
 ww38.furniturex.net
 ww38.fussballlivestream.net
 ww38.futanarigalleries.com
+ww38.futurelectronics.com
 ww38.futurme.org
 ww38.fuzk.net
 ww38.fxwl.info
@@ -90251,6 +90301,7 @@ www.3vig.com
 www.3w2k701z6i94wgr.choobin-co.ir
 www.3w24.com
 www.3wassonnet.com
+www.3weekdiet.com
 www.3xit.net
 www.3yp7i.voluumtrk.com
 www.4.adx1.com
@@ -90375,6 +90426,7 @@ www.7x.cc
 www.7xc4n.com
 www.7y7.us
 www.7zip.fr
+www.8ad1c8370ef7e27cbf6ab43e941f88f83b394974.adx1.com
 www.8az.net
 www.8club.org
 www.8fga7.adx1.com
@@ -92044,7 +92096,6 @@ www.adult-profit-files.com
 www.adultrevenueservice.com
 www.adultsinglesdatingmadisonmississippi.datingphotos.org
 www.adult-top-list.com
-www.adulttrafficads.com
 www.adulttubetraffic.com
 www.adultwebmastersonline.com
 www.adunity.com
@@ -93018,6 +93069,7 @@ www.api.spoldzielnia.nsaudience.pl
 www.apidemo.eazybiz.ng
 www.api-doc.siliconorchard.com
 www.apihommie.blogspot.com
+www.apisini.adx1.com
 www.api-smvgroup.db-ip.com
 www.apkplayonline.com
 www.aplazer.leadpages.co
@@ -93027,6 +93079,7 @@ www.aplikacja-lnpost.com
 www.aplikacje24.com
 www.aplikacjeplay.com
 www.aplimarathi.com
+www.aplove5.blogspot.com
 www.aplsolutionsonline.com
 www.apm.us-west1.gcp.cloud.es.io
 www.apmebf.com
@@ -93301,7 +93354,6 @@ www.asdasdd.com
 www.asdream.pl
 www.ase.clmbtech.com
 www.aseanlegaltech.com
-www.aservices.party
 www.asharbambang.blogspot.com
 www.ashcdn.com
 www.ashely.xfriendzxz.com
@@ -93891,7 +93943,6 @@ www.baseflix.pl
 www.basementremodelingchicagoil.com
 www.basen.biz
 www.baseny.club
-www.baseofhacks.com
 www.basicfundamentals.leadpages.co
 www.basis.net
 www.basketbal.info
@@ -94419,7 +94470,6 @@ www.bimba.info
 www.bimbelcpns.belajaronline.org
 www.binadroid.com
 www.binance2.com
-www.binance2x.com
 www.binanceref.info
 www.binanceteam.net
 www.binancetop.com
@@ -94953,9 +95003,7 @@ www.bt.segoogle.com
 www.btb.adx1.com
 www.btbilgisayarkursu.com
 www.btbt.info
-www.btc10.org
 www.btc.gr.com
-www.btc-binance.site
 www.btcduke.com
 www.btcerise.info
 www.btcprofit.trcwasdf.club
@@ -96967,6 +97015,7 @@ www.cryptocoinsad.com
 www.cryptocurrency.totalh.net
 www.crypto-engine.pl
 www.cryptofollow.com
+www.cryptoforhealth.com
 www.cryptofundfx.com
 www.cryptolabpro.com
 www.cryptolegacypro.com
@@ -97034,7 +97083,6 @@ www.csgorich.com
 www.csgoshuffle.com
 www.csgoskins.com
 www.csgoskinsproject.pl
-www.csgoskulls.com
 www.csgospeed.com
 www.csgostakes.com
 www.csgowealth.com
@@ -97926,6 +97974,7 @@ www.dlagier.com
 www.dlaogrodu.biz
 www.dlarodzinyprzemysl.pl
 www.dlaturystow.com.pl
+www.dlavi496.blogspot.com
 www.dlbia2music.com
 www.dlcdnamaxphotocollage.adx1.com
 www.dlcdnzc-minami.adx1.com
@@ -97949,6 +97998,7 @@ www.dnps.com
 www.dnrewards18.dnset.com
 www.dns1.adx1.com
 www.dns2.adx1.com
+www.dns3.cn.adx1.com
 www.dns-analytics.com
 www.dnsdelegation.io
 www.dnssecpostlogin03host.dnset.com
@@ -98603,7 +98653,6 @@ www.efreedom.net
 www.e-freesms.net
 www.efza.net
 www.eg1n7.adx1.com
-www.egaepah13.blogspot.com
 www.egalitaire.com.pl
 www.egamandala0031.000webhostapp.com
 www.egamingbets.com
@@ -99144,6 +99193,7 @@ www.events.clickz.com
 www.events.dynamicyield.com
 www.eventsbapeeget.dnset.com
 www.eventseason7-pubg.dnset.com
+www.event-spacex.com
 www.eventspin.dnset.com
 www.eventspubg3rd.dnset.com
 www.events-pubgfree.dnset.com
@@ -100987,6 +101037,7 @@ www.gotwebsite1.com
 www.gounclaime.info
 www.gourdmobi.com
 www.gov1.siteintercept.qualtrics.com
+www.gov.adx1.com
 www.governance-site0777820.000webhostapp.com
 www.govfilingsonline.org
 www.govt-job.info
@@ -101261,7 +101312,6 @@ www.gunggo.com
 www.gunnersgaming.com
 www.gunsandmore.info
 www.guoshipartners.com
-www.gurucheats.com
 www.gurudesign.info
 www.gusinje-foundation.org
 www.guter-punkt.info
@@ -101549,6 +101599,7 @@ www.hertzsales.com
 www.herzinfarktvorbeugung.info
 www.herzkrankheit.info
 www.herzspezialist.info
+www.hessdns3.adx1.com
 www.hessperss.com
 www.heston.leadpages.co
 www.heti-naplo.com
@@ -101770,6 +101821,7 @@ www.hooqy.com
 www.hoota.net
 www.hopemobi.net
 www.hopic.net
+www.hopster.com
 www.hoptheshop.com
 www.hordnes.info
 www.horizononefcu.org
@@ -102820,7 +102872,6 @@ www.jav-1.com
 www.jav2lib.com
 www.jav4me.club
 www.jav4share.net
-www.jav4uload.blogspot.com
 www.jav4you.club
 www.jav4you.online
 www.jav4you.org
@@ -102859,7 +102910,6 @@ www.javetc.com
 www.javeth.com
 www.jav-fan.com
 www.javfever.com
-www.javfile4u.blogspot.com
 www.javfiles.com
 www.javfilm.cf
 www.javfilm.ga
@@ -102867,11 +102917,11 @@ www.javfinder.net
 www.javfor.info
 www.javforever.com
 www.jav-free.net
-www.javgate.blogspot.com
 www.jav-go.com
 www.jav-group.com
 www.javhard.net
 www.javhunt.com
+www.javidoltop.blogspot.com
 www.javiev.com
 www.javiews.com
 www.javjapanese.com
@@ -103330,7 +103380,6 @@ www.kevinvalleyproperty.000webhostapp.com
 www.key.innovation.abtasty.com
 www.keybinary.com
 www.keygen.us
-www.keygengurus.com
 www.keylogbenjamin.000webhostapp.com
 www.keyofhealth.com
 www.keyportschools.org
@@ -103788,6 +103837,7 @@ www.legfrissebb.info
 www.leggingarmy.postaffiliatepro.com
 www.leginsy.org
 www.legionbeats.clickfunnels.com
+www.legionpost75.org
 www.legislatives.info
 www.legjava.com
 www.legjava.pro
@@ -104166,6 +104216,7 @@ www.longhairyo.com
 www.longislandrealestate.leadpages.co
 www.longrich.info
 www.longtraffic.com
+www.look4lib.com
 www.lookbookhq.com
 www.lookbox.info
 www.lookfanstastic.com
@@ -105363,6 +105414,7 @@ www.monkeyminer.net
 www.monkeyradio.org
 www.monliveshow.com
 www.monmetier.net
+www.monnand.linuxsky.org
 www.monocopicturesusa.com
 www.monotel.xyz
 www.monstersat.info
@@ -105422,6 +105474,7 @@ www.movieblaze.com
 www.moviedollars.com
 www.moviedownloader.net
 www.movieeater.info
+www.movieiso.blogspot.com
 www.moviemkv.info
 www.movies25.com
 www.movies.data.adobedc.net
@@ -105779,6 +105832,7 @@ www.mywebsearch.net
 www.my-wifi-ext.net
 www.my-work.totalh.net
 www.myworkplace.org
+www.mywts01.adx1.com
 www.myxerfreeringtones.com
 www.myxmovies.net
 www.myzou.org
@@ -108663,6 +108717,7 @@ www.registrycleanerforvista.com
 www.registrycleanersreviewed.com
 www.registrycleanertechnology.com
 www.registrycleanertop.com
+www.registry-clean-up.net
 www.registrydefender.com
 www.registryfix.com
 www.registrygenius.com
@@ -109001,7 +109056,6 @@ www.root.adx1.com
 www.rootandrevel.leadpages.co
 www.rootbuzz.com
 www.rootsandshoots.info
-www.root--servers.org
 www.rooversadvocatuur.nl
 www.roq.ad
 www.rosa-rosa.com
@@ -109785,6 +109839,7 @@ www.sexydoll.info
 www.sexyfreescreensavers.com
 www.sexyinyourcity.com
 www.sexynat.com
+www.sexyoilwrestling.com
 www.sexyrank.org
 www.sexy-screen-savers.com
 www.sexyy.org
@@ -109934,6 +109989,7 @@ www.shotinthehead.com
 www.shotkam.leadpages.co
 www.shoutmeloud.leadpages.co
 www.shouzhuan126.co.domain.name
+www.showbehind.com
 www.showcasebanner0rtb.adx1.com
 www.showcasebanner.rtb.adx1.com
 www.showcaserealestate.net
@@ -111343,6 +111399,7 @@ www.tamilvideonews.info
 www.tampahousewife.com
 www.tamp-mail.org
 www.tamprc.com
+www.t-analytics.com
 www.tancoa.info
 www.tandom.org
 www.tanger.com.br
@@ -111415,6 +111472,7 @@ www.t--corp.com
 www.tcpalm.localiq.com
 www.td583.com
 www.tdms.saglik.gov.tr
+www.tdstats.com
 www.teachered.neyture.info
 www.teachingmadepractical.leadpages.co
 www.teachmapnwea.org
@@ -112475,6 +112533,7 @@ www.tucristo.smartexpo.info
 www.tudasfaja.com
 www.tudnivalok.com
 www.tudnodkell.info
+www.tudsxyhpn.com
 www.tugae2.com
 www.tugaflix.info
 www.tuigang1999.com
@@ -113341,7 +113400,6 @@ www.voicemail.co.il
 www.voip.recs.shareaholic.com
 www.voipcheapcom.com
 www.vokr-gtavc.ic.cz
-www.volantix.com
 www.volgatermolazer.ru
 www.volleyball-doppeldorf.de
 www.voltairnet.org
@@ -114525,6 +114583,7 @@ www.wwwyoutubr.com
 www.wwwyouyube.com
 www.wwwzoohunger.com
 www.wwznjjvkfqnyvy.com
+www.wxbrdppfpr.com
 www.wxyd.info
 www.wycieczkihurghada.pl
 www.wydhamrewards.com
@@ -116996,6 +117055,7 @@ xbabe.webcam.net
 xbadmin.adscience.nl
 xbadn08g.emltrk.com
 xball.adsbtrack.com
+xbanalytics.sandbox.wbinsights.com
 xbanking.uk
 xbasfbno.info
 xbattlecup.com
@@ -119653,7 +119713,6 @@ xrpgive.info
 xrpgive.net
 xrp-giveaway.club
 xrpgiveaways.com
-xrp-info.com
 xrpjuly.blogspot.com
 xrp-promo.club
 xrp-promo.org
@@ -121889,6 +121948,7 @@ yext.com
 yextbook.yext.com
 yextbookanswers.yext.com
 yext-pixel.com
+yexttags.yext.com
 yexvebhb.emltrk.com
 yeyddbqhanc.000webhostapp.com
 yeyian.onesignal.com
@@ -122914,6 +122974,7 @@ youssef123-12.000webhostapp.com
 youssef.byethost7.com
 youstechnologies.clickfunnels.com
 youstinlive8361.000webhostapp.com
+youstock.commander1.com
 yousweeps.net
 yout.ube.gr.com
 youtaccountlocked73.servebeer.com
@@ -128088,6 +128149,7 @@ zoncligura.com
 zoncu.ch
 zonderzorgen.000webhostapp.com
 zone1.boldcigate.nanorep.com
+zone5.adpopcon.com
 zone.go.pl
 zone-abgbug18.000webhostapp.com
 zonec.iad3.lkqd.net
