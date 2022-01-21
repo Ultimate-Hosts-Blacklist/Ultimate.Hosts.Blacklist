@@ -1,0 +1,50 @@
+name: UHB Deployment Workflow
+on:
+  push:
+    branches:
+      - "master"
+
+env:
+  GIT_NAME: "${{ secrets.GIT_BOT_NAME }}"
+  GIT_EMAIL: "${{ secrets.GIT_BOT_EMAIL }}"
+  GITHUB_TOKEN: "${{ secrets.BOT_REPO_PAT }}"
+
+jobs:
+  single:
+    name: Run the deployment launcher
+    runs-on: "${{ matrix.os }}"
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python_version:
+          - "3.9.1"
+        os:
+          - ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        name: Clone repository
+        with:
+          token: "${{ secrets.BOT_REPO_PAT }}"
+
+      - name: Set up Python ${{ matrix.python_version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python_version }}
+
+      - name: Install dependencies
+        run: |
+          pip install ultimate-hosts-blacklist-deployment-launcher
+
+      - name: Get PyFunceble version
+        run: |
+          PyFunceble --version
+
+      - name: Get Launcher version
+        run: |
+          ultimate-hosts-blacklist-deployment-launcher --version
+
+      - name: Run Launcher
+        run: |
+          ultimate-hosts-blacklist-deployment-launcher

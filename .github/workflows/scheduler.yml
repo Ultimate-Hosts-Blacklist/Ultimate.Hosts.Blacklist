@@ -1,0 +1,42 @@
+name: UHB Deployment Workflow Scheduler
+on:
+  schedule:
+    - cron: "50 18 * * *"
+
+env:
+  GIT_NAME: "${{ secrets.GIT_BOT_NAME }}"
+  GIT_EMAIL: "${{ secrets.GIT_BOT_EMAIL }}"
+  GITHUB_TOKEN: "${{ secrets.BOT_REPO_PAT }}"
+
+jobs:
+  trigger:
+    name: Trigger action
+    runs-on: "${{ matrix.os }}"
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python_version:
+          - "3.9.1"
+        os:
+          - ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        name: Clone repository
+        with:
+          token: "${{ secrets.BOT_REPO_PAT }}"
+
+      - name: Create local change
+        run: |
+          date +%s > "${{ github.workspace }}/.trigger"
+      - name: Commit changes
+        run: |
+          git config --local user.email "$GIT_EMAIL"
+          git config --local user.name "$GIT_NAME"
+          git commit -m "[Ultimate Hosts Blacklist][Deployment Scheduler]" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.BOT_REPO_PAT }}
+          branch: ${{ github.ref }}
