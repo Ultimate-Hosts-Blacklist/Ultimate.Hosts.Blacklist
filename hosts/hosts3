@@ -1,30 +1,3 @@
-0.0.0.0 stg-embed.playbuzz.com
-0.0.0.0 stgeorge.122.2o7.net
-0.0.0.0 stgeorge.122.207.net
-0.0.0.0 stgeorge.com.au.ssl.sc.omtrdc.net
-0.0.0.0 stgeorge.demdex.net
-0.0.0.0 stgeorgegazette.com
-0.0.0.0 stgeorgia.co.in
-0.0.0.0 stg-fancy-chicken.cell.us.nr-data.net
-0.0.0.0 stg-fast-laptop.cell.us.nr-data.net
-0.0.0.0 stg-fdz.flashtalking.com
-0.0.0.0 stg-fe-nsc1-ext.stg.fwmrm.net
-0.0.0.0 stg-flat-scheme.cell.us.nr-data.net
-0.0.0.0 stg-frugal-watch.cell.us.nr-data.net
-0.0.0.0 stg-gateway.foresee.com
-0.0.0.0 stg-gateway-elb.foresee.com
-0.0.0.0 stg-glossy-wait.cell.us.nr-data.net
-0.0.0.0 stg-grpc-proxy-test.grpc.newrelic.com
-0.0.0.0 stggslb1.fwmrm.net
-0.0.0.0 stg-harsh-mine.cell.us.nr-data.net
-0.0.0.0 stghls.v.fwmrm.net
-0.0.0.0 stg-hot-dog.cell.us.nr-data.net
-0.0.0.0 stg-huge-sugar.cell.us.nr-data.net
-0.0.0.0 stg-ideal-coach.cell.us.nr-data.net
-0.0.0.0 stg-imaginary-error.cell.us.nr-data.net
-0.0.0.0 stg-internal-continuum.braze.com
-0.0.0.0 stg-itchy-salt.cell.us.nr-data.net
-0.0.0.0 stg-jira.tresensa.com
 0.0.0.0 stg-joint-stay.cell.us.nr-data.net
 0.0.0.0 stg-k4.macromill.com
 0.0.0.0 stg-k5.macromill.com
@@ -1570,7 +1543,6 @@
 0.0.0.0 studio.teads.tv
 0.0.0.0 studio.viewbix.com
 0.0.0.0 studio.webcam.net
-0.0.0.0 studio.whisk.com
 0.0.0.0 studio.yieldbird.com
 0.0.0.0 studioabdi.com
 0.0.0.0 studioaf.piwik.pro
@@ -8497,7 +8469,6 @@
 0.0.0.0 taptes.refersion.com
 0.0.0.0 taptica.adspirit.net
 0.0.0.0 taptica.com
-0.0.0.0 taptyvexy.pro
 0.0.0.0 tapu.museumrotterdam.info
 0.0.0.0 tapuz.onesignal.com
 0.0.0.0 tapxchange.com
@@ -9471,7 +9442,6 @@
 0.0.0.0 tcp4.me
 0.0.0.0 tcp.celtra.com
 0.0.0.0 tcp.demdex.net
-0.0.0.0 tcp.hotels-in-israel.com
 0.0.0.0 tcp.quantummetric.com
 0.0.0.0 tcp.secure.adnxs.com
 0.0.0.0 tcp.tt.omtrdc.net
@@ -11686,7 +11656,6 @@
 0.0.0.0 tesco.co.uk.time-of-miracles.com
 0.0.0.0 tesco.com.sc.omtrdc.net
 0.0.0.0 tesco.com.ssl.sc.omtrdc.net
-0.0.0.0 tesco.list-integration.whisk.com
 0.0.0.0 tesco.saas.appdynamics.com
 0.0.0.0 tesco.slgnt.eu
 0.0.0.0 tesco.slgnt.eu.cdn.cloudflare.net
@@ -12490,6 +12459,7 @@
 0.0.0.0 test.schostereye.org
 0.0.0.0 test.scorecardresearch.com
 0.0.0.0 test.scvapi.eu.acxiom.com
+0.0.0.0 test.sdk.iad-03.braze.com
 0.0.0.0 test.seedtag.com
 0.0.0.0 test.sele.co
 0.0.0.0 test.selectablemedia.com
@@ -13091,7 +13061,6 @@
 0.0.0.0 test-k8s-frankfurt.aweber.com
 0.0.0.0 testkaliart.000webhostapp.com
 0.0.0.0 testkb.silverpop.com
-0.0.0.0 testkitchen.whisk.com
 0.0.0.0 testkitconference.com
 0.0.0.0 test-knowledgebase.decibelinsight.com
 0.0.0.0 testkricha.onthe.io
@@ -13246,7 +13215,6 @@
 0.0.0.0 test-rare-quill.cell.us.nr-data.net
 0.0.0.0 test-realtimanalytics.yext.com
 0.0.0.0 test-realtimeanalytics.yext.com
-0.0.0.0 test-rmb.adnami.io
 0.0.0.0 testrobertdone.webcindario.com
 0.0.0.0 test-routing.logrocket.io
 0.0.0.0 test-rtb.videoplaza.tv
@@ -13511,7 +13479,6 @@
 0.0.0.0 tex-sync.rockyou.net
 0.0.0.0 text1.klick.vn
 0.0.0.0 text.foreseeresults.com
-0.0.0.0 text.whisk.com
 0.0.0.0 texta.firstpromoter.com
 0.0.0.0 textad.eroticmatch.com
 0.0.0.0 textad.manplay.com
@@ -17872,6 +17839,7 @@
 0.0.0.0 timeseg.modules.jumptime.com
 0.0.0.0 timeseries-aggregate.druid.insights.video.a2z.com
 0.0.0.0 timeseries-sessions.druid.insights.video.a2z.com
+0.0.0.0 timeseries-sessions-cmh.druid.insights.video.a2z.com
 0.0.0.0 timeshare.clickfunnels.com
 0.0.0.0 timeshareforum.co.uk
 0.0.0.0 timeshareresortrelief.com
@@ -18762,7 +18730,6 @@
 0.0.0.0 tmg.slgnt.eu.cdn.cloudflare.net
 0.0.0.0 tmgdigital.blueconic.net
 0.0.0.0 tmglobal.g2afse.com
-0.0.0.0 tmgmedia.engine.adglare.net
 0.0.0.0 tmgnl1.solution.weborama.fr
 0.0.0.0 tmgpay.eu
 0.0.0.0 tmgr.ccmbg.com
@@ -23683,7 +23650,6 @@
 0.0.0.0 translate.publicidees.com
 0.0.0.0 translate.statcounter.com
 0.0.0.0 translate.translategoogle.com
-0.0.0.0 translate.whisk.com
 0.0.0.0 translatedubai.ae
 0.0.0.0 translategoogle.com
 0.0.0.0 translatemedia.idio.co
@@ -25536,7 +25502,6 @@
 0.0.0.0 try.treasuredata.com
 0.0.0.0 try.unbounce.com
 0.0.0.0 try.unbounce.com.pathful.com
-0.0.0.0 try.whisk.com
 0.0.0.0 try.yoc.com
 0.0.0.0 tryahu.com
 0.0.0.0 tryamatr-blogs.onesignal.com
@@ -35610,6 +35575,7 @@
 0.0.0.0 unifi.tenjin.com
 0.0.0.0 unif-id.ssp.inmobi.com
 0.0.0.0 unified.adsafeprotected.com
+0.0.0.0 unified-api2.adsafeprotected.com
 0.0.0.0 unified-api.adsafeprotected.com
 0.0.0.0 unifiedbidding.ad.smaato.net
 0.0.0.0 unified-cdn.adsafeprotected.com
@@ -38758,6 +38724,7 @@
 0.0.0.0 us-east-1.dmp-api.ads.linkedin.com
 0.0.0.0 us-east-1.dmp-api-dev.ads.linkedin.com
 0.0.0.0 us-east-1.ecs.mb.moatads.com
+0.0.0.0 us-east-1.elb.amazonaws.coma-us-wdc.netmng.com
 0.0.0.0 us-east-1.email.ads.linkedin.com
 0.0.0.0 us-east-1.event.prod.bidr.io
 0.0.0.0 us-east-1.event-canary.prod.bidr.io
@@ -38804,6 +38771,7 @@
 0.0.0.0 us-east-1.sandbox.np.k8s.amobee.com
 0.0.0.0 us-east-1.sandbox-data-sci.np.k8s.amobee.com
 0.0.0.0 us-east-1.sandbox-pilot-light.np.k8s.amobee.com
+0.0.0.0 us-east-1.sauron.beta.insights.video.a2z.com
 0.0.0.0 us-east1.serve.elixmedia.com
 0.0.0.0 us-east1.serve.enatimedia.com
 0.0.0.0 us-east-1.staging.np.k8s.amobee.com
@@ -38846,8 +38814,11 @@
 0.0.0.0 us-east2.admanmedia.com
 0.0.0.0 us-east-2.aws.otlp.nr-data.net
 0.0.0.0 us-east-2.cornetc.alpha.sauron.insights.video.a2z.com
+0.0.0.0 us-east-2.cornetc.sauron.alpha.insights.video.a2z.com
 0.0.0.0 us-east-2.gamma.pr.analytics.console.aws.a2z.com
 0.0.0.0 us-east-2.prod.pr.analytics.console.aws.a2z.com
+0.0.0.0 us-east-2.sauron.beta.insights.video.a2z.com
+0.0.0.0 us-east-2.sauron-provider.alpha.insights.video.a2z.com
 0.0.0.0 us-east-2.target.aws.amazon.com
 0.0.0.0 us-east-2.tracking.emerse.com
 0.0.0.0 useast2clb.geoedge.be
@@ -40300,7 +40271,6 @@
 0.0.0.0 uxorial-mixes.000webhostapp.com
 0.0.0.0 uxozcvs.hd10.com
 0.0.0.0 uxpn.doma2.info
-0.0.0.0 ux-policy.whisk.com
 0.0.0.0 ux-services.rubiconproject.com
 0.0.0.0 ux-services-dev.rubiconproject.com
 0.0.0.0 ux-services-qa.rubiconproject.com
@@ -54243,7 +54213,6 @@
 0.0.0.0 webinars.salesloft.com
 0.0.0.0 webinars.segment.com
 0.0.0.0 webinars.urbanairship.com
-0.0.0.0 webinars.whisk.com
 0.0.0.0 web-index.jrc.org
 0.0.0.0 web-index.keen.io
 0.0.0.0 webinfluencer.idrove.it
@@ -54864,6 +54833,7 @@
 0.0.0.0 webserviceaward.com
 0.0.0.0 webservice-bby-gemini.exacttarget.com
 0.0.0.0 webservice-bestbuy.exacttarget.com
+0.0.0.0 webservice-cdw.s4.exacttarget.com
 0.0.0.0 webservice-csg.exacttarget.com
 0.0.0.0 webservice-devedition.s4.exacttarget.com
 0.0.0.0 webservice-kohls.s6.exacttarget.com
@@ -54993,6 +54963,7 @@
 0.0.0.0 websiteslava.000webhostapp.com
 0.0.0.0 websitesmadeeasy.tv
 0.0.0.0 websitessssdess.000webhostapp.com
+0.0.0.0 website-test.instabug.com
 0.0.0.0 website-test.yoc.com
 0.0.0.0 website-tokens.000webhostapp.com
 0.0.0.0 websiteunblocker.us
@@ -55684,7 +55655,6 @@
 0.0.0.0 wells-onlinesecure.dnset.com
 0.0.0.0 wellspringacademy.org
 0.0.0.0 wellspringgardens.org
-0.0.0.0 wellspringsearchllc.marketingautomation.services
 0.0.0.0 wellsprueba.000webhostapp.com
 0.0.0.0 wellssed.000webhostapp.com
 0.0.0.0 wellssfargo-privacy-security-upgrade.com
@@ -56705,12 +56675,10 @@
 0.0.0.0 whirlpoolportalusprod.112.2o7.net
 0.0.0.0 whirlpoolv2.ecorebates.com
 0.0.0.0 whirlwealth.com
-0.0.0.0 whisk.com
 0.0.0.0 whiskey.dbmvideos.com
 0.0.0.0 whiskeyhoard.com
 0.0.0.0 whiskeykantine.com
 0.0.0.0 whiskeywealth.clickfunnels.com
-0.0.0.0 whiskimages.whisk.com
 0.0.0.0 whiskyfan.onesignal.com
 0.0.0.0 whiskyloot.refersion.com
 0.0.0.0 whiskyqueue.com
@@ -57144,7 +57112,6 @@
 0.0.0.0 widget.vietnamnetad.vn
 0.0.0.0 widget.viralize.com
 0.0.0.0 widget.vizury.com
-0.0.0.0 widget.whisk.com
 0.0.0.0 widget-api-retail.convrse.media
 0.0.0.0 widget-box.esplinks.appsflyer.com
 0.0.0.0 widgetbucks.com
@@ -60041,6 +60008,7 @@
 0.0.0.0 wpcms.kwanzoo.com
 0.0.0.0 wp-content.infamylists.com
 0.0.0.0 wp-creative.adcolony.com
+0.0.0.0 wp-creative-stage.adcolony.com
 0.0.0.0 wpdadmin22.000webhostapp.com
 0.0.0.0 wpdare.000webhostapp.com
 0.0.0.0 wpdbme4y.emltrk.com
@@ -61286,6 +61254,7 @@
 0.0.0.0 ws-de-04.rocks.io
 0.0.0.0 ws-de-05.rocks.io
 0.0.0.0 ws-dev.addthis.com
+0.0.0.0 ws-devedition.s7.exacttarget.com
 0.0.0.0 wsdgninbaydewsebayisapidllsigninusintrslpuseridcopartneridswseb.aba.cx
 0.0.0.0 wsdgninbaydewsebayisapidllsigninusintrslwuseridcopartneridswseb.aba.cx
 0.0.0.0 wsdk-files.webengage.com
@@ -62636,7 +62605,6 @@
 0.0.0.0 ww1.clockx.net
 0.0.0.0 ww1.closertothedirt.com
 0.0.0.0 ww1.cloudacess.net
-0.0.0.0 ww1.cloud-mining.info
 0.0.0.0 ww1.cloudsecuritybenefits.info
 0.0.0.0 ww1.c-loverz.com
 0.0.0.0 ww1.clrr.yapage.info
@@ -62746,6 +62714,7 @@
 0.0.0.0 ww1.cs61.org
 0.0.0.0 ww1.csd29.org
 0.0.0.0 ww1.csgolotto.info
+0.0.0.0 ww1.csi.cylab.org
 0.0.0.0 ww1.csociete.com
 0.0.0.0 ww1.csplus.info
 0.0.0.0 ww1.ctdol.org
@@ -62764,6 +62733,7 @@
 0.0.0.0 ww1.cwebh.org
 0.0.0.0 ww1.cyclingcloseouts.com
 0.0.0.0 ww1.cyfvybxz.coolinc.info
+0.0.0.0 ww1.cylab.org
 0.0.0.0 ww1.czmms.info
 0.0.0.0 ww1.d6f.org
 0.0.0.0 ww1.d.takdid.com
@@ -62931,6 +62901,7 @@
 0.0.0.0 ww1.downloader.info
 0.0.0.0 ww1.download-it.org
 0.0.0.0 ww1.downloadme.org
+0.0.0.0 ww1.downloadorama.com
 0.0.0.0 ww1.downloadpdf42937.work-out.org
 0.0.0.0 ww1.downxvideo.info
 0.0.0.0 ww1.dporn.info
@@ -64870,7 +64841,6 @@
 0.0.0.0 ww1.pokemon-map.com
 0.0.0.0 ww1.pokemonnindigo.com
 0.0.0.0 ww1.pokemontm.com
-0.0.0.0 ww1.poker88asia.com
 0.0.0.0 ww1.policecanada.org
 0.0.0.0 ww1.polischdating.com
 0.0.0.0 ww1.polishpsychologist.org
@@ -65635,7 +65605,6 @@
 0.0.0.0 ww1.theamaturetube.com
 0.0.0.0 ww1.theaudiobookbay.org
 0.0.0.0 ww1.theaussiehotel.com
-0.0.0.0 ww1.thebdc.org
 0.0.0.0 ww1.thebestcloudcomputing.info
 0.0.0.0 ww1.thebestespressomachines.org
 0.0.0.0 ww1.thebiggestlosermealplan.com
@@ -66001,6 +65970,7 @@
 0.0.0.0 ww1.vitrualbox.org
 0.0.0.0 ww1.vivats.org
 0.0.0.0 ww1.vivekanandamahavidyalaya.org
+0.0.0.0 ww1.vlcstreamer.com
 0.0.0.0 ww1.vodmo.org
 0.0.0.0 ww1.vogtlandsuspension.com
 0.0.0.0 ww1.voipcheapcom.com
@@ -68220,6 +68190,7 @@
 0.0.0.0 ww11.cwebh.org
 0.0.0.0 ww11.cybeewebsms.com
 0.0.0.0 ww11.cyclingcloseouts.com
+0.0.0.0 ww11.cylab.org
 0.0.0.0 ww11.daddysonfack.com
 0.0.0.0 ww11.dagfart.com
 0.0.0.0 ww11.dagupanvillagehotel.com
@@ -69786,7 +69757,6 @@
 0.0.0.0 ww16.c.switchadhub.com
 0.0.0.0 ww16.cabine.instafore.com
 0.0.0.0 ww16.calendari2012.com
-0.0.0.0 ww16.campdelariviere.info
 0.0.0.0 ww16.canyourpet.net
 0.0.0.0 ww16.caoliu98.info
 0.0.0.0 ww16.caouu.info
@@ -69973,6 +69943,7 @@
 0.0.0.0 ww16.evergreenseniorliving.info
 0.0.0.0 ww16.evgrid.info
 0.0.0.0 ww16.evilangelvideos.com
+0.0.0.0 ww16.evmaps.info
 0.0.0.0 ww16.ewww.lspeed.info
 0.0.0.0 ww16.examroom.info
 0.0.0.0 ww16.exathum.com
@@ -71543,6 +71514,7 @@
 0.0.0.0 ww17.cvhlcentral.com
 0.0.0.0 ww17.cwebh.org
 0.0.0.0 ww17.cyclingcloseouts.com
+0.0.0.0 ww17.cylab.org
 0.0.0.0 ww17.czmms.info
 0.0.0.0 ww17.d.switchadhub.com
 0.0.0.0 ww17.dallasaa.org
@@ -71688,7 +71660,6 @@
 0.0.0.0 ww17.enserve.adplxmd.com
 0.0.0.0 ww17.epdk.org
 0.0.0.0 ww17.epfindia.org
-0.0.0.0 ww17.epilator.info
 0.0.0.0 ww17.epsthailand.org
 0.0.0.0 ww17.eres.lndproxy.org
 0.0.0.0 ww17.eshopcards.org
@@ -72742,7 +72713,6 @@
 0.0.0.0 ww17.thaitation.com
 0.0.0.0 ww17.thambiluvil.info
 0.0.0.0 ww17.theaguilars.bizbuildermastery.info
-0.0.0.0 ww17.thebdc.org
 0.0.0.0 ww17.thebestamishcookbooks.com
 0.0.0.0 ww17.thebunkerfresno.com
 0.0.0.0 ww17.thecorecu.org
@@ -73894,7 +73864,6 @@
 0.0.0.0 ww25.camersenat.info
 0.0.0.0 ww25.campbellscu.org
 0.0.0.0 ww25.campbellteam.org
-0.0.0.0 ww25.campdelariviere.info
 0.0.0.0 ww25.campings-extremadura.com
 0.0.0.0 ww25.canalimoveisbahia.com
 0.0.0.0 ww25.can-ambrp.com
@@ -74200,6 +74169,7 @@
 0.0.0.0 ww25.cs.myairnigerian.com
 0.0.0.0 ww25.csd29.org
 0.0.0.0 ww25.csgolotto.info
+0.0.0.0 ww25.csi.cylab.org
 0.0.0.0 ww25.csn.camcer.org
 0.0.0.0 ww25.csociete.com
 0.0.0.0 ww25.ctdol.org
@@ -74226,6 +74196,7 @@
 0.0.0.0 ww25.cybeewebsms.com
 0.0.0.0 ww25.cybozu.coscousa.com
 0.0.0.0 ww25.cyclingcloseouts.com
+0.0.0.0 ww25.cylab.org
 0.0.0.0 ww25.cyndimovies.com
 0.0.0.0 ww25.cz.plus7.info
 0.0.0.0 ww25.cz-hairise.careblog.info
@@ -74956,6 +74927,7 @@
 0.0.0.0 ww25.gavsim.net
 0.0.0.0 ww25.gayasianmas.com
 0.0.0.0 ww25.gayhoola.com
+0.0.0.0 ww25.gbinsta.info
 0.0.0.0 ww25.gbnutte.com
 0.0.0.0 ww25.gcfaridabad.org
 0.0.0.0 ww25.gcpdirect.com
@@ -76406,6 +76378,7 @@
 0.0.0.0 ww25.maryjanefarms.org
 0.0.0.0 ww25.marzaniprogetti.com
 0.0.0.0 ww25.masdejon.com
+0.0.0.0 ww25.masfamiliasenaccion.com
 0.0.0.0 ww25.mashface.com
 0.0.0.0 ww25.mashpeepubliclibrary.beanstock.org
 0.0.0.0 ww25.massagebykathy.info
@@ -76614,7 +76587,6 @@
 0.0.0.0 ww25.murselbarbershop.googlebussines.com
 0.0.0.0 ww25.musakachat.com
 0.0.0.0 ww25.music.ipboard.info
-0.0.0.0 ww25.musicalmente.info
 0.0.0.0 ww25.musicalove.info
 0.0.0.0 ww25.musicasshow.com
 0.0.0.0 ww25.musicdumpere.com
@@ -79511,6 +79483,7 @@
 0.0.0.0 ww31.mailsoufun.com
 0.0.0.0 ww31.maison-diabete.info
 0.0.0.0 ww31.mannybooks.net
+0.0.0.0 ww31.masfamiliasenaccion.com
 0.0.0.0 ww31.mbhsfcu.org
 0.0.0.0 ww31.meetthin.info
 0.0.0.0 ww31.mhcet.org
@@ -80903,7 +80876,6 @@
 0.0.0.0 ww38.clockx.net
 0.0.0.0 ww38.closertothedirt.com
 0.0.0.0 ww38.cloud9tv.info
-0.0.0.0 ww38.cloud-mining.info
 0.0.0.0 ww38.c-loverz.com
 0.0.0.0 ww38.clubcarslon.com
 0.0.0.0 ww38.clubcrystalgunns.com
@@ -83897,6 +83869,8 @@
 0.0.0.0 ww58-eqx.smartadserver.com
 0.0.0.0 ww58-itx4.smartadserver.com
 0.0.0.0 ww58-itx5.smartadserver.com
+0.0.0.0 ww62.adhamhotel.net
+0.0.0.0 ww62.bitbicket.org
 0.0.0.0 ww62.cc.domain.name
 0.0.0.0 ww62.deled.info
 0.0.0.0 ww62.flydenver.org
@@ -83912,6 +83886,7 @@
 0.0.0.0 ww62.smartadserver.com
 0.0.0.0 ww62.torrentsave.info
 0.0.0.0 ww62.webcamvideos.org
+0.0.0.0 ww62.world-life.info
 0.0.0.0 ww62.ww62.forum.forumwarez.info
 0.0.0.0 ww62.ww62.forumwarez.info
 0.0.0.0 ww62.ww62.ww2.www.forumwarez.info
@@ -83997,6 +83972,7 @@
 0.0.0.0 ww62.ww92.zi1.zeroredirect1.com
 0.0.0.0 ww62.www.forumwarez.info
 0.0.0.0 ww62.www.pizzahut.com.bn.domain.name
+0.0.0.0 ww62.xfzona.info
 0.0.0.0 ww62.zd1.zeroredirect1.com
 0.0.0.0 ww62.ze1.zeroredirect1.com
 0.0.0.0 ww62.zn1.zeroredirect1.com
@@ -84005,7 +83981,6 @@
 0.0.0.0 ww82.gyteli.info
 0.0.0.0 ww82.irwarez.info
 0.0.0.0 ww82.linkojager.org
-0.0.0.0 ww82.msearches.com
 0.0.0.0 ww82.muhammadnabi.info
 0.0.0.0 ww82.parrz.com
 0.0.0.0 ww82.torrentsave.info
@@ -87873,6 +87848,7 @@
 0.0.0.0 www.adgroups.net
 0.0.0.0 www.adgrx.com
 0.0.0.0 www.adgtracker.com
+0.0.0.0 www.adhamhotel.net
 0.0.0.0 www.adhd-natural-treatments.com
 0.0.0.0 www.adhearus.com
 0.0.0.0 www.adhelicopter.club
@@ -94336,6 +94312,7 @@
 0.0.0.0 www.cyhase.com
 0.0.0.0 www.cyhners.ero-advertising.com
 0.0.0.0 www.cyklomaster.go.pl
+0.0.0.0 www.cylab.org
 0.0.0.0 www.cyndimovies.com
 0.0.0.0 www.cynthiacopple.leadpages.co
 0.0.0.0 www.cynthiapasquella.leadpages.co
@@ -97010,6 +96987,7 @@
 0.0.0.0 www.ffsrchmgr.com
 0.0.0.0 www.fftexas.com
 0.0.0.0 www.ffxitrack.com
+0.0.0.0 www.ffy4.info
 0.0.0.0 www.fgl.com
 0.0.0.0 www.fg-set-my-cookie.adx1.com
 0.0.0.0 www.fhafearrington.org
@@ -99629,6 +99607,7 @@
 0.0.0.0 www.humorchique.com
 0.0.0.0 www.humoristique.info
 0.0.0.0 www.humororkut.com
+0.0.0.0 www.humorpool.com
 0.0.0.0 www.humortimes.com
 0.0.0.0 www.humphreyimgs.com
 0.0.0.0 www.humraaz.com
@@ -110487,7 +110466,6 @@
 0.0.0.0 www.tapsense.com
 0.0.0.0 www.taptap.offerstrack.net
 0.0.0.0 www.taptica.com
-0.0.0.0 www.taptyvexy.pro
 0.0.0.0 www.target.cm
 0.0.0.0 www.targetctracker.com
 0.0.0.0 www.targeted-banners.com
@@ -113255,7 +113233,6 @@
 0.0.0.0 www.whiirlpool.com
 0.0.0.0 www.whipcrack.org
 0.0.0.0 www.whirads.com
-0.0.0.0 www.whisk.com
 0.0.0.0 www.whitebet.com
 0.0.0.0 www.whitedate.net
 0.0.0.0 www.white-media.info
@@ -120212,6 +120189,7 @@
 0.0.0.0 xtinmta02-73.exacttarget.com
 0.0.0.0 xtinmta03-48.exacttarget.com
 0.0.0.0 xtinmta04-13.exacttarget.com
+0.0.0.0 xtinmta04-14.exacttarget.com
 0.0.0.0 xtinmta06-42.exacttarget.com
 0.0.0.0 xtinmta03-148.exacttarget.com
 0.0.0.0 xtinmta05-166.exacttarget.com
@@ -125633,6 +125611,7 @@
 0.0.0.0 zbw.adsbtrack.com
 0.0.0.0 zbwp6ghm.com
 0.0.0.0 zbx.adup-tech.com
+0.0.0.0 zbx-frontend.adjust.com
 0.0.0.0 zbxnxn.mirtesen.ru
 0.0.0.0 zbxtutorials.org
 0.0.0.0 zbygcpmnpyun.sotreq.net
