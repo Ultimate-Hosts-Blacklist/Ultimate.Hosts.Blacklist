@@ -353,3 +353,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+[⇈ Back to Top](#the-ultimate-hosts-blacklist---largest-unified-hosts-file-in-the-universe)
