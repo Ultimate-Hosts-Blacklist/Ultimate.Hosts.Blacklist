@@ -20,10 +20,10 @@ hosts file.
 
 ---
 
-- Version: **V2.1008.2022.11.06**
-- Total Bad domains in `hosts` file: **636,539**
+- Version: **V2.1010.2022.11.07**
+- Total Bad domains in `hosts` file: **636,556**
 - Total Bad IP in `hosts.deny` file: **139,983**
-- Total Bad domains and IP in `superhosts.deny` file: **776,522**
+- Total Bad domains and IP in `superhosts.deny` file: **776,539**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -88,8 +88,6 @@ follow/subscribe to the
 | IPv4     | `88.198.70.38`          | `88.198.70.39`          |
 | IPv6     | `2a01:4f8:140:5021::38` | `2a01:4f8:140:5021::39` |
 
----
-
 ## RAW FILE SOURCES
 
 The links below will direct you to the raw unzipped versions of the hosts files in this repo. (Files are updated daily)
@@ -104,13 +102,11 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 | domains-dotted-format.list | DnsMasq          | UNIX     | [Download](https://hosts.ubuntu101.co.za/domains-dotted-format.list) |
 | ips.list                   | Any / Pi-Hole    | UNIX     | [Download](https://hosts.ubuntu101.co.za/ips.list)                   |
 
----
-
 ## INSTALLERS, UPDATERS AND UNINSTALLER SCRIPTS
 
 **⚠️⚠️ WE DO NOT RECOMMEND THE USAGE OF THE HOSTS FILE INSIDE A WINDOWS MACHINE! ⚠️⚠️**
 
-**⚠️⚠️ WINDOWS USER ARE RECOMMENDED TO USE THE [DNS SERVER](#dns-server) INSTEAD ⚠️⚠️**
+**⚠️⚠️ WINDOWS USER ARE RECOMMENDED TO USE THE DNS SERVER INSTEAD ⚠️⚠️**
 
 | Linux                                                                                                                                                                | Windows                                                                                                                                             |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -145,7 +141,7 @@ listed domains.
 For example, to drop all requests to certain domains or servers, adding lines
 to your `hosts` file as below will achieve this for you.
 You can create your custom hosts or simply use ours which covers you for
-well over 636,539 bad domains.
+well over 636,556 bad domains.
 
 ```
 # Block Bad Domains and Servers with Hosts File
@@ -226,6 +222,8 @@ modify the `hosts` file.
 
 ---
 
+---
+
 ## CREDITS & THANKS
 
 Our `hosts` file is generated from multiple input sources, collated, sorted for
@@ -235,50 +233,50 @@ The sources of the input data information are as follows.
 
 | Downstream Name | Downstream Link | Upstream Link |
 | --------------- | --------------- | ------------- |
-| 2o7.net | [Link](https://github.com/Ultimate-Hosts-Blacklist/2o7.net) | [Raw Link](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts) |
-| adblock-nocoin-list | [Link](https://github.com/Ultimate-Hosts-Blacklist/adblock-nocoin-list) | [Raw Link](https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt) |
-| Add_Risk | [Link](https://github.com/Ultimate-Hosts-Blacklist/Add_Risk) | [Raw Link](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts) |
-| Add_Spam | [Link](https://github.com/Ultimate-Hosts-Blacklist/Add_Spam) | [Raw Link](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts) |
-| Ads_Disconnect.me | [Link](https://github.com/Ultimate-Hosts-Blacklist/Ads_Disconnect.me) | [Raw Link](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt) |
-| antipopads | [Link](https://github.com/Ultimate-Hosts-Blacklist/antipopads) | [Raw Link](https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts) |
-| anudeepND_blacklist_ad_server | [Link](https://github.com/Ultimate-Hosts-Blacklist/anudeepND_blacklist_ad_server) | [Raw Link](https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt) |
-| Bad_JAV_Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/Bad_JAV_Sites) | Unreachable |
-| BaddBoyzHosts | [Link](https://github.com/Ultimate-Hosts-Blacklist/BaddBoyzHosts) | [Raw Link](https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/domains) |
-| BadIPs.com_KEY | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_KEY) | [Raw Link](https://hosts.ubuntu101.co.za/badips.txt) |
-| BadIPs.com_Level_3 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_3) | [Raw Link](http://www.badips.com/get/list/any/3?age=12) |
-| BadIPs.com_Level_4 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_4) | [Raw Link](http://www.badips.com/get/list/any/4?age=12) |
-| BadIPs.com_Level_5 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5) | [Raw Link](http://www.badips.com/get/list/any/5?age=12) |
-| blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/blacklist) | Unreachable |
-| cameleon_at_sysctl.org | [Link](https://github.com/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org) | [Raw Link](http://sysctl.org/cameleon/hosts) |
-| Cyveillance_Blocks | [Link](https://github.com/Ultimate-Hosts-Blacklist/Cyveillance_Blocks) | Unreachable |
-| firehol_level1 | [Link](https://github.com/Ultimate-Hosts-Blacklist/firehol_level1) | [Raw Link](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset) |
-| hostsVN | [Link](https://github.com/Ultimate-Hosts-Blacklist/hostsVN) | [Raw Link](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts) |
-| justdomains_mirror1.malwaredomains.com | [Link](https://github.com/Ultimate-Hosts-Blacklist/justdomains_mirror1.malwaredomains.com) | [Raw Link](https://raw.githubusercontent.com/smed79/mdlm/master/justdomains.txt) |
-| KADhosts_azet12 | [Link](https://github.com/Ultimate-Hosts-Blacklist/KADhosts_azet12) | [Raw Link](https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt) |
-| lightswitch05_hosts_ads-and-tracking-extended | [Link](https://github.com/Ultimate-Hosts-Blacklist/lightswitch05_hosts_ads-and-tracking-extended) | [Raw Link](https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt) |
-| malc0de.com | [Link](https://github.com/Ultimate-Hosts-Blacklist/malc0de.com) | Unreachable |
-| MalwareDomainList.com | [Link](https://github.com/Ultimate-Hosts-Blacklist/MalwareDomainList.com) | [Raw Link](https://raw.githubusercontent.com/smed79/mdlm/master/hosts.txt) |
-| Michael_Trimms_Hosts | [Link](https://github.com/Ultimate-Hosts-Blacklist/Michael_Trimms_Hosts) | [Raw Link](https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt) |
-| MinimalHostsBlocker | [Link](https://github.com/Ultimate-Hosts-Blacklist/MinimalHostsBlocker) | [Raw Link](https://reddestdream.github.io/Projects/MinimalHosts/etc/MinimalHostsBlocker/minimalhosts) |
-| Mitchell_Krog_Snooping_IPS | [Link](https://github.com/Ultimate-Hosts-Blacklist/Mitchell_Krog_Snooping_IPS) | Unreachable |
-| Phishing.Database | [Link](https://github.com/Ultimate-Hosts-Blacklist/Phishing.Database) | [Raw Link](https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt) |
-| pl-host-file | [Link](https://github.com/Ultimate-Hosts-Blacklist/pl-host-file) | [Raw Link](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt) |
-| quidsup_malicious-sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/quidsup_malicious-sites) | [Raw Link](https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/malware.list) |
-| quidsup_notrack_trackers | [Link](https://github.com/Ultimate-Hosts-Blacklist/quidsup_notrack_trackers) | [Raw Link](https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/trackers.list) |
-| smed79_blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/smed79_blacklist) | [Raw Link](https://raw.githubusercontent.com/smed79/blacklist/master/hosts.txt) |
-| Spam404 | [Link](https://github.com/Ultimate-Hosts-Blacklist/Spam404) | [Raw Link](https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt) |
-| SSH_attackers_probers | [Link](https://github.com/Ultimate-Hosts-Blacklist/SSH_attackers_probers) | Unreachable |
-| Suspicious.Snooping.Sniffing.Hacking.IP.Addresses | [Link](https://github.com/Ultimate-Hosts-Blacklist/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses) | [Raw Link](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list) |
-| The-Big-List-of-Hacked-Malware-Web-Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites) | [Raw Link](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list) |
-| Top-Attacking-IP-Addresses-Against-Wordpress-Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites) | [Raw Link](https://raw.githubusercontent.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/master/wordpress-attacking-ips.txt) |
-| WaLLy3K_Blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist) | [Raw Link](https://v.firebog.net/hosts/static/w3kbl.txt) |
-| Wiggum27_Blockers | [Link](https://github.com/Ultimate-Hosts-Blacklist/Wiggum27_Blockers) | [Raw Link](https://gitlab.com/Wiggum27/blockers/-/raw/master/hosts) |
-| <nolink>www</nolink>.blocklist.de | [Link](https://github.com/Ultimate-Hosts-Blacklist/www.blocklist.de) | [Raw Link](https://lists.blocklist.de/lists/all.txt) |
-| YousList | [Link](https://github.com/Ultimate-Hosts-Blacklist/YousList) | [Raw Link](https://raw.githubusercontent.com/yous/YousList/master/hosts.txt) |
-| yoyo.org_domains | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_domains) | [Raw Link](https://pgl.yoyo.org/as/serverlist.php?hostformat=hosts;showintro=0) |
-| yoyo.org_ips | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_ips) | [Raw Link](https://pgl.yoyo.org/adservers/iplist.php?format=&showintro=0) |
-| ZeroDot1_CoinBlockerLists | [Link](https://github.com/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists) | [Raw Link](https://zerodot1.gitlab.io/CoinBlockerLists/list.txt) |
-| ZeroDot1_CoinBlockerLists_browser | [Link](https://github.com/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_browser) | [Raw Link](https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list_browser.txt) |
+| 2o7.net | [Link](https://github.com/Ultimate-Hosts-Blacklist/2o7.net) | [Link](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts) |
+| adblock-nocoin-list | [Link](https://github.com/Ultimate-Hosts-Blacklist/adblock-nocoin-list) | [Link](https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt) |
+| Add_Risk | [Link](https://github.com/Ultimate-Hosts-Blacklist/Add_Risk) | [Link](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts) |
+| Add_Spam | [Link](https://github.com/Ultimate-Hosts-Blacklist/Add_Spam) | [Link](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts) |
+| Ads_Disconnect.me | [Link](https://github.com/Ultimate-Hosts-Blacklist/Ads_Disconnect.me) | [Link](https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt) |
+| antipopads | [Link](https://github.com/Ultimate-Hosts-Blacklist/antipopads) | [Link](https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts) |
+| anudeepND_blacklist_ad_server | [Link](https://github.com/Ultimate-Hosts-Blacklist/anudeepND_blacklist_ad_server) | [Link](https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt) |
+| Bad_JAV_Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/Bad_JAV_Sites) | [Link]() |
+| BaddBoyzHosts | [Link](https://github.com/Ultimate-Hosts-Blacklist/BaddBoyzHosts) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/domains) |
+| BadIPs.com_KEY | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_KEY) | [Link](https://hosts.ubuntu101.co.za/badips.txt) |
+| BadIPs.com_Level_3 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_3) | [Link](http://www.badips.com/get/list/any/3?age=12) |
+| BadIPs.com_Level_4 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_4) | [Link](http://www.badips.com/get/list/any/4?age=12) |
+| BadIPs.com_Level_5 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5) | [Link](http://www.badips.com/get/list/any/5?age=12) |
+| blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/blacklist) | [Link]() |
+| cameleon_at_sysctl.org | [Link](https://github.com/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org) | [Link](http://sysctl.org/cameleon/hosts) |
+| Cyveillance_Blocks | [Link](https://github.com/Ultimate-Hosts-Blacklist/Cyveillance_Blocks) | [Link]() |
+| firehol_level1 | [Link](https://github.com/Ultimate-Hosts-Blacklist/firehol_level1) | [Link](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset) |
+| hostsVN | [Link](https://github.com/Ultimate-Hosts-Blacklist/hostsVN) | [Link](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts) |
+| justdomains_mirror1.malwaredomains.com | [Link](https://github.com/Ultimate-Hosts-Blacklist/justdomains_mirror1.malwaredomains.com) | [Link](https://raw.githubusercontent.com/smed79/mdlm/master/justdomains.txt) |
+| KADhosts_azet12 | [Link](https://github.com/Ultimate-Hosts-Blacklist/KADhosts_azet12) | [Link](https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt) |
+| lightswitch05_hosts_ads-and-tracking-extended | [Link](https://github.com/Ultimate-Hosts-Blacklist/lightswitch05_hosts_ads-and-tracking-extended) | [Link](https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt) |
+| malc0de.com | [Link](https://github.com/Ultimate-Hosts-Blacklist/malc0de.com) | [Link](http://malc0de.com/bl/IP_Blacklist.txt) |
+| MalwareDomainList.com | [Link](https://github.com/Ultimate-Hosts-Blacklist/MalwareDomainList.com) | [Link](https://raw.githubusercontent.com/smed79/mdlm/master/hosts.txt) |
+| Michael_Trimms_Hosts | [Link](https://github.com/Ultimate-Hosts-Blacklist/Michael_Trimms_Hosts) | [Link](https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt) |
+| MinimalHostsBlocker | [Link](https://github.com/Ultimate-Hosts-Blacklist/MinimalHostsBlocker) | [Link](https://reddestdream.github.io/Projects/MinimalHosts/etc/MinimalHostsBlocker/minimalhosts) |
+| Mitchell_Krog_Snooping_IPS | [Link](https://github.com/Ultimate-Hosts-Blacklist/Mitchell_Krog_Snooping_IPS) | [Link]() |
+| Phishing.Database | [Link](https://github.com/Ultimate-Hosts-Blacklist/Phishing.Database) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt) |
+| pl-host-file | [Link](https://github.com/Ultimate-Hosts-Blacklist/pl-host-file) | [Link](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt) |
+| quidsup_malicious-sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/quidsup_malicious-sites) | [Link](https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/malware.list) |
+| quidsup_notrack_trackers | [Link](https://github.com/Ultimate-Hosts-Blacklist/quidsup_notrack_trackers) | [Link](https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/trackers.list) |
+| smed79_blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/smed79_blacklist) | [Link](https://raw.githubusercontent.com/smed79/blacklist/master/hosts.txt) |
+| Spam404 | [Link](https://github.com/Ultimate-Hosts-Blacklist/Spam404) | [Link](https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt) |
+| SSH_attackers_probers | [Link](https://github.com/Ultimate-Hosts-Blacklist/SSH_attackers_probers) | [Link]() |
+| Suspicious.Snooping.Sniffing.Hacking.IP.Addresses | [Link](https://github.com/Ultimate-Hosts-Blacklist/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list) |
+| The-Big-List-of-Hacked-Malware-Web-Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites) | [Link](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list) |
+| Top-Attacking-IP-Addresses-Against-Wordpress-Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/master/wordpress-attacking-ips.txt) |
+| WaLLy3K_Blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist) | [Link](https://v.firebog.net/hosts/static/w3kbl.txt) |
+| Wiggum27_Blockers | [Link](https://github.com/Ultimate-Hosts-Blacklist/Wiggum27_Blockers) | [Link](https://gitlab.com/Wiggum27/blockers/-/raw/master/hosts) |
+| www.blocklist.de | [Link](https://github.com/Ultimate-Hosts-Blacklist/www.blocklist.de) | [Link](https://lists.blocklist.de/lists/all.txt) |
+| YousList | [Link](https://github.com/Ultimate-Hosts-Blacklist/YousList) | [Link](https://raw.githubusercontent.com/yous/YousList/master/hosts.txt) |
+| yoyo.org_domains | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_domains) | [Link](https://pgl.yoyo.org/as/serverlist.php?hostformat=hosts;showintro=0) |
+| yoyo.org_ips | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_ips) | [Link](https://pgl.yoyo.org/adservers/iplist.php?format=&showintro=0) |
+| ZeroDot1_CoinBlockerLists | [Link](https://github.com/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists) | [Link](https://zerodot1.gitlab.io/CoinBlockerLists/list.txt) |
+| ZeroDot1_CoinBlockerLists_browser | [Link](https://github.com/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_browser) | [Link](https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list_browser.txt) |
 
 ---
 
@@ -291,14 +289,10 @@ The sources of the input data information are as follows.
 - [UHBCRU - Ultimate Hosts Blacklist Central Repo Updater](https://pypi.org/project/ultimate-hosts-blacklist-central-repo-updater/)
   - The tool to update this repository.
 
----
-
 ## AWESOME TOOLS WE USE
 
 - [PyFunceble](https://github.com/funilrys/PyFunceble)
   - The tool to check the availability or syntax of domain, IP or URL.
-
----
 
 ## SOME OTHER AWESOME TOOLS/PROJECTS
 
@@ -359,5 +353,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
----
-[⇈ Back to Top](#the-ultimate-hosts-blacklist---largest-unified-hosts-file-in-the-universe)
