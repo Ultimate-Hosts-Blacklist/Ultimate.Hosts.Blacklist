@@ -20,10 +20,10 @@ hosts file.
 
 ---
 
-- Version: **V2.1012.2022.11.07**
-- Total Bad domains in `hosts` file: **636,556**
+- Version: **V2.1014.2022.11.08**
+- Total Bad domains in `hosts` file: **636,559**
 - Total Bad IP in `hosts.deny` file: **139,983**
-- Total Bad domains and IP in `superhosts.deny` file: **776,539**
+- Total Bad domains and IP in `superhosts.deny` file: **776,542**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -88,6 +88,8 @@ follow/subscribe to the
 | IPv4     | `88.198.70.38`          | `88.198.70.39`          |
 | IPv6     | `2a01:4f8:140:5021::38` | `2a01:4f8:140:5021::39` |
 
+---
+
 ## RAW FILE SOURCES
 
 The links below will direct you to the raw unzipped versions of the hosts files in this repo. (Files are updated daily)
@@ -102,11 +104,13 @@ The links below will direct you to the raw unzipped versions of the hosts files 
 | domains-dotted-format.list | DnsMasq          | UNIX     | [Download](https://hosts.ubuntu101.co.za/domains-dotted-format.list) |
 | ips.list                   | Any / Pi-Hole    | UNIX     | [Download](https://hosts.ubuntu101.co.za/ips.list)                   |
 
+---
+
 ## INSTALLERS, UPDATERS AND UNINSTALLER SCRIPTS
 
-**⚠️⚠️ WE DO NOT RECOMMEND THE USAGE OF THE HOSTS FILE INSIDE A WINDOWS MACHINE! ⚠️⚠️**
+**:warning::warning: WE DO NOT RECOMMEND THE USAGE OF THE HOSTS FILE INSIDE A WINDOWS MACHINE! :warning::warning:**
 
-**⚠️⚠️ WINDOWS USER ARE RECOMMENDED TO USE THE DNS SERVER INSTEAD ⚠️⚠️**
+**:warning::warning: WINDOWS USER ARE RECOMMENDED TO USE THE [DNS SERVER](#dns-server) INSTEAD :warning::warning:**
 
 | Linux                                                                                                                                                                | Windows                                                                                                                                             |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -141,7 +145,7 @@ listed domains.
 For example, to drop all requests to certain domains or servers, adding lines
 to your `hosts` file as below will achieve this for you.
 You can create your custom hosts or simply use ours which covers you for
-well over 636,556 bad domains.
+well over 636,559 bad domains.
 
 ```
 # Block Bad Domains and Servers with Hosts File
@@ -218,9 +222,7 @@ modify the `hosts` file.
 
 **Linux, Mac OS X, iOS, Android**: `/etc/hosts.deny`
 
-**Windows Systems _(NOT RECOMMENDED: PREFER DNS SERVER)_**: `%SystemRoot%\system32\drivers\etc\hosts` **[Try the Windows Installer Batch Script](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat)<br>**
-
----
+**Windows Systems _(NOT RECOMMENDED: PREFER DNS SERVER)_**: `%SystemRoot%\system32\drivers\etc\hosts` **[Try the Windows Installer Batch Script](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/blob/master/windows-install-hosts.bat)**
 
 ---
 
@@ -289,10 +291,14 @@ The sources of the input data information are as follows.
 - [UHBCRU - Ultimate Hosts Blacklist Central Repo Updater](https://pypi.org/project/ultimate-hosts-blacklist-central-repo-updater/)
   - The tool to update this repository.
 
+---
+
 ## AWESOME TOOLS WE USE
 
 - [PyFunceble](https://github.com/funilrys/PyFunceble)
   - The tool to check the availability or syntax of domain, IP or URL.
+
+---
 
 ## SOME OTHER AWESOME TOOLS/PROJECTS
 
@@ -352,4 +358,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+---
+[⇈ Back to Top](#the-ultimate-hosts-blacklist---largest-unified-hosts-file-in-the-universe)
 
