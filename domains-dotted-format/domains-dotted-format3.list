@@ -1,12 +1,3 @@
-.znda3t8vma3vqocaf-aan.siteintercept.qualtrics.com
-.zndamtq5vlzl8a6ot-hsbcdigital.siteintercept.qualtrics.com
-.zndaowjdnf.stream
-.zndbqcvd5yvdbqvef-travelers.siteintercept.qualtrics.com
-.zndbwam8wfmlf5vtb-intuit.siteintercept.qualtrics.com
-.zndccaxz8h8qirmi1-netaporter.siteintercept.qualtrics.com
-.zndcfzcjvykskwjbz-qvc.siteintercept.qualtrics.com
-.zndcic8ql9y0mznn3-screenpilot.siteintercept.qualtrics.com
-.zndcifkyu4nisd13v-vrt.siteintercept.qualtrics.com
 .zndcixisjuiwtu9mx-monotype.siteintercept.qualtrics.com
 .zndczr1icyfp6dnbb-acog.siteintercept.qualtrics.com
 .zn_dd4yceaftzmcwcz-tiaa2.siteintercept.qualtrics.com
@@ -53785,7 +53776,7 @@
 .92.63.133.65
 .92.63.175.45
 .92.63.184.104
-.92.63.196.0/24
+.92.63.196.0/23
 .92.63.197.0/24
 .92.63.248.22
 .92.63.249.14
@@ -60621,18 +60612,17 @@
 .102.208.0.0/14
 .102.212.0.0/16
 .102.213.0.0/17
-.102.213.128.0/19
+.102.213.128.0/20
 .102.213.128.0/18
-.102.213.160.0/21
+.102.213.144.0/21
 .102.213.176.0/20
 .102.213.192.0/20
 .102.213.192.0/19
-.102.213.212.0/23
 .102.213.224.0/20
 .102.213.241.0/24
 .102.213.243.0/24
 .102.214.68.0/22
-.102.214.124.0/22
+.102.214.127.0/24
 .102.214.246.0/24
 .102.215.92.0/24
 .102.216.56.0/22
@@ -62406,7 +62396,6 @@
 .104.156.51.175
 .104.156.60.151
 .104.156.60.154
-.104.156.155.0/24
 .104.156.224.74
 .104.156.226.38
 .104.156.226.183
@@ -118591,7 +118580,6 @@
 .193.53.83.24
 .193.54.227.163
 .193.56.143.16
-.193.56.146.0/24
 .193.58.196.146
 .193.63.58.83
 .193.63.58.84
@@ -119433,7 +119421,6 @@
 .194.146.224.73
 .194.146.231.194
 .194.147.140.0/24
-.194.147.222.0/23
 .194.149.10.56
 .194.149.10.57
 .194.149.10.58
