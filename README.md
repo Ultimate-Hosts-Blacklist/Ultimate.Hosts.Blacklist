@@ -20,10 +20,10 @@ hosts file.
 
 ---
 
-- Version: **V2.1161.2023.01.31**
+- Version: **V2.1163.2023.02.01**
 - Total Bad domains in `hosts` file: **635,934**
-- Total Bad IP in `hosts.deny` file: **140,437**
-- Total Bad domains and IP in `superhosts.deny` file: **776,371**
+- Total Bad IP in `hosts.deny` file: **140,435**
+- Total Bad domains and IP in `superhosts.deny` file: **776,369**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -266,6 +266,7 @@ The sources of the input data information are as follows.
 | quidsup_malicious-sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/quidsup_malicious-sites) | [Link](https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/malware.list) |
 | quidsup_notrack_trackers | [Link](https://github.com/Ultimate-Hosts-Blacklist/quidsup_notrack_trackers) | [Link](https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/trackers.list) |
 | smed79_blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/smed79_blacklist) | [Link](https://raw.githubusercontent.com/smed79/blacklist/master/hosts.txt) |
+| someonewhocares.org | [Link](https://github.com/Ultimate-Hosts-Blacklist/someonewhocares.org) | [Link](https://someonewhocares.org/hosts/zero/hosts) |
 | Spam404 | [Link](https://github.com/Ultimate-Hosts-Blacklist/Spam404) | [Link](https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt) |
 | SSH_attackers_probers | [Link](https://github.com/Ultimate-Hosts-Blacklist/SSH_attackers_probers) | [Link]() |
 | Suspicious.Snooping.Sniffing.Hacking.IP.Addresses | [Link](https://github.com/Ultimate-Hosts-Blacklist/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list) |
