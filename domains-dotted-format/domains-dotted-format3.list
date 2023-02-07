@@ -1,7 +1,3 @@
-.zncgfzahqp5dgc7mr-atbfeedback.siteintercept.qualtrics.com
-.zncgs6md9j7wsic6x-warehouse.siteintercept.qualtrics.com
-.zncgy3w8ubmfkekir-wellmarkresearch.siteintercept.qualtrics.com
-.zncgydmci4rojapy1-libertyinsurance.siteintercept.qualtrics.com
 .znchecs5oqprdofad-samsungeurope.siteintercept.qualtrics.com
 .znchfpzqp8biogoxl-allegioncx.siteintercept.qualtrics.com
 .znchidfncktgraack-dteenergy.siteintercept.qualtrics.com
@@ -15699,8 +15695,8 @@
 .45.137.22.99
 .45.137.148.169
 .45.138.96.208
-.45.141.84.10
 .45.141.84.18
+.45.141.84.25
 .45.141.102.217
 .45.142.185.52
 .45.142.192.0/24
@@ -84779,6 +84775,7 @@
 .157.115.0.0/16
 .157.119.48.210
 .157.119.68.0/22
+.157.119.73.60
 .157.151.81.100
 .157.157.29.140
 .157.157.77.168
@@ -140809,7 +140806,6 @@
 .221.189.250.38
 .221.190.7.244
 .221.194.44.211
-.221.194.47.208
 .221.196.42.29
 .221.196.97.57
 .221.196.99.137
