@@ -6,7 +6,7 @@ The Ultimate Hosts Blacklist (UHB) is undoubtedly one of the world's largest
 curated and unified hosts file to protect your network, computer, device,
 children, or family against over several hundred thousand malicious actors.
 
-All oue information is gathered from multiple sources, tested regularly and
+All our information is gathered from multiple sources, tested regularly and
 merged into one massive file which is updated daily.
 Our hosts can be used on almost all operating system but we also propose 2 DNS
 servers that ingest and block the bad actor as good - if not better - than a
