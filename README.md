@@ -20,7 +20,7 @@ hosts file.
 
 ---
 
-- Version: **V2.1425.2023.06.12**
+- Version: **V2.1427.2023.06.12**
 - Total Bad domains in `hosts` file: **636,166**
 - Total Bad IP in `hosts.deny` file: **140,525**
 - Total Bad domains and IP in `superhosts.deny` file: **776,691**
