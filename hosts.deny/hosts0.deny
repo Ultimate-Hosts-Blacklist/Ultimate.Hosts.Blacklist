@@ -33,7 +33,7 @@
 ### https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues
 
 ##### Version Information #
-#### Version: V2.1824.2023.12.28
+#### Version: V2.1826.2023.12.29
 #### Total IP's: 140,508
 ##### Version Information ##
 
@@ -18257,7 +18257,6 @@ ALL: 51.68.47.77
 ALL: 51.68.64.220
 ALL: 51.68.70.72
 ALL: 51.68.70.175
-ALL: 51.68.80.29
 ALL: 51.68.82.218
 ALL: 51.68.90.168
 ALL: 51.68.97.21
@@ -89502,6 +89501,7 @@ ALL: 173.204.22.35
 ALL: 173.204.49.131
 ALL: 173.208.129.210
 ALL: 173.208.137.250
+ALL: 173.208.148.218
 ALL: 173.208.149.138
 ALL: 173.208.149.162
 ALL: 173.208.153.50
