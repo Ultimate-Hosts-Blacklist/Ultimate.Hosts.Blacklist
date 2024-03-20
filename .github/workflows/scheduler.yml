@@ -22,7 +22,7 @@ jobs:
           - ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         name: Clone repository
         with:
           token: "${{ secrets.BOT_REPO_PAT }}"
