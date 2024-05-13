@@ -1,3 +1,7 @@
+0.0.0.0 st-www.dynamicyield.com
+0.0.0.0 stx0.sextracker.com
+0.0.0.0 stx1.sextracker.com
+0.0.0.0 stx2.sextracker.com
 0.0.0.0 stx3.sextracker.com
 0.0.0.0 stx4.sextracker.com
 0.0.0.0 stx5.sextracker.com
@@ -5035,7 +5039,6 @@
 0.0.0.0 t.riverhit.com
 0.0.0.0 t.rlcdn.com
 0.0.0.0 t.saas.appdynamics.com
-0.0.0.0 t.salesmatemail.com
 0.0.0.0 t.scorecardresearch.com
 0.0.0.0 t.seedtag.com
 0.0.0.0 t.sellpoints.com
@@ -14540,7 +14543,6 @@
 0.0.0.0 thor.bankofamfrica.com
 0.0.0.0 thor.beck-technologies.com
 0.0.0.0 thor.bellsourth.com
-0.0.0.0 thor.blindferret.media
 0.0.0.0 thor.blueshielsca.com
 0.0.0.0 thor.bodenmarkt.info
 0.0.0.0 thor.bravenet.com
@@ -50137,6 +50139,7 @@
 0.0.0.0 webtoolsx.brandreachsys.com
 0.0.0.0 webtop.acxiom.com
 0.0.0.0 webtracker.apicasystem.com
+0.0.0.0 webtracker.jp
 0.0.0.0 webtrackerplus.com
 0.0.0.0 webtracktechnologies.com
 0.0.0.0 webtracky.com
@@ -55328,7 +55331,6 @@
 0.0.0.0 ws1.2020search.com
 0.0.0.0 ws1.bmcm.pw
 0.0.0.0 ws1.bmnr.pw
-0.0.0.0 ws1.bmst.pw
 0.0.0.0 ws001.coinerra.com
 0.0.0.0 ws01.crypto-loot.com
 0.0.0.0 ws01.do.nu
@@ -55346,7 +55348,6 @@
 0.0.0.0 ws2.15x.net
 0.0.0.0 ws2.bmcm.pw
 0.0.0.0 ws2.bmnr.pw
-0.0.0.0 ws2.bmst.pw
 0.0.0.0 ws2.cdnsoar.com
 0.0.0.0 ws02.crypto-loot.com
 0.0.0.0 ws02.do.nu
@@ -85530,7 +85531,6 @@
 0.0.0.0 www.coinhits.com
 0.0.0.0 www.coin-hive.com
 0.0.0.0 www.coinhive.com
-0.0.0.0 www.coinhive.net
 0.0.0.0 www.coinhive.org
 0.0.0.0 www.coinhiver.com
 0.0.0.0 www.coinhives.com
@@ -91755,6 +91755,7 @@
 0.0.0.0 www.izayoinet.info
 0.0.0.0 www.izvestia.info
 0.0.0.0 www.j3safetyismyname.com
+0.0.0.0 www.j9lib.com
 0.0.0.0 www.j12lib.com
 0.0.0.0 www.j22now.leadpages.co
 0.0.0.0 www.j.ubeat.info
@@ -95047,7 +95048,6 @@
 0.0.0.0 www.newyorktimescrosswordpuzzle.com
 0.0.0.0 www.newyoutube.com
 0.0.0.0 www.nexage.com
-0.0.0.0 www.nexioniect.com
 0.0.0.0 www.nextadvisor.com
 0.0.0.0 www.nextbux.info
 0.0.0.0 www.nextel-ringtone.spb.su
@@ -102466,6 +102466,7 @@
 0.0.0.0 www.voicemail.co.il
 0.0.0.0 www.voip.recs.shareaholic.com
 0.0.0.0 www.vokr-gtavc.ic.cz
+0.0.0.0 www.volantix.com
 0.0.0.0 www.volgatermolazer.ru
 0.0.0.0 www.volleyball-doppeldorf.de
 0.0.0.0 www.voltairnet.org
@@ -103234,6 +103235,7 @@
 0.0.0.0 www.ws08.crypto.csgocpu.com
 0.0.0.0 www.ws008.www.datasecu.download
 0.0.0.0 www.ws008.www.jqwww.download
+0.0.0.0 www.ws09.crypto.csgocpu.com
 0.0.0.0 www.ws009.www.datasecu.download
 0.0.0.0 www.ws009.www.jqwww.download
 0.0.0.0 www.ws010.www.datasecu.download
@@ -103262,10 +103264,13 @@
 0.0.0.0 www.ws021.www.jqwww.download
 0.0.0.0 www.ws022.www.datasecu.download
 0.0.0.0 www.ws022.www.jqwww.download
+0.0.0.0 www.ws23.crypto.csgocpu.com
 0.0.0.0 www.ws023.www.datasecu.download
 0.0.0.0 www.ws023.www.jqwww.download
+0.0.0.0 www.ws24.crypto.csgocpu.com
 0.0.0.0 www.ws024.www.datasecu.download
 0.0.0.0 www.ws024.www.jqwww.download
+0.0.0.0 www.ws25.crypto.csgocpu.com
 0.0.0.0 www.ws025.www.datasecu.download
 0.0.0.0 www.ws025.www.jqwww.download
 0.0.0.0 www.ws026.www.datasecu.download
@@ -103275,6 +103280,8 @@
 0.0.0.0 www.ws028.www.datasecu.download
 0.0.0.0 www.ws028.www.jqwww.download
 0.0.0.0 www.ws39.adx1.com
+0.0.0.0 www.ws42.crypto.csgocpu.com
+0.0.0.0 www.ws48.crypto.csgocpu.com
 0.0.0.0 www.ws49.crypto.csgocpu.com
 0.0.0.0 www.ws50.crypto.csgocpu.com
 0.0.0.0 www.wsel.net
