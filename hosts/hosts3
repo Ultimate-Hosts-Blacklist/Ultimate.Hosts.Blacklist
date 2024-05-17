@@ -1,6 +1,3 @@
-0.0.0.0 stx1.sextracker.com
-0.0.0.0 stx2.sextracker.com
-0.0.0.0 stx3.sextracker.com
 0.0.0.0 stx4.sextracker.com
 0.0.0.0 stx5.sextracker.com
 0.0.0.0 stx6.sextracker.com
@@ -14542,7 +14539,6 @@
 0.0.0.0 thor.bankofamfrica.com
 0.0.0.0 thor.beck-technologies.com
 0.0.0.0 thor.bellsourth.com
-0.0.0.0 thor.blindferret.media
 0.0.0.0 thor.blueshielsca.com
 0.0.0.0 thor.bodenmarkt.info
 0.0.0.0 thor.bravenet.com
@@ -55329,7 +55325,6 @@
 0.0.0.0 ws1.15x.net
 0.0.0.0 ws1.2020search.com
 0.0.0.0 ws1.bmcm.pw
-0.0.0.0 ws1.bmnr.pw
 0.0.0.0 ws001.coinerra.com
 0.0.0.0 ws01.crypto-loot.com
 0.0.0.0 ws01.do.nu
@@ -55346,7 +55341,6 @@
 0.0.0.0 ws1-staging.hotjar.com
 0.0.0.0 ws2.15x.net
 0.0.0.0 ws2.bmcm.pw
-0.0.0.0 ws2.bmnr.pw
 0.0.0.0 ws2.cdnsoar.com
 0.0.0.0 ws02.crypto-loot.com
 0.0.0.0 ws02.do.nu
@@ -81559,7 +81553,6 @@
 0.0.0.0 www.alhpa.gr.com
 0.0.0.0 www.aliasusa.com
 0.0.0.0 www.alibabadlove.org
-0.0.0.0 www.alibestsale.com
 0.0.0.0 www.alibexpress.com
 0.0.0.0 www.alicantocapital.com
 0.0.0.0 www.alice-aol.com
@@ -91836,7 +91829,6 @@
 0.0.0.0 www.javcens.com
 0.0.0.0 www.javdb.club
 0.0.0.0 www.javdb.online
-0.0.0.0 www.javdb.site
 0.0.0.0 www.javdirect.com
 0.0.0.0 www.javeal.com
 0.0.0.0 www.javeat.com
@@ -103251,17 +103243,26 @@
 0.0.0.0 www.ws016.www.datasecu.download
 0.0.0.0 www.ws016.www.jqwww.download
 0.0.0.0 www.ws017.www.datasecu.download
+0.0.0.0 www.ws017.www.jqwww.download
 0.0.0.0 www.ws018.www.datasecu.download
+0.0.0.0 www.ws018.www.jqwww.download
 0.0.0.0 www.ws019.www.datasecu.download
+0.0.0.0 www.ws019.www.jqwww.download
 0.0.0.0 www.ws020.www.datasecu.download
+0.0.0.0 www.ws020.www.jqwww.download
 0.0.0.0 www.ws021.www.datasecu.download
+0.0.0.0 www.ws021.www.jqwww.download
 0.0.0.0 www.ws022.www.datasecu.download
+0.0.0.0 www.ws022.www.jqwww.download
 0.0.0.0 www.ws23.crypto.csgocpu.com
 0.0.0.0 www.ws023.www.datasecu.download
+0.0.0.0 www.ws023.www.jqwww.download
 0.0.0.0 www.ws24.crypto.csgocpu.com
 0.0.0.0 www.ws024.www.datasecu.download
+0.0.0.0 www.ws024.www.jqwww.download
 0.0.0.0 www.ws25.crypto.csgocpu.com
 0.0.0.0 www.ws025.www.datasecu.download
+0.0.0.0 www.ws025.www.jqwww.download
 0.0.0.0 www.ws026.www.datasecu.download
 0.0.0.0 www.ws026.www.jqwww.download
 0.0.0.0 www.ws027.www.datasecu.download
