@@ -14474,7 +14474,6 @@
 0.0.0.0 thor.bankofamfrica.com
 0.0.0.0 thor.beck-technologies.com
 0.0.0.0 thor.bellsourth.com
-0.0.0.0 thor.blindferret.media
 0.0.0.0 thor.blueshielsca.com
 0.0.0.0 thor.bodenmarkt.info
 0.0.0.0 thor.bravenet.com
@@ -55254,7 +55253,6 @@
 0.0.0.0 wrzosek.go.pl
 0.0.0.0 ws1.15x.net
 0.0.0.0 ws1.2020search.com
-0.0.0.0 ws1.bmcm.pw
 0.0.0.0 ws001.coinerra.com
 0.0.0.0 ws01.crypto-loot.com
 0.0.0.0 ws01.do.nu
@@ -55269,7 +55267,6 @@
 0.0.0.0 ws1-live.live.eks.hotjar.com
 0.0.0.0 ws1-staging.hotjar.com
 0.0.0.0 ws2.15x.net
-0.0.0.0 ws2.bmcm.pw
 0.0.0.0 ws2.cdnsoar.com
 0.0.0.0 ws02.crypto-loot.com
 0.0.0.0 ws02.do.nu
@@ -55478,6 +55475,7 @@
 0.0.0.0 ws024.www.datasecu.download
 0.0.0.0 ws024.www.jqwww.download
 0.0.0.0 ws24-live.live.eks.hotjar.com
+0.0.0.0 ws024-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws25.crypto.csgocpu.com
 0.0.0.0 ws25.crypto-loot.com
 0.0.0.0 ws025.hemnes.win
@@ -55485,6 +55483,7 @@
 0.0.0.0 ws025.www.datasecu.download
 0.0.0.0 ws025.www.jqwww.download
 0.0.0.0 ws25-live.live.eks.hotjar.com
+0.0.0.0 ws025-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws26.crypto-loot.com
 0.0.0.0 ws026.hemnes.win
 0.0.0.0 ws26.hotjar.com
