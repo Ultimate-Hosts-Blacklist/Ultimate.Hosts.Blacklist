@@ -1,3 +1,5 @@
+0.0.0.0 style-urban.com
+0.0.0.0 stylevana-au.sjv.io
 0.0.0.0 styleweekly.saambaa.com
 0.0.0.0 stylewithlife.32-b.it
 0.0.0.0 stylflip.com
@@ -5698,6 +5700,7 @@
 0.0.0.0 tags-videos.smilewanted.com
 0.0.0.0 tagtest.lkqd.com
 0.0.0.0 tagtoo.co
+0.0.0.0 tagtoo.com
 0.0.0.0 tagtoo.com.tw
 0.0.0.0 tagular.com
 0.0.0.0 tagulinu.com
@@ -15149,6 +15152,7 @@
 0.0.0.0 ticonmamad.libraries.co.il
 0.0.0.0 ticonsalope.000webhostapp.com
 0.0.0.0 tic-parchi.com
+0.0.0.0 tics.techdirt.com
 0.0.0.0 ticstars.com
 0.0.0.0 tictacti.adk2x.com
 0.0.0.0 tic-tic-bam.com
@@ -50057,6 +50061,7 @@
 0.0.0.0 webtoolsx.brandreachsys.com
 0.0.0.0 webtop.acxiom.com
 0.0.0.0 webtracker.apicasystem.com
+0.0.0.0 webtracker.jp
 0.0.0.0 webtrackerplus.com
 0.0.0.0 webtracktechnologies.com
 0.0.0.0 webtracky.com
@@ -55252,6 +55257,7 @@
 0.0.0.0 ws1.g-content.bid
 0.0.0.0 ws001.hemnes.win
 0.0.0.0 ws1.hotjar.com
+0.0.0.0 ws1.statistic.date
 0.0.0.0 ws1.tapjoyads.com
 0.0.0.0 ws001.www.datasecu.download
 0.0.0.0 ws001.www.jqwww.download
@@ -55268,6 +55274,7 @@
 0.0.0.0 ws2.hotjar.com
 0.0.0.0 ws2.moengage.com
 0.0.0.0 ws2.responsys.net
+0.0.0.0 ws2.statistic.date
 0.0.0.0 ws2.tapjoyads.com
 0.0.0.0 ws002.www.datasecu.download
 0.0.0.0 ws002.www.jqwww.download
@@ -55282,6 +55289,7 @@
 0.0.0.0 ws2-live.live.eks.hotjar.com
 0.0.0.0 ws2-lufthansa.responsys.net
 0.0.0.0 ws2n.responsys.net
+0.0.0.0 ws002-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws2-shukran.responsys.net
 0.0.0.0 ws2t.responsys.net
 0.0.0.0 ws2-teva.responsys.net
@@ -55297,6 +55305,7 @@
 0.0.0.0 ws3.tapjoyads.com
 0.0.0.0 ws3.trafficstars.com
 0.0.0.0 ws003.www.datasecu.download
+0.0.0.0 ws003.www.jqwww.download
 0.0.0.0 ws03cn.streamplay.to
 0.0.0.0 ws3-live.live.eks.hotjar.com
 0.0.0.0 ws003-proxy-ajcryptominer.ajplugins.com
@@ -55311,6 +55320,7 @@
 0.0.0.0 ws004.www.datasecu.download
 0.0.0.0 ws004.www.jqwww.download
 0.0.0.0 ws4-live.live.eks.hotjar.com
+0.0.0.0 ws004-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws4t.responsys.net
 0.0.0.0 ws05.crypto.csgocpu.com
 0.0.0.0 ws05.crypto-loot.com
@@ -55326,6 +55336,7 @@
 0.0.0.0 ws5-live.live.eks.hotjar.com
 0.0.0.0 ws5n.responsys.net
 0.0.0.0 ws5-pier1.responsys.net
+0.0.0.0 ws005-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws5t.responsys.net
 0.0.0.0 ws06.crypto.csgocpu.com
 0.0.0.0 ws06.crypto-loot.com
@@ -55333,6 +55344,7 @@
 0.0.0.0 ws06.home.sapo.pt
 0.0.0.0 ws6.hotjar.com
 0.0.0.0 ws006.www.datasecu.download
+0.0.0.0 ws006.www.jqwww.download
 0.0.0.0 ws6-live.live.eks.hotjar.com
 0.0.0.0 ws006-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws07.crypto.csgocpu.com
@@ -55343,6 +55355,7 @@
 0.0.0.0 ws007.www.datasecu.download
 0.0.0.0 ws007.www.jqwww.download
 0.0.0.0 ws7-live.live.eks.hotjar.com
+0.0.0.0 ws007-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws08.crypto.csgocpu.com
 0.0.0.0 ws08.crypto-loot.com
 0.0.0.0 ws008.hemnes.win
@@ -55370,6 +55383,7 @@
 0.0.0.0 ws11.hotjar.com
 0.0.0.0 ws11.shareaholic.com
 0.0.0.0 ws011.www.datasecu.download
+0.0.0.0 ws011.www.jqwww.download
 0.0.0.0 ws11-live.live.eks.hotjar.com
 0.0.0.0 ws12.crypto-loot.com
 0.0.0.0 ws012.hemnes.win
@@ -55402,11 +55416,13 @@
 0.0.0.0 ws016.hemnes.win
 0.0.0.0 ws16.hotjar.com
 0.0.0.0 ws016.www.datasecu.download
+0.0.0.0 ws016.www.jqwww.download
 0.0.0.0 ws16-live.live.eks.hotjar.com
 0.0.0.0 ws17.crypto-loot.com
 0.0.0.0 ws017.hemnes.win
 0.0.0.0 ws17.hotjar.com
 0.0.0.0 ws017.www.datasecu.download
+0.0.0.0 ws017.www.jqwww.download
 0.0.0.0 ws17-live.live.eks.hotjar.com
 0.0.0.0 ws017-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws18.crypto-loot.com
@@ -55415,15 +55431,18 @@
 0.0.0.0 ws018.www.datasecu.download
 0.0.0.0 ws018.www.jqwww.download
 0.0.0.0 ws18-live.live.eks.hotjar.com
+0.0.0.0 ws018-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws19.crypto-loot.com
 0.0.0.0 ws019.hemnes.win
 0.0.0.0 ws19.hotjar.com
 0.0.0.0 ws019.www.datasecu.download
+0.0.0.0 ws019.www.jqwww.download
 0.0.0.0 ws19-live.live.eks.hotjar.com
 0.0.0.0 ws20.crypto-loot.com
 0.0.0.0 ws020.hemnes.win
 0.0.0.0 ws20.hotjar.com
 0.0.0.0 ws020.www.datasecu.download
+0.0.0.0 ws020.www.jqwww.download
 0.0.0.0 ws20-live.live.eks.hotjar.com
 0.0.0.0 ws020-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws21.crypto-loot.com
@@ -55438,6 +55457,7 @@
 0.0.0.0 ws022.www.datasecu.download
 0.0.0.0 ws022.www.jqwww.download
 0.0.0.0 ws22-live.live.eks.hotjar.com
+0.0.0.0 ws022-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws23.crypto.csgocpu.com
 0.0.0.0 ws23.crypto-loot.com
 0.0.0.0 ws023.hemnes.win
@@ -55453,6 +55473,7 @@
 0.0.0.0 ws024.www.datasecu.download
 0.0.0.0 ws024.www.jqwww.download
 0.0.0.0 ws24-live.live.eks.hotjar.com
+0.0.0.0 ws024-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws25.crypto.csgocpu.com
 0.0.0.0 ws25.crypto-loot.com
 0.0.0.0 ws025.hemnes.win
@@ -55467,11 +55488,14 @@
 0.0.0.0 ws026.www.datasecu.download
 0.0.0.0 ws026.www.jqwww.download
 0.0.0.0 ws26-live.live.eks.hotjar.com
+0.0.0.0 ws026-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws27.crypto-loot.com
 0.0.0.0 ws027.hemnes.win
 0.0.0.0 ws27.hotjar.com
 0.0.0.0 ws027.www.datasecu.download
+0.0.0.0 ws027.www.jqwww.download
 0.0.0.0 ws27-live.live.eks.hotjar.com
+0.0.0.0 ws027-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws028.hemnes.win
 0.0.0.0 ws28.hotjar.com
 0.0.0.0 ws028.www.datasecu.download
@@ -55526,6 +55550,7 @@
 0.0.0.0 ws41.crypto-loot.com
 0.0.0.0 ws41.hotjar.com
 0.0.0.0 ws41-live.live.eks.hotjar.com
+0.0.0.0 ws42.crypto.csgocpu.com
 0.0.0.0 ws42.crypto-loot.com
 0.0.0.0 ws42.hotjar.com
 0.0.0.0 ws42-live.live.eks.hotjar.com
@@ -80197,6 +80222,7 @@
 0.0.0.0 www.acproyectos.com
 0.0.0.0 www.acp-sh.adblade.com
 0.0.0.0 www.acquests.com
+0.0.0.0 www.acquireattention.com
 0.0.0.0 www.acquisizionevideo.com
 0.0.0.0 www.acrh.be
 0.0.0.0 www.acrhive.org
@@ -83778,6 +83804,7 @@
 0.0.0.0 www.bridgerescue.org
 0.0.0.0 www.bridgewell.com
 0.0.0.0 www.bridgwell.org
+0.0.0.0 www.briefbears.com
 0.0.0.0 www.brightec.pl
 0.0.0.0 www.brightedge.com
 0.0.0.0 www.brightfinance.co
@@ -84214,6 +84241,7 @@
 0.0.0.0 www.cannes.groupm.com
 0.0.0.0 www.cannes.info
 0.0.0.0 www.cannes.justpremium.com
+0.0.0.0 www.cannonjudo.com
 0.0.0.0 www.cannontwin.com
 0.0.0.0 www.canuckmethod.com
 0.0.0.0 www.canuckmethods.com
@@ -86123,6 +86151,7 @@
 0.0.0.0 www.cultura.adx1.com
 0.0.0.0 www.culturaingles.net
 0.0.0.0 www.culture.doubleverify.com
+0.0.0.0 www.culturedcrayon.com
 0.0.0.0 www.cultureindoor.gr.com
 0.0.0.0 www.cumin.money-for-you-2021.ru
 0.0.0.0 www.cumoverload.com
@@ -87293,6 +87322,7 @@
 0.0.0.0 www.drivelicense.net
 0.0.0.0 www.driversddirect.com
 0.0.0.0 www.drivertexas.org
+0.0.0.0 www.drivingdirt.com
 0.0.0.0 www.drivotracker.com
 0.0.0.0 www.drjaydavidson.leadpages.co
 0.0.0.0 www.drlalpath.com
@@ -88492,6 +88522,7 @@
 0.0.0.0 www.fantasy-world.org
 0.0.0.0 www.fappu.info
 0.0.0.0 www.fapsp.com
+0.0.0.0 www.faracoon.com
 0.0.0.0 www.farehitchlower.icu.domain.name
 0.0.0.0 www.faresh.com
 0.0.0.0 www.farfectch.com
@@ -88961,6 +88992,7 @@
 0.0.0.0 www.franko.info
 0.0.0.0 www.frankonline.leadpages.co
 0.0.0.0 www.franksgunshop.com
+0.0.0.0 www.franticcarpenter.com
 0.0.0.0 www.fraudalertequifax.com
 0.0.0.0 www.fraudalertsequifax.com
 0.0.0.0 www.fravenspin18.dnset.com
@@ -89628,6 +89660,7 @@
 0.0.0.0 www.giftcardsking.org
 0.0.0.0 www.giftcardsurveys.us.com
 0.0.0.0 www.gifted.adx1.com
+0.0.0.0 www.giftedthumb.com
 0.0.0.0 www.giftnew-season7.dnset.com
 0.0.0.0 www.giftshop.totalh.net
 0.0.0.0 www.giftucskin.dnset.com
@@ -90272,6 +90305,7 @@
 0.0.0.0 www.haodizhi3.info
 0.0.0.0 www.haouzy.info
 0.0.0.0 www.hapi.info
+0.0.0.0 www.happenhistory.com
 0.0.0.0 www.happixbot2017.events.adx1.com
 0.0.0.0 www.happybook.info
 0.0.0.0 www.happyendingroom.com
@@ -91662,6 +91696,7 @@
 0.0.0.0 www.jamenize.com
 0.0.0.0 www.jamesshipway.leadpages.co
 0.0.0.0 www.jameswedmore.leadpages.co
+0.0.0.0 www.jamexistence.com
 0.0.0.0 www.jamiesbondageworld.com
 0.0.0.0 www.jamsfredlas0.000webhostapp.com
 0.0.0.0 www.janasevanakendram.info
@@ -94752,6 +94787,7 @@
 0.0.0.0 www.neatbeans.org
 0.0.0.0 www.neber.112.2o7.net
 0.0.0.0 www.nebraskastatefair.org
+0.0.0.0 www.necessarywax.com
 0.0.0.0 www.nectar.facebook-ads.adtz.com
 0.0.0.0 www.nederbet.com
 0.0.0.0 www.nedstatbasic.net
@@ -95791,6 +95827,7 @@
 0.0.0.0 www.packettracer.info
 0.0.0.0 www.packtrackplus.com
 0.0.0.0 www.paclitor.com
+0.0.0.0 www.paddleangle.com
 0.0.0.0 www.paddypower.com
 0.0.0.0 www.padnij.info
 0.0.0.0 www.paf.com
@@ -96011,6 +96048,7 @@
 0.0.0.0 www.penispumpers.org
 0.0.0.0 www.penmedicine.org
 0.0.0.0 www.pensiononline.org
+0.0.0.0 www.penspade.com
 0.0.0.0 www.pentamerous-silicon.000webhostapp.com
 0.0.0.0 www.people.co.il
 0.0.0.0 www.peoplecourtraw.com
@@ -99233,6 +99271,7 @@
 0.0.0.0 www.smaato.net
 0.0.0.0 www.smac-ad.com
 0.0.0.0 www.smadex.com
+0.0.0.0 www.smallbeginner.com
 0.0.0.0 www.smartadserver.com
 0.0.0.0 www.smartadserverapis.com
 0.0.0.0 www.smartargains.com
@@ -100794,6 +100833,7 @@
 0.0.0.0 www.thiafriendly.com
 0.0.0.0 www.thickcash.com
 0.0.0.0 www.thietbi.org
+0.0.0.0 www.thinkabletrick.com
 0.0.0.0 www.thinkcreativecollective.leadpages.co
 0.0.0.0 www.thinkfreedom.leadpages.co
 0.0.0.0 www.thinkgeek.112.2o7.net
@@ -102347,6 +102387,7 @@
 0.0.0.0 www.voicemail.co.il
 0.0.0.0 www.voip.recs.shareaholic.com
 0.0.0.0 www.vokr-gtavc.ic.cz
+0.0.0.0 www.volantix.com
 0.0.0.0 www.volgatermolazer.ru
 0.0.0.0 www.volleyball-doppeldorf.de
 0.0.0.0 www.voltairnet.org
@@ -103099,7 +103140,9 @@
 0.0.0.0 www.ws002.www.datasecu.download
 0.0.0.0 www.ws002.www.jqwww.download
 0.0.0.0 www.ws003.www.datasecu.download
+0.0.0.0 www.ws003.www.jqwww.download
 0.0.0.0 www.ws004.www.datasecu.download
+0.0.0.0 www.ws004.www.jqwww.download
 0.0.0.0 www.ws05.crypto.csgocpu.com
 0.0.0.0 www.ws005.www.datasecu.download
 0.0.0.0 www.ws005.www.jqwww.download
@@ -103109,7 +103152,9 @@
 0.0.0.0 www.ws07.crypto.csgocpu.com
 0.0.0.0 www.ws007.www.datasecu.download
 0.0.0.0 www.ws007.www.jqwww.download
+0.0.0.0 www.ws08.crypto.csgocpu.com
 0.0.0.0 www.ws008.www.datasecu.download
+0.0.0.0 www.ws008.www.jqwww.download
 0.0.0.0 www.ws09.crypto.csgocpu.com
 0.0.0.0 www.ws009.www.datasecu.download
 0.0.0.0 www.ws009.www.jqwww.download
@@ -103120,18 +103165,25 @@
 0.0.0.0 www.ws012.www.datasecu.download
 0.0.0.0 www.ws012.www.jqwww.download
 0.0.0.0 www.ws013.www.datasecu.download
+0.0.0.0 www.ws013.www.jqwww.download
 0.0.0.0 www.ws014.www.datasecu.download
+0.0.0.0 www.ws014.www.jqwww.download
 0.0.0.0 www.ws015.www.datasecu.download
 0.0.0.0 www.ws015.www.jqwww.download
 0.0.0.0 www.ws016.www.datasecu.download
+0.0.0.0 www.ws016.www.jqwww.download
 0.0.0.0 www.ws017.www.datasecu.download
+0.0.0.0 www.ws017.www.jqwww.download
 0.0.0.0 www.ws018.www.datasecu.download
 0.0.0.0 www.ws018.www.jqwww.download
 0.0.0.0 www.ws019.www.datasecu.download
+0.0.0.0 www.ws019.www.jqwww.download
 0.0.0.0 www.ws020.www.datasecu.download
+0.0.0.0 www.ws020.www.jqwww.download
 0.0.0.0 www.ws021.www.datasecu.download
 0.0.0.0 www.ws021.www.jqwww.download
 0.0.0.0 www.ws022.www.datasecu.download
+0.0.0.0 www.ws022.www.jqwww.download
 0.0.0.0 www.ws23.crypto.csgocpu.com
 0.0.0.0 www.ws023.www.datasecu.download
 0.0.0.0 www.ws24.crypto.csgocpu.com
@@ -103139,12 +103191,16 @@
 0.0.0.0 www.ws024.www.jqwww.download
 0.0.0.0 www.ws25.crypto.csgocpu.com
 0.0.0.0 www.ws025.www.datasecu.download
+0.0.0.0 www.ws025.www.jqwww.download
 0.0.0.0 www.ws026.www.datasecu.download
 0.0.0.0 www.ws026.www.jqwww.download
 0.0.0.0 www.ws027.www.datasecu.download
+0.0.0.0 www.ws027.www.jqwww.download
 0.0.0.0 www.ws028.www.datasecu.download
+0.0.0.0 www.ws028.www.jqwww.download
 0.0.0.0 www.ws39.adx1.com
 0.0.0.0 www.ws48.crypto.csgocpu.com
+0.0.0.0 www.ws49.crypto.csgocpu.com
 0.0.0.0 www.ws50.crypto.csgocpu.com
 0.0.0.0 www.wsel.net
 0.0.0.0 www.wsgreenways.org
