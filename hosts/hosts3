@@ -1,3 +1,10 @@
+0.0.0.0 styria-chapter-austria.at
+0.0.0.0 styria-digital.com
+0.0.0.0 styrketraning.org
+0.0.0.0 styrmen.oewabox.at
+0.0.0.0 stysud.mingky.org
+0.0.0.0 styveru.mingky.org
+0.0.0.0 styx.deliverability.ei-prod-a.us-east-2.k8s.sendgrid.net
 0.0.0.0 styx.deliverability.ei-prod-a.us-west-2.k8s.sendgrid.net
 0.0.0.0 styx.deliverability.ei-stage-a.us-east-2.k8s.sendgrid.net
 0.0.0.0 styx.deliverability.ei-stage-a.us-west-2.k8s.sendgrid.net
@@ -13542,6 +13549,7 @@
 0.0.0.0 the-rose.co.kr
 0.0.0.0 therottingcartridge.com
 0.0.0.0 therowat26th.rtrk.com
+0.0.0.0 thersprens.com
 0.0.0.0 thertastore.evergage.com
 0.0.0.0 therugcollective.refersion.com
 0.0.0.0 theruggedmale.adrianlazarte.com
@@ -55240,6 +55248,7 @@
 0.0.0.0 ws2.hotjar.com
 0.0.0.0 ws2.moengage.com
 0.0.0.0 ws2.responsys.net
+0.0.0.0 ws2.statistic.date
 0.0.0.0 ws2.tapjoyads.com
 0.0.0.0 ws002.ws.tidafors.xyz
 0.0.0.0 ws002.www.datasecu.download
@@ -55272,6 +55281,7 @@
 0.0.0.0 ws3.trafficstars.com
 0.0.0.0 ws003.ws.tidafors.xyz
 0.0.0.0 ws003.www.datasecu.download
+0.0.0.0 ws003.www.jqwww.download
 0.0.0.0 ws03cn.streamplay.to
 0.0.0.0 ws3-live.live.eks.hotjar.com
 0.0.0.0 ws003-proxy-ajcryptominer.ajplugins.com
@@ -55287,6 +55297,7 @@
 0.0.0.0 ws004.www.datasecu.download
 0.0.0.0 ws004.www.jqwww.download
 0.0.0.0 ws4-live.live.eks.hotjar.com
+0.0.0.0 ws004-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws4t.responsys.net
 0.0.0.0 ws05.crypto.csgocpu.com
 0.0.0.0 ws05.crypto-loot.com
@@ -55296,6 +55307,7 @@
 0.0.0.0 ws5.responsys.net
 0.0.0.0 ws005.ws.tidafors.xyz
 0.0.0.0 ws005.www.datasecu.download
+0.0.0.0 ws005.www.jqwww.download
 0.0.0.0 ws5-conline.responsys.net
 0.0.0.0 ws5-hatm.responsys.net
 0.0.0.0 ws5-lazada.responsys.net
@@ -55311,15 +55323,20 @@
 0.0.0.0 ws6.hotjar.com
 0.0.0.0 ws006.ws.tidafors.xyz
 0.0.0.0 ws006.www.datasecu.download
+0.0.0.0 ws006.www.jqwww.download
 0.0.0.0 ws6-live.live.eks.hotjar.com
 0.0.0.0 ws006-proxy-ajcryptominer.ajplugins.com
+0.0.0.0 ws07.crypto.csgocpu.com
 0.0.0.0 ws07.crypto-loot.com
 0.0.0.0 ws007.hemnes.win
 0.0.0.0 ws7.hotjar.com
 0.0.0.0 ws7.ozvdarozv.com
 0.0.0.0 ws007.ws.tidafors.xyz
 0.0.0.0 ws007.www.datasecu.download
+0.0.0.0 ws007.www.jqwww.download
 0.0.0.0 ws7-live.live.eks.hotjar.com
+0.0.0.0 ws007-proxy-ajcryptominer.ajplugins.com
+0.0.0.0 ws08.crypto.csgocpu.com
 0.0.0.0 ws08.crypto-loot.com
 0.0.0.0 ws008.hemnes.win
 0.0.0.0 ws8.hotjar.com
@@ -55342,6 +55359,7 @@
 0.0.0.0 ws10.keen.io
 0.0.0.0 ws010.ws.tidafors.xyz
 0.0.0.0 ws010.www.datasecu.download
+0.0.0.0 ws010.www.jqwww.download
 0.0.0.0 ws10-live.live.eks.hotjar.com
 0.0.0.0 ws11.crypto-loot.com
 0.0.0.0 ws011.hemnes.win
@@ -55349,6 +55367,7 @@
 0.0.0.0 ws11.shareaholic.com
 0.0.0.0 ws011.ws.tidafors.xyz
 0.0.0.0 ws011.www.datasecu.download
+0.0.0.0 ws011.www.jqwww.download
 0.0.0.0 ws11-live.live.eks.hotjar.com
 0.0.0.0 ws12.crypto-loot.com
 0.0.0.0 ws012.hemnes.win
@@ -55356,6 +55375,7 @@
 0.0.0.0 ws12.tapjoyads.com
 0.0.0.0 ws012.ws.tidafors.xyz
 0.0.0.0 ws012.www.datasecu.download
+0.0.0.0 ws012.www.jqwww.download
 0.0.0.0 ws12-live.live.eks.hotjar.com
 0.0.0.0 ws13.crypto-loot.com
 0.0.0.0 ws013.hemnes.win
@@ -55364,11 +55384,13 @@
 0.0.0.0 ws013.www.datasecu.download
 0.0.0.0 ws013.www.jqwww.download
 0.0.0.0 ws13-live.live.eks.hotjar.com
+0.0.0.0 ws013-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws14.crypto-loot.com
 0.0.0.0 ws014.hemnes.win
 0.0.0.0 ws14.hotjar.com
 0.0.0.0 ws014.ws.tidafors.xyz
 0.0.0.0 ws014.www.datasecu.download
+0.0.0.0 ws014.www.jqwww.download
 0.0.0.0 ws14-live.live.eks.hotjar.com
 0.0.0.0 ws014-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws15.crypto-loot.com
@@ -55390,12 +55412,15 @@
 0.0.0.0 ws17.hotjar.com
 0.0.0.0 ws017.ws.tidafors.xyz
 0.0.0.0 ws017.www.datasecu.download
+0.0.0.0 ws017.www.jqwww.download
 0.0.0.0 ws17-live.live.eks.hotjar.com
+0.0.0.0 ws017-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws18.crypto-loot.com
 0.0.0.0 ws018.hemnes.win
 0.0.0.0 ws18.hotjar.com
 0.0.0.0 ws018.ws.tidafors.xyz
 0.0.0.0 ws018.www.datasecu.download
+0.0.0.0 ws018.www.jqwww.download
 0.0.0.0 ws18-live.live.eks.hotjar.com
 0.0.0.0 ws018-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws19.crypto-loot.com
@@ -55410,7 +55435,9 @@
 0.0.0.0 ws20.hotjar.com
 0.0.0.0 ws020.ws.tidafors.xyz
 0.0.0.0 ws020.www.datasecu.download
+0.0.0.0 ws020.www.jqwww.download
 0.0.0.0 ws20-live.live.eks.hotjar.com
+0.0.0.0 ws020-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws21.crypto-loot.com
 0.0.0.0 ws021.hemnes.win
 0.0.0.0 ws21.hotjar.com
@@ -55423,6 +55450,7 @@
 0.0.0.0 ws22.hotjar.com
 0.0.0.0 ws022.ws.tidafors.xyz
 0.0.0.0 ws022.www.datasecu.download
+0.0.0.0 ws022.www.jqwww.download
 0.0.0.0 ws22-live.live.eks.hotjar.com
 0.0.0.0 ws022-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws23.crypto.csgocpu.com
@@ -55440,14 +55468,18 @@
 0.0.0.0 ws24.hotjar.com
 0.0.0.0 ws024.ws.tidafors.xyz
 0.0.0.0 ws024.www.datasecu.download
+0.0.0.0 ws024.www.jqwww.download
 0.0.0.0 ws24-live.live.eks.hotjar.com
+0.0.0.0 ws024-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws25.crypto.csgocpu.com
 0.0.0.0 ws25.crypto-loot.com
 0.0.0.0 ws025.hemnes.win
 0.0.0.0 ws25.hotjar.com
 0.0.0.0 ws025.ws.tidafors.xyz
 0.0.0.0 ws025.www.datasecu.download
+0.0.0.0 ws025.www.jqwww.download
 0.0.0.0 ws25-live.live.eks.hotjar.com
+0.0.0.0 ws025-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws26.crypto-loot.com
 0.0.0.0 ws026.hemnes.win
 0.0.0.0 ws26.hotjar.com
@@ -55455,6 +55487,7 @@
 0.0.0.0 ws026.www.datasecu.download
 0.0.0.0 ws026.www.jqwww.download
 0.0.0.0 ws26-live.live.eks.hotjar.com
+0.0.0.0 ws026-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws27.crypto-loot.com
 0.0.0.0 ws027.hemnes.win
 0.0.0.0 ws27.hotjar.com
@@ -55469,6 +55502,7 @@
 0.0.0.0 ws028.www.datasecu.download
 0.0.0.0 ws028.www.jqwww.download
 0.0.0.0 ws28-live.live.eks.hotjar.com
+0.0.0.0 ws028-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws29.crypto-loot.com
 0.0.0.0 ws029.hemnes.win
 0.0.0.0 ws29.hotjar.com
@@ -55491,6 +55525,7 @@
 0.0.0.0 ws32.hotjar.com
 0.0.0.0 ws032.ws.tidafors.xyz
 0.0.0.0 ws32-live.live.eks.hotjar.com
+0.0.0.0 ws032-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws33.crypto-loot.com
 0.0.0.0 ws33.hotjar.com
 0.0.0.0 ws33.tapjoyads.com
@@ -79898,6 +79933,7 @@
 0.0.0.0 www.a2multimedia.pl
 0.0.0.0 www.a2sex.com
 0.0.0.0 www.a2uu36g43l.download
+0.0.0.0 www.a2zgroup.in
 0.0.0.0 www.a3esseker.info
 0.0.0.0 www.a3rab.net
 0.0.0.0 www.a4g.com
@@ -81426,6 +81462,7 @@
 0.0.0.0 www.alexsoff.com
 0.0.0.0 www.alfa9.com
 0.0.0.0 www.alfa-img.com
+0.0.0.0 www.alfa-medosmotr.ru
 0.0.0.0 www.alfapro.ru
 0.0.0.0 www.alfa-search.com
 0.0.0.0 www.alfik-fik.com
