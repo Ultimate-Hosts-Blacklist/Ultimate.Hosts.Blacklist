@@ -14422,6 +14422,7 @@
 0.0.0.0 thor.bankofamfrica.com
 0.0.0.0 thor.beck-technologies.com
 0.0.0.0 thor.bellsourth.com
+0.0.0.0 thor.blindferret.media
 0.0.0.0 thor.blueshielsca.com
 0.0.0.0 thor.bodenmarkt.info
 0.0.0.0 thor.bravenet.com
@@ -15104,7 +15105,6 @@
 0.0.0.0 ticonmamad.libraries.co.il
 0.0.0.0 ticonsalope.000webhostapp.com
 0.0.0.0 tic-parchi.com
-0.0.0.0 tics.techdirt.com
 0.0.0.0 ticstars.com
 0.0.0.0 tictacti.adk2x.com
 0.0.0.0 tic-tic-bam.com
@@ -55291,6 +55291,7 @@
 0.0.0.0 ws5-pier1.responsys.net
 0.0.0.0 ws005-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws5t.responsys.net
+0.0.0.0 ws06.crypto.csgocpu.com
 0.0.0.0 ws06.crypto-loot.com
 0.0.0.0 ws006.hemnes.win
 0.0.0.0 ws06.home.sapo.pt
@@ -55300,6 +55301,7 @@
 0.0.0.0 ws006.www.jqwww.download
 0.0.0.0 ws6-live.live.eks.hotjar.com
 0.0.0.0 ws006-proxy-ajcryptominer.ajplugins.com
+0.0.0.0 ws07.crypto.csgocpu.com
 0.0.0.0 ws07.crypto-loot.com
 0.0.0.0 ws007.hemnes.win
 0.0.0.0 ws7.hotjar.com
@@ -55317,6 +55319,7 @@
 0.0.0.0 ws008.www.datasecu.download
 0.0.0.0 ws008.www.jqwww.download
 0.0.0.0 ws8-live.live.eks.hotjar.com
+0.0.0.0 ws09.crypto.csgocpu.com
 0.0.0.0 ws09.crypto-loot.com
 0.0.0.0 ws009.hemnes.win
 0.0.0.0 ws9.hotjar.com
@@ -55384,6 +55387,7 @@
 0.0.0.0 ws17.hotjar.com
 0.0.0.0 ws017.ws.tidafors.xyz
 0.0.0.0 ws017.www.datasecu.download
+0.0.0.0 ws017.www.jqwww.download
 0.0.0.0 ws17-live.live.eks.hotjar.com
 0.0.0.0 ws017-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws18.crypto-loot.com
@@ -55430,7 +55434,10 @@
 0.0.0.0 ws23.hotjar.com
 0.0.0.0 ws023.ws.tidafors.xyz
 0.0.0.0 ws023.www.datasecu.download
+0.0.0.0 ws023.www.jqwww.download
 0.0.0.0 ws23-live.live.eks.hotjar.com
+0.0.0.0 ws023-proxy-ajcryptominer.ajplugins.com
+0.0.0.0 ws24.crypto.csgocpu.com
 0.0.0.0 ws24.crypto-loot.com
 0.0.0.0 ws024.hemnes.win
 0.0.0.0 ws24.hotjar.com
@@ -55439,6 +55446,7 @@
 0.0.0.0 ws024.www.jqwww.download
 0.0.0.0 ws24-live.live.eks.hotjar.com
 0.0.0.0 ws024-proxy-ajcryptominer.ajplugins.com
+0.0.0.0 ws25.crypto.csgocpu.com
 0.0.0.0 ws25.crypto-loot.com
 0.0.0.0 ws025.hemnes.win
 0.0.0.0 ws25.hotjar.com
@@ -55461,6 +55469,7 @@
 0.0.0.0 ws027.www.datasecu.download
 0.0.0.0 ws027.www.jqwww.download
 0.0.0.0 ws27-live.live.eks.hotjar.com
+0.0.0.0 ws027-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws028.hemnes.win
 0.0.0.0 ws28.hotjar.com
 0.0.0.0 ws028.ws.tidafors.xyz
@@ -55472,6 +55481,7 @@
 0.0.0.0 ws29.hotjar.com
 0.0.0.0 ws029.ws.tidafors.xyz
 0.0.0.0 ws29-live.live.eks.hotjar.com
+0.0.0.0 ws029-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws30.crypto-loot.com
 0.0.0.0 ws030.hemnes.win
 0.0.0.0 ws30.hotjar.com
@@ -55529,6 +55539,7 @@
 0.0.0.0 ws47.crypto-loot.com
 0.0.0.0 ws48.crypto.csgocpu.com
 0.0.0.0 ws48.crypto-loot.com
+0.0.0.0 ws49.crypto.csgocpu.com
 0.0.0.0 ws49.crypto-loot.com
 0.0.0.0 ws50.crypto.csgocpu.com
 0.0.0.0 ws50.crypto-loot.com
@@ -79126,11 +79137,9 @@
 0.0.0.0 www.4anners.ero-advertising.com
 0.0.0.0 www.4asianporn.com
 0.0.0.0 www.4audhecpqutn1ec.smetrics.traderonline.com
-0.0.0.0 www.4beast.com
 0.0.0.0 www.4bilder1wort.org
 0.0.0.0 www.04bprotectsictznsbnk.dnset.com
 0.0.0.0 www.4bqs.com
-0.0.0.0 www.4cock.com
 0.0.0.0 www.4-counter.com
 0.0.0.0 www.4downfiles1.info
 0.0.0.0 www.4dsply.com
@@ -79210,7 +79219,6 @@
 0.0.0.0 www.6m.pl
 0.0.0.0 www.6ox.de
 0.0.0.0 www.6sense.com
-0.0.0.0 www.6server.com
 0.0.0.0 www.6stuff.com
 0.0.0.0 www.6txb2jecnl1uojw.lyncaccess.adx1.com
 0.0.0.0 www.6txb2jecnl1uojw.www.lyncaccess.adx1.com
@@ -79227,7 +79235,6 @@
 0.0.0.0 www.7eer.net
 0.0.0.0 www.7epta7.com
 0.0.0.0 www.7fb.ru
-0.0.0.0 www.7gfs.com
 0.0.0.0 www.7hari.info
 0.0.0.0 www.7metasearch.com
 0.0.0.0 www.7minuteworkout.com
@@ -79315,7 +79322,6 @@
 0.0.0.0 www.18access.com
 0.0.0.0 www.18bet.com
 0.0.0.0 www.18freeporn.com
-0.0.0.0 www.18hdxxx.com
 0.0.0.0 www.18pluspics.com
 0.0.0.0 www.18plusstore.com
 0.0.0.0 www.18xtube.com
@@ -80061,7 +80067,6 @@
 0.0.0.0 www.abhilashakids.org
 0.0.0.0 www.abihpopihigh.tk
 0.0.0.0 www.abirestaurant.com
-0.0.0.0 www.ablefull.com
 0.0.0.0 www.a-blog.eu
 0.0.0.0 www.abmr.net
 0.0.0.0 www.abo.adx1.com
@@ -81287,7 +81292,6 @@
 0.0.0.0 www.airiscdp.appier.com
 0.0.0.0 www.airjordanfusions.com
 0.0.0.0 www.airmore.pl
-0.0.0.0 www.airpb.com
 0.0.0.0 www.airportsys.com
 0.0.0.0 www.airpr.com
 0.0.0.0 www.airpush.com
@@ -81726,14 +81730,12 @@
 0.0.0.0 www.analyticson.com
 0.0.0.0 www.analytics-prod-m6tmapkf3q-uc.a.run.app
 0.0.0.0 www.analytics-testing-api-osybghtozq-ew.a.run.app
-0.0.0.0 www.ananashotel.com
 0.0.0.0 www.anarsi.info
 0.0.0.0 www.anash.info
 0.0.0.0 www.anastasiasaffiliate.com
 0.0.0.0 www.anate.money-for-you-2021.ru
 0.0.0.0 www.anatol.com
 0.0.0.0 www.anatomytrains.co.uk
-0.0.0.0 www.anbstudios.com
 0.0.0.0 www.ancestrymsn.112.2o7.net
 0.0.0.0 www.and-4ever.blogspot.com
 0.0.0.0 www.and.co.uk
@@ -85226,6 +85228,7 @@
 0.0.0.0 www.clock-desktop.com
 0.0.0.0 www.clocklink.com
 0.0.0.0 www.clockx.net
+0.0.0.0 www.clod.pw
 0.0.0.0 www.clonezilla.es
 0.0.0.0 www.clonezilla.fr
 0.0.0.0 www.closertothedirt.com
@@ -85238,7 +85241,6 @@
 0.0.0.0 www.cloudcrown.com
 0.0.0.0 www.clouddb.info
 0.0.0.0 www.clouderrorreporting.googleapis.com
-0.0.0.0 www.cloudflane.com
 0.0.0.0 www.cloudflareinsights.com
 0.0.0.0 www.cloud-ideabank.at
 0.0.0.0 www.cloud-miner.eu
@@ -85980,6 +85982,7 @@
 0.0.0.0 www.crvhonda.com
 0.0.0.0 www.crwdcntrl.net
 0.0.0.0 www.cryptaloot.pro
+0.0.0.0 www.crypto.csgocpu.com
 0.0.0.0 www.cryptobara.com
 0.0.0.0 www.cryptocoiners.net
 0.0.0.0 www.cryptocoinsad.com
@@ -88036,7 +88039,6 @@
 0.0.0.0 www.etarget.sk
 0.0.0.0 www.etarin.info
 0.0.0.0 www.et-code.ru
-0.0.0.0 www.etemis.com
 0.0.0.0 www.ethaiinfo.com
 0.0.0.0 www.ethairdrops.com
 0.0.0.0 www.ethan.wang
@@ -90183,6 +90185,7 @@
 0.0.0.0 www.gwinnetttech.org
 0.0.0.0 www.gwmtracker.com
 0.0.0.0 www.gwnrecords.com
+0.0.0.0 www.gxbrowser.net
 0.0.0.0 www.gxcttdvn.org
 0.0.0.0 www.gxordgtvjr.com
 0.0.0.0 www.gy2tbrfieygpdjo.dev.cns1.adx1.com
@@ -99865,7 +99868,6 @@
 0.0.0.0 www.stats4you.com
 0.0.0.0 www.stats.data2.ero-advertising.com
 0.0.0.0 www.stats.in.th
-0.0.0.0 www.stats.infogenservice.com
 0.0.0.0 www.stats.levels.fyi
 0.0.0.0 www.stats.net
 0.0.0.0 www.stats.speedclicks.ero-advertising.com
@@ -102334,6 +102336,7 @@
 0.0.0.0 www.voicemail.co.il
 0.0.0.0 www.voip.recs.shareaholic.com
 0.0.0.0 www.vokr-gtavc.ic.cz
+0.0.0.0 www.volantix.com
 0.0.0.0 www.volgatermolazer.ru
 0.0.0.0 www.volleyball-doppeldorf.de
 0.0.0.0 www.voltairnet.org
@@ -103085,22 +103088,19 @@
 0.0.0.0 www.wrought-up-airspeed.000webhostapp.com
 0.0.0.0 www.ws001.ws.tidafors.xyz
 0.0.0.0 www.ws001.www.datasecu.download
+0.0.0.0 www.ws001.www.jqwww.download
 0.0.0.0 www.ws002.ws.tidafors.xyz
 0.0.0.0 www.ws002.www.datasecu.download
-0.0.0.0 www.ws002.www.jqwww.download
 0.0.0.0 www.ws003.ws.tidafors.xyz
 0.0.0.0 www.ws003.www.datasecu.download
-0.0.0.0 www.ws003.www.jqwww.download
 0.0.0.0 www.ws004.ws.tidafors.xyz
 0.0.0.0 www.ws004.www.datasecu.download
-0.0.0.0 www.ws05.crypto.csgocpu.com
+0.0.0.0 www.ws004.www.jqwww.download
 0.0.0.0 www.ws005.ws.tidafors.xyz
 0.0.0.0 www.ws005.www.datasecu.download
 0.0.0.0 www.ws005.www.jqwww.download
-0.0.0.0 www.ws06.crypto.csgocpu.com
 0.0.0.0 www.ws006.ws.tidafors.xyz
 0.0.0.0 www.ws006.www.datasecu.download
-0.0.0.0 www.ws006.www.jqwww.download
 0.0.0.0 www.ws07.crypto.csgocpu.com
 0.0.0.0 www.ws007.ws.tidafors.xyz
 0.0.0.0 www.ws007.www.datasecu.download
@@ -103109,27 +103109,24 @@
 0.0.0.0 www.ws008.ws.tidafors.xyz
 0.0.0.0 www.ws008.www.datasecu.download
 0.0.0.0 www.ws008.www.jqwww.download
-0.0.0.0 www.ws09.crypto.csgocpu.com
 0.0.0.0 www.ws009.ws.tidafors.xyz
 0.0.0.0 www.ws009.www.datasecu.download
 0.0.0.0 www.ws009.www.jqwww.download
 0.0.0.0 www.ws010.ws.tidafors.xyz
 0.0.0.0 www.ws010.www.datasecu.download
-0.0.0.0 www.ws010.www.jqwww.download
 0.0.0.0 www.ws011.ws.tidafors.xyz
 0.0.0.0 www.ws011.www.datasecu.download
+0.0.0.0 www.ws011.www.jqwww.download
 0.0.0.0 www.ws012.ws.tidafors.xyz
 0.0.0.0 www.ws012.www.datasecu.download
 0.0.0.0 www.ws012.www.jqwww.download
 0.0.0.0 www.ws013.ws.tidafors.xyz
 0.0.0.0 www.ws013.www.datasecu.download
-0.0.0.0 www.ws013.www.jqwww.download
 0.0.0.0 www.ws014.ws.tidafors.xyz
 0.0.0.0 www.ws014.www.datasecu.download
 0.0.0.0 www.ws014.www.jqwww.download
 0.0.0.0 www.ws015.ws.tidafors.xyz
 0.0.0.0 www.ws015.www.datasecu.download
-0.0.0.0 www.ws015.www.jqwww.download
 0.0.0.0 www.ws016.ws.tidafors.xyz
 0.0.0.0 www.ws016.www.datasecu.download
 0.0.0.0 www.ws016.www.jqwww.download
@@ -103138,16 +103135,13 @@
 0.0.0.0 www.ws017.www.jqwww.download
 0.0.0.0 www.ws018.ws.tidafors.xyz
 0.0.0.0 www.ws018.www.datasecu.download
-0.0.0.0 www.ws018.www.jqwww.download
 0.0.0.0 www.ws019.ws.tidafors.xyz
 0.0.0.0 www.ws019.www.datasecu.download
-0.0.0.0 www.ws019.www.jqwww.download
 0.0.0.0 www.ws020.ws.tidafors.xyz
 0.0.0.0 www.ws020.www.datasecu.download
 0.0.0.0 www.ws020.www.jqwww.download
 0.0.0.0 www.ws021.ws.tidafors.xyz
 0.0.0.0 www.ws021.www.datasecu.download
-0.0.0.0 www.ws021.www.jqwww.download
 0.0.0.0 www.ws022.ws.tidafors.xyz
 0.0.0.0 www.ws022.www.datasecu.download
 0.0.0.0 www.ws022.www.jqwww.download
@@ -103162,7 +103156,6 @@
 0.0.0.0 www.ws25.crypto.csgocpu.com
 0.0.0.0 www.ws025.ws.tidafors.xyz
 0.0.0.0 www.ws025.www.datasecu.download
-0.0.0.0 www.ws025.www.jqwww.download
 0.0.0.0 www.ws026.ws.tidafors.xyz
 0.0.0.0 www.ws026.www.datasecu.download
 0.0.0.0 www.ws026.www.jqwww.download
@@ -103171,13 +103164,11 @@
 0.0.0.0 www.ws027.www.jqwww.download
 0.0.0.0 www.ws028.ws.tidafors.xyz
 0.0.0.0 www.ws028.www.datasecu.download
-0.0.0.0 www.ws028.www.jqwww.download
 0.0.0.0 www.ws029.ws.tidafors.xyz
 0.0.0.0 www.ws030.ws.tidafors.xyz
 0.0.0.0 www.ws031.ws.tidafors.xyz
 0.0.0.0 www.ws032.ws.tidafors.xyz
 0.0.0.0 www.ws39.adx1.com
-0.0.0.0 www.ws42.crypto.csgocpu.com
 0.0.0.0 www.ws48.crypto.csgocpu.com
 0.0.0.0 www.ws49.crypto.csgocpu.com
 0.0.0.0 www.ws50.crypto.csgocpu.com
