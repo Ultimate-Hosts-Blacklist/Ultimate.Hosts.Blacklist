@@ -2,6 +2,7 @@ name: UHB Deployment Workflow Scheduler
 on:
   schedule:
     - cron: "50 18 * * *"
+  workflow_dispatch: {}
 
 env:
   GIT_NAME: "${{ secrets.GIT_BOT_NAME }}"
