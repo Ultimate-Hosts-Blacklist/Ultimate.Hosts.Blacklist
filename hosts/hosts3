@@ -33421,6 +33421,7 @@
 0.0.0.0 url8880.optimizely.com
 0.0.0.0 url9220.salesloft.com
 0.0.0.0 url9456.mantisadnetwork.com
+0.0.0.0 url9467.comms-2.zoopla.co.uk
 0.0.0.0 url9642.omniconvert.com
 0.0.0.0 url9941.clickcease.com
 0.0.0.0 url.3156.bz
@@ -48252,6 +48253,7 @@
 0.0.0.0 web.celtra.com
 0.0.0.0 web.checkm8.com
 0.0.0.0 web.cinespot.net
+0.0.0.0 web.clod.pw
 0.0.0.0 web.demandbase.com
 0.0.0.0 web.dev.demandbase.com
 0.0.0.0 web.developer.smartlook.com
@@ -54699,7 +54701,6 @@
 0.0.0.0 wp-club.net
 0.0.0.0 wpcms.kwanzoo.com
 0.0.0.0 wp-content.hudebni-kluby.info
-0.0.0.0 wp-content.infamylists.com
 0.0.0.0 wp-creative.adcolony.com
 0.0.0.0 wp-creative-stage.adcolony.com
 0.0.0.0 wpdadmin22.000webhostapp.com
@@ -55228,6 +55229,7 @@
 0.0.0.0 ws2.tapjoyads.com
 0.0.0.0 ws002.ws.tidafors.xyz
 0.0.0.0 ws002.www.datasecu.download
+0.0.0.0 ws002.www.jqwww.download
 0.0.0.0 ws2-aftm.responsys.net
 0.0.0.0 ws2-bafl.responsys.net
 0.0.0.0 ws02cn.streamplay.to
@@ -55239,6 +55241,7 @@
 0.0.0.0 ws2-live.live.eks.hotjar.com
 0.0.0.0 ws2-lufthansa.responsys.net
 0.0.0.0 ws2n.responsys.net
+0.0.0.0 ws002-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws2-shukran.responsys.net
 0.0.0.0 ws2t.responsys.net
 0.0.0.0 ws2-teva.responsys.net
@@ -55258,6 +55261,7 @@
 0.0.0.0 ws003.www.jqwww.download
 0.0.0.0 ws03cn.streamplay.to
 0.0.0.0 ws3-live.live.eks.hotjar.com
+0.0.0.0 ws003-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws4.audigent.com
 0.0.0.0 ws04.crypto-loot.com
 0.0.0.0 ws04.do.nu
@@ -55272,6 +55276,7 @@
 0.0.0.0 ws4-live.live.eks.hotjar.com
 0.0.0.0 ws004-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws4t.responsys.net
+0.0.0.0 ws05.crypto.csgocpu.com
 0.0.0.0 ws05.crypto-loot.com
 0.0.0.0 ws005.hemnes.win
 0.0.0.0 ws05.home.sapo.pt
@@ -55279,6 +55284,7 @@
 0.0.0.0 ws5.responsys.net
 0.0.0.0 ws005.ws.tidafors.xyz
 0.0.0.0 ws005.www.datasecu.download
+0.0.0.0 ws005.www.jqwww.download
 0.0.0.0 ws5-conline.responsys.net
 0.0.0.0 ws5-hatm.responsys.net
 0.0.0.0 ws5-lazada.responsys.net
@@ -55304,6 +55310,7 @@
 0.0.0.0 ws7.ozvdarozv.com
 0.0.0.0 ws007.ws.tidafors.xyz
 0.0.0.0 ws007.www.datasecu.download
+0.0.0.0 ws007.www.jqwww.download
 0.0.0.0 ws7-live.live.eks.hotjar.com
 0.0.0.0 ws007-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws08.crypto.csgocpu.com
@@ -55362,6 +55369,7 @@
 0.0.0.0 ws014.www.datasecu.download
 0.0.0.0 ws014.www.jqwww.download
 0.0.0.0 ws14-live.live.eks.hotjar.com
+0.0.0.0 ws014-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws15.crypto-loot.com
 0.0.0.0 ws015.hemnes.win
 0.0.0.0 ws15.hotjar.com
@@ -55412,6 +55420,7 @@
 0.0.0.0 ws21.hotjar.com
 0.0.0.0 ws021.ws.tidafors.xyz
 0.0.0.0 ws021.www.datasecu.download
+0.0.0.0 ws021.www.jqwww.download
 0.0.0.0 ws21-live.live.eks.hotjar.com
 0.0.0.0 ws22.crypto-loot.com
 0.0.0.0 ws022.hemnes.win
@@ -55420,6 +55429,8 @@
 0.0.0.0 ws022.www.datasecu.download
 0.0.0.0 ws022.www.jqwww.download
 0.0.0.0 ws22-live.live.eks.hotjar.com
+0.0.0.0 ws022-proxy-ajcryptominer.ajplugins.com
+0.0.0.0 ws23.crypto.csgocpu.com
 0.0.0.0 ws23.crypto-loot.com
 0.0.0.0 ws023.hemnes.win
 0.0.0.0 ws23.hotjar.com
@@ -55427,6 +55438,7 @@
 0.0.0.0 ws023.www.datasecu.download
 0.0.0.0 ws023.www.jqwww.download
 0.0.0.0 ws23-live.live.eks.hotjar.com
+0.0.0.0 ws023-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws24.crypto.csgocpu.com
 0.0.0.0 ws24.crypto-loot.com
 0.0.0.0 ws024.hemnes.win
@@ -55436,6 +55448,7 @@
 0.0.0.0 ws024.www.jqwww.download
 0.0.0.0 ws24-live.live.eks.hotjar.com
 0.0.0.0 ws024-proxy-ajcryptominer.ajplugins.com
+0.0.0.0 ws25.crypto.csgocpu.com
 0.0.0.0 ws25.crypto-loot.com
 0.0.0.0 ws025.hemnes.win
 0.0.0.0 ws25.hotjar.com
@@ -55443,11 +55456,13 @@
 0.0.0.0 ws025.www.datasecu.download
 0.0.0.0 ws025.www.jqwww.download
 0.0.0.0 ws25-live.live.eks.hotjar.com
+0.0.0.0 ws025-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws26.crypto-loot.com
 0.0.0.0 ws026.hemnes.win
 0.0.0.0 ws26.hotjar.com
 0.0.0.0 ws026.ws.tidafors.xyz
 0.0.0.0 ws026.www.datasecu.download
+0.0.0.0 ws026.www.jqwww.download
 0.0.0.0 ws26-live.live.eks.hotjar.com
 0.0.0.0 ws026-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws27.crypto-loot.com
@@ -55464,6 +55479,7 @@
 0.0.0.0 ws028.www.datasecu.download
 0.0.0.0 ws028.www.jqwww.download
 0.0.0.0 ws28-live.live.eks.hotjar.com
+0.0.0.0 ws028-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws29.crypto-loot.com
 0.0.0.0 ws029.hemnes.win
 0.0.0.0 ws29.hotjar.com
@@ -85970,6 +85986,7 @@
 0.0.0.0 www.crvhonda.com
 0.0.0.0 www.crwdcntrl.net
 0.0.0.0 www.cryptaloot.pro
+0.0.0.0 www.crypto.csgocpu.com
 0.0.0.0 www.cryptobara.com
 0.0.0.0 www.cryptocoiners.net
 0.0.0.0 www.cryptocoinsad.com
@@ -91689,7 +91706,6 @@
 0.0.0.0 www.javbooks.com
 0.0.0.0 www.jav-bus.com
 0.0.0.0 www.javbus.com
-0.0.0.0 www.jav-cafe.com
 0.0.0.0 www.javcens.com
 0.0.0.0 www.javdb.club
 0.0.0.0 www.javdb.online
@@ -103080,6 +103096,7 @@
 0.0.0.0 www.ws003.www.jqwww.download
 0.0.0.0 www.ws004.ws.tidafors.xyz
 0.0.0.0 www.ws004.www.datasecu.download
+0.0.0.0 www.ws004.www.jqwww.download
 0.0.0.0 www.ws005.ws.tidafors.xyz
 0.0.0.0 www.ws005.www.datasecu.download
 0.0.0.0 www.ws005.www.jqwww.download
