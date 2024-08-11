@@ -1,4 +1,3 @@
-0.0.0.0 su5-cmp0.kdata.fr
 0.0.0.0 su5-sql0.kdata.fr
 0.0.0.0 su5zfl9bmvrg.s.adsco.re
 0.0.0.0 su6-cmp2.kdata.fr
@@ -48257,7 +48256,6 @@
 0.0.0.0 web.celtra.com
 0.0.0.0 web.checkm8.com
 0.0.0.0 web.cinespot.net
-0.0.0.0 web.clod.pw
 0.0.0.0 web.demandbase.com
 0.0.0.0 web.dev.demandbase.com
 0.0.0.0 web.developer.smartlook.com
@@ -55263,10 +55261,8 @@
 0.0.0.0 ws3.trafficstars.com
 0.0.0.0 ws003.ws.tidafors.xyz
 0.0.0.0 ws003.www.datasecu.download
-0.0.0.0 ws003.www.jqwww.download
 0.0.0.0 ws03cn.streamplay.to
 0.0.0.0 ws3-live.live.eks.hotjar.com
-0.0.0.0 ws003-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws4.audigent.com
 0.0.0.0 ws04.crypto-loot.com
 0.0.0.0 ws04.do.nu
@@ -55277,9 +55273,7 @@
 0.0.0.0 ws4.tapjoyads.com
 0.0.0.0 ws004.ws.tidafors.xyz
 0.0.0.0 ws004.www.datasecu.download
-0.0.0.0 ws004.www.jqwww.download
 0.0.0.0 ws4-live.live.eks.hotjar.com
-0.0.0.0 ws004-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws4t.responsys.net
 0.0.0.0 ws05.crypto.csgocpu.com
 0.0.0.0 ws05.crypto-loot.com
@@ -55298,17 +55292,13 @@
 0.0.0.0 ws5-pier1.responsys.net
 0.0.0.0 ws005-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws5t.responsys.net
-0.0.0.0 ws06.crypto.csgocpu.com
 0.0.0.0 ws06.crypto-loot.com
 0.0.0.0 ws006.hemnes.win
 0.0.0.0 ws06.home.sapo.pt
 0.0.0.0 ws6.hotjar.com
 0.0.0.0 ws006.ws.tidafors.xyz
 0.0.0.0 ws006.www.datasecu.download
-0.0.0.0 ws006.www.jqwww.download
 0.0.0.0 ws6-live.live.eks.hotjar.com
-0.0.0.0 ws006-proxy-ajcryptominer.ajplugins.com
-0.0.0.0 ws07.crypto.csgocpu.com
 0.0.0.0 ws07.crypto-loot.com
 0.0.0.0 ws007.hemnes.win
 0.0.0.0 ws7.hotjar.com
@@ -55317,8 +55307,6 @@
 0.0.0.0 ws007.www.datasecu.download
 0.0.0.0 ws007.www.jqwww.download
 0.0.0.0 ws7-live.live.eks.hotjar.com
-0.0.0.0 ws007-proxy-ajcryptominer.ajplugins.com
-0.0.0.0 ws08.crypto.csgocpu.com
 0.0.0.0 ws08.crypto-loot.com
 0.0.0.0 ws008.hemnes.win
 0.0.0.0 ws8.hotjar.com
@@ -55404,7 +55392,6 @@
 0.0.0.0 ws018.www.datasecu.download
 0.0.0.0 ws018.www.jqwww.download
 0.0.0.0 ws18-live.live.eks.hotjar.com
-0.0.0.0 ws018-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws19.crypto-loot.com
 0.0.0.0 ws019.hemnes.win
 0.0.0.0 ws19.hotjar.com
@@ -55443,14 +55430,12 @@
 0.0.0.0 ws023.www.datasecu.download
 0.0.0.0 ws023.www.jqwww.download
 0.0.0.0 ws23-live.live.eks.hotjar.com
-0.0.0.0 ws023-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws24.crypto.csgocpu.com
 0.0.0.0 ws24.crypto-loot.com
 0.0.0.0 ws024.hemnes.win
 0.0.0.0 ws24.hotjar.com
 0.0.0.0 ws024.ws.tidafors.xyz
 0.0.0.0 ws024.www.datasecu.download
-0.0.0.0 ws024.www.jqwww.download
 0.0.0.0 ws24-live.live.eks.hotjar.com
 0.0.0.0 ws024-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws25.crypto.csgocpu.com
@@ -55461,13 +55446,11 @@
 0.0.0.0 ws025.www.datasecu.download
 0.0.0.0 ws025.www.jqwww.download
 0.0.0.0 ws25-live.live.eks.hotjar.com
-0.0.0.0 ws025-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws26.crypto-loot.com
 0.0.0.0 ws026.hemnes.win
 0.0.0.0 ws26.hotjar.com
 0.0.0.0 ws026.ws.tidafors.xyz
 0.0.0.0 ws026.www.datasecu.download
-0.0.0.0 ws026.www.jqwww.download
 0.0.0.0 ws26-live.live.eks.hotjar.com
 0.0.0.0 ws026-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws27.crypto-loot.com
@@ -55475,7 +55458,6 @@
 0.0.0.0 ws27.hotjar.com
 0.0.0.0 ws027.ws.tidafors.xyz
 0.0.0.0 ws027.www.datasecu.download
-0.0.0.0 ws027.www.jqwww.download
 0.0.0.0 ws27-live.live.eks.hotjar.com
 0.0.0.0 ws027-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws028.hemnes.win
@@ -55484,13 +55466,11 @@
 0.0.0.0 ws028.www.datasecu.download
 0.0.0.0 ws028.www.jqwww.download
 0.0.0.0 ws28-live.live.eks.hotjar.com
-0.0.0.0 ws028-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws29.crypto-loot.com
 0.0.0.0 ws029.hemnes.win
 0.0.0.0 ws29.hotjar.com
 0.0.0.0 ws029.ws.tidafors.xyz
 0.0.0.0 ws29-live.live.eks.hotjar.com
-0.0.0.0 ws029-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws30.crypto-loot.com
 0.0.0.0 ws030.hemnes.win
 0.0.0.0 ws30.hotjar.com
@@ -55501,7 +55481,6 @@
 0.0.0.0 ws31.hotjar.com
 0.0.0.0 ws031.ws.tidafors.xyz
 0.0.0.0 ws31-live.live.eks.hotjar.com
-0.0.0.0 ws031-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws32.crypto-loot.com
 0.0.0.0 ws032.hemnes.win
 0.0.0.0 ws32.hotjar.com
