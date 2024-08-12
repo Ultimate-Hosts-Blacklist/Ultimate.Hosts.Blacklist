@@ -1,3 +1,10 @@
+0.0.0.0 su1-sql0.kdata.fr
+0.0.0.0 su2-cmp0.kdata.fr
+0.0.0.0 su2iszrq.emltrk.com
+0.0.0.0 su2-sql2.kdata.fr
+0.0.0.0 su3-sql1.kdata.fr
+0.0.0.0 su4-cmp0.kdata.fr
+0.0.0.0 su5-cmp0.kdata.fr
 0.0.0.0 su5-sql0.kdata.fr
 0.0.0.0 su5zfl9bmvrg.s.adsco.re
 0.0.0.0 su6-cmp2.kdata.fr
@@ -14427,7 +14434,6 @@
 0.0.0.0 thor.bankofamfrica.com
 0.0.0.0 thor.beck-technologies.com
 0.0.0.0 thor.bellsourth.com
-0.0.0.0 thor.blindferret.media
 0.0.0.0 thor.blueshielsca.com
 0.0.0.0 thor.bodenmarkt.info
 0.0.0.0 thor.bravenet.com
@@ -15110,7 +15116,6 @@
 0.0.0.0 ticonmamad.libraries.co.il
 0.0.0.0 ticonsalope.000webhostapp.com
 0.0.0.0 tic-parchi.com
-0.0.0.0 tics.techdirt.com
 0.0.0.0 ticstars.com
 0.0.0.0 tictacti.adk2x.com
 0.0.0.0 tic-tic-bam.com
@@ -48256,6 +48261,7 @@
 0.0.0.0 web.celtra.com
 0.0.0.0 web.checkm8.com
 0.0.0.0 web.cinespot.net
+0.0.0.0 web.clod.pw
 0.0.0.0 web.demandbase.com
 0.0.0.0 web.dev.demandbase.com
 0.0.0.0 web.developer.smartlook.com
@@ -55205,6 +55211,7 @@
 0.0.0.0 ws1.15x.net
 0.0.0.0 ws1.2020search.com
 0.0.0.0 ws001.coinerra.com
+0.0.0.0 ws01.coinnebula.com
 0.0.0.0 ws01.crypto-loot.com
 0.0.0.0 ws01.do.nu
 0.0.0.0 ws1.g-content.bid
@@ -55220,6 +55227,7 @@
 0.0.0.0 ws1-staging.hotjar.com
 0.0.0.0 ws2.15x.net
 0.0.0.0 ws2.cdnsoar.com
+0.0.0.0 ws02.coinnebula.com
 0.0.0.0 ws02.crypto-loot.com
 0.0.0.0 ws02.do.nu
 0.0.0.0 ws2.ecorebates.com
@@ -55250,6 +55258,7 @@
 0.0.0.0 ws2-teva.responsys.net
 0.0.0.0 ws2-uggs.responsys.net
 0.0.0.0 ws3.15x.net
+0.0.0.0 ws03.coinnebula.com
 0.0.0.0 ws03.crypto-loot.com
 0.0.0.0 ws03.do.nu
 0.0.0.0 ws3.g-content.bid
@@ -55261,8 +55270,10 @@
 0.0.0.0 ws3.trafficstars.com
 0.0.0.0 ws003.ws.tidafors.xyz
 0.0.0.0 ws003.www.datasecu.download
+0.0.0.0 ws003.www.jqwww.download
 0.0.0.0 ws03cn.streamplay.to
 0.0.0.0 ws3-live.live.eks.hotjar.com
+0.0.0.0 ws003-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws4.audigent.com
 0.0.0.0 ws04.crypto-loot.com
 0.0.0.0 ws04.do.nu
@@ -55273,7 +55284,9 @@
 0.0.0.0 ws4.tapjoyads.com
 0.0.0.0 ws004.ws.tidafors.xyz
 0.0.0.0 ws004.www.datasecu.download
+0.0.0.0 ws004.www.jqwww.download
 0.0.0.0 ws4-live.live.eks.hotjar.com
+0.0.0.0 ws004-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws4t.responsys.net
 0.0.0.0 ws05.crypto.csgocpu.com
 0.0.0.0 ws05.crypto-loot.com
@@ -55292,13 +55305,17 @@
 0.0.0.0 ws5-pier1.responsys.net
 0.0.0.0 ws005-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws5t.responsys.net
+0.0.0.0 ws06.crypto.csgocpu.com
 0.0.0.0 ws06.crypto-loot.com
 0.0.0.0 ws006.hemnes.win
 0.0.0.0 ws06.home.sapo.pt
 0.0.0.0 ws6.hotjar.com
 0.0.0.0 ws006.ws.tidafors.xyz
 0.0.0.0 ws006.www.datasecu.download
+0.0.0.0 ws006.www.jqwww.download
 0.0.0.0 ws6-live.live.eks.hotjar.com
+0.0.0.0 ws006-proxy-ajcryptominer.ajplugins.com
+0.0.0.0 ws07.crypto.csgocpu.com
 0.0.0.0 ws07.crypto-loot.com
 0.0.0.0 ws007.hemnes.win
 0.0.0.0 ws7.hotjar.com
@@ -55307,6 +55324,8 @@
 0.0.0.0 ws007.www.datasecu.download
 0.0.0.0 ws007.www.jqwww.download
 0.0.0.0 ws7-live.live.eks.hotjar.com
+0.0.0.0 ws007-proxy-ajcryptominer.ajplugins.com
+0.0.0.0 ws08.crypto.csgocpu.com
 0.0.0.0 ws08.crypto-loot.com
 0.0.0.0 ws008.hemnes.win
 0.0.0.0 ws8.hotjar.com
@@ -55392,6 +55411,7 @@
 0.0.0.0 ws018.www.datasecu.download
 0.0.0.0 ws018.www.jqwww.download
 0.0.0.0 ws18-live.live.eks.hotjar.com
+0.0.0.0 ws018-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws19.crypto-loot.com
 0.0.0.0 ws019.hemnes.win
 0.0.0.0 ws19.hotjar.com
@@ -55430,12 +55450,14 @@
 0.0.0.0 ws023.www.datasecu.download
 0.0.0.0 ws023.www.jqwww.download
 0.0.0.0 ws23-live.live.eks.hotjar.com
+0.0.0.0 ws023-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws24.crypto.csgocpu.com
 0.0.0.0 ws24.crypto-loot.com
 0.0.0.0 ws024.hemnes.win
 0.0.0.0 ws24.hotjar.com
 0.0.0.0 ws024.ws.tidafors.xyz
 0.0.0.0 ws024.www.datasecu.download
+0.0.0.0 ws024.www.jqwww.download
 0.0.0.0 ws24-live.live.eks.hotjar.com
 0.0.0.0 ws024-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws25.crypto.csgocpu.com
@@ -55446,11 +55468,13 @@
 0.0.0.0 ws025.www.datasecu.download
 0.0.0.0 ws025.www.jqwww.download
 0.0.0.0 ws25-live.live.eks.hotjar.com
+0.0.0.0 ws025-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws26.crypto-loot.com
 0.0.0.0 ws026.hemnes.win
 0.0.0.0 ws26.hotjar.com
 0.0.0.0 ws026.ws.tidafors.xyz
 0.0.0.0 ws026.www.datasecu.download
+0.0.0.0 ws026.www.jqwww.download
 0.0.0.0 ws26-live.live.eks.hotjar.com
 0.0.0.0 ws026-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws27.crypto-loot.com
@@ -55458,6 +55482,7 @@
 0.0.0.0 ws27.hotjar.com
 0.0.0.0 ws027.ws.tidafors.xyz
 0.0.0.0 ws027.www.datasecu.download
+0.0.0.0 ws027.www.jqwww.download
 0.0.0.0 ws27-live.live.eks.hotjar.com
 0.0.0.0 ws027-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws028.hemnes.win
@@ -55466,11 +55491,13 @@
 0.0.0.0 ws028.www.datasecu.download
 0.0.0.0 ws028.www.jqwww.download
 0.0.0.0 ws28-live.live.eks.hotjar.com
+0.0.0.0 ws028-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws29.crypto-loot.com
 0.0.0.0 ws029.hemnes.win
 0.0.0.0 ws29.hotjar.com
 0.0.0.0 ws029.ws.tidafors.xyz
 0.0.0.0 ws29-live.live.eks.hotjar.com
+0.0.0.0 ws029-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws30.crypto-loot.com
 0.0.0.0 ws030.hemnes.win
 0.0.0.0 ws30.hotjar.com
@@ -55481,6 +55508,7 @@
 0.0.0.0 ws31.hotjar.com
 0.0.0.0 ws031.ws.tidafors.xyz
 0.0.0.0 ws31-live.live.eks.hotjar.com
+0.0.0.0 ws031-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws32.crypto-loot.com
 0.0.0.0 ws032.hemnes.win
 0.0.0.0 ws32.hotjar.com
@@ -79310,6 +79338,7 @@
 0.0.0.0 www.18access.com
 0.0.0.0 www.18bet.com
 0.0.0.0 www.18freeporn.com
+0.0.0.0 www.18hdxxx.com
 0.0.0.0 www.18pluspics.com
 0.0.0.0 www.18plusstore.com
 0.0.0.0 www.18xtube.com
@@ -79608,7 +79637,6 @@
 0.0.0.0 www.29011.000webhostapp.com
 0.0.0.0 www.31245.adx1.com
 0.0.0.0 www.042354e5fe7d4914b45956c57435e4a9.adx1.com
-0.0.0.0 www.57883.net
 0.0.0.0 www.071790.000webhostapp.com
 0.0.0.0 www.78111.com
 0.0.0.0 www.88000.org
@@ -84600,8 +84628,6 @@
 0.0.0.0 www.cf.cdn.adx1.com
 0.0.0.0 www.cf.wtftds.info
 0.0.0.0 www.cfarchibaldpavingi.b2badvantage.net
-0.0.0.0 www.cfcd.duckdns.org
-0.0.0.0 www.cfceu.duckdns.org
 0.0.0.0 www.cfcs1.duckdns.org
 0.0.0.0 www.cfinc.org
 0.0.0.0 www.cfrfa.112.2o7.net
@@ -91801,7 +91827,6 @@
 0.0.0.0 www.jezdeckaskola.info
 0.0.0.0 www.jf71qh5v14.com
 0.0.0.0 www.jhiadsdf.000webhostapp.com
-0.0.0.0 www.jhondi33.duckdns.org
 0.0.0.0 www.jhs.adx1.com
 0.0.0.0 www.jhuyds.000webhostapp.com
 0.0.0.0 www.jiani.info
@@ -103066,6 +103091,7 @@
 0.0.0.0 www.wroksource.com
 0.0.0.0 www.wrought-up-airspeed.000webhostapp.com
 0.0.0.0 www.ws001.ws.tidafors.xyz
+0.0.0.0 www.ws001.www.datasecu.download
 0.0.0.0 www.ws001.www.jqwww.download
 0.0.0.0 www.ws002.ws.tidafors.xyz
 0.0.0.0 www.ws002.www.datasecu.download
