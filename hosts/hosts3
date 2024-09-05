@@ -1,10 +1,3 @@
-0.0.0.0 styx.deliverability.ei-stage-a.us-west-2.k8s.sendgrid.net
-0.0.0.0 styx.exactag.com
-0.0.0.0 su1-sql0.kdata.fr
-0.0.0.0 su2-cmp0.kdata.fr
-0.0.0.0 su2iszrq.emltrk.com
-0.0.0.0 su2-sql2.kdata.fr
-0.0.0.0 su3-sql1.kdata.fr
 0.0.0.0 su4-cmp0.kdata.fr
 0.0.0.0 su5-cmp0.kdata.fr
 0.0.0.0 su5-sql0.kdata.fr
@@ -14437,6 +14430,7 @@
 0.0.0.0 thor.bankofamfrica.com
 0.0.0.0 thor.beck-technologies.com
 0.0.0.0 thor.bellsourth.com
+0.0.0.0 thor.blindferret.media
 0.0.0.0 thor.blueshielsca.com
 0.0.0.0 thor.bodenmarkt.info
 0.0.0.0 thor.bravenet.com
@@ -15119,7 +15113,6 @@
 0.0.0.0 ticonmamad.libraries.co.il
 0.0.0.0 ticonsalope.000webhostapp.com
 0.0.0.0 tic-parchi.com
-0.0.0.0 tics.techdirt.com
 0.0.0.0 ticstars.com
 0.0.0.0 tictacti.adk2x.com
 0.0.0.0 tic-tic-bam.com
@@ -19959,7 +19952,6 @@
 0.0.0.0 tracking60.com
 0.0.0.0 tracking101.com
 0.0.0.0 tracking-1611167402.us-east-1.elb.amazonaws.com
-0.0.0.0 tracking.1-a1502-bi.co.uk
 0.0.0.0 tracking.3com.com
 0.0.0.0 tracking.10e20.com
 0.0.0.0 tracking.21-a4652-bi.co.uk
@@ -48265,7 +48257,6 @@
 0.0.0.0 web.celtra.com
 0.0.0.0 web.checkm8.com
 0.0.0.0 web.cinespot.net
-0.0.0.0 web.clod.pw
 0.0.0.0 web.demandbase.com
 0.0.0.0 web.dev.demandbase.com
 0.0.0.0 web.developer.smartlook.com
@@ -55224,7 +55215,6 @@
 0.0.0.0 ws1.tapjoyads.com
 0.0.0.0 ws001.ws.tidafors.xyz
 0.0.0.0 ws001.www.datasecu.download
-0.0.0.0 ws001.www.jqwww.download
 0.0.0.0 ws01cn.streamplay.to
 0.0.0.0 ws1-live.live.eks.hotjar.com
 0.0.0.0 ws1-staging.hotjar.com
@@ -55242,7 +55232,6 @@
 0.0.0.0 ws2.tapjoyads.com
 0.0.0.0 ws002.ws.tidafors.xyz
 0.0.0.0 ws002.www.datasecu.download
-0.0.0.0 ws002.www.jqwww.download
 0.0.0.0 ws2-aftm.responsys.net
 0.0.0.0 ws2-bafl.responsys.net
 0.0.0.0 ws02cn.streamplay.to
@@ -55254,7 +55243,6 @@
 0.0.0.0 ws2-live.live.eks.hotjar.com
 0.0.0.0 ws2-lufthansa.responsys.net
 0.0.0.0 ws2n.responsys.net
-0.0.0.0 ws002-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws2-shukran.responsys.net
 0.0.0.0 ws2t.responsys.net
 0.0.0.0 ws2-teva.responsys.net
@@ -55323,7 +55311,6 @@
 0.0.0.0 ws7.ozvdarozv.com
 0.0.0.0 ws007.ws.tidafors.xyz
 0.0.0.0 ws007.www.datasecu.download
-0.0.0.0 ws007.www.jqwww.download
 0.0.0.0 ws7-live.live.eks.hotjar.com
 0.0.0.0 ws007-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws08.crypto.csgocpu.com
@@ -55357,7 +55344,6 @@
 0.0.0.0 ws11.shareaholic.com
 0.0.0.0 ws011.ws.tidafors.xyz
 0.0.0.0 ws011.www.datasecu.download
-0.0.0.0 ws011.www.jqwww.download
 0.0.0.0 ws11-live.live.eks.hotjar.com
 0.0.0.0 ws12.crypto-loot.com
 0.0.0.0 ws012.hemnes.win
@@ -55382,7 +55368,6 @@
 0.0.0.0 ws014.www.datasecu.download
 0.0.0.0 ws014.www.jqwww.download
 0.0.0.0 ws14-live.live.eks.hotjar.com
-0.0.0.0 ws014-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws15.crypto-loot.com
 0.0.0.0 ws015.hemnes.win
 0.0.0.0 ws15.hotjar.com
@@ -55402,7 +55387,6 @@
 0.0.0.0 ws17.hotjar.com
 0.0.0.0 ws017.ws.tidafors.xyz
 0.0.0.0 ws017.www.datasecu.download
-0.0.0.0 ws017.www.jqwww.download
 0.0.0.0 ws17-live.live.eks.hotjar.com
 0.0.0.0 ws017-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws18.crypto-loot.com
@@ -55427,7 +55411,6 @@
 0.0.0.0 ws020.www.datasecu.download
 0.0.0.0 ws020.www.jqwww.download
 0.0.0.0 ws20-live.live.eks.hotjar.com
-0.0.0.0 ws020-proxy-ajcryptominer.ajplugins.com
 0.0.0.0 ws21.crypto-loot.com
 0.0.0.0 ws021.hemnes.win
 0.0.0.0 ws21.hotjar.com
@@ -84627,7 +84610,6 @@
 0.0.0.0 www.cf.cdn.adx1.com
 0.0.0.0 www.cf.wtftds.info
 0.0.0.0 www.cfarchibaldpavingi.b2badvantage.net
-0.0.0.0 www.cfcd.duckdns.org
 0.0.0.0 www.cfceu.duckdns.org
 0.0.0.0 www.cfcs1.duckdns.org
 0.0.0.0 www.cfinc.org
@@ -85557,6 +85539,7 @@
 0.0.0.0 www.compositefarming.com
 0.0.0.0 www.comprafacil.com.br
 0.0.0.0 www.comptrffc.com
+0.0.0.0 www.compucelunlock.net
 0.0.0.0 www.compuclever.leadpages.co
 0.0.0.0 www.compufixshop.com
 0.0.0.0 www.compulink-support.com
@@ -88634,7 +88617,6 @@
 0.0.0.0 www.filezilla.fr
 0.0.0.0 www.filezillaproject.org
 0.0.0.0 www.fili.cc
-0.0.0.0 www.fili.tv
 0.0.0.0 www.filieregourmande.info
 0.0.0.0 www.filimizlesene.com
 0.0.0.0 www.filipinas-snapworx.facebook-ads.adtz.com
@@ -89616,7 +89598,6 @@
 0.0.0.0 www.ghetto-theresienstadt.info
 0.0.0.0 www.ghostboard.io
 0.0.0.0 www.ghostbook.siliconorchard.com
-0.0.0.0 www.ghousiasports.com
 0.0.0.0 www.giagoc.com
 0.0.0.0 www.giansagar.org
 0.0.0.0 www.gie.blueconic.net
@@ -91752,7 +91733,6 @@
 0.0.0.0 www.javparty.com
 0.0.0.0 www.javperfect.com
 0.0.0.0 www.javplanet.net
-0.0.0.0 www.javpop.org
 0.0.0.0 www.javporn.club
 0.0.0.0 www.javpron.com
 0.0.0.0 www.javspeed.com
@@ -94790,7 +94770,6 @@
 0.0.0.0 www.netglog.com
 0.0.0.0 www.nethit-free.nl
 0.0.0.0 www.nethousesprices.com
-0.0.0.0 www.netjav.com
 0.0.0.0 www.netmaxx.com
 0.0.0.0 www.netmng.com
 0.0.0.0 www.netonlinejobs.com
