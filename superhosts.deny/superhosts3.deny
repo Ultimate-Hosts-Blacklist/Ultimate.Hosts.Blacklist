@@ -1,5 +1,3 @@
-ALL: zn7whwrcrmbs9xwydnlmenterprise.siteintercept.qualtrics.com
-ALL: zn7wjxa5brlo6jo3h-delawarenorth.siteintercept.qualtrics.com
 ALL: zn07wyfg2q4cdgd3f-hpops.siteintercept.qualtrics.com
 ALL: zn07xeuntcdm5aftz-smartdcc.siteintercept.qualtrics.com
 ALL: zn7zaxmi8qt9tgxa1-hrsagov.gov1.siteintercept.qualtrics.com
@@ -48266,7 +48264,6 @@ ALL: 87.98.175.11
 ALL: 87.98.177.235
 ALL: 87.98.178.197
 ALL: 87.98.182.87
-ALL: 87.98.182.151
 ALL: 87.98.184.245
 ALL: 87.98.185.221
 ALL: 87.98.186.140
@@ -86480,7 +86477,6 @@ ALL: 159.69.81.18
 ALL: 159.80.0.0/16
 ALL: 159.85.0.0/16
 ALL: 159.89.6.123
-ALL: 159.89.37.68
 ALL: 159.89.44.45
 ALL: 159.89.46.198
 ALL: 159.89.51.68
@@ -99431,7 +99427,6 @@ ALL: 179.107.63.242
 ALL: 179.107.99.58
 ALL: 179.107.107.123
 ALL: 179.107.111.106
-ALL: 179.108.38.59
 ALL: 179.108.54.110
 ALL: 179.108.59.39
 ALL: 179.108.67.239
