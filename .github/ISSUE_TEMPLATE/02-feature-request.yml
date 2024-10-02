@@ -1,0 +1,97 @@
+name: Feature Request
+description: Suggest an idea for this project.
+title: "Feature Request | My Awesome Idea"
+labels:
+  - enhancement
+projects:
+  - Ultimate-Hosts-Blacklist/4
+assignees:
+  - funilrys
+  - mitchellkrogza
+body:
+  - type: markdown
+    attributes:
+      value: |+
+        Thanks for taking the time to fill out this feature request!
+
+        _Please help us by reporting to the right place. If you are not sure, please check the project's [README](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist?tab=readme-ov-file#where-to-report-or-discuss-about-something-)._
+
+        We would like to hear your ideas for new features or improvements to the Ultimate-Hosts-Blacklist.
+        Please provide as much detail as possible, including the problem you are trying to solve and the solution you'd like.
+
+        All feature requests are welcome, but please be aware that:
+          - We are a small team and may not be able to respond immediately.
+          - We may ask for more information to help us understand the request.
+          - Your request may be moved to our [dev-center](https://github.com/Ultimate-Hosts-Blacklist/dev-center/issues) or one of our other repositories.
+
+        We appreciate your help in making the Ultimate-Hosts-Blacklist better!
+
+        The Ultimate-Hosts-Blacklist Team.
+  - type: textarea
+    id: feature
+    attributes:
+      label: What is the feature you'd like to request?
+      description: Please describe the feature you'd like to request.
+      placeholder: |
+        I'd like to request a feature that...
+      value: |
+        I'd like to request a feature that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Please describe the problem you are trying to solve.
+      placeholder: |
+        I'm trying to solve a problem where...
+      value: |
+        I'm trying to solve a problem where...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: What solution would you like to see?
+      description: Please describe the solution you'd like to see.
+      placeholder: |
+        I'd like to see a solution that...
+      value: |
+        I'd like to see a solution that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Are there any alternatives you've considered?
+      description: Please describe any alternatives you've considered.
+      placeholder: |
+        I've considered alternatives such as...
+      value: |
+        I've considered alternatives such as...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Please provide any additional context or screenshots.
+      placeholder: |
+        I would like to add...
+      value: |
+        I would like to add...
+    validations:
+      required: false
+
+  # - type: checkboxes
+  #   id: terms
+  #   attributes:
+  #     label: Code of Conduct
+  #     description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.org/todo).
+  #     options:
+  #       - label: I agree to follow this project's Code of Conduct
+  #         required: true

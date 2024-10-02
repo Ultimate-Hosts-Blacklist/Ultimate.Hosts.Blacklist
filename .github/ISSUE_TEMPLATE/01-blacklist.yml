@@ -1,0 +1,104 @@
+name: Blacklist Report
+description: Report a domain or URL that should be added to the blacklist.
+title: "Blacklist | example.org"
+labels:
+  - blacklist
+projects:
+  - Ultimate-Hosts-Blacklist/4
+assignees:
+  - funilrys
+  - mitchellkrogza
+  - smed79
+body:
+  - type: markdown
+    attributes:
+      value: |+
+        Thanks for taking the time to fill out this blacklist report.
+
+        _Please help us by reporting to the right place. If you are not sure, please check the project's [README](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist?tab=readme-ov-file#where-to-report-or-discuss-about-something-)._
+
+        We would like to hear about any domains or URLs that you believe should be added to the Ultimate-Hosts-Blacklist.
+        Please provide as much detail as possible, including the reason you believe the domain or URL should be added.
+
+        All blacklist requests are welcome, but please be aware that:
+          - We are a small team and may not be able to respond immediately.
+          - We may ask for more information to help us understand the issue.
+          - Your issue may be moved to our [blacklist](https://github.com/Ultimate-Hosts-Blacklist/blacklist/issues) repository.
+
+        We appreciate your help in making the Ultimate-Hosts-Blacklist better!
+
+        The Ultimate-Hosts-Blacklist Team.
+  - type: textarea
+    id: target-subjects
+    attributes:
+      label: What are the subjects of the blacklist (domains or URLS)?
+      description: |
+        Please list any domains or URLs that you believe should be added to the blacklist.
+      placeholder: |
+        * example.com
+        * sub.example.com
+        * https://example.com/page
+        * https://sub.example.com/page
+      value: |
+        * example.com
+        * sub.example.com
+        * https://example.com/page
+        * https://sub.example.com/page
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why do you believe these subjects should be added to the blacklist?
+      description: |
+        Please explain why you believe these subjects should be added to the blacklist.
+      placeholder: |
+        I believe these subjects should be added to the blacklist because...
+      value: |
+        I believe these subjects should be added to the blacklist because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: discovery
+    attributes:
+      label: How did you discover this subject(s)?
+      description: Please provide any information that may help us understand how you discovered this subject(s).
+      placeholder: |
+        I discovered this subject(s) by...
+      value: |
+        I discovered this subject(s) by...
+    validations:
+      required: true
+  - type: textarea
+    id: peer-sources-review
+    attributes:
+      label: Have you requested a blacklist review from other sources?
+      description: |
+        Please include any relevant links to your existing blacklisting requests.
+      placeholder: |
+        I have requested a blacklist review from...
+      value: |
+        I have requested a blacklist review from...
+    validations:
+      required: false
+  - type: textarea
+    id: more-info
+    attributes:
+      label: Additional Information or Context
+      description: Is there anything else you'd like to add?
+      placeholder: |
+        I have also noticed that...
+      value: |
+        I have also noticed that...
+    validations:
+      required: false
+
+  # - type: checkboxes
+  #   id: terms
+  #   attributes:
+  #     label: Code of Conduct
+  #     description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.org/todo).
+  #     options:
+  #       - label: I agree to follow this project's Code of Conduct
+  #         required: true

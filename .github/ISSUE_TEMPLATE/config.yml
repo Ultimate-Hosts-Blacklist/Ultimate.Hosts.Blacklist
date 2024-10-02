@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    url: https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/discussions
+    about: Please ask and answer questions here.
+  - name: Whitelist
+    url: https://github.com/Ultimate-Hosts-Blacklist/whitelist/issues
+    about: Please report false positives here.
+  - name: Blacklist
+    url: https://github.com/Ultimate-Hosts-Blacklist/blacklist/issues
+    about: Please report blacklist review requests here.

@@ -1,0 +1,104 @@
+name: False-Positive Report
+description: Report a (possible) false-positive.
+title: "False Positive | example.org"
+labels:
+  - false-positive
+projects:
+  - Ultimate-Hosts-Blacklist/4
+assignees:
+  - funilrys
+  - mitchellkrogza
+  - smed79
+body:
+  - type: markdown
+    attributes:
+      value: |+
+        Thanks for taking the time to fill out this false-positive report!
+
+        _Please help us by reporting to the right place. If you are not sure, please check the project's [README](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist?tab=readme-ov-file#where-to-report-or-discuss-about-something-)._
+
+        We understand that this can be frustrating, confusing, embarrassing, time consuming, and even painful for many webmasters, developers, user and websites or services owners.
+        Please be patient and rest assured that we one of our team members will address your issue as soon as possible. Please be sure to provide as much information as possible to help us understand the issue.
+
+        Before you submit this issue, please make sure that you have used our [search](https://hosts.ubuntu101.co.za/app/contents) to check if the the subject of your report is already or still listed.
+
+        All issues are welcome, but please be aware that:
+          - We are a small team and may not be able to respond immediately.
+          - We may ask for more information to help us understand the issue.
+          - Your issue may be moved to our [whitelist](https://github.com/Ultimate-Hosts-Blacklist/whitelist/issues) repository.
+
+        We appreciate your help in making the Ultimate-Hosts-Blacklist better!
+
+        The Ultimate-Hosts-Blacklist Team.
+  - type: textarea
+    id: target-subjects
+    attributes:
+      label: What are the subjects of the false-positive (domains or URLS)?
+      description: |
+        Please list any domains or URLs that you believe are false-positives.
+      placeholder: |
+        * example.com
+        * sub.example.com
+        * https://example.com/page
+        * https://sub.example.com/page
+      value: |
+        * example.com
+        * sub.example.com
+        * https://example.com/page
+        * https://sub.example.com/page
+    validations:
+      required: true
+  - type: textarea
+    id: false-positive
+    attributes:
+      label: Why do you believe this is a false-positive?
+      description: Please explain why you believe this is a false-positive.
+      placeholder: |
+        I believe this is a false-positive because...
+      value: |
+        I believe this is a false-positive because...
+    validations:
+      required: true
+  - type: textarea
+    id: discovery
+    attributes:
+      label: How did you discover this false-positive(s)?
+      description: Please provide any information that may help us understand how you discovered this false-positive(s).
+      placeholder: |
+        I discovered this false-positive by...
+      value: |
+        I discovered this false-positive by...
+    validations:
+      required: true
+  - type: textarea
+    id: peer-sources-review
+    attributes:
+      label: Have you requested a review from other sources?
+      description: |
+        Please include any relevant links to your existing removal or whitelisting requests.
+      placeholder: |
+        I have requested a review from...
+      value: |
+        I have requested a review from...
+    validations:
+      required: false
+  - type: textarea
+    id: more-info
+    attributes:
+      label: Additional Information or Context
+      description: Is there anything else you'd like to add?
+      placeholder: |
+        I have also noticed that...
+      value: |
+        I have also noticed that...
+    validations:
+      required: false
+
+  # - type: checkboxes
+  #   id: terms
+  #   attributes:
+  #     label: Code of Conduct
+  #     description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.org/todo).
+  #     options:
+  #       - label: I agree to follow this project's Code of Conduct
+  #         required: true

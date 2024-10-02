@@ -1,0 +1,100 @@
+name: Bug Report
+description: Report a bug or issue.
+title: "Bug | My Awesome Bug"
+labels:
+  - bug
+projects:
+  - Ultimate-Hosts-Blacklist/4
+assignees:
+  - funilrys
+  - mitchellkrogza
+body:
+  - type: markdown
+    attributes:
+      value: |+
+        Thanks for taking the time to fill out this bug report!
+
+        _Please help us by reporting to the right place. If you are not sure, please check the project's [README](https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist?tab=readme-ov-file#where-to-report-or-discuss-about-something-)._
+
+        We understand that this can be frustrating, confusing, embarrassing, time consuming, and even painful for you.
+        Please be patient and rest assured that one of our team members will try to address your issue as soon as possible.
+        Please be sure to provide as much information as possible to help us understand the issue.
+
+        All bug reports are welcome, but please be aware that:
+          - We are a small team and may not be able to respond immediately.
+          - We may ask for more information to help us understand the issue.
+          - Your request may be moved to our [dev-center](https://github.com/Ultimate-Hosts-Blacklist/dev-center/issues) or one of our other repositories.
+
+        We appreciate your help in making the Ultimate-Hosts-Blacklist better!
+
+        The Ultimate-Hosts-Blacklist Team.
+
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is the problem you are experiencing?
+      description: Please describe the problem you are experiencing.
+      placeholder: |
+        I am experiencing a problem where...
+      value: |
+        I am experiencing a problem where...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: How can we reproduce the problem?
+      description: Please describe how we can reproduce the problem.
+      placeholder: |
+        To reproduce the problem...
+      value: |
+        To reproduce the problem...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: Please describe what you expected to happen.
+      placeholder: |
+        I expected that...
+      value: |
+        I expected that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Is there a workaround?
+      description: Please describe if there is a workaround.
+      placeholder: |
+        I found a workaround...
+      value: |
+        I found a workaround...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Please provide any additional context or screenshots.
+      placeholder: |
+        I would like to add...
+      value: |
+        I would like to add...
+    validations:
+      required: false
+
+  # - type: checkboxes
+  #   id: terms
+  #   attributes:
+  #     label: Code of Conduct
+  #     description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.org/todo).
+  #     options:
+  #       - label: I agree to follow this project's Code of Conduct
+  #         required: true
