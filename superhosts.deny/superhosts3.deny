@@ -1,5 +1,3 @@
-ALL: zn7vxbjk81nhox2qf-springernature.siteintercept.qualtrics.com
-ALL: zn7wdmojjixvhyobn-news.siteintercept.qualtrics.com
 ALL: zn7weq3ulla03svlp-sans.siteintercept.qualtrics.com
 ALL: zn7whwrcrmbs9xwyd-nlmenterprise.siteintercept.qualtrics.com
 ALL: zn7whwrcrmbs9xwydnlmenterprise.siteintercept.qualtrics.com
@@ -32230,7 +32228,6 @@ ALL: 69.65.3.173
 ALL: 69.65.27.131
 ALL: 69.65.38.224
 ALL: 69.65.39.23
-ALL: 69.65.40.153
 ALL: 69.65.43.176
 ALL: 69.67.53.74
 ALL: 69.67.55.25
@@ -81335,6 +81332,7 @@ ALL: 138.68.50.24
 ALL: 138.68.52.34
 ALL: 138.68.56.146
 ALL: 138.68.56.201
+ALL: 138.68.57.194
 ALL: 138.68.58.47
 ALL: 138.68.58.143
 ALL: 138.68.68.91
@@ -85902,7 +85900,6 @@ ALL: 157.119.0.0/22
 ALL: 157.119.48.210
 ALL: 157.119.64.0/21
 ALL: 157.119.68.0/22
-ALL: 157.119.73.60
 ALL: 157.148.116.0/24
 ALL: 157.151.81.100
 ALL: 157.157.29.140
@@ -99434,7 +99431,6 @@ ALL: 179.107.63.242
 ALL: 179.107.99.58
 ALL: 179.107.107.123
 ALL: 179.107.111.106
-ALL: 179.108.38.59
 ALL: 179.108.54.110
 ALL: 179.108.59.39
 ALL: 179.108.67.239
@@ -106323,6 +106319,7 @@ ALL: 185.100.87.206
 ALL: 185.100.87.207
 ALL: 185.100.87.210
 ALL: 185.100.87.245
+ALL: 185.100.87.246
 ALL: 185.100.87.250
 ALL: 185.100.237.133
 ALL: 185.101.35.173
