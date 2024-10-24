@@ -1,4 +1,3 @@
-ALL: zn7wdmojjixvhyobn-news.siteintercept.qualtrics.com
 ALL: zn7weq3ulla03svlp-sans.siteintercept.qualtrics.com
 ALL: zn7whwrcrmbs9xwyd-nlmenterprise.siteintercept.qualtrics.com
 ALL: zn7whwrcrmbs9xwydnlmenterprise.siteintercept.qualtrics.com
@@ -16956,6 +16955,7 @@ ALL: 46.101.114.213
 ALL: 46.101.114.246
 ALL: 46.101.115.22
 ALL: 46.101.119.15
+ALL: 46.101.125.74
 ALL: 46.101.128.50
 ALL: 46.101.132.177
 ALL: 46.101.139.6
@@ -50347,7 +50347,6 @@ ALL: 89.31.97.120
 ALL: 89.31.143.1
 ALL: 89.31.146.111
 ALL: 89.31.150.57
-ALL: 89.32.41.17
 ALL: 89.32.43.0/24
 ALL: 89.32.63.202
 ALL: 89.32.170.0/24
@@ -88737,6 +88736,7 @@ ALL: 165.22.21.12
 ALL: 165.22.51.44
 ALL: 165.22.81.128
 ALL: 165.22.88.10
+ALL: 165.22.110.41
 ALL: 165.22.193.16
 ALL: 165.25.0.0/16
 ALL: 165.56.55.253
@@ -120369,6 +120369,7 @@ ALL: 193.140.135.69
 ALL: 193.140.220.8
 ALL: 193.140.254.104
 ALL: 193.142.59.0/24
+ALL: 193.142.59.19
 ALL: 193.142.59.103
 ALL: 193.142.146.0/24
 ALL: 193.142.159.152
