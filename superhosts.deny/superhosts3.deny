@@ -1,4 +1,3 @@
-ALL: zn7weq3ulla03svlp-sans.siteintercept.qualtrics.com
 ALL: zn7whwrcrmbs9xwyd-nlmenterprise.siteintercept.qualtrics.com
 ALL: zn7whwrcrmbs9xwydnlmenterprise.siteintercept.qualtrics.com
 ALL: zn7wjxa5brlo6jo3h-delawarenorth.siteintercept.qualtrics.com
@@ -16177,7 +16176,6 @@ ALL: 45.141.102.217
 ALL: 45.142.155.0/24
 ALL: 45.142.185.52
 ALL: 45.142.192.0/24
-ALL: 45.142.195.8
 ALL: 45.143.136.0/24
 ALL: 45.143.136.0/23
 ALL: 45.143.138.0/24
@@ -88736,7 +88734,6 @@ ALL: 165.22.21.12
 ALL: 165.22.51.44
 ALL: 165.22.81.128
 ALL: 165.22.88.10
-ALL: 165.22.110.41
 ALL: 165.22.193.16
 ALL: 165.25.0.0/16
 ALL: 165.56.55.253
@@ -143862,7 +143859,6 @@ ALL: 222.184.241.98
 ALL: 222.185.255.227
 ALL: 222.186.21.31
 ALL: 222.186.21.61
-ALL: 222.186.21.143
 ALL: 222.186.56.117
 ALL: 222.186.56.141
 ALL: 222.188.89.146
