@@ -1,3 +1,18 @@
+ALL: zn7p6eiqhtal5zvwz-sapinsights.siteintercept.qualtrics.com
+ALL: zn_7pdigszm6vbbekb-suncorp.siteintercept.qualtrics.com
+ALL: zn7pmbtabt6c6hhtj-hsbccmb.siteintercept.qualtrics.com
+ALL: zn7pvvogbfmgnzg4b-kumandgo.siteintercept.qualtrics.com
+ALL: zn7pzkmrz4ouhr2f3-ticketmaster.siteintercept.qualtrics.com
+ALL: zn7q9r07dgixlhoad-ptc.siteintercept.qualtrics.com
+ALL: zn7qchny5hadksvmv-expressscriptscx.siteintercept.qualtrics.com
+ALL: zn7qw02fztzjl8lyu-inc.siteintercept.qualtrics.com
+ALL: zn7tybmmdb9avckvv-inspire.siteintercept.qualtrics.com
+ALL: zn_7u8vieqdpenxvv3-hyatt.siteintercept.qualtrics.com
+ALL: zn7uu4jf9xjce38b7-careerbuilder.siteintercept.qualtrics.com
+ALL: zn7v5gomlwbd1rs73-delwp.siteintercept.qualtrics.com
+ALL: zn7vxbjk81nhox2qf-springernature.siteintercept.qualtrics.com
+ALL: zn7wdmojjixvhyobn-news.siteintercept.qualtrics.com
+ALL: zn7weq3ulla03svlp-sans.siteintercept.qualtrics.com
 ALL: zn7whwrcrmbs9xwyd-nlmenterprise.siteintercept.qualtrics.com
 ALL: zn7whwrcrmbs9xwydnlmenterprise.siteintercept.qualtrics.com
 ALL: zn7wjxa5brlo6jo3h-delawarenorth.siteintercept.qualtrics.com
@@ -16176,6 +16191,7 @@ ALL: 45.141.102.217
 ALL: 45.142.155.0/24
 ALL: 45.142.185.52
 ALL: 45.142.192.0/24
+ALL: 45.142.195.8
 ALL: 45.143.136.0/24
 ALL: 45.143.136.0/23
 ALL: 45.143.138.0/24
@@ -32227,7 +32243,6 @@ ALL: 69.65.3.173
 ALL: 69.65.27.131
 ALL: 69.65.38.224
 ALL: 69.65.39.23
-ALL: 69.65.40.153
 ALL: 69.65.43.176
 ALL: 69.67.53.74
 ALL: 69.67.55.25
@@ -81332,6 +81347,7 @@ ALL: 138.68.50.24
 ALL: 138.68.52.34
 ALL: 138.68.56.146
 ALL: 138.68.56.201
+ALL: 138.68.57.194
 ALL: 138.68.58.47
 ALL: 138.68.58.143
 ALL: 138.68.68.91
