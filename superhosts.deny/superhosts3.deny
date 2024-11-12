@@ -1,3 +1,4 @@
+ALL: zn7ol39md50sxgwzx-americanheart.siteintercept.qualtrics.com
 ALL: zn7p2gx79hv2sktwl-biltmore.siteintercept.qualtrics.com
 ALL: zn7p6eiqhtal5zvwz-sapinsights.siteintercept.qualtrics.com
 ALL: zn_7pdigszm6vbbekb-suncorp.siteintercept.qualtrics.com
@@ -31969,6 +31970,7 @@ ALL: 69.30.250.202
 ALL: 69.30.251.58
 ALL: 69.30.251.139
 ALL: 69.30.252.42
+ALL: 69.30.255.106
 ALL: 69.30.255.186
 ALL: 69.31.16.88
 ALL: 69.31.81.57
@@ -64268,7 +64270,6 @@ ALL: 104.243.26.254
 ALL: 104.243.35.162
 ALL: 104.243.37.48
 ALL: 104.243.39.26
-ALL: 104.243.129.210
 ALL: 104.243.192.0/20
 ALL: 104.244.56.0/21
 ALL: 104.244.72.73
@@ -106845,6 +106846,7 @@ ALL: 185.182.56.119
 ALL: 185.182.56.170
 ALL: 185.183.21.205
 ALL: 185.183.95.71
+ALL: 185.183.96.33
 ALL: 185.183.120.29
 ALL: 185.183.156.20
 ALL: 185.183.156.24
