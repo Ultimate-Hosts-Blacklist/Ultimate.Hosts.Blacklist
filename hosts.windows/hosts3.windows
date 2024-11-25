@@ -3352,6 +3352,7 @@
 127.0.0.1 t.tellapart.com
 127.0.0.1 t.tenmax.io
 127.0.0.1 t.thebrighttag.com
+127.0.0.1 t.tmdn2015x9.com
 127.0.0.1 t.tns-counter.ru
 127.0.0.1 t.topcam.org
 127.0.0.1 t.tpcserve.com
@@ -45651,6 +45652,7 @@
 127.0.0.1 wrzosek.go.pl
 127.0.0.1 ws1.15x.net
 127.0.0.1 ws1.2020search.com
+127.0.0.1 ws1.bmnr.pw
 127.0.0.1 ws001.coinerra.com
 127.0.0.1 ws01.coinlab.biz
 127.0.0.1 ws01.crypto-loot.com
@@ -45667,6 +45669,7 @@
 127.0.0.1 ws1-live.live.eks.hotjar.com
 127.0.0.1 ws1-staging.hotjar.com
 127.0.0.1 ws2.15x.net
+127.0.0.1 ws2.bmnr.pw
 127.0.0.1 ws2.cdnsoar.com
 127.0.0.1 ws02.crypto-loot.com
 127.0.0.1 ws02.do.nu
@@ -45698,6 +45701,7 @@
 127.0.0.1 ws2-teva.responsys.net
 127.0.0.1 ws2-uggs.responsys.net
 127.0.0.1 ws3.15x.net
+127.0.0.1 ws3.bmnr.pw
 127.0.0.1 ws03.crypto-loot.com
 127.0.0.1 ws03.do.nu
 127.0.0.1 ws3.g-content.bid
@@ -45709,11 +45713,10 @@
 127.0.0.1 ws3.trafficstars.com
 127.0.0.1 ws003.ws.tidafors.xyz
 127.0.0.1 ws003.www.datasecu.download
-127.0.0.1 ws003.www.jqwww.download
 127.0.0.1 ws03cn.streamplay.to
 127.0.0.1 ws3-live.live.eks.hotjar.com
-127.0.0.1 ws003-proxy-ajcryptominer.ajplugins.com
 127.0.0.1 ws4.audigent.com
+127.0.0.1 ws4.bmnr.pw
 127.0.0.1 ws04.crypto-loot.com
 127.0.0.1 ws04.do.nu
 127.0.0.1 ws004.hemnes.win
@@ -45727,6 +45730,7 @@
 127.0.0.1 ws4-live.live.eks.hotjar.com
 127.0.0.1 ws004-proxy-ajcryptominer.ajplugins.com
 127.0.0.1 ws4t.responsys.net
+127.0.0.1 ws5.bmnr.pw
 127.0.0.1 ws05.crypto.csgocpu.com
 127.0.0.1 ws05.crypto-loot.com
 127.0.0.1 ws005.hemnes.win
@@ -45761,9 +45765,7 @@
 127.0.0.1 ws7.ozvdarozv.com
 127.0.0.1 ws007.ws.tidafors.xyz
 127.0.0.1 ws007.www.datasecu.download
-127.0.0.1 ws007.www.jqwww.download
 127.0.0.1 ws7-live.live.eks.hotjar.com
-127.0.0.1 ws007-proxy-ajcryptominer.ajplugins.com
 127.0.0.1 ws08.crypto.csgocpu.com
 127.0.0.1 ws08.crypto-loot.com
 127.0.0.1 ws008.hemnes.win
@@ -45810,9 +45812,7 @@
 127.0.0.1 ws13.hotjar.com
 127.0.0.1 ws013.ws.tidafors.xyz
 127.0.0.1 ws013.www.datasecu.download
-127.0.0.1 ws013.www.jqwww.download
 127.0.0.1 ws13-live.live.eks.hotjar.com
-127.0.0.1 ws013-proxy-ajcryptominer.ajplugins.com
 127.0.0.1 ws14.crypto-loot.com
 127.0.0.1 ws014.hemnes.win
 127.0.0.1 ws14.hotjar.com
@@ -45826,7 +45826,6 @@
 127.0.0.1 ws15.hotjar.com
 127.0.0.1 ws015.ws.tidafors.xyz
 127.0.0.1 ws015.www.datasecu.download
-127.0.0.1 ws015.www.jqwww.download
 127.0.0.1 ws15-live.live.eks.hotjar.com
 127.0.0.1 ws16.crypto-loot.com
 127.0.0.1 ws016.hemnes.win
@@ -70478,7 +70477,6 @@
 127.0.0.1 www.acecashchecks.com
 127.0.0.1 www.acecashexpres.com
 127.0.0.1 www.acehonline.info
-127.0.0.1 www.acenar.com
 127.0.0.1 www.acenet.org
 127.0.0.1 www.acertb.com
 127.0.0.1 www.acesshollywood.com
@@ -71733,7 +71731,6 @@
 127.0.0.1 www.alexsoff.com
 127.0.0.1 www.alfa9.com
 127.0.0.1 www.alfa-medosmotr.ru
-127.0.0.1 www.alfa-search.com
 127.0.0.1 www.alfik-fik.com
 127.0.0.1 www.alfikurier.org
 127.0.0.1 www.alf-img.com
@@ -73857,6 +73854,7 @@
 127.0.0.1 www.bmdmax.com
 127.0.0.1 www.bmefreeq.com
 127.0.0.1 www.bmmetrix.com
+127.0.0.1 www.bmnr.pw
 127.0.0.1 www.bmw.gr.com
 127.0.0.1 www.bmwdiesels.com
 127.0.0.1 www.bmw-southafrica.facebook-ads.adtz.com
@@ -78886,6 +78884,7 @@
 127.0.0.1 www.filezilla.fr
 127.0.0.1 www.filezillaproject.org
 127.0.0.1 www.fili.cc
+127.0.0.1 www.fili.tv
 127.0.0.1 www.filieregourmande.info
 127.0.0.1 www.filimizlesene.com
 127.0.0.1 www.filipinas-snapworx.facebook-ads.adtz.com
@@ -81176,7 +81175,6 @@
 127.0.0.1 www.icloud.gr.com
 127.0.0.1 www.icloudserv.com
 127.0.0.1 www.icloudzne.com
-127.0.0.1 www.iclsas.com
 127.0.0.1 www.icngular.com
 127.0.0.1 www.icom.boldcigate.nanorep.co
 127.0.0.1 www.iconmedia.containers.piwik.pro
@@ -84107,6 +84105,7 @@
 127.0.0.1 www.mindsweeper.info
 127.0.0.1 www.mindtake.com
 127.0.0.1 www.minemytraffic.com
+127.0.0.1 www.minerclaim.net
 127.0.0.1 www.mi-ner-nis-de-6.info
 127.0.0.1 www.minero.cc
 127.0.0.1 www.minero-proxy-01.now.sh
@@ -86570,6 +86569,7 @@
 127.0.0.1 www.pool8.moatads.com
 127.0.0.1 www.pool9.moatads.com
 127.0.0.1 www.pool.afa.adhese.com
+127.0.0.1 www.pool.bmnr.pw
 127.0.0.1 www.pool.datamind.ru
 127.0.0.1 www.poosh.attn.tv
 127.0.0.1 www.pop.javanenvansuriname.info
@@ -90924,7 +90924,6 @@
 127.0.0.1 www.theweatherspace.com
 127.0.0.1 www.theweblocker.net
 127.0.0.1 www.thewhizmarketing.com
-127.0.0.1 www.thewhizproducts.com
 127.0.0.1 www.thewholesomechef.com
 127.0.0.1 www.thewise.com
 127.0.0.1 www.theworkhouse.org
@@ -93225,14 +93224,19 @@
 127.0.0.1 www.writingrevolt.leadpages.co
 127.0.0.1 www.wroksource.com
 127.0.0.1 www.wrought-up-airspeed.000webhostapp.com
+127.0.0.1 www.ws1.bmnr.pw
 127.0.0.1 www.ws001.www.datasecu.download
 127.0.0.1 www.ws001.www.jqwww.download
+127.0.0.1 www.ws2.bmnr.pw
 127.0.0.1 www.ws002.www.datasecu.download
 127.0.0.1 www.ws002.www.jqwww.download
+127.0.0.1 www.ws3.bmnr.pw
 127.0.0.1 www.ws003.www.datasecu.download
 127.0.0.1 www.ws003.www.jqwww.download
+127.0.0.1 www.ws4.bmnr.pw
 127.0.0.1 www.ws004.www.datasecu.download
 127.0.0.1 www.ws004.www.jqwww.download
+127.0.0.1 www.ws5.bmnr.pw
 127.0.0.1 www.ws05.crypto.csgocpu.com
 127.0.0.1 www.ws005.www.datasecu.download
 127.0.0.1 www.ws005.www.jqwww.download
