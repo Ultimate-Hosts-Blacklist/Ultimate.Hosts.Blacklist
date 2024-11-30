@@ -1,3 +1,5 @@
+ALL: zn7nxldtpzctkt7ex-fmrfiam.siteintercept.qualtrics.com
+ALL: zn7o31x8wbmazkwdx-dvg.siteintercept.qualtrics.com
 ALL: zn7ol39md50sxgwzx-americanheart.siteintercept.qualtrics.com
 ALL: zn7p2gx79hv2sktwl-biltmore.siteintercept.qualtrics.com
 ALL: zn7p6eiqhtal5zvwz-sapinsights.siteintercept.qualtrics.com
@@ -21702,6 +21704,7 @@ ALL: 54.38.35.29
 ALL: 54.38.37.226
 ALL: 54.38.40.43
 ALL: 54.38.40.178
+ALL: 54.38.49.12
 ALL: 54.38.52.6
 ALL: 54.38.52.101
 ALL: 54.38.53.21
@@ -31970,7 +31973,6 @@ ALL: 69.30.250.202
 ALL: 69.30.251.58
 ALL: 69.30.251.139
 ALL: 69.30.252.42
-ALL: 69.30.255.106
 ALL: 69.30.255.186
 ALL: 69.31.16.88
 ALL: 69.31.81.57
@@ -85914,6 +85916,7 @@ ALL: 157.119.0.0/22
 ALL: 157.119.48.210
 ALL: 157.119.64.0/21
 ALL: 157.119.68.0/22
+ALL: 157.119.73.60
 ALL: 157.148.116.0/24
 ALL: 157.151.81.100
 ALL: 157.157.29.140
@@ -136738,7 +136741,6 @@ ALL: 213.32.70.17
 ALL: 213.32.70.251
 ALL: 213.32.71.170
 ALL: 213.32.71.234
-ALL: 213.32.72.47
 ALL: 213.32.77.53
 ALL: 213.32.85.127
 ALL: 213.32.86.68
