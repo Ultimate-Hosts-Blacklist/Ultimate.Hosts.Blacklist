@@ -1,12 +1,3 @@
-ALL: zn6zitpy5escbfrch-educationinsight.siteintercept.qualtrics.com
-ALL: zn6zjfls8l8pnnypx-autodeskfeedback.siteintercept.qualtrics.com
-ALL: zn7a3jfvgjc0rab8x-nationalgrid.siteintercept.qualtrics.com
-ALL: zn7agrdjj77xv3cb3-citadelbanking.siteintercept.qualtrics.com
-ALL: zn7aifakd5kiciz5z-customer.siteintercept.qualtrics.com
-ALL: zn7al6r79an1rczif-dvg.siteintercept.qualtrics.com
-ALL: zn07bwpx6gsjse9qv-claroecuador.siteintercept.qualtrics.com
-ALL: zn7ngtyxwjbrjz6xb-cms.gov1.siteintercept.qualtrics.com
-ALL: zn7nj5omfyyzlxou-tmobilecx.siteintercept.qualtrics.com
 ALL: zn7nxldtpzctkt7ex-fmrfiam.siteintercept.qualtrics.com
 ALL: zn7o31x8wbmazkwdx-dvg.siteintercept.qualtrics.com
 ALL: zn7ol39md50sxgwzx-americanheart.siteintercept.qualtrics.com
@@ -20212,6 +20203,7 @@ ALL: 51.68.47.77
 ALL: 51.68.64.220
 ALL: 51.68.70.72
 ALL: 51.68.70.175
+ALL: 51.68.80.29
 ALL: 51.68.82.218
 ALL: 51.68.90.168
 ALL: 51.68.97.21
@@ -81953,6 +81945,7 @@ ALL: 139.59.92.117
 ALL: 139.59.95.150
 ALL: 139.59.115.149
 ALL: 139.59.124.211
+ALL: 139.59.127.29
 ALL: 139.59.138.183
 ALL: 139.59.142.169
 ALL: 139.59.149.166
@@ -99453,7 +99446,6 @@ ALL: 179.107.63.242
 ALL: 179.107.99.58
 ALL: 179.107.107.123
 ALL: 179.107.111.106
-ALL: 179.108.38.59
 ALL: 179.108.54.110
 ALL: 179.108.59.39
 ALL: 179.108.67.239
@@ -135279,6 +135271,7 @@ ALL: 212.85.202.67
 ALL: 212.85.213.83
 ALL: 212.85.250.65
 ALL: 212.86.17.79
+ALL: 212.86.53.163
 ALL: 212.86.71.50
 ALL: 212.86.101.160
 ALL: 212.87.167.105
