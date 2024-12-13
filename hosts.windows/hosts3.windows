@@ -1,3 +1,10 @@
+127.0.0.1 summit-reports.widespace.com
+127.0.0.1 summit-reports-dev.widespace.com
+127.0.0.1 summits.exponential.com
+127.0.0.1 summitsoft.evyy.net
+127.0.0.1 summitsolutions.matomo.cloud
+127.0.0.1 summitstream.appnexus.com
+127.0.0.1 summittilelv.com
 127.0.0.1 summittlabs.sjv.io
 127.0.0.1 summiturgentcare365.reachlocal.com
 127.0.0.1 summiturgentcare365.rtrk.com
@@ -45684,6 +45691,7 @@
 127.0.0.1 ws2.tapjoyads.com
 127.0.0.1 ws002.ws.tidafors.xyz
 127.0.0.1 ws002.www.datasecu.download
+127.0.0.1 ws002.www.jqwww.download
 127.0.0.1 ws2-aftm.responsys.net
 127.0.0.1 ws2-bafl.responsys.net
 127.0.0.1 ws02cn.streamplay.to
@@ -45713,6 +45721,7 @@
 127.0.0.1 ws3.trafficstars.com
 127.0.0.1 ws003.ws.tidafors.xyz
 127.0.0.1 ws003.www.datasecu.download
+127.0.0.1 ws003.www.jqwww.download
 127.0.0.1 ws03cn.streamplay.to
 127.0.0.1 ws3-live.live.eks.hotjar.com
 127.0.0.1 ws4.audigent.com
@@ -45727,8 +45736,10 @@
 127.0.0.1 ws004.ws.tidafors.xyz
 127.0.0.1 ws004.www.datasecu.download
 127.0.0.1 ws4-live.live.eks.hotjar.com
+127.0.0.1 ws004-proxy-ajcryptominer.ajplugins.com
 127.0.0.1 ws4t.responsys.net
 127.0.0.1 ws5.bmnr.pw
+127.0.0.1 ws05.crypto.csgocpu.com
 127.0.0.1 ws05.crypto-loot.com
 127.0.0.1 ws005.hemnes.win
 127.0.0.1 ws05.home.sapo.pt
@@ -45736,6 +45747,7 @@
 127.0.0.1 ws5.responsys.net
 127.0.0.1 ws005.ws.tidafors.xyz
 127.0.0.1 ws005.www.datasecu.download
+127.0.0.1 ws005.www.jqwww.download
 127.0.0.1 ws5-conline.responsys.net
 127.0.0.1 ws5-hatm.responsys.net
 127.0.0.1 ws5-lazada.responsys.net
@@ -45759,6 +45771,7 @@
 127.0.0.1 ws7.ozvdarozv.com
 127.0.0.1 ws007.ws.tidafors.xyz
 127.0.0.1 ws007.www.datasecu.download
+127.0.0.1 ws007.www.jqwww.download
 127.0.0.1 ws7-live.live.eks.hotjar.com
 127.0.0.1 ws007-proxy-ajcryptominer.ajplugins.com
 127.0.0.1 ws08.crypto.csgocpu.com
@@ -45767,6 +45780,7 @@
 127.0.0.1 ws8.hotjar.com
 127.0.0.1 ws008.ws.tidafors.xyz
 127.0.0.1 ws008.www.datasecu.download
+127.0.0.1 ws008.www.jqwww.download
 127.0.0.1 ws8-live.live.eks.hotjar.com
 127.0.0.1 ws09.crypto.csgocpu.com
 127.0.0.1 ws09.crypto-loot.com
@@ -45774,6 +45788,7 @@
 127.0.0.1 ws9.hotjar.com
 127.0.0.1 ws009.ws.tidafors.xyz
 127.0.0.1 ws009.www.datasecu.download
+127.0.0.1 ws009.www.jqwww.download
 127.0.0.1 ws9f.adj.st
 127.0.0.1 ws9-live.live.eks.hotjar.com
 127.0.0.1 ws10.crypto-loot.com
@@ -45790,6 +45805,7 @@
 127.0.0.1 ws11.shareaholic.com
 127.0.0.1 ws011.ws.tidafors.xyz
 127.0.0.1 ws011.www.datasecu.download
+127.0.0.1 ws011.www.jqwww.download
 127.0.0.1 ws11-live.live.eks.hotjar.com
 127.0.0.1 ws12.crypto-loot.com
 127.0.0.1 ws012.hemnes.win
@@ -45805,6 +45821,7 @@
 127.0.0.1 ws013.www.datasecu.download
 127.0.0.1 ws013.www.jqwww.download
 127.0.0.1 ws13-live.live.eks.hotjar.com
+127.0.0.1 ws013-proxy-ajcryptominer.ajplugins.com
 127.0.0.1 ws14.crypto-loot.com
 127.0.0.1 ws014.hemnes.win
 127.0.0.1 ws14.hotjar.com
@@ -45823,6 +45840,7 @@
 127.0.0.1 ws16.hotjar.com
 127.0.0.1 ws016.ws.tidafors.xyz
 127.0.0.1 ws016.www.datasecu.download
+127.0.0.1 ws016.www.jqwww.download
 127.0.0.1 ws16-live.live.eks.hotjar.com
 127.0.0.1 ws17.crypto-loot.com
 127.0.0.1 ws017.hemnes.win
@@ -45866,13 +45884,16 @@
 127.0.0.1 ws22.hotjar.com
 127.0.0.1 ws022.ws.tidafors.xyz
 127.0.0.1 ws022.www.datasecu.download
+127.0.0.1 ws022.www.jqwww.download
 127.0.0.1 ws22-live.live.eks.hotjar.com
 127.0.0.1 ws022-proxy-ajcryptominer.ajplugins.com
+127.0.0.1 ws23.crypto.csgocpu.com
 127.0.0.1 ws23.crypto-loot.com
 127.0.0.1 ws023.hemnes.win
 127.0.0.1 ws23.hotjar.com
 127.0.0.1 ws023.ws.tidafors.xyz
 127.0.0.1 ws023.www.datasecu.download
+127.0.0.1 ws023.www.jqwww.download
 127.0.0.1 ws23-live.live.eks.hotjar.com
 127.0.0.1 ws023-proxy-ajcryptominer.ajplugins.com
 127.0.0.1 ws24.crypto.csgocpu.com
@@ -45883,11 +45904,14 @@
 127.0.0.1 ws024.www.datasecu.download
 127.0.0.1 ws024.www.jqwww.download
 127.0.0.1 ws24-live.live.eks.hotjar.com
+127.0.0.1 ws024-proxy-ajcryptominer.ajplugins.com
+127.0.0.1 ws25.crypto.csgocpu.com
 127.0.0.1 ws25.crypto-loot.com
 127.0.0.1 ws025.hemnes.win
 127.0.0.1 ws25.hotjar.com
 127.0.0.1 ws025.ws.tidafors.xyz
 127.0.0.1 ws025.www.datasecu.download
+127.0.0.1 ws025.www.jqwww.download
 127.0.0.1 ws25-live.live.eks.hotjar.com
 127.0.0.1 ws025-proxy-ajcryptominer.ajplugins.com
 127.0.0.1 ws26.crypto-loot.com
@@ -69644,7 +69668,6 @@
 127.0.0.1 www.18bet.com
 127.0.0.1 www.18freeporn.com
 127.0.0.1 www.18hdxxx.com
-127.0.0.1 www.18pluspics.com
 127.0.0.1 www.18plusstore.com
 127.0.0.1 www.18xtube.com
 127.0.0.1 www.20cdn.adx1.com
@@ -71646,6 +71669,7 @@
 127.0.0.1 www.aktywnytylicz.pl
 127.0.0.1 www.akuhni.by
 127.0.0.1 www.akumulatorowy-raj.pl
+127.0.0.1 www.akusherok.ru
 127.0.0.1 www.akwadrago.pl
 127.0.0.1 www.al.resulticks.com.re.getclicky.com
 127.0.0.1 www.alabangautoexchange.com
@@ -72422,7 +72446,6 @@
 127.0.0.1 www.arisyaumaira.blogspot.com
 127.0.0.1 www.ariyeka.blogspot.com
 127.0.0.1 www.arizona.git.adx1.com
-127.0.0.1 www.arklighting.co
 127.0.0.1 www.arlento.pl
 127.0.0.1 www.arliowa.org
 127.0.0.1 www.arlpositiva.com
@@ -72775,6 +72798,7 @@
 127.0.0.1 www.aviodg.eu
 127.0.0.1 www.avis.cm
 127.0.0.1 www.avita.net.pl
+127.0.0.1 www.avitocars.ru
 127.0.0.1 www.avlang9.info
 127.0.0.1 www.avlang17.info
 127.0.0.1 www.avnads.com
@@ -76266,6 +76290,7 @@
 127.0.0.1 www.crystalswainbates.prettylitrick.adx1.com
 127.0.0.1 www.crzyshit.com
 127.0.0.1 www.cs1freerwds.dnset.com
+127.0.0.1 www.cs1g.com
 127.0.0.1 www.cs61.org
 127.0.0.1 www.cs.xhamser.com
 127.0.0.1 www.csbped.go.pl
@@ -78318,6 +78343,7 @@
 127.0.0.1 www.eu.cdn.adx1.com
 127.0.0.1 www.eu.cdn.survey.medallia.com
 127.0.0.1 www.eu.shareaholic.com
+127.0.0.1 www.euadoroisso.com.br
 127.0.0.1 www.eucalypt.leadpages.co
 127.0.0.1 www.eu-click.eworldtrack.com
 127.0.0.1 www.eucsoft.com
@@ -78592,7 +78618,6 @@
 127.0.0.1 www.ezwid.com
 127.0.0.1 www.f1.98hy.info
 127.0.0.1 www.f1.99hy.info
-127.0.0.1 www.f1tbit.com
 127.0.0.1 www.f2.99hy.info
 127.0.0.1 www.f2ncracker.112.2o7.net
 127.0.0.1 www.f3emyg4vtl0qsgf.smetrics.traderonline.com
@@ -78870,6 +78895,7 @@
 127.0.0.1 www.filezilla.fr
 127.0.0.1 www.filezillaproject.org
 127.0.0.1 www.fili.cc
+127.0.0.1 www.fili.tv
 127.0.0.1 www.filieregourmande.info
 127.0.0.1 www.filimizlesene.com
 127.0.0.1 www.filipinas-snapworx.facebook-ads.adtz.com
@@ -81186,6 +81212,7 @@
 127.0.0.1 www.ideacellularlimited.sc.omtrdc.net
 127.0.0.1 www.idealcasino.net
 127.0.0.1 www.idealit.org
+127.0.0.1 www.idealtits.net
 127.0.0.1 www.ideas.com.uy
 127.0.0.1 www.ideasemu.org
 127.0.0.1 www.ideawheel.com
@@ -81390,7 +81417,6 @@
 127.0.0.1 www.ineedmoney.info
 127.0.0.1 www.inevo.co.il
 127.0.0.1 www.inexplorer.com
-127.0.0.1 www.infamylists.com
 127.0.0.1 www.infantil.vertelevisiongratis.info
 127.0.0.1 www.infectedplanet.endermanch.info
 127.0.0.1 www.infev.com
@@ -81913,7 +81939,6 @@
 127.0.0.1 www.javjapanese.com
 127.0.0.1 www.javl10.com
 127.0.0.1 www.javli6.com
-127.0.0.1 www.javlib3.com
 127.0.0.1 www.javlib.xyz
 127.0.0.1 www.jav-library.com
 127.0.0.1 www.javlibrary.online
@@ -91239,6 +91264,7 @@
 127.0.0.1 www.toutchange.leadpages.co
 127.0.0.1 www.toutsurtlemcen.info
 127.0.0.1 www.townandcountrydiscountfurniture.com
+127.0.0.1 www.townhousefilms.com
 127.0.0.1 www.toxicjackpot.com
 127.0.0.1 www.toyotadiscountparts.com
 127.0.0.1 www.toyotaes2.solution.weborama.fr
@@ -93160,7 +93186,6 @@
 127.0.0.1 www.worldgravity.com
 127.0.0.1 www.worldhottestbats.com
 127.0.0.1 www.worldindata.org
-127.0.0.1 www.worldjav.net
 127.0.0.1 www.world-life.info
 127.0.0.1 www.worldlyric.com
 127.0.0.1 www.worldmathdays.com
