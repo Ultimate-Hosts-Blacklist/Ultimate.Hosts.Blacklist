@@ -1,3 +1,6 @@
+ALL: ww38.ws.delivery.g.switchadhub.com
+ALL: ww38.wsgreenways.org
+ALL: ww38.wtftds.info
 ALL: ww38.wts-steam.rentshop.org
 ALL: ww38.wvjobs.org
 ALL: ww38.ww1.mysexfantasies.com
@@ -11582,7 +11585,6 @@ ALL: www.eu1.staging.fullstory.com
 ALL: www.eu.cdn.adx1.com
 ALL: www.eu.cdn.survey.medallia.com
 ALL: www.eu.shareaholic.com
-ALL: www.euadoroisso.com.br
 ALL: www.eucalypt.leadpages.co
 ALL: www.eu-click.eworldtrack.com
 ALL: www.eucsoft.com
@@ -12134,7 +12136,6 @@ ALL: www.filesmoster.com
 ALL: www.filezilla.fr
 ALL: www.filezillaproject.org
 ALL: www.fili.cc
-ALL: www.fili.tv
 ALL: www.filieregourmande.info
 ALL: www.filimizlesene.com
 ALL: www.filipinas-snapworx.facebook-ads.adtz.com
@@ -14656,6 +14657,7 @@ ALL: www.ineedhits.com
 ALL: www.ineedmoney.info
 ALL: www.inevo.co.il
 ALL: www.inexplorer.com
+ALL: www.infamylists.com
 ALL: www.infantil.vertelevisiongratis.info
 ALL: www.infectedplanet.endermanch.info
 ALL: www.infev.com
@@ -15164,6 +15166,8 @@ ALL: www.javblog.ws
 ALL: www.javbooks.com
 ALL: www.jav-bus.com
 ALL: www.javbus.com
+ALL: www.javcens.com
+ALL: www.javdb.online
 ALL: www.javdb.site
 ALL: www.javdirect.com
 ALL: www.javeal.com
@@ -15172,25 +15176,29 @@ ALL: www.jav-films.com
 ALL: www.javfinder.net
 ALL: www.javforever.com
 ALL: www.javgo.info
+ALL: www.javhappy.com
 ALL: www.javhdonline.net
 ALL: www.javhunt.com
 ALL: www.javjapanese.com
 ALL: www.javl10.com
 ALL: www.javli6.com
-ALL: www.javlib3.com
 ALL: www.javlib.xyz
 ALL: www.jav-library.com
 ALL: www.javlibrary.online
 ALL: www.javlibrary.org
 ALL: www.javlibrary.xyz
+ALL: www.javlink.net
+ALL: www.jav-load.com
 ALL: www.javmax.com
-ALL: www.javmoo.info
+ALL: www.javort.com
+ALL: www.javpack.com
 ALL: www.javplanet.net
 ALL: www.javporn.club
 ALL: www.javpron.com
 ALL: www.javspeed.com
 ALL: www.javstar.net
 ALL: www.javtag.com
+ALL: www.javtown.com
 ALL: www.javtv.site
 ALL: www.jaxx.com
 ALL: www.jayapoker.totoarena.info
@@ -25485,6 +25493,7 @@ ALL: www.verifywelx08online.dnset.com
 ALL: www.veriifycetiz3n-online.dnset.com
 ALL: www.verisignwildcard.112.2o7.net
 ALL: www.verisonwildcard.112.2o7.net
+ALL: www.veritrol.com
 ALL: www.verizonfio.com
 ALL: www.verizonwireless.112.2o7.net
 ALL: www.verkeersbureau.info
@@ -25527,7 +25536,6 @@ ALL: www.viacaoosasco.com
 ALL: www.viagra-home.com
 ALL: www.viagra-pill.blogspot.com
 ALL: www.viam.com.vn
-ALL: www.viaxmr.com
 ALL: www.vibrantmedia.com
 ALL: www.vice.facebook-ads.adtz.com
 ALL: www.vicedata.com
@@ -61982,7 +61990,6 @@ ALL: 51.68.47.77
 ALL: 51.68.64.220
 ALL: 51.68.70.72
 ALL: 51.68.70.175
-ALL: 51.68.80.29
 ALL: 51.68.80.247
 ALL: 51.68.82.218
 ALL: 51.68.83.36
@@ -105290,7 +105297,6 @@ ALL: 103.85.228.166
 ALL: 103.85.229.16
 ALL: 103.85.229.193
 ALL: 103.85.244.0/22
-ALL: 103.85.255.40
 ALL: 103.86.68.0/22
 ALL: 103.86.88.0/22
 ALL: 103.86.116.0/22
@@ -106685,6 +106691,7 @@ ALL: 104.21.54.47
 ALL: 104.21.64.89
 ALL: 104.21.79.2
 ALL: 104.21.91.63
+ALL: 104.21.96.1
 ALL: 104.32.72.221
 ALL: 104.33.200.50
 ALL: 104.34.30.20
@@ -143107,7 +143114,6 @@ ALL: 178.62.117.247
 ALL: 178.62.119.63
 ALL: 178.62.127.197
 ALL: 178.62.134.179
-ALL: 178.62.192.218
 ALL: 178.62.194.244
 ALL: 178.62.195.55
 ALL: 178.62.195.235
@@ -145172,6 +145178,7 @@ ALL: 179.107.63.242
 ALL: 179.107.99.58
 ALL: 179.107.107.123
 ALL: 179.107.111.106
+ALL: 179.108.38.59
 ALL: 179.108.54.110
 ALL: 179.108.59.39
 ALL: 179.108.67.239
