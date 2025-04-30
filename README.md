@@ -20,10 +20,10 @@ hosts file.
 
 ---
 
-- Version: **V2.2772.2025.04.29**
-- Total Bad domains in `hosts` file: **1,176,493**
-- Total Bad IP in `hosts.deny` file: **148,400**
-- Total Bad domains and IP in `superhosts.deny` file: **1,324,893**
+- Version: **V2.2774.2025.04.30**
+- Total Bad domains in `hosts` file: **1,176,544**
+- Total Bad IP in `hosts.deny` file: **148,404**
+- Total Bad domains and IP in `superhosts.deny` file: **1,324,948**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -145,7 +145,7 @@ listed domains.
 For example, to drop all requests to certain domains or servers, adding lines
 to your `hosts` file as below will achieve this for you.
 You can create your custom hosts or simply use ours which covers you for
-well over 1,176,493 bad domains.
+well over 1,176,544 bad domains.
 
 ```
 # Block Bad Domains and Servers with Hosts File
@@ -277,6 +277,7 @@ The sources of the input data information are as follows.
 | www.blocklist.de | [Link](https://github.com/Ultimate-Hosts-Blacklist/www.blocklist.de) | [Link](https://lists.blocklist.de/lists/all.txt) |
 | YousList | [Link](https://github.com/Ultimate-Hosts-Blacklist/YousList) | [Link](https://raw.githubusercontent.com/yous/YousList/master/hosts.txt) |
 | yoyo.org_domains | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_domains) | [Link](https://pgl.yoyo.org/as/serverlist.php?hostformat=hosts;showintro=0) |
+| yoyo.org_ips | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_ips) | [Link](https://pgl.yoyo.org/adservers/iplist.php?format=&showintro=0) |
 | ZeroDot1_CoinBlockerLists | [Link](https://github.com/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists) | [Link](https://zerodot1.gitlab.io/CoinBlockerLists/list.txt) |
 | ZeroDot1_CoinBlockerLists_browser | [Link](https://github.com/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists_browser) | [Link](https://gitlab.com/ZeroDot1/CoinBlockerLists/-/raw/master/list_browser.txt) |
 
