@@ -20,10 +20,10 @@ hosts file.
 
 ---
 
-- Version: **V2.2780.2025.05.03**
-- Total Bad domains in `hosts` file: **898,485**
-- Total Bad IP in `hosts.deny` file: **146,074**
-- Total Bad domains and IP in `superhosts.deny` file: **1,044,559**
+- Version: **V2.2782.2025.05.04**
+- Total Bad domains in `hosts` file: **1,097,813**
+- Total Bad IP in `hosts.deny` file: **147,816**
+- Total Bad domains and IP in `superhosts.deny` file: **1,245,629**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -145,7 +145,7 @@ listed domains.
 For example, to drop all requests to certain domains or servers, adding lines
 to your `hosts` file as below will achieve this for you.
 You can create your custom hosts or simply use ours which covers you for
-well over 898,485 bad domains.
+well over 1,097,813 bad domains.
 
 ```
 # Block Bad Domains and Servers with Hosts File
