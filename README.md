@@ -20,10 +20,10 @@ hosts file.
 
 ---
 
-- Version: **V2.2806.2025.05.16**
-- Total Bad domains in `hosts` file: **820,934**
-- Total Bad IP in `hosts.deny` file: **143,056**
-- Total Bad domains and IP in `superhosts.deny` file: **963,990**
+- Version: **V2.2808.2025.05.17**
+- Total Bad domains in `hosts` file: **538,986**
+- Total Bad IP in `hosts.deny` file: **143,060**
+- Total Bad domains and IP in `superhosts.deny` file: **682,046**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -145,7 +145,7 @@ listed domains.
 For example, to drop all requests to certain domains or servers, adding lines
 to your `hosts` file as below will achieve this for you.
 You can create your custom hosts or simply use ours which covers you for
-well over 820,934 bad domains.
+well over 538,986 bad domains.
 
 ```
 # Block Bad Domains and Servers with Hosts File
@@ -264,6 +264,7 @@ The sources of the input data information are as follows.
 | Phishing.Database | [Link](https://github.com/Ultimate-Hosts-Blacklist/Phishing.Database) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt) |
 | pl-host-file | [Link](https://github.com/Ultimate-Hosts-Blacklist/pl-host-file) | [Link](https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt) |
 | quidsup_malicious-sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/quidsup_malicious-sites) | [Link](https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/malware.list) |
+| quidsup_notrack_trackers | [Link](https://github.com/Ultimate-Hosts-Blacklist/quidsup_notrack_trackers) | [Link](https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/trackers.list) |
 | smed79_blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/smed79_blacklist) | [Link](https://raw.githubusercontent.com/smed79/blacklist/master/hosts.txt) |
 | someonewhocares.org | [Link](https://github.com/Ultimate-Hosts-Blacklist/someonewhocares.org) | [Link](https://someonewhocares.org/hosts/zero/hosts) |
 | Spam404 | [Link](https://github.com/Ultimate-Hosts-Blacklist/Spam404) | [Link](https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt) |
@@ -271,8 +272,10 @@ The sources of the input data information are as follows.
 | Suspicious.Snooping.Sniffing.Hacking.IP.Addresses | [Link](https://github.com/Ultimate-Hosts-Blacklist/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list) |
 | The-Big-List-of-Hacked-Malware-Web-Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites) | [Link](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list) |
 | Top-Attacking-IP-Addresses-Against-Wordpress-Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/master/wordpress-attacking-ips.txt) |
+| WaLLy3K_Blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist) | [Link](https://v.firebog.net/hosts/static/w3kbl.txt) |
 | Wiggum27_Blockers | [Link](https://github.com/Ultimate-Hosts-Blacklist/Wiggum27_Blockers) | [Link](https://gitlab.com/Wiggum27/blockers/-/raw/master/hosts) |
 | www.blocklist.de | [Link](https://github.com/Ultimate-Hosts-Blacklist/www.blocklist.de) | [Link](https://lists.blocklist.de/lists/all.txt) |
+| YousList | [Link](https://github.com/Ultimate-Hosts-Blacklist/YousList) | [Link](https://raw.githubusercontent.com/yous/YousList/master/hosts.txt) |
 | yoyo.org_domains | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_domains) | [Link](https://pgl.yoyo.org/as/serverlist.php?hostformat=hosts;showintro=0) |
 | yoyo.org_ips | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_ips) | [Link](https://pgl.yoyo.org/adservers/iplist.php?format=&showintro=0) |
 | ZeroDot1_CoinBlockerLists | [Link](https://github.com/Ultimate-Hosts-Blacklist/ZeroDot1_CoinBlockerLists) | [Link](https://zerodot1.gitlab.io/CoinBlockerLists/list.txt) |
