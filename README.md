@@ -20,10 +20,10 @@ hosts file.
 
 ---
 
-- Version: **V2.2808.2025.05.17**
+- Version: **V2.2810.2025.05.18**
 - Total Bad domains in `hosts` file: **538,986**
-- Total Bad IP in `hosts.deny` file: **143,060**
-- Total Bad domains and IP in `superhosts.deny` file: **682,046**
+- Total Bad IP in `hosts.deny` file: **143,059**
+- Total Bad domains and IP in `superhosts.deny` file: **682,045**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -245,9 +245,7 @@ The sources of the input data information are as follows.
 | Bad_JAV_Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/Bad_JAV_Sites) | [Link]() |
 | BaddBoyzHosts | [Link](https://github.com/Ultimate-Hosts-Blacklist/BaddBoyzHosts) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/domains) |
 | BadIPs.com_KEY | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_KEY) | [Link](https://hosts.ubuntu101.co.za/badips.txt) |
-| BadIPs.com_Level_3 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_3) | [Link](http://www.badips.com/get/list/any/3?age=12) |
 | BadIPs.com_Level_4 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_4) | [Link](http://www.badips.com/get/list/any/4?age=12) |
-| BadIPs.com_Level_5 | [Link](https://github.com/Ultimate-Hosts-Blacklist/BadIPs.com_Level_5) | [Link](http://www.badips.com/get/list/any/5?age=12) |
 | blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/blacklist) | [Link]() |
 | cameleon_at_sysctl.org | [Link](https://github.com/Ultimate-Hosts-Blacklist/cameleon_at_sysctl.org) | [Link](http://sysctl.org/cameleon/hosts) |
 | Cyveillance_Blocks | [Link](https://github.com/Ultimate-Hosts-Blacklist/Cyveillance_Blocks) | [Link]() |
@@ -273,8 +271,6 @@ The sources of the input data information are as follows.
 | The-Big-List-of-Hacked-Malware-Web-Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites) | [Link](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list) |
 | Top-Attacking-IP-Addresses-Against-Wordpress-Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/master/wordpress-attacking-ips.txt) |
 | WaLLy3K_Blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist) | [Link](https://v.firebog.net/hosts/static/w3kbl.txt) |
-| Wiggum27_Blockers | [Link](https://github.com/Ultimate-Hosts-Blacklist/Wiggum27_Blockers) | [Link](https://gitlab.com/Wiggum27/blockers/-/raw/master/hosts) |
-| www.blocklist.de | [Link](https://github.com/Ultimate-Hosts-Blacklist/www.blocklist.de) | [Link](https://lists.blocklist.de/lists/all.txt) |
 | YousList | [Link](https://github.com/Ultimate-Hosts-Blacklist/YousList) | [Link](https://raw.githubusercontent.com/yous/YousList/master/hosts.txt) |
 | yoyo.org_domains | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_domains) | [Link](https://pgl.yoyo.org/as/serverlist.php?hostformat=hosts;showintro=0) |
 | yoyo.org_ips | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_ips) | [Link](https://pgl.yoyo.org/adservers/iplist.php?format=&showintro=0) |
