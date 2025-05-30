@@ -1,3 +1,10 @@
+ALL: znaplink.firstpromoter.com
+ALL: znaptag.com
+ALL: znaptag-us.s3.amazonaws.com
+ALL: znautvqf6xxfdzqgn-aaos.siteintercept.qualtrics.com
+ALL: znav4rrdti2b1oiqd-liquidinteractive.siteintercept.qualtrics.com
+ALL: znavjaytxp1ovsatp-lews.siteintercept.qualtrics.com
+ALL: znavmpr72n3bdyglh-caleres.siteintercept.qualtrics.com
 ALL: znavrd5dk100fbxrp-gracoincandsubs.siteintercept.qualtrics.com
 ALL: znavrrbuaasua7fbz-trulia.siteintercept.qualtrics.com
 ALL: znavsfclt0iepptsj-cpengca1.siteintercept.qualtrics.com
@@ -16585,7 +16592,6 @@ ALL: 46.101.114.213
 ALL: 46.101.114.246
 ALL: 46.101.115.22
 ALL: 46.101.119.15
-ALL: 46.101.125.74
 ALL: 46.101.128.50
 ALL: 46.101.132.177
 ALL: 46.101.139.6
@@ -23110,6 +23116,7 @@ ALL: 58.191.115.249
 ALL: 58.211.169.50
 ALL: 58.215.167.132
 ALL: 58.216.183.162
+ALL: 58.218.199.166
 ALL: 58.227.192.158
 ALL: 58.240.82.30
 ALL: 58.241.61.162
@@ -72279,6 +72286,7 @@ ALL: 116.104.243.255
 ALL: 116.104.245.238
 ALL: 116.104.250.64
 ALL: 116.104.252.138
+ALL: 116.106.18.237
 ALL: 116.106.26.210
 ALL: 116.106.232.51
 ALL: 116.106.233.127
@@ -84826,7 +84834,6 @@ ALL: 153.121.92.17
 ALL: 153.122.2.118
 ALL: 153.122.2.161
 ALL: 153.122.4.196
-ALL: 153.122.4.222
 ALL: 153.122.4.226
 ALL: 153.122.5.172
 ALL: 153.122.8.101
@@ -86090,6 +86097,7 @@ ALL: 158.85.184.239
 ALL: 158.85.185.245
 ALL: 158.85.186.4
 ALL: 158.85.202.71
+ALL: 158.85.204.249
 ALL: 158.85.212.16
 ALL: 158.85.212.148
 ALL: 158.85.212.194
