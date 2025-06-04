@@ -1,3 +1,7 @@
+ALL: znaptag-us.s3.amazonaws.com
+ALL: znautvqf6xxfdzqgn-aaos.siteintercept.qualtrics.com
+ALL: znav4rrdti2b1oiqd-liquidinteractive.siteintercept.qualtrics.com
+ALL: znavjaytxp1ovsatp-lews.siteintercept.qualtrics.com
 ALL: znavmpr72n3bdyglh-caleres.siteintercept.qualtrics.com
 ALL: znavrd5dk100fbxrp-gracoincandsubs.siteintercept.qualtrics.com
 ALL: znavrrbuaasua7fbz-trulia.siteintercept.qualtrics.com
@@ -31602,6 +31606,7 @@ ALL: 69.30.250.202
 ALL: 69.30.251.58
 ALL: 69.30.251.139
 ALL: 69.30.252.42
+ALL: 69.30.255.106
 ALL: 69.30.255.186
 ALL: 69.31.16.88
 ALL: 69.31.81.57
@@ -124041,7 +124046,6 @@ ALL: 198.211.40.98
 ALL: 198.211.52.188
 ALL: 198.211.100.105
 ALL: 198.211.101.24
-ALL: 198.211.101.109
 ALL: 198.211.104.64
 ALL: 198.211.107.227
 ALL: 198.211.118.236
