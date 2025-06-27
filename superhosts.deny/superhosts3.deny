@@ -1,3 +1,5 @@
+ALL: znaptag.com
+ALL: znaptag-us.s3.amazonaws.com
 ALL: znautvqf6xxfdzqgn-aaos.siteintercept.qualtrics.com
 ALL: znav4rrdti2b1oiqd-liquidinteractive.siteintercept.qualtrics.com
 ALL: znavjaytxp1ovsatp-lews.siteintercept.qualtrics.com
@@ -31605,7 +31607,6 @@ ALL: 69.30.250.202
 ALL: 69.30.251.58
 ALL: 69.30.251.139
 ALL: 69.30.252.42
-ALL: 69.30.255.106
 ALL: 69.30.255.186
 ALL: 69.31.16.88
 ALL: 69.31.81.57
@@ -42856,6 +42857,7 @@ ALL: 82.99.210.22
 ALL: 82.99.219.18
 ALL: 82.99.219.178
 ALL: 82.99.222.34
+ALL: 82.99.223.120
 ALL: 82.99.229.48
 ALL: 82.99.241.130
 ALL: 82.99.243.68
@@ -85716,6 +85718,7 @@ ALL: 157.119.0.0/22
 ALL: 157.119.48.210
 ALL: 157.119.64.0/21
 ALL: 157.119.68.0/22
+ALL: 157.119.73.60
 ALL: 157.148.116.0/24
 ALL: 157.151.81.100
 ALL: 157.157.29.140
@@ -105163,6 +105166,7 @@ ALL: 185.2.101.51
 ALL: 185.2.101.209
 ALL: 185.2.103.21
 ALL: 185.2.103.160
+ALL: 185.2.103.165
 ALL: 185.2.103.234
 ALL: 185.2.148.25
 ALL: 185.2.168.14
