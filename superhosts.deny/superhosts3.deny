@@ -1,3 +1,5 @@
+ALL: znaplink.firstpromoter.com
+ALL: znaptag.com
 ALL: znaptag-us.s3.amazonaws.com
 ALL: znautvqf6xxfdzqgn-aaos.siteintercept.qualtrics.com
 ALL: znav4rrdti2b1oiqd-liquidinteractive.siteintercept.qualtrics.com
@@ -31604,7 +31606,6 @@ ALL: 69.30.250.202
 ALL: 69.30.251.58
 ALL: 69.30.251.139
 ALL: 69.30.252.42
-ALL: 69.30.255.106
 ALL: 69.30.255.186
 ALL: 69.31.16.88
 ALL: 69.31.81.57
@@ -31877,6 +31878,7 @@ ALL: 69.65.3.173
 ALL: 69.65.27.131
 ALL: 69.65.38.224
 ALL: 69.65.39.23
+ALL: 69.65.40.153
 ALL: 69.65.43.176
 ALL: 69.67.53.74
 ALL: 69.67.55.25
@@ -53292,7 +53294,6 @@ ALL: 91.199.22.78
 ALL: 91.199.151.85
 ALL: 91.199.255.4
 ALL: 91.200.12.0/22
-ALL: 91.200.12.9
 ALL: 91.200.12.18
 ALL: 91.200.12.33
 ALL: 91.200.38.119
