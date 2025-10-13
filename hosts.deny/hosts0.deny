@@ -33,8 +33,8 @@
 ### https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues
 
 ##### Version Information #
-#### Version: V2.3103.2025.10.12
-#### Total IP's: 151,308
+#### Version: V2.3105.2025.10.13
+#### Total IP's: 151,307
 ##### Version Information ##
 
 # ##### START hosts.deny Block List # DO NOT EDIT #####
@@ -16234,7 +16234,6 @@ ALL: 45.40.136.164
 ALL: 45.40.137.169
 ALL: 45.40.138.145
 ALL: 45.40.142.123
-ALL: 45.41.92.66
 ALL: 45.42.14.76
 ALL: 45.42.160.23
 ALL: 45.43.36.168
