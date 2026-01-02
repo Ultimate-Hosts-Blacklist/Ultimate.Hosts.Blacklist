@@ -1,3 +1,6 @@
+ALL: www-lcloud-locationsmx.life
+ALL: www-lcloud-locationsmx.us
+ALL: www-lcloud-lost-app.us
 ALL: www-lcloudmaps.com
 ALL: www-lcloud-myphone.com
 ALL: www-lcloud-security.info
@@ -42957,6 +42960,7 @@ ALL: 31.170.100.210
 ALL: 31.170.106.44
 ALL: 31.170.123.11
 ALL: 31.170.123.79
+ALL: 31.170.160.209
 ALL: 31.171.132.10
 ALL: 31.171.244.19
 ALL: 31.171.247.54
@@ -45419,7 +45423,6 @@ ALL: 37.59.68.120
 ALL: 37.59.69.1
 ALL: 37.59.76.59
 ALL: 37.59.80.47
-ALL: 37.59.90.187
 ALL: 37.59.95.164
 ALL: 37.59.95.166
 ALL: 37.59.96.43
@@ -107777,6 +107780,7 @@ ALL: 116.107.223.107
 ALL: 116.107.223.196
 ALL: 116.107.249.116
 ALL: 116.124.128.208
+ALL: 116.126.142.174
 ALL: 116.144.0.0/14
 ALL: 116.193.50.67
 ALL: 116.193.72.2
