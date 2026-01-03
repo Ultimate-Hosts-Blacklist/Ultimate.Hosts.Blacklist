@@ -1,3 +1,10 @@
+ALL: wwwlbpnclientsbanquepotallen.com
+ALL: wwwlbpnclientsbanquepotalles.com
+ALL: wwwlbpnclientsbanquepotallew.com
+ALL: www-lcloud-gpsmaps.me
+ALL: www-lcloud-gpsmx.com
+ALL: www-lcloud-gpsmx.info
+ALL: www-lcloud-locationsmx.com
 ALL: www-lcloud-locationsmx.life
 ALL: www-lcloud-locationsmx.us
 ALL: www-lcloud-lost-app.us
@@ -88000,6 +88007,7 @@ ALL: 91.199.151.85
 ALL: 91.199.255.4
 ALL: 91.200.12.0/22
 ALL: 91.200.12.9
+ALL: 91.200.12.22
 ALL: 91.200.12.49
 ALL: 91.200.12.61
 ALL: 91.200.12.81
