@@ -1,3 +1,10 @@
+ALL: www-lax1.auctiondrop.com
+ALL: www-lax3.googletagmanager.com
+ALL: www-layanan.official-app.art
+ALL: www-lb2.macromill.com
+ALL: www-lb.macromill.com
+ALL: www-lb.valassisdigital.com
+ALL: wwwlbbva-netcash.com
 ALL: wwwlbbva-netcash.duckdns.org
 ALL: wwwlbbvanetcash-mx.search-net-cash.shop
 ALL: wwwlblbvanetcashmx.com
@@ -53500,6 +53507,7 @@ ALL: 51.77.194.241
 ALL: 51.77.195.1
 ALL: 51.77.195.149
 ALL: 51.77.200.39
+ALL: 51.77.200.70
 ALL: 51.77.200.243
 ALL: 51.77.212.124
 ALL: 51.77.221.238
@@ -53545,6 +53553,7 @@ ALL: 51.83.76.203
 ALL: 51.83.78.225
 ALL: 51.83.98.52
 ALL: 51.83.121.151
+ALL: 51.83.135.1
 ALL: 51.83.232.117
 ALL: 51.83.248.165
 ALL: 51.83.249.29
@@ -57341,6 +57350,7 @@ ALL: 58.215.167.132
 ALL: 58.216.183.162
 ALL: 58.218.199.166
 ALL: 58.218.200.5
+ALL: 58.218.204.30
 ALL: 58.218.204.107
 ALL: 58.227.192.158
 ALL: 58.240.82.30
@@ -70487,7 +70497,6 @@ ALL: 77.75.37.82
 ALL: 77.75.39.148
 ALL: 77.75.39.243
 ALL: 77.75.76.72
-ALL: 77.75.93.108
 ALL: 77.75.123.101
 ALL: 77.75.128.45
 ALL: 77.75.163.187
@@ -99205,6 +99214,7 @@ ALL: 104.243.26.254
 ALL: 104.243.35.162
 ALL: 104.243.37.48
 ALL: 104.243.39.26
+ALL: 104.243.129.210
 ALL: 104.243.192.0/20
 ALL: 104.244.56.0/21
 ALL: 104.244.72.73
