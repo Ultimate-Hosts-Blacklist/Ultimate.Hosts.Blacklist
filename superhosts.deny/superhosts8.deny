@@ -1,3 +1,8 @@
+ALL: www-laperledigitale-com.filesusr.com
+ALL: www-lapetitefontaine-be.filesusr.com
+ALL: www-las.auctiondrop.com
+ALL: wwwlas.googletagmanager.com
+ALL: wwwlasagneandands.tstest.addefend.com
 ALL: www-laszlobooks-com.usrfiles.com
 ALL: www-latenightalumni-com.usrfiles.com
 ALL: wwwlatineuro.com
@@ -88027,6 +88032,7 @@ ALL: 91.199.151.85
 ALL: 91.199.255.4
 ALL: 91.200.12.0/22
 ALL: 91.200.12.22
+ALL: 91.200.12.43
 ALL: 91.200.12.49
 ALL: 91.200.12.53
 ALL: 91.200.12.58
@@ -156711,6 +156717,7 @@ ALL: 192.186.93.110
 ALL: 192.186.97.66
 ALL: 192.186.133.75
 ALL: 192.186.150.186
+ALL: 192.187.98.44
 ALL: 192.187.100.58
 ALL: 192.187.101.162
 ALL: 192.187.108.58
