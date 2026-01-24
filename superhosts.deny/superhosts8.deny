@@ -1,3 +1,6 @@
+ALL: wwwlasagneandands.tstest.addefend.com
+ALL: www-laszlobooks-com.usrfiles.com
+ALL: www-latenightalumni-com.usrfiles.com
 ALL: wwwlatineuro.com
 ALL: www-latonyataylormade-com.usrfiles.com
 ALL: www-laudodeengenharia-com.usrfiles.com
@@ -88032,7 +88035,6 @@ ALL: 91.200.12.53
 ALL: 91.200.12.58
 ALL: 91.200.12.61
 ALL: 91.200.12.73
-ALL: 91.200.12.86
 ALL: 91.200.12.91
 ALL: 91.200.12.113
 ALL: 91.200.12.139
@@ -107811,7 +107813,6 @@ ALL: 116.107.223.107
 ALL: 116.107.223.196
 ALL: 116.107.249.116
 ALL: 116.124.128.208
-ALL: 116.126.142.174
 ALL: 116.144.0.0/14
 ALL: 116.193.50.67
 ALL: 116.193.72.2
@@ -113396,7 +113397,6 @@ ALL: 124.81.208.242
 ALL: 124.85.78.17
 ALL: 124.87.7.230
 ALL: 124.87.17.253
-ALL: 124.95.129.105
 ALL: 124.98.21.87
 ALL: 124.99.147.86
 ALL: 124.104.35.42
@@ -146691,6 +146691,7 @@ ALL: 186.207.211.175
 ALL: 186.207.221.11
 ALL: 186.207.222.226
 ALL: 186.207.223.43
+ALL: 186.208.1.235
 ALL: 186.208.19.43
 ALL: 186.208.69.18
 ALL: 186.208.75.14
