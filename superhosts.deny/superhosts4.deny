@@ -1,6 +1,3 @@
-ALL: znbeh6x6kb05aejnn-cbs.siteintercept.qualtrics.com
-ALL: znbehensnv6my8ntt-ncaawebinsights.siteintercept.qualtrics.com
-ALL: znbenwdl6vjmnrfyj-1800flowers.siteintercept.qualtrics.com
 ALL: znbep4vuknzmw937l-atbfeedback.siteintercept.qualtrics.com
 ALL: znbev9gd7ccjztf8x-dtts.siteintercept.qualtrics.com
 ALL: znbey1k9yp6kvgdhb-customer.siteintercept.qualtrics.com
@@ -29132,7 +29129,6 @@ ALL: 62.4.21.112
 ALL: 62.4.21.187
 ALL: 62.4.22.14
 ALL: 62.4.23.118
-ALL: 62.4.29.76
 ALL: 62.4.85.251
 ALL: 62.7.75.163
 ALL: 62.8.77.249
@@ -34202,7 +34198,6 @@ ALL: 69.30.250.202
 ALL: 69.30.251.58
 ALL: 69.30.251.139
 ALL: 69.30.252.42
-ALL: 69.30.255.106
 ALL: 69.30.255.186
 ALL: 69.31.16.88
 ALL: 69.31.81.57
@@ -53434,8 +53429,6 @@ ALL: 89.142.254.144
 ALL: 89.143.80.211
 ALL: 89.143.99.76
 ALL: 89.143.152.26
-ALL: 89.144.14.80
-ALL: 89.144.16.173
 ALL: 89.144.100.167
 ALL: 89.144.102.251
 ALL: 89.144.102.253
