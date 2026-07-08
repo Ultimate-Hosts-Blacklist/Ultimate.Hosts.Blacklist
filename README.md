@@ -20,10 +20,10 @@ hosts file.
 
 ---
 
-- Version: **V2.3636.2026.07.07**
-- Total Bad domains in `hosts` file: **922,238**
-- Total Bad IP in `hosts.deny` file: **148,780**
-- Total Bad domains and IP in `superhosts.deny` file: **1,071,018**
+- Version: **V2.3638.2026.07.08**
+- Total Bad domains in `hosts` file: **922,239**
+- Total Bad IP in `hosts.deny` file: **148,788**
+- Total Bad domains and IP in `superhosts.deny` file: **1,071,027**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
@@ -145,7 +145,7 @@ listed domains.
 For example, to drop all requests to certain domains or servers, adding lines
 to your `hosts` file as below will achieve this for you.
 You can create your custom hosts or simply use ours which covers you for
-well over 922,238 bad domains.
+well over 922,239 bad domains.
 
 ```
 # Block Bad Domains and Servers with Hosts File
@@ -273,7 +273,6 @@ The sources of the input data information are as follows.
 | The-Big-List-of-Hacked-Malware-Web-Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/The-Big-List-of-Hacked-Malware-Web-Sites) | [Link](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list) |
 | Top-Attacking-IP-Addresses-Against-Wordpress-Sites | [Link](https://github.com/Ultimate-Hosts-Blacklist/Top-Attacking-IP-Addresses-Against-Wordpress-Sites) | [Link](https://raw.githubusercontent.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/master/wordpress-attacking-ips.txt) |
 | WaLLy3K_Blacklist | [Link](https://github.com/Ultimate-Hosts-Blacklist/WaLLy3K_Blacklist) | [Link](https://v.firebog.net/hosts/static/w3kbl.txt) |
-| Wiggum27_Blockers | [Link](https://github.com/Ultimate-Hosts-Blacklist/Wiggum27_Blockers) | [Link](https://gitlab.com/Wiggum27/blockers/-/raw/master/hosts) |
 | www.blocklist.de | [Link](https://github.com/Ultimate-Hosts-Blacklist/www.blocklist.de) | [Link](https://lists.blocklist.de/lists/all.txt) |
 | YousList | [Link](https://github.com/Ultimate-Hosts-Blacklist/YousList) | [Link](https://raw.githubusercontent.com/yous/YousList/master/hosts.txt) |
 | yoyo.org_domains | [Link](https://github.com/Ultimate-Hosts-Blacklist/yoyo.org_domains) | [Link](https://pgl.yoyo.org/as/serverlist.php?hostformat=hosts;showintro=0) |
