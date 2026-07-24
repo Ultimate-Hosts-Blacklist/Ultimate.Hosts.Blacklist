@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3668.2026.07.23
-#### Total Hosts: 922,265
+#### Version: V2.3670.2026.07.24
+#### Total Hosts: 922,266
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -111057,6 +111057,7 @@
 127.0.0.1 ad.doublemax.net
 127.0.0.1 ad.download.cnet.com
 127.0.0.1 ad.downloadyee.com
+127.0.0.1 ad.doyouad.com
 127.0.0.1 ad.dsp.linksynergy.com
 127.0.0.1 ad.dt.co.kr
 127.0.0.1 ad.duapps.com
@@ -137419,4 +137420,3 @@
 127.0.0.1 alkosto.engine.adglare.net
 127.0.0.1 alkout.azurewebsites.net
 127.0.0.1 alks.adj.st
-127.0.0.1 alksjajzkazjaasalakjazlazalksj3.godaddysites.com

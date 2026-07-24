@@ -33,8 +33,8 @@
 ### https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues
 
 ##### Version Information #
-#### Version: V2.3668.2026.07.23
-#### Total Hosts and IP's: 1,071,075
+#### Version: V2.3670.2026.07.24
+#### Total Hosts and IP's: 1,071,079
 ##### Version Information ##
 
 # ##### START Super hosts.deny Block List # DO NOT EDIT #####
@@ -111039,6 +111039,7 @@ ALL: ad.doubleclick.netads.yahoo.comafs.moatads.com
 ALL: ad.doublemax.net
 ALL: ad.download.cnet.com
 ALL: ad.downloadyee.com
+ALL: ad.doyouad.com
 ALL: ad.dsp.linksynergy.com
 ALL: ad.dt.co.kr
 ALL: ad.duapps.com

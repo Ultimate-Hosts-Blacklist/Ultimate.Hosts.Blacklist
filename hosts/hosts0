@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3668.2026.07.23
-#### Total Hosts: 922,265
+#### Version: V2.3670.2026.07.24
+#### Total Hosts: 922,266
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -111061,6 +111061,7 @@ fe80::1%lo0 localhost
 0.0.0.0 ad.doublemax.net
 0.0.0.0 ad.download.cnet.com
 0.0.0.0 ad.downloadyee.com
+0.0.0.0 ad.doyouad.com
 0.0.0.0 ad.dsp.linksynergy.com
 0.0.0.0 ad.dt.co.kr
 0.0.0.0 ad.duapps.com
@@ -154125,4 +154126,3 @@ fe80::1%lo0 localhost
 0.0.0.0 anrtther12r.live
 0.0.0.0 anrtx.tacoda.net
 0.0.0.0 anruean.bounceme.net
-0.0.0.0 anrysys.popunder.ru
