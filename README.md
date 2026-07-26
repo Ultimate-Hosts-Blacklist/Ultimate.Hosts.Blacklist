@@ -20,10 +20,10 @@ hosts file.
 
 ---
 
-- Version: **V2.3672.2026.07.25**
+- Version: **V2.3674.2026.07.26**
 - Total Bad domains in `hosts` file: **922,267**
-- Total Bad IP in `hosts.deny` file: **148,813**
-- Total Bad domains and IP in `superhosts.deny` file: **1,071,080**
+- Total Bad IP in `hosts.deny` file: **148,838**
+- Total Bad domains and IP in `superhosts.deny` file: **1,071,105**
 
   :exclamation: **Yes you did indeed read those numbers correctly** :exclamation:
 
