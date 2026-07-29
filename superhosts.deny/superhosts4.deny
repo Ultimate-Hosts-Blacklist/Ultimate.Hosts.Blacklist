@@ -1,3 +1,5 @@
+ALL: ota.tpbid.com
+ALL: ota-cdn.memfault.com
 ALL: ota-cdn-dev.memfault.com
 ALL: ota-cdn-staging.memfault.com
 ALL: otadunit.cdn.auditude.com
@@ -169855,4 +169857,3 @@ ALL: vagdevi-42.github.io
 ALL: va-geo.gumgum.com
 ALL: vagrowlark.vercel.app
 ALL: vaguest-spaces.000webhostapp.com
-ALL: vagusnervesupport.refersion.com
