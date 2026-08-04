@@ -33,8 +33,8 @@
 ### https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues
 
 ##### Version Information #
-#### Version: V2.3690.2026.08.03
-#### Total Hosts and IP's: 1,071,171
+#### Version: V2.3692.2026.08.04
+#### Total Hosts and IP's: 1,071,124
 ##### Version Information ##
 
 # ##### START Super hosts.deny Block List # DO NOT EDIT #####
@@ -110898,7 +110898,6 @@ ALL: ad.api.ateam-ad.jp
 ALL: ad.api.binance.com
 ALL: ad.api.ero-advertising.com
 ALL: ad.api.kaffnet.com
-ALL: ad.api.stax.kr
 ALL: ad.apl11.me
 ALL: ad.appier.net
 ALL: ad.appier.org
@@ -169306,3 +169305,4 @@ ALL: appfbk-ua4tro8lfi.polkuverkosto.fi
 ALL: appfbk-w9wo1d2jgc.polkuverkosto.fi
 ALL: appfbk-wqpxchj6a.polkuverkosto.fi
 ALL: appfbk-wwekrpudya.polkuverkosto.fi
+ALL: appfbk-xhhravue.polkuverkosto.fi

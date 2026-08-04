@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3690.2026.08.03
-#### Total Hosts: 922,330
+#### Version: V2.3692.2026.08.04
+#### Total Hosts: 922,283
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -110916,7 +110916,6 @@
 127.0.0.1 ad.api.binance.com
 127.0.0.1 ad.api.ero-advertising.com
 127.0.0.1 ad.api.kaffnet.com
-127.0.0.1 ad.api.stax.kr
 127.0.0.1 ad.apl11.me
 127.0.0.1 ad.appier.net
 127.0.0.1 ad.appier.org
@@ -137420,3 +137419,4 @@
 127.0.0.1 alkoskurier.com
 127.0.0.1 alkosto.cdn.adglare.net
 127.0.0.1 alkosto.engine.adglare.net
+127.0.0.1 alkout.azurewebsites.net
