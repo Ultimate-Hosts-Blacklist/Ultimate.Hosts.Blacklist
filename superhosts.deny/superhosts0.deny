@@ -33,8 +33,8 @@
 ### https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues
 
 ##### Version Information #
-#### Version: V2.3700.2026.08.08
-#### Total Hosts and IP's: 1,071,153
+#### Version: V2.3702.2026.08.09
+#### Total Hosts and IP's: 1,071,163
 ##### Version Information ##
 
 # ##### START Super hosts.deny Block List # DO NOT EDIT #####
@@ -165326,6 +165326,7 @@ ALL: aplly-hype.ml
 ALL: aplock.net
 ALL: aplogger-geo.adpushup.com
 ALL: ap-login.com
+ALL: aplove5.blogspot.com
 ALL: aplqlalwjhiia-vofimon873555491.codeanyapp.com
 ALL: aplsces.000webhostapp.com
 ALL: aplsjgfnqomg.com
