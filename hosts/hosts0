@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3706.2026.08.11
-#### Total Hosts: 922,296
+#### Version: V2.3708.2026.08.12
+#### Total Hosts: 922,326
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -13614,6 +13614,7 @@ fe80::1%lo0 localhost
 0.0.0.0 5a4f32e160c3b67328f873c22b863c5f.redinuid.imrworldwide.com
 0.0.0.0 5a5bbdaad2d2d2f82aff274a5f4eff3b-dot-spow3039.df.r.appspot.com
 0.0.0.0 5a6b-909e-a9d0-a04b.reporo.net
+0.0.0.0 5a6g2ko3a.blogspot.com
 0.0.0.0 5a7a9cbcea5844c52c32457176e86022-dot-gle9392420309493993.rj.r.appspot.com
 0.0.0.0 5a7c4d78bc91b600.n5.sync.bumlam.com
 0.0.0.0 5a8s5r1gmgjx5tbbtj33j2rnrz6w5lj.i.api.binance.com
@@ -13706,6 +13707,7 @@ fe80::1%lo0 localhost
 0.0.0.0 5au3zxr5.square.site
 0.0.0.0 5auth-session-timedout-naver.firebaseapp.com
 0.0.0.0 5auth-session-timedout-naver.web.app
+0.0.0.0 5avlib.com
 0.0.0.0 5avwl.qwo231sdx.club
 0.0.0.0 5avxd.voluumtrk.com
 0.0.0.0 5awsc.rdtk.io
@@ -87560,6 +87562,7 @@ fe80::1%lo0 localhost
 0.0.0.0 a1.adformnet.akadns.net
 0.0.0.0 a1.admaster.net
 0.0.0.0 a1.adsplay.xyz
+0.0.0.0 a1.adstore.jp
 0.0.0.0 a1.adthink.com
 0.0.0.0 a-0001.a-msedge.net
 0.0.0.0 a1.api.bbc.co.uk
@@ -154123,5 +154126,3 @@ fe80::1%lo0 localhost
 0.0.0.0 anrtther12r.live
 0.0.0.0 anrtx.tacoda.net
 0.0.0.0 anruean.bounceme.net
-0.0.0.0 anrysys.popunder.ru
-0.0.0.0 ans1.adsoftware.com
