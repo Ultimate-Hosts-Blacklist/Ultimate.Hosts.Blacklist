@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3718.2026.08.17
-#### Total Hosts: 922,275
+#### Version: V2.3720.2026.08.18
+#### Total Hosts: 922,258
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -12572,7 +12572,6 @@ fe80::1%lo0 localhost
 0.0.0.0 4ksir.voluumtrk.com
 0.0.0.0 4ksport.pl
 0.0.0.0 4kspyoz8x.we9ixzz.co
-0.0.0.0 4k-stream-tv01.blogspot.com
 0.0.0.0 4ksx2-myaaa-aaaad-qbstq-cai.raw.ic0.app
 0.0.0.0 4ktiv4si-dana.secaraa.online
 0.0.0.0 4ktvmagazineluiza.ownip.net
@@ -154126,3 +154125,4 @@ fe80::1%lo0 localhost
 0.0.0.0 anrtther12r.live
 0.0.0.0 anrtx.tacoda.net
 0.0.0.0 anruean.bounceme.net
+0.0.0.0 anrysys.popunder.ru
