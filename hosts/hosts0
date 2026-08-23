@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3728.2026.08.22
-#### Total Hosts: 922,259
+#### Version: V2.3730.2026.08.23
+#### Total Hosts: 922,414
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -5552,6 +5552,7 @@ fe80::1%lo0 localhost
 0.0.0.0 1ta.eu.bitcoin.com
 0.0.0.0 1ta.ru.bitcoin.com
 0.0.0.0 1ta.us.bitcoin.com
+0.0.0.0 1tan.casebin.at
 0.0.0.0 1taudi6ital.xyz
 0.0.0.0 1td9zlcwgqi2.segurcarga.com
 0.0.0.0 1tdy7d.qwo231sdx.club
@@ -13614,6 +13615,7 @@ fe80::1%lo0 localhost
 0.0.0.0 5a4f32e160c3b67328f873c22b863c5f.redinuid.imrworldwide.com
 0.0.0.0 5a5bbdaad2d2d2f82aff274a5f4eff3b-dot-spow3039.df.r.appspot.com
 0.0.0.0 5a6b-909e-a9d0-a04b.reporo.net
+0.0.0.0 5a6g2ko3a.blogspot.com
 0.0.0.0 5a7a9cbcea5844c52c32457176e86022-dot-gle9392420309493993.rj.r.appspot.com
 0.0.0.0 5a7c4d78bc91b600.n5.sync.bumlam.com
 0.0.0.0 5a8s5r1gmgjx5tbbtj33j2rnrz6w5lj.i.api.binance.com
@@ -26522,6 +26524,7 @@ fe80::1%lo0 localhost
 0.0.0.0 24vunvrv.com
 0.0.0.0 24waznewydarzenia.pl
 0.0.0.0 24web.nl
+0.0.0.0 24winnjury.com
 0.0.0.0 24wq4uq57g56ftxxugr7awrslu-adwhj77lcyoafdy-l-instagram-com.translate.goog
 0.0.0.0 24wqwq33.000webhostapp.com
 0.0.0.0 24wrestling.us.intellitxt.com
@@ -33338,6 +33341,7 @@ fe80::1%lo0 localhost
 0.0.0.0 97e6.us.bitcoin.com
 0.0.0.0 097e9ccc6ff789c8e80790e16fe9de48.redinuid.imrworldwide.com
 0.0.0.0 97ee4bcb9bf5b985.n5.sync.bumlam.com
+0.0.0.0 97ee6.catex.at
 0.0.0.0 97f5e9db73dbb9a0.n5.sync.bumlam.com
 0.0.0.0 97f0851d0f427021333666944ee760de.redinuid.imrworldwide.com
 0.0.0.0 97f7936a3819e22ab77abf31523bb930.redinuid.imrworldwide.com
@@ -87706,6 +87710,7 @@ fe80::1%lo0 localhost
 0.0.0.0 a1leadmanager.clickfunnels.com
 0.0.0.0 a1lraqi.pushengage.com
 0.0.0.0 a1-m1.doublepimp.com
+0.0.0.0 a1marinematters.com.au
 0.0.0.0 a1masturbatiemom-liv.pages.dev
 0.0.0.0 a1mbte.xyz
 0.0.0.0 a1mericafcu.myftp.biz
@@ -106043,6 +106048,7 @@ fe80::1%lo0 localhost
 0.0.0.0 accunt-review-help-form-12.vercel.app
 0.0.0.0 accuntsmse303.wuaze.com
 0.0.0.0 accuont-restrictions-remove.glitch.me
+0.0.0.0 accupaysystems.com
 0.0.0.0 acc-upd.myaccountswebbupdate.workers.dev
 0.0.0.0 acc-update-information.my.to
 0.0.0.0 acc-update-netflix.click
@@ -107793,7 +107799,6 @@ fe80::1%lo0 localhost
 0.0.0.0 act.tt.omtrdc.net
 0.0.0.0 act.us.api.binance.com
 0.0.0.0 act.us.bitcoin.com
-0.0.0.0 acta.ai
 0.0.0.0 act-actions.my.id
 0.0.0.0 act-aletaharrop6298.pages.dev
 0.0.0.0 actamazadmincenter.com
@@ -117175,6 +117180,7 @@ fe80::1%lo0 localhost
 0.0.0.0 adrianceja01.clickfunnels.com
 0.0.0.0 adriandesignltd.co.uk
 0.0.0.0 adrianduzaktai.000webhostapp.com
+0.0.0.0 adrianeborges.com.br
 0.0.0.0 adrian---egn.000webhostapp.com
 0.0.0.0 adrianfernandezabogado.com.ar
 0.0.0.0 adriangaston.github.io
@@ -141054,6 +141060,7 @@ fe80::1%lo0 localhost
 0.0.0.0 aludlam.clickfunnels.com
 0.0.0.0 aluga-design.de
 0.0.0.0 alugarcacamba.com
+0.0.0.0 alugueitatiba.com.br
 0.0.0.0 alugueldelanchasemangra.com.br
 0.0.0.0 alugueldelanchaubatuba.com.br
 0.0.0.0 aluhu.co.uk
@@ -154120,9 +154127,3 @@ fe80::1%lo0 localhost
 0.0.0.0 anrnz.bv41.com
 0.0.0.0 anrotradingsc.com
 0.0.0.0 anrremovals.co.za
-0.0.0.0 anrstncikndejnno-dot-millinium.ey.r.appspot.com
-0.0.0.0 an-rtb-fkb.connexity.net
-0.0.0.0 anrtther12r.live
-0.0.0.0 anrtx.tacoda.net
-0.0.0.0 anruean.bounceme.net
-0.0.0.0 anrysys.popunder.ru
