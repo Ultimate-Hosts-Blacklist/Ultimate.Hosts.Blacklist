@@ -1,8 +1,3 @@
-ALL: vaccines.accountkit.com
-ALL: vaccines.convertkit.com
-ALL: vaccines.trednyol.com
-ALL: vaccines.yext.com
-ALL: vaccinesfortravel.rtrk.com
 ALL: vaccineshoppe.com.ssl.d1.sc.omtrdc.net
 ALL: vaccineshoppecanada.com.ssl.d1.sc.omtrdc.net
 ALL: vaccinetstodh.adap.tv
@@ -50355,11 +50350,9 @@ ALL: www.dlagier.com
 ALL: www.dlaogrodu.biz
 ALL: www.dlarodzinyprzemysl.pl
 ALL: www.dlaturystow.com.pl
-ALL: www.dlavi496.blogspot.com
 ALL: www.dlbia2music.com
 ALL: www.dlcdnamaxphotocollage.adx1.com
 ALL: www.dlcdnzc-minami.adx1.com
-ALL: www.dlhentaigame.blogspot.jp
 ALL: www.dlmyfile.com
 ALL: www.dlq.adx1.com
 ALL: www.dlskits.info
@@ -51045,7 +51038,6 @@ ALL: www.efreedom.net
 ALL: www.e-freesms.net
 ALL: www.efza.net
 ALL: www.eg1n7.adx1.com
-ALL: www.egaepah13.blogspot.com
 ALL: www.egalitaire.com.pl
 ALL: www.egamandala0031.000webhostapp.com
 ALL: www.egamingbets.com
@@ -55046,7 +55038,6 @@ ALL: www.jastats.com
 ALL: www.jav2.me
 ALL: www.jav2lib.com
 ALL: www.jav4me.club
-ALL: www.jav4uload.blogspot.com
 ALL: www.jav4you.org
 ALL: www.jav007.com
 ALL: www.jav11b.com
@@ -55054,7 +55045,6 @@ ALL: www.jav77.com
 ALL: www.jav.center
 ALL: www.jav.re
 ALL: www.javady.com
-ALL: www.javandivforfree.blogspot.com
 ALL: www.javanenvansuriname.info
 ALL: www.javarchive.net
 ALL: www.javascriptobfuscator.com
@@ -55070,7 +55060,6 @@ ALL: www.javdirect.com
 ALL: www.javeal.com
 ALL: www.javeat.com
 ALL: www.jav-fan.com
-ALL: www.javfile4u.blogspot.com
 ALL: www.javfilm.tv
 ALL: www.jav-films.com
 ALL: www.javfinder.net
@@ -92593,7 +92582,6 @@ ALL: 31.170.100.210
 ALL: 31.170.106.44
 ALL: 31.170.123.11
 ALL: 31.170.123.79
-ALL: 31.170.160.209
 ALL: 31.171.132.10
 ALL: 31.171.244.19
 ALL: 31.171.247.54
@@ -115560,7 +115548,6 @@ ALL: 69.30.250.202
 ALL: 69.30.251.58
 ALL: 69.30.251.139
 ALL: 69.30.252.42
-ALL: 69.30.255.106
 ALL: 69.30.255.186
 ALL: 69.31.16.88
 ALL: 69.31.81.57
@@ -147479,6 +147466,7 @@ ALL: 104.18.24.111
 ALL: 104.18.25.111
 ALL: 104.18.36.98
 ALL: 104.18.41.59
+ALL: 104.18.42.140
 ALL: 104.21.3.230
 ALL: 104.21.5.169
 ALL: 104.21.10.215
@@ -147525,6 +147513,7 @@ ALL: 104.21.86.199
 ALL: 104.21.88.100
 ALL: 104.21.91.63
 ALL: 104.21.92.88
+ALL: 104.21.93.254
 ALL: 104.22.13.160
 ALL: 104.32.72.221
 ALL: 104.33.200.50
@@ -148611,7 +148600,6 @@ ALL: 104.243.26.254
 ALL: 104.243.35.162
 ALL: 104.243.37.48
 ALL: 104.243.39.26
-ALL: 104.243.129.210
 ALL: 104.243.192.0/20
 ALL: 104.244.56.0/21
 ALL: 104.244.72.73
@@ -176782,6 +176770,7 @@ ALL: 172.67.200.22
 ALL: 172.67.211.29
 ALL: 172.67.211.46
 ALL: 172.67.215.75
+ALL: 172.67.217.99
 ALL: 172.67.218.151
 ALL: 172.67.220.87
 ALL: 172.67.220.205
