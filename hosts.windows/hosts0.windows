@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3732.2026.08.24
-#### Total Hosts: 922,402
+#### Version: V2.3734.2026.08.25
+#### Total Hosts: 922,392
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -13703,7 +13703,6 @@
 127.0.0.1 5au3zxr5.square.site
 127.0.0.1 5auth-session-timedout-naver.firebaseapp.com
 127.0.0.1 5auth-session-timedout-naver.web.app
-127.0.0.1 5avlib.com
 127.0.0.1 5avwl.qwo231sdx.club
 127.0.0.1 5avxd.voluumtrk.com
 127.0.0.1 5awsc.rdtk.io
@@ -137420,3 +137419,4 @@
 127.0.0.1 alkomex.com
 127.0.0.1 alkoora.info
 127.0.0.1 alkoskurier.com
+127.0.0.1 alkosto.cdn.adglare.net
