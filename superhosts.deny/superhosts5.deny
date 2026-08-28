@@ -1,10 +1,3 @@
-ALL: vaccines.accountkit.com
-ALL: vaccines.convertkit.com
-ALL: vaccines.trednyol.com
-ALL: vaccines.yext.com
-ALL: vaccinesfortravel.rtrk.com
-ALL: vaccineshoppe.com.ssl.d1.sc.omtrdc.net
-ALL: vaccineshoppecanada.com.ssl.d1.sc.omtrdc.net
 ALL: vaccinetstodh.adap.tv
 ALL: vaccinial-marble.000webhostapp.com
 ALL: vaccinial-sailor.000webhostapp.com
@@ -51372,6 +51365,7 @@ ALL: www.erotica-deluxe.com
 ALL: www.eroticrealm.com
 ALL: www.erotikcounter.org
 ALL: www.erotomania.org
+ALL: www.erotorrent.info
 ALL: www.erp.admedia.com
 ALL: www.errorception.com
 ALL: www.errorclean.com
@@ -52022,7 +52016,6 @@ ALL: www.filecraft.org
 ALL: www.filefortune.com
 ALL: www.filehog.com
 ALL: www.filemirror.org
-ALL: www.fileroot.blogspot.com
 ALL: www.filesaversecure.000webhostapp.com
 ALL: www.fileserver.adx1.com
 ALL: www.filesmoster.com
@@ -52327,7 +52320,6 @@ ALL: www.fpcpopunder.com
 ALL: www.fpctraffic2.com
 ALL: www.fpctraffic.com
 ALL: www.fpea.org
-ALL: www.fpvjp777.blogspot.com
 ALL: www.fqtag.com
 ALL: www.fr
 ALL: www.fr.2.cqcounter.com
@@ -55067,7 +55059,6 @@ ALL: www.jav-films.com
 ALL: www.javfinder.net
 ALL: www.javgo.info
 ALL: www.javhunt.com
-ALL: www.javidoltop.blogspot.com
 ALL: www.javl10.com
 ALL: www.jav-legend.com
 ALL: www.javli6.com
@@ -85059,9 +85050,6 @@ ALL: 5.153.161.154
 ALL: 5.153.172.9
 ALL: 5.153.172.224
 ALL: 5.153.182.25
-ALL: 5.153.233.18
-ALL: 5.153.233.26
-ALL: 5.153.233.42
 ALL: 5.153.238.203
 ALL: 5.153.255.122
 ALL: 5.154.184.165
@@ -89829,6 +89817,7 @@ ALL: 18.223.251.171
 ALL: 18.224.49.36
 ALL: 18.224.76.53
 ALL: 18.224.140.4
+ALL: 18.228.7.109
 ALL: 18.228.119.138
 ALL: 18.228.152.188
 ALL: 18.228.173.67
@@ -101048,6 +101037,7 @@ ALL: 47.242.224.30
 ALL: 47.242.238.111
 ALL: 47.243.4.132
 ALL: 47.243.47.203
+ALL: 47.243.78.246
 ALL: 47.245.111.145
 ALL: 47.251.44.225
 ALL: 47.252.33.91
@@ -148605,7 +148595,6 @@ ALL: 104.243.26.254
 ALL: 104.243.35.162
 ALL: 104.243.37.48
 ALL: 104.243.39.26
-ALL: 104.243.129.210
 ALL: 104.243.192.0/20
 ALL: 104.244.56.0/21
 ALL: 104.244.72.73
@@ -176895,6 +176884,7 @@ ALL: 172.105.178.30
 ALL: 172.105.191.116
 ALL: 172.105.218.106
 ALL: 172.105.234.122
+ALL: 172.105.241.146
 ALL: 172.105.242.140
 ALL: 172.106.11.34
 ALL: 172.106.145.162
