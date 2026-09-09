@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3762.2026.09.08
-#### Total Hosts: 922,396
+#### Version: V2.3764.2026.09.09
+#### Total Hosts: 922,399
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -150746,7 +150746,6 @@ fe80::1%lo0 localhost
 0.0.0.0 analytics-query-atsv2.g03.yahoodns.net
 0.0.0.0 analytics-reporting.zdbb.net
 0.0.0.0 analyticsresults.datev.de
-0.0.0.0 analyticsresults.datev-magazin.de
 0.0.0.0 analyticssaintleo.everestengagement.com
 0.0.0.0 analyticssearch-pa.googleapis.com
 0.0.0.0 analytics-secure.dollargeneral.com
@@ -154126,3 +154125,4 @@ fe80::1%lo0 localhost
 0.0.0.0 anrotradingsc.com
 0.0.0.0 anrremovals.co.za
 0.0.0.0 anrstncikndejnno-dot-millinium.ey.r.appspot.com
+0.0.0.0 an-rtb-fkb.connexity.net
