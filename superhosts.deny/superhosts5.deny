@@ -1,3 +1,12 @@
+ALL: va.benefitbuilder.acxiom.com
+ALL: va.botplatform.liveperson.net
+ALL: va.cobrowse.liveperson.net
+ALL: va.content.lpsnmedia.net
+ALL: va.coscousa.com
+ALL: va.data.liveperson.net
+ALL: va.domain.name
+ALL: va.ec.startappservice.com
+ALL: va.enghist.liveperson.net
 ALL: va.facade-msg.liveperson.net
 ALL: va.idp.liveperson.net
 ALL: va.ivrdeflect.liveperson.net
@@ -55215,9 +55224,11 @@ ALL: www.javl10.com
 ALL: www.jav-legend.com
 ALL: www.javli6.com
 ALL: www.javlib3.com
+ALL: www.javlib.xyz
 ALL: www.jav-library.com
 ALL: www.javlibrary.org
 ALL: www.javlibrary.xyz
+ALL: www.jav-load.com
 ALL: www.javmax.com
 ALL: www.javmoo.info
 ALL: www.javort.com
@@ -101139,7 +101150,6 @@ ALL: 47.105.79.86
 ALL: 47.107.75.11
 ALL: 47.134.220.183
 ALL: 47.135.147.244
-ALL: 47.146.139.124
 ALL: 47.180.6.61
 ALL: 47.180.10.3
 ALL: 47.180.10.5
@@ -191881,7 +191891,6 @@ ALL: 185.27.174.115
 ALL: 185.27.192.200
 ALL: 185.28.22.98
 ALL: 185.28.60.42
-ALL: 185.28.61.26
 ALL: 185.28.100.78
 ALL: 185.28.101.197
 ALL: 185.28.102.22
