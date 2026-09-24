@@ -1,3 +1,9 @@
+ALL: va502.insight.omtrdc.net
+ALL: va504.insight.omtrdc.net
+ALL: va.5.p2l.info
+ALL: va.ac.liveperson.net
+ALL: va.agentvep.liveperson.net
+ALL: va.appmgmtsvc.liveperson.net
 ALL: va.benefitbuilder.acxiom.com
 ALL: va.botplatform.liveperson.net
 ALL: va.cobrowse.liveperson.net
@@ -10071,6 +10077,7 @@ ALL: watchmuvee.info
 ALL: watchmygfreview.info
 ALL: watch-now.us
 ALL: watchnow.wishses.net
+ALL: watchnowclick.com
 ALL: watchonlinehindimovies.com
 ALL: watchoop.com
 ALL: watchorn.leadpages.co
@@ -101150,6 +101157,7 @@ ALL: 47.105.79.86
 ALL: 47.107.75.11
 ALL: 47.134.220.183
 ALL: 47.135.147.244
+ALL: 47.146.139.124
 ALL: 47.180.6.61
 ALL: 47.180.10.3
 ALL: 47.180.10.5
