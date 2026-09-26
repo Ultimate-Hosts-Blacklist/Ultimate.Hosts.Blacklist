@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3796.2026.09.25
-#### Total Hosts: 922,654
+#### Version: V2.3798.2026.09.26
+#### Total Hosts: 922,756
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -5159,6 +5159,7 @@
 127.0.0.1 1passvvord.org
 127.0.0.1 1password.apponic.com
 127.0.0.1 1password.mktoweb.com
+127.0.0.1 1password-login.com
 127.0.0.1 1passwordscim.it.klaviyo.com
 127.0.0.1 1paycoin.com
 127.0.0.1 1pdci.inc.antpool.com
@@ -13611,7 +13612,6 @@
 127.0.0.1 5a4f32e160c3b67328f873c22b863c5f.redinuid.imrworldwide.com
 127.0.0.1 5a5bbdaad2d2d2f82aff274a5f4eff3b-dot-spow3039.df.r.appspot.com
 127.0.0.1 5a6b-909e-a9d0-a04b.reporo.net
-127.0.0.1 5a6g2ko3a.blogspot.com
 127.0.0.1 5a7a9cbcea5844c52c32457176e86022-dot-gle9392420309493993.rj.r.appspot.com
 127.0.0.1 5a7c4d78bc91b600.n5.sync.bumlam.com
 127.0.0.1 5a8s5r1gmgjx5tbbtj33j2rnrz6w5lj.i.api.binance.com
@@ -136370,6 +136370,7 @@
 127.0.0.1 alfamobi.g2afse.com
 127.0.0.1 alfandegaria.com
 127.0.0.1 alfanfadhil.000webhostapp.com
+127.0.0.1 alfapati.com
 127.0.0.1 alfapizza.es
 127.0.0.1 alfapro.ru
 127.0.0.1 alfaraenatour.com
@@ -137418,4 +137419,3 @@
 127.0.0.1 alknpicnh.000webhostapp.com
 127.0.0.1 alko.ar
 127.0.0.1 alkographicsolutions.gr
-127.0.0.1 alkoholszondanagyker.hu

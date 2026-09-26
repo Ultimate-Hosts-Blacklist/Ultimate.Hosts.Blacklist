@@ -1,3 +1,5 @@
+ALL: appfbk-wqpxchj6a.polkuverkosto.fi
+ALL: appfbk-wwekrpudya.polkuverkosto.fi
 ALL: appfbk-xhhravue.polkuverkosto.fi
 ALL: appfbk-xjdehtj0.polkuverkosto.fi
 ALL: appfbk-xlug915xt.polkuverkosto.fi
@@ -1492,6 +1494,7 @@ ALL: app-ledgeelive.webflow.io
 ALL: app-ledgeerlive-us.webflow.io
 ALL: app-ledgeerlvse.webflow.io
 ALL: app-ledgeer-webstor.webflow.io
+ALL: app-ledger.co.com
 ALL: app-ledger-desktop.wasmer.app
 ALL: app-ledger-docs.webflow.io
 ALL: appledger-eth.webflow.io
@@ -5335,6 +5338,7 @@ ALL: apptreezorsuite.github.io
 ALL: app-treizor-suites.typedream.app
 ALL: app-trejorsuite.webflow.io
 ALL: app-trendmicro.com
+ALL: app-trezor.co.com
 ALL: apptrezor.wixsite.com
 ALL: app-trezorhelp-brige.webflow.io
 ALL: app-trezor-info.live
@@ -53791,6 +53795,7 @@ ALL: bankoffamerricaloginerror.bankofamericasbm.workers.dev
 ALL: bankofgeorgia.kampyle.com
 ALL: bankofgeorgiage.matomo.cloud
 ALL: bankofhawaii.demdex.net
+ALL: bankofideas.org.uk
 ALL: bankofireiand.info
 ALL: bankofireland365-auth.com
 ALL: bankofireland-365authorization.com
@@ -59576,6 +59581,7 @@ ALL: beap.adx.yahoo.com
 ALL: beap.gemini.yahoo.com
 ALL: beap-bc.yahoo.com
 ALL: beapi.apptentive.com
+ALL: beaquo.com
 ALL: bearaby-us.pxf.io
 ALL: bearbutt.refersion.com
 ALL: bearc0.com
@@ -67385,6 +67391,7 @@ ALL: bigideas.kargo.com
 ALL: bigideasa.co.za
 ALL: bigideasblog.infusionsoft.com
 ALL: big-industrious-tugboat.glitch.me
+ALL: big-ip-client.com
 ALL: bigislandcoffeeroasters.attn.tv
 ALL: bigislandcondorentalsbyowner.com
 ALL: bigislandnow.onesignal.com
@@ -68036,6 +68043,7 @@ ALL: billion.co.th
 ALL: billionaireroundtable.com
 ALL: billionairesgroup.io
 ALL: billionaires_guide.ck.page
+ALL: billionairespincasino.org
 ALL: billionapps.net
 ALL: billioncall-cdn.batmobi.net
 ALL: billionpoint.corp.com
@@ -68798,8 +68806,6 @@ ALL: biolabinsights.com
 ALL: biolife.co.in
 ALL: biolim.onesignal.com
 ALL: biolink.co.de
-ALL: biolink.info
-ALL: biolink.website
 ALL: biolinky.co
 ALL: biolinky.com
 ALL: biolog.totalh.net
@@ -69849,6 +69855,7 @@ ALL: bitvibes.us-ord-1.linodeobjects.com
 ALL: bitwarden.adx1.com
 ALL: bitwarden.dummy18.dnset.com
 ALL: bitwarden-poc.dev.piano.io
+ALL: bitwarden-vault.org
 ALL: bitware.apponic.com
 ALL: bit-wint-okoins.cc
 ALL: bitybean.refersion.com
@@ -96937,6 +96944,7 @@ ALL: canodyne.refersion.com
 ALL: canoe.112.2o7.net
 ALL: canoe.ca.112.2o7.net
 ALL: canoe.dev.pardot.com
+ALL: canoeandkayakstore.co.uk
 ALL: canoe-dmz.dev.pardot.com
 ALL: canoeit.infusionsoft.com
 ALL: canoe-staging.dev.pardot.com
@@ -99592,6 +99600,8 @@ ALL: casino.soramoon.info
 ALL: casinoaffiliatereviews.com
 ALL: casinoasia.org
 ALL: casinobanque.commander1.com
+ALL: casino-billionairespin.es
+ALL: casino-billionairespin.gr
 ALL: casinobitco.in
 ALL: casino-bitstarz.ru.com
 ALL: casinobon.us
@@ -113185,6 +113195,7 @@ ALL: cis-content.silverpop.com
 ALL: ciscopartners.lookbookhq.com
 ALL: ciscoprod50.saas.appdynamics.com
 ALL: ciscosandbox.mktoweb.com
+ALL: cisco-secure-client.es
 ALL: ciscosystemsin.tt.omtrdc.net
 ALL: ciscosystemsinc.tt.omtrdc.net
 ALL: cisco-tftp-server.apponic.com
@@ -113713,6 +113724,7 @@ ALL: citrixprod.mktoweb.com
 ALL: citrix-rightsignature-content.customer.pendo.io
 ALL: citrix-rightsignature-data.customer.pendo.io
 ALL: citrixsaas.d1.sc.omtrdc.net
+ALL: citrix-secure-access.org
 ALL: citrix-sharefile-content.customer.pendo.io
 ALL: citrix-sharefile-data.customer.pendo.io
 ALL: citrix-studio-content.customer.pendo.io
@@ -136685,6 +136697,7 @@ ALL: corenomics.com
 ALL: corenutritionals.attn.tv
 ALL: coreplays.com
 ALL: coreplesk-cake-7dbf.leacshlenmmdgza.workers.dev
+ALL: corepost13.com
 ALL: coreposturalalignment.clickfunnels.com
 ALL: corepoweryogaco.org
 ALL: coreprogramm.onesignal.com
@@ -156061,19 +156074,3 @@ ALL: dd.ssuporttpage.com
 ALL: dd.superbuzz.io
 ALL: dd.toponad.com
 ALL: dda65b3f-c30d-4f59-bdbe-0dfe64b25f7c-00-2r64855b8zlef.janeway.replit.dev
-ALL: ddaaa94kkda32w.weebly.com
-ALL: ddacn6pr5v0tl.cloudfront.net
-ALL: ddafrica.co.za
-ALL: ddaftde.leadpages.co
-ALL: ddai.adgraph.net
-ALL: ddai.admeme.net
-ALL: ddai.adv.admeme.net
-ALL: ddakkl-cc.top
-ALL: ddakkl-dd.top
-ALL: ddakota.fr
-ALL: ddapi.superbuzz.io
-ALL: ddasswery.weebly.com
-ALL: ddastyu.weebly.com
-ALL: ddavid.sjv.io
-ALL: ddavis1123.clickfunnels.com
-ALL: ddavis.ultramedicinadiagnostica.com.br

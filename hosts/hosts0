@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3796.2026.09.25
-#### Total Hosts: 922,654
+#### Version: V2.3798.2026.09.26
+#### Total Hosts: 922,756
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -5163,6 +5163,7 @@ fe80::1%lo0 localhost
 0.0.0.0 1passvvord.org
 0.0.0.0 1password.apponic.com
 0.0.0.0 1password.mktoweb.com
+0.0.0.0 1password-login.com
 0.0.0.0 1passwordscim.it.klaviyo.com
 0.0.0.0 1paycoin.com
 0.0.0.0 1pdci.inc.antpool.com
@@ -13615,7 +13616,6 @@ fe80::1%lo0 localhost
 0.0.0.0 5a4f32e160c3b67328f873c22b863c5f.redinuid.imrworldwide.com
 0.0.0.0 5a5bbdaad2d2d2f82aff274a5f4eff3b-dot-spow3039.df.r.appspot.com
 0.0.0.0 5a6b-909e-a9d0-a04b.reporo.net
-0.0.0.0 5a6g2ko3a.blogspot.com
 0.0.0.0 5a7a9cbcea5844c52c32457176e86022-dot-gle9392420309493993.rj.r.appspot.com
 0.0.0.0 5a7c4d78bc91b600.n5.sync.bumlam.com
 0.0.0.0 5a8s5r1gmgjx5tbbtj33j2rnrz6w5lj.i.api.binance.com
@@ -136374,6 +136374,7 @@ fe80::1%lo0 localhost
 0.0.0.0 alfamobi.g2afse.com
 0.0.0.0 alfandegaria.com
 0.0.0.0 alfanfadhil.000webhostapp.com
+0.0.0.0 alfapati.com
 0.0.0.0 alfapizza.es
 0.0.0.0 alfapro.ru
 0.0.0.0 alfaraenatour.com
@@ -147062,6 +147063,7 @@ fe80::1%lo0 localhost
 0.0.0.0 americanbulldogtrainer.com
 0.0.0.0 americanbycr.com
 0.0.0.0 americancancersociety.pxf.io
+0.0.0.0 americancandystores.co.uk
 0.0.0.0 americancareconcept.com
 0.0.0.0 americancbof.github.io
 0.0.0.0 americancenterforneuropsychiatry.com

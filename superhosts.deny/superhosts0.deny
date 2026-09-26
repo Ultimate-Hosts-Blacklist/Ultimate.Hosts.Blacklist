@@ -33,8 +33,8 @@
 ### https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues
 
 ##### Version Information #
-#### Version: V2.3796.2026.09.25
-#### Total Hosts and IP's: 1,071,502
+#### Version: V2.3798.2026.09.26
+#### Total Hosts and IP's: 1,071,604
 ##### Version Information ##
 
 # ##### START Super hosts.deny Block List # DO NOT EDIT #####
@@ -5141,6 +5141,7 @@ ALL: 1pass-scim-bridge.newrelic.com
 ALL: 1passvvord.org
 ALL: 1password.apponic.com
 ALL: 1password.mktoweb.com
+ALL: 1password-login.com
 ALL: 1passwordscim.it.klaviyo.com
 ALL: 1paycoin.com
 ALL: 1pdci.inc.antpool.com
@@ -13593,7 +13594,6 @@ ALL: 5a4f2f89-da45-4791-8c6a-981093dbf158.id.repl.co
 ALL: 5a4f32e160c3b67328f873c22b863c5f.redinuid.imrworldwide.com
 ALL: 5a5bbdaad2d2d2f82aff274a5f4eff3b-dot-spow3039.df.r.appspot.com
 ALL: 5a6b-909e-a9d0-a04b.reporo.net
-ALL: 5a6g2ko3a.blogspot.com
 ALL: 5a7a9cbcea5844c52c32457176e86022-dot-gle9392420309493993.rj.r.appspot.com
 ALL: 5a7c4d78bc91b600.n5.sync.bumlam.com
 ALL: 5a8s5r1gmgjx5tbbtj33j2rnrz6w5lj.i.api.binance.com
@@ -136352,6 +136352,7 @@ ALL: alfamobi.affise.com
 ALL: alfamobi.g2afse.com
 ALL: alfandegaria.com
 ALL: alfanfadhil.000webhostapp.com
+ALL: alfapati.com
 ALL: alfapizza.es
 ALL: alfapro.ru
 ALL: alfaraenatour.com
@@ -147040,6 +147041,7 @@ ALL: americanbreetings.sjv.io
 ALL: americanbulldogtrainer.com
 ALL: americanbycr.com
 ALL: americancancersociety.pxf.io
+ALL: americancandystores.co.uk
 ALL: americancareconcept.com
 ALL: americancbof.github.io
 ALL: americancenterforneuropsychiatry.com
@@ -167771,6 +167773,7 @@ ALL: app.v-tube.biz.domain.name
 ALL: app.vungle.com
 ALL: app.waiverelectronic.com
 ALL: app.walletconnecthub.xyz
+ALL: app.walletexodus.io
 ALL: app.walletimports.com
 ALL: app.walletsconnetlink.site
 ALL: app.wallet-uniswap.eth.li
@@ -169305,5 +169308,3 @@ ALL: appfbk-t5845lbg.polkuverkosto.fi
 ALL: appfbk-tknhqb6ou.polkuverkosto.fi
 ALL: appfbk-ua4tro8lfi.polkuverkosto.fi
 ALL: appfbk-w9wo1d2jgc.polkuverkosto.fi
-ALL: appfbk-wqpxchj6a.polkuverkosto.fi
-ALL: appfbk-wwekrpudya.polkuverkosto.fi
