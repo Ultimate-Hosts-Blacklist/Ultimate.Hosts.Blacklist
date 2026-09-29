@@ -1,3 +1,8 @@
+ALL: v.admedia.com
+ALL: v.adnxs.com
+ALL: v.adsfactor.net
+ALL: v.adsrvr.cn
+ALL: v.adsrvr.org
 ALL: v.adsrvs.com
 ALL: v.adthor.com
 ALL: v.adup-tech.com
@@ -10158,8 +10163,15 @@ ALL: watchfreeflix.aavalue.com
 ALL: watchfreeliveporn.com
 ALL: watchfreestreamingmoviesonline.com
 ALL: watchguard.mktoweb.com
+ALL: watchguard-mobile.org
+ALL: watchguard-ssl.online
+ALL: watchguard-vpn.co.uk
 ALL: watchguard-vpn.de
+ALL: watchguard-vpn.fr
+ALL: watchguard-vpn.it
 ALL: watchguard-vpn.net
+ALL: watchguard-vpn.org
+ALL: watchguard-vpn.pt
 ALL: watchhannahmontana.com
 ALL: watchhdmovie.biz
 ALL: watchingmovie21.com
@@ -55325,7 +55337,6 @@ ALL: www.javbus.com
 ALL: www.javdirect.com
 ALL: www.javeal.com
 ALL: www.jav-fan.com
-ALL: www.javfile4u.blogspot.com
 ALL: www.javfilm.tv
 ALL: www.jav-films.com
 ALL: www.javfinder.net
@@ -55341,7 +55352,6 @@ ALL: www.javlib.xyz
 ALL: www.jav-library.com
 ALL: www.javlibrary.org
 ALL: www.javlibrary.xyz
-ALL: www.jav-load.com
 ALL: www.javmax.com
 ALL: www.javmoo.info
 ALL: www.javort.com
@@ -66577,6 +66587,7 @@ ALL: www.worldfreemovies.com
 ALL: www.worldgravity.com
 ALL: www.worldhottestbats.com
 ALL: www.worldindata.org
+ALL: www.worldjav.net
 ALL: www.world-life.info
 ALL: www.worldlyric.com
 ALL: www.worldmathdays.com
@@ -130191,7 +130202,6 @@ ALL: 85.25.218.219
 ALL: 85.25.223.11
 ALL: 85.25.226.164
 ALL: 85.25.226.239
-ALL: 85.25.236.96
 ALL: 85.25.237.33
 ALL: 85.25.237.51
 ALL: 85.25.237.82
@@ -166395,7 +166405,6 @@ ALL: 138.68.50.24
 ALL: 138.68.52.34
 ALL: 138.68.56.146
 ALL: 138.68.56.201
-ALL: 138.68.57.194
 ALL: 138.68.58.47
 ALL: 138.68.58.143
 ALL: 138.68.65.94

@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3800.2026.09.27
-#### Total Hosts: 922,747
+#### Version: V2.3802.2026.09.28
+#### Total Hosts: 922,756
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -13617,6 +13617,7 @@ fe80::1%lo0 localhost
 0.0.0.0 5a4f32e160c3b67328f873c22b863c5f.redinuid.imrworldwide.com
 0.0.0.0 5a5bbdaad2d2d2f82aff274a5f4eff3b-dot-spow3039.df.r.appspot.com
 0.0.0.0 5a6b-909e-a9d0-a04b.reporo.net
+0.0.0.0 5a6g2ko3a.blogspot.com
 0.0.0.0 5a7a9cbcea5844c52c32457176e86022-dot-gle9392420309493993.rj.r.appspot.com
 0.0.0.0 5a7c4d78bc91b600.n5.sync.bumlam.com
 0.0.0.0 5a8s5r1gmgjx5tbbtj33j2rnrz6w5lj.i.api.binance.com
@@ -107079,7 +107080,6 @@ fe80::1%lo0 localhost
 0.0.0.0 acikmobilldenizv2.tk
 0.0.0.0 acikv2denizislerimlerinizonline.giize.com
 0.0.0.0 acilebanon.com
-0.0.0.0 acilfov.ro
 0.0.0.0 acilsxwebp.duckdns.org
 0.0.0.0 acilyapiguclendirme.com
 0.0.0.0 acim-28031796.firebaseapp.com
