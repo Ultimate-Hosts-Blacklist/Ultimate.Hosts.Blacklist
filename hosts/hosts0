@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3804.2026.09.29
-#### Total Hosts: 922,757
+#### Version: V2.3806.2026.09.30
+#### Total Hosts: 922,816
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -112442,6 +112442,7 @@ fe80::1%lo0 localhost
 0.0.0.0 adclub.de
 0.0.0.0 adclut.adlooxtracking.com
 0.0.0.0 adcmnaisera.com
+0.0.0.0 adcnsbauchi.com
 0.0.0.0 adcode103.rontar.com
 0.0.0.0 adcode202.rontar.com
 0.0.0.0 adcode203.rontar.com
@@ -113981,6 +113982,7 @@ fe80::1%lo0 localhost
 0.0.0.0 adiu3zp3sk.qwo231sdx.club
 0.0.0.0 adiux06.github.io
 0.0.0.0 adiva457.000webhostapp.com
+0.0.0.0 adivaskitchen.com
 0.0.0.0 adiverma.com
 0.0.0.0 adivk.000webhostapp.com
 0.0.0.0 adivoxtubeang.dnset.com
@@ -120614,6 +120616,7 @@ fe80::1%lo0 localhost
 0.0.0.0 adsauto-sales.com
 0.0.0.0 ads-aviatorads.admixer.net
 0.0.0.0 adsavvyresponse.vercel.app
+0.0.0.0 adsaw.cfd
 0.0.0.0 adsaway.com
 0.0.0.0 adsaws.esm1.net
 0.0.0.0 adsazpeigjxspxno-dot-millinium.ey.r.appspot.com
@@ -122532,6 +122535,7 @@ fe80::1%lo0 localhost
 0.0.0.0 adswizz-old-ui-1.ui.adswizz.com
 0.0.0.0 ads-wp.admarvel.com
 0.0.0.0 adswrasdx.club
+0.0.0.0 adswre.cfd
 0.0.0.0 adswww.adblade.com
 0.0.0.0 adsx.greystripe.com
 0.0.0.0 adsx.unityads.unity3d.com
@@ -122976,6 +122980,7 @@ fe80::1%lo0 localhost
 0.0.0.0 adumanradooo.gorrismatthieu.repl.co
 0.0.0.0 aduna.refersion.com
 0.0.0.0 adunagarden.com
+0.0.0.0 adundotravels.co.tz
 0.0.0.0 adunion.tapas.net
 0.0.0.0 adunit.adrevmedia.com
 0.0.0.0 adunit.cdn.auditude.com
@@ -130357,6 +130362,7 @@ fe80::1%lo0 localhost
 0.0.0.0 aidiscord.jiayiapi.cn
 0.0.0.0 aidiscord.whalespet.com
 0.0.0.0 aidjekibawa9jv7.53244ds.xyz
+0.0.0.0 aidlifempowerment.com
 0.0.0.0 aidmoving.com
 0.0.0.0 aidnnrue2.duckdns.org
 0.0.0.0 aid-notification-policies.vercel.app
@@ -154122,7 +154128,3 @@ fe80::1%lo0 localhost
 0.0.0.0 anrkoatxbj.duckdns.org
 0.0.0.0 anrmsicdkwcibemf-dot-millinium.ey.r.appspot.com
 0.0.0.0 anr-nametools-app-prod-2j3fwppuia-uc.a.run.app
-0.0.0.0 anr-nametools-app-stag-2j3fwppuia-uc.a.run.app
-0.0.0.0 anrnz.bv41.com
-0.0.0.0 anrotradingsc.com
-0.0.0.0 anrremovals.co.za
