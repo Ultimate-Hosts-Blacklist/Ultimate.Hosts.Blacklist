@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3808.2026.10.01
-#### Total Hosts: 922,850
+#### Version: V2.3810.2026.10.02
+#### Total Hosts: 922,833
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -13710,6 +13710,7 @@ fe80::1%lo0 localhost
 0.0.0.0 5au3zxr5.square.site
 0.0.0.0 5auth-session-timedout-naver.firebaseapp.com
 0.0.0.0 5auth-session-timedout-naver.web.app
+0.0.0.0 5avlib.com
 0.0.0.0 5avwl.qwo231sdx.club
 0.0.0.0 5avxd.voluumtrk.com
 0.0.0.0 5awsc.rdtk.io
