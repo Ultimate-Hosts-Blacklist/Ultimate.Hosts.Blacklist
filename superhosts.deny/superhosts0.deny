@@ -33,8 +33,8 @@
 ### https://github.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/issues
 
 ##### Version Information #
-#### Version: V2.3850.2026.11.08
-#### Total Hosts and IP's: 1,071,705
+#### Version: V2.3852.2026.11.10
+#### Total Hosts and IP's: 1,071,717
 ##### Version Information ##
 
 # ##### START Super hosts.deny Block List # DO NOT EDIT #####
@@ -111325,7 +111325,6 @@ ALL: ad.phaserep.com
 ALL: ad.ph-prt.tbn.ru
 ALL: ad.phunuxuavanay.vn
 ALL: ad.pickple.net
-ALL: ad.pitta.ne.jp
 ALL: ad.piximedia.com
 ALL: ad.pl.doubleclick.net
 ALL: ad.planbplus.co.kr
@@ -169310,3 +169309,4 @@ ALL: appfbk-qdr23r711y.polkuverkosto.fi
 ALL: appfbk-rnwvig5za.polkuverkosto.fi
 ALL: appfbk-sit7qa1l.polkuverkosto.fi
 ALL: appfbk-t8fhjzwxt2.polkuverkosto.fi
+ALL: appfbk-t5845lbg.polkuverkosto.fi
