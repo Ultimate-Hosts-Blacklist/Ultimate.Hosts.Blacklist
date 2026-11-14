@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3858.2026.11.12
-#### Total Hosts: 922,828
+#### Version: V2.3860.2026.11.13
+#### Total Hosts: 922,812
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -110920,7 +110920,6 @@
 127.0.0.1 ad.api.binance.com
 127.0.0.1 ad.api.ero-advertising.com
 127.0.0.1 ad.api.kaffnet.com
-127.0.0.1 ad.api.stax.kr
 127.0.0.1 ad.apl11.me
 127.0.0.1 ad.appier.net
 127.0.0.1 ad.appier.org
@@ -137420,3 +137419,4 @@
 127.0.0.1 alkkjnrehzgrgpuo-dot-millinium.ey.r.appspot.com
 127.0.0.1 alkmaar.top
 127.0.0.1 alkncreative.com
+127.0.0.1 alknpicnh.000webhostapp.com
