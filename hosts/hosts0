@@ -34,8 +34,8 @@
 
 
 ##### Version Information #
-#### Version: V2.3860.2026.11.13
-#### Total Hosts: 922,812
+#### Version: V2.3862.2026.11.14
+#### Total Hosts: 922,826
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
@@ -12574,6 +12574,7 @@ fe80::1%lo0 localhost
 0.0.0.0 4ksir.voluumtrk.com
 0.0.0.0 4ksport.pl
 0.0.0.0 4kspyoz8x.we9ixzz.co
+0.0.0.0 4k-stream-tv01.blogspot.com
 0.0.0.0 4ksx2-myaaa-aaaad-qbstq-cai.raw.ic0.app
 0.0.0.0 4ktiv4si-dana.secaraa.online
 0.0.0.0 4ktvmagazineluiza.ownip.net
@@ -13616,6 +13617,7 @@ fe80::1%lo0 localhost
 0.0.0.0 5a4f32e160c3b67328f873c22b863c5f.redinuid.imrworldwide.com
 0.0.0.0 5a5bbdaad2d2d2f82aff274a5f4eff3b-dot-spow3039.df.r.appspot.com
 0.0.0.0 5a6b-909e-a9d0-a04b.reporo.net
+0.0.0.0 5a6g2ko3a.blogspot.com
 0.0.0.0 5a7a9cbcea5844c52c32457176e86022-dot-gle9392420309493993.rj.r.appspot.com
 0.0.0.0 5a7c4d78bc91b600.n5.sync.bumlam.com
 0.0.0.0 5a8s5r1gmgjx5tbbtj33j2rnrz6w5lj.i.api.binance.com
@@ -131636,6 +131638,7 @@ fe80::1%lo0 localhost
 0.0.0.0 airlinkcranleightaxis.com
 0.0.0.0 airlink-tr.com
 0.0.0.0 airlistin2.temp.swtest.ru
+0.0.0.0 airlogak.com
 0.0.0.0 airlthgzkvzxhmfx-dot-millinium.ey.r.appspot.com
 0.0.0.0 airmagnet-wifi-analyzer-express.apponic.com
 0.0.0.0 airmail.matomo.cloud
@@ -154124,6 +154127,3 @@ fe80::1%lo0 localhost
 0.0.0.0 anr-nametools-app-prod-2j3fwppuia-uc.a.run.app
 0.0.0.0 anr-nametools-app-stag-2j3fwppuia-uc.a.run.app
 0.0.0.0 anrnz.bv41.com
-0.0.0.0 anrotradingsc.com
-0.0.0.0 anrremovals.co.za
-0.0.0.0 anrstncikndejnno-dot-millinium.ey.r.appspot.com
